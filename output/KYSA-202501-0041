@@ -1,0 +1,89 @@
+Name:KYSA-202501-0041
+Severity:严重
+Summary:cyrus-imapd安全漏洞
+Published:2025-06-17
+URL:/support/loophole/patch/8026.html
+Title:
+			公告ID：KYSA-202501-0041
+公告摘要：cyrus-imapd安全漏洞
+等级：严重
+发布日期：2025-06-17
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2503版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2024-34055
+CyrusIMAP是一款基于Unix和Linux操作系统，用于支持IMAP（InteractiveMailAccessProtocol）协议的开源邮件服务器。CyrusIMAP3.8.3之前版本和3.10.0-rc1之前的3.10.x版本存在安全漏洞，该漏洞源于允许经过身份验证的攻击者通过在单个命令中发送多个LITERAL来导致无限的内存分配。
+CVE-2021-33582
+Cyrus IMAP是一款基于Unix和Linux操作系统，用于支持IMAP（Interactive Mail Access Protocol）协议的开源邮件服务器。Cyrus IMAP 中存在加密问题漏洞，该漏洞源于产品的内部哈希表未使用有效的字符串加密算法导致攻击者可预测字符串位置。攻击者可通过将多个输入定向到单个位置导致CPU拒绝服务。
+CVE-2019-18928
+Cyrus IMAP是一款基于Unix和Linux操作系统，用于支持IMAP（Interactive Mail Access Protocol）协议的开源邮件服务器。 
+Cyrus IMAP 2.5.14之前的2.5.x版本和3.0.12之前的3.x版本中存在安全漏洞。攻击者可通过拦截HTTP请求利用该漏洞提升权限。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2503
+x86_64 架构：
+cyrus-admin、cyrus-caldav、cyrus-clients、cyrus-common、cyrus-imapd、cyrus-murder、cyrus-nntpd、cyrus-pop3d、cyrus-replication、libcyrus-imap-perl
+arm64 架构：
+cyrus-admin、cyrus-caldav、cyrus-clients、cyrus-common、cyrus-imapd、cyrus-murder、cyrus-nntpd、cyrus-pop3d、cyrus-replication、libcyrus-imap-perl
+sw64 架构：
+cyrus-admin、cyrus-caldav、cyrus-clients、cyrus-common、cyrus-imapd、cyrus-murder、cyrus-nntpd、cyrus-pop3d、cyrus-replication、libcyrus-imap-perl
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2503
+3.0.13-5kylin0.1~esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install cyrus-imapd
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2503
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-admin_3.0.13-5kylin0.1~esm1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-caldav_3.0.13-5kylin0.1~esm1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-clients_3.0.13-5kylin0.1~esm1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-common_3.0.13-5kylin0.1~esm1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-imapd_3.0.13-5kylin0.1~esm1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-murder_3.0.13-5kylin0.1~esm1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-nntpd_3.0.13-5kylin0.1~esm1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-pop3d_3.0.13-5kylin0.1~esm1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-replication_3.0.13-5kylin0.1~esm1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/libcyrus-imap-perl_3.0.13-5kylin0.1~esm1_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-admin_3.0.13-5kylin0.1~esm1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-caldav_3.0.13-5kylin0.1~esm1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-clients_3.0.13-5kylin0.1~esm1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-common_3.0.13-5kylin0.1~esm1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-imapd_3.0.13-5kylin0.1~esm1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-murder_3.0.13-5kylin0.1~esm1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-nntpd_3.0.13-5kylin0.1~esm1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-pop3d_3.0.13-5kylin0.1~esm1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-replication_3.0.13-5kylin0.1~esm1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/libcyrus-imap-perl_3.0.13-5kylin0.1~esm1_arm64.deb
+sw64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-admin_3.0.13-5kylin0.1~esm1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-caldav_3.0.13-5kylin0.1~esm1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-clients_3.0.13-5kylin0.1~esm1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-common_3.0.13-5kylin0.1~esm1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-imapd_3.0.13-5kylin0.1~esm1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-murder_3.0.13-5kylin0.1~esm1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-nntpd_3.0.13-5kylin0.1~esm1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-pop3d_3.0.13-5kylin0.1~esm1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/cyrus-replication_3.0.13-5kylin0.1~esm1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/cyrus-imapd/libcyrus-imap-perl_3.0.13-5kylin0.1~esm1_sw64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2503版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

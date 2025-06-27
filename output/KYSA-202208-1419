@@ -1,0 +1,73 @@
+Name:KYSA-202208-1419
+Severity:重要
+Summary:rpm安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/4283.html
+Title:
+			公告ID：KYSA-202208-1419
+公告摘要：rpm安全漏洞
+等级：Important
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2012-0060
+描述：RPM（RPM Package Manager）是一款命令行驱动的软件包管理器，它主要用于安装、卸载、验证、查询和升级计算机软件包。RPM 4.9.1.3之前版本中存在漏洞，该漏洞源于未正确验证region标签。远程攻击者可利用该漏洞借助至(1)headerLoad，(2)rpmReadSignature或者(3)headerVerify函数的包头的无效region标签，导致拒绝服务（崩溃）或者可能执行任意代码。
+·CVE-2012-0061
+描述：RPM（RPM Package Manager）是一款命令行驱动的软件包管理器，它主要用于安装、卸载、验证、查询和升级计算机软件包。RPM 4.9.1.3之前版本的lib/header.c中的headerLoad函数中存在漏洞，该漏洞源于未正确验证region标签。远程攻击者可利用该漏洞借助包头的大region尺寸导致拒绝服务（崩溃），或者执行任意代码。
+·CVE-2012-0815
+描述：RPM（RPM Package Manager）是一款命令行驱动的软件包管理器，它主要用于安装、卸载、验证、查询和升级计算机软件包。RPM 4.9.1.3之前版本的lib/header.c中的headerVerifyInfo函数中存在漏洞。远程攻击者可通过包头的区域偏移的负值导致拒绝服务（崩溃）或者可能执行任意代码（没有正确处理数值范围比较）。
+·CVE-2013-6435
+描述：RPM（RPM Package Manager）是一款命令行驱动的软件包管理器，它主要用于安装、卸载、验证、查询和升级计算机软件包。RPM 4.11.1及之前版本中存在竞争条件漏洞，该漏洞源于程序验证数字签名前，将文件内容写入到目标安装路径下的临时文件中。远程攻击者可借助特制的RPM文件利用该漏洞执行任意代码。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+rpm、rpm-apidocs、rpm-build、rpm-cron、rpm-devel、rpm-libs、rpm-python
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+rpm-4.8.0-55.el6.ns6.02或以上版本
+rpm-apidocs-4.8.0-55.el6.ns6.02或以上版本
+rpm-build-4.8.0-55.el6.ns6.02或以上版本
+rpm-cron-4.8.0-55.el6.ns6.02或以上版本
+rpm-devel-4.8.0-55.el6.ns6.02或以上版本
+rpm-libs-4.8.0-55.el6.ns6.02或以上版本
+rpm-python-4.8.0-55.el6.ns6.02或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2012-0060:需要重启 rpm 以使漏洞修复生效。
+CVE-2012-0061:需要重启 rpm 以使漏洞修复生效。
+CVE-2012-0815:需要重启 rpm 以使漏洞修复生效。
+CVE-2013-6435:需要重启 rpm 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+rpm(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/rpm-4.8.0-55.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/rpm-apidocs-4.8.0-55.el6.ns6.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/rpm-build-4.8.0-55.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/rpm-cron-4.8.0-55.el6.ns6.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/rpm-devel-4.8.0-55.el6.ns6.02.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/rpm-devel-4.8.0-55.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/rpm-libs-4.8.0-55.el6.ns6.02.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/rpm-libs-4.8.0-55.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/rpm-python-4.8.0-55.el6.ns6.02.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

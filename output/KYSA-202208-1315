@@ -1,0 +1,85 @@
+Name:KYSA-202208-1315
+Severity:严重
+Summary:java-1.7.0-openjdk安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/1911.html
+Title:
+			公告ID：KYSA-202208-1315
+公告摘要：java-1.7.0-openjdk安全漏洞
+等级：Critical
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2014-3566
+描述：OpenSSL是Openssl团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL 1.0.1i及之前版本中使用的SSL protocol 3.0版本中存在加密问题漏洞，该漏洞源于程序使用非确定性的CBC填充。攻击者可借助padding-oracle攻击利用该漏洞实施中间人攻击，获取明文数据。
+·CVE-2016-0686
+描述：Oracle Java SE 6u113、7u99和8u77以及Java SE Embedded 8u77中存在未明漏洞，远程攻击者可借助与序列化相关的向量影响机密性、完整性和可用性。
+·CVE-2016-5542
+描述：我们发现OpenJDK的Libraries组件没有限制用于JAR完整性验证的算法集。此漏洞允许攻击者修改使用弱签名密钥或哈希算法的JAR文件的内容。
+·CVE-2016-5546
+描述：我们发现OpenJDK的Libraries组件使用非规范的DER编码接受ECDSA签名。这可能导致Java应用程序以其他加密工具无法接受的错误格式接受签名。
+·CVE-2016-5547
+描述：我们发现OpenJDK的Libraries组件在分配内存来存储OID之前没有验证从DER输入读取的对象标识符的长度。攻击者能够使Java应用程序解码巧尽心思构建的DER输入，可能会导致应用程序消耗过多内存。
+·CVE-2016-5548
+描述：在OpenJDK的Libraries组件的DSA实现中发现了一个隐蔽的定时通道缺陷。远程攻击者可能利用此漏洞通过定时侧通道提取有关所用密钥的特定信息。
+·CVE-2016-5552
+描述：我们发现OpenJDK的网络组件无法正确解析URL中的用户信息。远程攻击者可能会导致Java应用程序错误地解析攻击者提供的URL，并以与处理同一URL的其他应用程序不同的方式对其进行解释。
+·CVE-2016-5554
+描述：在OpenJDK的JMX组件处理类加载器的方式中发现了一个缺陷。不受信任的Java应用程序或小程序可以利用此缺陷绕过某些Java沙盒限制。
+·CVE-2016-5573
+描述：我们发现OpenJDK的热点组件没有正确检查接收到的Java调试线协议（JDWP）包。如果攻击者能够使受害者的浏览器向调试应用程序的JDWP端口发送HTTP请求，则攻击者可能会利用此漏洞向运行调试的Java程序发送调试命令。
+·CVE-2016-5597
+描述：在OpenJDK的网络组件处理HTTP代理身份验证的方式中发现了一个缺陷。如果代理请求身份验证，Java应用程序可能会通过纯文本网络连接到HTTP代理来公开HTTPS服务器身份验证凭据。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+java-1.7.0-openjdk、java-1.7.0-openjdk-demo、java-1.7.0-openjdk-devel、java-1.7.0-openjdk-javadoc、java-1.7.0-openjdk-src
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+java-1.7.0-openjdk-1.7.0.131-2.6.9.0.el6_8.ns6.00或以上版本
+java-1.7.0-openjdk-demo-1.7.0.131-2.6.9.0.el6_8.ns6.00或以上版本
+java-1.7.0-openjdk-devel-1.7.0.131-2.6.9.0.el6_8.ns6.00或以上版本
+java-1.7.0-openjdk-javadoc-1.7.0.131-2.6.9.0.el6_8.ns6.00或以上版本
+java-1.7.0-openjdk-src-1.7.0.131-2.6.9.0.el6_8.ns6.00或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2014-3566:需要重启 java-1.7.0-openjdk 以使漏洞修复生效。
+CVE-2016-0686:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5542:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5546:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5547:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5548:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5552:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5554:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5573:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5597:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+java-1.7.0-openjdk(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/java-1.7.0-openjdk-1.7.0.131-2.6.9.0.el6_8.ns6.00.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/java-1.7.0-openjdk-demo-1.7.0.131-2.6.9.0.el6_8.ns6.00.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/java-1.7.0-openjdk-devel-1.7.0.131-2.6.9.0.el6_8.ns6.00.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/java-1.7.0-openjdk-javadoc-1.7.0.131-2.6.9.0.el6_8.ns6.00.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/java-1.7.0-openjdk-src-1.7.0.131-2.6.9.0.el6_8.ns6.00.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

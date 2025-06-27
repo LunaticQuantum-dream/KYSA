@@ -1,0 +1,99 @@
+Name:KYSA-201904-0002
+Severity:中等
+Summary:samba安全漏洞
+Published:2023-10-24
+URL:/support/loophole/patch/4370.html
+Title:
+			公告ID：KYSA-201904-0002
+公告摘要：samba安全漏洞
+等级：中等
+发布日期：2023-10-24
+		
+1. 修复的CVE
+CVE-2019-3880
+Samba是Samba团队的一套可使操作系统的SMB/CIFS网络协议做连结的自由软件。该软件支持共享打印机、互相传输资料文件等。Samba 4.8.11之前版本、4.9.6之前版本和4.10.2之前版本中存在路径遍历漏洞。该漏洞源于网络系统或产品未能正确地过滤资源或文件路径中的特殊元素。攻击者可利用该漏洞访问受限目录之外的位置。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+ctdb、libnss-winbind、libpam-winbind、libparse-pidl-perl、libsmbclient、libwbclient0、python-samba、registry-tools、samba-common-bin、samba-common、samba-dsdb-modules、samba-libs、samba-testsuite、samba-vfs-modules、samba、smbclient、winbind
+arm64 架构：
+ctdb、libnss-winbind、libpam-winbind、libparse-pidl-perl、libsmbclient、libwbclient0、python-samba、registry-tools、samba-common-bin、samba-common、samba-dsdb-modules、samba-libs、samba-testsuite、samba-vfs-modules、samba、smbclient、winbind
+mips64el 架构：
+ctdb、libnss-winbind、libpam-winbind、libparse-pidl-perl、libsmbclient、libwbclient0、python-samba、registry-tools、samba-common-bin、samba-common、samba-dsdb-modules、samba-libs、samba-testsuite、samba-vfs-modules、samba、smbclient、winbind
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+2:4.3.11+dfsg-0kord0.16.04.23k1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install samba
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/ctdb_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libnss-winbind_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libpam-winbind_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libparse-pidl-perl_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libsmbclient_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libwbclient0_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/python-samba_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/registry-tools_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common-bin_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common_4.3.11%2Bdfsg-0kord0.16.04.23k1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-dsdb-modules_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-libs_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-testsuite_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-vfs-modules_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/smbclient_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/winbind_4.3.11%2Bdfsg-0kord0.16.04.23k1_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/ctdb_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libnss-winbind_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libpam-winbind_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libparse-pidl-perl_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libsmbclient_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libwbclient0_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/python-samba_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/registry-tools_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common-bin_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common_4.3.11%2Bdfsg-0kord0.16.04.23k1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-dsdb-modules_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-libs_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-testsuite_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-vfs-modules_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/smbclient_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/winbind_4.3.11%2Bdfsg-0kord0.16.04.23k1_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/ctdb_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libnss-winbind_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libpam-winbind_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libparse-pidl-perl_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libsmbclient_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libwbclient0_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/python-samba_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/registry-tools_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common-bin_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common_4.3.11%2Bdfsg-0kord0.16.04.23k1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-dsdb-modules_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-libs_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-testsuite_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-vfs-modules_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/smbclient_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/winbind_4.3.11%2Bdfsg-0kord0.16.04.23k1_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

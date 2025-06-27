@@ -1,0 +1,95 @@
+Name:KYSA-202202-0037
+Severity:中等
+Summary:graphviz安全漏洞
+Published:2023-02-08
+URL:/support/loophole/patch/2579.html
+Title:
+			公告ID：KYSA-202202-0037
+公告摘要：graphviz安全漏洞
+等级：中等
+发布日期：2023-02-08
+		
+1. 修复的CVE
+CVE-2018-10196
+Graphviz（Graph Visualization Software）是美国AT&T实验室研发的一套用于绘制DOT语言脚本所描述的图形的开源绘图工具。 
+Graphviz 2.40.1版本中的dotgen库的lib/dotgen/conc.c文件的‘rebuild_vlists’函数存在安全漏洞。远程攻击者可借助特制的文件利用该漏洞造成拒绝服务（空指针逆向引用和崩溃）。
+CVE-2020-18032
+Graphviz是一套开源的图形可视化软件。该软件主要用于绘制DOT语言脚本中指定的图形。Graphviz Graph Visualization Tools 存在安全漏洞，该漏洞允许远程攻击者执行任意代码或通过加载一个制作好的文件到“lib common shapes.c”组件导致拒绝服务(应用程序崩溃)。
+CVE-2019-11023
+Graphviz是一套开源的图形可视化软件。该软件主要用于绘制DOT语言脚本中指定的图形。Graphviz 2.39.20160612.1140版本中的libcgraph.a静态链接库的cgraphobj.c文件的‘agroot()’函数存在空指针逆向引用漏洞，该漏洞源于网络系统或产品的代码开发过程中存在设计或实现不当的问题。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+graphviz、libcdt5、libcgraph6、libgv-guile、libgv-lua、libgv-perl、libgv-python、libgv-ruby、libgv-tcl、libgvc6-plugins-gtk、libgvc6、libgvpr2、libpathplan4、libxdot4
+arm64 架构：
+graphviz、libcdt5、libcgraph6、libgv-guile、libgv-lua、libgv-perl、libgv-python、libgv-ruby、libgv-tcl、libgvc6-plugins-gtk、libgvc6、libgvpr2、libpathplan4、libxdot4
+mips64el 架构：
+graphviz、libcdt5、libcgraph6、libgv-guile、libgv-lua、libgv-perl、libgv-python、libgv-ruby、libgv-tcl、libgvc6-plugins-gtk、libgvc6、libgvpr2、libpathplan4、libxdot4
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+2.38.0-12kord2.1+esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install graphviz
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/graphviz_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libcdt5_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libcgraph6_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-guile_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-lua_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-perl_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-python_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-ruby_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-tcl_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgvc6-plugins-gtk_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgvc6_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgvpr2_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libpathplan4_2.38.0-12kord2.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libxdot4_2.38.0-12kord2.1%2Besm1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/graphviz_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libcdt5_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libcgraph6_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-guile_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-lua_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-perl_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-python_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-ruby_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-tcl_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgvc6-plugins-gtk_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgvc6_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgvpr2_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libpathplan4_2.38.0-12kord2.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libxdot4_2.38.0-12kord2.1%2Besm1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/graphviz_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libcdt5_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libcgraph6_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-guile_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-lua_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-perl_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-python_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-ruby_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgv-tcl_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgvc6-plugins-gtk_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgvc6_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libgvpr2_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libpathplan4_2.38.0-12kord2.1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/graphviz/libxdot4_2.38.0-12kord2.1%2Besm1_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

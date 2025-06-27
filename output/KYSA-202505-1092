@@ -1,0 +1,129 @@
+Name:KYSA-202505-1092
+Severity:中等
+Summary:systemd安全漏洞
+Published:2025-05-13
+URL:/support/loophole/patch/7857.html
+Title:
+			公告ID：KYSA-202505-1092
+公告摘要：systemd安全漏洞
+等级：中等
+发布日期：2025-05-13
+		
+1.修复的漏洞
+·CVE-2020-13529
+描述：systemd是德国Lennart Poettering个人开发者的一款基于Linux的系统和服务管理器。该产品兼容了SysV和LSB的启动脚本，且提供了一个用来表示系统服务间依赖关系的框架。systemd 存在安全漏洞，该漏洞源于在处理DHCP ACK数据包时使用了可预测的事务标识符。以下产品及版本受到影响：216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 241 rc1, 241 rc2, 242, 242 rc1, 242 rc2, 242 rc3, 242 rc4, 243, 243 rc1, 243 rc2, 243.1, 243.2, 243.3, 243.4, 243.6, 243.7, 243.8, 243.9, 244, 244 rc1, 244.1, 244.2, 244.3, 244.4, 244.5, 245, 245 rc1, 245.1, 245.2, 245.3, 245.4, 245.5, 245.6, 245.7, 245.8, 245.9, 246, 246.1, 246.2, 246.3, 246.4, 246.5, 246.6, 246.7, 246.8, 246.9, 246.10, 246.11, 246.12, 246.13, 247, 247.1, 247.2, 247.3, 247.4, 247.5, 247.6。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·x86_64架构:
+systemd-udev、systemd-help、systemd-libs、systemd-journal-remote、systemd-udev-compat、systemd、systemd-devel、systemd-container
+·aarch64架构:
+systemd-udev、systemd-help、systemd-libs、systemd-journal-remote、systemd-udev-compat、systemd、systemd-container、systemd-devel
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+systemd-udev、systemd-help、systemd-libs、systemd-journal-remote、systemd-udev-compat、systemd、systemd-devel、systemd-container
+·x86_64架构:
+systemd-udev、systemd-help、systemd-libs、systemd-journal-remote、systemd-udev-compat、systemd、systemd-devel、systemd-container
+·mips64el架构:
+systemd-udev、systemd-help、systemd-libs、systemd-journal-remote、systemd-udev-compat、systemd、systemd-devel、systemd-container
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (x86_64、aarch64)
+systemd-udev-compat-243-31.se.p23.ky10或以上版本
+systemd-container-243-31.se.p23.ky10或以上版本
+systemd-libs-243-31.se.p23.ky10或以上版本
+systemd-journal-remote-243-31.se.p23.ky10或以上版本
+systemd-devel-243-31.se.p23.ky10或以上版本
+systemd-help-243-31.se.p23.ky10或以上版本
+systemd-243-31.se.p23.ky10或以上版本
+systemd-udev-243-31.se.p23.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、x86_64、mips64el)
+systemd-udev-compat-243-31.se.p23.ky10或以上版本
+systemd-container-243-31.se.p23.ky10或以上版本
+systemd-libs-243-31.se.p23.ky10或以上版本
+systemd-journal-remote-243-31.se.p23.ky10或以上版本
+systemd-devel-243-31.se.p23.ky10或以上版本
+systemd-help-243-31.se.p23.ky10或以上版本
+systemd-243-31.se.p23.ky10或以上版本
+systemd-udev-243-31.se.p23.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-13529:需要重启 systemd 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+systemd(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/systemd-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/systemd-container-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/systemd-devel-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/systemd-help-243-31.se.p23.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/systemd-journal-remote-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/systemd-libs-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/systemd-udev-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/systemd-udev-compat-243-31.se.p23.ky10.x86_64.rpm
+
+systemd(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/systemd-devel-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/systemd-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/systemd-container-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/systemd-help-243-31.se.p23.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/systemd-journal-remote-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/systemd-libs-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/systemd-udev-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/systemd-udev-compat-243-31.se.p23.ky10.aarch64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP1
+
+systemd(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/systemd-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/systemd-container-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/systemd-devel-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/systemd-help-243-31.se.p23.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/systemd-journal-remote-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/systemd-libs-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/systemd-udev-243-31.se.p23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/systemd-udev-compat-243-31.se.p23.ky10.aarch64.rpm
+
+systemd(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/systemd-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/systemd-container-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/systemd-devel-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/systemd-help-243-31.se.p23.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/systemd-journal-remote-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/systemd-libs-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/systemd-udev-243-31.se.p23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/systemd-udev-compat-243-31.se.p23.ky10.x86_64.rpm
+
+systemd(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/systemd-243-31.se.p23.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/systemd-container-243-31.se.p23.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/systemd-devel-243-31.se.p23.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/systemd-help-243-31.se.p23.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/systemd-journal-remote-243-31.se.p23.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/systemd-libs-243-31.se.p23.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/systemd-udev-243-31.se.p23.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/systemd-udev-compat-243-31.se.p23.ky10.mips64el.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

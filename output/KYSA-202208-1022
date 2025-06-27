@@ -1,0 +1,286 @@
+Name:KYSA-202208-1022
+Severity:重要
+Summary:kernel安全漏洞
+Published:2022-08-09
+URL:/support/loophole/patch/5057.html
+Title:
+			公告ID：KYSA-202208-1022
+公告摘要：kernel安全漏洞
+等级：Important
+发布日期：2022-08-09
+		
+1.修复的CVE
+·CVE-2010-5313
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 2.6.38之前版本的arch/x86/kvm/x86.c文件中存在竞争条件漏洞。攻击者可在L2虚拟机操作系统端借助特制的指令利用该漏洞造成拒绝服务（L1虚拟机操作系统崩溃）。。
+·CVE-2011-1078
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 2.6.39之前版本中的net/bluetooth/sco.c中的sco_sock_getsockopt_old函数中存在漏洞，该漏洞源于未初始化一定的结构。本地攻击者可利用该漏洞通过SCO_CONNINFO选项从内核栈内存中获得潜在的敏感信息。
+·CVE-2011-1083
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 2.6.37.2及之前版本中的epoll实现没有正确遍历epoll文件描述符的树。本地用户可以借助使用epoll_create和epoll_ctl系统调用的特制应用程序，导致拒绝服务（CPU消耗）。
+·CVE-2011-4077
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux Kernel中存在本地拒绝服务漏洞和本地权限提升漏洞。由于\"xfs_readlink()\"函数中存在边界错误，攻击者可利用该漏洞通过特制的XFS影像导致缓冲区溢出。
+·CVE-2011-4080
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 2.6.39之前版本的kernel/sysctl.c中的sysrq_sysctl_handler函数中存在漏洞，该漏洞源于未要求以CAP_SYS_ADMIN权能来修改dmesg_restrict值。本地用户可利用root权限绕过预期访问限制进而读取内核环形缓冲区。该漏洞已被Linux Containers (也称LXC)环境的root用户证实。
+·CVE-2011-4081
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.1之前版本的crypto/ghash-generic.c中存在漏洞。本地用户可通过触发错误或者缺失ghash_setkey函数的调用，然后通过（1）ghash_update函数调用或者（2）ghash_final函数调用导致拒绝服务（空指针解引用或者OOPS），或者产生其他未明影响。该漏洞已被AF_ALG socket的写操作证实。
+·CVE-2011-4086
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.3.1之前版本中的fs/jbd2/transaction.c中的journal_unmap_buffer函数中存在漏洞，该漏洞源于未正确处理_Delay和_Unwritten缓冲区头部状态。本地攻击者可通过该漏洞利用安装日志ext4的系统文件的存在，导致拒绝服务（系统崩溃）。
+·CVE-2011-4127
+描述：Linux内核是Linux操作系统的核心部分，其中Netfilter是Linux内核的一个通用防火墙架构的实现。Linux kernel 3.2.2之前版本中存在本地权限提升漏洞，Host Linux系统允许在分区或LVM卷上执行SG_IO ioct1，并传递命令到下层块设备。对某些分区或LVM卷具有受限访问权限的本地攻击者可利用此漏洞绕过目标限制，通过特制的SCSI命令获取整个块设备的访问权。客户端操作系统用户可利用此漏洞获取Host系统或某些KVM环境中的其他Guest系统数据。
+·CVE-2011-4131
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.2.2之前版本中的NFSv4实现中存在漏洞，该漏洞源于未正确处理GETACL答复中的位图尺寸。远程NFS服务器可通过发送过多数量的位图话语，导致拒绝服务（OOPS）。
+·CVE-2011-4132
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel中存在本地拒绝服务漏洞。该漏洞源于\"journal_get_superblock()\"函数(fs/jbd/journal.c and fs/jbd2/journal.c)中的错误，可通过加载特制的ext3图形触发\"BUG_ON()\"，攻击者可利用该漏洞导致内核崩溃，并拒绝服务合法用户。
+·CVE-2011-4347
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.1.10之前的版本中的KVM子系统中的virt/kvm/assigned-dev.c中的“kvm_vm_ioctl_assign_device”函数中存在漏洞，该漏洞源于程序没有验证访问PCI配置空间和BAR资源的权限。主机操作系统攻击者可通过KVM_ASSIGN_PCI_DEVICE操作利用该漏洞分配PIC设备，也可造成拒绝服务（主机系统崩溃）。
+·CVE-2011-4594
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.1之前版本中的net/socket.c中的__sys_sendmsg函数中存在漏洞。本地用户可利用该漏洞借助对sendmmsg系统调用的特殊使用，导致拒绝服务（系统程序崩溃），致使错误的指针解引用。
+·CVE-2011-4611
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。基于powerpc平台的Linux kernel 2.6.39之前版本中arch/powerpc/kernel/perf_event.c中的perf_event_interrupt函数中存在整数溢出漏洞。本地用户可利用该漏洞借助触发某些性能结果的向量，导致拒绝服务（未处理性能监控器异常）。
+·CVE-2011-4621
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 2.6.37之前版本中存在漏洞，该漏洞源于未正确实现某些clock-update最优化。本地用户可利用该漏洞借助在环路中执行代码的应用程序，导致拒绝服务（系统挂起）。
+·CVE-2011-4622
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux Kernel中存在漏洞，客户虚拟机上的本地恶意用户可利用该漏洞导致DoS（拒绝服务）。该漏洞源于配置Programmable Interrupt Timer (PIT)时\"create_pit_timer()\" 函数(arch/x86/kvm/i8254.c)中出现的错误，该漏洞可被利用导致主机崩溃（空指针解引用）。
+·CVE-2011-5321
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.1.1之前版本的drivers/tty/tty_io.c文件中的‘tty_open’函数存在安全漏洞，该漏洞源于程序没有正确处理driver-lookup故障。本地攻击者可借助对/dev/pts目录下的设备文件的特制的访问利用该漏洞造成拒绝服务（空指针逆向引用和系统崩溃）。
+·CVE-2012-0038
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.1.9之前版本中fs/xfs/xfs_acl.c的xfs_acl_from_disk函数中存在整数溢出漏洞。本地用户可利用该漏洞借助畸形ACL的文件系统导致拒绝服务（死机），致使基于堆的缓冲区溢出。
+·CVE-2012-0044
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.1.5之前版本的Direct Rendering Manager (DRM)子系统中的drivers/gpu/drm/drm_crtc.c中的drm_mode_dirtyfb_ioctl函数中存在整数溢出漏洞。本地用户可利用该漏洞借助特制ioctl调用，获取权限或导致拒绝服务（内存损坏）。
+·CVE-2012-0045
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.2.14版本之前的KVM实现上的arch/x86/kvm/emulate.c内的em_syscall函数中存在漏洞，该漏洞源于未正确处理0f05（又名系统调用）操作码。客户端操作系统用户可利用该漏洞通过特制的NASM文件应用程序导致拒绝服务（客户端操作系统崩溃）。
+·CVE-2012-0056
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 2.6.39以及其他版本的mem_write函数中存在漏洞，该漏洞源于当ASLR被禁用时，在写入到/proc/＜pid＞/mem时未正确检查权限。本地用户可利用该漏洞通过修改进程内存提升权限。该漏洞已在Mempodipper中被证实。
+·CVE-2012-0207
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.2.1之前版本中的net/ipv4/igmp.c中的igmp_heard_query函数中存在漏洞。远程攻击者可利用该漏洞借助IGMP数据包导致拒绝服务（divide-by-zero错误或者死机）。
+·CVE-2012-0879
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 2.6.33之前版本的块驱动中的I/O实现中存在漏洞，该漏洞源于未正确处理CLONE_IO功能。本地用户可通过启用多个进程共享的I/O接口导致拒绝服务(I/O不稳定)。
+·CVE-2012-1090
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.2.10之前版本的fs/cifs/dir.c中的cifs_lookup函数中存在漏洞。本地用户可利用该漏洞借助试图访问特制的文件导致拒绝服务（OOPS），该漏洞已被FIFO证实。
+·CVE-2012-1097
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.2.10之前版本中的regset(也称register设置)功能中存在漏洞，该漏洞源于未正确处理.get和.set方法的缺失。本地用户可利用该漏洞借助(1)PTRACE_GETREGSET或者(2) PTRACE_SETREGSET ptrace的调用导致拒绝服务（空指针解引用）或者产生其他未明影响。
+·CVE-2012-1179
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.3.1之前版本中存在漏洞。当KVM启用时，guest操作系统用户可利用管理员权限对guest操作系统的访问导致拒绝服务（主机操作系统崩溃），该漏洞与pmd_none_or_clear_bad函数和庞大页面的页面障碍有关。
+·CVE-2012-1568
+描述：kernel中的某些补丁中的‘ExecShield’功能中存在漏洞，该漏洞源于程序未正确地利用32位可执行文件处理对多个共享库的使用。通过利用其中一个库的可预测基地址，上下文相关的攻击者利用该漏洞绕过ASLR保护机制。
+·CVE-2012-1601
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.3.6之前版本的KVM实现中存在漏洞。主机操作系统用户可通过在虚拟CPU存在后调用KVM_CREATE_IRQCHIP ioctl导致拒绝服务（空指针解引用和操作系统崩溃）。
+·CVE-2012-2100
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。基于x86平台和未明其他平台的Linux kernel 3.2.2之前版本中的fs/ext4/super.c中的ext4_fill_flex_info()函数的实现上存在本地拒绝服务，s_log_groups_per_flex可被设置成伪造值。攻击者可利用该漏洞触发内核崩溃，拒绝为合法用户提供服务。
+·CVE-2012-2119
+描述：MacVTap是用于简化虚拟化桥型网络的设备驱动程序。Linux kernel 3.4.5之前版本中的macvtap设备驱动程序中存在缓冲区溢出漏洞。程序在某些配置下运行的过程中，通过带有较长的向量长度的描述符，带有特权KVM guest攻击者利用该漏洞导致拒绝服务（崩溃）。
+·CVE-2012-2121
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.3.4之前版本的KVM实现中存在漏洞，该漏洞源于未妥善处理内存slots与iommu之间的关系。guest操作系统用户可利用管理员权限对guest操作系统的访问在设备上执行hotunplug与hotplug操作，导致拒绝服务（主机操作系统崩溃）。
+·CVE-2012-2123
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.3.3之前版本的security/commoncap.c中的cap_bprm_set_creds函数中存在漏洞，该漏洞源于未正确处理执行特权的可执行文件的文件系统功能（也称fcaps）的使用。本地用户可利用该漏洞借助特制应用程序绕过预期个性限制，该漏洞已被使用禁用ASLR的父进程证实。
+·CVE-2012-2133
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.3.6之前版本中存在释放后使用漏洞。攻击者可利用此漏洞引发内核死机，对合法用户拒绝服务。基于此漏洞的性质，攻击者可能提升权限，但这点还未得到确认。
+·CVE-2012-2136
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.4.5之前版本中的net/core/sock.c中的sock_alloc_send_pskb函数中存在漏洞，该漏洞源于未正确验证一定的长度值。本地攻击者可利用该漏洞通过访问TUN/TAP设备导致拒绝服务（基于堆的缓冲区溢出和系统崩溃）或获取特权。
+·CVE-2012-2137
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。KVM（Kernel-based Virtual Machine，基于内核的虚拟机）是用于其中的一种虚拟化基础设施。Linux kernel 3.2.24之前版本中的KVM子系统中的virt/kvm/irq_comm.c中存在缓冲区溢出漏洞。通过与Message Signaled Interrupts (MSI)有关的向量，irq路由表条目，以及调用kvm_set_irq函数之前不正确检查setup_routing_entry函数，本地攻击者利用该漏洞导致拒绝服务（崩溃）和执行任意代码。
+·CVE-2012-2313
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.3.7之前版本中的drivers/net/ethernet/dlink/dl2k.c中的rio_ioctl函数中存在漏洞，该漏洞源于未限制对SIOCSMIIREG命令的访问。本地用户可利用该漏洞借助ioctl调用在以太网适配器中写数据。
+·CVE-2012-2372
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.7.4和较早版本中的Reliable Datagram Sockets (RDS)协议实现中的net/rds/ib_send.c中的rds_ib_xmit函数中存在漏洞。通过建立带有与IPoIB接口本身IP地址相同的源IP地址的RDS连接，本地攻击者利用该漏洞导致拒绝服务（BUG_ON和内核崩溃）。
+·CVE-2012-2373
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。基于x86平台的Linux kernel 3.4.5之前版本中存在漏洞，该漏洞源于物理地址扩展(PAE)启用时，未正确使用页面中间目录(PMD)。本地攻击者可利用该漏洞通过触发竞争条件的特制应用程序，导致拒绝服务（恐慌）。
+·CVE-2012-2375
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.3.2之前版本中的NFSv4实现中的fs/nfs/nfs4proc.c中的__nfs4_get_acl_uncached函数中存在漏洞，该漏洞源于在复制操作过程中使用不正确长度变量。远程NFS服务器可通过在FATTR4_ACL回复中发送大数量的位图字导致拒绝服务(OOPS)。
+·CVE-2012-2383
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。基于32-bit平台的Linux kernel 3.3.5之前版本中的Direct Rendering Manager (DRM)子系统中的drivers/gpu/drm/i915/i915_gem_execbuffer.c中的i915_gem_execbuffer2函数中存在整数溢出漏洞。本地用户可利用该漏洞借助特制ioctl调用导致拒绝服务（越界写操作），或造成其他未明影响。
+·CVE-2012-2384
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。基于32-bit平台的Linux kernel 3.3.5之前版本中的Direct Rendering Manager (DRM)子系统中的drivers/gpu/drm/i915/i915_gem_execbuffer.c中的i915_gem_do_execbuffer函数中存在整数溢出漏洞。本地用户可利用该漏洞借助特制ioctl调用导致拒绝服务（越界写操作），或造成其他未明影响。
+·CVE-2012-2390
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.4.2之前版本中存在本地拒绝服务漏洞，该漏洞源于内存泄露错误。没有权限的本地攻击者可利用该漏洞触发内核崩溃，拒绝为合法用户提供服务。
+·CVE-2012-2744
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 2.6.34之前版本中的net/ipv6/netfilter/nf_conntrack_reasm.c中存在漏洞。当nf_conntrack_ipv6模块启用时，远程攻击者可利用该漏洞通过某些类型碎片的IPv6数据包导致拒绝服务（空指针引用和系统崩溃）。
+·CVE-2012-2745
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux Kernel 3.3.2之前版本的密钥管理功能中存在漏洞，该漏洞源于‘copy_creds()’函数（cred.c）未正确清除replacement_session_keyring标志。攻击者可利用该漏洞导致DoS（拒绝服务）。
+·CVE-2012-3400
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.4.5之前版本中的fs/udf/super.c中的‘udf_load_logicalvol’函数中存在基于堆的缓冲区溢出漏洞。远程攻击者可利用该漏洞通过特制的UDF文件系统，导致拒绝服务（系统崩溃）或产生未明其他影响。
+·CVE-2012-3412
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux Kernel 3.2.30之前版本中存在漏洞，可被恶意攻击者利用导致DoS（拒绝服务）。该漏洞源于处理TCP片段时Solarflare网络驱动程序（drivers/net/ethernet/sfc/tx.c）中存在错误。攻击者可通过恶意对等端利用该漏洞。成功的利用需要启用TCP Segmentation Offload（TSO）（默认）。
+·CVE-2012-3430
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.0.44之前版本中的net/rds/recv.c中的‘rds_recvmsg’函数中存在漏洞，该漏洞源于没有初始化某些结构成员。本地攻击者可利用该漏洞通过在RDS套接字上的(1)recvfrom或(2)recvmsg系统调用，从内核栈内存中获取潜在的敏感信息。
+·CVE-2012-3511
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux Kernel 3.4.5之前版本中存在漏洞，可被恶意本地攻击者利用导致DoS（拒绝服务）。该漏洞源于‘madvise_remove()’函数存在释放后使用错误。攻击者可利用该漏洞引用已释放的内存。
+·CVE-2012-3552
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.0之前版本中的IP实现中存在漏洞。远程攻击者可利用该漏洞通过处理网络流量期间发送报文到设置套接字选项的应用程序，导致拒绝服务（板损坏和系统崩溃）。
+·CVE-2012-4398
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.4之前版本中的kernel/kmod.c中的‘__request_module’函数中存在漏洞，该漏洞源于程序没有设置某些killable属性。通过特制的应用程序，本地攻击者利用该漏洞导致拒绝服务（内存消耗）。
+·CVE-2012-4444
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 2.6.36之前版本中的net/ipv6/reassembly.c中的ip6_frag_queue函数中存在漏洞。通过重叠IPv6碎片，远程攻击者利用该漏洞绕过预期的网络限制。
+·CVE-2012-4461
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。KVM（Kernel-based Virtual Machine，基于内核的虚拟机）是用于其中的一种虚拟化基础设施。Linux kernel 3.6.9之前版本中的KVM子系统中存在漏洞，该漏洞源于在主机运行期间，程序使用了无XSAVE的qemu用户空间。通过在访客cr4寄存器中使用KVM_SET_SREGS ioctl设置来设置X86_CR4_OSXSAVE位，并随后调用KVM_RUN ioctl，本地攻击者利用该漏洞导致拒绝服务（内核OOPS）。
+·CVE-2012-4508
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.4.16之前版本中的fs/ext4/extents.c中存在竞争条件漏洞。通过对没有被正确地标记为未初始化的扩展进行访问，本地攻击者利用该漏洞从删除的文件中获得敏感信息。
+·CVE-2012-4530
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.7.2之前版本中的fs/binfmt_script.c中的load_script函数中存在漏洞，该漏洞源于程序没有正确处理递归。通过特制的应用程序，本地攻击者利用该漏洞从内核栈内存中获得敏感信息。
+·CVE-2012-4542
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8之前的版本中的block/scsi_ioctl.c中存在漏洞，该漏洞源于程序验证SCSI命令过程中没有正确考量SCSI设备类。通过对重叠操作码进行利用的SG_IO ioctl调用，本地攻击者可利用该漏洞绕过预期访问限制。
+·CVE-2012-4565
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.4.19之前版本中的net/ipv4/tcp_illinois.c中的tcp_illinois_info()函数中存在本地拒绝服务漏洞。攻击者利用该漏洞使内核崩溃，导致拒绝服务状态。
+·CVE-2012-5517
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.6之前版本中的mm/memory_hotplug.c中的online_pages函数中存在漏洞。通过使用由管理员热添加的内存，本地攻击者利用该漏洞导致拒绝服务（空指针引用和系统崩溃）或在伺机的情况下产生其他未明影响。
+·CVE-2012-6537
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.6之前版本中的net/xfrm/xfrm_user.c中存在漏洞，该漏洞源于程序未初始化某些结构。通过利用CAP_NET_ADMIN功能，本地攻击者利用该漏洞获得来自内核内存的敏感信息。
+·CVE-2012-6538
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.6之前版本中的net/xfrm/xfrm_user.c中的‘copy_to_user_auth’函数中存在漏洞，该漏洞源于在复制字符串期间程序使用不正确的C库函数。通过CAP_NET_ADMIN功能，本地攻击者利用该漏洞获得来自内核堆内存的敏感信息。
+·CVE-2012-6542
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.6之前版本中的net/llc/af_llc.c中的‘lc_ui_getname’函数中存在漏洞，该漏洞源于在某些情况下程序产生错误的返回值。通过利用未初始化的指针参数的特制应用，本地攻击者利用该漏洞获得来自内核栈内存的敏感信息。
+·CVE-2012-6544
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.6之前版本中的Bluetooth协议栈中存在漏洞，该漏洞源于程序没有正确初始化某些结构。通过目标是(1)L2CAP或(2)HCI实现的特制的应用，本地攻击者利用该漏洞获得来自内核栈内存的敏感信息。
+·CVE-2012-6545
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.6之前版本中的Bluetooth RFCOMM实现中存在漏洞，该漏洞源于程序没有正确初始化某些结构。通过特制的应用，本地攻击者利用该漏洞获得来自内核内存的敏感信息。
+·CVE-2012-6546
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.6之前版本中的ATM实现中存在漏洞，该漏洞源于程序没有初始化某些结构。通过特制的应用，本地攻击者利用该漏洞获得来自内核栈内存的敏感信息。
+·CVE-2012-6547
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.6之前版本中的drivers/net/tun.c中的‘__tun_chr_ioctl’函数中存在漏洞，该漏洞源于程序没有初始化某些结构。通过特制的应用，本地攻击者利用该漏洞获得来自内核栈内存的敏感信息。
+·CVE-2012-6548
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.6之前版本中的fs/udf/namei.c中的‘udf_encode_fh function’函数中存在漏洞，该漏洞源于程序没有初始化某些结构成员。通过特制的应用，本地攻击者利用该漏洞获得来自内核堆内存的敏感信息。
+·CVE-2012-6647
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.4.9及之前的版本的kernel/futex.c文件中的‘futex_wait_requeue_pi’函数存在安全漏洞。本地攻击者可借助特制的FUTEX_WAIT_REQUEUE_PI命令利用该漏洞造成拒绝服务（空指针逆向引用和系统崩溃）。
+·CVE-2012-6657
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.5.7之前版本的net/core/sock.c脚本中的‘sock_setsockopt’函数中存在安全漏洞，该漏洞源于程序没有将keepalive操作与流套接字相关联。本地攻击者可通过创建原始套接字利用该漏洞造成拒绝服务（系统崩溃）。
+·CVE-2012-6689
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.5.5之前版本的net/netlink/af_netlink.c文件中的‘netlink_sendmsg’函数存在安全漏洞，该漏洞源于程序没有验证‘dst_pid’字段。本地攻击者可通过伪造Netlink消息利用该漏洞绕过安全限制，执行未授权操作。
+·CVE-2013-0190
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。输入验证Linux kernel 2.6.23及其他版本中的Xen中的xen_failsafe_callback函数中存在漏洞。在运行32位PVOPS访客程序的情况下，通过触发中断返回错误从而导致使用错误的栈指针以及栈损毁，本地攻击者可利用该漏洞导致拒绝服务（访客程序崩溃）。
+·CVE-2013-0228
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。运行于32位Xen paravirt_ops平台上的Linux kernel 3.7.9之前版本中的arch/x86/xen/xen-asm_32.S中的‘xen_iret’函数中存在漏洞，该漏洞源于程序没有在DS段寄存器中正确地处理无效的值。通过特制的应用程序，攻击者利用该漏洞获得客户操作系统权限。
+·CVE-2013-0268
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.7.6之前版本中的arch/x86/kernel/msr.c中的msr_open函数中存在漏洞。以root权限执行特制的应用程序如msr32.c，本地攻击者利用该漏洞绕过预期的功能限制。
+·CVE-2013-0309
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.6.2之前的版本中的arch/x86/include/asm/pgtable.h中存在漏洞，该漏洞源于使用透明大页面时，程序没有正确支持PROT_NONE内存区域。通过特制的应用程序，本地攻击者利用该漏洞导致拒绝服务（系统崩溃）。
+·CVE-2013-0310
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.4.8之前版本中的net/ipv4/cipso_ipv4.c中的cipso_v4_validate函数中存在漏洞。通过IPOPT_CIPSO IP_OPTIONS setsockopt系统调用，本地攻击者利用该漏洞导致拒绝服务（空指针引用和系统崩溃）或产生其他未明影响。
+·CVE-2013-0311
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.7之前的版本中的drivers/vhost/vhost.c中的‘translate_desc’函数中存在漏洞，该漏洞源于没有正确处理跨区域描述符。通过利用KVM访客操作系统权限，攻击者利用该漏洞获得主机系统特权。
+·CVE-2013-0343
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8之前的版本中的net/ipv6/addrconf.c中的‘ipv6_create_tempaddr’函数中存在漏洞，该漏洞源于程序没有正确处理IPv6临时地址生成中的问题。远程攻击者通过ICMPv6 Router Advertisement (RA)消息，利用该漏洞导致拒绝服务（过多的重试和地址生成中断），从而获得敏感信息。
+·CVE-2013-0349
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.7.6之前的版本中的net/bluetooth/hidp/core.c中的‘hidp_setup_hid’函数中存在漏洞，该漏洞源于程序没有正确复制某些名字字段。通过设置较长的名字和进行HIDPCONNADD ioctl调用，本地攻击者利用该漏洞获得从内核内存中敏感信息。
+·CVE-2013-0871
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.7.5之前版本中的ptrace功能中存在竞争条件漏洞。通过在特制的应用程序中进行PTRACE_SETREGS ptrace系统调用，如ptrace_death，本地攻击者利用该漏洞获得特权。
+·CVE-2013-0913
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Google Chrome OS 25.0.1364.173之前版本以及其他产品中的Linux kernel 3.8.3之前版本中的Direct Rendering Manager (DRM)子系统中的i915设备中的drivers/gpu/drm/i915/i915_gem_execbuffer.c中存在整数溢出漏洞。通过特制的应用程序触发多个迁移副本，本地攻击者利用该漏洞导致拒绝服务（基于堆的缓冲区溢出）或产生其他未明影响，潜在的导致竞争条件。
+·CVE-2013-0914
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.4之前版本中的kernel/signal.c中的‘flush_signal_handlers’函数中存在漏洞，该漏洞源于程序没有阻止sa_restorer字段的值跨exec操作。通过包含sigaction系统调用的特制应用程序，本地攻击者利用该漏洞绕过ASLR保护机制。
+·CVE-2013-1767
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.7.10之前的版本中的mm/shmem.c中的‘shmem_remount_fs’函数中存在释放后重用漏洞。通过在未指定所需MPOL（又名mempolicy）加载项的情况下重新安装tmpfs文件系统，本地攻击者利用该漏洞获得特权或导致拒绝服务（系统崩溃）。
+·CVE-2013-1773
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.3之前版本中的VFAT文件系统实现中存在缓冲区溢出漏洞。通过在文件系统上执行带有utf8加载项的VFAT写操作，而其在UTF-8转换为UTF-16的过程中未受到正确的处理，本地攻击者利用该漏洞获得特权或导致拒绝服务（系统崩溃）。
+·CVE-2013-1774
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.7.4之前版本中的drivers/usb/serial/io_ti.c中的‘chase_port’函数中存在漏洞。通过尝试在断开连接的Edgeport USB串口转换器上的/dev/ttyUSB目录读取或写入操作，本地攻击者利用该漏洞导致拒绝服务（空指针引用和系统崩溃）。
+·CVE-2013-1792
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.3之前版本中的security/keys/process_keys.c中的‘install_user_keyrings’函数中存在竞争条件漏洞。通过特制的keyctl系统调用在同步线程中触发keyring操作，本地攻击者利用该漏洞导致拒绝服务（空指针引用和系统崩溃）。
+·CVE-2013-1796
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.4之前版本中的arch/x86/kvm/x86.c中的‘kvm_set_msr_common’函数中存在漏洞，该漏洞源于程序在MSR_KVM_SYSTEM_TIME操作期间没有确认要求time_page对齐。通过特制的应用程序，攻击者利用该漏洞导致拒绝服务（缓冲区溢出和主机系统内存破坏）或产生其他未明影响。
+·CVE-2013-1797
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.4之前版本中的arch/x86/kvm/x86.c中存在释放后重用漏洞。通过特制的应用程序触发在处理MSR_KVM_SYSTEM_TIME kvm_set_msr_common期间，在(1)movable或(2)removable内存中使用客户物理地址(GPA)，攻击者利用该漏洞导致拒绝服务（主机操作系统破坏）或产生其他未明影响。
+·CVE-2013-1798
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.4之前版本中的virt/kvm/ioapic.c中的‘ioapic_read_indirect’函数中存在漏洞，该漏洞源于程序没有正确处理某些无效的IOAPIC_REG_SELECT和IOAPIC_REG_WINDOW操作的结合。通过特制的应用程序，攻击者利用该漏洞获得来自主机操作系统内存的敏感信息或导致拒绝服务（主机操作系统OOPS）。
+·CVE-2013-1826
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.5.7之前版本中的net/xfrm/xfrm_user.c中的‘xfrm_state_netlink’函数中存在漏洞，该漏洞源于在dump_one_state函数调用中程序没有正确处理错误条件。通过利用CAP_NET_ADMIN功能，本地攻击者利用该漏洞获得特权或导致拒绝服务（空指针引用和系统崩溃）。
+·CVE-2013-1827
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.5.4之前版本中的net/dccp/ccid.h中存在漏洞。通过利用为某些(1)sender或(2)receiver getsockopt调用CAP_NET_ADMIN的能力，本地攻击者利用该漏洞获得特权或导致拒绝服务（空指针引用和系统崩溃）。
+·CVE-2013-1848
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.4之前版本中的fs/ext3/super.c中存在漏洞，该漏洞源于程序在某些情况下使用不正确的参数传送到函数与printk输入有关。通过特制的应用程序，本地攻击者利用该漏洞进行格式化字符串攻击进而获得特权。
+·CVE-2013-1860
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.4之前版本中的drivers/usb/class/cdc-wdm.c中的‘wdm_in_callback’函数中存在基于堆的缓冲区溢出漏洞。通过特制的cdc-wdm USB设备，物理临近的攻击者利用该漏洞导致拒绝服务（系统崩溃）或可能执行任意代码。
+·CVE-2013-1928
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.6.5之前的版本中的fs/compat_ioctl.c中的‘do_video_set_spu_palette’函数中存在漏洞，该漏洞源于某些系统架构缺乏一定的错误检查。本地攻击者可通过特制的VIDEO_SET_SPU_PALETTE ioctl调用/dev/dvb设备利用该漏洞获得来自内核栈内存的敏感信息。
+·CVE-2013-1929
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.5及之前的版本中的drivers/net/ethernet/broadcom/tg3.c中的‘tg3_read_vpd’函数中存在基于堆的缓冲区溢出漏洞。物理邻近的攻击者可通过在Vital Product Data (VPD)数据结构中指定的长字符串的特制固件利用该漏洞造成拒绝服务（系统崩溃）或可能执行任意代码。
+·CVE-2013-1935
+描述：Enterprise Linux（RHEL）是维护和发布的一套面向企业用户的Linux操作系统。内核软件包2.6.32-358.11.1.el6之前的版本中的补丁的KVM (Kernel-based Virtual Machine)子系统中存在安全漏洞，该漏洞源于程序没有正确实现PV EOI功能。客户端操作系统攻击者可通过中断禁用但可调用‘copy_to_user’函数的时间窗口，利用该漏洞造成拒绝服务（主机操作系统崩溃）。
+·CVE-2013-1943
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。KVM（Kernel-based Virtual Machine，基于内核的虚拟机）是用于其中的一种虚拟化基础设施。Linux kernel 2.6.39.4及之前的版本中的KVM (Kernel-based Virtual Machine)子系统中存在安全漏洞，该漏洞源于程序检查有效的用户空间内存缺少‘kvm_set_memory_region()’函数。本地攻击者可借助特制的应用程序利用该漏洞获得特权或获得来自内核内存的敏感信息。
+·CVE-2013-2017
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 2.6.34之前的版本中的veth(又名虚拟Ethernet)驱动程序中存在漏洞，该漏洞源于在拥塞发生期间程序未正确管理skbs。远程攻击者可通过skb消耗的不足与双重释放错误的相结合利用该漏洞造成拒绝服务（系统崩溃）。
+·CVE-2013-2094
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.9之前的版本中的kernel/events/core.c中的‘perf_swevent_init’函数中存在漏洞，该漏洞源于程序使用不正确的整数数据类型。本地攻击者可通过特制的perf_event_open系统调用利用该漏洞获得权限。
+·CVE-2013-2128
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 2.6.33.9及之前的版本中的net/ipv4/tcp.c中的‘tcp_read_sock’函数中存在漏洞，该漏洞源于程序没有正确管理skb的消耗。本地攻击者可通过对TCP套接字特制的系统调用利用该漏洞造成拒绝服务（系统崩溃）。
+·CVE-2013-2141
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.8及之前的版本中的kernel/signal.c中的‘do_tkill’函数中存在漏洞，该漏洞源于程序没有初始化特定的数据结构。本地攻击者可通过使用(1)tkill或(2)tgkill系统调用特制的应用程序利用该漏洞获得来自内核内存的敏感信息。
+·CVE-2013-2146
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.8及之前的版本中的arch/x86/kernel/cpu/perf_event_intel.c中存在漏洞。该漏洞源于当启用Performance Events Subsystem时，程序指定了不正确的位掩码。本地攻击者可通过尝试设置保留位利用该漏洞造成拒绝服务（通用保护故障和系统崩溃）。
+·CVE-2013-2164
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.10及之前的版本中的drivers/cdrom/cdrom.c中的‘mmc_ioctl_cdrom_read_data’函数中存在漏洞。本地攻击者可通过在发生故障的CD-ROM驱动器上的读操作，利用该漏洞获得来自内核内存的敏感信息。
+·CVE-2013-2188
+描述：kernel软件包fs/namei.c中的‘do_filp_open’函数中存在安全漏洞，该漏洞源于程序没有正常处理未获得的写权限。本地攻击者可通过对安装的只读文件系统访问权限利用该漏洞造成拒绝服务（系统崩溃）。
+·CVE-2013-2206
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.5及之前的版本中的SCTP实现中的net/sctp/sm_statefuns.c中的‘sctp_sf_do_5_2_4_dupcook’函数中存在漏洞，该漏洞源于重复处理COOKIE ECHO数据块期间程序没有正确处理关联关系。远程攻击者可通过发送特制的SCTP流量利用该漏洞造成拒绝服务（空指针逆向引用，系统崩溃）或可能产生其他影响。
+·CVE-2013-2224
+描述：kernel 2.6.32版本中存在漏洞。本地攻击者可通过带有IP_RETOPTS操作的sendmsg系统调用，利用该漏洞造成拒绝服务（无效的释放操作，系统崩溃）或获得特权。
+·CVE-2013-2232
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.10之前的版本中的net/ipv6/ip6_output.c中的‘ip6_sk_dst_check’函数中存在漏洞。本地攻击者可通过使用AF_INET6套接字连接到IPv4接口，利用该漏洞造成拒绝服务（系统崩溃）。
+·CVE-2013-2234
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.10之前的版本中的net/key/af_key.c中的‘key_notify_sa_flush’和‘key_notify_policy_flush’函数中存在信息泄露漏洞，该漏洞源于程序没有初始化sadb_msg_reserved结构成员。本地攻击者可通过读取来自IPSec key_socket的通知接口中的广播消息，利用该漏洞获得来自内核堆内存的敏感信息。
+·CVE-2013-2237
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.9之前的版本中的net/key/af_key.c中的‘key_notify_policy_flush’函数中存在信息泄露漏洞，该漏洞源于程序没有初始化某些结构成员变量。本地攻击者可通过读取来自IPSec key_socket的notify_policy接口中的广播消息，利用该漏洞获得来自内核堆内存的敏感信息。
+·CVE-2013-2596
+描述：Motorola Razr HD等都是美国摩托罗拉（Motorola）公司的一款智能手机。使用Qualcomm MSM8960芯片的Motorola Razr HD，Razr M，以及Atrix HD设备中内置的某Motorola定制版的Android 4.1.2中存在数字错误漏洞。能够物理接触到上述设备的攻击者通过进入USB Debugging模式，使用Android Debug Bridge (adb)建立USB连接，以及上传并执行Motochopper pwn程序，可利用该漏洞获取设备系统的root权限。
+·CVE-2013-2634
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.4之前版本中的net/dcb/dcbnl.c中存在漏洞，该漏洞源于程序没有初始化某些结构。通过特制的应用程序，本地攻击者利用该漏洞从内核栈内存获得敏感信息。
+·CVE-2013-2635
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.4之前版本中的net/core/rtnetlink.c中的‘rtnl_fill_ifinfo’函数中存在漏洞，该漏洞源于没有初始化某些结构成员。通过特制的应用程序，本地攻击者利用该漏洞从内核栈内存中获得敏感信息。
+·CVE-2013-2851
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.9.4及之前的版本中的block/genhd.c中的‘register_disk’函数中存在格式化字符串漏洞。本地攻击者可通过利用root访问权限并写入格式字符串说明符到/sys/module/md_mod/parameters/new_array下以便创建特制的/dev/md设备名称，利用该漏洞获得特权。
+·CVE-2013-2852
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.9.4及之前版本中的Broadcom B43无线驱动程序中的drivers/net/wireless/b43/main.c中的‘b43_request_firmware’函数中存在格式化字符串漏洞。本地攻击者可通过利用root权限，并包括在fwpostfix modprobe参数中的格式字符串说明符利用该漏洞获得特权。
+·CVE-2013-2888
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.11及之前的版本中的HID子系统中的drivers/hid/hid-core.c文件中存在多个数组索引错误。物理临近的攻击者可借助提供无效的Report ID设备利用这些漏洞执行任意代码或造成拒绝服务（堆内存损坏）。
+·CVE-2013-2889
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.11及之前的版本中的HID子系统中的drivers/hid/hid-zpff.c文件中存在安全漏洞。当使用CONFIG_HID_ZEROPLUS时，物理临近的攻击者可借助特制的设备利用该漏洞造成拒绝服务（基于堆的越边界写）。
+·CVE-2013-2892
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.11及之前的版本中HID子系统中的drivers/hid/hid-pl.c文件中存在安全漏洞。当使用CONFIG_HID_PANTHERLORD时，物理临近的攻击者可借助特制的设备利用该漏洞造成拒绝服务（基于堆的越边界写）。
+·CVE-2013-2929
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.12.1及之前的版本中的kernel/ptrace.c和arch/ia64/include/asm/processor.h文件中存在提权漏洞，该漏洞源于程序没有正确使用‘get_dumpable’函数。本地攻击者可利用该漏洞绕过既定的访问限制或获取IA64寄存器的敏感信息。
+·CVE-2013-3222
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.9-rc7之前的版本中的net/atm/common.c中的‘vcc_recvmsg’函数中存在漏洞，该漏洞源于程序未初始化某些长度变量。本地攻击者可通过特定的recvmsg或recvfrom系统调用利用该漏洞获得内核栈内存中的敏感信息。
+·CVE-2013-3224
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.9-rc7之前的版本中的net/bluetooth/af_bluetooth.c中的‘bt_sock_recvmsg’函数中存在漏洞，该漏洞源于程序未初始化某些长度变量。本地攻击者可通过特制recvmsg或recvfrom系统调用利用该漏洞获得内核栈内存中的敏感信息。
+·CVE-2013-3225
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.9-rc7之前的版本中的net/bluetooth/rfcomm/sock.c中的‘rfcomm_sock_recvmsg’函数中存在漏洞，该漏洞源于程序未初始化某些长度变量。本地攻击者可通过特制的recvmsg或recvfrom系统调用利用该漏洞获得内核栈内存中的敏感信息。
+·CVE-2013-3231
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.9-rc7之前的版本中的net/llc/af_llc.c中的‘llc_ui_recvmsg’函数中存在漏洞，该漏洞源于程序未初始化某些长度变量。本地攻击者可通过特制的recvmsg或recvfrom系统调用利用该漏洞获得内核栈内存中的敏感信息。
+·CVE-2013-3301
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.8.8之前的版本中的ftrace实现中存在漏洞。本地攻击者可通过利用CAP_SYS_ADMIN功能写访问set_ftrace_pid或set_graph_function文件，然后进行lseek系统调用利用该漏洞造成拒绝服务（空指针逆向引用和系统崩溃）或产生其他未明影响。
+·CVE-2013-4162
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux内核3.10.3及之前的版本中的IPv6实现中的net/ipv6/udp.c文件中的udp_v6_push_pending_frames函数中存在漏洞，该漏洞源于程序对挂起数据进行了一个错误的函数调用。本地攻击者可通过在setsockopt系统调用中使用了UDP_CORK选项的特制应用程序，利用该漏洞造成拒绝服务（BUG以及系统崩溃）。
+·CVE-2013-4299
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.11.6及之前的版本中的drivers/md/dm-snap-persistent.c文件中存在信息泄露漏洞。远程经过授权的攻击者可利用该漏洞获取敏感信息或修改数据。
+·CVE-2013-4312
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 4.4.1之前版本中存在安全漏洞。本地攻击者可通过在UNIX套接字关闭之前发送描述符，利用该漏洞绕过file-descriptor限制，造成拒绝服务（内存损坏）。
+·CVE-2013-4345
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.11.4及之前的版本中的crypto/ansi_cprng.c文件中的‘get_prng_bytes’函数中存在大小差一错误。上下文相关的攻击者可通过发送小于实例块大小的请求利用该漏洞绕过加密保护机制。
+·CVE-2013-4387
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。支持IPv6协议(CONFIG_IPV6)的Linux kernel 3.11.4及之前的版本中带有UDP Fragmentation Offload(UFO)功能的Ethernet设备驱动程序(ex. virtio-net)中存在内存损坏漏洞。远程攻击者可通过从服务器请求较大的数据利用该漏洞造成拒绝服务（内存损坏和系统崩溃）。
+·CVE-2013-4470
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.12之前的版本中net/ipv6/ip6_output.c文件中的ip6_ufo_append_data函数和net/ipv4/ip_output.c文件中的ip_ufo_append_data函数中存在内存损坏漏洞，该漏洞源于当使用UDP Fragmentation Offload (UFO)功能时，程序没有正确初始化某些数据结构。当程序在setsockopt系统调用中启用UDP_CORK选项时，本地攻击者可通过特制的应用程序利用该漏洞造成拒绝服务（内存损坏和系统崩溃）或获取权限。
+·CVE-2013-4483
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.10之前的版本中的ipc/util.c文件中的ipc_rcu_putref函数中存在拒绝服务漏洞，该漏洞源于程序没有正确管理引用计数器。本地攻击者可借助特制的应用程序利用该漏洞造成拒绝服务（内存消耗或系统崩溃）。
+·CVE-2013-4591
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.7.1及之前的版本中的fs/nfs/nfs4proc.c文件中的‘__nfs4_get_acl_uncached’函数中存在缓冲区溢出漏洞。本地攻击者可通过对NFSv4文件系统上的‘system.nfs4_acl’属性进行getxattr系统调用，利用该漏洞造成拒绝服务（内存损坏和系统崩溃），或可能产生其他影响。
+·CVE-2013-4592
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.9 rc7及之前的版本中的virt/kvm/kvm_main.c文件中的‘__kvm_set_memory_region’函数中存在内存泄露漏洞。本地攻击者可利用该漏洞造成拒绝服务（内存耗尽）。
+·CVE-2013-6367
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。KVM（Kernel-based Virtual Machine，基于内核的虚拟机）是用于其中的一种虚拟化基础设施。Linux kernel 3.12.5及之前的版本中的KVM子系统中的arch/x86/kvm/lapic.c文件中的‘apic_get_tmcct’函数中存在拒绝服务漏洞。攻击者可通过TMICT值的修改利用该漏洞造成拒绝服务（除零错误和主机操作系统崩溃）。
+·CVE-2013-6368
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。KVM（Kernel-based Virtual Machine，基于内核的虚拟机）是用于其中的一种虚拟化基础设施。Linux kernel 3.12.5及之前的版本中的KVM子系统中存在本地提权漏洞。本地攻击者可通过最后页面地址的VAPIC同步操作利用该漏洞获取特权或造成拒绝服务（系统崩溃）。
+·CVE-2013-6378
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.12.1及之前的版本中的drivers/net/wireless/libertas/debugfs.c文件中的‘lbs_debugfs_write’函数中存在安全漏洞。本地攻击者可借助root权限执行零长度的写操作，利用该漏洞造成拒绝服务。
+·CVE-2013-6381
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.12.1及之前的版本中的drivers/s390/net/qeth_core_main.c文件中的‘qeth_snmp_command’函数中存在缓冲区溢出漏洞。本地攻击者可通过调用ioctl(SIOC_QETH_ADP_SET_SNMP_CONTROL)函数利用该漏洞造成拒绝服务或产生其他影响。
+·CVE-2013-6383
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.11.7及之前的版本中的drivers/scsi/aacraid/linit.c文件中的‘aac_compat_ioctl’函数中存在安全漏洞，该漏洞源于compat ioctl函数缺少能力(capability)检查。本地攻击者可借助特制的ioctl函数调用利用该漏洞绕过既定的访问限制。
+·CVE-2013-7263
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.12.3及之前的版本中的net/ipv4/ping.c，net/ipv4/raw.c，net/ipv4/udp.c，net/ipv6/raw.c及net/ipv6/udp.c文件中存在内存泄露漏洞。当执行(1)recvfrom(2)recvmmsg或(3)recvmsg系统调用时，本地攻击者可利用该漏洞获取内核内存的敏感信息。
+·CVE-2013-7265
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.12.3及之前的版本中的net/phonet/datagram.c文件中的‘pn_recvmsg’函数中存在输入验证漏洞，该漏洞源于程序未正确初始化‘msg_name ＆ msg_namelen’参数。当执行(1)recvfrom(2)recvmmsg或(3)recvmsg系统调用时，本地攻击者可利用该漏洞获取内核内存的敏感信息。
+·CVE-2013-7266
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.12.3及之前的版本中的drivers/isdn/mISDN/socket.c文件中的‘mISDN_sock_recvmsg’函数中存在输入验证漏洞，该漏洞源于程序未正确初始化‘msg_name ＆ msg_namelen’参数。当执行(1)recvfrom(2)recvmmsg或(3)recvmsg系统调用时，本地攻击者可利用该漏洞获取内核内存的敏感信息。
+·CVE-2013-7270
+描述：Linux kernel是美国Linux基金会发布的开源操作系

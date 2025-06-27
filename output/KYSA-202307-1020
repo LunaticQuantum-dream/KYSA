@@ -1,0 +1,75 @@
+Name:KYSA-202307-1020
+Severity:低等
+Summary:open-vm-tools安全漏洞
+Published:2023-07-11
+URL:/support/loophole/patch/3807.html
+Title:
+			公告ID：KYSA-202307-1020
+公告摘要：open-vm-tools安全漏洞
+等级：Low
+发布日期：2023-07-11
+		
+1.修复的CVE
+·CVE-2023-20867
+描述：VMware Tools是美国威睿（VMware）公司的一款VMWare虚拟机自带的增强工具，它是VMware提供的用于增强虚拟显卡和硬盘性能、以及同步虚拟机与主机时钟的驱动程序。
+VMware Tools存在安全漏洞，该漏洞源于无法验证主机到客户的操作，从而影响客户虚拟机的机密性和完整性。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·x86_64架构:
+open-vm-tools、open-vm-tools-desktop、open-vm-tools-devel、open-vm-tools-test
+·银河麒麟高级服务器操作系统 V10
+·x86_64架构:
+open-vm-tools、open-vm-tools-desktop、open-vm-tools-devel、open-vm-tools-test
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (x86_64)
+open-vm-tools-11.0.5-3.el7_9.6或以上版本
+open-vm-tools-desktop-11.0.5-3.el7_9.6或以上版本
+open-vm-tools-devel-11.0.5-3.el7_9.6或以上版本
+open-vm-tools-test-11.0.5-3.el7_9.6或以上版本
+·银河麒麟高级服务器操作系统 V10 (x86_64)
+open-vm-tools-11.0.5-3.el7_9.6或以上版本
+open-vm-tools-desktop-11.0.5-3.el7_9.6或以上版本
+open-vm-tools-devel-11.0.5-3.el7_9.6或以上版本
+open-vm-tools-test-11.0.5-3.el7_9.6或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-20867:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+open-vm-tools(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/open-vm-tools-11.0.5-3.el7_9.6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/open-vm-tools-desktop-11.0.5-3.el7_9.6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/open-vm-tools-devel-11.0.5-3.el7_9.6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/open-vm-tools-test-11.0.5-3.el7_9.6.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+open-vm-tools(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/open-vm-tools-11.0.5-3.el7_9.6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/open-vm-tools-desktop-11.0.5-3.el7_9.6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/open-vm-tools-devel-11.0.5-3.el7_9.6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/open-vm-tools-test-11.0.5-3.el7_9.6.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-1000140
+Severity:严重
+Summary:rsyslog librelp 缓冲区错误漏洞
+Published:2018-03-23
+URL:/support/loophole/patch/163.html
+Title:
+			摘要：             rsyslog librelp 缓冲区错误漏洞
+安全等级：          严重
+公告ID：           CS2CSA-2018-1000140
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-03-23
+CVE：             CVE-2018-1000140 CVSS3评分：8.1
+		
+1. 概述：中标麒麟高级服务器操作系统V6有 rsyslog librelp 可用的更新。中标麒麟高级服务器操作系统V7有 rsyslog librelp 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：以librelp解析X.509证书的方式发现了基于堆栈的缓冲区溢出。通过连接或接受来自远程对等体的连接，攻击者可以使用特制的X.509证书来利用此缺陷并潜在地执行任意代码。4. 安装包列表：中标麒麟高级服务器操作系统V6： 源代码包：librelp-1.2.7-3.el6_9.1.src.rpmx86_64二进制包：librelp-1.2.7-3.el6_9.1.i686.rpm librelp-1.2.7-3.el6_9.1.x86_64.rpm librelp-debuginfo-1.2.7-3.el6_9.1.i686.rpm librelp-debuginfo-1.2.7-3.el6_9.1.x86_64.rpm librelp-debuginfo-1.2.7-3.el6_9.1.x86_64.rpm librelp-devel-1.2.7-3.el6_9.1.i686.rpm librelp-devel-1.2.7-3.el6_9.1.x86_64.rpm 中标麒麟高级服务器操作系统V7：源代码包：librelp-1.2.12-1.el7_4.1.src.rpmx86_64二进制包：librelp-1.2.12-1.el7_4.1.i686.rpm librelp-1.2.12-1.el7_4.1.x86_64.rpm librelp-debuginfo-1.2.12-1.el7_4.1.i686.rpm librelp-debuginfo-1.2.12-1.el7_4.1.i686.rpm librelp-debuginfo-1.2.12-1.el7_4.1.x86_64.rpm librelp-debuginfo-1.2.12-1.el7_4.1.x86_64.rpm librelp-devel-1.2.12-1.el7_4.1.i686.rpm librelp-devel-1.2.12-1.el7_4.1.x86_64.rpm 			

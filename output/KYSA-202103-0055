@@ -1,0 +1,13 @@
+Name:KYSA-202103-0055
+Severity:中等
+Summary:lxml安全漏洞
+Published:2022-06-23
+URL:/support/loophole/patch/2184.html
+Title:
+			公告ID：KYSA-202103-0055
+公告摘要：lxml安全漏洞
+等级：中等
+发布日期：2022-06-23
+影响CVE：CVE-2021-28957
+		
+1. 修复的CVECVE-2021-28957Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。lxml 4.6.2 存在跨站脚本漏洞，该漏洞源于HTML5的formaction属性。2. 受影响的操作系统及软件包·银河麒麟桌面操作系统V10x86_64 架构：python-lxml、python3-lxmlarm64 架构：python-lxml、python3-lxmlmips64el 架构：python-lxml、python3-lxml3. 软件包修复版本·银河麒麟桌面操作系统V103.5.0-1kord1.4 4. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。10.0:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse配置完成后执行更新命令进行升级$sudo apt update$sudo apt install python-lxml$sudo apt install python3-lxml方法二：下载软件包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。5. 软件包下载地址银河麒麟桌面操作系统V10x86_64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/l/lxml/python-lxml_3.5.0-1kord1.4_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/l/lxml/python3-lxml_3.5.0-1kord1.4_amd64.debarm64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/l/lxml/python-lxml_3.5.0-1kord1.4_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/l/lxml/python3-lxml_3.5.0-1kord1.4_arm64.debmips64el软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/l/lxml/python-lxml_3.5.0-1kord1.4_mips64el.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/l/lxml/python3-lxml_3.5.0-1kord1.4_mips64el.deb6. 修复验证使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。$sudo dpkg -l |grep Package注：Package为软件包包名。

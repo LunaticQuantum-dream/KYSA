@@ -1,0 +1,13 @@
+Name:KYSA-202104-0005
+Severity:中等
+Summary:nettle安全漏洞
+Published:2021-04-30
+URL:/support/loophole/patch/440.html
+Title:
+			摘要：nettle安全漏洞
+安全等级：中等
+公告ID：KYSA-202104-0005
+发布日期：2021-04-30
+影响CVE：CVE-2021-20305
+		
+1. 修复的CVE信息CVE-2021-20305Slackware是Patrick Volkerding个人开发者的一套开源的GNU/Linux操作系统。Slackware 中存在加密问题漏洞。该漏洞源于网络系统或产品未正确使用相关密码算法，导致内容未正确加密、弱加密、明文存储敏感信息等。2. 受影响的软件包银河麒麟桌面操作系统V4libhogweed4libnettle6nettle-binnettle-dbgnettle-dev银河麒麟桌面操作系统V10libhogweed4libnettle6nettle-binnettle-dbgnettle-dev银河麒麟桌面操作系统V10专业版libhogweed5libnettle7nettle-binnettle-dev3. 影响的操作系统银河麒麟桌面操作系统V10银河麒麟桌面操作系统V10 SP1银河麒麟桌面操作系统V4银河麒麟桌面操作系统V4 SP3银河麒麟桌面操作系统V4 SP2银河麒麟桌面操作系统V4 SP1银河麒麟桌面操作系统V4 SP44. 修复版本软件包：nettle3.2-1kord0.16.04.2(V4,V10)3.5.1+really3.5.1-2kylin0.1(V10 SP1)5. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2-desktop main restricted universe multiverse4.0.2-sp1桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10SP1专业版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级。$sudo apt update方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists6. 软件包下载地址银河麒麟桌面操作系统V10 SP1X86下载地址:http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nettle/libnettle7_3.5.1+really3.5.1-2kylin0.2_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nettle/nettle-bin_3.5.1+really3.5.1-2kylin0.2_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nettle/libhogweed5_3.5.1+really3.5.1-2kylin0.2_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nettle/nettle-dev_3.5.1+really3.5.1-2kylin0.2_amd64.deb银河麒麟桌面操作系统V4及V10X86下载地址:http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nettle/nettle-bin_3.2-1kord0.16.04.2_amd64.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nettle/libnettle6_3.2-1kord0.16.04.2_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nettle/nettle-dev_3.2-1kord0.16.04.2_amd64.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nettle/libhogweed4_3.2-1kord0.16.04.2_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nettle/nettle-dbg_3.2-1kord0.16.04.2_amd64.deb

@@ -1,0 +1,102 @@
+Name:KYSA-202203-0009
+Severity:中等
+Summary:bind9安全漏洞
+Published:2023-02-08
+URL:/support/loophole/patch/2586.html
+Title:
+			公告ID：KYSA-202203-0009
+公告摘要：bind9安全漏洞
+等级：中等
+发布日期：2023-02-08
+		
+1. 修复的CVE
+CVE-2021-25220
+ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 存在安全漏洞，该漏洞源于已经收紧了接受记录到缓存中的规则，以防止如果转发器在配置的范围之外发送记录可能会中毒。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+bind9-host、bind9、bind9utils、dnsutils、host、libbind9-140、libdns-export162、libdns162、libirs-export141、libirs141、libisc-export160、libisc160、libisccc-export140、libisccc140、libisccfg-export140、libisccfg140、liblwres141、lwresd
+arm64 架构：
+bind9-host、bind9、bind9utils、dnsutils、host、libbind9-140、libdns-export162、libdns162、libirs-export141、libirs141、libisc-export160、libisc160、libisccc-export140、libisccc140、libisccfg-export140、libisccfg140、liblwres141、lwresd
+mips64el 架构：
+bind9-host、bind9、bind9utils、dnsutils、host、libbind9-140、libdns-export162、libdns162、libirs-export141、libirs141、libisc-export160、libisc160、libisccc-export140、libisccc140、libisccfg-export140、libisccfg140、liblwres141、lwresd
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+1:9.10.3.dfsg.P4-8kord1.19+esm2
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install bind9
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/host_9.10.3.dfsg.P4-8kord1.19%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libbind9-140_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libdns-export162_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libdns162_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libirs-export141_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libirs141_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisc-export160_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisc160_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccc-export140_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccc140_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccfg-export140_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccfg140_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/liblwres141_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/lwresd_9.10.3.dfsg.P4-8kord1.19%2Besm2_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/host_9.10.3.dfsg.P4-8kord1.19%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libbind9-140_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libdns-export162_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libdns162_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libirs-export141_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libirs141_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisc-export160_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisc160_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccc-export140_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccc140_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccfg-export140_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccfg140_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/liblwres141_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/lwresd_9.10.3.dfsg.P4-8kord1.19%2Besm2_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/host_9.10.3.dfsg.P4-8kord1.19%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libbind9-140_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libdns-export162_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libdns162_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libirs-export141_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libirs141_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisc-export160_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisc160_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccc-export140_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccc140_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccfg-export140_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccfg140_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/liblwres141_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/lwresd_9.10.3.dfsg.P4-8kord1.19%2Besm2_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

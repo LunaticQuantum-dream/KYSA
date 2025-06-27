@@ -1,0 +1,98 @@
+Name:KYSA-202104-0004
+Severity:中等
+Summary:ruby-rack安全漏洞
+Published:2021-04-30
+URL:/support/loophole/patch/439.html
+Title:
+			公告ID：KYSA-202104-0004
+公告摘要：ruby-rack安全漏洞
+等级：中等
+发布日期：2021-04-30
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10
+银河麒麟桌面操作系统V10 SP1
+银河麒麟桌面操作系统V4
+银河麒麟桌面操作系统V4 SP3
+银河麒麟桌面操作系统V4 SP2
+银河麒麟桌面操作系统V4 SP1
+银河麒麟桌面操作系统V4 SP4
+版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2020-8161
+RubyGem Rack是一款使用Ruby编程语言开发的Web服务器和Web应用程序之间的模块化接口。 
+RubyGem Rack 2.2.0之前版本中存在路径遍历漏洞。该漏洞源于网络系统或产品未能正确地过滤资源或文件路径中的特殊元素。攻击者可利用该漏洞访问受限目录之外的位置。
+CVE-2020-8184
+RubyGem Rack是一款使用Ruby编程语言开发的Web服务器和Web应用程序之间的模块化接口。 
+RubyGem Rack 2.2.3之前版本和2.1.4之前版本中存在安全漏洞。攻击者可利用该漏洞控制以secure或host-only为前缀的cookie。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V4
+ruby-rack
+·银河麒麟桌面操作系统V10
+ruby-rack
+·银河麒麟桌面操作系统V10 SP1
+ruby-rack
+
+
+3. 软件包修复版本
+软件包：ruby-rack
+1.6.4-3kord0.2(V4、V10)
+2.0.7-2kylin0.1(V10 SP1)
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/r/ruby-rack/ruby-rack_2.0.7-2kylin0.1_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/r/ruby-rack/ruby-rack_2.0.7-2kylin0.1_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/r/ruby-rack/ruby-rack_2.0.7-2kylin0.1_all.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/r/ruby-rack/ruby-rack_2.0.7-2kylin0.1_all.deb
+麒麟操作系统桌面版V4及V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/r/ruby-rack/ruby-rack_1.6.4-3kord0.2_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/r/ruby-rack/ruby-rack_1.6.4-3kord0.2_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/r/ruby-rack/ruby-rack_1.6.4-3kord0.2_all.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/r/ruby-rack/ruby-rack_1.6.4-3kord0.2_all.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10
+银河麒麟桌面操作系统V10 SP1
+银河麒麟桌面操作系统V4
+银河麒麟桌面操作系统V4 SP3
+银河麒麟桌面操作系统V4 SP2
+银河麒麟桌面操作系统V4 SP1
+银河麒麟桌面操作系统V4 SP4
+版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

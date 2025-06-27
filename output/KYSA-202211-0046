@@ -1,0 +1,206 @@
+Name:KYSA-202211-0046
+Severity:重要
+Summary:mariadb-10.3安全漏洞
+Published:2023-12-28
+URL:/support/loophole/patch/4814.html
+Title:
+			公告ID：KYSA-202211-0046
+公告摘要：mariadb-10.3安全漏洞
+等级：重要
+发布日期：2023-12-28
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2022-27448
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.9 及更低版本存在安全漏洞，攻击者可通过 /row/row0mysql.cc 的“node->pcur->rel_pos == BTR_PCUR_ON”触发断言失败。
+CVE-2022-27376
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6.5及以下版本被发现在组件Item_args:walk_arg中包含释放后使用，该漏洞可通过特制的SQL语句加以利用。
+CVE-2022-32088
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB v10.2 版本到 v10.7 版本存在安全漏洞，该漏洞源于通过组件 Exec_time_tracker::get_loops/Filesort_tracker::report_use/filesort 发现存在分段错误。
+CVE-2022-32082
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB v10.5 版本到 v10.7 版本存在安全漏洞，该漏洞源于发现在 dict0dict.cc 中的 table->get_ref_count() == 0 处存在断言错误。
+CVE-2022-32087
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB v10.2 版本到 v10.7 版本存在安全漏洞，该漏洞源于通过组件 Item_args::walk_args 发现存在分段错误。
+CVE-2021-46669
+MariaDB是一套免费开源的数据库管理系统，，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB 中存在资源管理错误漏洞，该漏洞源于产品的convert_const_to_int函数在使用BIGINT数据类型时对已释放的资源重复利用。攻击者可通过该漏洞导致程序崩溃。以下产品及版本受到影响：MariaDB 10.5.9。
+CVE-2022-27382
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.7 及更低版本存在安全漏洞，该漏洞源于通过组件 Item_field::used_tables/update_depend_map_for_order 发现 MariaDB Server v10.7 及更低版本包含分段错误。
+CVE-2022-32091
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB v10.7 版本存在资源管理错误漏洞，该漏洞源于被发现在 /libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc 的 __interceptor_memset 中存在内存中毒。
+CVE-2022-32083
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB v10.2 版本到 v10.6 版本存在安全漏洞，该漏洞源于通过组件 Item_subselect::init_expr_cache_tracker 发现 .1 存在分段错误。
+CVE-2022-21427
+Oracle MySQL是一套开源的关系数据库管理系统。MySQL Server是其中的一个数据库服务器组件。MySQL Connectors是其中的一个连接使用MySQL的应用程序的驱动程序。 Oracle MySQL 的 MySQL 服务器产品中存在输入验证错误漏洞，该漏洞允许通过多种协议进行网络访问的高权限攻击者破坏 MySQL 服务器。成功攻击此漏洞可能导致未经授权的能力导致 MySQL Server 挂起或频繁重复崩溃（完全 DOS）。
+CVE-2022-27456
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.6.3 及更低版本存在安全漏洞，该漏洞源于 /sql/sql_type.cc 的组件 VDec::VDec 中的释放后重用。
+CVE-2022-27378
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.7存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+CVE-2022-27377
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.6.3 及更低版本存在安全漏洞，该漏洞源于在组件 Item_func_in::cleanup() 中包含 use-after-free，该组件通过特制的 SQL 语句被利用。
+CVE-2022-27457
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.6.3 及更低版本存在安全漏洞，该漏洞源于 /strings/ctype-latin1.c 的组件 my_mb_wc_latin1 中的释放后重用。
+CVE-2022-32089
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB v10.5 版本到 v10.7 版本存在安全漏洞，该漏洞源于通过组件 st_select_lex_unit::exclude_level 发现存在分段错误。
+CVE-2022-27455
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.6.3 及更低版本存在安全漏洞，该漏洞源于 /strings/ctype-simple.c 的组件 my_wildcmp_8bit_impl 中的释放后重用。
+CVE-2022-27387
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.7 及更低版本存在安全漏洞，该漏洞源于在组件decimal_bin_size 中包含全局缓冲区溢出，可通过特制SQL 语句利用该溢出。
+CVE-2022-27380
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.6.3 及更低版本存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+CVE-2022-27379
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.6.2 及更低版本存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+CVE-2022-27381
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.6 及更低版本存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+CVE-2022-32084
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB v10.2 版本到 v10.7 版本存在安全漏洞，该漏洞源于通过组件 sub_select 发现存在分段错误。
+CVE-2022-27444
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.9 及之前版本存在安全漏洞，该漏洞源于 sql/item_subselect.cc 组件包含分段错误。
+CVE-2022-32086
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB v10.4 版本到 v10.8 版本存在安全漏洞，该漏洞源于通过组件 Item_field::fix_outer_field 发现存在分段错误。
+CVE-2022-27383
+MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.6 及更低版本存在安全漏洞，该漏洞源于在组件 my_strcasecmp_8bit 中包含 use-after-free，该组件通过特制的 SQL 语句被利用。
+CVE-2022-27447
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 Mariadb Server v10.9 及之前版本存在安全漏洞，该漏洞源于 /sql/sql_string.h 组件 Binary_string::free_buffer() 包含释放后使用。
+CVE-2022-27449
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.9 及更低版本存在安全漏洞，该漏洞源于组件 sql/item_func.cc:148 的分段错误。
+CVE-2022-32085
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB v10.2 版本到 v10.7 版本存在安全漏洞，该漏洞源于通过组件 Item_func_in::cleanup/Item::cleanup_processor 发现存在分段错误。
+CVE-2022-27445
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.9 及之前版本存在安全漏洞，该漏洞源于 sql/sql_window.cc 组件包含分段故障。
+CVE-2022-27386
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.7 及更低版本存在安全漏洞，该漏洞源于通过组件 sql/sql_class.cc 被发现包含分段错误。
+CVE-2022-27384
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.6 及更低版本存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+CVE-2022-27452
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.9 及更低版本存在安全漏洞，该漏洞源于组件 sql/item_cmpfunc.cc 的分段错误。
+CVE-2022-32081
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB v10.4 版本到 v10.7 版本存在资源管理错误漏洞，该漏洞源于发现在 /storage/innobase/handler/handler0alter.cc 页面的 prepare_inplace_add_virtual 中存在内存中毒。
+CVE-2022-27451
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.9 及更低版本存在安全漏洞，该漏洞源于组件 sql/field_conv.cc 的分段错误。
+CVE-2018-25032
+zlib是一个通用的数据压缩库。 zlib 1.2.11 版本存在缓冲区错误漏洞，该漏洞源于如果输入有很多远匹配，压缩时可能出现内存损坏。
+CVE-2022-27446
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.9 及之前版本存在安全漏洞，该漏洞源于 sql/item_cmpfunc.h 组件包含分段错误。
+CVE-2022-27458
+MariaDB是一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。 MariaDB Server v10.6.3 及更低版本存在安全漏洞，该漏洞源于 /sql/sql_string.h 的组件 Binary_string::free_buffer() 中的释放后重用。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303
+x86_64 架构：
+libmariadb3、libmariadbd19、mariadb-backup、mariadb-client-10.3、mariadb-client-core-10.3、mariadb-client、mariadb-common、mariadb-plugin-connect、mariadb-plugin-cracklib-password-check、mariadb-plugin-gssapi-client、mariadb-plugin-gssapi-server、mariadb-plugin-mroonga、mariadb-plugin-oqgraph、mariadb-plugin-rocksdb、mariadb-plugin-spider、mariadb-plugin-tokudb、mariadb-server-10.3、mariadb-server-core-10.3、mariadb-server、mariadb-test-data、mariadb-test
+arm64 架构：
+libmariadb3、libmariadbd19、mariadb-backup、mariadb-client-10.3、mariadb-client-core-10.3、mariadb-client、mariadb-common、mariadb-plugin-connect、mariadb-plugin-cracklib-password-check、mariadb-plugin-gssapi-client、mariadb-plugin-gssapi-server、mariadb-plugin-mroonga、mariadb-plugin-oqgraph、mariadb-plugin-rocksdb、mariadb-plugin-spider、mariadb-server-10.3、mariadb-server-core-10.3、mariadb-server、mariadb-test-data、mariadb-test
+mips64el 架构：
+libmariadb3、libmariadbd19、mariadb-backup、mariadb-client-10.3、mariadb-client-core-10.3、mariadb-client、mariadb-common、mariadb-plugin-connect、mariadb-plugin-cracklib-password-check、mariadb-plugin-gssapi-client、mariadb-plugin-gssapi-server、mariadb-plugin-mroonga、mariadb-plugin-oqgraph、mariadb-plugin-rocksdb、mariadb-plugin-spider、mariadb-server-10.3、mariadb-server-core-10.3、mariadb-server、mariadb-test-data、mariadb-test
+loongarch64 架构：
+libmariadb3、libmariadbd19、mariadb-backup、mariadb-client-10.3、mariadb-client-core-10.3、mariadb-client、mariadb-common、mariadb-plugin-connect、mariadb-plugin-cracklib-password-check、mariadb-plugin-gssapi-client、mariadb-plugin-gssapi-server、mariadb-plugin-oqgraph、mariadb-plugin-spider、mariadb-server-10.3、mariadb-server-core-10.3、mariadb-server、mariadb-test-data、mariadb-test
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303
+1:10.3.38-0kylin0.20.04.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install mariadb-server
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/libmariadb3_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/libmariadbd19_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-backup_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client-10.3_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client-core-10.3_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-common_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-connect_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-cracklib-password-check_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-gssapi-client_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-gssapi-server_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-mroonga_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-oqgraph_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-rocksdb_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-spider_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-tokudb_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server-10.3_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server-core-10.3_10.3.38-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-test-data_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-test_10.3.38-0kylin0.20.04.1_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/libmariadb3_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/libmariadbd19_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-backup_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client-10.3_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client-core-10.3_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-common_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-connect_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-cracklib-password-check_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-gssapi-client_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-gssapi-server_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-mroonga_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-oqgraph_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-rocksdb_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-spider_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server-10.3_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server-core-10.3_10.3.38-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-test-data_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-test_10.3.38-0kylin0.20.04.1_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/libmariadb3_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/libmariadbd19_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-backup_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client-10.3_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client-core-10.3_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-common_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-connect_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-cracklib-password-check_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-gssapi-client_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-gssapi-server_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-mroonga_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-oqgraph_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-rocksdb_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-spider_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server-10.3_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server-core-10.3_10.3.38-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-test-data_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-test_10.3.38-0kylin0.20.04.1_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/libmariadb3_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/libmariadbd19_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-backup_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client-10.3_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client-core-10.3_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-client_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-common_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-connect_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-cracklib-password-check_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-gssapi-client_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-gssapi-server_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-oqgraph_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-plugin-spider_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server-10.3_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server-core-10.3_10.3.38-0kylin0.20.04.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-server_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-test-data_10.3.38-0kylin0.20.04.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/m/mariadb-10.3/mariadb-test_10.3.38-0kylin0.20.04.1_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

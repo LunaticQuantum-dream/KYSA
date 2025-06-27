@@ -1,0 +1,12 @@
+Name:KYSA-202402-0033
+Severity:重要
+Summary:ksc-defender安全漏洞
+Published:2024-03-13
+URL:/support/loophole/patch/5290.html
+Title:
+			公告ID：KYSA-202402-0033
+公告摘要：ksc-defender安全漏洞
+等级：重要
+发布日期：2024-03-13
+		
+1. 修复的CVEKVE-2024-0201ksc-defender程序是麒麟安全中心，包含病毒防护、账户安全、网络防护、执行控制模块。该程序存在命令注入漏洞，可能导致普通用户权限提升。ksc-defender 2.3.0.1-0k3.5 至 2.3.0.1-0k3.18、2.3.0.1-0k6.20 至 2.3.0.1-0k6.28 范围内的版本受影响。2. 受影响的操作系统及软件包·银河麒麟桌面操作系统V10 SP1 x86_64 架构：ksc-defenderarm64 架构：ksc-defendermips64el 架构：ksc-defenderloongarch64 架构：ksc-defender3. 软件包修复版本·银河麒麟桌面操作系统V10 SP1-2107 不受影响·银河麒麟桌面操作系统V10 SP1-2107（Wayland版本） 不受影响·银河麒麟桌面操作系统V10 SP1-2203 不受影响·银河麒麟桌面操作系统V10 SP1-2203（Wayland版本） 不受影响·银河麒麟桌面操作系统V10 SP1-2303 受影响         影响范围：2.3.0.1-0k3.5<=ksc-defender<=2.3.0.1-0k3.18（修复版本： 2.3.0.1-0k3.18update1 ）         影响范围：2.3.0.1-0k6.20<=ksc-defender<=2.3.0.1-0k6.28（修复版本：2.3.0.1-0k6.29）·银河麒麟桌面操作系统V10 SP1-2303（Wayland版本） 受影响           影响范围：2.3.0.1-0k3.5hw0.1<=ksc-defender<=2.3.0.1-0k3.18hw0.3（修复版本：2.3.0.1-0k3.18hw0.3update1）         影响范围：2.3.0.1-0k6.6hw0.1<=ksc-defender<=2.3.0.1-0k6.28hw0.1（修复版本：2.3.0.1-0k6.29hw0.1）4. 修复方法 方法一：下载软件包进行升级安装通过附件软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。5. 软件包下载地址下载地址详见附件6. 修复验证使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。$sudo dpkg -l |grep Package注：Package为软件包包名。

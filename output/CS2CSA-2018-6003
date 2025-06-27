@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-6003
+Severity:中等
+Summary:GNU Libtasn1 安全漏洞
+Published:2018-01-04
+URL:/support/loophole/patch/112.html
+Title:
+			摘要：             GNU Libtasn1 安全漏洞
+安全等级：          中等
+公告ID：           CS2CSA-2018-6003
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-01-04
+CVE：             CVE-2018-6003 CVSS3评分：7.5
+		
+1. 概述：中标麒麟高级服务器操作系统V7触发条件/影响有限/风险小，因此不修复。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：在4.13之前的GNU LIbTASN1中的decoding.c 中的_asn1_decode_simple_ber函数中发现一个问题。在BER解码器中无限递归导致堆栈耗尽和DOS。			

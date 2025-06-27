@@ -1,0 +1,81 @@
+Name:KYSA-202302-1106
+Severity:重要
+Summary:bcel安全漏洞
+Published:2023-02-28
+URL:/support/loophole/patch/2831.html
+Title:
+			公告ID：KYSA-202302-1106
+公告摘要：bcel安全漏洞
+等级：Important
+发布日期：2023-02-28
+		
+1.修复的CVE
+·CVE-2022-42920
+描述：Apache Commons BCEL是美国阿帕奇（Apache）基金会的一个字节代码工程库。旨在为用户提供分析、创建和操作（二进制）Java类的便捷方式。
+Apache Commons BCEL存在缓冲区错误漏洞，该漏洞源于存在越界写入问题，导致API可以用于生成任意字节码。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+bcel、bcel-javadoc
+·x86_64架构:
+bcel、bcel-javadoc
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+bcel、bcel-javadoc
+·x86_64架构:
+bcel、bcel-javadoc
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+bcel-5.2-19.el7_9.ns7.01或以上版本
+bcel-javadoc-5.2-19.el7_9.ns7.01或以上版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+bcel-5.2-19.el7_9.ns7.01或以上版本
+bcel-javadoc-5.2-19.el7_9.ns7.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-42920:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+bcel(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/bcel-5.2-19.el7_9.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/bcel-javadoc-5.2-19.el7_9.ns7.01.noarch.rpm
+
+bcel(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/bcel-5.2-19.el7_9.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/bcel-javadoc-5.2-19.el7_9.ns7.01.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+bcel(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/bcel-5.2-19.el7_9.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/bcel-javadoc-5.2-19.el7_9.ns7.01.noarch.rpm
+
+bcel(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/bcel-5.2-19.el7_9.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/bcel-javadoc-5.2-19.el7_9.ns7.01.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

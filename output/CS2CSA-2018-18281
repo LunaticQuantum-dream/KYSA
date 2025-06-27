@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-18281
+Severity:一般
+Summary:Linux kernel刷新TLB过晚漏洞
+Published:2020-06-04
+URL:/support/loophole/patch/237.html
+Title:
+			摘要：          Linux kernel刷新TLB过晚漏洞
+安全等级：          一般
+公告ID：         CS2CSA-2018-18281
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2020-06-04
+CVE：          CVE-2018-18281
+		
+1. 概述：中标麒麟高级服务器操作系统软件V7有kernel 、kernel-alt、kernel-rt可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：从Linux内核3.2版开始，mremap（）syscall会在删除页表锁后执行TLB刷新。如果诸如ftruncate（）之类的系统调用从mremap（）中间任务的页表中删除条目，则陈旧的TLB条目可以保留很短的时间，以允许在将其释放回物理页后访问该物理页。页面分配器并重新使用。

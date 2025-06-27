@@ -1,0 +1,14 @@
+Name:CS2CSA-2019-11043
+Severity:严重
+Summary:PHP 安全漏洞
+Published:2019-10-24
+URL:/support/loophole/patch/211.html
+Title:
+			摘要：            PHP 安全漏洞
+安全等级：          严重
+公告ID：         CS2CSA-2019-11043
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2019-10-24
+CVE：            CVE-2019-11043 CVSS3评分：8.1
+		
+1. 概述：中标麒麟高级服务器操作系统V6有PHP可用的更新。中标麒麟高级服务器操作系统V7有PHP可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：PHP-FPM中存在远程代码执行漏洞。当PHP-FPM+Nginx组合使用并且fastcgi_split_path_info字段被配置为^(.+?.php)(/.*)$;时，攻击者可借助特制的payload利用该漏洞执行代码。 

@@ -1,0 +1,137 @@
+Name:KYSA-202310-1050
+Severity:重要
+Summary:git安全漏洞
+Published:2023-10-24
+URL:/support/loophole/patch/4391.html
+Title:
+			公告ID：KYSA-202310-1050
+公告摘要：git安全漏洞
+等级：Important
+发布日期：2023-10-24
+		
+1.修复的CVE
+·CVE-2022-24765
+描述：Git for Windows是Git groups的用于 Windows 的 Git。Git for Windows 存在代码问题漏洞，该漏洞源于在多用户计算机上不受信任的各方对同一硬盘具有写访问权限。
+·CVE-2022-29187
+描述：Github Git是一套免费、开源的分布式版本控制系统。Github Git 存在安全漏洞，该漏洞源于可以绕过安全目录保护，以下产品和版本受到影响：Git 2.37.1、2.36.2、2.35.4、2.34.4、2.33.4、2.32.3、2.31.4 和 2.30.5 之前版本。
+·CVE-2022-39253
+描述：Git是一套免费、开源的分布式版本控制系统。Git存在安全漏洞，该漏洞源于Git错误地处理了某些符号链接。
+·CVE-2022-39260
+描述：Git是一套免费、开源的分布式版本控制系统。Git 存在安全漏洞，该漏洞源于Git错误地处理了某些符号链接。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统（兼容版） V10
+·aarch64架构:
+git、git-all、git-core、git-core-doc、git-credential-libsecret、git-daemon、git-email、git-gui、git-instaweb、git-subtree、git-svn、gitk、gitweb、perl-Git、perl-Git-SVN
+·x86_64架构:
+git、git-all、git-core、git-core-doc、git-credential-libsecret、git-daemon、git-email、git-gui、git-instaweb、git-subtree、git-svn、gitk、gitweb、perl-Git、perl-Git-SVN
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统（兼容版） V10 (aarch64、x86_64)
+git-2.39.1-1.el8或以上版本
+git-all-2.39.1-1.el8或以上版本
+git-core-2.39.1-1.el8或以上版本
+git-core-doc-2.39.1-1.el8或以上版本
+git-credential-libsecret-2.39.1-1.el8或以上版本
+git-daemon-2.39.1-1.el8或以上版本
+git-email-2.39.1-1.el8或以上版本
+git-gui-2.39.1-1.el8或以上版本
+git-instaweb-2.39.1-1.el8或以上版本
+git-subtree-2.39.1-1.el8或以上版本
+git-svn-2.39.1-1.el8或以上版本
+gitk-2.39.1-1.el8或以上版本
+gitweb-2.39.1-1.el8或以上版本
+perl-Git-2.39.1-1.el8或以上版本
+perl-Git-SVN-2.39.1-1.el8或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统（兼容版） V10
+aarch64:https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-24765:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-29187:需要重启 git 以使漏洞修复生效。
+CVE-2022-39253:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-39260:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统（兼容版） V10
+
+git(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/git-2.39.1-1.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/git-2.39.1-1.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/git-all-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/git-all-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/git-core-2.39.1-1.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/git-core-2.39.1-1.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/git-core-doc-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/git-core-doc-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/git-credential-libsecret-2.39.1-1.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/git-credential-libsecret-2.39.1-1.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/git-daemon-2.39.1-1.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/git-daemon-2.39.1-1.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/git-email-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/git-email-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/git-gui-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/git-gui-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/git-instaweb-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/git-instaweb-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/git-subtree-2.39.1-1.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/git-subtree-2.39.1-1.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/git-svn-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/git-svn-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/gitk-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/gitk-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/gitweb-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/gitweb-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/perl-Git-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/perl-Git-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/perl-Git-SVN-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/perl-Git-SVN-2.39.1-1.el8.noarch.rpm
+
+git(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/git-2.39.1-1.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/git-2.39.1-1.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/git-all-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/git-all-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/git-core-2.39.1-1.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/git-core-2.39.1-1.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/git-core-doc-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/git-core-doc-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/git-credential-libsecret-2.39.1-1.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/git-credential-libsecret-2.39.1-1.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/git-daemon-2.39.1-1.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/git-daemon-2.39.1-1.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/git-email-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/git-email-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/git-gui-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/git-gui-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/git-instaweb-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/git-instaweb-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/git-subtree-2.39.1-1.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/git-subtree-2.39.1-1.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/git-svn-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/git-svn-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/gitk-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/gitk-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/gitweb-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/gitweb-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/perl-Git-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/perl-Git-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/perl-Git-SVN-2.39.1-1.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/perl-Git-SVN-2.39.1-1.el8.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

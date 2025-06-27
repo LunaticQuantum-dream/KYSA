@@ -1,0 +1,92 @@
+Name:KYSA-202102-1001
+Severity:重要
+Summary:mariadb安全漏洞
+Published:2021-02-01
+URL:/support/loophole/patch/3809.html
+Title:
+			公告ID：KYSA-202102-1001
+公告摘要：mariadb安全漏洞
+等级：Important
+发布日期：2021-02-01
+		
+1.修复的CVE
+·CVE-2016-0650
+描述：Oracle MySQL5.5.47及更早版本、5.6.28及更早版本、5.7.10及更早版本、MariaDB 5.5.48之前版本、10.0.24版本之前的10.0.x版本以及10.1.12版本之前的10.1.x版本中存在未指明的漏洞，本地用户可以通过与复制相关的向量影响可用性。
+·CVE-2019-2974
+描述：Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。MySQL Server是其中的一个数据库服务器组件。
+
+Oracle MySQL中的MySQL Server 5.6.45及之前版本、5.7.27及之前版本和8.0.17及之前版本的Server： Optimizer组件存在安全漏洞。攻击者可利用该漏洞造成拒绝服务（挂起或频繁崩溃），影响数据的可用性。
+·CVE-2021-2007
+描述：Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。Oracle MySQL 的 MySQL Client 存在安全漏洞，该漏洞允许未经身份验证的攻击者通过网络通过多种协议进行访问以危害MySQL客户端。以下产品及版本受到影响：MySQL Client--C API--5.6.47 and prior, 5.7.29 and prior, 8.0.19 and prior。
+·CVE-2021-2144
+描述：Oracle MySQL的MySQL服务器产品中存在漏洞（组件：服务器：解析器）。受影响的支持版本为5.7.29及以前版本和8.0.19及以前版本。易受攻击的漏洞允许具有网络访问权限的高权限攻击者通过多种协议危害MySQL服务器。成功攻击此漏洞可导致接管MySQL服务器。CVSS 3.1基本分数7.2（保密性、完整性和可用性影响）。CVSS向量：（CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H）。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+mariadb、mariadb-bench、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-libs、mariadb-server、mariadb-test
+·x86_64架构:
+mariadb、mariadb-bench、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-libs、mariadb-server、mariadb-test
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+mariadb-5.5.68-1.el7.ns7.01或以上版本
+mariadb-bench-5.5.68-1.el7.ns7.01或以上版本
+mariadb-devel-5.5.68-1.el7.ns7.01或以上版本
+mariadb-embedded-5.5.68-1.el7.ns7.01或以上版本
+mariadb-embedded-devel-5.5.68-1.el7.ns7.01或以上版本
+mariadb-libs-5.5.68-1.el7.ns7.01或以上版本
+mariadb-server-5.5.68-1.el7.ns7.01或以上版本
+mariadb-test-5.5.68-1.el7.ns7.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2016-0650:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-2974:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-2007:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-2144:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+mariadb(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/mariadb-5.5.68-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/mariadb-bench-5.5.68-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/mariadb-devel-5.5.68-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/mariadb-embedded-5.5.68-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/mariadb-embedded-devel-5.5.68-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/mariadb-libs-5.5.68-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/mariadb-server-5.5.68-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/mariadb-test-5.5.68-1.el7.ns7.01.aarch64.rpm
+
+mariadb(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-5.5.68-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-bench-5.5.68-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-devel-5.5.68-1.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-devel-5.5.68-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-embedded-5.5.68-1.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-embedded-5.5.68-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-embedded-devel-5.5.68-1.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-embedded-devel-5.5.68-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-libs-5.5.68-1.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-libs-5.5.68-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-server-5.5.68-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/mariadb-test-5.5.68-1.el7.ns7.01.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

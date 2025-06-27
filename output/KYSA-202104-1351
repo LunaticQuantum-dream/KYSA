@@ -1,0 +1,99 @@
+Name:KYSA-202104-1351
+Severity:重要
+Summary:java-1.7.0-openjdk安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/5050.html
+Title:
+			公告ID：KYSA-202104-1351
+公告摘要：java-1.7.0-openjdk安全漏洞
+等级：Important
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2018-3639
+描述：AMD、ARM和Intel CPUs等都是不通厂商的CPU（中央处理器）产品。
+AMD、ARM和Intel CPUs存在信息泄露漏洞。攻击者可通过实施边信道攻击利用该漏洞获取信息。
+·CVE-2020-2756
+描述：Oracle Java SE的Java SE嵌入式产品Java SE中的漏洞（组件：序列化）。受影响的受支持版本是javase:7u251、8u241、11.0.6和14；javase Embedded:8u241。难以利用的漏洞允许未经身份验证的攻击者通过多个协议访问网络，危害Java SE、Java SE Embedded。成功攻击此漏洞可导致未经授权的能力，从而导致Java SE、Java SE Embedded的部分拒绝服务（部分DOS）。注意：适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分3.7（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2020-2757
+描述：Oracle Java SE的Java SE嵌入式产品Java SE中的漏洞（组件：序列化）。受影响的受支持版本是javase:7u251、8u241、11.0.6和14；javase Embedded:8u241。难以利用的漏洞允许未经身份验证的攻击者通过多个协议访问网络，危害Java SE、Java SE Embedded。成功攻击此漏洞可导致未经授权的能力，从而导致Java SE、Java SE Embedded的部分拒绝服务（部分DOS）。注意：适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分3.7（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2020-2773
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE和Java SE Embedded中的Security组件存在安全漏洞。攻击者可利用该漏洞造成拒绝服务，影响数据的可用性。以下产品及版本受到影响：Java SE 7u251版本，8u241版本，11.0.6版本，14版本；Java SE Embedded 8u241版本。
+·CVE-2020-2781
+描述：Oracle Java SE的Java SE、Java SE嵌入式产品（组件：JSSE）中存在漏洞。受影响的受支持版本是javase:7u251、8u241、11.0.6和14；javase Embedded:8u241。易受攻击的漏洞允许未经身份验证的攻击者通过HTTPS访问网络，从而危害Java SE、Java SE Embedded。成功攻击此漏洞可导致未经授权的能力，从而导致Java SE、Java SE Embedded的部分拒绝服务（部分DOS）。注意：适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分5.3（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2020-2800
+描述：Oracle Java SE的Java SE、Java SE嵌入式产品（组件：轻量级HTTP服务器）中存在漏洞。受影响的受支持版本是javase:7u251、8u241、11.0.6和14；javase Embedded:8u241。难以利用的漏洞允许未经身份验证的攻击者通过多个协议访问网络，危害Java SE、Java SE Embedded。成功攻击此漏洞可导致对某些Java SE、Java SE嵌入式可访问数据进行未经授权的更新、插入或删除访问，以及对Java SE、Java SE嵌入式可访问数据的子集进行未经授权的读取访问。注意：只有通过向指定组件中的API提供数据而不使用不受信任的Java Web Start应用程序或不受信任的Java小程序（如通过Web服务）来攻击此漏洞。CVSS 3.0基本得分4.8（机密性和完整性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N）。
+·CVE-2020-2803
+描述：在java.nio软件OpenJDK的Libraries组件中的缓冲类，在某些情况下会绕过它。此漏洞允许不受信任的Java应用程序或小程序绕过Java沙盒限制。
+·CVE-2020-2805
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE和Java SE Embedded中的Libraries组件存在安全漏洞。攻击者可利用该漏洞控制Java SE和Java SE Embedded，影响数据的可用性、保密性和完整性。以下产品及版本受到影响：Java SE 7u251版本，8u241版本，11.0.6版本，14版本；Java SE Embedded 8u241版本。
+·CVE-2020-2830
+描述：受影响的Oracle Java SE（组件：并发）支持的Java SE、Java SE嵌入式产品中的漏洞是Java SE:7u251、8u241、11。O 6和14:Java SE Embedded8u24。易受攻击的漏洞允许未经身份验证的攻击者通过多协议进行网络访问来危害Java SE，Java SE Embedded成功攻击此漏洞可导致授权能力导致Java SE的部分拒绝服务（部分DOS），Java SE EmbeddedNote:适用于客户端和服务器部署爪哇岛。此漏洞可通过盒装Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的APL提供数据而不使用沙盒Java Web StartApplication或沙盒Java小程序（如通过Web服务）来利用此漏洞。CVSS 3.0基本得分5.3（可用性影响）。CVSS矢量：（CVSS:3。0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/1:N/A:L）
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+java-1.7.0-openjdk、java-1.7.0-openjdk-accessibility、java-1.7.0-openjdk-demo、java-1.7.0-openjdk-devel、java-1.7.0-openjdk-headless、java-1.7.0-openjdk-javadoc、java-1.7.0-openjdk-src
+·x86_64架构:
+java-1.7.0-openjdk、java-1.7.0-openjdk-accessibility、java-1.7.0-openjdk-demo、java-1.7.0-openjdk-devel、java-1.7.0-openjdk-headless、java-1.7.0-openjdk-javadoc、java-1.7.0-openjdk-src
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8或以上版本
+java-1.7.0-openjdk-accessibility-1.7.0.261-2.6.22.2.el7_8或以上版本
+java-1.7.0-openjdk-demo-1.7.0.261-2.6.22.2.el7_8或以上版本
+java-1.7.0-openjdk-devel-1.7.0.261-2.6.22.2.el7_8或以上版本
+java-1.7.0-openjdk-headless-1.7.0.261-2.6.22.2.el7_8或以上版本
+java-1.7.0-openjdk-javadoc-1.7.0.261-2.6.22.2.el7_8或以上版本
+java-1.7.0-openjdk-src-1.7.0.261-2.6.22.2.el7_8或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2018-3639:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-2756:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-2757:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-2773:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-2781:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-2800:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-2803:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-2805:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-2830:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+java-1.7.0-openjdk(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.7.0-openjdk-accessibility-1.7.0.261-2.6.22.2.el7_8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.7.0-openjdk-demo-1.7.0.261-2.6.22.2.el7_8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.7.0-openjdk-devel-1.7.0.261-2.6.22.2.el7_8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.7.0-openjdk-headless-1.7.0.261-2.6.22.2.el7_8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.7.0-openjdk-javadoc-1.7.0.261-2.6.22.2.el7_8.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.7.0-openjdk-src-1.7.0.261-2.6.22.2.el7_8.aarch64.rpm
+
+java-1.7.0-openjdk(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.7.0-openjdk-1.7.0.261-2.6.22.2.el7_8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.7.0-openjdk-accessibility-1.7.0.261-2.6.22.2.el7_8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.7.0-openjdk-demo-1.7.0.261-2.6.22.2.el7_8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.7.0-openjdk-devel-1.7.0.261-2.6.22.2.el7_8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.7.0-openjdk-headless-1.7.0.261-2.6.22.2.el7_8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.7.0-openjdk-javadoc-1.7.0.261-2.6.22.2.el7_8.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.7.0-openjdk-src-1.7.0.261-2.6.22.2.el7_8.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

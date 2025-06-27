@@ -1,0 +1,67 @@
+Name:KYSA-202303-0056
+Severity:严重
+Summary:libphp-phpmailer安全漏洞
+Published:2023-09-26
+URL:/support/loophole/patch/4165.html
+Title:
+			公告ID：KYSA-202303-0056
+公告摘要：libphp-phpmailer安全漏洞
+等级：严重
+发布日期：2023-09-26
+		
+1. 漏洞概述
+CVE-2021-3603
+Magento Commerce是提供一流的购物体验，而无需开发人员的支持。Magento Commerce存在输入验证错误漏洞，该漏洞的存在是由于对用户提供的输入验证不足。远程管理员可以向应用程序传递特制的输入，并在系统上执行任意代码。该漏洞允许远程用户在目标系统上执行任意代码。
+CVE-2016-10045
+PHPMailer是一个用于发送电子邮件的PHP类库。PHPMailer 5.2.20之前的版本中的isMail transport存在安全漏洞,该漏洞源于程序没有设置Sender属性。远程攻击者可利用该漏洞向邮件命令传递额外的参数，并执行任意代码。
+CVE-2017-5223
+PHPMailer是一个用于发送电子邮件的PHP类库。PHPMailer 5.2.22之前的版本中存在本地信息泄露漏洞。攻击者可利用该漏洞读取本地文件。
+CVE-2016-10033
+PHPMailer是一个用于发送电子邮件的PHP类库。PHPMailer 5.2.18之前的版本中的isMail transport的‘mailSend’函数存在安全漏洞，该漏洞源于程序没有设置Sender属性。远程攻击者可利用该漏洞向邮件命令中传递额外的参数，并执行任意代码。
+CVE-2018-19296
+PHPMailer是一个用于发送电子邮件的PHP类库。PHPMailer 5.2.27之前版本和6.0.6之前的6.x版本中存在安全漏洞。5.2.27之前的PHPMailer和6.0.6之前的6.x容易受到注入攻击。
+CVE-2017-11503
+PHPMailer是一个用于发送电子邮件的PHP类库。 PHPMailer中的‘code_generator.phps’example script存在跨站脚本漏洞，该漏洞源于在显示输入之前，程序没有正确的过滤来自用户输入的HTML代码。远程攻击者可利用该漏洞执行任意脚本代码。
+CVE-2020-13625
+PHPMailer是一个用于发送电子邮件的PHP类库。 PHPMailer 6.1.6之前版本中存在安全漏洞，该漏洞源于在文件附件名称包含双引号字符，程序无法进行正确的转义。攻击者可利用该漏洞可能导致文件类型无法被正确解析。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303
+x86_64 架构：
+libphp-phpmailer
+arm64 架构：
+libphp-phpmailer
+mips64el 架构：
+libphp-phpmailer
+loongarch64 架构：
+libphp-phpmailer
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303
+6.0.6-0.1kylin0.1~esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libphp-phpmailer
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libp/libphp-phpmailer/libphp-phpmailer_6.0.6-0.1kylin0.1~esm1_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libp/libphp-phpmailer/libphp-phpmailer_6.0.6-0.1kylin0.1~esm1_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libp/libphp-phpmailer/libphp-phpmailer_6.0.6-0.1kylin0.1~esm1_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libp/libphp-phpmailer/libphp-phpmailer_6.0.6-0.1kylin0.1~esm1_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

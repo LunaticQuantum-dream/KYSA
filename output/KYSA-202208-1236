@@ -1,0 +1,195 @@
+Name:KYSA-202208-1236
+Severity:重要
+Summary:tomcat安全漏洞
+Published:2022-08-16
+URL:/support/loophole/patch/1597.html
+Title:
+			公告ID：KYSA-202208-1236
+公告摘要：tomcat安全漏洞
+安全等级：Important
+发布日期：2022/8/16
+		
+1.修复的CVE
+·CVE-2014-0230
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在安全漏洞，该漏洞源于程序在完全读取请求体前返回HTTP响应。远程攻击者可借助一系列失败的上传尝试利用该漏洞造成拒绝服务（内存消耗）。以下版本受到影响：Apache Tomcat 6.0.44之前6.x版本，7.0.55之前7.x版本，8.0.9之前8.x版本。
+·CVE-2014-7810
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在访问控制错误漏洞。该漏洞源于网络系统或产品未正确限制来自未授权角色的资源访问。
+·CVE-2015-5174
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat的RequestUtil.java文件中存在目录遍历漏洞，该漏洞源于getResource、getResourceAsStream和getResourcePaths函数没有充分过滤路径名中的目录遍历字符‘..’。远程攻击者可利用该漏洞绕过既定的SecurityManager限制，列出父目录。以下版本受到影响：Apache Tomcat 6.0.45之前6.x版本，7.0.65之前7.x版本，8.0.27之前8.x版本。
+·CVE-2015-5345
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat的Mapper组件中存在安全漏洞，该漏洞源于程序实现重定向前没有处理安全约束和过滤器。远程攻击者可借助缺少‘/’字符结尾的URL利用该漏洞确定目录的存在。以下版本受到影响：Apache Tomcat 6.0.45之前6.x版本，7.0.67之前7.x版本，8.0.30之前8.x版本，9.0.0.M2之前9.x版本。
+·CVE-2015-5346
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat中存在会话固定漏洞。当程序为相同Web应用程序的多个版本的部署使用不同的会话设置时，远程攻击者可通过使用请求中的‘requestedSessionSSL’字段利用该漏洞劫持Web会话。以下版本受到影响：Apache Tomcat 7.0.66之前7.x版本，8.0.30之前8.x版本，9.0.0.M2之前9.x版本。
+·CVE-2015-5351
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat的Manager和Host Manager应用程序中存在安全漏洞，该漏洞源于程序为任意新的请求建立会话并发送CSRF令牌。远程攻击者可通过使用令牌利用该漏洞绕过CSRF保护机制。以下版本受到影响：Apache Tomcat 7.0.68之前7.x版本，8.0.31之前8.x版本，9.0.0.M2之前9.x版本。
+·CVE-2016-0706
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在安全漏洞，该漏洞源于程序没有将org.apache.catalina.manager.StatusManagerServlet放到org/apache/catalina/core/RestrictedServlets.properties列表中。远程攻击者可借助特制的Web应用程序利用该漏洞绕过既定的SecurityManager限制，读取任意HTTP请求，发现会话ID。以下版本受到影响：Apache Tomcat 6.0.45之前6.x版本，7.0.68之前7.x版本，8.0.31之前8.x版本，9.0.0.M2之前9.x版本。
+·CVE-2016-0763
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat的org/apache/naming/factory/ResourceLinkFactory.java文件中的‘setGlobalContext’方法存在安全漏洞，该漏洞源于程序运行在安全管理器下时，Web应用程序仍可调用‘ResourceLinkFactory.setGlobalContext’方法。远程攻击者可借助设置全局配置指令的Web应用程序利用该漏洞绕过既定的SecurityManager限制，读取或写入任意应用程序数据，或造成拒绝服务（应用程序中断）。以下版本受到影响;Apache Tomcat 7.0.68之前7.x版本，8.0.31之前8.x版本，9.0.0.M3之前9.x版本。
+·CVE-2016-5425
+描述：我们发现Tomcat包安装了配置文件/usr/lib/tmpfiles.d/tomcat.conf公司可写入tomcat组。组成员或部署在Tomcat上的恶意web应用程序可以使用此漏洞来提升其权限。
+·CVE-2016-6325
+描述：我们发现Tomcat包安装了一些由Tomcat初始化脚本读取的可写入Tomcat组的配置文件。组成员或部署在Tomcat上的恶意web应用程序可以使用此漏洞来提升其权限。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+tomcat、tomcat-admin-webapps、tomcat-docs-webapp、tomcat-el-2.2-api、tomcat-javadoc、tomcat-jsp-2.2-api、tomcat-jsvc、tomcat-lib、tomcat-servlet-3.0-api、tomcat-webapps
+x86_64架构:
+tomcat、tomcat-admin-webapps、tomcat-docs-webapp、tomcat-el-2.2-api、tomcat-javadoc、tomcat-jsp-2.2-api、tomcat-jsvc、tomcat-lib、tomcat-servlet-3.0-api、tomcat-webapps
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+tomcat-7.0.76-10.el7_7
+tomcat-admin-webapps-7.0.76-10.el7_7
+tomcat-docs-webapp-7.0.76-10.el7_7
+tomcat-el-2.2-api-7.0.76-10.el7_7
+tomcat-javadoc-7.0.76-10.el7_7
+tomcat-jsp-2.2-api-7.0.76-10.el7_7
+tomcat-jsvc-7.0.76-10.el7_7
+tomcat-lib-7.0.76-10.el7_7
+tomcat-servlet-3.0-api-7.0.76-10.el7_7
+tomcat-webapps-7.0.76-10.el7_7
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+·CVE-2014-0230：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2014-7810：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2015-5174：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2015-5345：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2015-5346：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2015-5351：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2016-0706：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2016-0763：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2016-5425：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2016-6325：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+tomcat（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-admin-webapps-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-docs-webapp-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-el-2.2-api-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-javadoc-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-jsp-2.2-api-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-jsvc-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-lib-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-servlet-3.0-api-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-webapps-7.0.76-10.el7_7.noarch.rpm
+
+tomcat（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/tomcat-admin-webapps-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/update修复的CVE
+·CVE-2014-0230
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在安全漏洞，该漏洞源于程序在完全读取请求体前返回HTTP响应。远程攻击者可借助一系列失败的上传尝试利用该漏洞造成拒绝服务（内存消耗）。以下版本受到影响：Apache Tomcat 6.0.44之前6.x版本，7.0.55之前7.x版本，8.0.9之前8.x版本。
+·CVE-2014-7810
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在访问控制错误漏洞。该漏洞源于网络系统或产品未正确限制来自未授权角色的资源访问。
+·CVE-2015-5174
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat的RequestUtil.java文件中存在目录遍历漏洞，该漏洞源于getResource、getResourceAsStream和getResourcePaths函数没有充分过滤路径名中的目录遍历字符‘..’。远程攻击者可利用该漏洞绕过既定的SecurityManager限制，列出父目录。以下版本受到影响：Apache Tomcat 6.0.45之前6.x版本，7.0.65之前7.x版本，8.0.27之前8.x版本。
+·CVE-2015-5345
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat的Mapper组件中存在安全漏洞，该漏洞源于程序实现重定向前没有处理安全约束和过滤器。远程攻击者可借助缺少‘/’字符结尾的URL利用该漏洞确定目录的存在。以下版本受到影响：Apache Tomcat 6.0.45之前6.x版本，7.0.67之前7.x版本，8.0.30之前8.x版本，9.0.0.M2之前9.x版本。
+·CVE-2015-5346
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat中存在会话固定漏洞。当程序为相同Web应用程序的多个版本的部署使用不同的会话设置时，远程攻击者可通过使用请求中的‘requestedSessionSSL’字段利用该漏洞劫持Web会话。以下版本受到影响：Apache Tomcat 7.0.66之前7.x版本，8.0.30之前8.x版本，9.0.0.M2之前9.x版本。
+·CVE-2015-5351
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat的Manager和Host Manager应用程序中存在安全漏洞，该漏洞源于程序为任意新的请求建立会话并发送CSRF令牌。远程攻击者可通过使用令牌利用该漏洞绕过CSRF保护机制。以下版本受到影响：Apache Tomcat 7.0.68之前7.x版本，8.0.31之前8.x版本，9.0.0.M2之前9.x版本。
+·CVE-2016-0706
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在安全漏洞，该漏洞源于程序没有将org.apache.catalina.manager.StatusManagerServlet放到org/apache/catalina/core/RestrictedServlets.properties列表中。远程攻击者可借助特制的Web应用程序利用该漏洞绕过既定的SecurityManager限制，读取任意HTTP请求，发现会话ID。以下版本受到影响：Apache Tomcat 6.0.45之前6.x版本，7.0.68之前7.x版本，8.0.31之前8.x版本，9.0.0.M2之前9.x版本。
+·CVE-2016-0763
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat的org/apache/naming/factory/ResourceLinkFactory.java文件中的‘setGlobalContext’方法存在安全漏洞，该漏洞源于程序运行在安全管理器下时，Web应用程序仍可调用‘ResourceLinkFactory.setGlobalContext’方法。远程攻击者可借助设置全局配置指令的Web应用程序利用该漏洞绕过既定的SecurityManager限制，读取或写入任意应用程序数据，或造成拒绝服务（应用程序中断）。以下版本受到影响;Apache Tomcat 7.0.68之前7.x版本，8.0.31之前8.x版本，9.0.0.M3之前9.x版本。
+·CVE-2016-5425
+描述：我们发现Tomcat包安装了配置文件/usr/lib/tmpfiles.d/tomcat.conf公司可写入tomcat组。组成员或部署在Tomcat上的恶意web应用程序可以使用此漏洞来提升其权限。
+·CVE-2016-6325
+描述：我们发现Tomcat包安装了一些由Tomcat初始化脚本读取的可写入Tomcat组的配置文件。组成员或部署在Tomcat上的恶意web应用程序可以使用此漏洞来提升其权限。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+tomcat、tomcat-admin-webapps、tomcat-docs-webapp、tomcat-el-2.2-api、tomcat-javadoc、tomcat-jsp-2.2-api、tomcat-jsvc、tomcat-lib、tomcat-servlet-3.0-api、tomcat-webapps
+x86_64架构:
+tomcat、tomcat-admin-webapps、tomcat-docs-webapp、tomcat-el-2.2-api、tomcat-javadoc、tomcat-jsp-2.2-api、tomcat-jsvc、tomcat-lib、tomcat-servlet-3.0-api、tomcat-webapps
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+tomcat-7.0.76-10.el7_7
+tomcat-admin-webapps-7.0.76-10.el7_7
+tomcat-docs-webapp-7.0.76-10.el7_7
+tomcat-el-2.2-api-7.0.76-10.el7_7
+tomcat-javadoc-7.0.76-10.el7_7
+tomcat-jsp-2.2-api-7.0.76-10.el7_7
+tomcat-jsvc-7.0.76-10.el7_7
+tomcat-lib-7.0.76-10.el7_7
+tomcat-servlet-3.0-api-7.0.76-10.el7_7
+tomcat-webapps-7.0.76-10.el7_7
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+·CVE-2014-0230：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2014-7810：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2015-5174：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2015-5345：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2015-5346：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2015-5351：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2016-0706：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2016-0763：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2016-5425：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2016-6325：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+tomcat（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-admin-webapps-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-docs-webapp-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-el-2.2-api-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-javadoc-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-jsp-2.2-api-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-jsvc-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-lib-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-servlet-3.0-api-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/tomcat-webapps-7.0.76-10.el7_7.noarch.rpm
+
+tomcat（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/tomcat-admin-webapps-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-docs-webapp-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/tomcat-el-2.2-api-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-javadoc-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/tomcat-jsp-2.2-api-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-jsvc-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-lib-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-servlet-3.0-api-7.0.76-10.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/tomcat-webapps-7.0.76-10.el7_7.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

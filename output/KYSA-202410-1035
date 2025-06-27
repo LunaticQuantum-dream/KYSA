@@ -1,0 +1,156 @@
+Name:KYSA-202410-1035
+Severity:中等
+Summary:zeromq安全漏洞
+Published:2024-10-08
+URL:/support/loophole/patch/6464.html
+Title:
+			公告ID：KYSA-202410-1035
+公告摘要：zeromq安全漏洞
+等级：中等
+发布日期：2024-10-08
+		
+1.修复的漏洞
+·CVE-2020-15166
+描述：ZeroMQ是一个轻量级分布式消息传递引擎核心库。TCP（Transmission Control Protocol,传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议，由IETF的RFC 793定义。 
+ZeroMQ 4.3.1-4+deb10u2 之前版本中存在安全漏洞。该漏洞源于使用libzmq库连接到应用程序的远程未经身份验证的客户端运行 ，攻击者可利用该漏洞导致服务拒绝。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+zeromq-devel、zeromq-help、zeromq、cppzmq-devel
+·x86_64架构:
+zeromq-devel、zeromq-help、zeromq、cppzmq-devel
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+zeromq-devel、zeromq-help、zeromq、cppzmq-devel
+·x86_64架构:
+zeromq-devel、zeromq-help、zeromq、cppzmq-devel
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+zeromq-devel、zeromq-help、zeromq、cppzmq-devel
+·x86_64架构:
+zeromq-devel、zeromq-help、zeromq、cppzmq-devel
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+·aarch64架构:
+zeromq-devel、zeromq-help、zeromq、cppzmq-devel
+·x86_64架构:
+zeromq-devel、zeromq-help、zeromq、cppzmq-devel
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+zeromq-devel-4.3.4-1.ky10或以上版本
+zeromq-help-4.3.4-1.ky10或以上版本
+cppzmq-devel-4.3.4-1.ky10或以上版本
+zeromq-4.3.4-1.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64)
+zeromq-devel-4.3.4-1.ky10或以上版本
+zeromq-help-4.3.4-1.ky10或以上版本
+cppzmq-devel-4.3.4-1.ky10或以上版本
+zeromq-4.3.4-1.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (x86_64)
+zeromq-help-4.3.4-1.ky10或以上版本
+zeromq-devel-4.3.4-1.ky10或以上版本
+cppzmq-devel-4.3.4-1.ky10或以上版本
+zeromq-4.3.4-1.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+zeromq-help-4.3.4-1.ky10或以上版本
+zeromq-devel-4.3.4-1.ky10或以上版本
+cppzmq-devel-4.3.4-1.ky10或以上版本
+zeromq-4.3.4-1.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (aarch64、x86_64)
+zeromq-help-4.3.4-1.ky10或以上版本
+zeromq-devel-4.3.4-1.ky10或以上版本
+cppzmq-devel-4.3.4-1.ky10或以上版本
+zeromq-4.3.4-1.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2403
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-15166:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+zeromq(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/cppzmq-devel-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/zeromq-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/zeromq-devel-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/zeromq-help-4.3.4-1.ky10.aarch64.rpm
+
+zeromq(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/cppzmq-devel-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/zeromq-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/zeromq-devel-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/zeromq-help-4.3.4-1.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+zeromq(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/cppzmq-devel-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/zeromq-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/zeromq-devel-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/zeromq-help-4.3.4-1.ky10.aarch64.rpm
+
+zeromq(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/zeromq-help-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/cppzmq-devel-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/zeromq-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/zeromq-devel-4.3.4-1.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+zeromq(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/zeromq-help-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/zeromq-devel-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/zeromq-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/cppzmq-devel-4.3.4-1.ky10.aarch64.rpm
+
+zeromq(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/cppzmq-devel-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/zeromq-help-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/zeromq-devel-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/zeromq-4.3.4-1.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+
+zeromq(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/zeromq-help-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/zeromq-devel-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/cppzmq-devel-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/zeromq-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/zeromq-devel-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/zeromq-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/cppzmq-devel-4.3.4-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/zeromq-help-4.3.4-1.ky10.aarch64.rpm
+
+zeromq(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/cppzmq-devel-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/zeromq-help-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/zeromq-4.3.4-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/zeromq-devel-4.3.4-1.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

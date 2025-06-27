@@ -1,0 +1,12 @@
+Name:KYSA-202201-1011
+Severity:中等
+Summary:netty漏洞
+Published:2022-01-21
+URL:/support/loophole/patch/764.html
+Title:
+			摘要：netty漏洞
+安全等级：中等
+发布日期：2022年01月21日
+影响CVE：CVE-2021-43797
+		
+1.修复的CVECVE-2021-43797描述：Netty 是一个异步事件驱动的网络应用程序框架，用于快速开发可维护的高性能协议服务器和客户端。版本 4.1.7.1.Final 之前的 Netty 当它们出现在标题名称的开头/结尾时跳过控制字符。它应该很快失败，因为这些是规范不允许的，并且可能导致 HTTP 请求走私。未能进行验证可能会导致 netty 在用作代理时将它们转发到另一个远程系统之前“清理”标头名称。此远程系统无法再看到无效使用，因此不会自行进行验证。用户应升级到版本 4.1.7.1.Final 才能收到补丁。2.影响的操作系统及修复版本·银河麒麟高级服务器操作系统 V10 SP2netty-4.1.13-14.ky10netty-help-4.1.13-14.ky103.受影响的软件包·银河麒麟高级服务器操作系统 V10 SP2aarch64:netty、netty-help、x86_64:netty、netty-help、4.修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP2aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5.软件包下载地址：·银河麒麟高级服务器操作系统 V10 SP2  netty aarch64软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/netty-4.1.13-14.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/netty-help-4.1.13-14.ky10.noarch.rpm  netty x86_64软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/netty-4.1.13-14.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/netty-help-4.1.13-14.ky10.noarch.rpm 注：其他相关依赖包请到相同目录下载

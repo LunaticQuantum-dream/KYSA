@@ -1,0 +1,95 @@
+Name:KYSA-202303-1030
+Severity:重要
+Summary:firefox安全漏洞
+Published:2023-03-14
+URL:/support/loophole/patch/3077.html
+Title:
+			公告ID：KYSA-202303-1030
+公告摘要：firefox安全漏洞
+等级：Important
+发布日期：2023-03-14
+		
+1.修复的CVE
+·CVE-2020-15999
+描述：Google Chrome是美国谷歌（Google）公司的一款Web浏览器。Google Chrome 86.0.4240.111之前版本中的 FreeType 存在缓冲区错误漏洞，攻击者可利用该漏洞可以通过FreeType的字体文件触发内存破坏，以触发拒绝服务，并可能运行代码。
+·CVE-2020-16012
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。FireFox 存在安全漏洞，该漏洞源于当在未知的交叉原点图像上绘制透明图像时，Skia库的drawImage函数会根据底层图像的内容花费可变的时间。这导致了通过定时侧通道攻击可能暴露图像内容的交叉源信息。
+·CVE-2020-26951
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。FireFox 存在跨站脚本漏洞，该漏洞源于SVG代码中的解析和事件加载不匹配可能导致加载事件被触发，即使在清除之后也是如此。 已经能够利用特权内部页面中的XSS漏洞的攻击者可能已经使用此攻击来绕过我们的内置消毒器。
+·CVE-2020-26953
+描述：Mozilla Firefox和Mozilla Thunderbird都是美国Mozilla基金会的产品。Mozilla Firefox是一款开源Web浏览器。Mozilla Thunderbird是一套从Mozilla Application Suite独立出来的电子邮件客户端软件。该软件支持IMAP、POP邮件协议以及HTML邮件格式。Mozilla FireFox 和 Mozilla Thunderbird 存在安全漏洞，该漏洞源于有可能导致浏览器进入全屏模式而不显示安全UI;这样就有可能尝试钓鱼式攻击或以其他方式迷惑用户。
+·CVE-2020-26956
+描述：Mozilla Firefox等都是美国Mozilla基金会的产品。Mozilla Firefox是一款开源Web浏览器。Mozilla Firefox ESR是Firefox(Web浏览器)的一个延长支持版本。Mozilla Thunderbird是一套从Mozilla Application Suite独立出来的电子邮件客户端软件。多款Mozilla产品存在跨站脚本漏洞，该漏洞源于在清理期间删除HTML元素会保留现有的SVG事件处理程序，从而导致XSS。以下产品及版本受到影响：Firefox 83之前版本, Firefox ESR 78.5之前版本, Thunderbird 78.5之前版本。
+·CVE-2020-26957
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。Android Firefox 存在安全漏洞，该漏洞源于缺少服务初始化，OneCRL在新的Android Firefox中没有功能。这可能导致无法强制执行某些证书撤销。
+·CVE-2020-26958
+描述：Mozilla Firefox ESR是美国Mozilla基金会的Firefox(Web浏览器)的一个延长支持版本。FireFox 存在跨站脚本漏洞，该漏洞源于当响应被拦截并通过ServiceWorker缓存时，Firefox没有阻止使用不正确MIME类型的脚本的执行。这可能导致跨站点脚本包含漏洞，或者绕过内容安全策略。
+·CVE-2020-26959
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。FireFox 存在安全漏洞，该漏洞源于在浏览器关闭期间，在之前释放的对象上可能会发生引用减少，从而导致释放后使用、内存损坏和潜在的可利用崩溃。
+·CVE-2020-26960
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。Mozilla Firefox 存在安全漏洞，该漏洞源于如果在nsTArray上调用Compact（）方法，则可以在不更新其他指针的情况下重新分配该数组，从而导致潜在的事后使用和可利用的崩溃。
+·CVE-2020-26961
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。FireFox 存在安全漏洞，该漏洞源于使用基于HTTPS的DNS时，它会故意从响应中过滤RFC1918和相关的IP范围，因为这些来自DoH解析器是没有意义的。 但是，当通过IPv6映射IPv4地址时，这些地址被错误地允许通过，从而导致潜在的DNS重新绑定攻击。
+·CVE-2020-26963
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。FireFox 存在安全漏洞，该漏洞源于历史和位置接口可以用来挂起浏览器。
+·CVE-2020-26965
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。FireFox 存在安全漏洞，该漏洞源于一些网站具有“显示密码”功能，单击按钮会将密码字段更改为教科书字段，从而显示键入的密码。 如果在使用记住用户输入的软件键盘时，用户键入了密码并使用了该功能，则更改了密码字段的类型，从而导致键盘布局发生了变化，并且软件键盘可能会记住输入的密码。
+·CVE-2020-26966
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。Mozilla FireFox 存在安全漏洞，该漏洞源于搜索一个单一的字从地址栏导致mDNS请求被发送到本地网络搜索一个主机名组成的字符串;导致了信息泄露。
+·CVE-2020-26967
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。FireFox 83之前版本存在安全漏洞，该漏洞源于当使用突变观察者侦听页面更改时，恶意web页面可能会使Firefox的屏幕截图与它注入到页面中的其他元素进行交互。这将导致屏幕截图代码中的内部错误和意外行为。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+firefox
+·x86_64架构:
+firefox
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+firefox-79.0-4.p09.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-15999:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-16012:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26951:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26953:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26956:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26957:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26958:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26959:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26960:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26961:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26963:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26965:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26966:需要重启 firefox 以使漏洞修复生效。
+CVE-2020-26967:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+firefox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/firefox-79.0-4.p09.ky10.aarch64.rpm
+
+firefox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/firefox-79.0-4.p09.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-5187
+Severity:严重
+Summary:Mozilla Firefox和Firefox ESR 安全漏洞
+Published:2018-06-26
+URL:/support/loophole/patch/117.html
+Title:
+			摘要：             Mozilla Firefox和Firefox ESR 安全漏洞   
+安全等级：          严重
+公告ID：           CS2CSA-2018-5187
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-06-26
+CVE：             CVE-2018-5187 CVSS3评分：8.8
+		
+1. 概述：中标麒麟高级服务器操作系统V6、V7不受该漏洞影响。2. 描述：Mozilla Firefox 61之前版本和Firefox ESR 60.1之前版本中存在内存损坏漏洞。远程攻击者可利用该漏洞在受影响应用程序的上下文中执行任意代码或造成拒绝服务。			

@@ -1,0 +1,13 @@
+Name:KYSA-202110-1024
+Severity:重要
+Summary:openjpeg2漏洞
+Published:2021-10-16
+URL:/support/loophole/patch/546.html
+Title:
+			摘要：openjpeg2漏洞
+安全等级：重要
+公告ID：KYSA-202110-1024
+发布日期：2021-10-16
+影响CVE：CVE-2020-27823、CVE-2020-27824、CVE-2020-6851、CVE-2020-8112
+		
+1. 修复的CVE信息CVE-2020-27823描述：OpenJPEG的编码器中发现了一个缺陷。此漏洞允许攻击者将x，y偏移量输入传递给OpenJPEG，以便在编码过程中使用。此漏洞的最大威胁是机密性、完整性以及系统可用性。CVE-2020-27824描述：opj_dwt_calc_explicit_stepsizes（）函数中的OpenJPEG编码器中发现了一个缺陷。此漏洞允许攻击者向分解级别提供精心编制的输入，从而导致缓冲区溢出。此漏洞的最大威胁是系统可用性。CVE-2020-6851描述：OpenJPEG 2中的opj_t1_clbl_解码_处理器中发现了基于堆的缓冲区溢出漏洞。此漏洞的最大威胁是数据机密性、完整性以及系统可用性。在libopenjp2.so的opj_t1_clbl_decode_处理器中的openjpeg中发现了一个基于堆的缓冲区溢出漏洞。此漏洞影响2.3.1版本，对文件机密性和完整性以及系统可用性的最大威胁。CVE-2020-8112描述：OpenJPEG 2中的opj_t1_clbl_解码_处理器中发现了基于堆的缓冲区溢出漏洞。此漏洞的最大威胁是数据机密性、完整性以及系统可用性。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP1openjpeg2-2.3.1-6.ky10openjpeg2-devel-2.3.1-6.ky10openjpeg2-help-2.3.1-6.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP1aarch64:openjpeg2、openjpeg2-devel、openjpeg2-helpmips64el:openjpeg2、openjpeg2-devel、openjpeg2-helpx86_64:openjpeg2、openjpeg2-devel、openjpeg2-help4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP1aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/ mips64el:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP1 openjpeg2 aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/openjpeg2-2.3.1-6.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/openjpeg2-devel-2.3.1-6.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/openjpeg2-help-2.3.1-6.ky10.noarch.rpm openjpeg2 mips64el软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/openjpeg2-2.3.1-6.ky10.mips64el.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/openjpeg2-devel-2.3.1-6.ky10.mips64el.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/openjpeg2-help-2.3.1-6.ky10.noarch.rpm openjpeg2 x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/openjpeg2-2.3.1-6.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/openjpeg2-devel-2.3.1-6.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/openjpeg2-help-2.3.1-6.ky10.noarch.rpm注：其他相关依赖包请到相同目录下载 

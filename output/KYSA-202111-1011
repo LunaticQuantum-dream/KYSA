@@ -1,0 +1,13 @@
+Name:KYSA-202111-1011
+Severity:低等
+Summary:bluez漏洞
+Published:2021-11-11
+URL:/support/loophole/patch/626.html
+Title:
+			摘要：bluez漏洞
+安全等级：低等
+公告ID：KYSA-202111-1011
+发布日期：2021-11-11
+影响CVE：CVE-2021-3658
+		
+1. 修复的CVE信息CVE-2021-3658描述：bluez存在安全漏洞，该漏洞源于bluez 的 bluetoothd 在设备断电时错误地保存适配器的可发现状态，并在通电时恢复了它。这可能会导致蓝牙堆栈无意中暴露给物理上接近的攻击者。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2bluez-5.54-5.ky10bluez-cups-5.54-5.ky10bluez-devel-5.54-5.ky10bluez-help-5.54-5.ky10bluez-libs-5.54-5.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:bluez、bluez-cups、bluez-devel、bluez-help、bluez-libsx86_64:bluez、bluez-cups、bluez-devel、bluez-help、bluez-libs4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP2aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP2 bluez aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/bluez-5.54-5.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/bluez-cups-5.54-5.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/bluez-devel-5.54-5.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/bluez-help-5.54-5.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/bluez-libs-5.54-5.ky10.aarch64.rpm bluez x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/bluez-5.54-5.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/bluez-cups-5.54-5.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/bluez-devel-5.54-5.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/bluez-help-5.54-5.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/bluez-libs-5.54-5.ky10.x86_64.rpm注：其他相关依赖包请到相同目录下载 

@@ -1,0 +1,43 @@
+Name:KYSA-202312-0012
+Severity:严重
+Summary:box-utils安全漏洞
+Published:2023-12-08
+URL:/support/loophole/patch/4634.html
+Title:
+			公告ID：KYSA-202312-0012
+公告摘要：box-utils安全漏洞
+等级：严重
+发布日期：2023-12-08
+		
+1. 修复的CVE
+KVE-2023-1202
+box-utils是用于管理文件安全目录的命令行工具。该软件包存在权限配置缺陷，可能导致普通用户权限提升。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+box-utils、libbox1、libbox1-dev
+arm64 架构：
+box-utils、libbox1、libbox1-dev
+mips64el 架构：
+box-utils、libbox1、libbox1-dev
+loongarch64 架构：
+box-utils、libbox1、libbox1-dev
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+4.1.0.1-0k0.8
+
+4. 修复方法
+方法一：下载软件包进行升级安装
+通过附件软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+下载地址详见附件
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

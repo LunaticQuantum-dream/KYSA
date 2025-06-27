@@ -1,0 +1,136 @@
+Name:KYSA-202107-0002
+Severity:中等
+Summary:avahi安全漏洞
+Published:2023-01-03
+URL:/support/loophole/patch/2457.html
+Title:
+			公告ID：KYSA-202107-0002
+公告摘要：avahi安全漏洞
+等级：Moderate
+发布日期：2023-01-03
+		
+1. 修复的CVE
+CVE-2021-3468
+Idrive IDrive是美国IDrive（Idrive）公司的一套云备份和云存储服务解决方案。iDrive RemotePC 7.6.48之前版本在Windows上存在信息泄露漏洞，该漏洞源于当客户端尝试建立 LAN 连接时，中间人可以恢复系统的个人密钥。个人密钥通过网络传输，同时仅通过替换密码进行加密。
+
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1
+avahi-autoipd
+avahi-daemon
+avahi-discover
+avahi-dnsconfd
+avahi-ui-utils
+avahi-utils
+gir1.2-avahi-0.6
+libavahi-client3
+libavahi-common-data
+libavahi-common3
+libavahi-compat-libdnssd1
+libavahi-core7
+libavahi-glib1
+libavahi-gobject0
+libavahi-ui-gtk3-0
+python-avahi
+
+3. 软件包修复版本
+软件包：avahi
+0.7-4kylin7.1(V10 SP1)
+
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-autoipd_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-daemon_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-discover_0.7-4kylin7.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-dnsconfd_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-ui-utils_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-utils_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/gir1.2-avahi-0.6_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-client3_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-common-data_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-common3_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-compat-libdnssd1_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-core7_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-glib1_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-gobject0_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-ui-gtk3-0_0.7-4kylin7.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/python-avahi_0.7-4kylin7.1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-autoipd_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-daemon_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-discover_0.7-4kylin7.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-dnsconfd_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-ui-utils_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-utils_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/gir1.2-avahi-0.6_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-client3_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-common-data_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-common3_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-compat-libdnssd1_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-core7_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-glib1_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-gobject0_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-ui-gtk3-0_0.7-4kylin7.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/python-avahi_0.7-4kylin7.1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-autoipd_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-daemon_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-discover_0.7-4kylin7.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-dnsconfd_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-ui-utils_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-utils_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/gir1.2-avahi-0.6_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-client3_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-common-data_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-common3_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-compat-libdnssd1_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-core7_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-glib1_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-gobject0_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-ui-gtk3-0_0.7-4kylin7.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/python-avahi_0.7-4kylin7.1_mips64el.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-autoipd_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-daemon_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-discover_0.7-4kylin7.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-dnsconfd_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-ui-utils_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/avahi-utils_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/gir1.2-avahi-0.6_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-client3_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-common-data_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-common3_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-compat-libdnssd1_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-core7_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-glib1_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-gobject0_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/libavahi-ui-gtk3-0_0.7-4kylin7.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/avahi/python-avahi_0.7-4kylin7.1_loongarch64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

@@ -1,0 +1,59 @@
+Name:KYSA-202206-0016
+Severity:中等
+Summary:intel-microcode安全漏洞
+Published:2024-04-01
+URL:/support/loophole/patch/5509.html
+Title:
+			公告ID：KYSA-202206-0016
+公告摘要：intel-microcode安全漏洞
+等级：中等
+发布日期：2024-04-01
+		
+1. 修复的CVE
+CVE-2021-0127
+Intel Processors（英特尔处理器）提供解释计算机指令以及处理计算机软件中的数据。 Intel Processors存在安全漏洞，该漏洞源于英特尔处理器的BIOS固件中潜在的安全漏洞。攻击者可利用该漏洞导致特权升级、拒绝服务。
+CVE-2021-33117
+Intel Xeon Scalable Processors是一款可扩展服务器中央处理器（CPU）。 Intel 3rd Generation Xeon Scalable Processors BIOS MR7之前版本存在安全漏洞，攻击者利用该漏洞可以访问敏感信息。
+CVE-2021-33120
+Intel Processors（英特尔处理器）提供解释计算机指令以及处理计算机软件中的数据。 Intel Processors BIOS firmware 存在安全漏洞，该漏洞源于英特尔处理器的BIOS固件中潜在的安全漏洞。攻击者可利用该漏洞导致特权升级、拒绝服务。
+CVE-2021-0146
+Intel Processors（英特尔处理器）提供解释计算机指令以及处理计算机软件中的数据。 Intel processors 存在安全漏洞，该漏洞允许未经身份验证的用户通过物理访问可升级特权。
+CVE-2022-21127
+Microsoft Windows是一套个人设备使用的操作系统。 Microsoft Windows 存在安全漏洞，该漏洞源于 Intel 部分处理器存在安全问题。
+CVE-2022-21151
+Intel Processors（英特尔处理器）提供解释计算机指令以及处理计算机软件中的数据。 Intel Processors 存在安全漏洞，经过身份验证的攻击者利用该漏洞可导致信息泄露。
+CVE-2022-21166
+Microsoft Windows是一套个人设备使用的操作系统。 Microsoft Windows 存在安全漏洞，该漏洞源于 Intel 部分处理器存在安全问题。
+CVE-2021-0145
+Intel Processors（英特尔处理器）是美国英特尔（Intel）公司的提供解释计算机指令以及处理计算机软件中的数据。 Intel Processors BIOS firmware 存在安全漏洞，该漏洞源于英特尔处理器的BIOS固件中潜在的安全漏洞。攻击者可利用该漏洞导致特权升级、拒绝服务。
+CVE-2022-21123
+Microsoft Windows是一套个人设备使用的操作系统。 Microsoft Windows存在安全漏洞。该漏洞源于Intel部分处理器存在安全问题。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+intel-microcode
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+3.20220510.0kylin0.20.04.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install intel-microcode
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/i/intel-microcode/intel-microcode_3.20220510.0kylin0.20.04.1_amd64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

@@ -1,0 +1,96 @@
+Name:KYSA-202208-1097
+Severity:低等
+Summary:gtk-vnc安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1681.html
+Title:
+			公告ID：KYSA-202208-1097
+公告摘要：gtk-vnc安全漏洞
+安等级：Low
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2017-5884
+描述：gtk-vnc是一款用于GTK中的VNC查看器。gtk-vnc 0.7.0之前的版本中存在安全漏洞。远程攻击者可利用该漏洞执行任意代码。
+·CVE-2017-5885
+描述：gtk-vnc是一款用于GTK中的VNC查看器。gtk-vnc 0.7.0之前的版本中的‘vnc_connection_server_message’和‘vnc_color_map_set’函数存在整数溢出漏洞。远程攻击者可利用该漏洞造成拒绝服务（崩溃）或执行任意代码。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+gtk-vnc、gtk-vnc-devel、gtk-vnc-python、gtk-vnc2、gtk-vnc2-devel、gvnc、gvnc-devel、gvnc-tools、gvncpulse、gvncpulse-devel
+x86_64架构:
+gtk-vnc、gtk-vnc-devel、gtk-vnc-python、gtk-vnc2、gtk-vnc2-devel、gvnc、gvnc-devel、gvnc-tools、gvncpulse、gvncpulse-devel
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+gtk-vnc-0.7.0-3.el7
+gtk-vnc-devel-0.7.0-3.el7
+gtk-vnc-python-0.7.0-3.el7
+gtk-vnc2-0.7.0-3.el7
+gtk-vnc2-devel-0.7.0-3.el7
+gvnc-0.7.0-3.el7
+gvnc-devel-0.7.0-3.el7
+gvnc-tools-0.7.0-3.el7
+gvncpulse-0.7.0-3.el7
+gvncpulse-devel-0.7.0-3.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+148.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+149.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+150.升级完成后是否需要重启服务或操作系统：
+·CVE-2017-5884：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-5885：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+gtk-vnc（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gtk-vnc-0.7.0-3.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gtk-vnc-devel-0.7.0-3.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gtk-vnc-python-0.7.0-3.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gtk-vnc2-0.7.0-3.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gtk-vnc2-devel-0.7.0-3.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gvnc-0.7.0-3.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gvnc-devel-0.7.0-3.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gvnc-tools-0.7.0-3.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gvncpulse-0.7.0-3.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gvncpulse-devel-0.7.0-3.el7.aarch64.rpm
+
+gtk-vnc（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gtk-vnc-0.7.0-3.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gtk-vnc-0.7.0-3.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gtk-vnc-devel-0.7.0-3.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gtk-vnc-devel-0.7.0-3.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gtk-vnc-python-0.7.0-3.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gtk-vnc-python-0.7.0-3.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gtk-vnc2-0.7.0-3.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gtk-vnc2-0.7.0-3.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gtk-vnc2-devel-0.7.0-3.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gtk-vnc2-devel-0.7.0-3.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gvnc-0.7.0-3.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gvnc-0.7.0-3.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gvnc-devel-0.7.0-3.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gvnc-devel-0.7.0-3.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gvnc-tools-0.7.0-3.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gvnc-tools-0.7.0-3.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gvncpulse-0.7.0-3.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gvncpulse-0.7.0-3.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gvncpulse-devel-0.7.0-3.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gvncpulse-devel-0.7.0-3.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

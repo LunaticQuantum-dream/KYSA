@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-5151
+Severity:严重
+Summary:Mozilla Firefox 安全漏洞
+Published:2018-05-09
+URL:/support/loophole/patch/116.html
+Title:
+			摘要：             Mozilla Firefox 安全漏洞
+安全等级：          严重
+公告ID：           CS2CSA-2018-5151
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-05-09
+CVE：             CVE-2018-5151 CVSS3评分：8.8
+		
+1. 概述：中标麒麟高级服务器操作系统V6、V7不受该漏洞影响。2. 描述：Mozilla Firefox 60之前版本中存在安全漏洞。远程攻击者可利用该漏洞造成内存损坏或执行任意代码。			

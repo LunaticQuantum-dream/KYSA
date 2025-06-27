@@ -1,0 +1,108 @@
+Name:KYSA-202212-1018
+Severity:重要
+Summary:qemu安全漏洞
+Published:2022-12-20
+URL:/support/loophole/patch/3568.html
+Title:
+			公告ID：KYSA-202212-1018
+公告摘要：qemu安全漏洞
+等级：Important
+发布日期：2022-12-20
+		
+1.修复的CVE
+·CVE-2020-13754
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）软件开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 4.2.0版本中的hw/pci/msix.c文件中存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2020-15469
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）软件开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 4.2.0版本中存在代码问题漏洞。该漏洞源于网络系统或产品的代码开发过程中存在设计或实现不当的问题。
+·CVE-2020-17380
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中的hw/sd/sdhci.c文件的‘sdhci_sdma_transfer_multi_blocks()’函数存在缓冲区错误漏洞。攻击者可利用该漏洞导致拒绝服务。
+·CVE-2020-35504
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 存在代码问题漏洞，攻击者可利用该漏洞在客户系统内使用多个漏洞。
+·CVE-2020-35505
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU  存在安全漏洞，攻击者可利用该漏洞在客户系统内使用多个漏洞。
+·CVE-2021-20181
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU guest system 存在安全漏洞，攻击者可利用该漏洞通过VirtFS目录共享触发致命错误，从而在主机系统上触发拒绝服务.
+·CVE-2021-20203
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 中存在输入验证错误漏洞。该漏洞源于攻击者可通过QEMU的vmxnet3触发整数溢出，以触发拒绝服务，并可能在主机系统上运行代码。
+·CVE-2021-3392
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。qemu 5.2.0-2 存在资源管理错误漏洞，攻击者可使用此漏洞使主机上的QEMU进程崩溃，从而导致拒绝服务的情况。
+·CVE-2021-3409
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 存在缓冲区错误漏洞，攻击者可利用该漏洞触发内存损坏，从而触发拒绝服务，并可能在主机系统上运行代码。
+·CVE-2021-3416
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 存在安全漏洞，攻击者可利用该漏洞通过NIC环回模式触发致命错误，从而在主机系统上触发拒绝服务。
+·CVE-2021-3544
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 存在安全漏洞。该漏洞源于 vhost-user-gpu/vhost-user-gpu.c存在内存泄漏。以下产品及版本受到影响：QEMU： 5.0.0, 5.0.1, 5.1.0, 5.2.0, 6.0.0。
+·CVE-2021-3545
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 存在信息泄露漏洞。该漏洞源于vhost-user-gpu/virgl.c中的virgl_cmd_get_capset_info()函数存在未初始化存储器泄露，攻击者可利用该漏洞获取敏感信息。以下产品及版本受到影响：QEMU： 4.1.0, 4.1.1, 4.2.0, 4.2.1, 5.0.0, 5.0.1, 5.1.0, 5.2.0, 6.0.0。
+·CVE-2021-3638
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU的ATI VGA 存在安全漏洞，该漏洞源于在QEMU的ATI VGA设备仿真中发现了内存访问越界的缺陷。攻击者可利用该漏洞破坏主机上的QEMU进程，从而导致拒绝服务。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+qemu、qemu-guest-agent、qemu-help、qemu-img
+·x86_64架构:
+qemu、qemu-guest-agent、qemu-help、qemu-img、qemu-seabios
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64)
+qemu-4.1.0-32.p10.ky10或以上版本
+qemu-guest-agent-4.1.0-32.p10.ky10或以上版本
+qemu-help-4.1.0-32.p10.ky10或以上版本
+qemu-img-4.1.0-32.p10.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (x86_64)
+qemu-4.1.0-32.p10.ky10或以上版本
+qemu-guest-agent-4.1.0-32.p10.ky10或以上版本
+qemu-help-4.1.0-32.p10.ky10或以上版本
+qemu-img-4.1.0-32.p10.ky10或以上版本
+qemu-seabios-4.1.0-32.p10.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-13754:需要重启 qemu 以使漏洞修复生效。
+CVE-2020-15469:需要重启 qemu 以使漏洞修复生效。
+CVE-2020-17380:需要重启 qemu 以使漏洞修复生效。
+CVE-2020-35504:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-35505:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-20181:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-20203:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-3392:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-3409:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-3416:需要重启 qemu 以使漏洞修复生效。
+CVE-2021-3544:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-3545:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-3638:需要重启 qemu 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+qemu(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/qemu-4.1.0-32.p10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/qemu-guest-agent-4.1.0-32.p10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/qemu-help-4.1.0-32.p10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/qemu-img-4.1.0-32.p10.ky10.aarch64.rpm
+
+qemu(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/qemu-4.1.0-32.p10.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/qemu-guest-agent-4.1.0-32.p10.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/qemu-help-4.1.0-32.p10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/qemu-img-4.1.0-32.p10.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/qemu-seabios-4.1.0-32.p10.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

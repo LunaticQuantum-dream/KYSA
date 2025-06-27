@@ -1,0 +1,65 @@
+Name:KYSA-202208-1078
+Severity:中等
+Summary:fuse安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1691.html
+Title:
+			公告ID：KYSA-202208-1078
+公告摘要：fuse安全漏洞
+安全漏洞等级：Moderate
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2018-10906
+描述：Fuse（Filesystem in Userspace，用户空间文件系统）是软件开发者Miklos Szeredi所研发的一套允许非特权用户无需编辑内核代码就可以创建文件系统的类Unix系统机制。Fuse 2.9.8之前版本和3.2.5之前的3.x版本中存在安全漏洞。攻击者可借助‘fusermount’命令利用该漏洞绕过安全限制，挂载FUSE文件系统，造成拒绝服务。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+fuse、fuse-devel、fuse-libs
+x86_64架构:
+fuse、fuse-devel、fuse-libs
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+fuse-2.9.2-11.el7
+fuse-devel-2.9.2-11.el7
+fuse-libs-2.9.2-11.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+118.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+119.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+120.升级完成后是否需要重启服务或操作系统：
+·CVE-2018-10906：需要重启 fuse 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+fuse（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/fuse-2.9.2-11.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/fuse-devel-2.9.2-11.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/fuse-libs-2.9.2-11.el7.aarch64.rpm
+
+fuse（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/fuse-2.9.2-11.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/fuse-2.9.2-11.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/fuse-devel-2.9.2-11.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/fuse-devel-2.9.2-11.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/fuse-libs-2.9.2-11.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/fuse-libs-2.9.2-11.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

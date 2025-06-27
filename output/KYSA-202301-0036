@@ -1,0 +1,133 @@
+Name:KYSA-202301-0036
+Severity:中等
+Summary:mysql-8.0安全漏洞
+Published:2023-12-14
+URL:/support/loophole/patch/4700.html
+Title:
+			公告ID：KYSA-202301-0036
+公告摘要：mysql-8.0安全漏洞
+等级：中等
+发布日期：2023-12-14
+		
+1. 修复的CVE
+CVE-2023-21869
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21878
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21880
+Oracle MySQL Server是美国甲骨文（Oracle）公司的一款关系型数据库。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21836
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL 8.0.31及之前版本存在安全漏洞，攻击者可利用该漏洞导致未经授权的能力导致 MySQL 服务器挂起或频繁重复崩溃（完全 DOS）。
+CVE-2023-21840
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL 5.7.40之前版本存在安全漏洞，攻击者可利用该漏洞致未经授权的能力导致 MySQL 服务器挂起或频繁重复崩溃（完全 DOS）。
+CVE-2022-32221
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在安全漏洞。攻击者利用该漏洞发送错误数据。
+CVE-2023-21873
+Oracle MySQL Server是美国甲骨文（Oracle）公司的一款关系型数据库。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21883
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21877
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21871
+Oracle MySQL Server是美国甲骨文（Oracle）公司的一款关系型数据库。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21882
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21870
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21876
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21867
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21881
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21863
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21887
+Oracle MySQL Server是美国甲骨文（Oracle）公司的一款关系型数据库。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络来破坏 MySQL Server。
+CVE-2023-21879
+Oracle MySQL Server是美国甲骨文（Oracle）公司的一款关系型数据库。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21868
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+CVE-2023-21875
+Oracle MySQL Server是美国甲骨文（Oracle）公司的一款关系型数据库。 Oracle MySQL Server 8.0.31 版本及之前版本存在安全漏洞。高权限攻击者通过多种协议访问网络可以破坏 MySQL Server。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+libmysqlclient21、mysql-client-8.0、mysql-client-core-8.0、mysql-client、mysql-router、mysql-server-8.0、mysql-server-core-8.0、mysql-server、mysql-source-8.0、mysql-testsuite-8.0、mysql-testsuite
+arm64 架构：
+libmysqlclient21、mysql-client-8.0、mysql-client-core-8.0、mysql-client、mysql-router、mysql-server-8.0、mysql-server-core-8.0、mysql-server、mysql-source-8.0、mysql-testsuite-8.0、mysql-testsuite
+mips64el 架构：
+libmysqlclient21、mysql-client-8.0、mysql-client-core-8.0、mysql-client、mysql-router、mysql-server-8.0、mysql-server-core-8.0、mysql-server、mysql-source-8.0、mysql-testsuite-8.0、mysql-testsuite
+loongarch64 架构：
+libmysqlclient21、mysql-client-8.0、mysql-client-core-8.0、mysql-client、mysql-router、mysql-server-8.0、mysql-server-core-8.0、mysql-server、mysql-source-8.0、mysql-testsuite-8.0、mysql-testsuite
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+8.0.33-0kylin0.20.04.2k0.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install mysql-server-8.0
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/libmysqlclient21_8.0.33-0kylin0.20.04.2k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client-8.0_8.0.33-0kylin0.20.04.2k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client-core-8.0_8.0.33-0kylin0.20.04.2k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client_8.0.33-0kylin0.20.04.2k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-router_8.0.33-0kylin0.20.04.2k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server-8.0_8.0.33-0kylin0.20.04.2k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server-core-8.0_8.0.33-0kylin0.20.04.2k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server_8.0.33-0kylin0.20.04.2k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-source-8.0_8.0.33-0kylin0.20.04.2k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-testsuite-8.0_8.0.33-0kylin0.20.04.2k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-testsuite_8.0.33-0kylin0.20.04.2k0.1_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/libmysqlclient21_8.0.33-0kylin0.20.04.2k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client-8.0_8.0.33-0kylin0.20.04.2k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client-core-8.0_8.0.33-0kylin0.20.04.2k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client_8.0.33-0kylin0.20.04.2k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-router_8.0.33-0kylin0.20.04.2k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server-8.0_8.0.33-0kylin0.20.04.2k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server-core-8.0_8.0.33-0kylin0.20.04.2k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server_8.0.33-0kylin0.20.04.2k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-source-8.0_8.0.33-0kylin0.20.04.2k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-testsuite-8.0_8.0.33-0kylin0.20.04.2k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-testsuite_8.0.33-0kylin0.20.04.2k0.1_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/libmysqlclient21_8.0.33-0kylin0.20.04.2k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client-8.0_8.0.33-0kylin0.20.04.2k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client-core-8.0_8.0.33-0kylin0.20.04.2k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client_8.0.33-0kylin0.20.04.2k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-router_8.0.33-0kylin0.20.04.2k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server-8.0_8.0.33-0kylin0.20.04.2k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server-core-8.0_8.0.33-0kylin0.20.04.2k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server_8.0.33-0kylin0.20.04.2k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-source-8.0_8.0.33-0kylin0.20.04.2k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-testsuite-8.0_8.0.33-0kylin0.20.04.2k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-testsuite_8.0.33-0kylin0.20.04.2k0.1_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/libmysqlclient21_8.0.33-0kylin0.20.04.2k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client-8.0_8.0.33-0kylin0.20.04.2k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client-core-8.0_8.0.33-0kylin0.20.04.2k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-client_8.0.33-0kylin0.20.04.2k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-router_8.0.33-0kylin0.20.04.2k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server-8.0_8.0.33-0kylin0.20.04.2k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server-core-8.0_8.0.33-0kylin0.20.04.2k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-server_8.0.33-0kylin0.20.04.2k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-source-8.0_8.0.33-0kylin0.20.04.2k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-testsuite-8.0_8.0.33-0kylin0.20.04.2k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-8.0/mysql-testsuite_8.0.33-0kylin0.20.04.2k0.1_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

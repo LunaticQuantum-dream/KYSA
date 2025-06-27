@@ -1,0 +1,63 @@
+Name:KYSA-202104-1240
+Severity:重要
+Summary:wpa_supplicant安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/4224.html
+Title:
+			公告ID：KYSA-202104-1240
+公告摘要：wpa_supplicant安全漏洞
+等级：Important
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2015-4142
+描述：hostapd是一个实现了无线接入点（AP）和认证服务器的守护进程。wpa_supplicant是软件开发者Jouni Malinen和其他贡献者共同开发的一个运行在后台的守护进程，它主要用来支持WEP、WPA/WPA2和WAPI无线协议和加密认证。hostapd 0.5.5版本至2.4版本和wpa_supplicant 0.7.0版本至2.4版本的WMM Action帧解析器中存在整数溢出漏洞。当程序用于实现AP mode MLME/SME功能时，远程攻击者可借助特制的帧利用该漏洞造成拒绝服务（崩溃）。
+·CVE-2017-13077
+描述：Wi-Fi保护访问（WPA和WPA2）中存在安全漏洞。 攻击者可利用该漏洞在四次握手中重新安装成对加密密钥（PTK-TK），重播、解密或伪造帧。
+·CVE-2017-13078
+描述：WiFi产品中的WPA和WPA2存在安全漏洞。攻击者可利用该漏洞在四次握手中重新安装组密钥（GTK）。
+·CVE-2017-13080
+描述：WiFi产品中的WPA和WPA2存在安全漏洞。攻击者可利用该漏洞在组密钥握手中重新安装组密钥（GTK）。
+·CVE-2017-13087
+描述：WiFi产品中的WPA和WPA2存在安全漏洞。在处理无线网络管理（WNM）休眠模式响应帧时，攻击者可利用该漏洞重新安装组密钥（GTK）。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+wpa_supplicant
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+wpa_supplicant-0.7.3-9.el6_9.2或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2015-4142:需要重启 wpa_supplicant 以使漏洞修复生效。
+CVE-2017-13077:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-13078:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-13080:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-13087:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+wpa_supplicant(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/wpa_supplicant-0.7.3-9.el6_9.2.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/wpa_supplicant-0.7.3-9.el6_9.2.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

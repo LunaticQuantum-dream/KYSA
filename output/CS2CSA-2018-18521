@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-18521
+Severity:低等
+Summary:elfutils除0漏洞
+Published:2020-06-03
+URL:/support/loophole/patch/236.html
+Title:
+			摘要：           elfutils除0漏洞
+安全等级：          低等
+公告ID：         CS2CSA-2018-18521
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2020-06-03
+CVE：          CVE-2018-18521
+		
+1. 概述：中标麒麟高级服务器操作系统软件V7有elfutils可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：elfutils 0.174中arlib.c函数arlib_add_symbols（）中的零除漏洞允许远程攻击者使用精心制作的ELF文件导致拒绝服务（应用程序崩溃），如eu-ranlib所示，因为sh_entsize为零处理不当。

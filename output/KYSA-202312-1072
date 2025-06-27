@@ -1,0 +1,164 @@
+Name:KYSA-202312-1072
+Severity:重要
+Summary:postgresql安全漏洞
+Published:2023-12-26
+URL:/support/loophole/patch/4845.html
+Title:
+			公告ID：KYSA-202312-1072
+公告摘要：postgresql安全漏洞
+等级：Important
+发布日期：2023-12-26
+		
+1.修复的CVE
+·CVE-2023-5869
+描述：PostgreSQL是PostgreSQL组织的一套自由的对象关系型数据库管理系统。该系统支持大部分SQL标准并且提供了许多其他特性，例如外键、触发器、视图等。
+PostgreSQL存在安全漏洞，该漏洞源于array modification存在整数溢出漏洞。受影响的产品和版本：PostgreSQL 16.1之前的16版本，15.5之前的15版本，14.10之前的14版本，13.13之前的13版本，12.17之前的12版本，11.22之前的11版本。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+postgresql、postgresql-contrib、postgresql-devel、postgresql-docs、postgresql-libs、postgresql-plperl、postgresql-plpython、postgresql-pltcl、postgresql-server、postgresql-static、postgresql-test、postgresql-upgrade
+·x86_64架构:
+postgresql、postgresql-contrib、postgresql-devel、postgresql-docs、postgresql-libs、postgresql-plperl、postgresql-plpython、postgresql-pltcl、postgresql-server、postgresql-static、postgresql-test、postgresql-upgrade
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+postgresql、postgresql-contrib、postgresql-devel、postgresql-docs、postgresql-libs、postgresql-plperl、postgresql-plpython、postgresql-pltcl、postgresql-server、postgresql-static、postgresql-test、postgresql-upgrade
+·x86_64架构:
+debug/postgresql-debuginfo、postgresql、postgresql-contrib、postgresql-devel、postgresql-docs、postgresql-libs、postgresql-plperl、postgresql-plpython、postgresql-pltcl、postgresql-server、postgresql-static、postgresql-test、postgresql-upgrade
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+postgresql-9.2.24-9.el7_9或以上版本
+postgresql-contrib-9.2.24-9.el7_9或以上版本
+postgresql-devel-9.2.24-9.el7_9或以上版本
+postgresql-docs-9.2.24-9.el7_9或以上版本
+postgresql-libs-9.2.24-9.el7_9或以上版本
+postgresql-plperl-9.2.24-9.el7_9或以上版本
+postgresql-plpython-9.2.24-9.el7_9或以上版本
+postgresql-pltcl-9.2.24-9.el7_9或以上版本
+postgresql-server-9.2.24-9.el7_9或以上版本
+postgresql-static-9.2.24-9.el7_9或以上版本
+postgresql-test-9.2.24-9.el7_9或以上版本
+postgresql-upgrade-9.2.24-9.el7_9或以上版本
+·银河麒麟高级服务器操作系统 V10 (aarch64)
+postgresql-9.2.24-9.el7_9或以上版本
+postgresql-contrib-9.2.24-9.el7_9或以上版本
+postgresql-devel-9.2.24-9.el7_9或以上版本
+postgresql-docs-9.2.24-9.el7_9或以上版本
+postgresql-libs-9.2.24-9.el7_9或以上版本
+postgresql-plperl-9.2.24-9.el7_9或以上版本
+postgresql-plpython-9.2.24-9.el7_9或以上版本
+postgresql-pltcl-9.2.24-9.el7_9或以上版本
+postgresql-server-9.2.24-9.el7_9或以上版本
+postgresql-static-9.2.24-9.el7_9或以上版本
+postgresql-test-9.2.24-9.el7_9或以上版本
+postgresql-upgrade-9.2.24-9.el7_9或以上版本
+·银河麒麟高级服务器操作系统 V10 (x86_64)
+debug/postgresql-debuginfo-9.2.24-9.el7_9或以上版本
+postgresql-9.2.24-9.el7_9或以上版本
+postgresql-contrib-9.2.24-9.el7_9或以上版本
+postgresql-devel-9.2.24-9.el7_9或以上版本
+postgresql-docs-9.2.24-9.el7_9或以上版本
+postgresql-libs-9.2.24-9.el7_9或以上版本
+postgresql-plperl-9.2.24-9.el7_9或以上版本
+postgresql-plpython-9.2.24-9.el7_9或以上版本
+postgresql-pltcl-9.2.24-9.el7_9或以上版本
+postgresql-server-9.2.24-9.el7_9或以上版本
+postgresql-static-9.2.24-9.el7_9或以上版本
+postgresql-test-9.2.24-9.el7_9或以上版本
+postgresql-upgrade-9.2.24-9.el7_9或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-5869:需要重启 postgresql 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+postgresql(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-contrib-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-devel-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-docs-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-libs-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-plperl-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-plpython-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-pltcl-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-server-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-static-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-test-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/postgresql-upgrade-9.2.24-9.el7_9.aarch64.rpm
+
+postgresql(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-9.2.24-9.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-contrib-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-devel-9.2.24-9.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-devel-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-docs-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-libs-9.2.24-9.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-libs-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-plperl-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-plpython-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-pltcl-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-server-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-static-9.2.24-9.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-static-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-test-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/postgresql-upgrade-9.2.24-9.el7_9.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+postgresql(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-contrib-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-devel-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-docs-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-libs-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-plperl-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-plpython-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-pltcl-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-server-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-static-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-test-9.2.24-9.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/postgresql-upgrade-9.2.24-9.el7_9.aarch64.rpm
+
+postgresql(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/debug/postgresql-debuginfo-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-9.2.24-9.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-contrib-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-devel-9.2.24-9.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-devel-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-docs-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-libs-9.2.24-9.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-libs-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-plperl-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-plpython-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-pltcl-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-server-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-static-9.2.24-9.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-static-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-test-9.2.24-9.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/postgresql-upgrade-9.2.24-9.el7_9.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

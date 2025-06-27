@@ -1,0 +1,13 @@
+Name:KYSA-202106-0015
+Severity:重要
+Summary:intel-microcode安全漏洞
+Published:2021-11-05
+URL:/support/loophole/patch/632.html
+Title:
+			摘要：intel-microcode安全漏洞
+安全等级：重要
+公告ID：KYSA-202106-0015
+发布日期：2021-11-05
+影响CVE：CVE-2021-24489、CVE-2020-24489、CVE-2020-24511、CVE-2020-24512、CVE-2020-24513
+		
+1. 修复的CVE信息CVE-2021-24489描述：Intel INTEL-SA-00422是美国英特尔（Intel）公司的应用软件用于 Windows 的英特尔® Thunderbolt™ DCH 驱动程序INTEL-SA-00422中存在处理逻辑错误漏洞，该漏洞源于不完全清理可能允许经过身份验证的用户通过本地访问启用特权升级。CVE-2020-24489描述：Intel Virtualization Technology for Direct I/O（Intel VT-d）是美国英特尔（Intel）公司的Intel虚拟化技术的一部分，主要针对的是I/O子系统，它的实现主要是通过在硬件上引入重定向单元，该硬件重定向单元用于对I/O子系统的DMA操作和中断传递进行重定向，从而辅助VMM（Virtual Machine Monitor）实现I/O子系统的虚拟化。Intel Virtualization Technology for Direct I/O（Intel VT-d）存在授权问题漏洞，该漏洞源于网络系统或产品中缺少身份验证措施或身份验证强度不足。CVE-2020-24511描述：Intel Processors（英特尔处理器）是美国英特尔（Intel）公司的提供解释计算机指令以及处理计算机软件中的数据。Intel Processors 中存在信息泄露漏洞，该漏洞源于共享资源不正当的隔离。通过身份验证的攻击者可通过该漏洞获得敏感信息CVE-2020-24512描述：Intel Processors（英特尔处理器）是美国英特尔（Intel）公司的提供解释计算机指令以及处理计算机软件中的数据。Intel Processors 中存在信息泄露漏洞，该漏洞源于共享资源不正当的隔离。通过身份验证的攻击者可通过该漏洞获得敏感信息。CVE-2020-24513描述：Intel Processors（英特尔处理器）是美国英特尔（Intel）公司的提供解释计算机指令以及处理计算机软件中的数据。Intel Atom Processors 中存在信息泄露漏洞，该漏洞源于网络系统或产品在运行过程中存在配置等错误。未授权的攻击者可利用漏洞获取受影响组件敏感信息。2. 影响的操作系统银河麒麟桌面操作系统V4 SP1银河麒麟桌面操作系统V4 SP2银河麒麟桌面操作系统V4 SP3银河麒麟桌面操作系统V4 SP4银河麒麟桌面操作系统V10银河麒麟服务器操作系统V4 SP1银河麒麟服务器操作系统V4 SP2银河麒麟服务器操作系统V4 SP3银河麒麟服务器操作系统V4 SP4银河麒麟桌面操作系统V10 SP13. 修复版本软件包：intel-microcode3.20210608.0kord0.16.04.1+esm1（V4、V10）3.20210608.0kylin0.20.04.1（V10 SP1）4. 受影响的软件包银河麒麟桌面操作系统V4intel-microcode银河麒麟桌面操作系统V10intel-microcode银河麒麟桌面操作系统V10 SP1intel-microcode5. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2-sp1:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10.0 SP1:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级。$sudo apt update方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists6. 软件包下载地址银河麒麟桌面操作系统V10、V4X86_64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/intel-microcode/intel-microcode_3.20210608.0kord0.16.04.1+esm1_amd64.deb银河麒麟桌面操作系统V10 SP1X86_64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/i/intel-microcode/intel-microcode_3.20210608.0kylin0.20.04.1_amd64.deb 

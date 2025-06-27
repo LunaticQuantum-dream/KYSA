@@ -1,0 +1,266 @@
+Name:KYSA-202208-1230
+Severity:严重
+Summary:java-1.6.0-openjdk安全漏洞
+Published:2022-08-16
+URL:/support/loophole/patch/1910.html
+Title:
+			公告ID：KYSA-202208-1230
+公告摘要：java-1.6.0-openjdk安全漏洞
+等级：Critical
+发布日期：2022-08-16
+		
+1.修复的CVE
+·CVE-2005-1080
+描述：J2SE SDK 1.4.2和1.5，及OpenJDK的Java Archive工具中存在目录遍历漏洞。远程攻击者可借助.jar文件名的“..”操作符创建或覆盖任意文件。
+·CVE-2011-3563
+描述：Oracle Java SE是标准版的Java平台，为用户提供一个程序开发环境。这个程序开发环境提供了开发与运行Java软件的编译器等开发工具、软件库及Java虚拟机。它也是Java2平台、企业版本和Java网页服务的基础。Oracle Java SE 7 Update 2及之前版本, 6 Update 30及之前版本, 5.0 Update 33及之前版本与1.4.2_35及之前版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞借助与Sound相关的未知向量影响其保密性和可用性。
+·CVE-2011-3571
+描述：Oracle是一款流行的大型关系数据库管理系统，使用于Unix、Linux和Microsoft Windows平台下。Oracle Virtualization 3.2 版本中的Virtual Desktop Infrastructure (VDI)组件中存在未明漏洞。本地用户可利用该漏洞通过与Session相关的未知向量影响保密性和完整性。
+·CVE-2011-5035
+描述：Oracle GlassFish是oracle(原sun)推出的一款能够实现jsp等应用的服务器软件。Oracle Glassfish 3.1.1及其早期版本中存在漏洞，该漏洞源于计算哈希值时未限制可预测的触发哈希冲突的能力。远程攻击者可通过发送许多特制的参数导致拒绝服务（CPU消耗），也称为Oracle安全标签S0104869。
+·CVE-2012-0497
+描述：Oracle Java SE是标准版的Java平台，为用户提供一个程序开发环境。这个程序开发环境提供了开发与运行Java软件的编译器等开发工具、软件库及Java虚拟机。它也是Java2平台、企业版本和Java网页服务的基础。Oracle Java SE 7 Update 2本和之前版本，6 Update 30和之前版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞借助与2D相关的未知向量，影响其保密性、完整性和可用性。
+·CVE-2012-0501
+描述：Oracle Java SE是标准版的Java平台，为用户提供一个程序开发环境。这个程序开发环境提供了开发与运行Java软件的编译器等开发工具、软件库及Java虚拟机。它也是Java2平台、企业版本和Java网页服务的基础。Oracle Java SE 7 Update 2和之前版本，6 Update 30和之前版本，5.0 Update 33和之前版本的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞借助未知向量影响其可用性。
+·CVE-2012-0502
+描述：Oracle Java SE是标准版的Java平台，为用户提供一个程序开发环境。这个程序开发环境提供了开发与运行Java软件的编译器等开发工具、软件库及Java虚拟机。它也是Java2平台、企业版本和Java网页服务的基础。Oracle Java SE 7 Update 2和之前版本，6 Update 30和之前版本，5.0 Update 33和之前版本，1.4.2_35和之前版本中的Java Runtime Environment (JRE)组件中存在与AWT相关的未明漏洞。该漏洞允许不可信的Java Web Start应用程序和Java applets影响其机密性、完整性和可用性。
+·CVE-2012-0503
+描述：Oracle Java SE是标准版的Java平台，为用户提供一个程序开发环境。这个程序开发环境提供了开发与运行Java软件的编译器等开发工具、软件库及Java虚拟机。它也是Java2平台、企业版本和Java网页服务的基础。Oracle Java SE 7 Update 2和之前版本，6 Update 30和之前版本，5.0 Update 33和之前版本，1.4.2_35和之前版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。该漏洞允许远程不可信的Java Web Start应用程序和Java applets可以影响其机密性、完整性和可用性。
+·CVE-2012-0505
+描述：Oracle Java SE是标准版的Java平台，为用户提供一个程序开发环境。这个程序开发环境提供了开发与运行Java软件的编译器等开发工具、软件库及Java虚拟机。它也是Java2平台、企业版本和Java网页服务的基础。Oracle Java SE 7 Update 2和之前版本，6 Update 30和之前版本，5 Update 33和之前版本，1.4.2_35和之前版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。该漏洞允许不可信Java Web Start应用程序和Java applets借助和Serialization相关的未知向量，影响其机密性、完整性和可用性。
+·CVE-2012-0506
+描述：Oracle Java SE是标准版的Java平台，为用户提供一个程序开发环境。这个程序开发环境提供了开发与运行Java软件的编译器等开发工具、软件库及Java虚拟机。它也是Java2平台、企业版本和Java网页服务的基础。Oracle Java SE 7 Update 2和之前版本，6 Update 30和之前版本，5.0 Update 33和之前版本，1.4.2_35和之前版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。该漏洞允许不可信的Java Web Start应用程序和Java applets借助与CORBA相关的未知向量，影响其完整性。
+·CVE-2012-0507
+描述：Oracle Java SE是标准版的Java平台，为用户提供了一个程序开发环境。Oracle Java SE在Java Runtime Environment中存在远程拒绝服务漏洞。攻击者可利用该漏洞导致应用程序崩溃，拒绝为合法用户提供服务。以下版本中存在该漏洞：7 Update 2、6 Update 30和5.0 Update 33版本。
+·CVE-2012-0547
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 6 及更早版本和 6 Update 34 及更早版本中的 Java Runtime Environment (JRE) 组件中存在安全漏洞，远程攻击向量涉及 AWT 和一个不直接可利用但可用于加剧可直接利用的安全漏洞。
+·CVE-2012-1682
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 6版本和早期版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞通过与Beans相关的未知向量，影响机密性、完整性、可用性。
+·CVE-2012-1711
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 update 4和早期版本，6 update 32和早期版本，5 update 35和早期版本，1.4.2_37和早期版本中的Java Runtime Environment（JRE）组件中存在未明漏洞。远程攻击者可利用该漏洞通过相关的CORBA影响机密性，完整性和可用性。
+·CVE-2012-1713
+描述：Oracle JavaFX 2.1版本和之前版本中的Java Runtime Environment组件的实现上存在漏洞，该漏洞源于二维子组件中的未明错误。恶意攻击者可利用该漏洞操控受影响的系统。
+·CVE-2012-1716
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 update 4和早期版本，6 update 32和早期版本，5 update 35和早期版本中的Java Runtime Environment（JRE）组件中存在未明漏洞。远程攻击者可利用该漏洞通过相关的Swing未明向量影响机密性，完整性和可用性。
+·CVE-2012-1717
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 update 4和早期版本，6 update 32和早期版本，5 update 35和早期版本，1.4.2_37和早期版本中的Java Runtime Environment（JRE）组件中存在未明漏洞。本地攻击者可利用该漏洞通过基于Solaris或Linux相关打印未明向量影响机密性。
+·CVE-2012-1718
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 update 4和早期版本，6 update 32和早期版本，5 update 35和早期版本，1.4.2_37和早期版本中的Java Runtime Environment（JRE）组件中存在未明漏洞。远程攻击者可利用该漏洞通过相关的Security未明漏洞影响可用性。
+·CVE-2012-1719
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 update 4和早期版本，6 update 32和早期版本，5 update 35和早期版本，1.4.2_37和早期版本中的Java Runtime Environment（JRE）组件中存在未明漏洞。远程攻击者可利用该漏洞通过相关的CORBA影响完整性。
+·CVE-2012-1723
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 update 4和早期版本，6 update 32和早期版本，5 update 35和早期版本，1.4.2_37和早期版本中的Java Runtime Environment（JRE）组件中存在未明漏洞。远程攻击者可利用该漏洞通过相关Hotspot未明向量影响机密性，完整性和可用性。
+·CVE-2012-1724
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 update 4和早期版本，6 update 32和早期版本中的Java Runtime Environment（JRE）组件中存在未明漏洞。远程攻击者可利用该漏洞通过相关的JAXP影响可用性。
+·CVE-2012-1725
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 update 4和早期版本，6 update 32和早期版本，5 update 35和早期版本中的Java Runtime Environment（JRE）组件中存在未明漏洞。远程攻击者可利用该漏洞通过相关Hotspot的未明向量影响机密性，完整性和可用性。
+·CVE-2012-3216
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本、5.0 Update 36和较早版本、1.4.2_38和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞通过与Libraries有关的未知向量，影响保密性。
+·CVE-2012-4416
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞通过与Hotspot有关的未知向量，影响保密性和完整性。
+·CVE-2012-5068
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞通过与Libraries有关的未知向量，影响保密性，完整性以及可用性。
+·CVE-2012-5069
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本、5.0 Update 36和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞通过与Concurrency有关的未知向量，影响保密性和完整性。
+·CVE-2012-5071
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本、5.0 Update 36和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞影响保密性和完整性，与JMX有关。
+·CVE-2012-5072
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞通过与Security相关的未知向量，影响保密性。
+·CVE-2012-5073
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本、5.0 Update 36和较早版本、1.4.2_38和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞通过与Libraries有关的未知向量，影响完整性。
+·CVE-2012-5075
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本、5.0 Update 36和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞影响保密性，与JMX有关。
+·CVE-2012-5077
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35 和较早版本、5.0 Update 36和较早版本、1.4.2_38和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞通过与Security有关的未知向量，影响保密性。
+·CVE-2012-5079
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本、5.0 Update 36和较早版本、1.4.2_38和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞通过与Libraries有关的未知向量，影响完整性。
+·CVE-2012-5081
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本、5.0 Update 36和较早版本、1.4.2_38和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞影响可用性，与JSSE有关。
+·CVE-2012-5084
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本、5.0 Update 36和较早版本、1.4.2_38和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞通过与Swing相关的未知向量，影响保密性，完整性以及可用性。
+·CVE-2012-5085
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35 和较早版本、5.0 Update 36和较早版本、1.4.2_38和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程认证攻击者可利用该漏洞通过与Networking有关的未知向量，产生未明影响。
+·CVE-2012-5086
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞通过与Beans有关的未知向量，影响保密性，完整性以及可用性。
+·CVE-2012-5089
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 7和较早版本、6 Update 35和较早版本、5.0 Update 36和较早版本中的Java Runtime Environment (JRE)组件中存在未明漏洞。远程攻击者可利用该漏洞影响保密性，完整性以及可用性，与JMX有关。
+·CVE-2013-0169
+描述：OpenSSL是OpenSSL团队开发的一个开源的能够实现安全套接层（SSL v2/v3）和安全传输层（TLS v1）协议的通用加密库，它支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL，OpenJDK，PolarSSL和其它产品中所使用的TLS协议1.1以及1.2，DTLS协议1.0以及1.2中存在漏洞，该漏洞源于程序在处理畸形的CBC填充期间没有正确地研究针对固执的MAC地址检查操作所进行的计时边信道攻击。通过对特制报文的计时数据的统计分析，远程攻击者可利用该漏洞实施区分攻击以及明文恢复攻击。
+·CVE-2013-0401
+描述：Oracle Java 7是Java 的下一个版本，也是SUN被oracle收购以后的第一个Java版本。Oracle Java 7 Update 17版本以及其他版本中存在漏洞。通过未明向量，远程攻击者利用该漏洞执行任意代码。
+·CVE-2013-0424
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与RMI相关的向量，远程攻击者利用该漏洞影响完整性。
+·CVE-2013-0425
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与Libraries相关的未知向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-0426
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与Libraries相关的未知向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-0427
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本以及5.0至Update 38版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与Libraries相关的未知向量，远程攻击者利用该漏洞影响完整性。
+·CVE-2013-0428
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与Libraries相关的未知向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-0429
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本以及5.0 至Update 38版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与CORBA相关的向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-0432
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与AWT相关的向量，远程攻击者利用该漏洞影响保密性，完整性。
+·CVE-2013-0433
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本以及5.0至Update 38版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与Networking相关的未知向量，远程攻击者利用该漏洞影响完整性。
+·CVE-2013-0434
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与JAXP相关的向量，远程攻击者利用该漏洞影响保密性。
+·CVE-2013-0435
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本以及6至Update 38版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与JAX-WS相关的向量，远程攻击者利用该漏洞影响保密性。
+·CVE-2013-0440
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40 和较早版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与JSSE相关的向量，远程攻击者利用该漏洞影响可用性。
+·CVE-2013-0441
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与CORBA相关的向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-0442
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与AWT相关的向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-0443
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与JSSE相关的向量，远程攻击者利用该漏洞影响保密性和完整性。
+·CVE-2013-0445
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与AWT有关的向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-0450
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本以及5.0至Update 38版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与JMX相关的向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-0809
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 15和较早版本，6 Update 41和较早版本，5.0 Update 40和较早版本中的Java Runtime Environment (JRE)组件中的2D组件中存在未明安全漏洞。通过未知向量，远程攻击者利用该漏洞执行任意代码。
+·CVE-2013-1475
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与CORBA相关的向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-1476
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与CORBA相关的向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-1478
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与2D相关的未知向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-1480
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7至Update 11版本，6至Update 38版本，5.0至Update 38版本以及1.4.2_40和较早版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与AWT相关的向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-1486
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 13和较早版本，6 Update 39和之前的版本，5.0 Update 39和之前版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。通过与JMX相关的向量，远程攻击者利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-1488
+描述：Oracle Java 7是Java 的下一个版本，也是SUN被oracle收购以后的第一个Java版本。Oracle Java 7 Update 17版本以及其他版本中存在漏洞。通过包含的未明反映的向量，远程攻击者利用该漏洞执行任意代码。
+·CVE-2013-1493
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7 Update 15和较早版本，6 Update 41和较早版本，5.0 Update 40和较早版本中的2D组件中存在漏洞。通过触发在JVM中读取或写入任意内存的向量，远程攻击者利用该漏洞执行任意代码或导致拒绝服务（崩溃）。
+·CVE-2013-1500
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。本地攻击者可通过与2D相关的向量利用该漏洞影响保密性和完整性。
+·CVE-2013-1518
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本，6 Update 43和之前的版本，5.0 Update 41和之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与JAXP相关的向量利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-1537
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本，6 Update 43和之前的版本，5.0 Update 41和之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与RMI相关的向量利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-1557
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本，6 Update 43和之前的版本以及5.0 Update 41之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与RMI相关的向量利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-1558
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本以及6 Update 43和之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与Beans相关的未知向量利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-1569
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和较早的版本，6 Update 43和较早的版本，5.0 Update 41和较早的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与2D有关的向量利用该漏洞影响保密性、完整性以及可用性。
+·CVE-2013-1571
+描述：Oracle Java SE和JavaFX都是美国甲骨文（Oracle）公司的产品。Java SE（Java平台标准版）用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JavaFX为用户提供了一个可利用JavaFX编程语言开发富互联网应用程序（RIA）的框架。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45 及之前的版本和JavaFX 2.2.21及之前的版本中的Javadoc组件中存在安全漏洞。远程攻击者可通过与Javadoc相关的向量利用该漏洞影响完整性。
+·CVE-2013-2383
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和较早的版本，6 Update 43和较早的版本，5.0 Update 41和较早的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与2D有关的向量利用该漏洞影响保密性、完整性以及可用性。
+·CVE-2013-2384
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和较早的版本，6 Update 43和较早的版本，5.0 Update 41和较早的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与2D有关的向量利用该漏洞影响保密性、完整性以及可用性。
+·CVE-2013-2407
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本和6 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与Libraries相关的向量利用该漏洞影响保密性和可用性。
+·CVE-2013-2412
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与Serviceability相关的向量利用该漏洞影响保密性。
+·CVE-2013-2415
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。本地攻击者可通过与JAX-WS相关的向量利用该漏洞影响保密性。
+·CVE-2013-2417
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本，6 Update 43和之前的版本，5.0 Update 41和之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与Networking相关的向量利用该漏洞影响可用性。
+·CVE-2013-2419
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本，6 Update 43和之前的版本，5.0 Update 41和之前的版本中Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与2D相关的未知向量利用该漏洞影响可用性。
+·CVE-2013-2420
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和较早的版本，6 Update 43和较早的版本，5.0 Update 41和较早的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与2D有关的向量利用该漏洞影响保密性、完整性以及可用性。
+·CVE-2013-2421
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与HotSpot相关的向量利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-2422
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本以及6 Update 43和之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与Libraries相关的未知向量利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-2424
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本，6 Update 43和之前的版本，5.0 Update 41和之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与JMX相关的向量利用该漏洞影响保密性。
+·CVE-2013-2426
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与Libraries相关的未知向量利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-2429
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本，6 Update 43和之前的版本，5.0 Update 41和之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与ImageIO相关的未知向量利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-2430
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和较早的版本，6 Update 43 和较早的版本，5.0 Update 41和较早的版本，JavaFX 2.2.7和较早的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与ImageIO相关的未知向量利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-2431
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 17和之前的版本中的Java Runtime Environment (JRE)组件中存在未明安全漏洞。远程攻击者可通过与HotSpot相关的未知向量利用该漏洞影响保密性，完整性以及可用性。
+·CVE-2013-2443
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与Libraries相关的向量利用该漏洞影响完整性。
+·CVE-2013-2444
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本和JavaFX 2.2.21及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与AWT相关的向量利用该漏洞影响可用性。
+·CVE-2013-2445
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与Hotspot相关的向量利用该漏洞影响可用性。
+·CVE-2013-2446
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与CORBA相关的向量利用该漏洞影响保密性。
+·CVE-2013-2447
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与Networking相关的向量利用该漏洞影响保密性。
+·CVE-2013-2448
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在漏洞。远程攻击者可通过与Sound相关的向量利用该漏洞影响保密性，完整性及可用性。
+·CVE-2013-2450
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在漏洞。远程攻击者可通过与Serialization相关的向量利用该漏洞影响可用性。
+·CVE-2013-2452
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与Libraries相关的向量利用该漏洞影响完整性。
+·CVE-2013-2453
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21之前的版本和6 Update 45之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与JMX相关的向量利用该漏洞影响完整性。
+·CVE-2013-2455
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与Libraries相关的向量利用该漏洞影响完整性。
+·CVE-2013-2456
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与Serialization相关的向量利用该漏洞影响保密性。
+·CVE-2013-2457
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与JMX相关的向量利用该漏洞影响完整性。
+·CVE-2013-2459
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与AWT相关的向量利用该漏洞影响保密性，完整性及可用性。
+·CVE-2013-2461
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本和6 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与Libraries相关的向量利用该漏洞影响保密性，完整性及可用性。
+·CVE-2013-2463
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与2D有关的向量利用该漏洞影响保密性，完整性及可用性。
+·CVE-2013-2465
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与2D有关的向量利用该漏洞影响保密性，完整性及可用性。
+·CVE-2013-2469
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与2D有关的向量利用该漏洞影响保密性，完整性及可用性。
+·CVE-2013-2470
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与2D有关的向量利用该漏洞影响保密性，完整性及可用性。
+·CVE-2013-2471
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与2D有关的向量利用该漏洞影响保密性，完整性及可用性。
+·CVE-2013-2472
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与2D有关的向量利用该漏洞影响保密性，完整性及可用性。
+·CVE-2013-2473
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRE组件是Java的运行时环境。Oracle Java SE 7 Update 21及之前的版本，6 Update 45及之前的版本，5.0 Update 45及之前的版本中的Java Runtime Environment (JRE)组件中存在安全漏洞。远程攻击者可通过与2D有关的向量利用该漏洞影响保密性，完整性及可用性。
+·CVE-2013-3829
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE中的Java SE，Java SE Embedded组件中的Libraries子组件中存在安全漏洞。远程攻击者可利用该漏洞更新，插入或删除数据，影响数据的保密性和完整性。以下版本受到影响：Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，Java SE Embedded 7u40及之前的版本。
+·CVE-2013-4002
+描述：Xerces是一个由Apache组织所推动的一项XML文档解析开源项目。Apache Xerces 5.0 SR16-FP3之前的5.0版本，6 SR14之前的6版本，6.0.1 SR6之前的6.0.1版本，7 SR5之前的7版本中的Java Runtime Environment (JRE)中存在安全漏洞。远程攻击者可利用该漏洞影响可用性。
+·CVE-2013-4578
+描述：Oracle OpenJDK和Java SE都是美国甲骨文（Oracle）公司的产品。OpenJDK是一个Java平台的开源参考实现。Oracle Java SE是一个Java软件开发工具包。jarsigner是其中的一个命令行工具。Oracle OpenJDK和Java SE 7u51之前的版本中的jarsigner存在安全漏洞。远程攻击者可利用该漏洞绕过代码签名保护机制并向已签名的JAR文件中注入未签名的字节码。
+·CVE-2013-5772
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Java SE 7u40及之前的版本和Java SE 6u60及之前的版本中的Java SE组件中的jhat子组件中存在安全漏洞。远程攻击者可利用该漏洞更新，插入或删除数据，影响数据的完整性。
+·CVE-2013-5774
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，Java SE Embedded 7u40及之前的版本中的Libraries组件中存在安全漏洞。远程攻击者可利用该漏洞更新，插入或删除数据，影响数据的完整性。
+·CVE-2013-5778
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，Java SE Embedded 7u40及之前的版本中的2D组件中存在安全漏洞。远程攻击者可利用该漏洞读取数据，影响数据的保密性。
+·CVE-2013-5780
+描述：Oracle Java SE和JRockit都是美国甲骨文（Oracle）公司的产品。Java SE（Java 平台标准版）用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRockit是一款内置于Oracle融合中间件中的Java虚拟机。Oracle Java SE，JRockit及Java SE Embedded中的Libraries组件中存在安全漏洞。远程攻击者可利用该漏洞访问数据，影响数据的保密性。以下产品和版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u600及之前的版本，Java SE 5.0u510及之前的版本，JRockit R28.2.80及之前的版本，JRockit R27.7.60及之前的版本，Java SE Embedded 7u400及之前的版本。
+·CVE-2013-5782
+描述：Oracle Java SE和JRockit都是美国甲骨文（Oracle）公司的产品。Java SE（Java 平台标准版）用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRockit是一款内置于Oracle融合中间件中的Java虚拟机。Oracle Java SE，JRockit，Java SE Embedded中的2D组件中存在安全漏洞。远程攻击者可利用该漏洞执行任意代码，影响数据的保密性，完整性及可用性。以下版本和产品受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，JRockit R28.2.8及之前的版本，JRockit R27.7.6及之前的版本，Java SE Embedded 7u40及之前的版本。
+·CVE-2013-5783
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE和Java SE Embedded中的Swing组件中存在安全漏洞。远程攻击者可利用该漏洞读取，更新，插入或删除数据，影响数据的保密性和完整性。以下版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，Java SE Embedded 7u40及之前的版本。
+·CVE-2013-5784
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE Embedded 7u40及之前的版本中的SCRIPTING组件中存在安全漏洞。远程攻击者可利用该漏洞更新，插入或删除数据，影响数据的完整性。
+·CVE-2013-5790
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE和Java SE Embedded中的BEANS组件存在安全漏洞。远程攻击者可利用该漏洞读取数据，影响数据的保密性。以下版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，Java SE Embedded 7u40及之前的版本。
+·CVE-2013-5797
+描述：Oracle Java SE、JRockit和JavaFX都是美国甲骨文（Oracle）公司的产品。Java SE（Java平台标准版）用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRockit是一款内置于Oracle融合中间件中的Java虚拟机。JavaFX为用户提供了一个可利用JavaFX编程语言开发富互联网应用程序（RIA）的框架。Oracle Java SE，JRockit及JavaFX中的Javadoc组件中存在安全漏洞。远程经过授权的攻击者可利用该漏洞更新，插入或删除数据，影响数据的完整性。以下版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，JRockit R28.2.8及之前的版本，JRockit R27.7.6及之前的版本，JavaFX 2.2.40及之前的版本。
+·CVE-2013-5802
+描述：Oracle Java SE和JRockit都是美国甲骨文（Oracle）公司的产品。Java SE（Java 平台标准版）用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRockit是一款内置于Oracle融合中间件中的Java虚拟机。Oracle Java SE，JRockit及Java SE Embedded中的JAXP组件中存在安全漏洞。远程攻击者可利用该漏洞查看，更新，插入或删除数据，也可能造成拒绝服务，影响数据的保密性，完整性及可用性。以下版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，JRockit R28.2.8及之前的版本，JRockit R27.7.6及之前的版本，Java SE Embedded 7u40及之前的版本。
+·CVE-2013-5803
+描述：Oracle Java SE和JRockit都是美国甲骨文（Oracle）公司的产品。Java SE（Java 平台标准版）用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRockit是一款内置于Oracle融合中间件中的Java虚拟机。Oracle Java SE，JRockit及Java SE Embedded中的JGSS组件中存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务，影响数据的可用性。以下版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，JRockit R28.2.8及之前的版本，JRockit R27.7.6及之前的版本，Java SE Embedded 7u40及之前的版本。
+·CVE-2013-5804
+描述：Oracle Java SE和JRockit都是美国甲骨文（Oracle）公司的产品。Java SE（Java 平台标准版）用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRockit是一款内置于Oracle融合中间件中的Java虚拟机。Oracle Java SE和JRockit中的Javadoc组件中存在安全漏洞。远程攻击者可利用该漏洞查看，更新，插入或删除数据，影响数据的保密性和完整性。以下版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，JRockit R28.2.8及之前的版本，JRockit R27.7.6及之前的版本。
+·CVE-2013-5809
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE和Java SE Embedded中的2D组件中存在安全漏洞。远程攻击者可利用该漏洞执行任意代码，影响数据的保密性，完整性及可用性。以下版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，Java SE Embedded 7u40及之前的版本。
+·CVE-2013-5814
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE和Java SE Embedded中的CORBA组件中存在安全漏洞。远程攻击者可利用该漏洞执行任意代码，影响数据的保密性，完整性及可用性。以下版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，Java SE Embedded 7u40及之前的版本。
+·CVE-2013-5817
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE和Java SE Embedded中的JNDI组件中存在安全漏洞。远程攻击者可利用该漏洞执行任意代码，影响数据的保密性，完整性及可用性。以下版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，Java SE Embedded 7u40及之前的版本。
+·CVE-2013-5820
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一套标准版Java平台，用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE Embedded 7u40及之前的版本中的JAX-WS组件中存在安全漏洞。远程攻击者可利用该漏洞更新，插入或删除数据，影响数据的完整性。
+·CVE-2013-5823
+描述：Oracle Java SE和JRockit都是美国甲骨文（Oracle）公司的产品。Java SE（Java 平台标准版）用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRockit是一款内置于Oracle融合中间件中的Java虚拟机。Oracle Java SE,JRockit及Java SE Embedded中的Security组件中存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务，影响数据的可用性。以下版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，JRockit R28.2.8及之前的版本，JRockit R27.7.6及之前的版本，Java SE Embedded 7u40及之前的版本。
+·CVE-2013-5825
+描述：Oracle Java SE和JRockit都是美国甲骨文（Oracle）公司的产品。Java SE（Java 平台标准版）用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。JRockit是一款内置于Oracle融合中间件中的Java虚拟机。Oracle Java SE，JRockit及Java SE Embedded中的JAXP组件中存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务，影响数据的可用性。以下版本受到影响：Oracle Java SE 7u40及之前的版本，Java SE 6u60及之前的版本，Java SE 5.0u51及之前的版本，JRockit R28.2.8及之前的版本，JRockit R27.7.6及之前的版本，Java SE Embedded 7u40

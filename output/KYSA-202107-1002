@@ -1,0 +1,13 @@
+Name:KYSA-202107-1002
+Severity:重要
+Summary:dhcp漏洞
+Published:2021-07-23
+URL:/support/loophole/patch/411.html
+Title:
+			摘要：dhcp漏洞
+安全等级：重要
+公告ID：KYSA-202107-1002
+发布日期：2021-07-23
+影响CVE：CVE-2021-25217
+		
+1. 修复的CVE信息CVE-2021-25217描述：ISC DHCP是美国ISC公司的一套开源的动态主机配置协议服务器软件。ISC DHCP存在缓冲区错误漏洞，该漏洞源于程序在读取不正确的租约时可能导致dhclient崩溃，这可能会由于缺少正在运行的DHCP客户端进程而导致受影响系统的网络连接问题。2. 影响的操作系统及修复版本中标麒麟高级服务器操作系统 V7dhcp-4.2.5-83.el7_9.1银河麒麟高级服务器操作系统V10dhcp-4.2.5-83.el7_9.13. 受影响的软件包中标麒麟高级服务器操作系统 V7x86_64: dhcpaarch64: dhcp银河麒麟高级服务器操作系统V10x86_64: dhcpaarch64: dhcp4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：中标麒麟高级服务器操作系统V7：x86_64:http://update.cs2c.com.cn:8080/NS/V7/V7Update9/os/adv/lic/updates/x86_64/aarch64:http://update.cs2c.com.cn:8080/NS/V7/V7Update9/os/adv/lic/updates/aarch64/银河麒麟高级服务器操作系统V10:x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/、2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址中标麒麟高级服务器操作系统V7dhcp x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/dhcp-4.2.5-83.el7_9.1.x86_64.rpmdhcp aarch64软件包下载地址: http://update.cs2c.com.cn:8080/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/dhcp-4.2.5-83.el7_9.1.aarch64.rpm注：其他相关依赖包请到相同目录下载银河麒麟高级服务器操作系统V10dhcp x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/dhcp-4.2.5-83.el7_9.1.x86_64.rpmdhcp aarch64软件包下载地址: http://update.cs2c.com.cn:8080/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/dhcp-4.2.5-83.el7_9.1.aarch64.rpm

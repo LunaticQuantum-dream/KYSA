@@ -1,0 +1,12 @@
+Name:KYSA-202112-1016
+Severity:重要
+Summary:ibus漏洞
+Published:2021-12-11
+URL:/support/loophole/patch/692.html
+Title:
+			摘要：ibus漏洞
+安全等级：重要
+发布日期：2021年12月11日
+影响CVE：CVE-2019-14822
+		
+1.修复的CVECVE-2019-14822描述：ibus是一款适用于Linux/Unix平台的输入框架。ibus 1.5.22之前版本中存在安全漏洞。该漏洞源于Dbus服务器设置中存在不正确的配置。本地攻击者可利用该漏洞拦截受影响用户的全部击键，修改输入方法引擎或修改其他用户与输入相关的配置。2.影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2ibus-1.5.19-8.ky10ibus-devel-1.5.19-8.ky10ibus-help-1.5.19-8.ky10ibus-libs-1.5.19-8.ky103.受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:ibus、ibus-devel、ibus-help、ibus-libs、x86_64:ibus、ibus-devel、ibus-help、ibus-libs、4.修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP2aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5.软件包下载地址：银河麒麟高级服务器操作系统 V10 SP2 ibus aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ibus-1.5.19-8.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ibus-devel-1.5.19-8.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ibus-help-1.5.19-8.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ibus-libs-1.5.19-8.ky10.aarch64.rpm ibus x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ibus-1.5.19-8.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ibus-devel-1.5.19-8.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ibus-help-1.5.19-8.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ibus-libs-1.5.19-8.ky10.x86_64.rpm 注：其他相关依赖包请到相同目录下载

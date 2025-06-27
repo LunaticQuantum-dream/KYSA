@@ -1,0 +1,70 @@
+Name:KYSA-202408-0018
+Severity:重要
+Summary:libcroco安全漏洞
+Published:2025-04-14
+URL:/support/loophole/patch/7666.html
+Title:
+			公告ID：KYSA-202408-0018
+公告摘要：libcroco安全漏洞
+等级：重要
+发布日期：2025-04-14
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2403 Update2版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2017-8834
+libcroco是一个CSS2解析库。libcroco 0.6.12版本中存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+CVE-2020-12825
+libcroco是一个CSS2解析库。libcroco 0.6.13及之前版本中的cr-parser.c文件的cr_parser_parse_any_core存在缓冲区错误漏洞。攻击者可利用该漏洞造成拒绝服务（栈消耗）。
+CVE-2017-8871
+libcroco是一个CSS2解析库。libcroco 0.6.12版本中的cr-parser.c文件存在资源管理错误漏洞。该漏洞源于网络系统或产品对系统资源（如内存、磁盘空间、文件等）的管理不当。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2403 Update2
+x86_64 架构：
+libcroco-tools、libcroco3
+arm64 架构：
+libcroco-tools、libcroco3
+sw64 架构：
+libcroco-tools、libcroco3
+loongarch64 架构：
+libcroco-tools、libcroco3
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2403 Update2
+0.6.13-1kylin0.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libcroco-tools
+$sudo apt install libcroco3
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2403 Update2
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libc/libcroco/libcroco-tools_0.6.13-1kylin0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libc/libcroco/libcroco3_0.6.13-1kylin0.1_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libc/libcroco/libcroco-tools_0.6.13-1kylin0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libc/libcroco/libcroco3_0.6.13-1kylin0.1_arm64.deb
+sw64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libc/libcroco/libcroco-tools_0.6.13-1kylin0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libc/libcroco/libcroco3_0.6.13-1kylin0.1_sw64.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libc/libcroco/libcroco-tools_0.6.13-1kylin0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libc/libcroco/libcroco3_0.6.13-1kylin0.1_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2403 Update2版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

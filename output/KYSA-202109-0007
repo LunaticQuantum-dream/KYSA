@@ -1,0 +1,62 @@
+Name:KYSA-202109-0007
+Severity:中等
+Summary:ledgersmb安全漏洞
+Published:2021-11-03
+URL:/support/loophole/patch/608.html
+Title:
+			公告ID：KYSA-202109-0007
+公告摘要：ledgersmb安全漏洞
+等级：中等
+发布日期：2021-11-03
+		
+1. 漏洞概述
+CVE-2021-3694
+LedgerSMB是一个基于网络的复式记账系统，具有报价、订购、发票、项目、考勤卡、库存管理、运输等功能。LedgerSMB 存在安全漏洞，该漏洞源于应用没有对发送到浏览器的错误消息进行充分的 HTML 编码。通过向经过身份验证的用户发送特制的 URL，可以利用此漏洞进行远程代码执行和信息泄露。
+CVE-2021-3731
+LedgerSMB是一个基于网络的复式记账系统，具有报价、订购、发票、项目、考勤卡、库存管理、运输等功能。LedgerSMB 存在安全漏洞，该漏洞源于应用没有充分防止被其他站点包裹，使其容易受到"clickjacking"的影响。这允许攻击者欺骗目标用户执行意外操作。
+CVE-2021-3693
+Microsoft Edge是一款Windows 10之后版本系统附带的Web浏览器。Microsoft Edge 存在输入验证错误漏洞，LedgerSMB不会检查合并到浏览器DOM中的HTML片段的来源。通过向经过身份验证的用户发送特制的URL，此漏洞可能被滥用于远程代码执行和信息泄露。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1
+ledgersmb
+
+
+3. 软件包修复版本
+软件包：ledgersmb
+1.6.9+ds-1kylin0.1(V10 SP1)
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+
+5. 软件包下载地址
+麒麟操作系统桌面版V10 SP1
+X86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/l/ledgersmb/ledgersmb_1.6.9%2Bds-1kylin0.1_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/l/ledgersmb/ledgersmb_1.6.9%2Bds-1kylin0.1_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/l/ledgersmb/ledgersmb_1.6.9%2Bds-1kylin0.1_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

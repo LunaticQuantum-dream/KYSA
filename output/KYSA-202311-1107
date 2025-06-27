@@ -1,0 +1,126 @@
+Name:KYSA-202311-1107
+Severity:严重
+Summary:json-c安全漏洞
+Published:2023-11-28
+URL:/support/loophole/patch/4604.html
+Title:
+			公告ID：KYSA-202311-1107
+公告摘要：json-c安全漏洞
+等级：Critical
+发布日期：2023-11-28
+		
+1.修复的CVE
+·CVE-2021-32292
+描述：在ConnMan中，能够向gweb组件发送HTTP请求的远程攻击者能够利用received_data中基于堆的缓冲区溢出来执行代码。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+json-c、json-c-devel、json-c-help
+·x86_64架构:
+json-c、json-c-devel、json-c-help
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+json-c、json-c-devel、json-c-help
+·x86_64架构:
+json-c、json-c-devel、json-c-help
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+json-c、json-c-devel、json-c-help
+·x86_64架构:
+json-c、json-c-devel、json-c-help
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+json-c、json-c-devel、json-c-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+json-c-0.15-1.p01.ky10或以上版本
+json-c-devel-0.15-1.p01.ky10或以上版本
+json-c-help-0.15-1.p01.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+json-c-0.15-1.p01.ky10或以上版本
+json-c-devel-0.15-1.p01.ky10或以上版本
+json-c-help-0.15-1.p01.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+json-c-0.15-1.p01.ky10或以上版本
+json-c-devel-0.15-1.p01.ky10或以上版本
+json-c-help-0.15-1.p01.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+json-c-0.15-1.p01.ky10或以上版本
+json-c-devel-0.15-1.p01.ky10或以上版本
+json-c-help-0.15-1.p01.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-32292:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+json-c(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/json-c-0.15-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/json-c-devel-0.15-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/json-c-help-0.15-1.p01.ky10.noarch.rpm
+
+json-c(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/json-c-0.15-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/json-c-devel-0.15-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/json-c-help-0.15-1.p01.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+json-c(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/json-c-0.15-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/json-c-devel-0.15-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/json-c-help-0.15-1.p01.ky10.noarch.rpm
+
+json-c(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/json-c-0.15-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/json-c-devel-0.15-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/json-c-help-0.15-1.p01.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+json-c(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/json-c-0.15-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/json-c-devel-0.15-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/json-c-help-0.15-1.p01.ky10.noarch.rpm
+
+json-c(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/json-c-0.15-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/json-c-devel-0.15-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/json-c-help-0.15-1.p01.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+json-c(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/json-c-0.15-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/json-c-devel-0.15-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/json-c-help-0.15-1.p01.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

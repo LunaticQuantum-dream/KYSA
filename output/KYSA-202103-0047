@@ -1,0 +1,62 @@
+Name:KYSA-202103-0047
+Severity:中等
+Summary:pillow安全漏洞
+Published:2021-11-23
+URL:/support/loophole/patch/954.html
+Title:
+			公告ID：KYSA-202103-0047
+公告摘要：pillow安全漏洞
+等级：中等
+发布日期：2021-11-23
+		
+1. 修复的CVE
+CVE-2021-25290
+Pillow是一款基于Python的图像处理库。 Pillow 8.1.1之前版本存在安全漏洞。该漏洞源于在TiffDecode.c中存在一个大小无效的负偏移memcpy。
+CVE-2021-27923
+Pillow是一款基于Python的图像处理库。 Pillow before 8.1.1 存在安全漏洞，该漏洞允许攻击者导致拒绝服务。
+CVE-2021-27922
+Pillow是一款基于Python的图像处理库。Pillow before 8.1.1 存在安全漏洞，该漏洞允许攻击者导致拒绝服务。
+CVE-2020-35654
+Pillow是一款基于Python的图像处理库。Pillow 8.1.0之前版本中存在缓冲区错误漏洞，当解码制作好的YCbCr文件时，由于在RGBA模式下与LibTIFF的某些解释冲突，TiffDecode会出现基于堆的缓冲区溢出。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V4、银河麒麟服务器操作系统V4
+x86_64 架构：
+python-imaging、python-pil.imagetk、python-pil、python3-pil.imagetk、python3-pil
+arm64 架构：
+python-imaging、python-pil.imagetk、python-pil、python3-pil.imagetk、python3-pil
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V4、银河麒麟服务器操作系统V4
+3.1.2-0kord1.6
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install python-pil
+$sudo apt install python3-pil
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V4、银河麒麟服务器操作系统V4
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pillow/python-imaging_3.1.2-0kord1.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pillow/python-pil.imagetk_3.1.2-0kord1.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pillow/python-pil_3.1.2-0kord1.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pillow/python3-pil.imagetk_3.1.2-0kord1.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pillow/python3-pil_3.1.2-0kord1.6_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pillow/python-imaging_3.1.2-0kord1.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pillow/python-pil.imagetk_3.1.2-0kord1.6_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pillow/python-pil_3.1.2-0kord1.6_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pillow/python3-pil.imagetk_3.1.2-0kord1.6_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pillow/python3-pil_3.1.2-0kord1.6_arm64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

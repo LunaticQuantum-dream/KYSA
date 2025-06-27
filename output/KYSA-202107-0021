@@ -1,0 +1,130 @@
+Name:KYSA-202107-0021
+Severity:中等
+Summary:php7.0安全漏洞
+Published:2023-01-03
+URL:/support/loophole/patch/2452.html
+Title:
+			公告ID：KYSA-202107-0021
+公告摘要：php7.0安全漏洞
+等级：Moderate
+发布日期：2023-01-03
+		
+1. 修复的CVE
+CVE-2021-21702
+PHP（PHP：Hypertext Preprocessor，PHP：超文本预处理器）是PHP社区的共同维护的一种开源的通用计算机脚本语言。该语言主要用于Web开发，支持多种数据库及操作系统。 
+Php SoapClient 存在代码问题漏洞，攻击者可利用该漏洞强制一个空指针被解引用，从而触发拒绝服务。以下产品及型号受到影响：7.3.x 至 7.3.27, 7.4.x 至 7.4.15 and 8.0.x 至 8.0.2。
+CVE-2020-7071
+PHP（PHP：Hypertext Preprocessor，PHP：超文本预处理器）是PHP社区的共同维护的一种开源的通用计算机脚本语言。该语言主要用于Web开发，支持多种数据库及操作系统。PHP 存在输入验证错误漏洞，该漏洞源于php_url_parse_ex函数导致FILTER_VALIDATE_URL接受带有无效userinfo的URL。
+CVE-2021-21705
+EasyApache是Apache基金会的一个功能强大且易于使用的工具，内置在WHM/cPanel中，可以使用它来更新和配置Apache web服务器。EasyApache存在输入验证错误漏洞，攻击者可利用该漏洞通过PHP的FILTER VALIDATE URL欺骗用户，以便将其重定向到恶意站点。
+CVE-2020-7068
+PHP（PHP：Hypertext Preprocessor，PHP：超文本预处理器）是PHPGroup和开放源代码社区的共同维护的一种开源的通用计算机脚本语言。该语言主要用于Web开发，支持多种数据库及操作系统。PHP 中存在资源管理错误漏洞。该漏洞源于网络系统或产品对系统资源（如内存、磁盘空间、文件等）的管理不当。
+CVE-2021-21704
+EasyApache是Apache基金会的一个功能强大且易于使用的工具，内置在WHM/cPanel中，可以使用它来更新和配置Apache web服务器。EasyApache 存在安全漏洞，该漏洞源于EasyApache中PDO_Firebird的缓冲区溢出。攻击者可利用该漏洞触发拒绝服务，并可能运行代码。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+libapache2-mod-php7.0、libphp7.0-embed、php7.0-bcmath、php7.0-bz2、php7.0-cgi、php7.0-cli、php7.0-common、php7.0-curl、php7.0-dba、php7.0-enchant、php7.0-fpm、php7.0-gd、php7.0-gmp、php7.0-imap、php7.0-interbase、php7.0-intl、php7.0-json、php7.0-ldap、php7.0-mbstring、php7.0-mcrypt、php7.0-mysql、php7.0-odbc、php7.0-opcache、php7.0-pgsql、php7.0-phpdbg、php7.0-pspell、php7.0-readline、php7.0-recode、php7.0-snmp、php7.0-soap、php7.0-sqlite3、php7.0-sybase、php7.0-tidy、php7.0-xml、php7.0-xmlrpc、php7.0-xsl、php7.0-zip、php7.0
+arm64 架构：
+libapache2-mod-php7.0、libphp7.0-embed、php7.0-bcmath、php7.0-bz2、php7.0-cgi、php7.0-cli、php7.0-common、php7.0-curl、php7.0-dba、php7.0-enchant、php7.0-fpm、php7.0-gd、php7.0-gmp、php7.0-imap、php7.0-interbase、php7.0-intl、php7.0-json、php7.0-ldap、php7.0-mbstring、php7.0-mcrypt、php7.0-mysql、php7.0-odbc、php7.0-opcache、php7.0-pgsql、php7.0-phpdbg、php7.0-pspell、php7.0-readline、php7.0-recode、php7.0-snmp、php7.0-soap、php7.0-sqlite3、php7.0-sybase、php7.0-tidy、php7.0-xml、php7.0-xmlrpc、php7.0-xsl、php7.0-zip、php7.0
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+7.0.33-0kord0.16.04.16+esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install php7.0
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/libapache2-mod-php7.0_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/libphp7.0-embed_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-bcmath_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-bz2_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-cgi_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-cli_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-common_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-curl_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-dba_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-enchant_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-fpm_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-gd_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-gmp_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-imap_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-interbase_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-intl_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-json_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-ldap_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-mbstring_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-mcrypt_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-mysql_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-odbc_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-opcache_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-pgsql_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-phpdbg_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-pspell_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-readline_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-recode_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-snmp_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-soap_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-sqlite3_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-sybase_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-tidy_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-xml_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-xmlrpc_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-xsl_7.0.33-0kord0.16.04.16%2Besm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-zip_7.0.33-0kord0.16.04.16%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0_7.0.33-0kord0.16.04.16%2Besm1_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/libapache2-mod-php7.0_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/libphp7.0-embed_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-bcmath_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-bz2_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-cgi_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-cli_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-common_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-curl_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-dba_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-enchant_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-fpm_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-gd_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-gmp_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-imap_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-interbase_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-intl_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-json_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-ldap_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-mbstring_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-mcrypt_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-mysql_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-odbc_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-opcache_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-pgsql_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-phpdbg_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-pspell_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-readline_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-recode_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-snmp_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-soap_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-sqlite3_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-sybase_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-tidy_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-xml_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-xmlrpc_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-xsl_7.0.33-0kord0.16.04.16%2Besm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0-zip_7.0.33-0kord0.16.04.16%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.0/php7.0_7.0.33-0kord0.16.04.16%2Besm1_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

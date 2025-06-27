@@ -1,0 +1,13 @@
+Name:KYSA-202101-0039
+Severity:重要
+Summary:jasper安全漏洞
+Published:2022-01-24
+URL:/support/loophole/patch/775.html
+Title:
+			摘要：jasper安全漏洞
+安全等级：重要
+公告ID：KYSA-202101-0039
+发布日期：2022-01-24
+影响CVE：CVE-2018-19542、CVE-2017-9782、CVE-2018-18873、CVE-2020-27828
+		
+1.修复的CVE    CVE-2017-9782    JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。    JasPer 2.0.12版本中存在安全漏洞。远程攻击者可借助特制的图像利用该漏洞造成拒绝服务（基于堆的缓冲区越边界读取和应用程序崩溃）。    CVE-2018-18873    JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。    JasPer 2.0.14版本中的ras/ras_enc.c文件的‘ras_putdatastd’函数存在安全漏洞。攻击者可利用该漏洞造成拒绝服务（空指针逆向引用）。    CVE-2018-19542    JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。    JasPer 2.0.14版本中的libjasper/jp2/jp2_dec.c文件的‘jp2_decode’函数存在安全漏洞。攻击者可利用该漏洞造成拒绝服务（空指针逆向引用）。    CVE-2020-27828    JasPer是Michael Adams个人开发者的一个基于C的用于处理图像的工具。该软件支持ISO / IEC 15444-1中定义的JPEG-2000格式，主要用于图像的编码和处理。    jasper中的 jpc encoder 2.0.23之前版本存在安全漏洞，攻击者可利用该漏洞提供给jasper的精心设计的输入可能会导致任意的越界写入。这可能会潜在地影响数据机密性、完整性或应用程序可用性。2.影响的操作系统    银河麒麟桌面操作系统V4 SP1    银河麒麟桌面操作系统V4 SP2    银河麒麟桌面操作系统V4 SP3    银河麒麟桌面操作系统V4 SP4    银河麒麟服务器操作系统V4 SP1    银河麒麟服务器操作系统V4 SP2    银河麒麟服务器操作系统V4 SP3    银河麒麟服务器操作系统V4 SP4    银河麒麟桌面操作系统V103.修复版本    软件包：jasper    1.900.1-debian1-2.4kord1.3(V4、V10)4.受影响的软件包    ·银河麒麟操作系统V10桌面版、V4    libjasper-dev    libjasper-runtime    libjasper15.修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2-sp1:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10.0 SP1:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级$sudo apt update方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists6.软件包下载地址银河麒麟操作系统V10桌面版、V4X86_64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/j/jasper/libjasper-dev_1.900.1-debian1-2.4kord1.3_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/j/jasper/libjasper-runtime_1.900.1-debian1-2.4kord1.3_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/j/jasper/libjasper1_1.900.1-debian1-2.4kord1.3_amd64.debarm64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/j/jasper/libjasper-dev_1.900.1-debian1-2.4kord1.3_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/j/jasper/libjasper-runtime_1.900.1-debian1-2.4kord1.3_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/j/jasper/libjasper1_1.900.1-debian1-2.4kord1.3_arm64.deb

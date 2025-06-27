@@ -1,0 +1,16 @@
+Name:CS2CSA-2017-2478
+Severity:重要
+Summary:httpd 安全更新
+Published:2017-08-15
+URL:/support/loophole/patch/66.html
+Title:
+			摘要：             httpd 安全更新
+安全等级：          重要
+公告ID：           CS2CSA-2017-2478
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-08-15
+CVE：         CVE-2017-3167 CVSS3评分：7.4，CVE-2017-3169 CVSS3评分：3.7
+                   CVE-2017-7679 CVSS3评分：3.7，CVE-2017-9788 CVSS3评分：4.8
+                   CVE-2017-7668 CVSS3评分：6.5
+		
+1. 概述：中标麒麟高级服务器操作系统V6有httpd可用的更新。中标麒麟高级服务器操作系统V7有httpd可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：httpd软件包集成了Apache HTTP Server。Apache是一个功能强大，高效，可扩展的Web服务器软件。4. 安全更新：*httpd模块mod_auth_digest中发现一个软件缺陷，在利用该模块进行认证之前会发生初始化内存的错误。远程攻击者利用该缺陷可以泄漏潜在的敏感信息或者引起httpd子进程崩溃。(CVE-2017-9788 CVSS3评分：4.8)*在httpd处理认证以外的过程中调用ap_get_basic_auth_pw()函数会导致认证失效。远程攻击者利用该缺陷会绕过在这种情况下的认证过程。(CVE-2017-3167 CVSS3评分：7.4)*httpd模块mod_ssl发现空指针缺陷。远程攻击者利用该缺陷可以导致httpd子进程崩溃。(CVE-2017-3169 CVSS3评分：3.7)*httpd模块mod_mime发现越址读取缺陷。本地用户修改httpd的MIME配置可能会引起httpd子进程崩溃。(CVE-2017-7679 CVSS3评分：3.7)*httpd函数ap_find_token()中发现越址读取缺陷。远程攻击者利用该缺陷可以导致httpd子进程崩溃。(CVE-2017-7668 CVSS3评分：6.5 V7版本存在)5. 安装包列表：中标麒麟高级服务器操作系统V6：源码包：httpd-2.2.15-60.el6_9.5.src.rpmx86_64二进制包：httpd-2.2.15-60.el6_9.5.x86_64.rpmhttpd-debuginfo-2.2.15-60.el6_9.5.i686.rpmhttpd-debuginfo-2.2.15-60.el6_9.5.x86_64.rpmhttpd-devel-2.2.15-60.el6_9.5.i686.rpmhttpd-devel-2.2.15-60.el6_9.5.x86_64.rpmhttpd-tools-2.2.15-60.el6_9.5.x86_64.rpmmod_ssl-2.2.15-60.el6_9.5.x86_64.rpm中标麒麟高级服务器操作系统V7：源码包：httpd-2.4.6-67.el7_4.2.src.rpmx86_64二进制包：httpd-2.4.6-67.el7_4.2.x86_64.rpmhttpd-debuginfo-2.4.6-67.el7_4.2.x86_64.rpmhttpd-devel-2.4.6-67.el7_4.2.x86_64.rpmhttpd-tools-2.4.6-67.el7_4.2.x86_64.rpmmod_session-2.4.6-67.el7_4.2.x86_64.rpmmod_ssl-2.4.6-67.el7_4.2.x86_64.rpm

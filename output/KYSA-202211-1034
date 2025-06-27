@@ -1,0 +1,85 @@
+Name:KYSA-202211-1034
+Severity:重要
+Summary:dhcp安全漏洞
+Published:2022-11-15
+URL:/support/loophole/patch/3649.html
+Title:
+			公告ID：KYSA-202211-1034
+公告摘要：dhcp安全漏洞
+等级：Important
+发布日期：2022-11-15
+		
+1.修复的CVE
+·CVE-2021-25214
+描述：ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 存在安全漏洞，该漏洞导致接收已命名服务器无意中从区域数据库中删除有问题的区域的SOA记录。
+·CVE-2021-25215
+描述：bind中发现了一个缺陷。DNAME记录的处理方式可能会触发将同一RRset添加到应答部分多次，从而导致断言检查失败。此漏洞的最大威胁是系统可用性。
+·CVE-2021-25219
+描述：ISC BIND是美国ISC公司实现了DNS协议的一套开源软件。BIND 中存在资源管理错误漏洞，该漏洞源于产品授权服务器的处理错误。攻击者可通过该漏洞令BIND解析器性能下降进而导致查询处理延迟。
+·CVE-2021-25220
+描述：ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 存在安全漏洞，该漏洞源于已经收紧了接受记录到缓存中的规则，以防止如果转发器在配置的范围之外发送记录可能会中毒。
+·CVE-2022-2928
+描述：ISC DHCP是美国ISC公司的一套开源的动态主机配置协议服务器软件。ISC DHCP 4.4.0至4.4.3版本、4.1-ESV-R1至4.1-ESV-R16-P1版本存在安全漏洞，该漏洞源于当从add_option()调用函数option_code_hash_lookup()时，它会增加选项的refcount字段，但是没有对option_dereference()的相应调用来减少refcount字段，函数add_option()仅用于服务器对租约查询数据包的响应，每个租约查询响应都会为多个选项调用此函数，因此最终，引用计数器可能会溢出并导致服务器中止。
+·CVE-2022-2929
+描述：ISC DHCP是美国ISC公司的一套开源的动态主机配置协议服务器软件。ISC DHCP 1.0至4.4.3版本、4.1-ESV-R1至4.1-ESV-R16-P1版本存在安全漏洞，该漏洞源于可以访问DHCP服务器的系统，发送经过精心设计的包含超过63个字节fqdn标签的DHCP数据包，最终可能导致服务器内存不足。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+dhcp、dhcp-devel、dhcp-help
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+dhcp、dhcp-devel、dhcp-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+dhcp-4.4.2-9.a.ky10或以上版本
+dhcp-devel-4.4.2-9.a.ky10或以上版本
+dhcp-help-4.4.2-9.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+dhcp-4.4.2-9.a.ky10或以上版本
+dhcp-devel-4.4.2-9.a.ky10或以上版本
+dhcp-help-4.4.2-9.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-25214:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-25215:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-25219:需要重启 dhcp 以使漏洞修复生效。
+CVE-2021-25220:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-2928:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-2929:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+dhcp(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/dhcp-4.4.2-9.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/dhcp-devel-4.4.2-9.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/dhcp-help-4.4.2-9.a.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+dhcp(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/dhcp-4.4.2-9.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/dhcp-devel-4.4.2-9.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/dhcp-help-4.4.2-9.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

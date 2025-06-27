@@ -1,0 +1,80 @@
+Name:KYSA-202301-1013
+Severity:中等
+Summary:krb5安全漏洞
+Published:2023-01-17
+URL:/support/loophole/patch/3574.html
+Title:
+			公告ID：KYSA-202301-1013
+公告摘要：krb5安全漏洞
+等级：Moderate
+发布日期：2023-01-17
+		
+1.修复的CVE
+·CVE-2022-42898
+描述：MIT Kerberos是美国麻省理工学院（MIT）的一个用于在网络集群中进行身份验证的软件。Kerberos 同时作为一种网络认证协议，其设计目标是通过密钥系统为客户机 / 服务器应用程序提供强大的认证服务。
+MIT Kerberos 存在安全漏洞。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+krb5-devel、krb5-libs、krb5-pkinit、krb5-server、krb5-server-ldap、krb5-workstation、libkadm5
+·x86_64架构:
+krb5-devel、krb5-libs、krb5-pkinit、krb5-server、krb5-server-ldap、krb5-workstation、libkadm5
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+krb5-devel-1.15.1-55.el7_9.ns7.01或以上版本
+krb5-libs-1.15.1-55.el7_9.ns7.01或以上版本
+krb5-pkinit-1.15.1-55.el7_9.ns7.01或以上版本
+krb5-server-1.15.1-55.el7_9.ns7.01或以上版本
+krb5-server-ldap-1.15.1-55.el7_9.ns7.01或以上版本
+krb5-workstation-1.15.1-55.el7_9.ns7.01或以上版本
+libkadm5-1.15.1-55.el7_9.ns7.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-42898:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+krb5(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/krb5-devel-1.15.1-55.el7_9.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/krb5-libs-1.15.1-55.el7_9.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/krb5-pkinit-1.15.1-55.el7_9.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/krb5-server-1.15.1-55.el7_9.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/krb5-server-ldap-1.15.1-55.el7_9.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/krb5-workstation-1.15.1-55.el7_9.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/libkadm5-1.15.1-55.el7_9.ns7.01.aarch64.rpm
+
+krb5(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/krb5-devel-1.15.1-55.el7_9.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/krb5-devel-1.15.1-55.el7_9.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/krb5-libs-1.15.1-55.el7_9.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/krb5-libs-1.15.1-55.el7_9.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/krb5-pkinit-1.15.1-55.el7_9.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/krb5-server-1.15.1-55.el7_9.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/krb5-server-1.15.1-55.el7_9.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/krb5-server-ldap-1.15.1-55.el7_9.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/krb5-server-ldap-1.15.1-55.el7_9.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/krb5-workstation-1.15.1-55.el7_9.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libkadm5-1.15.1-55.el7_9.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libkadm5-1.15.1-55.el7_9.ns7.01.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

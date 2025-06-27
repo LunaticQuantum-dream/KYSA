@@ -1,0 +1,119 @@
+Name:KYSA-202208-1244
+Severity:重要
+Summary:bind安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/5060.html
+Title:
+			公告ID：KYSA-202208-1244
+公告摘要：bind安全漏洞
+等级：Important
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2012-3817
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.4.x版本，9.5.x版本，9.6.x版本，9.7.6-P2之前的9.7.x版本、9.8.3-P2之前的9.8.x版本、9.9.1-P2之前的9.9.x版本和9.6-ESV-R7-P2之前的9.6-ESV版本中存在漏洞，该漏洞源于启用DNSSEC验证时，未正确初始化‘失败查询’缓存。远程攻击者可利用该漏洞通过发送许多查询导致拒绝服务（断言失败和守护进程退出）。
+·CVE-2012-4244
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.7.6-P3之前的9.x版本、9.8.3-P3之前的9.8.x版本、9.9.1-P3之前的9.9.x版本、9.4-ESV版本、9.6-ESV-R7-P3之前的9.6-ESV版本中存在漏洞。远程攻击者可利用该漏洞通过较长资源记录的查询，导致拒绝服务（声明失败和命名守护进程退出）。
+·CVE-2012-5166
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.7.6-P4之前的9.x版本、9.8.3-P4之前的9.8.x版本、9.9.1-P4之前的9.9.x版本、9.4-ESV和9.6-ESV-R7-P4之前的9.6-ESV版本中存在漏洞。远程攻击者可利用该漏洞通过非指定的资源记录的合并，导致拒绝服务（命名守护进程挂起）。
+·CVE-2012-5688
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.8.4-P1之前的9.8.x版本和9.9.2-P1之前的 9.9.x版本中存在漏洞。当DNS64启用时，通过特制的查询，远程攻击者利用该漏洞导致拒绝服务（断言失败和守护进程退出）。
+·CVE-2012-5689
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.8.x至9.8.4-P1版本和9.9.x至9.9.2-P1版本中存在漏洞，该漏洞源于在某些配置中所使用的DNS64的响应政策区缺少AAAA重写规则。通过查询AAA记录，远程攻击者利用该漏洞导致拒绝服务（断言失败和命名守护进程退出）。
+·CVE-2013-2266
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。UNIX平台上的ISC BIND 9.7.x版本，9.8.4-P2之前的9.8.x版本，9.8.5b29.8.4-P2之前的9.8.5版本，9.9.2-P29.8.4-P2之前的9.9.x版本，9.9.3b29.8.4-P2之前的9.9.3版本中的libdns中存在漏洞。通过特制的正则表达式，远程攻击者利用该漏洞导致拒绝服务（内存消耗）。对一台运行named进程的机器发起内存耗尽攻击可证实此漏洞的存在。
+·CVE-2013-4854
+描述：ISC BIND和DNSco BIND都是美国Internet Systems Consortium（ISC）公司的产品。ISC BIND是一套实现了DNS协议的开源软件。DNSco BIND是一套用于支持和保护在企业中安装ISC BIND软件的解决方案，该解决方案可提供安装支持和专业知识指南。ISC BIND和DNSco BIND中的rdata.c文件中的RFC 5011实现中存在漏洞，该漏洞源于程序在构建日志信息期间没有正确地处理RDATA段，远程攻击者可通过特制的带有畸形RDATA段的查询利用该漏洞造成拒绝服务（守护程序崩溃）。以下版本中受到影响：ISC BIND 9.7.0至9.7.7版本和9.8.0至9.8.5-P1版本，9.9.0至9.9.3-P1版本，9.8.6b1和9.9.4b1版本和DNSco BIND 9.9.3-S1和9.9.4-S1b1版本。
+·CVE-2014-0591
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND中的query.c文件中的‘query_findclosestnsec3’函数中存在缓冲区溢出漏洞。远程攻击者可通过对使用NSEC3签名功能的授权域名服务器构造特制的DNS查询利用该漏洞造成拒绝服务（INSIST声明失败和守护进程退出）。以下版本存在漏洞：ISC BIND 9.6，9.7，9.8.6-P2之前的9.8版本，9.9.4-P2之前的9.9版本，9.6-ESV-R10-P2之前的9.6-ESV版本。
+·CVE-2014-8500
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND中存在安全漏洞，该漏洞源于程序没有限制授权链。远程攻击者可利用该漏洞造成拒绝服务（内存消耗）。以下版本受到影响：ISC BIND 9.0.x至9.8.x版本，9.9.0至9.9.6版本，9.10.0至9.10.1版本。
+·CVE-2015-1349
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.7.0版本至9.9.6-P1版本和9.10.1-P2之前9.10.x版本的named进程中存在安全漏洞，该漏洞源于程序没有正确处理Trust Anchor Management。当程序启用DNSSEC验证和managed-keys功能时，远程攻击者可利用该漏洞造成拒绝服务（断言失败，守护进程退出，或守护进程崩溃）。
+·CVE-2015-4620
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.7.1版本至9.9.7版本和9.10.0版本至9.10.2-P1版本的named中的name.c文件存在安全漏洞。当递归解析器执行DNSSEC验证时，远程攻击者可通过构造特制的zone数据，并使验证解析器查询该数据利用该漏洞造成拒绝服务（REQUIRE断言失败和守护进程退出）。
+·CVE-2015-5477
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.9.7-P1及之前版本和9.10.2-P2及之前版本的named中存在安全漏洞。远程攻击者可借助TKEY查询利用该漏洞造成拒绝服务（REQUIRE断言失败和守护进程退出）。
+·CVE-2015-5722
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.9.7-P3之前9.x版本和9.10.2-P4之前9.10.x版本的named中的buffer.c文件中存在安全漏洞。远程攻击者可通过创建包含畸形DNSSEC密钥的区域利用该漏洞造成拒绝服务（断言失败和守护进程退出）。
+·CVE-2015-8000
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.9.8-P2之前9.x版本和9.10.3-P2之前9.10.x版本的named中的db.c文件存在安全漏洞。远程攻击者可借助畸形的类属性利用该漏洞造成拒绝服务（REQUIRE断言失败和守护进程退出）。
+·CVE-2015-8704
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND的apl_42.c文件中存在安全漏洞。远程攻击者可借助畸形的Address Prefix List(APL)记录利用该漏洞造成拒绝服务（INSIST断言失败和守护进程退出）。以下版本受到影响：ISC BIND 9.9.8-P3之前9.x版本，9.10.3-P3之前9.9.x版本和9.10.x版本。
+·CVE-2016-1285
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.9.8-P4之前9.x版本和9.10.3-P4之前9.10.x版本的named中存在安全漏洞。远程攻击者可通过向rndc接口发送畸形的数据包利用该漏洞造成拒绝服务（断言失败和守护进程退出）。
+·CVE-2016-1286
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.9.8-P4之前9.x版本和9.10.3-P4之前9.10.x版本的named中存在安全漏洞。远程攻击者可借助DNAME记录的特制的签名记录利用该漏洞造成拒绝服务（断言失败和守护进程退出）。
+·CVE-2016-2776
+描述：在BIND构造对满足特定条件的查询的响应的方式中发现了拒绝服务缺陷。远程攻击者可能会利用此缺陷，通过特制的DNS请求数据包，使声明出口意外断言失败。
+·CVE-2016-2848
+描述：ISC BIND是美国Internet Systems Consortium（ISC）公司所维护的一套实现了DNS协议的开源软件。ISC BIND 9.1.0至9.8.4-P2版本和9.9.0至9.9.2-P2版本中存在安全漏洞。远程攻击者可借助OPT资源记录中畸形的选项数据利用该漏洞造成拒绝服务（断言失败和守护进程退出）。
+·CVE-2017-3139
+描述：ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND中存在远程拒绝服务漏洞。远程攻击者可利用该漏洞造成拒绝服务。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+bind、bind-chroot、bind-devel、bind-libs、bind-sdb、bind-utils
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+bind-9.8.2-0.62.rc1.el6_9.4或以上版本
+bind-chroot-9.8.2-0.62.rc1.el6_9.4或以上版本
+bind-devel-9.8.2-0.62.rc1.el6_9.4或以上版本
+bind-libs-9.8.2-0.62.rc1.el6_9.4或以上版本
+bind-sdb-9.8.2-0.62.rc1.el6_9.4或以上版本
+bind-utils-9.8.2-0.62.rc1.el6_9.4或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2012-3817:需要重启 bind 以使漏洞修复生效。
+CVE-2012-4244:需要重启 bind 以使漏洞修复生效。
+CVE-2012-5166:需要重启 bind 以使漏洞修复生效。
+CVE-2012-5688:需要重启 bind 以使漏洞修复生效。
+CVE-2012-5689:需要重启 bind 以使漏洞修复生效。
+CVE-2013-2266:需要重启 bind 以使漏洞修复生效。
+CVE-2013-4854:需要重启 bind 以使漏洞修复生效。
+CVE-2014-0591:需要重启 bind 以使漏洞修复生效。
+CVE-2014-8500:需要重启 bind 以使漏洞修复生效。
+CVE-2015-1349:需要重启 bind 以使漏洞修复生效。
+CVE-2015-4620:需要重启 bind 以使漏洞修复生效。
+CVE-2015-5477:需要重启 bind 以使漏洞修复生效。
+CVE-2015-5722:需要重启 bind 以使漏洞修复生效。
+CVE-2015-8000:需要重启 bind 以使漏洞修复生效。
+CVE-2015-8704:需要重启 bind 以使漏洞修复生效。
+CVE-2016-1285:需要重启 bind 以使漏洞修复生效。
+CVE-2016-1286:需要重启 bind 以使漏洞修复生效。
+CVE-2016-2776:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-2848:需要重启 bind 以使漏洞修复生效。
+CVE-2017-3139:需要重启 bind 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+bind(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/bind-9.8.2-0.62.rc1.el6_9.4.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/bind-chroot-9.8.2-0.62.rc1.el6_9.4.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/bind-devel-9.8.2-0.62.rc1.el6_9.4.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/bind-devel-9.8.2-0.62.rc1.el6_9.4.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/bind-libs-9.8.2-0.62.rc1.el6_9.4.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/bind-libs-9.8.2-0.62.rc1.el6_9.4.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/bind-sdb-9.8.2-0.62.rc1.el6_9.4.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/bind-utils-9.8.2-0.62.rc1.el6_9.4.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

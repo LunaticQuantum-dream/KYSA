@@ -1,0 +1,61 @@
+Name:KYSA-202205-0007
+Severity:中等
+Summary:dnsmasq安全漏洞
+Published:2022-01-11
+URL:/support/loophole/patch/2502.html
+Title:
+			公告ID：KYSA-202205-0007
+公告摘要：dnsmasq安全漏洞
+等级：中等
+发布日期：2022-01-11
+		
+1. 修复的CVE
+CVE-2022-0934
+Dnsmasq是一款使用C语言编写的轻量级DNS转发和DHCP、TFTP服务器。Dnsmasq 存在资源管理错误漏洞，该漏洞源于处理 DHCPv6 请求时出现释放后重用错误。远程攻击者可以向受影响的应用程序发送特制的 DHCPv6 数据包以触发释放后重用错误并执行拒绝服务 (DoS) 攻击。
+CVE-2019-14513
+Dnsmasq是一款使用C语言编写的轻量级DNS转发和DHCP、TFTP服务器。 Dnsmasq 2.76之前版本中存在安全漏洞，该漏洞源于不正确的边界检查。攻击者可通过发送较大的DNS数据包利用该漏洞造成拒绝服务（崩溃）。
+CVE-2017-15107
+Dnsmasq是软件开发者Simon Kelley所研发的一款使用C语言编写的开源轻量级DNS转发和DHCP、TFTP服务器。Dnsmasq 2.78及之前的版本中的DNSSEC实现存在安全漏洞。攻击者可利用该漏洞造成设备显示已存在主机名并不存在。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+dnsmasq-base、dnsmasq-utils、dnsmasq
+arm64 架构：
+dnsmasq-base、dnsmasq-utils、dnsmasq
+mips64el 架构：
+dnsmasq-base、dnsmasq-utils、dnsmasq
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+2.75-1kord0.16.04.10+esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install dnsmasq
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-base_2.75-1kord0.16.04.10%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-utils_2.75-1kord0.16.04.10%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq_2.75-1kord0.16.04.10%2Besm1_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-base_2.75-1kord0.16.04.10%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-utils_2.75-1kord0.16.04.10%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq_2.75-1kord0.16.04.10%2Besm1_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-base_2.75-1kord0.16.04.10%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-utils_2.75-1kord0.16.04.10%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq_2.75-1kord0.16.04.10%2Besm1_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

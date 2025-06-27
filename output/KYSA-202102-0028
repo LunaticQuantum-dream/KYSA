@@ -1,0 +1,13 @@
+Name:KYSA-202102-0028
+Severity:中等
+Summary:xterm漏洞
+Published:2021-04-07
+URL:/support/loophole/patch/382.html
+Title:
+			摘要：xterm漏洞
+安全等级：中等
+公告ID：KYSA-202102-0028
+发布日期：2021-04-07
+影响CVE：CVE-2021-27135
+		
+1. 修复的CVE信息CVE-2021-27135描述：Xterm中存在安全漏洞，该漏洞源于允许远程攻击者通过特制的UTF-8字符序列造成拒绝服务（分段错误）或可能具有未指明的其他影响。2. 受影响的操作系统银河麒麟桌面操作系统V4 SP1银河麒麟桌面操作系统V4 SP2银河麒麟桌面操作系统V4 SP3银河麒麟桌面操作系统V4 SP4银河麒麟桌面操作系统V10银河麒麟桌面操作系统V10 SP1银河麒麟服务器操作系统V4 SP1银河麒麟服务器操作系统V4 SP2银河麒麟服务器操作系统V4 SP3银河麒麟服务器操作系统V4 SP43. 修复版本软件包：xtermxterm-322-1kord1.2（V4、V10）xterm-353-1kylin1.20.04.2（V10 SP1）4. 受影响的软件包银河麒麟桌面操作系统V4桌面版xterm银河麒麟桌面操作系统V10桌面版xterm银河麒麟桌面操作系统V10 SP1xterm5.修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2-sp1: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10.0 SP1: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级     $sudo apt update方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。  $dpkg -i Packagelists6. 软件包下载地址麒麟操作系统V10桌面版、V4X86_64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xterm/xterm_322-1kord1.2_amd64.debarm64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xterm/xterm_322-1kord1.2_arm64.deb银河麒麟桌面操作系统V10 SP1X86_64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/x/xterm/xterm_353-1kylin1.20.04.2_amd64.debarm64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/x/xterm/xterm_353-1kylin1.20.04.2_arm64.debmips64el软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/x/xterm/xterm_353-1kylin1.20.04.2_mips64el.deb

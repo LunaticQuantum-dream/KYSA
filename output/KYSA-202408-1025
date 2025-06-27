@@ -1,0 +1,76 @@
+Name:KYSA-202408-1025
+Severity:重要
+Summary:microcode_ctl安全漏洞
+Published:2024-08-06
+URL:/support/loophole/patch/5995.html
+Title:
+			公告ID：KYSA-202408-1025
+公告摘要：microcode_ctl安全漏洞
+等级：重要
+发布日期：2024-08-06
+		
+1.修复的漏洞
+·CVE-2023-45733
+描述：Intel Processors（英特尔处理器）是美国英特尔（Intel）公司的提供解释计算机指令以及处理计算机软件中的数据。_x000D_
+Intel Processors 存在安全漏洞，该漏洞源于存在硬件逻辑包含竞争条件问题。可能允许经过身份验证的用户通过本地访问进行部分信息泄露。（注：此漏洞只影响x86架构产品，其他架构产品理论上无有效触发方法。）
+·CVE-2023-45745
+描述：Intel Trust Domain Extensions是美国英特尔（Intel）公司的一套机密虚拟化方案，旨在将机密虚拟机和非机密域软件栈（包括hypervisor、VMM和其他非可信域软件栈）隔离，确保机密虚拟机的数据不被非机密域软件获取和篡改。_x000D_
+Intel Trust Domain Extensions 1.5.05.46.698 版本之前存在安全漏洞，该漏洞源于存在输入验证不正确问题。可能允许特权用户通过本地访问进行特权升级。（注：此漏洞只影响x86架构产品，其他架构产品理论上无有效触发方法。）
+·CVE-2023-46103
+描述：Intel Core Ultra Processors是美国英特尔（Intel）公司的一款Core系列中央处理器（CPU）。_x000D_
+Intel Core Ultra Processors 存在安全漏洞，该漏洞源于存在处理器指令序列会导致意外行为问题。可能允许经过身份验证的用户通过本地访问进行拒绝服务攻击。（注：此漏洞只影响x86架构产品，其他架构产品理论上无有效触发方法。）
+·CVE-2023-47855
+描述：Intel Trust Domain Extensions是美国英特尔（Intel）公司的一套机密虚拟化方案，旨在将机密虚拟机和非机密域软件栈（包括hypervisor、VMM和其他非可信域软件栈）隔离，确保机密虚拟机的数据不被非机密域软件获取和篡改。_x000D_
+Intel Trust Domain Extensions 1.5.05.46.698 版本之前存在安全漏洞，该漏洞源于存在输入验证不正确问题。可能允许特权用户通过本地访问进行特权升级。（注：此漏洞只影响x86架构产品，其他架构产品理论上无有效触发方法。）
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+microcode_ctl
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+·loongarch64架构:
+microcode_ctl
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+microcode_ctl-20240531-1.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (loongarch64)
+microcode_ctl-20240531-1.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3 2403
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-45733:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-45745:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-46103:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-47855:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+microcode_ctl(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/microcode_ctl-20240531-1.a.ky10.loongarch64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+
+microcode_ctl(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/microcode_ctl-20240531-1.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/microcode_ctl-20240531-1.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

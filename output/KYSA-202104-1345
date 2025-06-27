@@ -1,0 +1,85 @@
+Name:KYSA-202104-1345
+Severity:中等
+Summary:evince安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/2177.html
+Title:
+			公告ID：KYSA-202104-1345
+公告摘要：evince安全漏洞
+等级：Moderate
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2018-21009
+描述：0.66.0之前的Poppler在Parser:：makeStream中存在整数溢出解析器.cc.
+·CVE-2019-10871
+描述：在Poppler 0.74.0中发现了一个问题。函数PSOutputDev:：checkPageSlice中存在一个基于堆的缓冲区覆盖PSOutputDev.cc.
+·CVE-2019-11459
+描述：GNOME evice到3.32.0版本的tiff文档后端中的tiff_document_render（）和tiff_document_get_thumbnail（）函数没有处理来自TIFFReadRGBAImageOriented（）的错误，导致在处理某些tiff图像文件时未初始化内存使用。
+·CVE-2019-12293
+描述：Poppler是一个用于生成PDF的C++类库，该库是从Xpdf（PDF阅读器）继承而来。Poppler 0.76.1及之前版本中的JPEG2000Stream.cc文件的‘JPXStream：：init’函数存在越界读取漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2019-9959
+描述：Poppler 0.78.0及更早版本中的JPXStream:：init函数不检查流长度的负值，从而导致整数溢出，从而使得在堆上分配一个大内存块成为可能，其大小由攻击者控制，如pdftocairo所示。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+evince、evince-browser-plugin、evince-devel、evince-dvi、evince-libs、evince-nautilus
+·x86_64架构:
+evince、evince-browser-plugin、evince-devel、evince-dvi、evince-libs、evince-nautilus
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+evince-3.28.2-9.el7或以上版本
+evince-browser-plugin-3.28.2-9.el7或以上版本
+evince-devel-3.28.2-9.el7或以上版本
+evince-dvi-3.28.2-9.el7或以上版本
+evince-libs-3.28.2-9.el7或以上版本
+evince-nautilus-3.28.2-9.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2018-21009:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-10871:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-11459:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-12293:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-9959:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+evince(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/evince-3.28.2-9.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/evince-browser-plugin-3.28.2-9.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/evince-devel-3.28.2-9.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/evince-dvi-3.28.2-9.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/evince-libs-3.28.2-9.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/evince-nautilus-3.28.2-9.el7.aarch64.rpm
+
+evince(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/evince-3.28.2-9.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/evince-browser-plugin-3.28.2-9.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/evince-devel-3.28.2-9.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/evince-devel-3.28.2-9.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/evince-dvi-3.28.2-9.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/evince-libs-3.28.2-9.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/evince-libs-3.28.2-9.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/evince-nautilus-3.28.2-9.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

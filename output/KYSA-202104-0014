@@ -1,0 +1,114 @@
+Name:KYSA-202104-0014
+Severity:中等
+Summary:clamav安全漏洞
+Published:2021-08-25
+URL:/support/loophole/patch/449.html
+Title:
+			公告ID：KYSA-202104-0014
+公告摘要：clamav安全漏洞
+等级：中等
+发布日期：2021-08-25
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1
+版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2021-1405
+Clam AntiVirus是ClamAV（Clamav）团队的一款用于检测木马，病毒，恶意软件和其他恶意威胁的开源杀毒引擎。Clam AntiVirus 存在安全漏洞，攻击者可利用该漏洞可以通过ClamAV的邮件解析器强制取消对空指针的引用，从而触发拒绝服务。
+CVE-2021-1404
+Clam AntiVirus是ClamAV（Clamav）团队的一款用于检测木马，病毒，恶意软件和其他恶意威胁的开源杀毒引擎。Clam AntiVirus 存在输入验证错误漏洞，攻击者可利用该漏洞强制读取无效地址，以触发拒绝服务，或获取敏感信息。
+CVE-2021-1252
+ClamAV（Clam AntiVirus）是Clamav团队的一套免费且开源的杀毒软件。该软件用于检测木马、病毒、恶意软件和其他恶意威胁。ClamAV 存在输入验证错误漏洞，攻击者可利用该漏洞通过Excel XLM触发过载，从而触发拒绝服务。
+
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1
+clamav
+clamav-base
+clamav-daemon
+clamav-docs
+clamav-freshclam
+clamav-milter
+clamav-testfiles
+clamdscan
+libclamav-dev
+libclamav9
+
+
+3. 软件包修复版本
+软件包：clamav
+0.103.2+dfsg-0kylin0.20.04.2(V10 SP1)
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-base_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-daemon_0.103.2%2Bdfsg-0kylin0.20.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-docs_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-freshclam_0.103.2%2Bdfsg-0kylin0.20.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-milter_0.103.2%2Bdfsg-0kylin0.20.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-testfiles_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav_0.103.2%2Bdfsg-0kylin0.20.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamdscan_0.103.2%2Bdfsg-0kylin0.20.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/libclamav9_0.103.2%2Bdfsg-0kylin0.20.04.2_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-base_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-daemon_0.103.2%2Bdfsg-0kylin0.20.04.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-docs_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-freshclam_0.103.2%2Bdfsg-0kylin0.20.04.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-milter_0.103.2%2Bdfsg-0kylin0.20.04.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-testfiles_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav_0.103.2%2Bdfsg-0kylin0.20.04.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamdscan_0.103.2%2Bdfsg-0kylin0.20.04.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/libclamav9_0.103.2%2Bdfsg-0kylin0.20.04.2_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-base_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-daemon_0.103.2%2Bdfsg-0kylin0.20.04.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-docs_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-freshclam_0.103.2%2Bdfsg-0kylin0.20.04.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-milter_0.103.2%2Bdfsg-0kylin0.20.04.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-testfiles_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav_0.103.2%2Bdfsg-0kylin0.20.04.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamdscan_0.103.2%2Bdfsg-0kylin0.20.04.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/libclamav9_0.103.2%2Bdfsg-0kylin0.20.04.2_mips64el.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-base_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-daemon_0.103.2%2Bdfsg-0kylin0.20.04.2_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-docs_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-freshclam_0.103.2%2Bdfsg-0kylin0.20.04.2_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-milter_0.103.2%2Bdfsg-0kylin0.20.04.2_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav-testfiles_0.103.2%2Bdfsg-0kylin0.20.04.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamav_0.103.2%2Bdfsg-0kylin0.20.04.2_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/clamdscan_0.103.2%2Bdfsg-0kylin0.20.04.2_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/clamav/libclamav9_0.103.2%2Bdfsg-0kylin0.20.04.2_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1
+版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

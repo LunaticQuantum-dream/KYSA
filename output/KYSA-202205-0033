@@ -1,0 +1,55 @@
+Name:KYSA-202205-0033
+Severity:重要
+Summary:needrestart安全漏洞
+Published:2024-03-18
+URL:/support/loophole/patch/5453.html
+Title:
+			公告ID：KYSA-202205-0033
+公告摘要：needrestart安全漏洞
+等级：重要
+发布日期：2024-03-18
+		
+1. 修复的CVE
+CVE-2022-30688
+needrestart是一款用于检查升级后需要重新启动哪些守护进程的工具。 needrestart 0.8 版本到 3.5 版本存在安全漏洞，该漏洞源于容易发生本地权限提升。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+needrestart
+arm64 架构：
+needrestart
+mips64el 架构：
+needrestart
+loongarch64 架构：
+needrestart
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+3.4-6kylin0.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install needrestart
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/n/needrestart/needrestart_3.4-6kylin0.1_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/n/needrestart/needrestart_3.4-6kylin0.1_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/n/needrestart/needrestart_3.4-6kylin0.1_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/n/needrestart/needrestart_3.4-6kylin0.1_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

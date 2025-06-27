@@ -1,0 +1,13 @@
+Name:KYSA-202110-0002
+Severity:中等
+Summary:imlib2安全漏洞
+Published:2021-11-15
+URL:/support/loophole/patch/641.html
+Title:
+			摘要：imlib2安全漏洞
+安全等级：中等
+公告ID：KYSA-202110-0002
+发布日期：2021-11-15
+影响CVE：CVE-2020-12761
+		
+1. 修复的CVE信息CVE-2020-12761imlib2是一款用于图像文件加载、保存、渲染和处理的库。imlib2 1.6.0版本中的modules/loaders/loader_ico.c文件存在输入验证错误漏洞。远程攻击者可利用该漏洞在系统上执行任意代码并导致应用程序崩溃。2. 影响的操作系统银河麒麟桌面操作系统V10 SP13. 修复版本软件包：imlib21.6.1-1kylin0.1（V10 SP1）4. 受影响的软件包银河麒麟桌面操作系统V10 SP1libimlib2libimlib2-dev5. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2-sp1:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10.0 SP1:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级。$sudo apt update方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists 6. 软件包下载地址银河麒麟桌面操作系统V10 SP1X86_64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imlib2/libimlib2-dev_1.6.1-1kylin0.1_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imlib2/libimlib2_1.6.1-1kylin0.1_amd64.debarm64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imlib2/libimlib2-dev_1.6.1-1kylin0.1_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imlib2/libimlib2_1.6.1-1kylin0.1_arm64.debmips64el软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imlib2/libimlib2-dev_1.6.1-1kylin0.1_mips64el.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imlib2/libimlib2_1.6.1-1kylin0.1_mips64el.deb   

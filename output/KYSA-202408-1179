@@ -1,0 +1,33 @@
+Name:KYSA-202408-1179
+Severity:低等
+Summary:kernel 安全漏洞 （热补丁）
+Published:2024-08-27
+URL:/support/loophole/patch/6186.html
+Title:
+			公告ID：KYSA-202408-1179
+公告摘要：kernel 安全漏洞 （热补丁）
+等级：低等
+发布日期：2024-08-27
+		
+1.修复的漏洞
+·CVE-2024-26668
+描述：Linux kernel存在安全漏洞，该漏洞源于存在整数溢出漏洞。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+kernel-4.19.90-25.35.v2101.ky10
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64)
+patch-kernel-4.19.90-25.35.v2101.ky10-SGL-240805083613-6-1.ky10
+
+4.修复方法
+4.1 新增update源配置地址参考如下：
+银河麒麟高级服务器操作系统 V10 SP1：https://update.cs2c.com.cn/NS/V10/V10SP1.1/hotpatch_update/$basearch
+银河麒麟高级服务器操作系统 V10 SP2：https://update.cs2c.com.cn/NS/V10/V10SP2/hotpatch_update/$basearch/ 
+银河麒麟高级服务器操作系统 V10 SP3 2303：https://update.cs2c.com.cn/NS/V10/V10SP3/hotpatch_update/$basearch/ 
+银河麒麟高级服务器操作系统 V10 SP3 2403：https://update.cs2c.com.cn/NS/V10/V10SP3-2403/hotpatch_update/$basearch/
+提示：访问热补丁update源，需用户名和密码。请联系麒麟软件销售人员。
+4.2 安装热补丁rpm包，然后执行kylin-warm 命令进行热补丁激活等管理操作。
+提示：详细操作说明请联系售后技服支持。

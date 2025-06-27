@@ -1,0 +1,76 @@
+Name:KYSA-202011-1002
+Severity:严重
+Summary:关于 dhcp 的补丁包公告
+Published:2020-11-01
+URL:/support/loophole/patch/1742.html
+Title:
+			公告ID：KYSA-202011-1002
+公告摘要：dhcp 安全漏洞
+等级：Critical
+发布日期：2020-11-01
+		
+1.修复的CVE
+·CVE-2017-3144
+描述：发现在某些情况下，DHCP守护程序没有正确清理关闭的OMAPI连接。能够连接到OMAPI端口的远程攻击者可以利用此漏洞耗尽DHCP守护程序中的文件描述符，从而导致OMAPI功能中的拒绝服务。
+·CVE-2018-1111
+描述：在NeoKylin Linux Advanced Server release V7  Linux的DHCP客户端软件包中包含的NetworkManager集成脚本中发现命令注入缺陷。恶意DHCP服务器或本地网络上能够欺骗DHCP响应的攻击者可以利用此漏洞在使用NetworkManager并配置为使用DHCP协议获取网络配置的系统上以根权限执行任意命令。
+·CVE-2018-5732
+描述：在dhclient处理DHCP响应包的过程中发现了一个内存访问越界缺陷。恶意DHCP服务器可能会利用此漏洞通过特制的DHCP响应包使dhclient计算机上运行的dhclient进程崩溃。
+·CVE-2018-5733
+描述：dhcpd在处理客户端请求时处理引用计数的方式中发现了一个拒绝服务漏洞。恶意的DHCP客户机可以利用此漏洞在服务器端触发引用计数溢出，从而通过发送大量通信量，潜在地导致dhcpd崩溃。
+·CVE-2019-6470
+描述：在一个ISC绑定库中，dhcpd在DHCPv6模式下操作时使用的函数中存在一个bug。dhcpd中也有一个关于根据文档使用此函数的bug，但是library函数中的bug阻止了它造成任何危害。ISC的所有dhcpd版本都包含这个和其他绑定库的副本，这些库在发布之前已经过测试，并且已知不会出现这样的问题。一些ISC软件的第三方打包程序修改了dhcpd源代码、绑定源代码或版本匹配，从而造成了崩溃的可能性。根据ISC可获得的报告，崩溃的概率很大，而且还没有分析攻击者如何操纵，甚至是否操纵概率。影响：当使用BIND版本9.11.2或更高版本时，版本4.4.1之前的dhcpd版本的构建，或者绑定带有特定bug修复的版本。ISC无法访问所有易受攻击的dhcpd重新打包的综合版本列表。特别是，来自其他供应商的构建也可能受到影响。建议操作员查阅其供应商文件。
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+dhclient、dhcp、dhcp-common、dhcp-devel、dhcp-libs
+x86_64架构:
+dhclient、dhcp、dhcp-common、dhcp-devel、dhcp-libs
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+dhclient-4.2.5-77.el7
+dhcp-4.2.5-77.el7
+dhcp-common-4.2.5-77.el7
+dhcp-devel-4.2.5-77.el7
+dhcp-libs-4.2.5-77.el7
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+·CVE-2017-3144：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2018-1111：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2018-5732：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2018-5733：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2019-6470：无需重启操作系统与服务即可使漏洞修复生效。
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+dhcp（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/dhclient-4.2.5-77.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/dhcp-4.2.5-77.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/dhcp-common-4.2.5-77.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/dhcp-devel-4.2.5-77.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/dhcp-libs-4.2.5-77.el7.aarch64.rpm
+
+dhcp（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/dhclient-4.2.5-77.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/dhclient-4.2.5-77.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/dhcp-4.2.5-77.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/dhcp-4.2.5-77.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/dhcp-common-4.2.5-77.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/dhcp-common-4.2.5-77.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/dhcp-devel-4.2.5-77.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/dhcp-devel-4.2.5-77.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/dhcp-libs-4.2.5-77.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/dhcp-libs-4.2.5-77.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载

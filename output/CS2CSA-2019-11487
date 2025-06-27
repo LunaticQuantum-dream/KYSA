@@ -1,0 +1,14 @@
+Name:CS2CSA-2019-11487
+Severity:重要
+Summary:Linux kernel：计数溢出漏洞
+Published:2020-05-18
+URL:/support/loophole/patch/232.html
+Title:
+			摘要：           Linux kernel：计数溢出漏洞
+安全等级：          重要
+公告ID：         CS2CSA-2019-11487
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2020-05-18
+CVE：          CVE-2019-11487
+		
+1. 概述：中标麒麟高级服务器操作系统软件V7有kernel 、kernel-alt、kernel-rt可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：Linux kernel 5.1-rc5之前版本中存在资源管理错误漏洞。该漏洞源于网络系统或产品对系统资源（如内存、磁盘空间、文件等）的管理不当。

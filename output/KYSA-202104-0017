@@ -1,0 +1,128 @@
+Name:KYSA-202104-0017
+Severity:中等
+Summary:samba安全漏洞
+Published:2021-04-30
+URL:/support/loophole/patch/452.html
+Title:
+			公告ID：KYSA-202104-0017
+公告摘要：samba安全漏洞
+等级：中等
+发布日期：2021-04-30
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2021-20254
+Samba是Samba团队的一套可使UNIX系列的操作系统与微软Windows操作系统的SMB/CIFS网络协议做连结的自由软件。该软件支持共享打印机、互相传输资料文件等。Samba 存在缓冲区错误漏洞，该漏洞源于在将Windows组标识(sid)映射到unix组标识(gid)时存在边界条件，这导致在Samba服务器进程令牌中创建负面的idmap缓存项。以下产品及版本受到影响：Samba： 3.6.0, 3.6.1, 3.6.2, 3.6.3, 3.6.4, 3.6.5, 3.6.6, 3.6.7, 3.6.8, 3.6.9, 3.6.10, 3.6.11, 3.6.12, 3.6.13, 3.6.14, 3.6.15, 3.6.16, 3.6.17, 3.6.18, 3.6.19, 3.6.20, 3.6.21, 3.6.22, 3.6.23, 3.6.24, 3.6.25, 4.0.0, 4.0.1, 4.0.2, 4.0.3, 4.0.4, 4.0.5, 4.0.6, 4.0.7, 4.0.8, 4.0.9, 4.0.10, 4.0.11, 4.0.12, 4.0.13, 4.0.14, 4.0.15, 4.0.16, 4.0.17, 4.0.18, 4.0.19, 4.0.20, 4.0.21, 4.0.22, 4.0.23, 4.0.24, 4.0.25, 4.0.26, 4.1.0, 4.1.1, 4.1.2, 4.1.3, 4.1.4, 4.1.5, 4.1.6, 4.1.7, 4.1.8, 4.1.9, 4.1.10, 4.1.11, 4.1.12, 4.1.13, 4.1.14, 4.1.15, 4.1.16, 4.1.17, 4.1.18, 4.1.19, 4.1.20, 4.1.21, 4.1.22, 4.1.23, 4.2.0, 4.2.1, 4.2.2, 4.2.3, 4.2.4, 4.2.5, 4.2.6, 4.2.7, 4.2.8, 4.2.9, 4.2.10, 4.2.11, 4.2.12, 4.2.13, 4.2.14, 4.3.0, 4.3.1, 4.3.2, 4.3.3, 4.3.4, 4.3.5, 4.3.6, 4.3.7, 4.3.8, 4.3.9, 4.3.10, 4.3.11, 4.3.12, 4.3.13, 4.4.0, 4.4.0 rc4, 4.4.1, 4.4.2, 4.4.3, 4.4.4, 4.4.5, 4.4.6, 4.4.7, 4.4.8, 4.4.9, 4.4.10, 4.4.11, 4.4.12, 4.4.13, 4.4.14, 4.4.15, 4.4.16, 4.5.0, 4.5.1, 4.5.2, 4.5.3, 4.5.4, 4.5.5, 4.5.6, 4.5.7, 4.5.8, 4.5.9, 4.5.10, 4.5.11, 4.5.12, 4.5.13, 4.5.14, 4.5.15, 4.5.16, 4.6.0, 4.6.1, 4.6.2, 4.6.3, 4.6.4, 4.6.5, 4.6.6, 4.6.7, 4.6.8, 4.6.9, 4.6.10, 4.6.11, 4.6.12, 4.6.13, 4.6.14, 4.6.15, 4.6.16, 4.7.0, 4.7.1, 4.7.2, 4.7.3, 4.7.4, 4.7.5, 4.7.6, 4.7.7, 4.7.8, 4.7.9, 4.7.10, 4.7.11, 4.7.12, 4.8.0, 4.8.1, 4.8.2, 4.8.3, 4.8.4, 4.8.5, 4.8.6, 4.8.7, 4.8.8, 4.8.9, 4.8.10, 4.8.11, 4.8.12, 4.9.0, 4.9.1, 4.9.2, 4.9.3, 4.9.4, 4.9.5, 4.9.6, 4.9.7, 4.9.8, 4.9.9, 4.9.10, 4.9.11, 4.9.12, 4.9.13, 4.9.14, 4.9.15, 4.9.16, 4.9.17, 4.9.18, 4.10.0, 4.10.1, 4.10.2, 4.10.3, 4.10.4, 4.10.5, 4.10.6, 4.10.7, 4.10.8, 4.10.9, 4.10.10, 4.10.11, 4.10.12, 4.10.13, 4.10.14, 4.10.15, 4.10.16, 4.10.17, 4.10.18, 4.11.0, 4.11.1, 4.11.2, 4.11.3, 4.11.4, 4.11.5, 4.11.6, 4.11.7, 4.11.8, 4.11.9, 4.11.10, 4.11.11, 4.11.12, 4.11.13, 4.11.14, 4.11.15, 4.11.16, 4.11.17, 4.12.0, 4.12.1, 4.12.2, 4.12.3, 4.12.4, 4.12.5, 4.12.6, 4.12.7, 4.12.8, 4.12.9, 4.12.10, 4.12.11, 4.12.12, 4.12.13, 4.12.14, 4.13.0, 4.13.1, 4.13.2, 4.13.3, 4.13.4, 4.13.5, 4.13.6, 4.13.7, 4.14.0, 4.14.1, 4.14.2, 4.14.3   。
+
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1
+ctdb
+libnss-winbind
+libpam-winbind
+libsmbclient
+libsmbclient-dev
+libwbclient-dev
+libwbclient0
+python3-samba
+registry-tools
+samba
+samba-common
+samba-common-bin
+samba-dev
+samba-dsdb-modules
+samba-libs
+samba-testsuite
+samba-vfs-modules
+smbclient
+winbind
+
+
+3. 软件包修复版本
+软件包：samba
+2:4.11.6+dfsg-0kylin3(V10 SP1)
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+
+5. 软件包下载地址
+麒麟操作系统桌面版V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/ctdb_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libnss-winbind_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libpam-winbind_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libsmbclient_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libwbclient0_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/python3-samba_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/registry-tools_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common-bin_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common_4.11.6%2Bdfsg-0kylin3_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-dsdb-modules_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-libs_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-testsuite_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-vfs-modules_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/smbclient_4.11.6%2Bdfsg-0kylin3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/winbind_4.11.6%2Bdfsg-0kylin3_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/ctdb_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libnss-winbind_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libpam-winbind_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libsmbclient_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libwbclient0_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/python3-samba_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/registry-tools_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common-bin_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common_4.11.6%2Bdfsg-0kylin3_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-dsdb-modules_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-libs_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-testsuite_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-vfs-modules_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/smbclient_4.11.6%2Bdfsg-0kylin3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/winbind_4.11.6%2Bdfsg-0kylin3_arm64.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/ctdb_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libnss-winbind_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libpam-winbind_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libsmbclient_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/libwbclient0_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/python3-samba_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/registry-tools_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common-bin_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-common_4.11.6%2Bdfsg-0kylin3_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-dsdb-modules_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-libs_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-testsuite_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba-vfs-modules_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/samba_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/smbclient_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/samba/winbind_4.11.6%2Bdfsg-0kylin3_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

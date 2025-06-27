@@ -1,0 +1,73 @@
+Name:KYSA-202106-0016
+Severity:中等
+Summary:openexr安全漏洞
+Published:2021-11-03
+URL:/support/loophole/patch/633.html
+Title:
+			公告ID：KYSA-202106-0016
+公告摘要：openexr安全漏洞
+等级：中等
+发布日期：2021-11-03
+		
+1. 漏洞概述
+CVE-2021-3605
+LIM OpenEXR是一种图像文件格式，适用于高动态范围（HDR）图像。OpenEXR是一种图像文件格式，适用于高动态范围（HDR）图像。OpenEXR 存在安全漏洞，该漏洞源于OpenEXR错误地处理了某些格式错误的EXR图像文件。攻击者可利用该漏洞导致拒绝服务，或者可能执行任意代码。
+CVE-2021-3598
+Adobe Bridge是一款文件查看器。Adobe Bridge 存在缓冲区错误漏洞，该漏洞源于处理不可信输入时出现边界错误。攻击者可利用该漏洞创建一个专门制作的文件，诱骗受害者使用受影响的软件打开它，在目标系统上触发越界写入和执行任意代码。
+CVE-2021-23215
+Industrial Light and Magic OpenEXR是一种图像文件格式，适用于高动态范围（HDR）图像。Industrial Light And Magic OpenEXR 中存在资源管理错误漏洞，该漏洞源于在 OpenEXR 的 DwaCompressor 中发现了导致堆缓冲区溢出的整数溢出。
+CVE-2021-26260
+Industrial Light And Magic（lim） OpenEXR是一种图像文件格式，适用于高动态范围（HDR）图像。Industrial Light And Magic（lim） OpenEXR 资源管理错误漏洞中存在其他漏洞。在3.0.1之前的版本中，OpenEXR的DwaCompressor中发现了导致堆缓冲区溢出的整数溢出。攻击者可以利用此漏洞使使用OpenEXR编译的应用程序崩溃。
+CVE-2021-20296
+Industrial Light And Magic（lim） LIM OpenEXR是一种图像文件格式，适用于高动态范围（HDR）图像。OpenEXR in versions before 3.0.0-beta 存在安全漏洞，攻击者可利用该漏洞导致空指针解引用。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V4
+openexr
+libopenexr22 
+·银河麒麟桌面操作系统V10
+openexr
+libopenexr22 
+
+3. 软件包修复版本
+软件包：openexr
+2.2.0-10kord2.6+esm1（V4、V10）
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+
+5. 软件包下载地址
+麒麟操作系统V10桌面版、V4
+X86_64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/libopenexr-dev_2.2.0-10kord2.6+esm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/libopenexr22_2.2.0-10kord2.6+esm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/openexr-doc_2.2.0-10kord2.6+esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/openexr_2.2.0-10kord2.6+esm1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/libopenexr-dev_2.2.0-10kord2.6+esm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/libopenexr22_2.2.0-10kord2.6+esm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/openexr-doc_2.2.0-10kord2.6+esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/openexr_2.2.0-10kord2.6+esm1_arm64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

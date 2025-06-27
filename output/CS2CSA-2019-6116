@@ -1,0 +1,14 @@
+Name:CS2CSA-2019-6116
+Severity:严重
+Summary:Artifex Software Ghostscript 输入验证错误漏洞
+Published:2019-01-23
+URL:/support/loophole/patch/198.html
+Title:
+			摘要：          Artifex Software Ghostscript 输入验证错误漏洞
+安全等级：          严重
+公告ID：         CS2CSA-2019-6116
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2019-01-23
+CVE：             CVE-2019-6116  CVSS3评分：7.3
+		
+1. 概述：中标麒麟高级服务器操作系统V7有Artifex Software Ghostscript可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：Artifex Software Ghostscript是美国Artifex Software公司的一款开源的PostScript（一种用于电子产业和桌面出版领域的页面描述语言和编程语言）解析器。该产品可显示Postscript文件以及在非Postscript打印机上打印Postscript文件。Artifex Software Ghostscript 9.26版本中存在输入验证错误漏洞。该漏洞源于网络系统或产品未对输入的数据进行正确的验证。

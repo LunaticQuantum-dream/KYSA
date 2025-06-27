@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-15688
+Severity:重要
+Summary:systemd堆边界外写漏洞
+Published:2020-06-12
+URL:/support/loophole/patch/239.html
+Title:
+			摘要：          systemd堆边界外写漏洞
+安全等级：          重要
+公告ID：         CS2CSA-2018-15688
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2020-06-12
+CVE：          CVE-2018-15688
+		
+1. 概述：中标麒麟高级服务器操作系统软件V7有systemd、NetworkManager可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：发现在构造DHCPv6数据包时systemd-network无法正确跟踪缓冲区大小。此缺陷可能会导致整数下溢，可用于产生基于堆的缓冲区溢出。与受害者所在网络段相同的恶意主机可能会将自己宣传为DHCPv6服务器，并利用此漏洞导致拒绝服务或可能在受害者计算机上执行代码。

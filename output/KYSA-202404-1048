@@ -1,0 +1,95 @@
+Name:KYSA-202404-1048
+Severity:重要
+Summary:shim安全漏洞
+Published:2024-04-16
+URL:/support/loophole/patch/5603.html
+Title:
+			公告ID：KYSA-202404-1048
+公告摘要：shim安全漏洞
+等级：Important
+发布日期：2024-04-16
+		
+1.修复的CVE
+·CVE-2023-40547
+描述：在Shim中发现远程代码执行漏洞。在解析HTTP响应时，Shim引导支持信任攻击者控制的值。此漏洞使攻击者能够处理特定的恶意HTTP请求，从而导致完全受控的越界写入原语和完全的系统危害。
+·CVE-2023-40549
+描述：由于在加载PE二进制文件期间缺乏适当的边界验证，在Shim中发现了一个越界读取缺陷。此漏洞使攻击者能够加载精心编制的PE二进制文件，从而触发问题并使Shim崩溃，从而导致拒绝服务
+·CVE-2023-40550
+描述：Shim在尝试验证SBAT信息时发现了一个越界读取缺陷。此问题可能会在系统启动阶段暴露敏感数据。
+·CVE-2023-40551
+描述：在Shim中的MZ二进制格式中发现一个缺陷。可能会发生越界读取，导致系统启动阶段崩溃或敏感数据可能暴露。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·aarch64架构:
+shim
+·x86_64架构:
+shim
+·银河麒麟高级服务器操作系统 V10 SP3 2309a
+·aarch64架构:
+shim
+·银河麒麟云底座操作系统 V10
+·aarch64架构:
+shim
+·x86_64架构:
+shim
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (aarch64、x86_64)
+shim-15.6-18.p01.ky10h或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309a (aarch64)
+shim-15.6-18.p01.ky10h或以上版本
+·银河麒麟云底座操作系统 V10 (aarch64、x86_64)
+shim-15.6-18.p01.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+aarch64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309a
+aarch64:https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/
+银河麒麟云底座操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-40547:需要重启操作系统以使漏洞修复生效。
+CVE-2023-40549:需要重启操作系统以使漏洞修复生效。
+CVE-2023-40550:需要重启操作系统以使漏洞修复生效。
+CVE-2023-40551:需要重启操作系统以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+shim(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/shim-15.6-18.p01.ky10h.aarch64.rpm
+
+shim(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/shim-15.6-18.p01.ky10h.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309a
+
+shim(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/shim-15.6-18.p01.ky10h.aarch64.rpm
+
+·银河麒麟云底座操作系统 V10
+
+shim(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/shim-15.6-18.p01.ky10h.aarch64.rpm
+
+shim(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/shim-15.6-18.p01.ky10h.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

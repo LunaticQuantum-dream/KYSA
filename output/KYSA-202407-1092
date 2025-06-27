@@ -1,0 +1,125 @@
+Name:KYSA-202407-1092
+Severity:重要
+Summary:kernel安全漏洞
+Published:2024-07-23
+URL:/support/loophole/patch/5945.html
+Title:
+			公告ID：KYSA-202407-1092
+公告摘要：kernel安全漏洞
+等级：Important
+发布日期：2024-07-23
+		
+1.修复的CVE
+·CVE-2024-1086
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于netfilter: nf_tables 组件中存在释放后重用，nf_hook_slow() 函数可能会导致双重释放，攻击者利用该漏洞导致本地权限提升。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·aarch64架构:
+kernel-doc、kernel-tools、kernel-devel、perf、bpftool、kernel、kernel-modules-internal、kernel-abi-stablelists、kernel-headers、kernel-modules、python3-perf、kernel-core、kernel-devel-matched、kernel-modules-extra、kernel-tools-libs、kernel-tools-libs-devel、kernel-cross-headers
+·x86_64架构:
+kernel-doc、kernel-tools、kernel-devel、perf、bpftool、kernel、kernel-modules-internal、kernel-abi-stablelists、kernel-headers、kernel-ipaclones-internal、kernel-modules、kernel-core、kernel-devel-matched、kernel-modules-extra、kernel-tools-libs、python3-perf、kernel-tools-libs-devel、kernel-cross-headers
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (aarch64)
+kernel-tools-libs-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-doc-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-tools-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-modules-extra-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-cross-headers-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-headers-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-modules-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-devel-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-tools-libs-devel-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-devel-matched-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+python3-perf-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-abi-stablelists-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-modules-internal-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+perf-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-core-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+bpftool-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+·银河麒麟高级服务器操作系统 V10 HPC (x86_64)
+kernel-tools-libs-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-doc-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-tools-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-modules-extra-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-headers-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-modules-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-cross-headers-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-ipaclones-internal-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-tools-libs-devel-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-devel-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-devel-matched-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+python3-perf-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-abi-stablelists-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-modules-internal-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+perf-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+kernel-core-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+bpftool-5.10.0-153.6.0.1.v2305.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+aarch64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2024-1086:需要重启操作系统以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+kernel(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/bpftool-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-abi-stablelists-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-core-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-cross-headers-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-devel-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-devel-matched-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-doc-5.10.0-153.6.0.1.v2305.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-headers-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-modules-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-modules-extra-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-modules-internal-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-tools-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-tools-libs-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/kernel-tools-libs-devel-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/perf-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/python3-perf-5.10.0-153.6.0.1.v2305.ky10h.aarch64.rpm
+
+kernel(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/bpftool-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-abi-stablelists-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-core-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-devel-matched-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-doc-5.10.0-153.6.0.1.v2305.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-headers-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-ipaclones-internal-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-modules-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-modules-extra-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-cross-headers-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-tools-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-devel-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-devel-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/python3-perf-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/kernel-modules-internal-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/perf-5.10.0-153.6.0.1.v2305.ky10h.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

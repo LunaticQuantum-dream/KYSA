@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-1100
+Severity:严重
+Summary:nss与nss-util安全漏洞修复
+Published:2017-04-20
+URL:/support/loophole/patch/39.html
+Title:
+			摘要：        nss与nss-util安全漏洞修复
+安全等级：    严重
+公告ID：      CS2CSA-2017-1100
+产品：        中标麒麟高级服务器操作系统      
+发布日期：    2017-04-20
+CVE ：        CVE-2017-5461
+		
+1. 概述：中标麒麟高级服务器操作系统V6有nss与nss-util可用的更新。中标麒麟高级服务器操作系统V7有nss与nss-util可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：NSS（Network Security Services）是一系列的用在跨平台软件中的一个安全库集。Netscape公司设计了SSL协议后又设计了NSS相关内容，目前可以使用NSS安全模块的软件有：Firefox，Thunderbird，Apache，Opera，JRE/JDK等。如果您的服务器相关配置中有使用到nss的模块，那么您需要关注这次升级。4. 安全加固：*一个越界写入漏洞被发现于NSS安全模块在处理Base64解码操作的时候，攻击者利用该漏洞可以让使用了nss模块的程序崩溃，甚至可以执行恶意代码。(CVE-2017-5461)6. 安装包列表：中标麒麟高级服务器操作系统V6源码包：nss-3.28.4-1.el6_9.src.rpmnss-util-3.28.4-1.el6_9.src.rpmx86_64二进制包：nss-3.28.4-1.el6_9.i686.rpmnss-3.28.4-1.el6_9.x86_64.rpmnss-debuginfo-3.28.4-1.el6_9.i686.rpmnss-debuginfo-3.28.4-1.el6_9.x86_64.rpmnss-devel-3.28.4-1.el6_9.i686.rpmnss-devel-3.28.4-1.el6_9.x86_64.rpmnss-sysinit-3.28.4-1.el6_9.x86_64.rpmnss-tools-3.28.4-1.el6_9.x86_64.rpmnss-util-3.28.4-1.el6_9.i686.rpmnss-util-3.28.4-1.el6_9.x86_64.rpmnss-util-debuginfo-3.28.4-1.el6_9.i686.rpmnss-util-debuginfo-3.28.4-1.el6_9.x86_64.rpmnss-util-devel-3.28.4-1.el6_9.i686.rpmnss-util-devel-3.28.4-1.el6_9.x86_64.rpm中标麒麟高级服务器操作系统V7源码包：nss-3.28.4-1.0.el7_3.src.rpmnss-util-3.28.4-1.0.el7_3.src.rpmx86_64二进制包：nss-3.28.4-1.0.el7_3.i686.rpmnss-3.28.4-1.0.el7_3.x86_64.rpmnss-debuginfo-3.28.4-1.0.el7_3.i686.rpmnss-debuginfo-3.28.4-1.0.el7_3.x86_64.rpmnss-devel-3.28.4-1.0.el7_3.i686.rpmnss-devel-3.28.4-1.0.el7_3.x86_64.rpmnss-sysinit-3.28.4-1.0.el7_3.x86_64.rpmnss-tools-3.28.4-1.0.el7_3.x86_64.rpmnss-util-3.28.4-1.0.el7_3.i686.rpmnss-util-3.28.4-1.0.el7_3.x86_64.rpmnss-util-debuginfo-3.28.4-1.0.el7_3.i686.rpmnss-util-debuginfo-3.28.4-1.0.el7_3.x86_64.rpmnss-util-devel-3.28.4-1.0.el7_3.i686.rpmnss-util-devel-3.28.4-1.0.el7_3.x86_64.rpm			

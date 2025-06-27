@@ -1,0 +1,133 @@
+Name:KYSA-202407-1094
+Severity:重要
+Summary:linux-firmware安全漏洞
+Published:2024-07-23
+URL:/support/loophole/patch/5947.html
+Title:
+			公告ID：KYSA-202407-1094
+公告摘要：linux-firmware安全漏洞
+等级：Important
+发布日期：2024-07-23
+		
+1.修复的CVE
+·CVE-2022-27635
+描述：PROSet/Wireless WiFi Software是一款无线网卡驱动程序。
+PROSet/Wireless WiFi and Killer(TM) WiFi存在安全漏洞，该漏洞源于访问控制不当。攻击者利用该漏洞可以提升权限。
+·CVE-2022-36351
+描述：PROSet/Wireless WiFi Software是一款无线网卡驱动程序。
+PROSet/Wireless WiFi and Killer(TM) WiFi存在安全漏洞，该漏洞源于输入验证不正确。攻击者利用该漏洞导致系统拒绝服务。
+·CVE-2022-38076
+描述：PROSet/Wireless WiFi Software是一款无线网卡驱动程序。
+PROSet/Wireless WiFi and Killer(TM) WiFi存在安全漏洞，该漏洞源于输入验证不正确。攻击者利用该漏洞可以提升权限。
+·CVE-2022-40964
+描述：PROSet/Wireless WiFi Software是一款无线网卡驱动程序。
+PROSet/Wireless WiFi and Killer(TM) WiFi存在安全漏洞，该漏洞源于访问控制不当。攻击者利用该漏洞可以提升权限。
+·CVE-2022-46329
+描述：PROSet/Wireless WiFi Software是一款无线网卡驱动程序。
+PROSet/Wireless WiFi Software 存在安全漏洞，该漏洞源于保护机制出现故障。攻击者利用该漏洞可以提升权限。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+libertas-usb8388-olpc-firmware、iwl1000-firmware、libertas-usb8388-firmware、iwl5150-firmware、iwl2000-firmware、iwl100-firmware、linux-firmware、iwl3160-firmware、iwl5000-firmware、iwl7260-firmware、iwl105-firmware、iwl6000g2a-firmware、iwl6050-firmware、iwl2030-firmware、libertas-sd8686-firmware、iwl6000g2b-firmware、iwl3945-firmware、iwl4965-firmware、libertas-sd8787-firmware、iwl6000-firmware、iwl135-firmware
+·x86_64架构:
+libertas-usb8388-olpc-firmware、iwl1000-firmware、libertas-usb8388-firmware、iwl5150-firmware、iwl2000-firmware、iwl100-firmware、linux-firmware、iwl3160-firmware、iwl5000-firmware、iwl7260-firmware、iwl105-firmware、iwl6000g2a-firmware、iwl6050-firmware、iwl2030-firmware、libertas-sd8686-firmware、iwl6000g2b-firmware、iwl3945-firmware、iwl4965-firmware、libertas-sd8787-firmware、iwl6000-firmware、iwl135-firmware
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+libertas-usb8388-firmware-20201218-102.git05789708.el7.ns7.03或以上版本
+iwl1000-firmware-39.31.5.1-102.el7.1.ns7.03或以上版本
+iwl100-firmware-39.31.5.1-102.el7.1.ns7.03或以上版本
+iwl5000-firmware-8.83.5.1_1-102.el7.1.ns7.03或以上版本
+libertas-usb8388-olpc-firmware-20201218-102.git05789708.el7.ns7.03或以上版本
+iwl4965-firmware-228.61.2.24-102.el7.1.ns7.03或以上版本
+iwl105-firmware-18.168.6.1-102.el7.1.ns7.03或以上版本
+iwl3160-firmware-25.30.13.0-102.el7.1.ns7.03或以上版本
+iwl7260-firmware-25.30.13.0-102.el7.1.ns7.03或以上版本
+iwl3945-firmware-15.32.2.9-102.el7.1.ns7.03或以上版本
+iwl5150-firmware-8.24.2.2-102.el7.1.ns7.03或以上版本
+iwl6000g2b-firmware-18.168.6.1-102.el7.1.ns7.03或以上版本
+iwl2000-firmware-18.168.6.1-102.el7.1.ns7.03或以上版本
+iwl135-firmware-18.168.6.1-102.el7.1.ns7.03或以上版本
+iwl6000-firmware-9.221.4.1-102.el7.1.ns7.03或以上版本
+iwl2030-firmware-18.168.6.1-102.el7.1.ns7.03或以上版本
+linux-firmware-20201218-102.git05789708.el7.ns7.03或以上版本
+libertas-sd8686-firmware-20201218-102.git05789708.el7.ns7.03或以上版本
+iwl6000g2a-firmware-18.168.6.1-102.el7.1.ns7.03或以上版本
+libertas-sd8787-firmware-20201218-102.git05789708.el7.ns7.03或以上版本
+iwl6050-firmware-41.28.5.1-102.el7.1.ns7.03或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-27635:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-36351:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-38076:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-40964:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-46329:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+linux-firmware(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/libertas-usb8388-firmware-20201218-102.git05789708.el7.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl3945-firmware-15.32.2.9-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl3160-firmware-25.30.13.0-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl105-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl100-firmware-39.31.5.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl1000-firmware-39.31.5.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl2030-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl135-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl2000-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/libertas-sd8787-firmware-20201218-102.git05789708.el7.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl6000g2b-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl5000-firmware-8.83.5.1_1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl4965-firmware-228.61.2.24-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl6000g2a-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl5150-firmware-8.24.2.2-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl6000-firmware-9.221.4.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl6050-firmware-41.28.5.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/libertas-sd8686-firmware-20201218-102.git05789708.el7.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/iwl7260-firmware-25.30.13.0-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/libertas-usb8388-olpc-firmware-20201218-102.git05789708.el7.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/linux-firmware-20201218-102.git05789708.el7.ns7.03.noarch.rpm
+
+linux-firmware(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libertas-usb8388-firmware-20201218-102.git05789708.el7.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libertas-sd8787-firmware-20201218-102.git05789708.el7.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libertas-sd8686-firmware-20201218-102.git05789708.el7.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl135-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl3945-firmware-15.32.2.9-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl105-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl100-firmware-39.31.5.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl1000-firmware-39.31.5.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl3160-firmware-25.30.13.0-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl2030-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl2000-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl6000-firmware-9.221.4.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl7260-firmware-25.30.13.0-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl5150-firmware-8.24.2.2-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl4965-firmware-228.61.2.24-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl5000-firmware-8.83.5.1_1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl6050-firmware-41.28.5.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl6000g2b-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/iwl6000g2a-firmware-18.168.6.1-102.el7.1.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/linux-firmware-20201218-102.git05789708.el7.ns7.03.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libertas-usb8388-olpc-firmware-20201218-102.git05789708.el7.ns7.03.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

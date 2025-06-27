@@ -1,0 +1,91 @@
+Name:KYSA-202403-0050
+Severity:低等
+Summary:glibc安全漏洞
+Published:2024-11-26
+URL:/support/loophole/patch/6719.html
+Title:
+			公告ID：KYSA-202403-0050
+公告摘要：glibc安全漏洞
+等级：低等
+发布日期：2024-11-26
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2203版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2021-3999
+Huawei Emui是一款基于Android开发的移动端操作系统。Huawei EMUI 12.0.0版本存在安全漏洞，该漏洞源于系统在音频组件中存在不严格的输入参数验证。成功利用此漏洞可能导致越界访问。
+CVE-2021-35942
+GNU C Library（glibc，libc6）是一种按照LGPL许可协议发布的开源免费的C语言编译程序。GNU C Library 存在输入验证错误漏洞，该漏洞源于glibc中发现了一个整数溢出的缺陷，在wordxp与一个特殊设计的不可信正则表达式输入一起使用时产生。攻击者可利用该漏洞导致读取任意内存。
+CVE-2019-25013
+GNU C Library（glibc，libc6）是一种按照LGPL许可协议发布的开源免费的C语言编译程序。GNU C Library through 2.32存在缓冲区错误漏洞，该漏洞源于在处理无效的EUC-KR编码的多字节输入序列时错误处理。
+CVE-2022-23219
+glibc（GNU C Library）是GNU计划所实现的C标准库。GNU C库（也称为glibc）存在安全漏洞，该漏洞源于sunrpc模块中使用了已弃用的兼容函数clnt create在没有验证其长度的情况下将其主机名参数复制到堆栈上，攻击者可利用该漏洞导致拒绝服务或任意代码执行。
+CVE-2021-3998
+Huawei HUAWEI EMUI是一款基于Android开发的移动端操作系统。Huawei EMUI 12.0.0版本存在安全漏洞，该漏洞源于ACPU上的内存访问管理模块存在未经授权的重写漏洞。成功利用此漏洞可能会影响服务机密性。
+CVE-2016-10228
+GNU C Library（glibc，libc6）是一种按照LGPL许可协议发布的开源免费的C语言编译程序。GNU C Library 2.25及之前的版本中的iconv程序存在输入验证错误漏洞。攻击者可利用该漏洞造成拒绝服务（无限循环）。
+CVE-2020-29562
+GNU C Library（glibc，libc6）是一种按照LGPL许可协议发布的开源免费的C语言编译程序。GNU C Library 2.30版本至2.32版本存在安全漏洞，该漏洞源于当转换包含不可逆字符的UCS4文本时，iconv函数会使代码路径中的断言失败并中止程序，从而可能导致拒绝服务。
+CVE-2021-3326
+D-Link DIR-809是一款双频路由器。D-Link DIR-809 中存在缓冲区错误漏洞，该漏洞源于产品/fromLogin链接中的sub_8003183C函数未能有效判断数据边界。攻击者可通过POST请求导致缓冲区溢出。以下产品及版本受到影响：D-Link DIR-809 Ax_FW1.12WWB03_20190410 版本。
+CVE-2020-27618
+GNU C Library（glibc，libc6）是一种按照LGPL许可协议发布的开源免费的C语言编译程序。GNU C Library 存在安全漏洞，该漏洞源于当处理无效的多字节输入序列IBM1364, IBM1371, IBM1388, IBM1390, IBM1399编码,可能导致无限循环的应用程序,导致拒绝服务。
+CVE-2021-27645
+GNU C Library（glibc，libc6）是一种按照LGPL许可协议发布的开源免费的C语言编译程序。GNU C Library (aka glibc or libc6) 2.29 版本到 2.33 版本存在资源管理错误漏洞，该漏洞源于缓存守护进程(nscd)在处理网络组查找请求时，可能会由于双free而崩溃。
+CVE-2022-23218
+glibc（GNU C Library）是GNU计划所实现的C标准库。GNU C库（也称为glibc）存在安全漏洞，该漏洞源于sunrpc模块中使用了已弃用的兼容函数svcunix create在没有验证其长度的情况下将其path参数复制到堆栈上，攻击者可利用该漏洞导致拒绝服务或任意代码执行。
+CVE-2020-6096
+GNU C Library（glibc，libc6）是一种按照LGPL许可协议发布的开源免费的C语言编译程序。 
+GNU glibc 2.30.9000版本中‘memcpy()’函数（ARMv7）的实现存在数字错误漏洞。攻击者可借助特制的‘num’参数利用该漏洞执行代码。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2203
+x86_64 架构：
+glibc-source、libc-bin、libc6-i386、libc6-pic、libc6-x32、libc6、locales-all、locales、nscd
+arm64 架构：
+glibc-source、libc-bin、libc6-lse、libc6-pic、libc6、locales-all、locales、nscd
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2203
+2.31-0kylin9.1k20.6
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libc6
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2203
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/glibc-source_2.31-0kylin9.1k20.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/libc-bin_2.31-0kylin9.1k20.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/libc6-i386_2.31-0kylin9.1k20.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/libc6-pic_2.31-0kylin9.1k20.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/libc6-x32_2.31-0kylin9.1k20.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/libc6_2.31-0kylin9.1k20.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/locales-all_2.31-0kylin9.1k20.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/locales_2.31-0kylin9.1k20.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/nscd_2.31-0kylin9.1k20.6_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/glibc-source_2.31-0kylin9.1k20.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/libc-bin_2.31-0kylin9.1k20.6_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/libc6-lse_2.31-0kylin9.1k20.6_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/libc6-pic_2.31-0kylin9.1k20.6_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/libc6_2.31-0kylin9.1k20.6_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/locales-all_2.31-0kylin9.1k20.6_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/locales_2.31-0kylin9.1k20.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/glibc/nscd_2.31-0kylin9.1k20.6_arm64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2203版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

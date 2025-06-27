@@ -1,0 +1,13 @@
+Name:KYSA-202106-1014
+Severity:中等
+Summary:gnutls漏洞
+Published:2021-06-18
+URL:/support/loophole/patch/740.html
+Title:
+			摘要：gnutls漏洞
+安全等级：中等
+发布日期：2021-06-18
+影响CVE：CVE-2021-20231、CVE-2021-20232
+
+		
+1.修复的CVECVE-2021-20231描述：在gnutls中发现了一个缺陷。在客户端发送密钥共享扩展时释放后使用可能会导致内存损坏和其他后果。CVE-2021-20232描述：在gnutls中发现了一个缺陷。在lib/ext/pre\u shared\u key.c的client\u send\u params中释放后使用可能会导致内存损坏和其他潜在后果。2.影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP1gnutls-3.6.14-7.ky10gnutls-debugsource-3.6.14-7.ky10gnutls-devel-3.6.14-7.ky10gnutls-help-3.6.14-7.ky103.受影响的软件包银河麒麟高级服务器操作系统 V10 SP1aarch64:gnutls、gnutls-debugsource、gnutls-devel、gnutls-help、mips64el:gnutls、gnutls-devel、gnutls-help、x86_64:gnutls、gnutls-debugsource、gnutls-devel、gnutls-help、 4.修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP1aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/mips64el:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5.软件包下载地址：银河麒麟高级服务器操作系统 V10 SP1  gnutls aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/gnutls-3.6.14-7.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/gnutls-debugsource-3.6.14-7.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/gnutls-devel-3.6.14-7.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/gnutls-help-3.6.14-7.ky10.noarch.rpm  gnutls mips64el软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/gnutls-3.6.14-7.ky10.mips64el.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/gnutls-devel-3.6.14-7.ky10.mips64el.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/gnutls-help-3.6.14-7.ky10.noarch.rpm  gnutls x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/gnutls-3.6.14-7.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/gnutls-debugsource-3.6.14-7.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/gnutls-devel-3.6.14-7.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/gnutls-help-3.6.14-7.ky10.noarch.rpm 注：其他相关依赖包请到相同目录下载

@@ -1,0 +1,151 @@
+Name:KYSA-202407-1036
+Severity:中等
+Summary:nautilus安全漏洞
+Published:2024-07-17
+URL:/support/loophole/patch/5884.html
+Title:
+			公告ID：KYSA-202407-1036
+公告摘要：nautilus安全漏洞
+等级：Moderate
+发布日期：2024-07-17
+		
+1.修复的CVE
+·CVE-2022-37290
+描述：GNOME Nautilus是一款用于GNOME桌面环境中的文件管理器。
+GNOME Nautilus 42.2版本存在安全漏洞，该漏洞源于其允许攻击者实现空指针引用并通过粘贴ZIP压缩文件导致get_basename应用程序崩溃。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+nautilus-help、nautilus-devel、nautilus
+·x86_64架构:
+nautilus-help、nautilus-devel、nautilus
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+nautilus、nautilus-devel、nautilus-help
+·x86_64架构:
+nautilus、nautilus-devel、nautilus-help
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+nautilus、nautilus-devel、nautilus-help
+·x86_64架构:
+nautilus-devel、nautilus、nautilus-help
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+nautilus、nautilus-devel、nautilus-help
+·x86_64架构:
+nautilus-devel、nautilus、nautilus-help
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+nautilus-devel、nautilus、nautilus-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、x86_64)
+nautilus-3.33.90-4.ky10或以上版本
+nautilus-devel-3.33.90-4.ky10或以上版本
+nautilus-help-3.33.90-4.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+nautilus-3.33.90-4.ky10或以上版本
+nautilus-devel-3.33.90-4.ky10或以上版本
+nautilus-help-3.33.90-4.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+nautilus-3.33.90-4.ky10或以上版本
+nautilus-devel-3.33.90-4.ky10或以上版本
+nautilus-help-3.33.90-4.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+nautilus-3.33.90-4.ky10或以上版本
+nautilus-devel-3.33.90-4.ky10或以上版本
+nautilus-help-3.33.90-4.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+nautilus-3.33.90-4.ky10或以上版本
+nautilus-devel-3.33.90-4.ky10或以上版本
+nautilus-help-3.33.90-4.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-37290:需要重启操作系统以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+nautilus(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nautilus-devel-3.33.90-4.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nautilus-3.33.90-4.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nautilus-help-3.33.90-4.ky10.noarch.rpm
+
+nautilus(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nautilus-devel-3.33.90-4.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nautilus-3.33.90-4.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nautilus-help-3.33.90-4.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+nautilus(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nautilus-devel-3.33.90-4.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nautilus-help-3.33.90-4.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nautilus-3.33.90-4.ky10.aarch64.rpm
+
+nautilus(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nautilus-help-3.33.90-4.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nautilus-devel-3.33.90-4.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nautilus-3.33.90-4.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+nautilus(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nautilus-help-3.33.90-4.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nautilus-devel-3.33.90-4.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nautilus-3.33.90-4.ky10.aarch64.rpm
+
+nautilus(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nautilus-3.33.90-4.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nautilus-devel-3.33.90-4.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nautilus-help-3.33.90-4.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+nautilus(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nautilus-help-3.33.90-4.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nautilus-devel-3.33.90-4.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nautilus-3.33.90-4.ky10.aarch64.rpm
+
+nautilus(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nautilus-3.33.90-4.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nautilus-devel-3.33.90-4.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nautilus-help-3.33.90-4.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+nautilus(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nautilus-help-3.33.90-4.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nautilus-3.33.90-4.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nautilus-devel-3.33.90-4.ky10.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

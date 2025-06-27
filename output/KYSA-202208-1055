@@ -1,0 +1,103 @@
+Name:KYSA-202208-1055
+Severity:低等
+Summary:clutter-gst2安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1703.html
+Title:
+			公告ID：KYSA-202208-1055
+公告摘要：clutter-gst2安全漏洞
+等级：Low
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2016-10198
+描述：GStreamer是一套用于处理流媒体的框架。Gstreamer 1.10.3之前的版本中的gst/audioparsers/gstaacparse.c文件的‘gst_aac_parse_sink_setcaps’函数存在安全漏洞。远程攻击者可借助特制的音频文件利用该漏洞造成拒绝服务（无效内存读取和崩溃）。
+·CVE-2016-10199
+描述：GStreamer是一套用于处理流媒体的框架。Good Plug-ins是一个用于提高代码质量的组件。GStreamer 1.10.3之前的版本中的Good Plug-ins组件的gst/isomp4/qtdemux.c文件的‘qtdemux_tag_add_str_full’函数存在安全漏洞。远程攻击者可借助特制的标签值利用该漏洞造成拒绝服务（越边界读取和崩溃）。
+·CVE-2016-9446
+描述：GStreamer是一套用于处理流媒体的框架。vmnc decoder是其中的一个解码器组件。GStreamer中的vmnc解码器存在安全漏洞，该漏洞源于程序没有初始化render canvas。远程攻击者可利用该漏洞获取敏感信息。
+·CVE-2016-9810
+描述：GStreamer是一套用于处理流媒体的框架。Good Plug-ins是一个用于提高代码质量的组件。GStreamer 1.10.2之前的版本中的gst-plugins-good的flxdex解码器的‘gst_decode_chain_free_internal’函数存在安全漏洞。远程攻击者可借助无效的文件利用该漏洞造成拒绝服务（无效的内存读取和崩溃）。
+·CVE-2016-9811
+描述：GStreamer是一套用于处理流媒体的框架。GStreamer 1.10.2之前的版本中的gst-plugins-base的‘windows_icon_typefind’函数存在安全漏洞。远程攻击者可借助特制的ico文件利用该漏洞造成拒绝服务（越边界读取）。
+·CVE-2017-5837
+描述：GStreamer是一个用于构建媒体处理组件的图形库。Base Plug-ins是其中的一个用于维护的GStreamer插件的集合。GStreamer 1.10.3之前的版本中的Base Plug-ins插件的gst-libs/gst/riff/riff-media.c文件的‘gst_riff_create_audio_caps’函数存在安全漏洞。远程攻击者可通过特制的视频文件利用该漏洞造成拒绝服务（浮点异常和崩溃）。
+·CVE-2017-5838
+描述：GStreamer是一套用于处理流媒体的框架。Gstreamer 1.10.3之前的版本中的gst/gstdatetime.c文件的‘gst_date_time_new_from_iso8601_string’函数存在安全漏洞。远程攻击者可借助特制的日期时间字符利用该漏洞造成拒绝服务（越边界堆读取）。
+·CVE-2017-5839
+描述：GStreamer是一个用于构建媒体处理组件的图形库。Base Plug-ins是其中的一个用于维护的GStreamer插件的集合。Gstreamer 1.10.3之前的版本中的Base Plug-ins插件的gst-libs/gst/riff/riff-media.c文件的‘gst_riff_create_audio_caps’函数存在安全漏洞，该漏洞源于程序没有正确的限制递归。远程攻击者可利用该漏洞造成拒绝服务（栈溢出和崩溃）。
+·CVE-2017-5840
+描述：GStreamer是一套用于处理流媒体的框架。Good Plug-ins是一个用于提高代码质量的组件。Gstreamer 1.10.3之前的版本中的Good Plug-ins组件的gst/isomp4/qtdemux.c文件的‘qtdemux_parse_samples’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（越边界堆读取）。
+·CVE-2017-5841
+描述：GStreamer是一套用于处理流媒体的框架。Good Plug-ins是一个用于提高代码质量的组件。Gstreamer 1.10.3之前的版本中的Good Plug-ins组件的gst/avi/gstavidemux.c文件的‘gst_avi_demux_parse_ncdt’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（越边界堆读取）。
+·CVE-2017-5842
+描述：GStreamer是一个用于构建媒体处理组件的图形库。Base Plug-ins是其中的一个用于维护的GStreamer插件的集合。Gstreamer 1.10.3之前的版本中的Base Plug-ins组件的gst/subparse/samiparse.c文件的‘html_context_handle_element’函数存在安全漏洞。远程攻击者可借助特制的SMI文件利用该漏洞造成拒绝服务（越边界写入）。
+·CVE-2017-5843
+描述：GStreamer是一套用于处理流媒体的框架。GStreamer 1.10.3之前版本中的‘gst_mini_object_unref’、‘gst_mini_object_unref’和‘gst_mxf_demux_update_essence_tracks’函数存在释放后重用漏洞。远程攻击者可利用该漏洞造成拒绝服务（崩溃）。
+·CVE-2017-5844
+描述：GStreamer是一个用于构建媒体处理组件的图形库。Base Plug-ins是其中的一个用于维护的GStreamer插件的集合。Gstreamer 1.10.3之前的版本中的Base Plug-ins组件的gst-libs/gst/riff/riff-media.c文件的‘gst_riff_create_audio_caps’函数存在安全漏洞。远程攻击者可借助特制的ASF文件利用该漏洞造成拒绝服务（浮点异常和程序崩溃）。
+·CVE-2017-5845
+描述：GStreamer是一套用于处理流媒体的框架。Good Plug-ins是一个用于提高代码质量的组件。Gstreamer 1.10.3之前的版本中的Good Plug-ins的gst/avi/gstavidemux.c文件的‘gst_avi_demux_parse_ncdt’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（无效内存读取和崩溃）。
+·CVE-2017-5848
+描述：GStreamer是一个用于构建媒体处理组件的图形库。Bad Plug-ins是其中的一个代码审查和测试插件。Gstreamer 1.10.3之前的版本中的Bad Plug-ins插件的gst/mpegdemux/gstmpegdemux.c文件的‘gst_ps_demux_parse_psm’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（无效内存读取和崩溃）。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+clutter-gst2、clutter-gst2-devel
+x86_64架构:
+clutter-gst2、clutter-gst2-devel
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+clutter-gst2-2.0.18-1.el7
+clutter-gst2-devel-2.0.18-1.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+82.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+83.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+84.升级完成后是否需要重启服务或操作系统：
+·CVE-2016-10198：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2016-10199：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2016-9446：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2016-9810：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2016-9811：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2017-5837：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2017-5838：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2017-5839：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2017-5840：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2017-5841：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2017-5842：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2017-5843：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2017-5844：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2017-5845：需要重启 clutter-gst2 以使漏洞修复生效。
+·CVE-2017-5848：需要重启 clutter-gst2 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+clutter-gst2（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/clutter-gst2-2.0.18-1.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/clutter-gst2-devel-2.0.18-1.el7.aarch64.rpm
+
+clutter-gst2（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/clutter-gst2-2.0.18-1.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/clutter-gst2-2.0.18-1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/clutter-gst2-devel-2.0.18-1.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/clutter-gst2-devel-2.0.18-1.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

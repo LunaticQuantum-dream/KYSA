@@ -1,0 +1,84 @@
+Name:KYSA-202209-0012
+Severity:中等
+Summary:tiff安全漏洞
+Published:2022-11-10
+URL:/support/loophole/patch/2359.html
+Title:
+			公告ID：KYSA-202209-0012
+公告摘要：tiff安全漏洞
+等级：中等
+发布日期：2022-11-10
+		
+1. 修复的CVE
+CVE-2022-0891
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。Silicon Graphics LibTIFF存在安全漏洞，该漏洞源于攻击者利用该漏洞可以通过extractImageSection()触发LibTIFF的缓冲区溢出，以触发拒绝服务，并可能运行代码。
+CVE-2022-0562
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。libtiff 3.9.0到4.3.0版本存在安全漏洞，该漏洞源于软件将Null源指针作为参数传递给tif_dirread.c中的TIFFReadDirectory()中的memcpy()函数，可能导致攻击者通过制作TIFF文件触发拒绝服务。
+CVE-2022-0561
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。libtiff 3.9.0到4.3.0版本存在安全漏洞，该漏洞源于在tif_dirread.c的TIFFFetchStripThing()中作为参数传递给memcpy()函数的空源指针，漏洞可能导致攻击者通过制作TIFF文件触发拒绝服务。
+CVE-2020-35522
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。 
+LibTIFF 存在安全漏洞，该漏洞源于tif_pixarlog.c一个内存malloc错误。精心制作的TIFF文档可能导致中止，导致远程拒绝服务攻击。
+CVE-2022-0865
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。LibTIFF 存在安全漏洞，该漏洞源于TIFFReadAndRealloc()存在断言错误。攻击者利用该漏洞触发拒绝服务。
+CVE-2020-19144
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。LibTiff 中存在缓冲区错误漏洞，该漏洞源于产品tif_unix.c文件中的in _TIFFmemcpy函数未能充分检查数据边界。攻击者可通过该漏洞导致拒绝服务。以下产品及版本受到影响：LibTiff v4.0.10版本。
+CVE-2020-19131
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。LibTiff存在安全漏洞，该漏洞允许攻击者可利用该漏洞通过组件“tiffcrop”中的“invertImage()”函数来拒绝服务。
+CVE-2022-0909
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。Silicon Graphics LibTIFF 4.3.0 中存在安全漏洞，该漏洞允许攻击者通过精心制作的 tiff 文件造成拒绝服务。
+CVE-2022-0924
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。Silicon Graphics LibTIFF 中存在安全漏洞，该漏洞源于攻击者可以通过 DECLAREwriteFunc() 强制读取 LibTIFF 的无效内存地址，以触发拒绝服务或获取敏感信息。
+CVE-2022-22844
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。Silicon Graphics LibTIFF 4.3.0 存在安全漏洞，该漏洞源于 tif_unix.c 中的 _TIFFmemcpy 中读取越界，涉及自定义标签和 0x0200 作为 DE 字段的第二个字。
+CVE-2022-0907
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。Silicon Graphics LibTIFF 4.3.0中存在安全漏洞，该漏洞允许攻击者通过精心制作的 tiff 文件导致拒绝服务。
+CVE-2022-0908
+Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。Silicon Graphics LibTIFF 4.3.0 以下版本中存在安全漏洞，该漏洞源于作为参数传递给 tif_dirread.c 中的 TIFFFetchNormalTag () 中的 memcpy() 函数的空源指针可能会通过精心设计的 TIFF 文件导致拒绝服务。
+CVE-2022-2869
+Intel Distribution for Python是美国英特尔（Intel）公司的针对Intel硬件进行优化的Python发行版。Intel Distribution for Python 2022.0.3之前版本存在安全漏洞。攻击者利用该漏洞升级权限。
+CVE-2022-2868
+LibTIFF是一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。LibTIFF tiffcrop utility存在安全漏洞，该漏洞源于存在不正确的输入验证缺陷，如果攻击者能够向tiffcrop提供精心制作的文件，可能会导致越界读取并最终导致崩溃。
+CVE-2022-2867
+LibTIFF是一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。LibTIFF tiffcrop utility存在缓冲区错误漏洞，该漏洞源于有一个uint32_t下溢，可能导致越界读写。攻击者向tiffcrop提供精心制作的文件（通过欺骗用户在其上运行tiffcrop的某些参数）可能导致崩溃或在某些情况下进一步利用。
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V4 SP1、银河麒麟桌面操作系统V4 SP2、银河麒麟桌面操作系统V4 SP3、银河麒麟桌面操作系统V4 SP4
+x86_64 架构：
+libtiff-opengl、libtiff-tools、libtiff5、libtiffxx5
+arm64 架构：
+libtiff-opengl、libtiff-tools、libtiff5、libtiffxx5
+mips64el 架构：
+libtiff-opengl、libtiff-tools、libtiff5、libtiffxx5
+3. 软件包修复版本
+·银河麒麟桌面操作系统V4 SP1、银河麒麟桌面操作系统V4 SP2、银河麒麟桌面操作系统V4 SP3、银河麒麟桌面操作系统V4 SP4
+4.0.6-1kord0.8+esm3
+5.4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libtiff-tools
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+5. 软件包下载地址
+银河麒麟桌面操作系统V4
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-opengl_4.0.6-1kord0.8%2Besm3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-tools_4.0.6-1kord0.8%2Besm3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5_4.0.6-1kord0.8%2Besm3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiffxx5_4.0.6-1kord0.8%2Besm3_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-opengl_4.0.6-1kord0.8%2Besm3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-tools_4.0.6-1kord0.8%2Besm3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5_4.0.6-1kord0.8%2Besm3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiffxx5_4.0.6-1kord0.8%2Besm3_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-opengl_4.0.6-1kord0.8%2Besm3_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-tools_4.0.6-1kord0.8%2Besm3_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5_4.0.6-1kord0.8%2Besm3_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiffxx5_4.0.6-1kord0.8%2Besm3_mips64el.deb
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

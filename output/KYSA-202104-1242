@@ -1,0 +1,236 @@
+Name:KYSA-202104-1242
+Severity:重要
+Summary:kernel-alt安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/5048.html
+Title:
+			公告ID：KYSA-202104-1242
+公告摘要：kernel-alt安全漏洞
+等级：Important
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2017-12168
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 4.8.11之前的版本中的arch/arm64/kvm/sys_regs.c文件的‘access_pmu_evcntr’函数存在安全漏洞。本地攻击者可利用该漏洞造成拒绝服务（断言失败和主机操作系统崩溃）。
+·CVE-2017-15129
+描述：从v4.0-rc1到v4.15-rc5，在影响Linux内核的网络命名空间代码中发现了释放后使用漏洞。在netns_ids idr中发现可能导致双重空闲和内存损坏的对等网络后，函数get_net_ns_by_id（）不会检查net:：count值。此漏洞允许未经授权的本地用户在系统上诱发内核内存损坏，从而导致崩溃。由于该缺陷的性质，不能完全排除特权升级的可能性，尽管被认为不太可能。
+·CVE-2017-17448
+描述：Linux内核到4.14.4版本中的net/netfilter/nfnetlink_cthelper.c函数不需要对new、get和del操作使用CAP_netfilter/nfnetlink_cthelper.c功能。这允许本地用户绕过预期的访问限制，因为nfnl_cthelper_list数据结构在所有网络命名空间中共享。
+·CVE-2017-17449
+描述：Linux内核4.14.4版本中net/netlink/af_netlink.c中的u netlink_deliver_tap_skb函数在启用CONFIG_NLMON时，不会将netlink消息的观察限制在单个网络名称空间中。这允许本地用户通过利用CAP\u NET_ADMIN功能来嗅探nlmon接口上系统上的所有Netlink活动来获取敏感信息。
+·CVE-2017-17712
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 4.14.6及之前的版本中的net/ipv4/raw.c文件的’raw_sendmsg()‘函数存在竞争条件漏洞。本地攻击者可利用该漏洞执行代码，获取权限。
+·CVE-2017-17805
+描述：Linux内核4.14.8之前版本中的Salsa20加密算法无法正确处理零长度输入。这使得本地攻击者能够使用基于AF_ALG的skcipher接口，通过执行使用blkcipher_walk API的精心编制的系统调用序列，导致拒绝服务（未初始化内存释放和内核崩溃）或产生其他未指明的影响。salsa20的通用实现（crypto/salsa20_generic.c）和x86实现（arch/x86/crypto/sal20_glue.c）都易受攻击。
+·CVE-2017-18203
+描述：Linux内核在4.14.3版之前，易受drivers/md/dm.c:dm_get_from_koobject（）中的拒绝服务攻击，这可能是由于本地用户在创建和删除dm设备时利用了使用giu dm_destroy（）的竞争条件造成的。只有具有特权的本地用户（具有CAP_SYS_ADMIN功能）才能直接执行用于dm设备创建和删除的ioctl操作，这通常不受未经授权的攻击者的直接控制。
+·CVE-2017-18208
+描述：Linux内核中的madvise_willneed函数允许本地用户触发对DAX映射的madvise_willneed的使用，从而导致拒绝服务（无限循环）。
+·CVE-2017-18344
+描述：Linux内核中kernel/time/posix timers.c中的timer_create syscall实现没有正确验证sigevent->sigev_notify字段，这导致show_timer函数访问越界。
+·CVE-2017-18551
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 4.14.15之前版本中的drivers/i2c/i2c-core-smbus.c文件的‘i2c_smbus_xfer_emulated’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2018-1000004
+描述：在Linux内核版本4.12、3.10、2.6和可能更早的版本中，声音系统中存在一个竞态条件漏洞，允许由于释放后使用条件而导致潜在的死锁和内存损坏，从而导致拒绝服务。由于缺陷的性质，不能完全排除特权升级的可能性，尽管我们认为不太可能。
+·CVE-2018-1000026
+描述：Linux内核版本4.15的bnx2x网卡驱动程序中的错误验证允许通过gso_大小大于~9700字节的数据包进行拒绝服务（DoS）攻击。不受信任的来宾虚拟机可以利用主机中的此漏洞，导致网卡崩溃。
+·CVE-2018-1000199
+描述：在使用硬件断点（CONFIG_HAVE_HW_breakpoint）支持构建的Linux内核中发现了地址损坏缺陷。当通过“modify_user_hw_breakpoint”例程修改h/w断点时，未经授权的用户/进程可能会利用此漏洞使系统内核崩溃，从而导致DoS或可能升级系统上的权限。
+·CVE-2018-10322
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 4.16.3及之前版本中的fs/xfs/libxfs/xfs_inode_buf.c文件的‘xfs_dinode_verify’函数存在安全漏洞。本地攻击者可借助特制的xfs镜像利用该漏洞造成拒绝服务（‘xfs_ilock_attr_map_shared’函数无效指针逆向引用）。
+·CVE-2018-1068
+描述：在用于桥接的32位syscall接口的Linux内核实现中发现了一个缺陷。这允许特权用户任意写入有限范围的内核内存。
+·CVE-2018-10878
+描述：在Linux内核的ext4文件系统中发现了一个缺陷。本地用户通过安装和操作特制的ext4文件系统映像，可能导致越界写入和拒绝服务或其他未指明的影响。
+·CVE-2018-10879
+描述：在Linux内核的ext4文件系统中发现了一个缺陷。本地用户可以在ext4 xattr_set_entry函数中造成空闲后使用，并且重命名特制的ext4文件系统映像中的文件可能会导致拒绝服务或其他未指明的影响。
+·CVE-2018-10881
+描述：在Linux内核的ext4文件系统中发现了一个缺陷。本地用户通过装载和操作特制的ext4文件系统映像，可以导致ext4_get_group_info函数的越界访问、拒绝服务和系统崩溃。
+·CVE-2018-10882
+描述：Linux kernel是美国Linux基金会发布的操作系统Linux所使用的内核。ext4 filesystem是其中的一套ext4文件系统组件。Linux kernel中的ext4 filesystem中存在安全漏洞。攻击者可借助特制的ext4文件系统镜像利用该漏洞造成拒绝服务（越界写入）。
+·CVE-2018-10883
+描述：在Linux内核的ext4文件系统中发现了一个缺陷。本地用户通过装载和操作特制的ext4文件系统映像，可以导致jbd2_journal_dirty_metadata（）中的越界写入、拒绝服务和系统崩溃。
+·CVE-2018-10902
+描述：发现原始midi内核驱动程序无法防止并发访问，这会导致在rawmidi.c文件中snd_rawmidi_input_params（）和snd_rawmidi_output_status（）中出现双重重新分配（双自由）。恶意本地攻击者可能会将此用于权限提升。
+·CVE-2018-1092
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 4.15.15及之前的版本中的fs/ext4/inode.c文件的‘ext4_iget’函数存在安全漏洞。攻击者可借助特制的ext4镜像利用该漏洞造成拒绝服务（‘ext4_process_freed_data’函数空指针逆向引用）。
+·CVE-2018-1094
+描述：Linux内核易受ext4/xattr.c:ext4\uxattr_inode_hash（）函数中的空指针取消引用攻击。攻击者可以欺骗合法用户，或者有特权的攻击者可以利用此漏洞通过特制的ext4映像来取消对空指针的引用。
+·CVE-2018-10940
+描述：在4.16.6之前的Linux内核中发现了一个漏洞，在该漏洞中，drivers/cdrom/cdrom.c中的cdrom_ioctl_media_changed函数允许本地攻击者在cdrom驱动程序cdrom_media_changed ioctl中使用不正确的边界检查来读取内核内存。
+·CVE-2018-1095
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 4.15.15及之前版本中的fs/ext4/xattr.c文件的‘ext4_xattr_check_entries’函数存在安全漏洞，该漏洞源于程序没有正确的校验xattr的大小。攻击者可借助特制的ext4图像利用该漏洞使程序将xattr大小值解析成错误的代码，造成拒绝服务（‘get_acl’函数空指针逆向引用和系统崩溃）。
+·CVE-2018-1118
+描述：Linux内核无法在vhost/vhost.c:vhost_new_msg（）函数中正确初始化虚拟来宾和主机操作系统之间传递的消息中的内存。这允许本地特权用户在读取/dev/vhost-net设备文件时读取一些内核内存内容。
+·CVE-2018-1120
+描述：通过mmap（）将FUSE-backed文件放入包含命令行参数（或环境字符串）的进程内存中，攻击者可以从psutil或procps（例如ps，w） 或对/proc//cmdline（或/proc//environ）文件进行read（）调用以无限期（拒绝服务）或在一段受控时间内（作为其他攻击的同步原语）进行read（）调用的任何其他程序。
+·CVE-2018-11412
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 4.13版本至4.16.11版本中存在安全漏洞，该漏洞源于fs/ext4/inline.c文件中的‘ext4_read_inline_data()’函数使用了不可信的长度值来执行memcpy函数。攻击者可利用该漏洞损坏内存。
+·CVE-2018-13405
+描述：在LInux内核的fs/inode.c:inode_init_owner（）函数逻辑中发现一个漏洞，该漏洞允许本地用户创建具有意外组所有权、组执行和SGID权限位设置的文件，在这样的场景中，目录是SGID，属于某个组，并且可以由不是该组成员的用户写入。这可能会导致在不应该授予权限的情况下授予过多权限。
+·CVE-2018-18386
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 4.14.11之前版本中的drivers/tty/n_tty.c文件存在安全漏洞。本地攻击者可利用该漏洞挂起伪终端设备或限制进一步使用伪终端设备。
+·CVE-2018-18690
+描述：在4.17之前的Linux内核中，能够在xfs文件系统上设置属性的本地攻击者可能会在xfs属性更改期间触发未经检查的错误条件，从而使该文件系统在下一次装载之前不可操作，因为fs/xfs/libxfs/xfs_attr.c中的xfs_attr_shortform_addname错误地处理了从短到长的属性。
+·CVE-2018-3639
+描述：AMD、ARM和Intel CPUs等都是不通厂商的CPU（中央处理器）产品。
+AMD、ARM和Intel CPUs存在信息泄露漏洞。攻击者可通过实施边信道攻击利用该漏洞获取信息。
+·CVE-2018-5344
+描述：在Linux内核处理环回设备时发现了一个缺陷。具有设置环回磁盘权限的攻击者可能会创建拒绝服务或其他未指定的操作。
+·CVE-2018-5390
+描述：Linux内核处理巧尽心思构建的TCP数据包时发现了一个名为SegmentSmack的缺陷。远程攻击者可利用此漏洞触发对tcp_collapse_ofo_queue（）和tcp_prune_ofo_queue（）函数的时间和计算代价高昂的调用，方法是在正在进行的tcp会话中发送经过特殊修改的包，从而导致CPU饱和，从而在系统上拒绝服务。维持拒绝服务条件需要与可访问的开放端口进行连续的双向TCP会话，因此无法使用欺骗的IP地址执行攻击。
+·CVE-2018-5391
+描述：在Linux内核处理特制TCP数据包的方式中发现了一个名为SegmentSmack的漏洞。 远程攻击者可以通过在正在进行的TCP会话中发送经过特殊修改的数据包来触发时间并计算对tcp_collapse_ofo_queue（）和tcp_prune_ofo_queue（）函数的昂贵调用，这可能导致CPU饱和，从而导致系统服务中断。 维持拒绝服务条件需要连续的双向TCP会话到可访问的开放端口，因此无法使用欺骗性IP地址进行攻击。
+·CVE-2018-5750
+描述：Linux内核4.14.15版本的drivers/acpi/sbshc.c中的acpi_smbus_hc_add函数允许本地用户通过从SBS hc printk调用读取dmesg数据来获取敏感地址信息。
+·CVE-2018-5803
+描述：处理SCTP时，“ _ sctp_make_chunk（）”函数（net / sctp / sm_make_chunk.c）中发生错误，恶意本地用户可以利用数据包长度导致内核崩溃和DoS。
+·CVE-2018-5848
+描述：在Linux内核中的函数wmi_set_ie（）中，长度验证代码无法正确处理无符号整数溢出。因此，“ie_len”参数的较大值可能会导致缓冲区溢出，从而导致内存损坏，从而导致系统崩溃或其他未指定的影响。由于缺陷的性质，不能完全排除特权升级的可能性，尽管我们认为不太可能。
+·CVE-2018-6927
+描述：357/5000
+在4.14.15之前的Linux内核中，kernel / futex.c中的futex_requeue函数可能允许攻击者触发负的唤醒或重新排队值，从而导致拒绝服务（整数溢出）或可能产生未指定的其他影响。 由于该漏洞的性质，虽然我们认为不太可能升级特权，但无法完全排除其特权升级。
+·CVE-2018-7566
+描述：当首次写入发生并且池为空时，ALSA排序器核心通过调用snd_seq_pool_init（）来按需初始化事件池。 用户可以同时通过ioctl手动重置池大小，这可能会导致UAF或越界访问。
+·CVE-2018-8781
+描述：在Linux内核（驱动程序/gpu/drm/udl/udl_fb.c:udl_fb_mmap（）函数）中，从版本3.4到4.15，发现了一个整数溢出漏洞。 拥有udldrmfb驱动程序访问权限的攻击者可以利用它来获取对内核物理页的完全读取和写入权限，从而在内核空间中执行代码。
+·CVE-2019-12614
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 5.1.6及之前版本中的arch/powerpc/platforms/pseries/dlpar.c文件的dlpar_parse_cc_property存在代码问题漏洞。该漏洞源于网络系统或产品的代码开发过程中存在设计或实现不当的问题。
+·CVE-2019-14814
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel中存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2019-15030
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 5.2.14及之前版本中存在输入验证错误漏洞。该漏洞源于网络系统或产品未对输入的数据进行正确的验证。
+·CVE-2019-15031
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 5.2.14及之前版本中存在信息泄露漏洞。该漏洞源于网络系统或产品在运行过程中存在配置等错误。未授权的攻击者可利用漏洞获取受影响组件敏感信息。
+·CVE-2019-15099
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 5.2.8及之前版本中的drivers/net/wireless/ath/ath10k/usb.c文件存在代码问题漏洞。该漏洞源于网络系统或产品的代码开发过程中存在设计或实现不当的问题。
+·CVE-2019-15538
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 5.2.9及之前版本中的fs/xfs/xfs_iops.c文件的xfs_setattr_nonsize存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。
+·CVE-2019-18660
+描述：Linux内核在PowerPC平台上实现计数缓存（间接分支缓存）和链接（返回地址）堆栈的软件刷新时发现了一个缺陷。这些结构的刷新有助于防止类似spectersb的攻击，这种攻击可能会将信息从一个用户进程泄漏到另一个用户进程。未经授权的用户可以利用此漏洞，通过执行有针对性的缓存侧通道攻击，越过系统调用或进程边界，读取特权内存。
+·CVE-2019-18805
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 5.0.11之前版本中的net/ipv4/sysctl_net_ipv4.c文件的‘tcp_ack_update_rtt’函数存在输入验证错误漏洞。远程攻击者可利用该漏洞导致拒绝服务。
+·CVE-2019-19447
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 5.0.21版本中的fs/ext4/super.c文件的‘ext4_put_super’函数存在资源管理错误漏洞。攻击者可借助特制的ext4文件系统镜像利用该漏洞执行任意代码或导致拒绝服务。
+·CVE-2019-19524
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 5.3.12之前版本中的drivers/input/ff-memless.c驱动程序存在资源管理错误漏洞。该漏洞源于网络系统或产品对系统资源（如内存、磁盘空间、文件等）的管理不当。
+·CVE-2019-19922
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 5.3.9之前版本中的kernel/sched/fair.c文件存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。
+·CVE-2019-20054
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 5.0.6之前版本中的fs/proc/proc_sysctl.c文件的‘drop_sysctl_table()’存在代码问题漏洞。该漏洞源于网络系统或产品的代码开发过程中存在设计或实现不当的问题。
+·CVE-2019-20095
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 5.1.6之前版本中的drivers/net/wireless/marvell/mwifiex/cfg80211.c文件的‘mwifiex_tm_cmd’函数存在安全漏洞，该漏洞源于程序没有释放被分配的hostcmd内存。攻击者可利用该漏洞造成内存泄露并导致拒绝服务。
+·CVE-2019-9454
+描述：Android是美国谷歌（Google）和开放手持设备联盟（简称OHA）的一套以Linux为基础的开源操作系统。I2C driver是其中的一个两线式串行总线驱动程序。Android中的I2C驱动程序存在提权漏洞。攻击者可利用该漏洞提升权限。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+kernel、kernel-abi-whitelists、kernel-debug、kernel-debug-devel、kernel-devel、kernel-doc、kernel-headers、kernel-tools、kernel-tools-libs、kernel-tools-libs-devel、perf、python-perf
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64)
+kernel-4.14.0-115.26.1.el7a.01或以上版本
+kernel-abi-whitelists-4.14.0-115.26.1.el7a.01或以上版本
+kernel-debug-4.14.0-115.26.1.el7a.01或以上版本
+kernel-debug-devel-4.14.0-115.26.1.el7a.01或以上版本
+kernel-devel-4.14.0-115.26.1.el7a.01或以上版本
+kernel-doc-4.14.0-115.26.1.el7a.01或以上版本
+kernel-headers-4.14.0-115.26.1.el7a.01或以上版本
+kernel-tools-4.14.0-115.26.1.el7a.01或以上版本
+kernel-tools-libs-4.14.0-115.26.1.el7a.01或以上版本
+kernel-tools-libs-devel-4.14.0-115.26.1.el7a.01或以上版本
+perf-4.14.0-115.26.1.el7a.01或以上版本
+python-perf-4.14.0-115.26.1.el7a.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2017-12168:需要重启操作系统以使漏洞修复生效。
+CVE-2017-15129:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2017-17448:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2017-17449:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2017-17712:需要重启操作系统以使漏洞修复生效。
+CVE-2017-17805:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2017-18203:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2017-18208:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2017-18344:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2017-18551:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-1000004:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-1000026:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-1000199:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-10322:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-1068:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-10878:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-10879:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-10881:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-10882:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-10883:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-10902:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-1092:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-1094:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-10940:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-1095:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-1118:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-1120:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-11412:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-13405:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-18386:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-18690:需要重启操作系统以使漏洞修复生效。
+CVE-2018-3639:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-5344:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-5390:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-5391:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-5750:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-5803:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-5848:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-6927:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-7566:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2018-8781:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-12614:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-14814:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-15030:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-15031:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-15099:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-15538:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-18660:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-18805:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-19447:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-19524:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-19922:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-20054:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-20095:需要重启 kernel-alt 以使漏洞修复生效。
+CVE-2019-9454:需要重启 kernel-alt 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+kernel-alt(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/kernel-4.14.0-115.26.1.el7a.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/kernel-abi-whitelists-4.14.0-115.26.1.el7a.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/kernel-debug-4.14.0-115.26.1.el7a.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/kernel-debug-devel-4.14.0-115.26.1.el7a.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/kernel-devel-4.14.0-115.26.1.el7a.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/kernel-doc-4.14.0-115.26.1.el7a.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/kernel-headers-4.14.0-115.26.1.el7a.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/kernel-tools-4.14.0-115.26.1.el7a.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/kernel-tools-libs-4.14.0-115.26.1.el7a.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/kernel-tools-libs-devel-4.14.0-115.26.1.el7a.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/perf-4.14.0-115.26.1.el7a.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/python-perf-4.14.0-115.26.1.el7a.01.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

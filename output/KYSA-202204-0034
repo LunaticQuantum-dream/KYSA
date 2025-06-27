@@ -1,0 +1,73 @@
+Name:KYSA-202204-0034
+Severity:重要
+Summary:barbican安全漏洞
+Published:2024-02-23
+URL:/support/loophole/patch/5287.html
+Title:
+			公告ID：KYSA-202204-0034
+公告摘要：barbican安全漏洞
+等级：重要
+发布日期：2024-02-23
+		
+1. 修复的CVE
+CVE-2022-23452
+barbican是 OpenStack 密钥管理服务，API 服务器。 barbican存在授权问题漏洞，该漏洞是由于缺少授权检查而存在的。具有管理员角色的远程用户可以将机密添加到不同的项目容器。此漏洞允许网络上的攻击者消耗受保护的资源并导致拒绝服务。该漏洞允许远程用户在应用程序中执行未经授权的操作。
+CVE-2022-23451
+barbican是 OpenStack 密钥管理服务，API 服务器。 barbican存在授权问题漏洞，该漏洞允许远程用户在应用程序中执行未经授权的操作。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+barbican-api、barbican-common、barbican-keystone-listener、barbican-worker、python3-barbican
+arm64 架构：
+barbican-api、barbican-common、barbican-keystone-listener、barbican-worker、python3-barbican
+mips64el 架构：
+barbican-api、barbican-common、barbican-keystone-listener、barbican-worker、python3-barbican
+loongarch64 架构：
+barbican-api、barbican-common、barbican-keystone-listener、barbican-worker、python3-barbican
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+1:10.1.0-0kylin2.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install python3-barbican
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-api_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-common_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-keystone-listener_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-worker_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/python3-barbican_10.1.0-0kylin2.1_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-api_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-common_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-keystone-listener_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-worker_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/python3-barbican_10.1.0-0kylin2.1_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-api_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-common_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-keystone-listener_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-worker_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/python3-barbican_10.1.0-0kylin2.1_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-api_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-common_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-keystone-listener_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/barbican-worker_10.1.0-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/barbican/python3-barbican_10.1.0-0kylin2.1_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

@@ -1,0 +1,80 @@
+Name:KYSA-202308-1008
+Severity:重要
+Summary:kernel安全漏洞
+Published:2023-08-01
+URL:/support/loophole/patch/3982.html
+Title:
+			公告ID：KYSA-202308-1008
+公告摘要：kernel安全漏洞
+等级：Important
+发布日期：2023-08-01
+		
+1.修复的CVE
+·CVE-2021-26401
+描述：AMD CPUs是美国AMD公司的一个GPU组件。AMD CPUs 存在安全漏洞，该漏洞源于攻击者可以通过分支预测器选择器 lfence/jmp 绕过对 AMD 处理器数据的访问限制，以读取敏感信息。
+·CVE-2021-33909
+描述：5.13.4 之前的 Linux 内核 3.16 到 5.13.x 中的 fs/seq_file.c 没有正确限制 seq 缓冲区分配，导致整数溢出、越界写入以及非特权用户（又名）升级到 root CID-8cae8cd89f05。
+·CVE-2022-4378
+描述：堆栈溢出缺陷被发现在Linux内核年代SYSCTL子系统用户更改某些内核参数和变量。这一缺陷允许本地用户可能崩溃或系统上升级他们的特权。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+perf、kernel-debug、kernel-abi-whitelists、kernel-debuginfo-common-x86_64、kernel、kernel-devel、kernel-headers、kernel-firmware、kernel-doc、python-perf、kernel-debug-devel
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+kernel-headers-2.6.32-754.50.1.el6.ns6.02或以上版本
+kernel-devel-2.6.32-754.50.1.el6.ns6.02或以上版本
+kernel-firmware-2.6.32-754.50.1.el6.ns6.02或以上版本
+perf-2.6.32-754.50.1.el6.ns6.02或以上版本
+kernel-doc-2.6.32-754.50.1.el6.ns6.02或以上版本
+kernel-debuginfo-common-x86_64-2.6.32-754.50.1.el6.ns6.02或以上版本
+kernel-debug-2.6.32-754.50.1.el6.ns6.02或以上版本
+kernel-2.6.32-754.50.1.el6.ns6.02或以上版本
+kernel-debug-devel-2.6.32-754.50.1.el6.ns6.02或以上版本
+python-perf-2.6.32-754.50.1.el6.ns6.02或以上版本
+kernel-abi-whitelists-2.6.32-754.50.1.el6.ns6.02或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-26401:需要重启操作系统以使漏洞修复生效。
+CVE-2021-33909:需要重启 kernel 以使漏洞修复生效。
+CVE-2022-4378:需要重启操作系统以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+kernel(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-2.6.32-754.50.1.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-abi-whitelists-2.6.32-754.50.1.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-debug-2.6.32-754.50.1.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-debug-devel-2.6.32-754.50.1.el6.ns6.02.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-debug-devel-2.6.32-754.50.1.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/python-perf-2.6.32-754.50.1.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/perf-2.6.32-754.50.1.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-headers-2.6.32-754.50.1.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-firmware-2.6.32-754.50.1.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-firmware-2.6.32-754.50.1.el6.ns6.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-doc-2.6.32-754.50.1.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-doc-2.6.32-754.50.1.el6.ns6.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-devel-2.6.32-754.50.1.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-debuginfo-common-x86_64-2.6.32-754.50.1.el6.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-abi-whitelists-2.6.32-754.50.1.el6.ns6.02.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

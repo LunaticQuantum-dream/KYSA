@@ -1,0 +1,97 @@
+Name:KYSA-202306-1030
+Severity:中等
+Summary:libssh安全漏洞
+Published:2023-06-13
+URL:/support/loophole/patch/3671.html
+Title:
+			公告ID：KYSA-202306-1030
+公告摘要：libssh安全漏洞
+等级：Moderate
+发布日期：2023-06-13
+		
+1.修复的CVE
+·CVE-2023-1667
+描述：在libssh中使用算法猜测重新密钥时发现空指针解引用。此问题可能允许经过身份验证的客户端导致拒绝服务。
+·CVE-2023-2283
+描述：在libssh中发现了一个漏洞，在内存分配问题中，可以在' pki_verify_data_signature '函数中绕过连接客户端的身份验证检查。如果内存不足或内存使用受限，可能会出现此问题。这个问题是由返回值rc引起的，它被初始化为SSH_ERROR，后来被重写以保存函数调用pki_key_check_hash_compatible的返回值。'该变量的值在此时和加密验证之间不会改变。因此，它们之间的任何错误都会调用' goto error '返回SSH_OK。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·mips64el架构:
+libssh、libssh-devel、libssh-help
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+libssh、libssh-devel、libssh-help
+·x86_64架构:
+libssh、libssh-devel、libssh-help
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+libssh、libssh-devel、libssh-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (mips64el)
+libssh-0.9.4-8.ky10或以上版本
+libssh-devel-0.9.4-8.ky10或以上版本
+libssh-help-0.9.4-8.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+libssh-0.9.4-8.ky10或以上版本
+libssh-devel-0.9.4-8.ky10或以上版本
+libssh-help-0.9.4-8.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64)
+libssh-0.9.4-8.ky10或以上版本
+libssh-devel-0.9.4-8.ky10或以上版本
+libssh-help-0.9.4-8.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-1667:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-2283:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+libssh(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libssh-0.9.4-8.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libssh-devel-0.9.4-8.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libssh-help-0.9.4-8.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+libssh(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libssh-0.9.4-8.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libssh-devel-0.9.4-8.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libssh-help-0.9.4-8.ky10.noarch.rpm
+
+libssh(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libssh-0.9.4-8.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libssh-devel-0.9.4-8.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libssh-help-0.9.4-8.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+libssh(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/libssh-0.9.4-8.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/libssh-devel-0.9.4-8.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/libssh-help-0.9.4-8.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

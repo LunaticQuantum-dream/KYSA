@@ -1,0 +1,13 @@
+Name:KYSA-202206-1015
+Severity:低等
+Summary:libssh安全漏洞
+Published:2022-06-08
+URL:/support/loophole/patch/1247.html
+Title:
+			公告ID：KYSA-202206-1015
+公告摘要：libssh安全漏洞
+安全等级：Low
+发布日期：2022年06月08日
+影响CVE：CVE-2020-16135、CVE-2021-3634
+		
+1. 修复的CVE·CVE-2020-16135描述：libssh是一个用于访问SSH服务的C语言开发包，它能够执行远程命令、文件传输，同时为远程的程序提供安全的传输通道。libssh 0.9.4版本中的tftpserver.c文件存在代码问题漏洞。该漏洞源于网络系统或产品的代码开发过程中存在设计或实现不当的问题。·CVE-2021-3634描述：Libssh是Libssh组织的一个用于访问SSH服务的C语言开发包，它能够执行远程命令、文件传输，同时为远程的程序提供安全的传输通道。libssh 存在缓冲区错误漏洞，该漏洞源于 libssh 允许在密钥重新交换操作中改变密钥交换方法。改变密钥交换方法时，如果采用不同长度的 hash ，将会导致缓冲区错误。2. 受影响的软件包·银河麒麟高级服务器操作系统 V10 SP1loongarch64架构:libssh、libssh-devel、libssh-help3. 软件包修复版本·银河麒麟高级服务器操作系统 V10 SP1libssh-0.9.4-5.a.ky10libssh-devel-0.9.4-5.a.ky10libssh-help-0.9.4-5.a.ky104. 修复方法方法一：配置源进行升级安装1. 打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP1loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/2. 配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3. 升级完成后是否需要重启服务或操作系统：·CVE-2020-16135：无需重启操作系统与服务即可使漏洞修复生效。·CVE-2021-3634：无需重启操作系统与服务即可使漏洞修复生效。5. 软件包下载地址·银河麒麟高级服务器操作系统 V10 SP1 libssh（loongarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/libssh-0.9.4-5.a.ky10.loongarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/libssh-devel-0.9.4-5.a.ky10.loongarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/libssh-help-0.9.4-5.a.ky10.noarch.rpm 注：其他相关依赖包请到相同目录下载6. 修复验证使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。sudo rpm -qa | grep Packagename

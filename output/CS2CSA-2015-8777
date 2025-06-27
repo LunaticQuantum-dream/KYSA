@@ -1,0 +1,14 @@
+Name:CS2CSA-2015-8777
+Severity:低级
+Summary:glibc 安全漏洞
+Published:2015-09-05
+URL:/support/loophole/patch/181.html
+Title:
+			摘要：             glibc 安全漏洞
+安全等级：          低级
+公告ID：           CS2CSA-2015-8777
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2015-09-05
+CVE：             CVE-2015-8777 CVSS3评分：7
+		
+1. 概述：中标麒麟高级服务器操作系统V6由于触发条件/影响有限/风险小，因此不修复。中标麒麟高级服务器操作系统V7有 glibc 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：动态加载没有验证LD_POINTER_GUARD环境变量，这可能会导致应用程序崩溃或可能执行任意代码。攻击者可以使用此缺陷绕过设置用户ID或组ID程序的指针监控保护机制，以使用运行该应用程序的用户的权限执行任意代码。4. 安装包列表：中标麒麟高级服务器操作系统V7：源代码包：glibc-2.17-196.el7.ns7.01.src.rpmx86_64二进制包：glibc-2.17-196.el7.ns7.01.src.rpm                     glibc-2.17-196.el7.ns7.01.i686.rpm                    glibc-common-2.17-196.el7.ns7.01.i686.rpm             glibc-devel-2.17-196.el7.ns7.01.i686.rpm              glibc-headers-2.17-196.el7.ns7.01.i686.rpm            glibc-static-2.17-196.el7.ns7.01.i686.rpm             glibc-utils-2.17-196.el7.ns7.01.i686.rpm              nscd-2.17-196.el7.ns7.01.i686.rpm                     glibc-debuginfo-2.17-196.el7.ns7.01.i686.rpm          glibc-debuginfo-common-2.17-196.el7.ns7.01.i686.rpm   glibc-2.17-196.el7.ns7.01.x86_64.rpm                  glibc-common-2.17-196.el7.ns7.01.x86_64.rpm           glibc-devel-2.17-196.el7.ns7.01.x86_64.rpm            glibc-headers-2.17-196.el7.ns7.01.x86_64.rpm          glibc-static-2.17-196.el7.ns7.01.x86_64.rpm           glibc-utils-2.17-196.el7.ns7.01.x86_64.rpm            nscd-2.17-196.el7.ns7.01.x86_64.rpm                   glibc-debuginfo-2.17-196.el7.ns7.01.x86_64.rpm        glibc-debuginfo-common-2.17-196.el7.ns7.01.x86_64.rpm 			

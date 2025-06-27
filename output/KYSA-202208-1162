@@ -1,0 +1,80 @@
+Name:KYSA-202208-1162
+Severity:重要
+Summary:openjpeg安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1647.html
+Title:
+			公告ID：KYSA-202208-1162
+公告摘要：openjpeg安全漏洞
+等级：Important
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2016-5139
+描述：Google Chrome是美国谷歌（Google）公司开发的一款Web浏览器。PDFium是其中的一个开源PDF渲染引擎。Google Chrome 52.0.2743.116之前的版本中的PDFium中使用的OpenJPEG中的tcd.c文件中的‘opj_tcd_init_tile’函数存在整数溢出漏洞。远程攻击者可借助特制的JPEG 2000数据利用该漏洞造成拒绝服务（基于堆的缓冲区溢出）。
+·CVE-2016-5158
+描述：Google Chrome是美国谷歌（Google）公司开发的一款Web浏览器。PDFium是其中的一个开源PDF渲染引擎。Google Chrome中的PDFium中使用的OpenJPEG中的tcd.c文件中的‘opj_tcd_init_tile’函数存在整数溢出漏洞。远程攻击者可借助特制的JPEG 2000数据利用该漏洞造成拒绝服务（基于堆的缓冲区溢出）。以下版本受到影响：基于Windowst和OS X平台上的Google Chrome 53.0.2785.89，基于Linux平台上的Google Chrome 53.0.2785.92之前的版本。
+·CVE-2016-5159
+描述：Google Chrome是美国谷歌（Google）公司开发的一款Web浏览器。PDFium是其中的一个开源PDF渲染引擎。Google Chrome中的PDFium中使用的OpenJPEG存在整数溢出漏洞。远程攻击者可借助特制的JPEG 2000数据利用该漏洞造成拒绝服务（基于堆的缓冲区溢出）。以下版本受到影响：基于Windowst和OS X平台上的Google Chrome 53.0.2785.89，基于Linux平台上的Google Chrome 53.0.2785.92之前的版本。
+·CVE-2016-7163
+描述：OpenJPEG是一款基于C语言的开源JPEG 2000编码解码器。OpenJPEG中的opj_pi_create_decode function in pi.c文件中存在整数溢出漏洞。远程攻击者可借助特制的JP2文件利用该漏洞执行任意代码，触发越边界读取或写入。
+·CVE-2016-9573
+描述：OpenJPEG是一款基于C语言的开源JPEG 2000编码解码器。j2k_to_image tool是其中的一个用于将j2k格式文件转换为图像文件的工具。OpenJPEG 2.1.2版本中的j2k_to_image工具存在越界读取漏洞。远程攻击者可借助特制的JPEG2000文件利用该漏洞造成应用程序崩溃或可能泄露堆内存。
+·CVE-2016-9675
+描述：OpenJPEG是一款基于C语言的开源JPEG 2000编码解码器。OpenJPEG 1.5.2之前的版本中补丁包存在基于堆的缓冲区溢出漏洞。攻击者可借助特制的j2k图片利用该漏洞造成应用程序崩溃或执行任意代码。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+openjpeg、openjpeg-devel、openjpeg-libs
+x86_64架构:
+openjpeg、openjpeg-devel、openjpeg-libs
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+openjpeg-1.5.1-18.el7
+openjpeg-devel-1.5.1-18.el7
+openjpeg-libs-1.5.1-18.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+250.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+251.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+252.升级完成后是否需要重启服务或操作系统：
+·CVE-2016-5139：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2016-5158：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2016-5159：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2016-7163：需要重启 openjpeg 以使漏洞修复生效。
+·CVE-2016-9573：需要重启 openjpeg 以使漏洞修复生效。
+·CVE-2016-9675：需要重启 openjpeg 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+openjpeg（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/openjpeg-1.5.1-18.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/openjpeg-devel-1.5.1-18.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/openjpeg-libs-1.5.1-18.el7.aarch64.rpm
+
+openjpeg（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/openjpeg-1.5.1-18.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/openjpeg-1.5.1-18.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/openjpeg-devel-1.5.1-18.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/openjpeg-devel-1.5.1-18.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/openjpeg-libs-1.5.1-18.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/openjpeg-libs-1.5.1-18.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

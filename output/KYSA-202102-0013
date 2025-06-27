@@ -1,0 +1,146 @@
+Name:KYSA-202102-0013
+Severity:中等
+Summary:openvswitch安全漏洞
+Published:2023-01-03
+URL:/support/loophole/patch/2468.html
+Title:
+			公告ID：KYSA-202102-0013
+公告摘要：openvswitch安全漏洞
+等级：Moderate
+发布日期：2023-01-03
+		
+1. 修复的CVE
+CVE-2020-35498
+描述：Openvswitch中存在资源管理错误漏洞，该漏洞源于网络系统或产品对系统资源（如内存、磁盘空间、文件等）的管理不当。
+
+2. 受影响的操作系统及软件包
+银河麒麟桌面操作系统V4桌面版
+openvswitch-common
+openvswitch-dbg
+openvswitch-ipsec
+openvswitch-pki
+openvswitch-switch
+openvswitch-test
+openvswitch-testcontroller
+openvswitch-vtep
+ovn-central
+ovn-common
+ovn-docker
+ovn-host
+python-openvswitch
+银河麒麟桌面操作系统V10桌面版
+openvswitch-common
+openvswitch-dbg
+openvswitch-ipsec
+openvswitch-pki
+openvswitch-switch
+openvswitch-test
+openvswitch-testcontroller
+openvswitch-vtep
+ovn-central
+ovn-common
+ovn-docker
+ovn-host
+python-openvswitch
+银河麒麟桌面操作系统V10 SP1
+openvswitch-common
+openvswitch-dbg
+openvswitch-doc
+openvswitch-pki
+openvswitch-source
+openvswitch-switch-dpdk
+openvswitch-switch
+openvswitch-test
+openvswitch-testcontroller
+openvswitch-vtep
+python3-openvswitch
+
+3. 软件包修复版本
+软件包：openvswitch
+2.5.9-0kord0.16.04.3（V4、V10）
+2.13.1-0kylin0.20.04.4（V10 SP1）
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+        4.0.2-sp2:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+        4.0.2-sp3:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+       4.0.2-sp4:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+       10.0:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+       10.0 SP1:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级。   $sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。  $dpkg -i Packagelists
+
+5. 软件包下载地址
+麒麟操作系统V10桌面版、V4
+X86_64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-common_2.5.9-0kord0.16.04.3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-dbg_2.5.9-0kord0.16.04.3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-ipsec_2.5.9-0kord0.16.04.3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-pki_2.5.9-0kord0.16.04.3_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-switch-dpdk_2.5.9-0kord0.16.04.3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-switch_2.5.9-0kord0.16.04.3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-test_2.5.9-0kord0.16.04.3_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-testcontroller_2.5.9-0kord0.16.04.3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-vtep_2.5.9-0kord0.16.04.3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/ovn-central_2.5.9-0kord0.16.04.3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/ovn-common_2.5.9-0kord0.16.04.3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/ovn-docker_2.5.9-0kord0.16.04.3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/ovn-host_2.5.9-0kord0.16.04.3_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/python-openvswitch_2.5.9-0kord0.16.04.3_all.deb
+arm64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-common_2.5.9-0kord0.16.04.3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-dbg_2.5.9-0kord0.16.04.3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-ipsec_2.5.9-0kord0.16.04.3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-pki_2.5.9-0kord0.16.04.3_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-switch_2.5.9-0kord0.16.04.3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-test_2.5.9-0kord0.16.04.3_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-testcontroller_2.5.9-0kord0.16.04.3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-vtep_2.5.9-0kord0.16.04.3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/ovn-central_2.5.9-0kord0.16.04.3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/ovn-common_2.5.9-0kord0.16.04.3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/ovn-docker_2.5.9-0kord0.16.04.3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/ovn-host_2.5.9-0kord0.16.04.3_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/python-openvswitch_2.5.9-0kord0.16.04.3_all.deb
+银河麒麟桌面操作系统V10 SP1
+X86_64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-common_2.13.1-0kylin0.20.04.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-dbg_2.13.1-0kylin0.20.04.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-doc_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-pki_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-source_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-switch-dpdk_2.13.1-0kylin0.20.04.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-switch_2.13.1-0kylin0.20.04.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-test_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-testcontroller_2.13.1-0kylin0.20.04.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-vtep_2.13.1-0kylin0.20.04.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/python3-openvswitch_2.13.1-0kylin0.20.04.4_all.deb
+arm64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-common_2.13.1-0kylin0.20.04.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-dbg_2.13.1-0kylin0.20.04.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-doc_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-pki_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-source_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-switch_2.13.1-0kylin0.20.04.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-test_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-testcontroller_2.13.1-0kylin0.20.04.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-vtep_2.13.1-0kylin0.20.04.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/python3-openvswitch_2.13.1-0kylin0.20.04.4_all.deb
+mips64el软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-common_2.13.1-0kylin0.20.04.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-dbg_2.13.1-0kylin0.20.04.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-doc_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-pki_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-source_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-switch_2.13.1-0kylin0.20.04.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-test_2.13.1-0kylin0.20.04.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-testcontroller_2.13.1-0kylin0.20.04.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/openvswitch-vtep_2.13.1-0kylin0.20.04.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openvswitch/python3-openvswitch_2.13.1-0kylin0.20.04.4_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

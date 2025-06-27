@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-0527
+Severity:中等
+Summary:tomcat6 安全更新
+Published:2017-03-15
+URL:/support/loophole/patch/48.html
+Title:
+			摘要： tomcat6 安全更新
+安全等级： 中等
+公告ID：            CS2CSA-2017-0527
+产品： 中标麒麟高级服务器操作系统
+发布日期：           2017-03-15
+CVE：          CVE-2016-6816，CVE-2016-8745
+		
+1. 概述：中标麒麟高级服务器操作系统V6系列有tomcat6可用更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6 -x86_643. 描述：Apache Tomcat 是管理 Java Servlet 和 JavaServerPages (JSP) 的servlet container 技术.4. 安全加固:：*发现错误处理某些字符时，HTTP请求的解析可以被利用来操纵受限制的HTTP响应成功利用该漏洞需要产品采用代理，以不同的方式解析某些字符。通过操作HTTP响应攻击者可能使网页缓存中毒,执行XSS攻击,或从其他自己的请求获取敏感信息。(CVE-2016-6816) 注意：这个修复导致当HTTP请求包含不被允许的字符或非规范编码时Tomcat响应一个HTTP 400失败请求错误，即使他们曾是被允许也不可。新引入的系统属性tomcat.util.http.parser.HttpParser.requestTargetAllow可用于非编码形式下配置Tomcat来接受花括号({and})和管道符号(|)。一个在 NIO HTTP 连接器发送文件的错误被发现，这导致当前处理器对象被多次添加到处理器高速缓存，这意味着处理器可以用于并发请求，共享处理 器可导致请求之间的信息泄漏，包括但不限于会话ID和响应体。(CVE - 2016 - 8745)			

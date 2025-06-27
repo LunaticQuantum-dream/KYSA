@@ -1,0 +1,13 @@
+Name:KYSA-202101-0029
+Severity:中等
+Summary:libxstream-java漏洞
+Published:2021-03-02
+URL:/support/loophole/patch/352.html
+Title:
+			摘要：libxstream-java漏洞
+安全等级：中等
+公告ID：KYSA-202101-0029
+发布日期：2021-03-02
+影响CVE：CVE-2020-26217、CVE-2020-26259、CVE-2020-26258
+		
+1.公告详情：1.4.14版之前的XStream容易受到远程代码执行的攻击，该漏洞可能允许远程攻击者仅通过处理已处理的输入流来运行任意的Shell命令。仅依赖阻止列表的用户会受到影响。使用XStream的安全框架允许列表的任何人都不会受到影响。链接的通报为无法升级的用户提供了代码变通办法。该问题已在1.4.14版中修复。（CVE-2020-26217）XStream是一个Java库，用于将对象序列化为XML并再次返回。在1.4.15之前的XStream中，解组时容易受到本地主机上任意文件删除的攻击。该漏洞可能允许远程攻击者删除主机上的任意已知文件作为日志，因为执行过程仅通过操纵已处理的输入流才具有足够的权限。如果您依赖XStream的安全框架的默认黑名单，则必须至少使用版本1.4.15。报告的漏洞在运行Java 15或更高版本的系统中不存在。没有用户受到影响，他们遵循建议使用白名单设置XStream的安全框架！依靠XStream的默认黑名单的任何人都可以立即切换到允许类型的whilelist来避免此漏洞。XStream 1.4的用户。（CVE-2020-26259）XStream是一个Java库，用于将对象序列化为XML并再次返回。在版本1.4.15之前的XStream中，解组时可以激活服务器端伪造请求漏洞。该漏洞可能允许远程攻击者仅通过处理已处理的输入流来从不公开可用的内部资源中请求数据。如果您依赖XStream的安全框架的默认黑名单，则必须至少使用版本1.4.15。如果运行Java 15或更高版本，则报告的漏洞不存在。遵循建议使用白名单设置XStream的安全框架的用户不会受到影响！依靠XStream的默认黑名单的任何人都可以立即切换到允许类型的whilelist来避免此漏洞。XStream 1.4的用户。（CVE-2020-26258）2. 受影响的操作系统：银河麒麟桌面操作系统V10专业版3. 修复版本软件包：libxstream-javalibxstream-java - 1.4.11.1-1kylin0.1（V10专业版）4. 受影响的软件包银河麒麟桌面操作系统V10专业版libxstream-java5.修复方法方法一：配置源进行升级安装            打开软件包源配置文件，根据仓库地址进行修改。            V10专业版:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse            配置完成后执行更新命令进行升级   $sudo apt update方法二：下载安装包进行升级安装            通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。  $dpkg -i Packagelists6. 软件包下载地址银河麒麟桌面操作系统V10专业版X86_64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libx/libxstream-java/libxstream-java_1.4.11.1-1kylin0.1_all.debarm64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libx/libxstream-java/libxstream-java_1.4.11.1-1kylin0.1_all.debmips64el软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libx/libxstream-java/libxstream-java_1.4.11.1-1kylin0.1_all.deb

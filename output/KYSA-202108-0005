@@ -1,0 +1,80 @@
+Name:KYSA-202108-0005
+Severity:重要
+Summary:postgresql-12安全漏洞
+Published:2022-11-10
+URL:/support/loophole/patch/2366.html
+Title:
+			 公告ID：KYSA-202108-0005
+公告摘要： postgresql-12安全漏洞
+等级：重要
+发布日期：2022-11-10
+		
+1. 修复的CVE
+CVE-2021-3449
+Microsoft Windows tcp/ip是美国微软（Microsoft）公司的一个 Windows 的 Tcp/Ip 支持服务。microsoft Windows TCP/IP存在输入验证错误漏洞。以下产品和版本受到影响：Windows 10 Version 21H1 for x64-based Systems,Windows 10 Version 21H1 for ARM64-based Systems,Windows 10 Version 21H1 for 32-bit Systems,Windows 10 Version 2004 for 32-bit Systems,Windows 10 Version 1809 for ARM64-based Systems,Windows Server 2019,Windows Server 2019  (Server Core installation),Windows 10 Version 1909 for 32-bit Systems,Windows 10 Version 1909 for x64-based Systems,Windows 10 Version 1909 for ARM64-based Systems,Windows 10 Version 20H2 for ARM64-based Systems,Windows Server, version 20H2 (Server Core Installation),Windows 10 Version 2004 for ARM64-based Systems,Windows 10 Version 2004 for x64-based Systems,Windows Server, version 2004 (Server Core installation),Windows 10 Version 20H2 for x64-based Systems,Windows 10 Version 20H2 for 32-bit Systems,Windows 10 Version 1809 for 32-bit Systems,Windows 10 Version 1809 for x64-based Systems
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1
+libecpg-compat3
+libecpg-dev
+libecpg6
+libpgtypes3
+libpq-dev
+libpq5
+postgresql-12
+postgresql-client-12
+postgresql-doc-12
+postgresql-plperl-12
+postgresql-plpython3-12
+postgresql-pltcl-12
+postgresql-server-dev-12
+3. 软件包修复版本
+软件包：postgresql-12
+12.8-0kylin0.20.04.1(V10 SP1)
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+X86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libecpg6_12.8-0kylin0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libpq-dev_12.8-0kylin0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libpgtypes3_12.8-0kylin0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libecpg-dev_12.8-0kylin0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libpq5_12.8-0kylin0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libecpg-compat3_12.8-0kylin0.20.04.1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libecpg6_12.8-0kylin0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libpq-dev_12.8-0kylin0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libpgtypes3_12.8-0kylin0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libecpg-dev_12.8-0kylin0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libpq5_12.8-0kylin0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libecpg-compat3_12.8-0kylin0.20.04.1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libecpg6_12.8-0kylin0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libpq-dev_12.8-0kylin0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libpgtypes3_12.8-0kylin0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libecpg-dev_12.8-0kylin0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libpq5_12.8-0kylin0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/postgresql-12/libecpg-compat3_12.8-0kylin0.20.04.1_mips64el.deb
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

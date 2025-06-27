@@ -1,0 +1,111 @@
+Name:KYSA-202308-1057
+Severity:重要
+Summary:firefox安全漏洞
+Published:2023-08-22
+URL:/support/loophole/patch/4095.html
+Title:
+			公告ID：KYSA-202308-1057
+公告摘要：firefox安全漏洞
+等级：Important
+发布日期：2023-08-22
+		
+1.修复的CVE
+·CVE-2023-4045
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 116 版本存在安全漏洞，该漏洞源于 Offscreen Canvas 无法正确跟踪跨源污染，这可能被用来从另一个站点访问图像数据，从而违反了同源策略。
+·CVE-2023-4046
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 116 版本存在安全漏洞，该漏洞源于在某些情况下，过时的值可能已用于 WASM JIT 分析中的全局变量。这导致了内容进程中的错误编译和潜在可利用的崩溃。
+·CVE-2023-4047
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 116 版本存在安全漏洞，该漏洞源于弹出通知延迟计算中的错误可能使攻击者能够诱骗用户授予权限。
+·CVE-2023-4048
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 116 版本存在安全漏洞，该漏洞源于在内存不足的情况下使用 DOMParser 解析 HTML 时，越界读取可能会导致可利用的崩溃。
+·CVE-2023-4049
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 存在安全漏洞，该漏洞源于通过代码检查发现了引用计数代码中的竞争条件。这些可能会导致潜在可利用的释放后使用漏洞。
+·CVE-2023-4050
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+
+Mozilla Firefox 116 版本存在安全漏洞，该漏洞源于在某些情况下，不受信任的输入流会在不检查其大小的情况下复制到堆栈缓冲区。这导致了潜在的可利用崩溃，可能导致沙箱逃逸。
+·CVE-2023-4055
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+
+Mozilla Firefox 存在安全漏洞，该漏洞源于当超过每个域的 cookie 数量时document.cookie，发送到主机的实际 cookie jar 不再与预期的 cookie jar 状态一致。这可能导致发送的请求中缺少一些 cookie。
+·CVE-2023-4056
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+
+Mozilla Firefox 116 版本存在缓冲区错误漏洞，该漏洞源于存在多个内存安全错误，其中一些错误可能会被利用来运行任意代码。
+·CVE-2023-4057
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 116 版本存在安全漏洞，该漏洞源于存在多个内存安全错误，其中一些错误可能会被利用来运行任意代码。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+firefox
+·x86_64架构:
+firefox
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+firefox
+·x86_64架构:
+firefox
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+firefox-102.14.0-1.el7_9.ns7.01或以上版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+firefox-102.14.0-1.el7_9.ns7.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-4045:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4046:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4047:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4048:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4049:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4050:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4055:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4056:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4057:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+firefox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/firefox-102.14.0-1.el7_9.ns7.01.aarch64.rpm
+
+firefox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/firefox-102.14.0-1.el7_9.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/firefox-102.14.0-1.el7_9.ns7.01.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+firefox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/firefox-102.14.0-1.el7_9.ns7.01.aarch64.rpm
+
+firefox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/firefox-102.14.0-1.el7_9.ns7.01.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

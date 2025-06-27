@@ -1,0 +1,60 @@
+Name:KYSA-202103-0039
+Severity:中等
+Summary:privoxy安全漏洞
+Published:2022-02-28
+URL:/support/loophole/patch/945.html
+Title:
+			公告ID：KYSA-202103-0039
+公告摘要：privoxy安全漏洞
+等级：中等
+发布日期：2022-02-28
+		
+1. 漏洞概述
+CVE-2020-29361
+P11-glue P11-kit是P11-glue个人开发者的一个用于加载和枚举PKCS模块的工具软件。 在p11试剂盒0.21.1至0.23.21中发现了一个问题。在p11-kit库和p11-kit list命令的数组分配中发现了多个整数溢出，在调用realloc或calloc之前缺少溢出检查。
+CVE-2020-29362
+P11-glue P11-kit是P11-glue个人开发者的一个用于加载和枚举PKCS模块的工具软件。 P11-glue P11-kit server/remote 0.23.6版本至0.23.21版本存在缓冲区错误漏洞，该漏洞源于使用的RPC协议中发现了基于堆的缓冲区超读。当远程实体通过序列化的PKCS#11函数调用提供字节数组时，接收实体可能允许读取超过堆分配的最多4个字节的内存。
+CVE-2020-29363
+P11-glue P11-kit是P11-glue个人开发者的一个用于加载和枚举PKCS模块的工具软件。 P11-glue P11-kit server/remote 0.23.6版本至0.23.21版本存在缓冲区错误漏洞，该漏洞源于RPC协议中发现了基于堆的缓冲区溢出，当远程实体在CK_ATTRIBUTE中提供序列化的字节数组时，接收实体可能没有为缓冲区分配足够的长度来存储反序列化的值。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+privoxy
+arm64 架构：
+privoxy
+mips64el 架构：
+privoxy
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+3.0.28-2kylin0.1
+
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+10.0 SP1:
+	http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+$sudo apt install privoxy
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/privoxy/privoxy_3.0.28-2kylin0.1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/privoxy/privoxy_3.0.28-2kylin0.1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/privoxy/privoxy_3.0.28-2kylin0.1_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

@@ -1,0 +1,95 @@
+Name:KYSA-202408-1141
+Severity:重要
+Summary:ghostscript安全漏洞
+Published:2024-08-20
+URL:/support/loophole/patch/6149.html
+Title:
+			公告ID：KYSA-202408-1141
+公告摘要：ghostscript安全漏洞
+等级：重要
+发布日期：2024-08-20
+		
+1.修复的漏洞
+·CVE-2020-36773
+描述：Artifex Software Ghostscript是美国Artifex Software公司的一款开源的PostScript（一种用于电子产业和桌面出版领域的页面描述语言和编程语言）解析器。该产品可显示Postscript文件以及在非Postscript打印机上打印Postscript文件。
+Artifex Software Ghostscript 9.53.0 版本之前存在安全漏洞，该漏洞源于 devices/vector/gdevtxtw.c 中存在越界写入和释放后重用的问题。
+·CVE-2023-46751
+描述：Artifex Software Ghostscript是美国Artifex Software公司的一款开源的PostScript（一种用于电子产业和桌面出版领域的页面描述语言和编程语言）解析器。该产品可显示Postscript文件以及在非Postscript打印机上打印Postscript文件。
+Artifex Software Ghostscript 10.02.0及之前版本存在安全漏洞，该漏洞源于函数gdev_prn_open_printer_seekable（）存在安全漏洞。攻击者可利用该漏洞造成程序崩溃。
+·CVE-2024-29510
+描述：Artifex Ghostscript是一套建基于 Adobe、PostScript 及可移植文档格式的页面描述语言等而编译成的自由软件。
+Artifex Ghostscript 10.03.1 版本之前存在安全漏洞，该漏洞源于允许内存损坏和SAFER沙盒旁路，通过格式字符串注入与unprint设备。
+·CVE-2024-33869
+描述：Artifex Ghostscript是美国Artifex公司的一套建基于 Adobe、PostScript 及可移植文档格式的页面描述语言等而编译成的自由软件。
+Artifex Ghostscript 10.03.1之前版本存在安全漏洞，该漏洞源于base/gpmisc.c中的路径减少，可能会发生路径遍历和命令执行。
+·CVE-2024-33870
+描述：Artifex Ghostscript是美国Artifex公司的一套建基于 Adobe、PostScript 及可移植文档格式的页面描述语言等而编译成的自由软件。
+Artifex Ghostscript 10.03.1之前版本存在安全漏洞，该漏洞源于如果当前目录位于允许的路径中，则可以通过精心设计的PostScript文档对任意文件进行路径遍历。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+ghostscript-devel、ghostscript-tools-dvipdf、ghostscript-help、ghostscript
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+·loongarch64架构:
+ghostscript-devel、ghostscript-tools-dvipdf、ghostscript-help、ghostscript
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+ghostscript-help-9.52-14.a.ky10或以上版本
+ghostscript-tools-dvipdf-9.52-14.a.ky10或以上版本
+ghostscript-devel-9.52-14.a.ky10或以上版本
+ghostscript-9.52-14.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (loongarch64)
+ghostscript-help-9.52-14.a.ky10或以上版本
+ghostscript-tools-dvipdf-9.52-14.a.ky10或以上版本
+ghostscript-devel-9.52-14.a.ky10或以上版本
+ghostscript-9.52-14.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3 2403
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-36773:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-46751:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-29510:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-33869:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-33870:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+ghostscript(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/ghostscript-9.52-14.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/ghostscript-devel-9.52-14.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/ghostscript-help-9.52-14.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/ghostscript-tools-dvipdf-9.52-14.a.ky10.loongarch64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+
+ghostscript(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/ghostscript-9.52-14.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/ghostscript-devel-9.52-14.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/ghostscript-help-9.52-14.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/ghostscript-tools-dvipdf-9.52-14.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/ghostscript-9.52-14.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/ghostscript-devel-9.52-14.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/ghostscript-help-9.52-14.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/ghostscript-tools-dvipdf-9.52-14.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

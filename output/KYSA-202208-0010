@@ -1,0 +1,57 @@
+Name:KYSA-202208-0010
+Severity:中等
+Summary:gst-plugins-good1.0安全漏洞
+Published:2022-11-10
+URL:/support/loophole/patch/2354.html
+Title:
+			公告ID：KYSA-202208-0010
+公告摘要：gst-plugins-good1.0安全漏洞
+等级：中等
+发布日期：2022-11-10
+		
+1. 修复的CVE
+CVE-2022-1921
+GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于gst_avi_demux_invert 函数中的 avidemux 元素中的整数溢出，该函数允许在解析 avi 文件时进行堆覆盖，攻击者可以利用该漏洞可以执行任意代码。
+CVE-2022-1923
+GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于zlib 解码gst_matroska_decompress_data 编码数据时整数溢出，攻击者可以利用该漏洞可以导致系统崩溃。
+CVE-2022-2122
+Intel Data Center Manager是美国英特尔（Intel）公司的一种软件解决方案。可收集和分析数据中心内各种设备的实时运行状况、功率和热量，帮助提高效率和正常运行时间。Intel Data Center Manager software 4.1之前版本存在安全漏洞，该漏洞源于访问控制不当，可能会使经过认证的用户通过相邻访问实现权限升级。
+CVE-2022-1922
+GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于gst_matroska_decompress_data 函数中 matroskademux 元素中的整数溢出，这会导致段错误，攻击者可以利用该漏洞可以导致系统崩溃。
+CVE-2022-1924
+GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于zlib 解码gst_matroska_decompress_data 编码数据时整数溢出，攻击者可以利用该漏洞可以导致系统崩溃。
+CVE-2022-1920
+GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于gst_matroska_demux_add_wvpk_header 中的堆覆盖，攻击者可以利用该漏洞可以导致系统崩溃。
+CVE-2022-1925
+GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于gst_matroska_decompress_data 函数中 matroskaparse 元素中的整数溢出，导致堆溢出，攻击者可以利用该漏洞可以导致系统崩溃。
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+gstreamer1.0-plugins-good、gstreamer1.0-pulseaudio、libgstreamer-plugins-good1.0-0
+arm64 架构：
+gstreamer1.0-plugins-good、gstreamer1.0-pulseaudio、libgstreamer-plugins-good1.0-0
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+1.8.3-1kord0.5+esm1
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install gstreamer1.0-plugins-good
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。5. 软件包下载地址
+银河麒麟桌面操作系统V10
+5. x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/gstreamer1.0-plugins-good_1.8.3-1kord0.5%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/gstreamer1.0-pulseaudio_1.8.3-1kord0.5%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/libgstreamer-plugins-good1.0-0_1.8.3-1kord0.5%2Besm1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/gstreamer1.0-plugins-good_1.8.3-1kord0.5%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/gstreamer1.0-pulseaudio_1.8.3-1kord0.5%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/libgstreamer-plugins-good1.0-0_1.8.3-1kord0.5%2Besm1_arm64.deb
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

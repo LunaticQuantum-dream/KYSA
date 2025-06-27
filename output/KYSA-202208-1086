@@ -1,0 +1,101 @@
+Name:KYSA-202208-1086
+Severity:中等
+Summary:git安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1686.html
+Title:
+			公告ID：KYSA-202208-1086
+公告摘要：git安全漏洞
+安全等级：Moderate
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2015-7545
+描述：Git是美国软件开发者林纳斯-托瓦兹（Linus Torvalds）所研发的一套免费、开源的分布式版本控制系统。Git的git-remote-ext和其他远程帮助程序中存在安全漏洞。远程攻击者可借助子模块的.gitmodules文件和其他资源中的URL利用该漏洞执行任意代码。以下版本受到影响：Git 2.3.10之前版本，2.4.10之前2.4.x版本，2.5.4之前2.5.x版本，2.6.1之前2.6.x版本。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+git、git-all、git-core、git-core-doc、git-cvs、git-daemon、git-email、git-gui、git-instaweb、git-p4、git-subtree、git-svn、gitk、gitweb、perl-Git、perl-Git-SVN
+x86_64架构:
+git、git-all、git-core、git-core-doc、git-cvs、git-daemon、git-email、git-gui、git-instaweb、git-p4、git-subtree、git-svn、gitk、gitweb、perl-Git、perl-Git-SVN
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+git-2.23.0-1.el7.ns7.02
+git-all-2.23.0-1.el7.ns7.02
+git-core-2.23.0-1.el7.ns7.02
+git-core-doc-2.23.0-1.el7.ns7.02
+git-cvs-2.23.0-1.el7.ns7.02
+git-daemon-2.23.0-1.el7.ns7.02
+git-email-2.23.0-1.el7.ns7.02
+git-gui-2.23.0-1.el7.ns7.02
+git-instaweb-2.23.0-1.el7.ns7.02
+git-p4-2.23.0-1.el7.ns7.02
+git-subtree-2.23.0-1.el7.ns7.02
+git-svn-2.23.0-1.el7.ns7.02
+gitk-2.23.0-1.el7.ns7.02
+gitweb-2.23.0-1.el7.ns7.02
+perl-Git-2.23.0-1.el7.ns7.02
+perl-Git-SVN-2.23.0-1.el7.ns7.02
+
+4.修复方法
+方法一：配置源进行升级安装
+133.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/
+134.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+135.升级完成后是否需要重启服务或操作系统：
+·CVE-2015-7545：需要重启 git 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+git（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-2.23.0-1.el7.ns7.02.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-all-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-core-2.23.0-1.el7.ns7.02.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-core-doc-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-cvs-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-daemon-2.23.0-1.el7.ns7.02.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-email-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-gui-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-instaweb-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-p4-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-subtree-2.23.0-1.el7.ns7.02.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/git-svn-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/gitk-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/gitweb-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/perl-Git-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/perl-Git-SVN-2.23.0-1.el7.ns7.02.noarch.rpm
+
+git（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-2.23.0-1.el7.ns7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-all-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-core-2.23.0-1.el7.ns7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-core-doc-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-cvs-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-daemon-2.23.0-1.el7.ns7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-email-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-gui-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-instaweb-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-p4-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-subtree-2.23.0-1.el7.ns7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/git-svn-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/gitk-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/gitweb-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/perl-Git-2.23.0-1.el7.ns7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/perl-Git-SVN-2.23.0-1.el7.ns7.02.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

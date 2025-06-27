@@ -1,0 +1,95 @@
+Name:KYSA-202209-0034
+Severity:中等
+Summary:bind9安全漏洞
+Published:2023-11-23
+URL:/support/loophole/patch/4524.html
+Title:
+			公告ID：KYSA-202209-0034
+公告摘要：bind9安全漏洞
+等级：中等
+发布日期：2023-11-23
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2022-3080
+ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 9.16.33之前版本、9.18.7之前的9.18.x版本、9.19.5之前的9.19.x版本存在安全漏洞，该漏洞源于当启用陈旧缓存和陈旧答案时，选项stale-answer-client-timeout设置为0，并且缓存中存在用于传入查询的陈旧CNAME时，解析器可能会崩溃。通过向解析器发送特定查询，攻击者可以导致命名崩溃。
+CVE-2022-2881
+ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 9.18.7之前的9.18.x版本、9.19.5之前的9.19.x版本存在安全漏洞，该漏洞源于重用HTTP连接从stats通道请求统计信息时，连续响应的内容长度可能会增长到超过分配缓冲区的末尾，可能会导致读取超出缓冲区的末尾并读取它不应该读取的内存，或者使进程崩溃。
+CVE-2022-38177
+ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 9.8.4版本至9.16.32版本存在安全漏洞，该漏洞源于使用格式错误的ECDSA签名，欺骗目标解析程序，导致内存因资源不足而崩溃。
+CVE-2022-2906
+ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 9.18.7之前的9.18.x版本、9.19.5之前的9.19.x版本存在安全漏洞，该漏洞源于OpenSSL 1.x和OpenSSL 3.0之间的更改暴露了命名中的一个缺陷，当在Diffie-Hellman模式下与OpenSSL 3.0.0及更高版本一起使用TKEY记录时，该缺陷会导致密钥处理中出现少量内存泄漏。攻击者可以利用此漏洞逐渐侵蚀可用内存，以至于命名的内存因缺乏资源而崩溃，重新启动后，攻击者将不得不重新开始，但仍有可能拒绝服务。
+CVE-2022-38178
+ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。BIND存在安全漏洞，该漏洞源于使用格式错误的EdDSA签名，欺骗目标解析程序，导致内存因资源不足而崩溃。以下产品及版本受到影响：9.9.12版本至9.9.13版本、9.10.7版本至9.10.8版本、9.11.3版本至9.16.32版本、9.18.0版本至 9.18.6版本、9.19.0版本至9.19.4版本。
+CVE-2022-2795
+ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 9.16.33之前版本、9.18.7之前的9.18.x版本、9.19.5之前的9.19.x版本存在安全漏洞，该漏洞源于解析器代码中的缺陷可能会导致命名在处理大型委托上花费过多的时间,攻击者通过利用此漏洞向目标解析器充斥查询，可以显着削弱解析器的性能，从而有效地拒绝合法客户端访问DNS解析服务。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303
+x86_64 架构：
+bind9-dnsutils、bind9-host、bind9-libs、bind9-utils、bind9、bind9utils、dnsutils
+arm64 架构：
+bind9-dnsutils、bind9-host、bind9-libs、bind9-utils、bind9、bind9utils、dnsutils
+mips64el 架构：
+bind9-dnsutils、bind9-host、bind9-libs、bind9-utils、bind9、bind9utils、dnsutils
+loongarch64 架构：
+bind9-dnsutils、bind9-host、bind9-libs、bind9-utils、bind9、bind9utils、dnsutils
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303
+1:9.16.1-0kylin2.11k0.7
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install bind9
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-dnsutils_9.16.1-0kylin2.11k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.16.1-0kylin2.11k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-libs_9.16.1-0kylin2.11k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-utils_9.16.1-0kylin2.11k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.16.1-0kylin2.11k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.16.1-0kylin2.11k0.7_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.16.1-0kylin2.11k0.7_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-dnsutils_9.16.1-0kylin2.11k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.16.1-0kylin2.11k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-libs_9.16.1-0kylin2.11k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-utils_9.16.1-0kylin2.11k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.16.1-0kylin2.11k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.16.1-0kylin2.11k0.7_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.16.1-0kylin2.11k0.7_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-dnsutils_9.16.1-0kylin2.11k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.16.1-0kylin2.11k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-libs_9.16.1-0kylin2.11k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-utils_9.16.1-0kylin2.11k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.16.1-0kylin2.11k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.16.1-0kylin2.11k0.7_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.16.1-0kylin2.11k0.7_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-dnsutils_9.16.1-0kylin2.11k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.16.1-0kylin2.11k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-libs_9.16.1-0kylin2.11k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-utils_9.16.1-0kylin2.11k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.16.1-0kylin2.11k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.16.1-0kylin2.11k0.7_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.16.1-0kylin2.11k0.7_all.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

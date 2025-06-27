@@ -1,0 +1,213 @@
+Name:KYSA-202403-1058
+Severity:重要
+Summary:java-11-openjdk安全漏洞
+Published:2024-03-19
+URL:/support/loophole/patch/5481.html
+Title:
+			公告ID：KYSA-202403-1058
+公告摘要：java-11-openjdk安全漏洞
+等级：Important
+发布日期：2024-03-19
+		
+1.修复的CVE
+·CVE-2024-20918
+描述：Oracle Java SE和Oracle GraalVM都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。
+
+Oracle部分产品存在安全漏洞。攻击者利用该漏洞对数据进行未经授权的创建、删除或修改操作，以及获得对所有数据的完全访问权限。
+·CVE-2024-20919
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。
+Oracle Java SE 存在安全漏洞。该漏洞允许未经身份验证的攻击者通过多种协议进行网络访问。
+·CVE-2024-20921
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。
+Oracle Java SE 存在安全漏洞。该漏洞允许未经身份验证的攻击者通过多种协议进行网络访问。
+·CVE-2024-20926
+描述：Oracle Java SE和Oracle GraalVM都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。
+Oracle部分产品存在安全漏洞。攻击者利用该漏洞可以访问敏感数据。
+·CVE-2024-20945
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。
+Oracle Java SE 存在安全漏洞。该漏洞攻击者对关键数据的未经授权的访问或对所有 Oracle Java SE、Oracle GraalVM for JDK、Oracle GraalVM Enterprise Edition 可访问数据的完全访问。
+·CVE-2024-20952
+描述：Oracle Java SE和Oracle GraalVM都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。
+
+Oracle部分产品存在安全漏洞。攻击者利用该漏洞对数据进行未经授权的创建、删除或修改操作，以及获得对所有数据的完全访问权限。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·aarch64架构:
+java-11-openjdk、java-11-openjdk-demo、java-11-openjdk-demo-slowdebug、java-11-openjdk-devel、java-11-openjdk-devel-slowdebug、java-11-openjdk-headless、java-11-openjdk-headless-slowdebug、java-11-openjdk-javadoc、java-11-openjdk-javadoc-zip、java-11-openjdk-jmods、java-11-openjdk-jmods-slowdebug、java-11-openjdk-slowdebug、java-11-openjdk-src、java-11-openjdk-src-slowdebug
+·x86_64架构:
+java-11-openjdk、java-11-openjdk-demo、java-11-openjdk-demo-slowdebug、java-11-openjdk-devel、java-11-openjdk-devel-slowdebug、java-11-openjdk-headless、java-11-openjdk-headless-slowdebug、java-11-openjdk-javadoc、java-11-openjdk-javadoc-zip、java-11-openjdk-jmods、java-11-openjdk-jmods-slowdebug、java-11-openjdk-slowdebug、java-11-openjdk-src、java-11-openjdk-src-slowdebug
+·银河麒麟高级服务器操作系统 V10 SP3 2309a
+·aarch64架构:
+java-11-openjdk、java-11-openjdk-demo、java-11-openjdk-demo-slowdebug、java-11-openjdk-devel、java-11-openjdk-devel-slowdebug、java-11-openjdk-headless、java-11-openjdk-headless-slowdebug、java-11-openjdk-javadoc、java-11-openjdk-javadoc-zip、java-11-openjdk-jmods、java-11-openjdk-jmods-slowdebug、java-11-openjdk-slowdebug、java-11-openjdk-src、java-11-openjdk-src-slowdebug
+·银河麒麟云底座操作系统 V10
+·aarch64架构:
+java-11-openjdk、java-11-openjdk-demo、java-11-openjdk-demo-slowdebug、java-11-openjdk-devel、java-11-openjdk-devel-slowdebug、java-11-openjdk-headless、java-11-openjdk-headless-slowdebug、java-11-openjdk-javadoc、java-11-openjdk-javadoc-zip、java-11-openjdk-jmods、java-11-openjdk-jmods-slowdebug、java-11-openjdk-slowdebug、java-11-openjdk-src、java-11-openjdk-src-slowdebug
+·x86_64架构:
+java-11-openjdk、java-11-openjdk-demo、java-11-openjdk-demo-slowdebug、java-11-openjdk-devel、java-11-openjdk-devel-slowdebug、java-11-openjdk-headless、java-11-openjdk-headless-slowdebug、java-11-openjdk-javadoc、java-11-openjdk-javadoc-zip、java-11-openjdk-jmods、java-11-openjdk-jmods-slowdebug、java-11-openjdk-slowdebug、java-11-openjdk-src、java-11-openjdk-src-slowdebug
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (aarch64、x86_64)
+java-11-openjdk-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-demo-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-demo-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-devel-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-devel-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-headless-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-headless-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-javadoc-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-javadoc-zip-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-jmods-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-jmods-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-src-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-src-slowdebug-11.0.22.7-0.ky10h或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309a (aarch64)
+java-11-openjdk-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-demo-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-demo-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-devel-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-devel-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-headless-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-headless-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-javadoc-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-javadoc-zip-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-jmods-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-jmods-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-src-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-src-slowdebug-11.0.22.7-0.ky10h或以上版本
+·银河麒麟云底座操作系统 V10 (aarch64、x86_64)
+java-11-openjdk-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-demo-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-demo-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-devel-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-devel-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-headless-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-headless-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-javadoc-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-javadoc-zip-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-jmods-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-jmods-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-slowdebug-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-src-11.0.22.7-0.ky10h或以上版本
+java-11-openjdk-src-slowdebug-11.0.22.7-0.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+aarch64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309a
+aarch64:https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/
+银河麒麟云底座操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2024-20918:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-20919:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-20921:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-20926:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-20945:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-20952:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+java-11-openjdk(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-demo-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-demo-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-devel-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-devel-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-headless-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-headless-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-javadoc-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-javadoc-zip-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-jmods-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-jmods-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-src-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-src-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+
+java-11-openjdk(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-demo-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-demo-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-devel-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-devel-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-headless-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-headless-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-javadoc-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-javadoc-zip-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-jmods-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-jmods-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-src-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-src-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309a
+
+java-11-openjdk(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-demo-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-demo-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-devel-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-devel-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-headless-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-headless-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-javadoc-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-javadoc-zip-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-jmods-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-jmods-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-src-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-src-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+
+·银河麒麟云底座操作系统 V10
+
+java-11-openjdk(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-demo-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-demo-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-devel-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-devel-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-headless-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-headless-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-javadoc-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-javadoc-zip-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-jmods-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-jmods-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-src-11.0.22.7-0.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/java-11-openjdk-src-slowdebug-11.0.22.7-0.ky10h.aarch64.rpm
+
+java-11-openjdk(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-demo-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-demo-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-devel-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-devel-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-headless-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-headless-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-javadoc-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-javadoc-zip-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-jmods-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-jmods-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-src-11.0.22.7-0.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/java-11-openjdk-src-slowdebug-11.0.22.7-0.ky10h.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,102 @@
+Name:KYSA-202208-1376
+Severity:严重
+Summary:nspr安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/4277.html
+Title:
+			公告ID：KYSA-202208-1376
+公告摘要：nspr安全漏洞
+等级：Critical
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2013-1739
+描述：Mozilla Network Security Services（NSS）是美国Mozilla基金会开发的一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla NSS 3.15.2之前的版本中存在安全漏洞，该漏洞源于程序在执行读操作之前没有确保数据结构初始化。远程攻击者可利用该漏洞造成拒绝服务或产生其他影响。
+·CVE-2013-1740
+描述：Mozilla Network Security Services（NSS）是美国Mozilla基金会开发的一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla NSS 3.15.3及之前的版本中的libssl软件包中的sslsecur.c文件中的‘ssl_Do1stHandshake’函数中存在加密问题漏洞。当使用TLS False Start功能时，攻击者可通过在握手期间使用任意X.509证书利用该漏洞实施中间人攻击，欺骗SSL服务器。
+·CVE-2013-1741
+描述：Mozilla Network Security Services（NSS）是美国Mozilla基金会开发的一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla NSS 3.15至3.15.2版本中存在整数溢出漏洞。远程攻击者可借助较大的‘size’值利用该漏洞造成拒绝服务或产生其他影响。
+·CVE-2013-5605
+描述：Mozilla Network Security Services（NSS）是美国Mozilla基金会开发的一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla NSS 3.14.5之前的3.14版本和3.15.3之前的3.15版本中存在安全漏洞。远程攻击者可借助无效的握手数据包利用该漏洞造成拒绝服务或产生其他影响。
+·CVE-2013-5606
+描述：Mozilla Network Security Services（NSS）是美国Mozilla基金会开发的一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla NSS 3.15.3之前的3.15版本中的lib/certhigh/certvfy.c文件中的‘CERT_VerifyCert’函数中存在安全漏洞，该漏洞源于当‘CERTVerifyLog’参数有效时，程序对不兼容的密钥用法证书提供返回值。远程攻击者可通过提供特制的证书利用该漏洞绕过既定的访问限制。
+·CVE-2013-5607
+描述：Netscape Portable Runtime（NSPR）是一个跨平台库，它提供了类型定义、线程同步、时间处理等的API和类似于libc的函数，被用在服务应用程序中。NSPR 4.10.1及之前的版本中的‘PL_ArenaAllocate’函数中存在整数溢出漏洞。远程攻击者可借助特制的X.509证书利用该漏洞造成拒绝服务（应用程序崩溃）或产生其他影响。以下版本受到影响：Firefox 25.0及之前的版本，Firefox ESR 17.0至17.0.10版本和24.0至24.0.2，SeaMonkey 2.22及之前的版本。
+·CVE-2014-1490
+描述：Mozilla Network Security Services（NSS）是美国Mozilla基金会开发的一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla NSS 3.15.3及之前的版本中的libssl中存在竞争条件漏洞。远程攻击者可利用该漏洞造成拒绝服务（释放后重用），也可能执行任意代码。以下版本受到影响：Mozilla Firefox 26.0及之前的版本，Firefox ESR 24.1.0至24.2版本，Thunderbird 24.2及之前的版本，SeaMonkey 2.24 beta1及之前的版本。
+·CVE-2014-1491
+描述：Mozilla Network Security Services（NSS）是美国Mozilla基金会开发的一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla NSS 3.15.3及之前的版本中存在加密问题漏洞，该漏洞源于在Diffie-Hellman密钥交换期间程序没有限制使用公共的DH值。远程攻击者可通过使用某些值利用该漏洞绕过加密保护机制。以下版本受到影响：Mozilla Firefox 26.0及之前的版本，Firefox ESR 24.1.0至24.2版本，Thunderbird 24.2及之前的版本，SeaMonkey 2.24 beta1及之前的版本。
+·CVE-2014-1492
+描述：Mozilla Network Security Services（NSS）是美国Mozilla基金会开发的一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla NSS 3.15及之前的版本的certificate-checking实现过程中的lib/certdb/certdb.c文件的‘cert_TestHostName’函数存在安全漏洞。攻击者可借助特制的证书利用该漏洞欺骗SSL服务器。
+·CVE-2014-1544
+描述：Mozilla Network Security Services（NSS）是美国Mozilla基金会开发的一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。多款Mozilla产品中使用的NSS中libnss3.so文件的‘CERT_DestroyCertificate’函数存在释放后重用漏洞，该漏洞源于程序从可信域中不正确的移除了NSSCertificate结构。远程攻击者可利用该漏洞执行任意代码。以下版本受到影响：Firefox 30.0及之前版本，Firefox ESR 24.7之前的24.x版本和Thunderbird 24.6及之前版本。
+·CVE-2014-1545
+描述：Netscape Portable Runtime（NSPR）是一个跨平台库，它提供了类型定义、线程同步、时间处理等的API和类似于libc的函数，被用在服务应用程序中。NSPR 4.10.5及之前的版本中的‘sprintf’和‘console’函数存在安全漏洞。远程攻击者可利用该漏洞执行任意代码或造成拒绝服务（越边界写入）。
+·CVE-2014-1569
+描述：Mozilla Network Security Services（NSS）是美国Mozilla基金会开发的一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla NSS 3.16.2.4之前版本和3.17.3之前3.17.x版本的lib/util/quickder.c文件中的‘definite_length_decoder’函数存在安全漏洞，该漏洞源于程序没有正确处理ASN.1长度的DER编码。远程攻击者可借助编码中的超长字节序列利用该漏洞实施data-smuggling攻击。
+·CVE-2015-7181
+描述：Mozilla Firefox和Firefox ESR都是由美国Mozilla基金会开发。Firefox是一款开源Web浏览器；Firefox ESR是Firefox的一个延长支持版本。Mozilla Network Security Services（NSS）是一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla Firefox和Firefox ESR中使用的Mozilla NSS中的‘sec_asn1d_parse_leaf’函数存在安全漏洞，该漏洞源于程序没有正确限制访问数据结构体。远程攻击者可借助特制的OCTET STRING数据利用该漏洞造成拒绝服务（应用程序崩溃），或执行任意代码。以下产品及版本受到影响：Mozilla Firefox 42.0.2及之前版本，Firefox ESR 38.4之前38.x版本，Mozilla NSS 3.19.2.0及之前版本，3.20.0版本。
+·CVE-2015-7182
+描述：Mozilla Firefox和Firefox ESR都是由美国Mozilla基金会开发。Firefox是一款开源Web浏览器；Firefox ESR是Firefox的一个延长支持版本。Mozilla Network Security Services（NSS）是一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Firefox和Firefox ESR中使用的Mozilla NSS中的ASN.1解码器中存在基于堆的缓冲区溢出漏洞。远程攻击者可借助特制的OCTET STRING数据利用该漏洞造成拒绝服务（应用程序崩溃），或执行任意代码。以下产品及版本受到影响：Mozilla Firefox 42.0.2及之前版本，Firefox ESR 38.4之前38.x版本，Mozilla NSS 3.19.2.0及之前版本，3.20.0版本。
+·CVE-2015-7183
+描述：Mozilla Firefox和Firefox ESR都是由美国Mozilla基金会开发。Firefox是一款开源Web浏览器；Firefox ESR是Firefox的一个延长支持版本。Mozilla Network Security Services（NSS）是一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla Firefox和Firefox ESR中使用的Mozilla NSS中的Netscape Portable Runtime(NSPR)中的PL_ARENA_ALLOCATE实现过程存在整数溢出漏洞。远程攻击者可利用该漏洞造成拒绝服务（内存损坏和应用程序崩溃），或执行任意代码。以下产品及版本受到影响：Mozilla Firefox 42.0.2及之前版本，Firefox ESR 38.4之前38.x版本，Mozilla NSS 3.19.2.0及之前版本，3.20.0版本。
+·CVE-2016-1978
+描述：Mozilla Firefox是美国Mozilla基金会开发的一款开源Web浏览器。Mozilla Network Security Services（NSS）是一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla Firefox 44.0之前版本中使用的Mozilla NSS 3.21之前版本的‘ssl3_HandleECDHServerKeyExchange’函数中存在释放后重用漏洞，该漏洞源于程序在DHE和ECDHE握手期间没有成功分配内存。远程攻击者可利用该漏洞造成拒绝服务。
+·CVE-2016-1979
+描述：Mozilla Firefox是美国Mozilla基金会开发的一款开源Web浏览器。Mozilla Network Security Services（NSS）是一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla Firefox 45.0之前版本中使用的Mozilla NSS 3.21.1之前版本的‘PK11_ImportDERPrivateKeyInfoAndReturnKey’函数中存在释放后重用漏洞。远程攻击者可借助带有DER编码的密钥数据利用该漏洞造成拒绝服务。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+nspr、nspr-devel
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+nspr-4.13.1-1.el6或以上版本
+nspr-devel-4.13.1-1.el6或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2013-1739:需要重启 nspr 以使漏洞修复生效。
+CVE-2013-1740:需要重启 nspr 以使漏洞修复生效。
+CVE-2013-1741:需要重启 nspr 以使漏洞修复生效。
+CVE-2013-5605:需要重启 nspr 以使漏洞修复生效。
+CVE-2013-5606:需要重启 nspr 以使漏洞修复生效。
+CVE-2013-5607:需要重启 nspr 以使漏洞修复生效。
+CVE-2014-1490:需要重启 nspr 以使漏洞修复生效。
+CVE-2014-1491:需要重启 nspr 以使漏洞修复生效。
+CVE-2014-1492:需要重启 nspr 以使漏洞修复生效。
+CVE-2014-1544:需要重启 nspr 以使漏洞修复生效。
+CVE-2014-1545:需要重启 nspr 以使漏洞修复生效。
+CVE-2014-1569:需要重启 nspr 以使漏洞修复生效。
+CVE-2015-7181:需要重启 nspr 以使漏洞修复生效。
+CVE-2015-7182:需要重启 nspr 以使漏洞修复生效。
+CVE-2015-7183:需要重启 nspr 以使漏洞修复生效。
+CVE-2016-1978:需要重启 nspr 以使漏洞修复生效。
+CVE-2016-1979:需要重启 nspr 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+nspr(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/nspr-4.13.1-1.el6.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/nspr-4.13.1-1.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/nspr-devel-4.13.1-1.el6.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/nspr-devel-4.13.1-1.el6.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

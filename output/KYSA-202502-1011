@@ -1,0 +1,192 @@
+Name:KYSA-202502-1011
+Severity:重要
+Summary:gstreamer1-plugins-good安全漏洞
+Published:2025-02-11
+URL:/support/loophole/patch/7228.html
+Title:
+			公告ID：KYSA-202502-1011
+公告摘要：gstreamer1-plugins-good安全漏洞
+等级：重要
+发布日期：2025-02-11
+		
+1.修复的漏洞
+·CVE-2022-1920
+描述：GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于gst_matroska_demux_add_wvpk_header 中的堆覆盖，攻击者可以利用该漏洞可以导致系统崩溃。
+·CVE-2022-1921
+描述：GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于gst_avi_demux_invert 函数中的 avidemux 元素中的整数溢出，该函数允许在解析 avi 文件时进行堆覆盖，攻击者可以利用该漏洞可以执行任意代码。
+·CVE-2022-1922
+描述：GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于gst_matroska_decompress_data 函数中 matroskademux 元素中的整数溢出，这会导致段错误，攻击者可以利用该漏洞可以导致系统崩溃。
+·CVE-2022-1923
+描述：GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于zlib 解码gst_matroska_decompress_data 编码数据时整数溢出，攻击者可以利用该漏洞可以导致系统崩溃。
+·CVE-2022-1924
+描述：GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于zlib 解码gst_matroska_decompress_data 编码数据时整数溢出，攻击者可以利用该漏洞可以导致系统崩溃。
+·CVE-2022-1925
+描述：GStreamer是一套用于处理流媒体的框架。GStreamer 1.16.2版本存在安全漏洞，该漏洞源于gst_matroska_decompress_data 函数中 matroskaparse 元素中的整数溢出，导致堆溢出，攻击者可以利用该漏洞可以导致系统崩溃。
+·CVE-2022-2122
+描述：Intel Data Center Manager是美国英特尔（Intel）公司的一种软件解决方案。可收集和分析数据中心内各种设备的实时运行状况、功率和热量，帮助提高效率和正常运行时间。Intel Data Center Manager software 4.1之前版本存在安全漏洞，该漏洞源于访问控制不当，可能会使经过认证的用户通过相邻访问实现权限升级。
+·CVE-2024-47537
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+
+GStreamer存在输入验证错误漏洞，该漏洞源于当samples_count足够大时，则可能导致加法过程中出现整数溢出。
+·CVE-2024-47539
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer 1.24.10之前版本存在缓冲区错误漏洞，该漏洞源于在isomp4/qtdemux.c中的convert_to_s334_1a函数中发现了越界写入漏洞。
+·CVE-2024-47540
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+
+GStreamer存在安全漏洞，该漏洞源于在matroska-demux.c中的gst_matroska_demux_add_wvpk_header函数中发现了一个未初始化堆栈变量漏洞。
+·CVE-2024-47543
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer 1.24.10之前版本存在缓冲区错误漏洞，该漏洞源于在qtdemux.c中的qtdemux_parse_container函数中发现了越界读取漏洞。
+·CVE-2024-47544
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer 1.24.10之前版本存在代码问题漏洞，该漏洞源于在qtdemux.c中的qtdemux_parse_sbgp函数受到空引用漏洞的影响。
+·CVE-2024-47545
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer 1.24.10之前版本存在数字错误漏洞，该漏洞源于在qtdemux.c中的qtdemux_parse_trak函数中检测到整数下溢。
+·CVE-2024-47546
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer 1.24.10之前版本存在数字错误漏洞，该漏洞源于在qtdemux.c中的extract_cc_from_data函数中检测到整数下溢。
+·CVE-2024-47596
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer 1.24.10之前版本存在缓冲区错误漏洞，该漏洞源于在qtdemux.c中的qtdemux_parse_svq3_stsd_data函数中发现了越界读取。
+·CVE-2024-47597
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer 1.24.10之前版本存在缓冲区错误漏洞，该漏洞源于在qtdemux.c中的qtdemux_parse_samples函数中检测到越界读取。
+·CVE-2024-47599
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer存在代码问题漏洞，该漏洞源于在gstjpegdec.c中的gst_jpeg_dec_negotiate函数中发现空指针取消引用漏洞。
+·CVE-2024-47601
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer存在代码问题漏洞，该漏洞源于在matroska-demux.c中的gst_matroska_demux_parse_blockgroup_or_simpleblock函数中发现了一个空指针取消引用漏洞。
+·CVE-2024-47602
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer存在代码问题漏洞，该漏洞源于在matroska-demux.c中的gst_matroska_demux_add_wvpk_header函数中发现了一个空指针取消引用漏洞。
+·CVE-2024-47603
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer存在代码问题漏洞，该漏洞源于在matroska-demux.c中的gst_matroska_demux_update_tracks函数中发现了一个空指针取消引用漏洞。
+·CVE-2024-47606
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+
+GStreamer存在输入验证错误漏洞，该漏洞源于在qtdemux.c中的qtdemux_parse_theora_extension函数中检测到整数下溢。
+·CVE-2024-47613
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+
+GStreamer存在缓冲区错误漏洞，该漏洞源于在gstvorbisdec.c中的vorbis_handle_identification_packet函数中检测到堆栈缓冲区溢出。
+·CVE-2024-47774
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer 1.24.10之前版本存在缓冲区错误漏洞，该漏洞源于直接从输入文件中读取name_length值，而没有对其进行正确检查，从而导致整数溢出。
+·CVE-2024-47775
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer存在缓冲区错误漏洞，该漏洞源于在gstwavparse.c中的parse_ds64函数中发现越界读取漏洞。
+·CVE-2024-47776
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer存在缓冲区错误漏洞，该漏洞源于在gstwavparse.c中的gst_wavparse_cue_chunk中发现越界读取漏洞。
+·CVE-2024-47777
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer存在缓冲区错误漏洞，该漏洞源于在gstwavparse.c中的gst_wavparse_smpl_chunk函数中发现越界读取漏洞。
+·CVE-2024-47778
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer存在缓冲区错误漏洞，该漏洞源于在gstwavparse.c中的gst_wavparse_adtl_chunk中发现越界读取漏洞。
+·CVE-2024-47834
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+GStreamer存在资源管理错误漏洞，该漏洞源于在某些情况下可能导致释放后重用。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·aarch64架构:
+gstreamer1-plugins-good-gtk、gstreamer1-plugins-good、gstreamer1-plugins-good-help
+·x86_64架构:
+gstreamer1-plugins-good-gtk、gstreamer1-plugins-good、gstreamer1-plugins-good-help
+·银河麒麟云底座操作系统 V10
+·aarch64架构:
+gstreamer1-plugins-good-gtk、gstreamer1-plugins-good、gstreamer1-plugins-good-help
+·x86_64架构:
+gstreamer1-plugins-good-gtk、gstreamer1-plugins-good、gstreamer1-plugins-good-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (aarch64、x86_64)
+gstreamer1-plugins-good-1.16.2-8.ky10h或以上版本
+gstreamer1-plugins-good-help-1.16.2-8.ky10h或以上版本
+gstreamer1-plugins-good-gtk-1.16.2-8.ky10h或以上版本
+·银河麒麟云底座操作系统 V10 (aarch64、x86_64)
+gstreamer1-plugins-good-1.16.2-8.ky10h或以上版本
+gstreamer1-plugins-good-help-1.16.2-8.ky10h或以上版本
+gstreamer1-plugins-good-gtk-1.16.2-8.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+aarch64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+银河麒麟云底座操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-1920:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-1921:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-1922:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-1923:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-1924:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-1925:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-2122:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47537:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47539:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47540:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47543:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47544:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47545:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47546:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47596:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47597:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47599:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47601:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47602:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47603:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47606:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47613:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47774:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47775:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47776:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47777:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47778:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47834:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+gstreamer1-plugins-good(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-good-help-1.16.2-8.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-good-gtk-1.16.2-8.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-good-1.16.2-8.ky10h.aarch64.rpm
+
+gstreamer1-plugins-good(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-good-gtk-1.16.2-8.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-good-help-1.16.2-8.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-good-1.16.2-8.ky10h.x86_64.rpm
+
+·银河麒麟云底座操作系统 V10
+
+gstreamer1-plugins-good(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-good-1.16.2-8.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-good-gtk-1.16.2-8.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-good-help-1.16.2-8.ky10h.noarch.rpm
+
+gstreamer1-plugins-good(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-good-help-1.16.2-8.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-good-1.16.2-8.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-good-gtk-1.16.2-8.ky10h.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

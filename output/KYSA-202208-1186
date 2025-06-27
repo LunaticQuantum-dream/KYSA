@@ -1,0 +1,59 @@
+Name:KYSA-202208-1186
+Severity:重要
+Summary:qemu-kvm-ma安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1632.html
+Title:
+			公告ID：KYSA-202208-1186
+公告摘要：qemu-kvm-ma安全漏洞
+等级：Important
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2017-15124
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 2.14.3之前的版本中的VNC server实现存在安全漏洞，该漏洞源于程序没有限制发送到客户端上帧缓存区更新。攻击者可利用该漏洞造成拒绝服务。
+·CVE-2018-11806
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中的slirp/mbuf.c文件中的m_cat存在基于堆的缓冲区溢出漏洞，该漏洞源于程序没有正确的检测用户提交数据的长度，导致复制数据的大小超过了基于堆的固定长度缓冲区。远程攻击者可借助传入的数据包利用该漏洞执行任意代码。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+qemu-img-ma、qemu-kvm-common-ma、qemu-kvm-ma、qemu-kvm-tools-ma
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+qemu-img-ma-2.12.0-18.el7
+qemu-kvm-common-ma-2.12.0-18.el7
+qemu-kvm-ma-2.12.0-18.el7
+qemu-kvm-tools-ma-2.12.0-18.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+295.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+296.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+297.升级完成后是否需要重启服务或操作系统：
+·CVE-2017-15124：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2018-11806：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+qemu-kvm-ma（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/qemu-img-ma-2.12.0-18.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/qemu-kvm-common-ma-2.12.0-18.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/qemu-kvm-ma-2.12.0-18.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/qemu-kvm-tools-ma-2.12.0-18.el7.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,129 @@
+Name:KYSA-202102-0031
+Severity:中等
+Summary:tiff安全漏洞
+Published:2022-05-23
+URL:/support/loophole/patch/383.html
+Title:
+			公告ID：KYSA-202102-0031
+公告摘要：tiff安全漏洞
+等级：中等
+发布日期：2022-05-23
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V4 SP1
+银河麒麟桌面操作系统V4 SP2
+银河麒麟桌面操作系统V4 SP3
+银河麒麟桌面操作系统V4 SP4
+银河麒麟桌面操作系统V10
+银河麒麟桌面操作系统V10 SP1
+银河麒麟服务器操作系统V4 SP1
+银河麒麟服务器操作系统V4 SP2
+银河麒麟服务器操作系统V4 SP3
+银河麒麟服务器操作系统V4 SP4版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2020-35524
+描述：Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。LibTIFF 存在缓冲区错误漏洞，攻击者可利用该漏洞通过t2p read tiff size()触发缓冲区溢出，从而触发拒绝服务，并可能运行代码。
+CVE-2020-35523
+描述：Silicon Graphics LibTIFF是美国Silicon Graphics公司的一个读写TIFF（标签图像文件格式）文件的库。该库包含一些处理TIFF文件的命令行工具。LibTIFF 存在输入验证错误漏洞，攻击者可利用该漏洞通过LibTIFF的gtTileContig()触发缓冲区溢出，从而触发拒绝服务，并可能运行代码。
+
+2. 受影响的操作系统及软件包
+银河麒麟桌面操作系统V4桌面版
+libtiff-doc
+libtiff-opengl
+libtiff-tools
+libtiff5-dev
+libtiff5
+libtiffxx5
+银河麒麟桌面操作系统V10桌面版
+libtiff-doc
+libtiff-opengl
+libtiff-tools
+libtiff5-dev
+libtiff5
+libtiffxx5
+银河麒麟桌面操作系统V10 SP1
+libtiff-dev
+libtiff-doc
+libtiff-opengl
+libtiff-tools
+libtiff5-dev
+libtiff5
+libtiffxx5
+
+3. 软件包修复版本
+软件包：tiff
+4.0.6-1kord0.8（V4、V10）
+4.1.0+git191117-2kylin0.20.04.1（V10 SP1）
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级    $sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。   $dpkg -i Packagelists
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10、V4
+X86_64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-doc_4.0.6-1kord0.8_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-opengl_4.0.6-1kord0.8_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-tools_4.0.6-1kord0.8_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5-dev_4.0.6-1kord0.8_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5_4.0.6-1kord0.8_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiffxx5_4.0.6-1kord0.8_amd64.deb
+arm64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-doc_4.0.6-1kord0.8_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-opengl_4.0.6-1kord0.8_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-tools_4.0.6-1kord0.8_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5-dev_4.0.6-1kord0.8_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5_4.0.6-1kord0.8_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiffxx5_4.0.6-1kord0.8_arm64.deb
+银河麒麟桌面操作系统V10 SP1
+X86_64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-dev_4.1.0+git191117-2kylin0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-doc_4.1.0+git191117-2kylin0.20.04.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-opengl_4.1.0+git191117-2kylin0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-tools_4.1.0+git191117-2kylin0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5-dev_4.1.0+git191117-2kylin0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5_4.1.0+git191117-2kylin0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiffxx5_4.1.0+git191117-2kylin0.20.04.1_amd64.deb
+arm64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-dev_4.1.0+git191117-2kylin0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-doc_4.1.0+git191117-2kylin0.20.04.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-opengl_4.1.0+git191117-2kylin0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-tools_4.1.0+git191117-2kylin0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5-dev_4.1.0+git191117-2kylin0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5_4.1.0+git191117-2kylin0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiffxx5_4.1.0+git191117-2kylin0.20.04.1_arm64.deb
+mips64el软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-dev_4.1.0+git191117-2kylin0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-doc_4.1.0+git191117-2kylin0.20.04.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-opengl_4.1.0+git191117-2kylin0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff-tools_4.1.0+git191117-2kylin0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5-dev_4.1.0+git191117-2kylin0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiff5_4.1.0+git191117-2kylin0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tiff/libtiffxx5_4.1.0+git191117-2kylin0.20.04.1_mips64el.deb
+注：软件包仅适用于银河麒麟桌面操作系统V4 SP1
+银河麒麟桌面操作系统V4 SP2
+银河麒麟桌面操作系统V4 SP3
+银河麒麟桌面操作系统V4 SP4
+银河麒麟桌面操作系统V10
+银河麒麟桌面操作系统V10 SP1
+银河麒麟服务器操作系统V4 SP1
+银河麒麟服务器操作系统V4 SP2
+银河麒麟服务器操作系统V4 SP3
+银河麒麟服务器操作系统V4 SP4版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

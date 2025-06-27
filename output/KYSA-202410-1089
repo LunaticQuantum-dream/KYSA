@@ -1,0 +1,165 @@
+Name:KYSA-202410-1089
+Severity:中等
+Summary:libpcap安全漏洞
+Published:2024-10-29
+URL:/support/loophole/patch/6625.html
+Title:
+			公告ID：KYSA-202410-1089
+公告摘要：libpcap安全漏洞
+等级：中等
+发布日期：2024-10-29
+		
+1.修复的漏洞
+·CVE-2023-7256
+描述：libpcap是Tcpdump团队的一款用于网络流量捕获的便携式C/C ++库。
+
+libpcap存在资源管理错误漏洞，该漏洞源于sock_initaddress()函数对getaddrinfo()和freeaddrinfo()的调用逻辑不清晰，可能导致同一内存块被多次释放。
+·CVE-2024-8006
+描述：libpcap是Tcpdump团队的一款用于网络流量捕获的便携式C/C ++库。
+
+libpcap存在代码问题漏洞，该漏洞源于pcap_findalldevs_ex()函数中对文件系统路径的处理不当，当指定路径不能作为目录使用时，函数未检查opendir()的返回值并直接将NULL值传递给readdir()，从而导致空指针解引用。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+libpcap、libpcap-devel、libpcap-help
+·mips64el架构:
+libpcap、libpcap-help、libpcap-devel
+·x86_64架构:
+libpcap、libpcap-help、libpcap-devel
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+libpcap-help、libpcap、libpcap-devel
+·x86_64架构:
+libpcap、libpcap-help、libpcap-devel
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+libpcap、libpcap-devel、libpcap-help
+·x86_64架构:
+libpcap、libpcap-help、libpcap-devel
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+libpcap、libpcap-help、libpcap-devel
+·x86_64架构:
+libpcap、libpcap-devel、libpcap-help
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+libpcap、libpcap-devel、libpcap-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、mips64el、x86_64)
+libpcap-devel-1.9.1-7.ky10或以上版本
+libpcap-1.9.1-7.ky10或以上版本
+libpcap-help-1.9.1-7.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+libpcap-devel-1.9.1-7.ky10或以上版本
+libpcap-1.9.1-7.ky10或以上版本
+libpcap-help-1.9.1-7.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+libpcap-devel-1.9.1-7.ky10或以上版本
+libpcap-1.9.1-7.ky10或以上版本
+libpcap-help-1.9.1-7.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+libpcap-devel-1.9.1-7.ky10或以上版本
+libpcap-1.9.1-7.ky10或以上版本
+libpcap-help-1.9.1-7.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+libpcap-devel-1.9.1-7.ky10或以上版本
+libpcap-1.9.1-7.ky10或以上版本
+libpcap-help-1.9.1-7.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-7256:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-8006:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+libpcap(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/libpcap-help-1.9.1-7.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/libpcap-1.9.1-7.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/libpcap-devel-1.9.1-7.ky10.aarch64.rpm
+
+libpcap(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libpcap-1.9.1-7.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libpcap-devel-1.9.1-7.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libpcap-help-1.9.1-7.ky10.noarch.rpm
+
+libpcap(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/libpcap-devel-1.9.1-7.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/libpcap-1.9.1-7.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/libpcap-help-1.9.1-7.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+libpcap(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libpcap-devel-1.9.1-7.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libpcap-help-1.9.1-7.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libpcap-1.9.1-7.ky10.aarch64.rpm
+
+libpcap(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libpcap-devel-1.9.1-7.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libpcap-1.9.1-7.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libpcap-help-1.9.1-7.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+libpcap(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/libpcap-1.9.1-7.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/libpcap-help-1.9.1-7.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/libpcap-devel-1.9.1-7.ky10.aarch64.rpm
+
+libpcap(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/libpcap-1.9.1-7.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/libpcap-devel-1.9.1-7.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/libpcap-help-1.9.1-7.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+libpcap(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/libpcap-1.9.1-7.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/libpcap-devel-1.9.1-7.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/libpcap-help-1.9.1-7.ky10.noarch.rpm
+
+libpcap(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/libpcap-help-1.9.1-7.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/libpcap-1.9.1-7.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/libpcap-devel-1.9.1-7.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+libpcap(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/libpcap-help-1.9.1-7.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/libpcap-1.9.1-7.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/libpcap-devel-1.9.1-7.ky10.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

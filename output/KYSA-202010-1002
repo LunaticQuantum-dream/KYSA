@@ -1,0 +1,13 @@
+Name:KYSA-202010-1002
+Severity:低等
+Summary:HDF5漏洞
+Published:2020-10-23
+URL:/support/loophole/patch/332.html
+Title:
+			摘要：          HDF5漏洞
+安全等级：          低等
+公告ID：        KYSA-202010-1002
+发布日期：         2020-10-23
+影响CVE：         CVE-2018-17234、CVE-2018-17237、CVE-2018-17434、CVE-2018-17437、CVE-2018-17438
+		
+1. 修复的CVE信息：CVE-2018-17234描述：用于管理存储不同类型数据的工具套件，它能够管理、操作、查看、分析数据，并生成可移植格式的文件。 HDF5 1.10.3及之前版本中的H5Ocache.c文件的‘H5O__chunk_deserialize()’函数存在安全漏洞。攻击者可借助特制的HDF5文件利用该漏洞造成拒绝服务（内存泄露和内存损坏）。CVE-2018-17237描述：HDF5是一套免费的用于管理存储不同类型数据的工具套件，它能够管理、操作、查看、分析数据，并生成可移植格式的文件。 HDF5 1.10.3版本中的H5Dchunk.c文件的‘H5D__chunk_set_info_real()’函数存在安全漏洞，该漏洞源于程序没有正确的执行保护措施来防范除零错误。攻击者可借助特制的HDF文件利用该漏洞造成拒绝服务。CVE-2018-17434描述：HDF5是一套免费的用于管理存储不同类型数据的工具套件，它能够管理、操作、查看、分析数据，并生成可移植格式的文件。 HDF5 1.10.3及之前版本中的h5repack_filters.c文件的‘apply_filters()’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务。CVE-2018-17437描述：HDF5是一套免费的用于管理存储不同类型数据的工具套件，它能够管理、操作、查看、分析数据，并生成可移植格式的文件。 HDF5 1.10.3及之前版本中的H5Odtype.c文件的‘H5O_dtype_decode_helper()’函数存在内存泄露漏洞。攻击者可借助特制的HDF5文件利用该漏洞造成拒绝服务（内存消耗）。CVE-2018-17438描述：HDF5是一套免费的用于管理存储不同类型数据的工具套件，它能够管理、操作、查看、分析数据，并生成可移植格式的文件。 HDF5 1.10.3及之前版本中的H5Dselect.c文件的‘H5D__select_io()’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务。2. 受影响的操作系统：银河麒麟高级服务器操作系统V10SP13. 修复版本    hdf5-1.8.20-10 4. 受影响的软件包银河麒麟高级服务器操作系统V10SP1x86_64：hdf5-1.8.20-10.ky10.x86_64.rpmhdf5-devel-1.8.20-10.ky10.x86_64.rpmaarch64：hdf5-1.8.20-10.ky10.aarch64.rpmhdf5-devel-1.8.20-10.ky10.aarch64.rpmmips64el：              hdf5-1.8.20-10.ky10.mips64el.rpmhdf5-devel-1.8.20-10.ky10.mips64el.rpm5.修复方法        方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。银河麒麟高级服务器操作系统V10SP1：仓库源地址：aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/aarch64/        x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/x86_64/        mips64el:http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/mips64el/配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装 通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：rpm -Uvh Packagelists6. 软件包下载地址银河麒麟高级服务器操作系统V10SP1Hdf5 X86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/x86_64/Packages/hdf5-1.8.20-10.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/x86_64/Packages/hdf5-devel-1.8.20-10.ky10.x86_64.rpmhdf5 aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/aarch64/Packages/hdf5-1.8.20-10.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/aarch64/Packages/hdf5-devel-1.8.20-10.ky10.aarch64.rpmhdf5 mips64el软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/mips64el/Packages/hdf5-1.8.20-10.ky10.mips64el.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/mips64el/Packages/hdf5-devel-1.8.20-10.ky10.mips64el.rpm 

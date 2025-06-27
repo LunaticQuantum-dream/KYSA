@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-2473
+Severity:重要
+Summary:kernel 安全更新与缺陷修复
+Published:2017-08-15
+URL:/support/loophole/patch/65.html
+Title:
+			摘要：             kernel 安全更新与缺陷修复
+安全等级：          重要
+公告ID：           CS2CSA-2017-2473
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-08-15 
+CVE：              CVE-2017-7533 CVSS3评分 7.8
+		
+1. 概述：中标麒麟高级服务器操作系统V7有kernel可用的安全更新.中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：kernel升级包。4. 安全更新：* 当inotify_handle_event()与vfs_rename()两个系统调用同时对一个文件进行重命名的时候，存在竞争条件(race condition)，程序运行的结果取决与进程的精确时序，在极少数的情况下可会被攻击者利用，可以导致slab数据或者slab空列表指针发生错误。(CVE-2017-7533 CVSS3评分：7.8，重要的)特别鸣谢发现者：Leilei Lin (阿里巴巴)Fan Wu (香港大学)Shixiong Zhao (香港大学)5. 缺陷修复：CVE-2017-7533  kernel： inotify_handle_event() sys_rename()存在竞争条件6. 安装包列表：中标麒麟高级服务器操作系统V7： 源码包： kernel-3.10.0-693.1.1.el7.src.rpmx86_64二进制包：kernel-3.10.0-693.1.1.el7.x86_64.rpmkernel-debug-3.10.0-693.1.1.el7.x86_64.rpmkernel-debug-debuginfo-3.10.0-693.1.1.el7.x86_64.rpmkernel-debug-devel-3.10.0-693.1.1.el7.x86_64.rpmkernel-debuginfo-3.10.0-693.1.1.el7.x86_64.rpmkernel-debuginfo-common-x86_64-3.10.0-693.1.1.el7.x86_64.rpmkernel-devel-3.10.0-693.1.1.el7.x86_64.rpmkernel-headers-3.10.0-693.1.1.el7.x86_64.rpmkernel-tools-3.10.0-693.1.1.el7.x86_64.rpmkernel-tools-debuginfo-3.10.0-693.1.1.el7.x86_64.rpmkernel-tools-libs-3.10.0-693.1.1.el7.x86_64.rpmperf-3.10.0-693.1.1.el7.x86_64.rpmperf-debuginfo-3.10.0-693.1.1.el7.x86_64.rpmpython-perf-3.10.0-693.1.1.el7.x86_64.rpmpython-perf-debuginfo-3.10.0-693.1.1.el7.x86_64.rpm			

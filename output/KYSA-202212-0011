@@ -1,0 +1,71 @@
+Name:KYSA-202212-0011
+Severity:中等
+Summary:libxml2安全漏洞
+Published:2023-12-14
+URL:/support/loophole/patch/4685.html
+Title:
+			公告ID：KYSA-202212-0011
+公告摘要：libxml2安全漏洞
+等级：中等
+发布日期：2023-12-14
+		
+1. 漏洞概述
+CVE-2022-40304
+libxml2是开源的一个用来解析XML文档的函数库。它用C语言写成，并且能为多种语言所调用，例如C语言，C++，XSH。 在2.10.3之前的libxml2中发现了一个问题。某些无效的XML实体定义可能会损坏哈希表键，从而可能导致后续的逻辑错误。在一种情况下，可能会引发双重自由。
+CVE-2022-40303
+libxml2是开源的一个用来解析XML文档的函数库。它用C语言写成，并且能为多种语言所调用，例如C语言，C++，XSH。在2.10.3之前的libxml2中发现了一个问题。当在启用XML_PARSE_HUGE解析器选项的情况下解析数GB的XML文档时，几个整数计数器可能会溢出。这会导致试图以负2GB的偏移量访问阵列，通常会导致分段错误。
+CVE-2022-2309
+lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。libxml2是开源的一个用来解析XML文档的函数库。它用C语言写成，并且能为多种语言所调用，例如C语言，C++，XSH。 lxml和libxml2 2.9.10版本至2.9.14版本存在代码问题漏洞。攻击者利用该漏洞通过伪造的输入数据触发崩溃。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303
+x86_64 架构：
+libxml2-utils、libxml2、python-libxml2、python3-libxml2
+arm64 架构：
+libxml2-utils、libxml2、python-libxml2、python3-libxml2
+mips64el 架构：
+libxml2-utils、libxml2、python-libxml2、python3-libxml2
+loongarch64 架构：
+libxml2-utils、libxml2、python-libxml2、python3-libxml2
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303
+2.9.10+dfsg-5kylin0.20.04.6
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libxml2
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/libxml2-utils_2.9.10%2Bdfsg-5kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/python-libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/python3-libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/libxml2-utils_2.9.10%2Bdfsg-5kylin0.20.04.6_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/python-libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/python3-libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/libxml2-utils_2.9.10%2Bdfsg-5kylin0.20.04.6_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/python-libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/python3-libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/libxml2-utils_2.9.10%2Bdfsg-5kylin0.20.04.6_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/python-libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libx/libxml2/python3-libxml2_2.9.10%2Bdfsg-5kylin0.20.04.6_loongarch64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

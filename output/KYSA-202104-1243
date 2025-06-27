@@ -1,0 +1,96 @@
+Name:KYSA-202104-1243
+Severity:中等
+Summary:openssh安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/3553.html
+Title:
+			公告ID：KYSA-202104-1243
+公告摘要：openssh安全漏洞
+等级：Moderate
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2014-2653
+描述：OpenSSH（OpenBSD Secure Shell）是OpenBSD计划组所维护的一套用于安全访问远程计算机的连接工具。该工具是SSH协议的开源实现，支持对所有的传输进行加密，可有效阻止窃听、连接劫持以及其他网络级的攻击。OpenSSH 6.6及之前版本的客户端中的sshconnect.c文件的‘verify_host_key’函数存在安全漏洞。远程攻击者可通过提供证书利用该漏洞跳过SSHFP DNS RR检查。
+·CVE-2015-5600
+描述：OpenSSH（OpenBSD Secure Shell）是OpenBSD计划组所维护的一套用于安全访问远程计算机的连接工具。该工具是SSH协议的开源实现，支持对所有的传输进行加密，可有效阻止窃听、连接劫持以及其他网络级的攻击。OpenSSH 6.9及之前版本的sshd中的auth2-chall.c文件中的‘kbdint_next_device’函数存在安全漏洞，该漏洞源于程序没有正确限制处理单链接中的keyboard-interactive设备。远程攻击者可借助ssh -oKbdInteractiveDevices选项中较长且重复的列表利用该漏洞实施暴力破解攻击，或造成拒绝服务（CPU消耗）。
+·CVE-2015-6563
+描述：OpenSSH（OpenBSD Secure Shell）on non-OpenBSD platforms是OpenBSD计划组所维护的一套运行于非OpenBSD（基于BSD的UNIX实现）平台且用于安全访问远程计算机的连接工具。基于non-OpenBSD平台的OpenSSH 6.9及之前版本的sshd中的monitor组件中存在安全漏洞，该漏洞源于程序错误的接收MONITOR_REQ_PAM_INIT_CTX请求中的外部用户名数据。本地攻击者可通过SSH登录访问并控制sshd uid向MONITOR_REQ_PWNAM发送特制的请求，利用该漏洞实施伪造攻击。
+·CVE-2015-6564
+描述：OpenSSH（OpenBSD Secure Shell）on non-OpenBSD platforms是OpenBSD计划组所维护的一套运行于非OpenBSD（基于BSD的UNIX实现）平台且用于安全访问远程计算机的连接工具。基于non-OpenBSD平台的OpenSSH 7.0之前版本的sshd中的monitor.c文件中的‘mm_answer_pam_free_ctx’函数存在释放后重用漏洞。本地攻击者可通过控制sshd uid发送错误的MONITOR_REQ_PAM_FREE_CTX请求利用该漏洞获取权限。
+·CVE-2015-8325
+描述：OpenSSH（OpenBSD Secure Shell）是OpenBSD计划组所维护的一套用于安全访问远程计算机的连接工具。该工具是SSH协议的开源实现，支持对所有的传输进行加密，可有效阻止窃听、连接劫持以及其他网络级的攻击。sshd是其中的一个独立守护进程。OpenSSH 7.2p2及之前版本的sshd中的session.c文件中的‘do_setup_env’函数存在安全漏洞。当程序启用UseLogin功能并且PAM被配置成读取用户主目录中的.pam_environment文件时，本地攻击者可借助/bin/login程序的特制的环境变量利用该漏洞获取权限。
+·CVE-2017-15906
+描述：OpenSSH（OpenBSD Secure Shell）是OpenBSD计划组所维护的一套用于安全访问远程计算机的连接工具。该工具是SSH协议的开源实现，支持对所有的传输进行加密，可有效阻止窃听、连接劫持以及其他网络级的攻击。
+OpenSSH 7.6之前的版本中的sftp-server.c文件的‘process_open’函数存在安全漏洞，该漏洞源于程序在只读模式下没有正确的阻止写入操作。攻击者可利用该漏洞创建长度为零的文件。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+openssh、openssh-askpass、openssh-cavs、openssh-clients、openssh-keycat、openssh-ldap、openssh-server、openssh-server-sysvinit、pam_ssh_agent_auth
+·x86_64架构:
+openssh、openssh-askpass、openssh-cavs、openssh-clients、openssh-keycat、openssh-ldap、openssh-server、openssh-server-sysvinit、pam_ssh_agent_auth
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+openssh-7.4p1-16.el7.ns7.07或以上版本
+openssh-askpass-7.4p1-16.el7.ns7.07或以上版本
+openssh-cavs-7.4p1-16.el7.ns7.07或以上版本
+openssh-clients-7.4p1-16.el7.ns7.07或以上版本
+openssh-keycat-7.4p1-16.el7.ns7.07或以上版本
+openssh-ldap-7.4p1-16.el7.ns7.07或以上版本
+openssh-server-7.4p1-16.el7.ns7.07或以上版本
+openssh-server-sysvinit-7.4p1-16.el7.ns7.07或以上版本
+pam_ssh_agent_auth-0.10.3-2.16.el7.ns7.07或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2014-2653:需要重启 openssh 以使漏洞修复生效。
+CVE-2015-5600:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2015-6563:需要重启 openssh 以使漏洞修复生效。
+CVE-2015-6564:需要重启 openssh 以使漏洞修复生效。
+CVE-2015-8325:需要重启 openssh 以使漏洞修复生效。
+CVE-2017-15906:需要重启 openssh 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10
+
+openssh(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/openssh-7.4p1-16.el7.ns7.07.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/openssh-askpass-7.4p1-16.el7.ns7.07.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/openssh-cavs-7.4p1-16.el7.ns7.07.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/openssh-clients-7.4p1-16.el7.ns7.07.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/openssh-keycat-7.4p1-16.el7.ns7.07.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/openssh-ldap-7.4p1-16.el7.ns7.07.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/openssh-server-7.4p1-16.el7.ns7.07.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/openssh-server-sysvinit-7.4p1-16.el7.ns7.07.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/pam_ssh_agent_auth-0.10.3-2.16.el7.ns7.07.aarch64.rpm
+
+openssh(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/openssh-7.4p1-16.el7.ns7.07.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/openssh-askpass-7.4p1-16.el7.ns7.07.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/openssh-cavs-7.4p1-16.el7.ns7.07.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/openssh-clients-7.4p1-16.el7.ns7.07.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/openssh-keycat-7.4p1-16.el7.ns7.07.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/openssh-ldap-7.4p1-16.el7.ns7.07.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/openssh-server-7.4p1-16.el7.ns7.07.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/openssh-server-sysvinit-7.4p1-16.el7.ns7.07.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/pam_ssh_agent_auth-0.10.3-2.16.el7.ns7.07.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

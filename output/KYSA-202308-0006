@@ -1,0 +1,81 @@
+Name:KYSA-202308-0006
+Severity:重要
+Summary:openjdk-lts安全漏洞
+Published:2024-01-11
+URL:/support/loophole/patch/4891.html
+Title:
+			公告ID：KYSA-202308-0006
+公告摘要：openjdk-lts安全漏洞
+等级：重要
+发布日期：2024-01-11
+		
+1. 漏洞概述
+CVE-2023-22045
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE 的 Oracle Java SE, Oracle GraalVM Enterprise Edition, Oracle GraalVM for JDK product 存在安全漏洞，该漏洞源于 Hotspot 模块允许未经身份验证的攻击者通过多种协议进行网络访问，从而危害 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK。成功攻击此漏洞可能会导致对 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK 可访问数据的子集进行未经授权的读取访问。 注意：可以通过使用指定组件中的 API 来利用此漏洞，例如，通过向 API 提供数据的 Web 服务。 此漏洞还适用于 Java 部署，通常在运行沙盒 Java Web Start 应用程序或沙盒 Java 小程序的客户端中，这些部署加载和运行不受信任的代码（例如，来自 Internet 的代码）并依赖 Java 沙箱来确保安全。
+CVE-2023-22036
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE 的 Oracle Java SE, Oracle GraalVM Enterprise Edition, Oracle GraalVM for JDK product 存在安全漏洞，该漏洞源于 Utility 模块允许未经身份验证的攻击者通过多种协议进行网络访问，从而危害 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK。成功攻击此漏洞可能会导致未经授权的能力，从而导致 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK 的部分拒绝服务（部分 DOS）。 注意：可以通过使用指定组件中的 API 来利用此漏洞，例如，通过向 API 提供数据的 Web 服务。 此漏洞还适用于 Java 部署，通常在运行沙盒 Java Web Start 应用程序或沙盒 Java 小程序的客户端中，这些部署加载和运行不受信任的代码（例如，来自 Internet 的代码）并依赖 Java 沙箱来确保安全。
+CVE-2023-22044
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。 Oracle Java SE 的 Oracle Java SE, Oracle GraalVM Enterprise Edition, Oracle GraalVM for JDK product 存在安全漏洞，该漏洞源于 Hotspot 模块允许未经身份验证的攻击者通过多种协议进行网络访问，从而危害 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK。成功攻击此漏洞可能会导致对 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK 可访问数据的子集进行未经授权的读取访问。 注意：可以通过使用指定组件中的 API 来利用此漏洞，例如，通过向 API 提供数据的 Web 服务。 此漏洞还适用于 Java 部署，通常在运行沙盒 Java Web Start 应用程序或沙盒 Java 小程序的客户端中，这些部署加载和运行不受信任的代码（例如，来自 Internet 的代码）并依赖 Java 沙箱来确保安全。
+CVE-2023-25193
+HarfBuzz是一款用于OpenType字体的文本引擎。 HarfBuzz 6.0.0 版本及之前版本存在安全漏洞。
+CVE-2023-22049
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE 的 Oracle Java SE, Oracle GraalVM Enterprise Edition, Oracle GraalVM for JDK product 存在安全漏洞，该漏洞源于 Libraries 模块允许未经身份验证的攻击者通过多种协议进行网络访问，从而危害 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK。成功攻击此漏洞可能会导致对某些 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK 可访问数据进行未经授权的更新、插入或删除访问。 注意：可以通过使用指定组件中的 API 来利用此漏洞，例如，通过向 API 提供数据的 Web 服务。 此漏洞还适用于 Java 部署，通常在运行沙盒 Java Web Start 应用程序或沙盒 Java 小程序的客户端中，这些部署加载和运行不受信任的代码（例如，来自 Internet 的代码）并依赖 Java 沙箱来确保安全。
+CVE-2023-22006
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。 Oracle Java SE 的 Oracle Java SE, Oracle GraalVM Enterprise Edition, Oracle GraalVM for JDK product 存在安全漏洞，该漏洞源于 Networking 模块允许未经身份验证的攻击者通过多种协议进行网络访问，从而危害 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK。成功的攻击需要攻击者以外的人进行人际交互。 成功攻击此漏洞可能会导致对某些 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK 可访问数据进行未经授权的更新、插入或删除访问。 注意：此漏洞适用于 Java 部署，通常在运行沙盒 Java Web Start 应用程序或沙盒 Java 小程序的客户端中，这些部署加载和运行不受信任的代码（例如，来自 Internet 的代码）并依赖 Java 沙箱来确保安全。 此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的 Java 部署（通常在服务器中）。
+CVE-2023-22041
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE 的 Oracle Java SE, Oracle GraalVM Enterprise Edition, Oracle GraalVM for JDK product 存在安全漏洞，该漏洞源于 Hotspot 模块允许未经身份验证的攻击者登录 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK 执行的基础设施，从而危害 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK。成功攻击此漏洞可能会导致对关键数据的未经授权的访问或对所有 Oracle Java SE、Oracle GraalVM Enterprise Edition、Oracle GraalVM for JDK 可访问数据的完全访问。 注意：此漏洞适用于 Java 部署，通常在运行沙盒 Java Web Start 应用程序或沙盒 Java 小程序的客户端中，这些部署加载和运行不受信任的代码（例如，来自 Internet 的代码）并依赖 Java 沙箱来确保安全。 此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的 Java 部署（通常在服务器中）。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303 Update2
+x86_64 架构：
+openjdk-11-demo、openjdk-11-jdk-headless、openjdk-11-jdk、openjdk-11-jre-headless、openjdk-11-jre-zero、openjdk-11-jre、openjdk-11-source
+arm64 架构：
+openjdk-11-demo、openjdk-11-jdk-headless、openjdk-11-jdk、openjdk-11-jre-headless、openjdk-11-jre-zero、openjdk-11-jre、openjdk-11-source
+mips64el 架构：
+openjdk-11-demo、openjdk-11-jdk-headless、openjdk-11-jdk、openjdk-11-jre-headless、openjdk-11-jre、openjdk-11-source
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303 Update2
+11.0.20.1+1-0kylin1~20.04
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install openjdk-11-jdk
+$sudo apt install openjdk-11-jre
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303 Update2
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-demo_11.0.20.1%2B1-0kylin1~20.04_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk-headless_11.0.20.1%2B1-0kylin1~20.04_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk_11.0.20.1%2B1-0kylin1~20.04_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre-headless_11.0.20.1%2B1-0kylin1~20.04_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre-zero_11.0.20.1%2B1-0kylin1~20.04_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre_11.0.20.1%2B1-0kylin1~20.04_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-source_11.0.20.1%2B1-0kylin1~20.04_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-demo_11.0.20.1%2B1-0kylin1~20.04_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk-headless_11.0.20.1%2B1-0kylin1~20.04_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk_11.0.20.1%2B1-0kylin1~20.04_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre-headless_11.0.20.1%2B1-0kylin1~20.04_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre-zero_11.0.20.1%2B1-0kylin1~20.04_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre_11.0.20.1%2B1-0kylin1~20.04_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-source_11.0.20.1%2B1-0kylin1~20.04_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-demo_11.0.20.1%2B1-0kylin1~20.04_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk-headless_11.0.20.1%2B1-0kylin1~20.04_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk_11.0.20.1%2B1-0kylin1~20.04_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre-headless_11.0.20.1%2B1-0kylin1~20.04_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre_11.0.20.1%2B1-0kylin1~20.04_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-source_11.0.20.1%2B1-0kylin1~20.04_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

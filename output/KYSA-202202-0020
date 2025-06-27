@@ -1,0 +1,75 @@
+Name:KYSA-202202-0020
+Severity:中等
+Summary:python3.5安全漏洞
+Published:2022-11-07
+URL:/support/loophole/patch/2369.html
+Title:
+			 公告ID：KYSA-202202-0020
+公告摘要： python3.5安全漏洞
+等级：中等
+发布日期：2022-11-07
+		
+1. 修复的CVE
+KVE-2022-0204
+kysec是麒麟系统安全管控工具。该组件存在安全漏洞，使得python3解析器可以通过运行模块绕过kysec管控。
+KVE-2022-0227
+kysec是麒麟系统安全管控工具。该组件存在安全漏洞，使得python3解析器可以通过命令行参数绕过kysec管控。
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+idle-python3.5、libpython3.5-minimal、libpython3.5-stdlib、libpython3.5-testsuite、libpython3.5、python3.5-examples、python3.5-minimal、python3.5-venv、python3.5
+arm64 架构：
+idle-python3.5、libpython3.5-minimal、libpython3.5-stdlib、libpython3.5-testsuite、libpython3.5、python3.5-examples、python3.5-minimal、python3.5-venv、python3.5
+mips64el 架构：
+idle-python3.5、libpython3.5-minimal、libpython3.5-stdlib、libpython3.5-testsuite、libpython3.5、python3.5-examples、python3.5-minimal、python3.5-venv、python3.5
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+3.5.2-2kord0~16.04.13+esm1k2
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+$sudo apt install python3.5
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/idle-python3.5_3.5.2-2kord0~16.04.13%2Besm1k2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-minimal_3.5.2-2kord0~16.04.13%2Besm1k2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-stdlib_3.5.2-2kord0~16.04.13%2Besm1k2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-testsuite_3.5.2-2kord0~16.04.13%2Besm1k2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5_3.5.2-2kord0~16.04.13%2Besm1k2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-examples_3.5.2-2kord0~16.04.13%2Besm1k2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-minimal_3.5.2-2kord0~16.04.13%2Besm1k2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-venv_3.5.2-2kord0~16.04.13%2Besm1k2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5_3.5.2-2kord0~16.04.13%2Besm1k2_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/idle-python3.5_3.5.2-2kord0~16.04.13%2Besm1k2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-minimal_3.5.2-2kord0~16.04.13%2Besm1k2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-stdlib_3.5.2-2kord0~16.04.13%2Besm1k2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-testsuite_3.5.2-2kord0~16.04.13%2Besm1k2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5_3.5.2-2kord0~16.04.13%2Besm1k2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-examples_3.5.2-2kord0~16.04.13%2Besm1k2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-minimal_3.5.2-2kord0~16.04.13%2Besm1k2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-venv_3.5.2-2kord0~16.04.13%2Besm1k2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5_3.5.2-2kord0~16.04.13%2Besm1k2_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/idle-python3.5_3.5.2-2kord0~16.04.13%2Besm1k2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-minimal_3.5.2-2kord0~16.04.13%2Besm1k2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-stdlib_3.5.2-2kord0~16.04.13%2Besm1k2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-testsuite_3.5.2-2kord0~16.04.13%2Besm1k2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5_3.5.2-2kord0~16.04.13%2Besm1k2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-examples_3.5.2-2kord0~16.04.13%2Besm1k2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-minimal_3.5.2-2kord0~16.04.13%2Besm1k2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-venv_3.5.2-2kord0~16.04.13%2Besm1k2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5_3.5.2-2kord0~16.04.13%2Besm1k2_mips64el.deb
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

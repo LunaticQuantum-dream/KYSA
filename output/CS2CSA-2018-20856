@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-20856
+Severity:重要
+Summary:Linux kernel 资源管理错误漏漏洞
+Published:2020-04-05
+URL:/support/loophole/patch/226.html
+Title:
+			摘要：           Linux kernel 资源管理错误漏漏洞
+安全等级：          重要
+公告ID：         CS2CSA-2018-20856
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2020-04-05
+CVE：          CVE-2018-20856
+		
+1. 概述：中标麒麟高级服务器操作系统软件V7有kpatch-patch,kernel-rt,kernel-alt,kernel可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：在Linux内核的块驱动程序实现（blk_drain_queue（）函数）中发现一个缺陷，在释放系统块设备子系统中未完成的命令队列时，可能触发释放后使用条件。攻击者可以利用此漏洞使系统崩溃或损坏本地内存，从而导致权限提升。

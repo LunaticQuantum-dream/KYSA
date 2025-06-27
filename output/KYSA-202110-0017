@@ -1,0 +1,49 @@
+Name:KYSA-202110-0017
+Severity:中等
+Summary:docker.io安全漏洞
+Published:2022-01-11
+URL:/support/loophole/patch/2506.html
+Title:
+			公告ID：KYSA-202110-0017
+公告摘要：docker.io安全漏洞
+等级：中等
+发布日期：2022-01-11
+		
+1. 修复的CVE
+CVE-2021-41089
+Docker Engine是美国Docker公司的一套轻量级的运行环境和包管理工具。Docker Engine 存在安全漏洞，该漏洞源于使用docker cp将文件复制到精心编制的容器中可能会导致主机中现有文件的Unix文件权限发生变化。攻击者可利用该漏洞访问受限数据。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+docker.io、vim-syntax-docker
+arm64 架构：
+docker.io、vim-syntax-docker
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+18.09.7-0kord1~16.04.9+esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install docker.io
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/d/docker.io/docker.io_18.09.7-0kord1~16.04.9%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/d/docker.io/vim-syntax-docker_18.09.7-0kord1~16.04.9%2Besm1_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/d/docker.io/docker.io_18.09.7-0kord1~16.04.9%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/d/docker.io/vim-syntax-docker_18.09.7-0kord1~16.04.9%2Besm1_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

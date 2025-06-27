@@ -1,0 +1,13 @@
+Name:KYSA-202110-1002
+Severity:重要
+Summary:infinispan漏洞
+Published:2021-10-16
+URL:/support/loophole/patch/522.html
+Title:
+			摘要：infinispan漏洞
+安全等级：重要
+公告ID：KYSA-202110-1002
+发布日期：2021-10-16
+影响CVE：CVE-2016-0750、CVE-2017-15089
+		
+1. 修复的CVE信息CVE-2016-0750描述：infinispan 9.1.0之前hotrod java客户机。最后在某些事件中bytearray消息内容自动反序列化。恶意用户可以利用这个漏洞注射特制序列化对象实现远程代码执行或进行其他攻击。CVE-2017-15089描述：这是在9.2.0前Infinispan Hotrod客户机中发现的。CR1将不安全的从缓存中读取序列化的数据信息。一个经过验证的攻击者可以注入恶意对象数据在客户端缓存和达到反序列化,并可能进一步攻击。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2infinispan-8.2.4-8.ky10infinispan-help-8.2.4-8.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:infinispan、infinispan-helpx86_64:infinispan、infinispan-help4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP2aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP2 infinispan aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/infinispan-8.2.4-8.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/infinispan-help-8.2.4-8.ky10.noarch.rpm infinispan x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/infinispan-8.2.4-8.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/infinispan-help-8.2.4-8.ky10.noarch.rpm注：其他相关依赖包请到相同目录下载 

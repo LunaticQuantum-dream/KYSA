@@ -1,0 +1,74 @@
+Name:KYSA-202301-1007
+Severity:中等
+Summary:curl安全漏洞
+Published:2023-01-17
+URL:/support/loophole/patch/2552.html
+Title:
+			公告ID：KYSA-202301-1007
+公告摘要：curl安全漏洞
+等级：Moderate
+发布日期：2023-01-17
+		
+1.修复的CVE
+·CVE-2022-32221
+描述：在 curl 中发现了一个漏洞。在进行 HTTP(S) 传输时会出现此问题，其中 curl 可能会错误地使用读取回调 ( CURLOPT_READFUNCTION) 来请求发送数据，即使该CURLOPT_POSTFIELDS选项已设置，如果它先前使用相同的句柄来发出PUT使用该回调的请求. POST此缺陷可能会令应用程序感到意外，并导致其行为不端，并在后续请求中释放或类似情况后发送错误数据或使用内存。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+curl、curl-help、libcurl、libcurl-devel
+·mips64el架构:
+curl、curl-help、libcurl、libcurl-devel
+·x86_64架构:
+curl、curl-help、libcurl、libcurl-devel
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、mips64el、x86_64)
+curl-7.71.1-19.ky10或以上版本
+curl-help-7.71.1-19.ky10或以上版本
+libcurl-7.71.1-19.ky10或以上版本
+libcurl-devel-7.71.1-19.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-32221:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+curl(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/curl-7.71.1-19.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/curl-help-7.71.1-19.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/libcurl-7.71.1-19.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/libcurl-devel-7.71.1-19.ky10.aarch64.rpm
+
+curl(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/curl-7.71.1-19.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/curl-help-7.71.1-19.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libcurl-7.71.1-19.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libcurl-devel-7.71.1-19.ky10.mips64el.rpm
+
+curl(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/curl-7.71.1-19.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/curl-help-7.71.1-19.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/libcurl-7.71.1-19.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/libcurl-devel-7.71.1-19.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

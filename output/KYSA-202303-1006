@@ -1,0 +1,55 @@
+Name:KYSA-202303-1006
+Severity:中等
+Summary:golang安全漏洞
+Published:2023-03-07
+URL:/support/loophole/patch/2919.html
+Title:
+			公告ID：KYSA-202303-1006
+公告摘要：golang安全漏洞
+等级：Moderate
+发布日期：2023-03-07
+		
+1.修复的CVE
+·CVE-2022-41717
+描述：Google Golang是美国谷歌（Google）公司的一种静态强类型、编译型语言。Go的语法接近C语言，但对于变量的声明有所不同。Go支持垃圾回收功能。Go的并行模型是以东尼·霍尔的通信顺序进程（CSP）为基础，采取类似模型的其他语言包括Occam和Limbo，但它也具有Pi运算的特征，比如通道传输。在1.8版本中开放插件（Plugin）的支持，这意味着现在能从Go中动态加载部分函数。
+Google Golang 存在安全漏洞。攻击者利用该漏洞导致内存过度增长。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+golang、golang-devel、golang-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+golang-1.15.7-23.p01.a.ky10或以上版本
+golang-devel-1.15.7-23.p01.a.ky10或以上版本
+golang-help-1.15.7-23.p01.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-41717:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+golang(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/golang-1.15.7-23.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/golang-devel-1.15.7-23.p01.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/golang-help-1.15.7-23.p01.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,34 @@
+Name:KYSA-202412-1022
+Severity:重要
+Summary:kernel 安全漏洞 （热补丁）
+Published:2024-12-03
+URL:/support/loophole/patch/6992.html
+Title:
+			公告ID：KYSA-202412-1022
+公告摘要：kernel 安全漏洞 （热补丁）
+等级：重要
+发布日期：2024-12-03
+		
+1.修复的漏洞
+·CVE-2024-1086
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于netfilter: nf_tables 组件中存在释放后重用，nf_hook_slow() 函数可能会导致双重释放，攻击者利用该漏洞导致本地权限提升。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·x86_64架构:
+kernel-4.19.90-23.42.v2101.ky10
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (x86_64)
+patch-kernel-4.19.90-23.42.v2101.ky10-SGL-241016163634-5-1.ky10
+
+4.修复方法
+4.1 新增update源配置地址参考如下：
+银河麒麟高级服务器操作系统 V10 SP1：https://update.cs2c.com.cn/NS/V10/V10SP1.1/hotpatch_update/$basearch
+银河麒麟高级服务器操作系统 V10 SP2：https://update.cs2c.com.cn/NS/V10/V10SP2/hotpatch_update/$basearch/ 
+银河麒麟高级服务器操作系统 V10 SP3 2303：https://update.cs2c.com.cn/NS/V10/V10SP3/hotpatch_update/$basearch/ 
+银河麒麟高级服务器操作系统 V10 SP3 2403：https://update.cs2c.com.cn/NS/V10/V10SP3-2403/hotpatch_update/$basearch/
+提示：访问热补丁update源，需用户名和密码。请联系麒麟软件销售人员。
+4.2 安装热补丁rpm包，然后执行kylin-warm 命令进行热补丁激活等管理操作。
+提示：详细操作说明请联系售后技服支持。

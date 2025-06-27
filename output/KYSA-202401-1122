@@ -1,0 +1,53 @@
+Name:KYSA-202401-1122
+Severity:中等
+Summary:apache-sshd安全漏洞
+Published:2024-01-30
+URL:/support/loophole/patch/5225.html
+Title:
+			公告ID：KYSA-202401-1122
+公告摘要：apache-sshd安全漏洞
+等级：Moderate
+发布日期：2024-01-30
+		
+1.修复的CVE
+·CVE-2023-48795
+描述：OpenSSH（OpenBSD Secure Shell）是加拿大OpenBSD计划组的一套用于安全访问远程计算机的连接工具。该工具是SSH协议的开源实现，支持对所有的传输进行加密，可有效阻止窃听、连接劫持以及其他网络级的攻击。
+OpenSSH 9.6之前版本存在安全漏洞，该漏洞源于允许远程攻击者绕过完整性检查，从而省略某些数据包。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+apache-sshd、apache-sshd-javadoc
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+apache-sshd-2.9.2-3.a.ky10或以上版本
+apache-sshd-javadoc-2.9.2-3.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-48795:需要重启 apache-sshd 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+apache-sshd(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/apache-sshd-2.9.2-3.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/apache-sshd-javadoc-2.9.2-3.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

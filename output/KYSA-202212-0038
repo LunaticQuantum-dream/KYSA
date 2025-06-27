@@ -1,0 +1,63 @@
+Name:KYSA-202212-0038
+Severity:中等
+Summary:containerd安全漏洞
+Published:2023-12-14
+URL:/support/loophole/patch/4689.html
+Title:
+			公告ID：KYSA-202212-0038
+公告摘要：containerd安全漏洞
+等级：中等
+发布日期：2023-12-14
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2022-24778
+containerd是一个容器守护进程。该进程根据 RunC OCI 规范负责控制宿主机上容器的完整周期。 containerd imgcrypt 1.1.4之前版本存在安全漏洞，该漏洞源于应用CheckAuthorization函数处理带有 ManifestList 的图像并且本地主机的体系结构不是 ManifestList的情况会发生故障。
+CVE-2022-24769
+Moby旨在推动软件的容器化，并帮助生态系统使容器技术主流化。 Moby 20.10.14 之前版本存在权限许可和访问控制问题漏洞，该漏洞源于容器使用非空的可继承 Linux 进程功能错误地启动，从而导致绕过安全限制和权限提升。攻击者可以通过默认可继承功能绕过容器的限制，以提升其权限。
+CVE-2022-23471
+Apache containerd一个容器守护进程。该进程根据 RunC OCI 规范负责控制宿主机上容器的完整周期。 containerd 1.6.12之前版本、1.5.16之前版本中存在资源管理错误漏洞，该漏洞源于在 containerd 的 CRI 实现中发现了一个错误，攻击者利用该漏洞可以耗尽主机上的内存。
+CVE-2022-31030
+Apache containerd是一个容器守护进程。该进程根据 RunC OCI 规范负责控制宿主机上容器的完整周期。 Apache containerd 存在资源管理错误漏洞，该漏洞源于未正确控制 ExecSync API 中内部资源的消耗。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303
+x86_64 架构：
+containerd
+arm64 架构：
+containerd
+mips64el 架构：
+containerd
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303
+1.5.9-0kylin1~20.04.6
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install containerd
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/containerd/containerd_1.5.9-0kylin1~20.04.6_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/containerd/containerd_1.5.9-0kylin1~20.04.6_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/c/containerd/containerd_1.5.9-0kylin1~20.04.6_mips64el.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

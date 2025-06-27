@@ -1,0 +1,74 @@
+Name:KYSA-202306-1038
+Severity:重要
+Summary:firefox安全漏洞
+Published:2023-06-13
+URL:/support/loophole/patch/3679.html
+Title:
+			公告ID：KYSA-202306-1038
+公告摘要：firefox安全漏洞
+等级：Important
+发布日期：2023-06-13
+		
+1.修复的CVE
+·CVE-2023-32205
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox存在安全漏洞。攻击者利用该漏洞可以执行任意代码。
+·CVE-2023-32206
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox存在安全漏洞。攻击者利用该漏洞可以执行任意代码。
+·CVE-2023-32207
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox存在安全漏洞。攻击者利用该漏洞可以执行任意代码。
+·CVE-2023-32211
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox存在安全漏洞。攻击者利用该漏洞可以执行任意代码。
+·CVE-2023-32212
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 存在安全漏洞。攻击者利用该漏洞可以执行任意代码。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+firefox
+·x86_64架构:
+firefox
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+firefox-102.11.0-2.el7_9.ns7.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-32205:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-32206:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-32207:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-32211:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-32212:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+firefox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/firefox-102.11.0-2.el7_9.ns7.01.aarch64.rpm
+
+firefox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/firefox-102.11.0-2.el7_9.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/firefox-102.11.0-2.el7_9.ns7.01.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

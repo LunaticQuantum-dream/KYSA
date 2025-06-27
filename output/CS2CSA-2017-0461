@@ -1,0 +1,16 @@
+Name:CS2CSA-2017-0461
+Severity:严重
+Summary:firefox 安全更新
+Published:2017-03-08
+URL:/support/loophole/patch/44.html
+Title:
+			摘要：  firefox 安全更新
+安全级别： 严重
+公告ID：              CS2CSA-2017-0461
+产品：                  中标麒麟高级服务器操作系统
+发布日期：          2017-03-08
+CVE：        CVE-2017-5398，CVE-2017-5400，CVE-2017-5401
+                           CVE-2017-5402，CVE-2017-5404，CVE-2017-5405
+                           CVE-2017-5407，CVE-2017-5408，CVE-2017-5410
+		
+1. 概述：中标麒麟高级服务器操作系统V7系列有firefox可用更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构 :中标麒麟高级服务器操作系统V7 -x86_643. 描述 :Mozilla Firefox是一个开源的web浏览器，此处升级更新到Firefox 52.0 ESR 版。4. 安全加固 :在多缺陷Web内容进程中发现多个漏洞，包含恶意内容的web页面可能导致Firefox崩溃，攻击取得Firefox的权限后可在上面执行任意代码。 (CVE-2017-5398，CVE-2017-5400，CVE-2017-5401，CVE-2017-5402，CVE-2017-5404， CVE-2017-5407，CVE-2017-5408，CVE-2017-5410，CVE-2017-5405)5. 安装包列表 :中标麒麟高级服务器操作系统V7源码包：firefox-52.0-4.el7_3.src.rpmx86_64：firefox-52.0-4.el7_3.x86_64.rpmfirefox-debuginfo-52.0-4.el7_3.x86_64.rpm			

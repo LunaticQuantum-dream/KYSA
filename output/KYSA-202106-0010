@@ -1,0 +1,157 @@
+Name:KYSA-202106-0010
+Severity:中等
+Summary:bluez安全漏洞
+Published:2023-01-03
+URL:/support/loophole/patch/2454.html
+Title:
+			公告ID：KYSA-202106-0010
+公告摘要：bluez安全漏洞
+等级：Moderate
+发布日期：2023-01-03
+		
+1. 修复的CVE
+CVE-2021-3588
+BlueZ是一款使用C语言编写的蓝牙协议堆栈，它主要用于提供对核心蓝牙层和协议的支持。bluez存在缓冲区错误漏洞，该漏洞源于src/gatt-database.c 中的 cli_feat_read_cb() 函数在将 “offset” 变量用作读取数组的索引之前不会对其执行边界检查。
+CVE-2020-26558
+Bluetooth Core Specification是一个规范。定义了开发人员用来创建构成蓬勃发展的蓝牙生态系统的可互操作设备的技术构建块。由蓝牙特别兴趣小组（SIG）监督，并由蓝牙SIG工作组 定期更新和增强，以满足不断发展的技术和市场需求。Bluetooth Core Specification 2.1 版本至5.2版本存在授权问题漏洞，该漏洞源于Bluetooth LE and BR/EDR 的安全配对，攻击者可利用该漏洞使用配对会话的正确Passkey与响应设备完成身份验证配对。
+CVE-2020-27153
+BlueZ是一款使用C语言编写的蓝牙协议堆栈，它主要用于提供对核心蓝牙层和协议的支持。 
+BlueZ 5.55之前版本存在安全漏洞，该漏洞源于在shared/att.c的gatttool Disconnect_cb（）例程中发现了一个双精度释放。 攻击者可利用该漏洞能会导致拒绝服务或执行代码。
+CVE-2021-0129
+描述：BlueZ是一款使用C语言编写的蓝牙协议堆栈，它主要用于提供对核心蓝牙层和协议的支持。Intel BlueZ 存在访问控制错误漏洞，该漏洞源于不正确的访问控制可能会允许经过身份验证的用户通过相邻访问可能公开信息，攻击者可通过该漏洞获得敏感信息。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V4
+bluetooth
+bluez
+bluez-cups
+bluez-dbg
+bluez-hcidump
+bluez-obexd
+bluez-tests
+libbluetooth-dev
+libbluetooth3
+libbluetooth3-dbg
+·银河麒麟桌面操作系统V10
+bluetooth
+bluez
+bluez-cups
+bluez-dbg
+bluez-hcidump
+bluez-obexd
+bluez-tests
+libbluetooth-dev
+libbluetooth3
+libbluetooth3-dbg
+·银河麒麟桌面操作系统V10 SP1
+bluetooth
+bluez
+bluez-cups
+bluez-dbg
+bluez-hcidump
+bluez-obexd
+bluez-tests
+libbluetooth-dev
+libbluetooth3
+libbluetooth3-dbg
+
+3. 软件包修复版本
+软件包：bluez
+5.37-0kord5.4（V4、V10）
+5.53-0kylin3.2(V10 SP1)
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+
+5. 软件包下载地址
+麒麟操作系统V10桌面版、V4
+X86_64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluetooth_5.37-0kord5.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-cups_5.37-0kord5.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-dbg_5.37-0kord5.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-hcidump_5.37-0kord5.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-obexd_5.37-0kord5.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-tests_5.37-0kord5.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez_5.37-0kord5.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth-dev_5.37-0kord5.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3-dbg_5.37-0kord5.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3_5.37-0kord5.4_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluetooth_5.37-0kord5.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-cups_5.37-0kord5.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-dbg_5.37-0kord5.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-hcidump_5.37-0kord5.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-obexd_5.37-0kord5.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-tests_5.37-0kord5.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez_5.37-0kord5.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth-dev_5.37-0kord5.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3-dbg_5.37-0kord5.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3_5.37-0kord5.4_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluetooth_5.37-0kord5.4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-cups_5.37-0kord5.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-dbg_5.37-0kord5.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-hcidump_5.37-0kord5.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-obexd_5.37-0kord5.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-tests_5.37-0kord5.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez_5.37-0kord5.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth-dev_5.37-0kord5.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3-dbg_5.37-0kord5.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3_5.37-0kord5.4_mips64el.deb
+麒麟操作系统桌面版V10 SP1
+X86_64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3_5.53-0kylin3.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-dbg_5.53-0kylin3.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-obexd_5.53-0kylin3.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3-dbg_5.53-0kylin3.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluetooth_5.53-0kylin3.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez_5.53-0kylin3.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-hcidump_5.53-0kylin3.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth-dev_5.53-0kylin3.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-cups_5.53-0kylin3.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-tests_5.53-0kylin3.2_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3_5.53-0kylin3.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-dbg_5.53-0kylin3.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-obexd_5.53-0kylin3.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3-dbg_5.53-0kylin3.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluetooth_5.53-0kylin3.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez_5.53-0kylin3.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-hcidump_5.53-0kylin3.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth-dev_5.53-0kylin3.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-cups_5.53-0kylin3.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-tests_5.53-0kylin3.2_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3_5.53-0kylin3.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-dbg_5.53-0kylin3.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-obexd_5.53-0kylin3.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth3-dbg_5.53-0kylin3.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluetooth_5.53-0kylin3.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez_5.53-0kylin3.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-hcidump_5.53-0kylin3.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/libbluetooth-dev_5.53-0kylin3.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-cups_5.53-0kylin3.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bluez/bluez-tests_5.53-0kylin3.2_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

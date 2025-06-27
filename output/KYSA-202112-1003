@@ -1,0 +1,94 @@
+Name:KYSA-202112-1003
+Severity:重要
+Summary:kernel安全漏洞
+Published:2021-12-03
+URL:/support/loophole/patch/3815.html
+Title:
+			公告ID：KYSA-202112-1003
+公告摘要：kernel安全漏洞
+等级：Important
+发布日期：2021-12-03
+		
+1.修复的CVE
+·CVE-2020-8648
+描述：Linux kernel 5.5.2版本中的drivers/tty/n_tty.c文件的’n_tty_receive_buf_common‘函数存在资源管理错误漏洞。攻击者可利用该漏洞获取敏感信息。
+·CVE-2021-22543
+描述：在Linux中发现了一个问题:KVM通过处理不当VM_IO | VM_PFNMAP vmas系统在KVM可以绕过RO检查和可能导致页面被释放,同时仍然可以通过VMM和客人。这允许用户能够启动和控制一个VM读/写随机的内存页面,会导致当地特权升级。
+·CVE-2021-3347
+描述：通过 5.10.11 在 Linux 内核中发现了一个问题。 PI futex 在故障处理期间有一个内核堆栈释放后使用，允许本地用户在内核中执行代码，又名 CID-34b1a1ce1458。
+·CVE-2021-33909
+描述：5.13.4 之前的 Linux 内核 3.16 到 5.13.x 中的 fs/seq_file.c 没有正确限制 seq 缓冲区分配，导致整数溢出、越界写入以及非特权用户（又名）升级到 root CID-8cae8cd89f05。
+·CVE-2021-3653
+描述：该漏洞发生在处理 L1 客户机提供的 VMCB（虚拟机控制块）以生成/处理嵌套客户机 （L2） 时，会发生此缺陷。由于未正确验证“int_ctl”字段，此问题可能允许恶意 L1 为 L2 客户机启用 AVIC 支持（高级虚拟中断控制器）。因此，L2 客户机将被允许读取/写入主机的物理页面，从而导致整个系统崩溃、敏感数据泄露或潜在的客户机到主机逃逸。
+·CVE-2021-3656
+描述：该漏洞源于在处理 L1 来宾提供的 VMCB（虚拟机控制块）以生成/处理嵌套来宾 (L2) 时对“virt_ext”的不正确验证。
+·CVE-2021-37576
+描述：在Linux内核arch/powerpc/kvm/book3s_rtas.c ,允许KVM来宾操作系统用户通过rtas_args导致主机操作系统内存崩溃，即CID-f62f3c20647e。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·x86_64架构:
+perf、kernel-tools、kernel-debug、kernel-abi-whitelists、kernel-debuginfo-common-x86_64、kernel-devel、kernel、kernel-headers、kernel-doc、python-perf、kernel-debug-devel、kernel-tools-libs-devel、bpftool、kernel-tools-libs
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (x86_64)
+kernel-tools-libs-devel-3.10.0-1160.45.1.el7或以上版本
+kernel-tools-3.10.0-1160.45.1.el7或以上版本
+kernel-3.10.0-1160.45.1.el7或以上版本
+kernel-doc-3.10.0-1160.45.1.el7或以上版本
+kernel-debug-devel-3.10.0-1160.45.1.el7或以上版本
+python-perf-3.10.0-1160.45.1.el7或以上版本
+kernel-tools-libs-3.10.0-1160.45.1.el7或以上版本
+bpftool-3.10.0-1160.45.1.el7或以上版本
+kernel-abi-whitelists-3.10.0-1160.45.1.el7或以上版本
+perf-3.10.0-1160.45.1.el7或以上版本
+kernel-devel-3.10.0-1160.45.1.el7或以上版本
+kernel-debug-3.10.0-1160.45.1.el7或以上版本
+kernel-debuginfo-common-x86_64-3.10.0-1160.45.1.el7或以上版本
+kernel-headers-3.10.0-1160.45.1.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-8648:需要重启操作系统以使漏洞修复生效。
+CVE-2021-22543:需要重启操作系统以使漏洞修复生效。
+CVE-2021-3347:需要重启 kernel 以使漏洞修复生效。
+CVE-2021-33909:需要重启 kernel 以使漏洞修复生效。
+CVE-2021-3653:需要重启操作系统以使漏洞修复生效。
+CVE-2021-3656:需要重启操作系统以使漏洞修复生效。
+CVE-2021-37576:需要重启操作系统以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+kernel(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/python-perf-3.10.0-1160.45.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-abi-whitelists-3.10.0-1160.45.1.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-debug-3.10.0-1160.45.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-debug-devel-3.10.0-1160.45.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-debuginfo-common-x86_64-3.10.0-1160.45.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-devel-3.10.0-1160.45.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-doc-3.10.0-1160.45.1.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-headers-3.10.0-1160.45.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-tools-3.10.0-1160.45.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-3.10.0-1160.45.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-devel-3.10.0-1160.45.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/perf-3.10.0-1160.45.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/bpftool-3.10.0-1160.45.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-3.10.0-1160.45.1.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

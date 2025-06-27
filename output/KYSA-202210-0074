@@ -1,0 +1,267 @@
+Name:KYSA-202210-0074
+Severity:中等
+Summary:libreoffice安全漏洞
+Published:2023-11-29
+URL:/support/loophole/patch/4572.html
+Title:
+			公告ID：KYSA-202210-0074
+公告摘要：libreoffice安全漏洞
+等级：中等
+发布日期：2023-11-29
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2022-3140
+LibreOffice是文档基金会（The Document Foundation，tdf）的一套开源的办公软件套件。该产品包含Writer（文本文档）、Calc（电子表格）和Impress（演示文稿）等应用程序。The Document Foundation LibreOffice 7.3版本至7.3.6版本、7.4版本至7.4.1版本存在安全漏洞。攻击者利用该漏洞执行任意脚本而不发出警告。
+CVE-2022-26307
+LibreOffice是文档基金会（The Document Foundation，tdf）的一套开源的办公软件套件。该产品包含Writer（文本文档）、Calc（电子表格）和Impress（演示文稿）等应用程序。LibreOffice 7.2版本至7.2.7之前版本、7.3版本至7.3.1之前版本存在加密问题漏洞，该漏洞源于 LibreOffice 在用户配置数据库中对 Web 连接的主密钥编码不当，导致其熵从 128 位减弱到 43 位。攻击者利用该漏洞可以解开受害者密码。
+CVE-2022-26306
+LibreOffice是文档基金会（The Document Foundation，tdf）的一套开源的办公软件套件。该产品包含Writer（文本文档）、Calc（电子表格）和Impress（演示文稿）等应用程序。LibreOffice 7.2版本至7.2.7之前版本、7.3版本至7.3.1之前版本存在加密问题漏洞，该漏洞源于 LibreOffice 使用弱初始化向量来加密用户配置数据库中的 Web 连接密码。攻击者利用该漏洞可以解开受害者密码。
+CVE-2022-26305
+LibreOffice是文档基金会（The Document Foundation，tdf）的一套开源的办公软件套件。该产品包含Writer（文本文档）、Calc（电子表格）和Impress（演示文稿）等应用程序。LibreOffice 7.2版本至7.2.7之前版本、7.3版本至7.3.1之前版本存在信任管理问题漏洞。攻击者利用该漏洞执行任意代码。
+CVE-2020-12803
+LibreOffice是文档基金会（The Document Foundation，TDF）的一套开源的办公软件套件。该产品包含Writer（文本文档）、Calc（电子表格）和Impress（演示文稿）等应用程序。 
+LibreOffice 6.4.4之前版本中存在安全漏洞。攻击者可利用漏洞向任意URL提交表单（包括：file: URIs），进而覆盖本地文件。
+CVE-2020-12801
+LibreOffice是文档基金会（The Document Foundation，TDF）的一套开源的办公软件套件。该产品包含Writer（文本文档）、Calc（电子表格）和Impress（演示文稿）等应用程序。LibreOffice 6.3.6之前的6.3.x版本和6.4.3之前的6.4.x版本中存在安全漏洞。攻击者可利用该漏洞获取信息。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303
+x86_64 架构：
+fonts-opensymbol、gir1.2-lokdocview-0.1、libjuh-java、libjurt-java、liblibreofficekitgtk、libofficebean-java、libreoffice-avmedia-backend-gstreamer、libreoffice-base-core、libreoffice-base-drivers、libreoffice-base-nogui、libreoffice-base、libreoffice-calc-nogui、libreoffice-calc、libreoffice-common、libreoffice-core-nogui、libreoffice-core、libreoffice-draw-nogui、libreoffice-draw、libreoffice-evolution、libreoffice-gnome、libreoffice-gtk2、libreoffice-gtk3、libreoffice-gtk、libreoffice-help-ca、libreoffice-help-common、libreoffice-help-cs、libreoffice-help-da、libreoffice-help-de、libreoffice-help-dz、libreoffice-help-el、libreoffice-help-en-gb、libreoffice-help-en-us、libreoffice-help-es、libreoffice-help-et、libreoffice-help-eu、libreoffice-help-fi、libreoffice-help-fr、libreoffice-help-gl、libreoffice-help-hi、libreoffice-help-hu、libreoffice-help-id、libreoffice-help-it、libreoffice-help-ja、libreoffice-help-km、libreoffice-help-ko、libreoffice-help-nl、libreoffice-help-om、libreoffice-help-pl、libreoffice-help-pt-br、libreoffice-help-pt、libreoffice-help-ru、libreoffice-help-sk、libreoffice-help-sl、libreoffice-help-sv、libreoffice-help-tr、libreoffice-help-vi、libreoffice-help-zh-cn、libreoffice-help-zh-tw、libreoffice-impress-nogui、libreoffice-impress、libreoffice-java-common、libreoffice-kde4、libreoffice-kde5、libreoffice-kde、libreoffice-kf5、libreoffice-l10n-af、libreoffice-l10n-am、libreoffice-l10n-ar、libreoffice-l10n-as、libreoffice-l10n-ast、libreoffice-l10n-be、libreoffice-l10n-bg、libreoffice-l10n-bn、libreoffice-l10n-br、libreoffice-l10n-bs、libreoffice-l10n-ca、libreoffice-l10n-cs、libreoffice-l10n-cy、libreoffice-l10n-da、libreoffice-l10n-de、libreoffice-l10n-dz、libreoffice-l10n-el、libreoffice-l10n-en-gb、libreoffice-l10n-en-za、libreoffice-l10n-eo、libreoffice-l10n-es、libreoffice-l10n-et、libreoffice-l10n-eu、libreoffice-l10n-fa、libreoffice-l10n-fi、libreoffice-l10n-fr、libreoffice-l10n-ga、libreoffice-l10n-gd、libreoffice-l10n-gl、libreoffice-l10n-gu、libreoffice-l10n-gug、libreoffice-l10n-he、libreoffice-l10n-hi、libreoffice-l10n-hr、libreoffice-l10n-hu、libreoffice-l10n-id、libreoffice-l10n-in、libreoffice-l10n-is、libreoffice-l10n-it、libreoffice-l10n-ja、libreoffice-l10n-ka、libreoffice-l10n-kk、libreoffice-l10n-km、libreoffice-l10n-kmr、libreoffice-l10n-kn、libreoffice-l10n-ko、libreoffice-l10n-lt、libreoffice-l10n-lv、libreoffice-l10n-mk、libreoffice-l10n-ml、libreoffice-l10n-mn、libreoffice-l10n-mr、libreoffice-l10n-nb、libreoffice-l10n-ne、libreoffice-l10n-nl、libreoffice-l10n-nn、libreoffice-l10n-nr、libreoffice-l10n-nso、libreoffice-l10n-oc、libreoffice-l10n-om、libreoffice-l10n-or、libreoffice-l10n-pa-in、libreoffice-l10n-pl、libreoffice-l10n-pt-br、libreoffice-l10n-pt、libreoffice-l10n-ro、libreoffice-l10n-ru、libreoffice-l10n-rw、libreoffice-l10n-si、libreoffice-l10n-sk、libreoffice-l10n-sl、libreoffice-l10n-sr、libreoffice-l10n-ss、libreoffice-l10n-st、libreoffice-l10n-sv、libreoffice-l10n-szl、libreoffice-l10n-ta、libreoffice-l10n-te、libreoffice-l10n-tg、libreoffice-l10n-th、libreoffice-l10n-tn、libreoffice-l10n-tr、libreoffice-l10n-ts、libreoffice-l10n-ug、libreoffice-l10n-uk、libreoffice-l10n-uz、libreoffice-l10n-ve、libreoffice-l10n-vi、libreoffice-l10n-xh、libreoffice-l10n-za、libreoffice-l10n-zh-cn、libreoffice-l10n-zh-tw、libreoffice-l10n-zu、libreoffice-librelogo、libreoffice-math-nogui、libreoffice-math、libreoffice-mysql-connector、libreoffice-nlpsolver、libreoffice-officebean、libreoffice-ogltrans、libreoffice-pdfimport、libreoffice-plasma、libreoffice-qt5、libreoffice-report-builder-bin-nogui、libreoffice-report-builder-bin、libreoffice-report-builder、libreoffice-script-provider-bsh、libreoffice-script-provider-js、libreoffice-script-provider-python、libreoffice-sdbc-firebird、libreoffice-sdbc-hsqldb、libreoffice-sdbc-mysql、libreoffice-sdbc-postgresql、libreoffice-smoketest-data、libreoffice-style-breeze、libreoffice-style-colibre、libreoffice-style-elementary、libreoffice-style-galaxy、libreoffice-style-hicontrast、libreoffice-style-human、libreoffice-style-karasa-jaga、libreoffice-style-oxygen、libreoffice-style-sifr、libreoffice-style-tango、libreoffice-subsequentcheckbase、libreoffice-systray、libreoffice-wiki-publisher、libreoffice-writer-nogui、libreoffice-writer、libreoffice、libreofficekit-data、libridl-java、libuno-cppu3、libuno-cppuhelpergcc3-3、libuno-purpenvhelpergcc3-3、libuno-sal3、libuno-salhelpergcc3-3、libunoil-java、libunoloader-java、python3-access2base、python3-uno、uno-libs-private、ure
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303
+1:6.4.7-0kylin0.20.04.6
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libreoffice
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/fonts-opensymbol_102.11%2BLibO6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/gir1.2-lokdocview-0.1_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libjuh-java_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libjurt-java_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/liblibreofficekitgtk_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libofficebean-java_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-avmedia-backend-gstreamer_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-base-core_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-base-drivers_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-base-nogui_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-base_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-calc-nogui_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-calc_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-common_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-core-nogui_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-core_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-draw-nogui_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-draw_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-evolution_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-gnome_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-gtk2_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-gtk3_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-gtk_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-ca_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-common_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-cs_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-da_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-de_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-dz_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-el_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-en-gb_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-en-us_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-es_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-et_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-eu_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-fi_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-fr_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-gl_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-hi_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-hu_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-id_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-it_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-ja_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-km_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-ko_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-nl_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-om_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-pl_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-pt-br_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-pt_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-ru_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-sk_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-sl_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-sv_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-tr_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-vi_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-zh-cn_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-help-zh-tw_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-impress-nogui_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-impress_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-java-common_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-kde4_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-kde5_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-kde_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-kf5_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-af_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-am_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ar_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-as_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ast_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-be_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-bg_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-bn_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-br_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-bs_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ca_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-cs_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-cy_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-da_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-de_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-dz_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-el_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-en-gb_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-en-za_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-eo_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-es_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-et_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-eu_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-fa_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-fi_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-fr_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ga_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-gd_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-gl_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-gu_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-gug_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-he_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-hi_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-hr_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-hu_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-id_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-in_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-is_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-it_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ja_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ka_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-kk_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-km_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-kmr_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-kn_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ko_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-lt_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-lv_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-mk_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ml_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-mn_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-mr_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-nb_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ne_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-nl_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-nn_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-nr_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-nso_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-oc_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-om_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-or_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-pa-in_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-pl_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-pt-br_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-pt_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ro_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ru_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-rw_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-si_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-sk_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-sl_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-sr_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ss_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-st_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-sv_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-szl_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ta_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-te_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-tg_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-th_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-tn_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-tr_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ts_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ug_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-uk_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-uz_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-ve_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-vi_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-xh_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-za_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-zh-cn_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-zh-tw_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-l10n-zu_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-librelogo_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-math-nogui_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-math_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-mysql-connector_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-nlpsolver_0.9%2BLibO6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-officebean_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-ogltrans_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-pdfimport_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-plasma_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-qt5_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-report-builder-bin-nogui_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-report-builder-bin_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-report-builder_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-script-provider-bsh_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-script-provider-js_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-script-provider-python_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-sdbc-firebird_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-sdbc-hsqldb_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-sdbc-mysql_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-sdbc-postgresql_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-smoketest-data_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-style-breeze_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-style-colibre_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-style-elementary_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-style-galaxy_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-style-hicontrast_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-style-human_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-style-karasa-jaga_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-style-oxygen_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-style-sifr_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-style-tango_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-subsequentcheckbase_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-systray_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-wiki-publisher_1.2.0%2BLibO6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-writer-nogui_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice-writer_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreoffice_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libreofficekit-data_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libridl-java_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libuno-cppu3_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libuno-cppuhelpergcc3-3_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libuno-purpenvhelpergcc3-3_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libuno-sal3_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libuno-salhelpergcc3-3_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libunoil-java_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/libunoloader-java_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/python3-access2base_6.4.7-0kylin0.20.04.6_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/python3-uno_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/uno-libs-private_6.4.7-0kylin0.20.04.6_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libr/libreoffice/ure_6.4.7-0kylin0.20.04.6_amd64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

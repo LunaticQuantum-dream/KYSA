@@ -1,0 +1,59 @@
+Name:KYSA-202201-0023
+Severity:中等
+Summary:exiv2安全漏洞
+Published:2023-05-05
+URL:/support/loophole/patch/3414.html
+Title:
+			公告ID：KYSA-202201-0023
+公告摘要：exiv2安全漏洞
+等级：中等
+发布日期：2023-05-05
+		
+1. 修复的CVE
+CVE-2021-37620
+Exiv2是Andreas Huggel个人开发者的一套用于管理图像元数据的C++库和命令行应用程序。该产品提供了读取和写入EXIF、IPTC和XMP等多种格式图像元数据的功能。Exiv2 中存在缓冲区错误漏洞，该漏洞源于产品在读取图片元数据时未能验证数据边界，攻击者可通过特殊的图像文件引发越界读操作进而导致拒绝服务。以下产品及版本受到影响：Exiv2 v0.27.4 版本及之前版本。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+exiv2、libexiv2-27
+arm64 架构：
+exiv2、libexiv2-27
+mips64el 架构：
+exiv2、libexiv2-27
+loongarch64 架构：
+exiv2、libexiv2-27
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+0.27.2-8kylin2.7k1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install exiv2
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/exiv2_0.27.2-8kylin2.7k1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/libexiv2-27_0.27.2-8kylin2.7k1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/exiv2_0.27.2-8kylin2.7k1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/libexiv2-27_0.27.2-8kylin2.7k1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/exiv2_0.27.2-8kylin2.7k1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/libexiv2-27_0.27.2-8kylin2.7k1_mips64el.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/exiv2_0.27.2-8kylin2.7k1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/libexiv2-27_0.27.2-8kylin2.7k1_loongarch64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

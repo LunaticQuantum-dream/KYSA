@@ -1,0 +1,59 @@
+Name:KYSA-202204-1035
+Severity:严重
+Summary:openssl安全漏洞
+Published:2022-04-15
+URL:/support/loophole/patch/3601.html
+Title:
+			公告ID：KYSA-202204-1035
+公告摘要：openssl安全漏洞
+等级：Critical
+发布日期：2022-04-15
+		
+1.修复的CVE
+·CVE-2016-2107
+描述：OpenSSL是OpenSSL团队开发的一个开源的能够实现安全套接层（SSL v2/v3）和安全传输层（TLS v1）协议的通用加密库，它支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL 1.0.1t之前版本和1.0.2h之前1.0.2版本的AES-NI实现过程中存在安全漏洞，该漏洞源于程序在进行填充检查时没有考虑内存分配。远程攻击者可通过向AES CBC会话实施padding-oracle攻击利用该漏洞获取敏感的明文信息。（注：该漏洞源于CNNVD-201302-133补丁的不完全修复）
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+openssl、openssl-devel、openssl-perl、openssl-static
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+openssl-1.0.1e-59.el6_10.ns6.02或以上版本
+openssl-devel-1.0.1e-59.el6_10.ns6.02或以上版本
+openssl-perl-1.0.1e-59.el6_10.ns6.02或以上版本
+openssl-static-1.0.1e-59.el6_10.ns6.02或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2016-2107:需要重启 openssl 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+openssl(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/openssl-1.0.1e-59.el6_10.ns6.02.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/openssl-1.0.1e-59.el6_10.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/openssl-devel-1.0.1e-59.el6_10.ns6.02.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/openssl-devel-1.0.1e-59.el6_10.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/openssl-perl-1.0.1e-59.el6_10.ns6.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/openssl-static-1.0.1e-59.el6_10.ns6.02.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/openssl-static-1.0.1e-59.el6_10.ns6.02.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

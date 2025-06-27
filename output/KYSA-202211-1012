@@ -1,0 +1,416 @@
+Name:KYSA-202211-1012
+Severity:重要
+Summary:mariadb安全漏洞
+Published:2022-11-01
+URL:/support/loophole/patch/2224.html
+Title:
+			公告ID：KYSA-202211-1012
+公告摘要：mariadb安全漏洞
+等级：Important
+发布日期：2022-11-01
+		
+1.修复的CVE
+·CVE-2020-15180
+描述：一个缺陷被发现在mariadb mysql-wsrep组件。缺乏输入检查“wsrep_sst_method”允许命令注入,远程攻击者可以利用galera集群节点上执行任意命令。这威胁系统的机密性、完整性和可用性。这个缺陷影响mariadb 10.1.47之前版本,10.2.34之前,10.3.25之前,10.4.15 10.5.6之前。
+·CVE-2020-2760
+描述：Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。MySQL Server是其中的一个数据库服务器组件。
+
+Oracle MySQL中的MySQL Server 5.7.29及之前版本和8.0.19及之前版本的InnoDB组件存在安全漏洞。攻击者可利用该漏洞造成拒绝服务（挂起或频繁崩溃），未授权更新、插入或删除数据， 影响数据的可用性和完整性。
+·CVE-2021-27928
+描述：远程代码执行问题被发现在MariaDB 10.2.37之前10.2,10.3 10.3.28之前,10.4.18之前10.4,和10.5之前10.5.9;通过2021-03-03 Percona服务器;并通过2021-03-03 MySQL wsrep补丁。一个不可信的搜索路径导致eval注入,数据库超级用户可以修改wsrep_provider和wsrep_notify_cmd后执行操作系统命令。注意:这并不影响Oracle的产品。
+·CVE-2021-46657
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 10.6.2 之前存在安全漏洞，该漏洞源于 get_sort_by_table 允许通过使用 ORDER BY 的某些子查询导致应用程序崩溃。
+·CVE-2021-46659
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 10.7.2 之前的版本存在安全漏洞，该漏洞源于它无法识别 SELECT_LEX：：nest_level 对于每个 VIEW 都是本地的。
+·CVE-2021-46661
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 中存在代码问题漏洞，该漏洞源于产品在使用 find_field_in_tables 和 find_order_in_list 未初始化的表达式时存在错误。攻击者可通过该漏洞导致应用崩溃。 以下产品及版本受到影响：MariaDB 10.5.9 版本。
+·CVE-2021-46662
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 中存在代码问题漏洞, 该漏洞源于产品允许通过在Update语句中嵌套自查询导致var.cc程序崩溃。以下产品及版本受到影响：MariaDB 10.5.9 版本。
+·CVE-2021-46663
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 中存在代码问题漏洞，该漏洞源于产品允许通过某些SELECT语句导致ha_maria：：extra崩溃。以下产品及版本受到影响：Mariadb 10.5.13版本。
+·CVE-2021-46664
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 中存在代码问题漏洞，该漏洞源于产品的aggr功能允许传入一个sub_select_postjoin_aggr空值并导致应用程序错误。以下产品及版本受到影响：MariaDB 10.5.9 版本。
+·CVE-2021-46665
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 中存在代码问题漏洞，该漏洞源于产品sql_parse.cc文件未对used_tables异常做有效处理。攻击者可通过该漏洞导致程序崩溃。以下产品及版本受到影响：MariaDB 10.5.9 版本。
+·CVE-2021-46666
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 存在代码问题漏洞，该漏洞源于产品HAVING子句到WHERE子句的下推处理不当。攻击者可通过该漏洞导致程序崩溃。以下产品及版本受到影响：MariaDB 10.6.2 之前版本。
+·CVE-2021-46667
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 中存在输入验证错误漏洞，该漏洞源于产品sql_lex.cc文件中存在一个整形错误。攻击者可通过该漏洞导致程序崩溃。以下产品及版本受到影响：MariaDB 10.6.5 之前版本。
+·CVE-2021-46669
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 中存在资源管理错误漏洞，该漏洞源于产品的convert_const_to_int函数在使用BIGINT数据类型时对已释放的资源重复利用。攻击者可通过该漏洞导致程序崩溃。以下产品及版本受到影响：MariaDB 10.5.9。
+·CVE-2022-27376
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6.5存在安全漏洞，目前暂无该漏洞信息，请随时关注CNNVD或厂商公告。
+·CVE-2022-27377
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6.3 及更低版本存在安全漏洞，该漏洞源于在组件 Item_func_in：：cleanup() 中包含 use-after-free，该组件通过特制的 SQL 语句被利用。
+·CVE-2022-27378
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.7存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+·CVE-2022-27379
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6.2 及更低版本存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+·CVE-2022-27380
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6.3 及更低版本存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+·CVE-2022-27381
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6 及更低版本存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+·CVE-2022-27383
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6 及更低版本存在安全漏洞，该漏洞源于在组件 my_strcasecmp_8bit 中包含 use-after-free，该组件通过特制的 SQL 语句被利用。
+·CVE-2022-27384
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6 及更低版本存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+·CVE-2022-27386
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.7 及更低版本存在安全漏洞，该漏洞源于通过组件 sql/sql_class.cc 被发现包含分段错误。
+·CVE-2022-27387
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.7 及更低版本存在安全漏洞，该漏洞源于在组件decimal_bin_size 中包含全局缓冲区溢出，可通过特制SQL 语句利用该溢出。
+·CVE-2022-27445
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.9 及之前版本存在安全漏洞，该漏洞源于 sql/sql_window.cc 组件包含分段故障。
+·CVE-2022-27447
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。Mariadb Server v10.9 及之前版本存在安全漏洞，该漏洞源于 /sql/sql_string.h 组件 Binary_string：：free_buffer() 包含释放后使用。
+·CVE-2022-27448
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.9 及更低版本存在安全漏洞，攻击者可通过 /row/row0mysql.cc 的“node-＞pcur-＞rel_pos == BTR_PCUR_ON”触发断言失败。
+·CVE-2022-27449
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.9 及更低版本存在安全漏洞，该漏洞源于组件 sql/item_func.cc：148 的分段错误。
+·CVE-2022-27452
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.9 及更低版本存在安全漏洞，该漏洞源于组件 sql/item_cmpfunc.cc 的分段错误。
+·CVE-2022-27456
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6.3 及更低版本存在安全漏洞，该漏洞源于 /sql/sql_type.cc 的组件 VDec：：VDec 中的释放后重用。
+·CVE-2022-27458
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6.3 及更低版本存在安全漏洞，该漏洞源于 /sql/sql_string.h 的组件 Binary_string：：free_buffer() 中的释放后重用。
+·CVE-2022-32083
+描述：MariaDB是Mariadb基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。
+
+该漏洞源于通过组件 Item_subselect：：init_expr_cache_tracker 发现 .1 存在分段错误。
+·CVE-2022-32085
+描述：MariaDB是Mariadb基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。
+该漏洞源于通过组件 Item_func_in：：cleanup/Item：：cleanup_processor 发现存在分段错误。
+·CVE-2022-32087
+描述：MariaDB是Mariadb基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。
+
+该漏洞源于通过组件 Item_args：：walk_args 发现存在分段错误。
+·CVE-2022-32088
+描述：MariaDB是Mariadb基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。
+
+该漏洞源于通过组件 Exec_time_tracker：：get_loops/Filesort_tracker：：report_use/filesort 发现存在分段错误。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+mariadb、mariadb-backup、mariadb-common、mariadb-cracklib、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-errmessage、mariadb-gssapi-server、mariadb-oqgraph-engine、mariadb-server、mariadb-server-galera、mariadb-test
+·mips64el架构:
+mariadb、mariadb-backup、mariadb-common、mariadb-cracklib、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-errmessage、mariadb-gssapi-server、mariadb-oqgraph-engine、mariadb-server、mariadb-server-galera、mariadb-test
+·x86_64架构:
+mariadb、mariadb-backup、mariadb-common、mariadb-cracklib、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-errmessage、mariadb-gssapi-server、mariadb-oqgraph-engine、mariadb-server、mariadb-server-galera、mariadb-test
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+mariadb、mariadb-backup、mariadb-common、mariadb-cracklib、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-errmessage、mariadb-gssapi-server、mariadb-oqgraph-engine、mariadb-server、mariadb-server-galera、mariadb-test
+·x86_64架构:
+mariadb、mariadb-backup、mariadb-common、mariadb-cracklib、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-errmessage、mariadb-gssapi-server、mariadb-oqgraph-engine、mariadb-server、mariadb-server-galera、mariadb-test
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+mariadb、mariadb-backup、mariadb-common、mariadb-cracklib、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-errmessage、mariadb-gssapi-server、mariadb-oqgraph-engine、mariadb-server、mariadb-server-galera、mariadb-test
+·x86_64架构:
+mariadb、mariadb-backup、mariadb-common、mariadb-cracklib、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-errmessage、mariadb-gssapi-server、mariadb-oqgraph-engine、mariadb-server、mariadb-server-galera、mariadb-test
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+mariadb、mariadb-backup、mariadb-common、mariadb-cracklib、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-errmessage、mariadb-gssapi-server、mariadb-oqgraph-engine、mariadb-server、mariadb-server-galera、mariadb-test
+·x86_64架构:
+mariadb、mariadb-backup、mariadb-common、mariadb-cracklib、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-errmessage、mariadb-gssapi-server、mariadb-oqgraph-engine、mariadb-server、mariadb-server-galera、mariadb-test
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+mariadb、mariadb-backup、mariadb-common、mariadb-cracklib、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-errmessage、mariadb-gssapi-server、mariadb-oqgraph-engine、mariadb-server、mariadb-server-galera、mariadb-test
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、mips64el、x86_64)
+mariadb-10.3.35-1.p01.ky10或以上版本
+mariadb-backup-10.3.35-1.p01.ky10或以上版本
+mariadb-common-10.3.35-1.p01.ky10或以上版本
+mariadb-cracklib-10.3.35-1.p01.ky10或以上版本
+mariadb-devel-10.3.35-1.p01.ky10或以上版本
+mariadb-embedded-10.3.35-1.p01.ky10或以上版本
+mariadb-embedded-devel-10.3.35-1.p01.ky10或以上版本
+mariadb-errmessage-10.3.35-1.p01.ky10或以上版本
+mariadb-gssapi-server-10.3.35-1.p01.ky10或以上版本
+mariadb-oqgraph-engine-10.3.35-1.p01.ky10或以上版本
+mariadb-server-10.3.35-1.p01.ky10或以上版本
+mariadb-server-galera-10.3.35-1.p01.ky10或以上版本
+mariadb-test-10.3.35-1.p01.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+mariadb-10.3.35-1.p01.ky10或以上版本
+mariadb-backup-10.3.35-1.p01.ky10或以上版本
+mariadb-common-10.3.35-1.p01.ky10或以上版本
+mariadb-cracklib-10.3.35-1.p01.ky10或以上版本
+mariadb-devel-10.3.35-1.p01.ky10或以上版本
+mariadb-embedded-10.3.35-1.p01.ky10或以上版本
+mariadb-embedded-devel-10.3.35-1.p01.ky10或以上版本
+mariadb-errmessage-10.3.35-1.p01.ky10或以上版本
+mariadb-gssapi-server-10.3.35-1.p01.ky10或以上版本
+mariadb-oqgraph-engine-10.3.35-1.p01.ky10或以上版本
+mariadb-server-10.3.35-1.p01.ky10或以上版本
+mariadb-server-galera-10.3.35-1.p01.ky10或以上版本
+mariadb-test-10.3.35-1.p01.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+mariadb-10.3.35-1.p01.ky10或以上版本
+mariadb-backup-10.3.35-1.p01.ky10或以上版本
+mariadb-common-10.3.35-1.p01.ky10或以上版本
+mariadb-cracklib-10.3.35-1.p01.ky10或以上版本
+mariadb-devel-10.3.35-1.p01.ky10或以上版本
+mariadb-embedded-10.3.35-1.p01.ky10或以上版本
+mariadb-embedded-devel-10.3.35-1.p01.ky10或以上版本
+mariadb-errmessage-10.3.35-1.p01.ky10或以上版本
+mariadb-gssapi-server-10.3.35-1.p01.ky10或以上版本
+mariadb-oqgraph-engine-10.3.35-1.p01.ky10或以上版本
+mariadb-server-10.3.35-1.p01.ky10或以上版本
+mariadb-server-galera-10.3.35-1.p01.ky10或以上版本
+mariadb-test-10.3.35-1.p01.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+mariadb-10.3.35-1.p01.ky10或以上版本
+mariadb-backup-10.3.35-1.p01.ky10或以上版本
+mariadb-common-10.3.35-1.p01.ky10或以上版本
+mariadb-cracklib-10.3.35-1.p01.ky10或以上版本
+mariadb-devel-10.3.35-1.p01.ky10或以上版本
+mariadb-embedded-10.3.35-1.p01.ky10或以上版本
+mariadb-embedded-devel-10.3.35-1.p01.ky10或以上版本
+mariadb-errmessage-10.3.35-1.p01.ky10或以上版本
+mariadb-gssapi-server-10.3.35-1.p01.ky10或以上版本
+mariadb-oqgraph-engine-10.3.35-1.p01.ky10或以上版本
+mariadb-server-10.3.35-1.p01.ky10或以上版本
+mariadb-server-galera-10.3.35-1.p01.ky10或以上版本
+mariadb-test-10.3.35-1.p01.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+mariadb-10.3.35-1.p01.ky10或以上版本
+mariadb-backup-10.3.35-1.p01.ky10或以上版本
+mariadb-common-10.3.35-1.p01.ky10或以上版本
+mariadb-cracklib-10.3.35-1.p01.ky10或以上版本
+mariadb-devel-10.3.35-1.p01.ky10或以上版本
+mariadb-embedded-10.3.35-1.p01.ky10或以上版本
+mariadb-embedded-devel-10.3.35-1.p01.ky10或以上版本
+mariadb-errmessage-10.3.35-1.p01.ky10或以上版本
+mariadb-gssapi-server-10.3.35-1.p01.ky10或以上版本
+mariadb-oqgraph-engine-10.3.35-1.p01.ky10或以上版本
+mariadb-server-10.3.35-1.p01.ky10或以上版本
+mariadb-server-galera-10.3.35-1.p01.ky10或以上版本
+mariadb-test-10.3.35-1.p01.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-15180:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-2760:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-27928:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-46657:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46659:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46661:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46662:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46663:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46664:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46665:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46666:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46667:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46669:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27376:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27377:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-27378:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27379:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27380:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27381:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27383:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27384:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27386:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27387:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27445:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27447:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27448:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27449:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27452:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27456:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27458:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-32083:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-32085:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-32087:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-32088:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+mariadb(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-backup-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-common-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-cracklib-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-devel-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-embedded-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-embedded-devel-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-errmessage-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-gssapi-server-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-oqgraph-engine-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-server-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-server-galera-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/mariadb-test-10.3.35-1.p01.ky10.aarch64.rpm
+
+mariadb(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-backup-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-common-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-cracklib-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-devel-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-embedded-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-embedded-devel-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-errmessage-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-gssapi-server-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-oqgraph-engine-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-server-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-server-galera-10.3.35-1.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/mariadb-test-10.3.35-1.p01.ky10.mips64el.rpm
+
+mariadb(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-backup-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-common-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-cracklib-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-devel-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-embedded-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-embedded-devel-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-errmessage-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-gssapi-server-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-oqgraph-engine-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-server-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-server-galera-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/mariadb-test-10.3.35-1.p01.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+mariadb(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-backup-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-common-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-cracklib-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-devel-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-embedded-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-embedded-devel-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-errmessage-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-gssapi-server-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-oqgraph-engine-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-server-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-server-galera-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mariadb-test-10.3.35-1.p01.ky10.aarch64.rpm
+
+mariadb(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-backup-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-common-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-cracklib-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-devel-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-embedded-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-embedded-devel-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-errmessage-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-gssapi-server-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-oqgraph-engine-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-server-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-server-galera-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mariadb-test-10.3.35-1.p01.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+mariadb(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-backup-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-common-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-cracklib-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-devel-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-embedded-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-embedded-devel-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-errmessage-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-gssapi-server-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-oqgraph-engine-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-server-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-server-galera-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mariadb-test-10.3.35-1.p01.ky10.aarch64.rpm
+
+mariadb(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-backup-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-common-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-cracklib-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-devel-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-embedded-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-embedded-devel-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-errmessage-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-gssapi-server-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-oqgraph-engine-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-server-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-server-galera-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mariadb-test-10.3.35-1.p01.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+mariadb(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-backup-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-common-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-cracklib-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-devel-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-embedded-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-embedded-devel-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-errmessage-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-gssapi-server-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-oqgraph-engine-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-server-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-server-galera-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/mariadb-test-10.3.35-1.p01.ky10.aarch64.rpm
+
+mariadb(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-backup-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-common-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-cracklib-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-devel-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-embedded-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-embedded-devel-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-errmessage-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-gssapi-server-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-oqgraph-engine-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-server-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-server-galera-10.3.35-1.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/mariadb-test-10.3.35-1.p01.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+mariadb(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-backup-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-common-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-cracklib-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-devel-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-embedded-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-embedded-devel-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-errmessage-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-gssapi-server-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-oqgraph-engine-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-server-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-server-galera-10.3.35-1.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mariadb-test-10.3.35-1.p01.ky10.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

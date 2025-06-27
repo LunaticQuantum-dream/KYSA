@@ -1,0 +1,110 @@
+Name:KYSA-202102-0065
+Severity:中等
+Summary:mysql-5.7安全漏洞
+Published:2022-11-10
+URL:/support/loophole/patch/2337.html
+Title:
+			 公告ID：KYSA-202102-0065
+公告摘要： mysql-5.7安全漏洞
+等级：中等
+发布日期：2022-11-10
+		
+1. 修复的CVE
+CVE-2021-2122
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。
+Oracle MySQL Server 存在安全漏洞，该漏洞允许高特权攻击者通过网络访问通过多种协议危及MySQL服务器。以下产品及版本受到影响：MySQL Server--Server: DDL--8.0.22 and prior。
+CVE-2021-2088
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统Oracle MySQL 的 MySQL Server 存在安全漏洞，该漏洞允许高特权的攻击者登录到MySQL服务器执行的基础设施，危害MySQL服务器。以下产品及版本受到影响：MySQL Server--Server： DML--8.0.22 and prior。
+CVE-2021-2087
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。Oracle MySQL 存在访问控制错误漏洞，该漏洞允许高特权的攻击者登录到MySQL服务器执行的基础设施，危害MySQL服务器。以下产品及版本受到影响：MySQL Server--Server： DML--8.0.22 and prior。
+CVE-2021-2081
+Six Apart Movable Type（MT）是美国Six Apart公司的一套博客系统。该系统包括多用户、评论、引用和主题等功能。Six Apart Movable Type 存在跨站脚本漏洞，该漏洞源于应用对资产列表屏幕中用户提供的数据清理不足。远程攻击者可以诱使受害者点击特制链接，并在易受攻击的网站上下文中在用户浏览器中执行任意 HTML 和脚本代码。
+CVE-2021-2058
+IBM Sterling File Gateway是美国IBM公司的一套文件传输软件。该软件可整合不同的文件传输活动中心，并帮助基于文件的数据通过因特网实现安全交换。IBM Sterling File Gateway存在安全漏洞，远程攻击者可利用该漏洞上传任意文件。
+CVE-2021-2072
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。
+Oracle MySQL 8.0.22及之前版本存在访问控制错误漏洞，该漏洞源允许高特权攻击者通过网络访问通过多种协议危及MySQL服务器。以下产品及版本受到影响：MySQL Server--Server: Stored Procedure--8.0.22 and prior。
+CVE-2021-2070
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。MySQL Server是其中的一个数据库服务器组件。
+Oracle MySQL 存在访问控制错误漏洞，该漏洞允许高特权攻击者通过网络访问通过多种协议危及MySQL服务器。以下产品及版本受到影响：MySQL Server--Server: Optimizer--8.0.22 and prior。
+CVE-2021-2056
+IBM Sterling File Gateway是美国IBM公司的一套文件传输软件。该软件可整合不同的文件传输活动中心，并帮助基于文件的数据通过因特网实现安全交换。IBM Sterling File Gateway 中存在跨站脚本漏洞，该漏洞源于产品允许用户在web ui中嵌入任意javascript代码。攻击者可通过该漏洞导致会话凭证丢失。
+CVE-2021-2032
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。
+Oracle MySQL 存在访问控制错误漏洞，该漏洞允许低特权的攻击者通过网络访问多种协议，危及MySQL服务器。以下产品及版本受到影响：MySQL Server--Information Schema--5.7.32 and prior, 8.0.22 and prior。
+CVE-2021-2031
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。Oracle MySQL 存在访问控制错误漏洞，该漏洞允许高特权攻击者通过网络访问通过多种协议危及MySQL服务器。以下产品及版本受到影响：MySQL Server--Server： Optimizer--8.0.22 and prior。
+CVE-2021-2011
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。Oracle MySQL 的 MySQL Client 存在安全漏洞，该漏洞允许未经身份验证的攻击者过多种协议进行网络访问，从而危害MySQL客户端。以下产品及版本受到影响：MySQL Client--C API--5.7.32 and prior, 8.0.22 and prior。
+CVE-2021-2010
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。Oracle MySQL 存在安全漏洞，该漏洞允许低特权的攻击者通过多种协议进行网络访问，从而危害MySQL客户端。以下产品及版本受到影响：MySQL Client--C API--5.6.50 and prior, 5.7.32 and prior, 8.0.22 and prior。
+CVE-2021-2038
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。MySQL Server是其中的一个数据库服务器组件。
+Oracle MySQL Server 存在安全漏洞，该漏洞允许通过多种协议访问网络的高特权攻击者危害MySQL服务器。以下产品及版本受到影响：MySQL Server--Server: Components Services--8.0.22 and prior。
+CVE-2021-2036
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。MySQL Server是其中的一个数据库服务器组件。
+Oracle MySQL 存在访问控制错误漏洞，该漏洞允许高特权攻击者通过网络访问通过多种协议危及MySQL服务器。以下产品及版本受到影响：MySQL Server--Server: Optimizer--8.0.22 and prior。
+CVE-2021-2076
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。
+Oracle MySQL 存在访问控制错误漏洞，该漏洞允许高特权攻击者通过网络访问通过多种协议危及MySQL服务器。以下产品及版本受到影响：MySQL Server--Server: Optimizer--8.0.22 and prior。
+CVE-2021-2060
+Mitsubishi Electric GX Works2是日本三菱（Mitsubishi Electric）公司的一款可编程控制器。Mitsubishi Electric FA engineering software products 存在缓冲区错误漏洞，该漏洞源于当有效用户打开由攻击者特制的恶意项目文件时，该软件会读取预期缓冲区之外的数据。攻击者可利用该漏洞在软件中造成拒绝服务条件。
+CVE-2021-2061
+Oracle MySQL和Oracle MySQL Server都是美国甲骨文（Oracle）公司的产品。Oracle MySQL是一套开源的关系数据库管理系统。Oracle MySQL Server是一款关系型数据库。MySQL Server product of Oracle MySQL 存在安全漏洞，该漏洞允许通过多种协议访问网络的高特权攻击者危害MySQL服务器。以下产品及版本受到影响：MySQL Server--Server： DDL--8.0.22 and prior。
+CVE-2021-2048
+IBM Sterling File Gateway是美国IBM公司的一套文件传输软件。该软件可整合不同的文件传输活动中心，并帮助基于文件的数据通过因特网实现安全交换。IBM Sterling File Gateway 中存在跨站脚本漏洞，该漏洞源于产品未对用户输入信息做安全检查。攻击者可通过该漏洞向web UI中注入任意javascript代码并导致会话凭证泄露。
+CVE-2021-2065
+Kangtaike SolarView Compact是日本Kangtaike公司的一个应用系统。提供光伏发电测量系统。Kangtaike SolarView Compact 中存在操作系统命令注入漏洞。该漏洞源于外部输入数据构造操作系统可执行命令过程中，网络系统或产品未正确过滤其中的特殊字符、命令等。攻击者可利用该漏洞执行非法操作系统命令。
+CVE-2021-2024
+Red Hat Package Manager是美国Red Hat公司的一种用于互联网下载包的打包及安装工具。它包含在某些Linux分发版中。它生成具有.RPM扩展名的文件。与Dpkg类似。Red Hat Package Manager 存在安全漏洞，该漏洞源于rpm中发现一个整数溢出漏洞，该漏洞可能允许未定义的行为。
+CVE-2021-2046
+IBM Cognos Analytics是美国IBM公司的一套商业智能软件。该软件包括报表、仪表板和记分卡等，并可通过分析关键因素与关键人等内容，协助企业调整决策。IBM Cognos Analytics存在安全漏洞，该漏洞源于System Appearance配置设置实现中的一个弱点的影响。攻击者可利用该漏洞可能会绕过业务逻辑来修改应用程序的外观和行为。
+CVE-2021-2021
+Oracle MySQL Server是美国甲骨文（Oracle）公司的一款关系型数据库。Oracle MySQL 的 MySQL Server 存在安全漏洞，该漏洞允许高特权攻击者通过网络访问通过多种协议危及MySQL服务器。以下产品及版本受到影响：MySQL Server--Server： Optimizer--8.0.22 and prior。
+CVE-2021-2022
+Oracle MySQL Server是美国甲骨文（Oracle）公司的一款关系型数据库。Oracle MySQL Server 存在安全漏洞，该漏洞允许通过多种协议访问网络的高特权攻击者危害MySQL服务器。以下产品及版本受到影响：MySQL Server--InnoDB--5.6.50 and prior, 5.7.32 and prior, 8.0.22 and prior。
+CVE-2021-2002
+Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。Oracle MySQL 的 MySQL Server 存在安全漏洞，该漏洞允许高特权攻击者通过网络访问通过多种协议危及MySQL服务器。以下产品及版本受到影响：MySQL Server--Server： Replication--8.0.22 and prior。
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V4 SP1、银河麒麟桌面操作系统V4 SP2、银河麒麟桌面操作系统V4 SP3、银河麒麟桌面操作系统V4 SP4
+x86_64 架构：
+mysql-client、mysql-common、mysql-server、mysql-testsuite
+arm64 架构：
+mysql-client、mysql-common、mysql-server、mysql-testsuite
+mips64el 架构：
+mysql-client、mysql-common、mysql-server、mysql-testsuite
+loongarch64 架构：
+mysql-client、mysql-common、mysql-server、mysql-testsuite
+3. 软件包修复版本
+·银河麒麟桌面操作系统V4 SP1、银河麒麟桌面操作系统V4 SP2、银河麒麟桌面操作系统V4 SP3、银河麒麟桌面操作系统V4 SP4
+5.7.39-0kord0.16.04.1+esm2
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install mysql-server-5.7
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+5. 软件包下载地址
+银河麒麟桌面操作系统V4
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-client_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-common_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-server_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-testsuite_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-client_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-common_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-server_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-testsuite_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-client_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-common_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-server_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mysql-5.7/mysql-testsuite_5.7.39-0kord0.16.04.1%2Besm2_all.deb
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

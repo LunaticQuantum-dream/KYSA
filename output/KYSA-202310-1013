@@ -1,0 +1,126 @@
+Name:KYSA-202310-1013
+Severity:中等
+Summary:php安全漏洞
+Published:2023-10-10
+URL:/support/loophole/patch/4210.html
+Title:
+			公告ID：KYSA-202310-1013
+公告摘要：php安全漏洞
+等级：Moderate
+发布日期：2023-10-10
+		
+1.修复的CVE
+·CVE-2022-31628
+描述：在7.4.31、8.0.24和8.1.11之前的PHP版本中，phar解压缩器代码会递归地解压缩“quines”gzip文件，从而导致无限循环。
+·CVE-2022-31630
+描述：在7.4.33、8.0.25和8.2.12之前的PHP版本中，在gd扩展中使用imageloadfont（）函数时，可以提供一个特制的字体文件，例如如果加载的字体与imagechar（）函数一起使用，则将使用外部分配的读取缓冲区。这可能导致崩溃或机密信息泄露。
+·CVE-2023-0567
+描述：在PHP 8.0.28之前的8.0.X、8.1.16之前的8.1.X和8.2.3之前的8.2.X中，password_verify（）函数可能会接受一些无效的Blowfish哈希。如果这样的无效散列最终出现在密码数据库中，则可能会导致应用程序允许该条目的任何密码有效。
+·CVE-2023-0568
+描述：在PHP 8.0.28之前的8.0.X、8.1.16之前的8.1.X和8.2.3之前的8.2.X中，核心路径解析函数分配的缓冲区太小了一个字节。当解析长度接近系统MAXPATHLEN设置的路径时，这可能会导致分配的缓冲区后的字节被NUL值覆盖，这可能导致未经授权的数据访问或修改。
+·CVE-2023-0662
+描述：在PHP 8.0.28之前的8.0.X、8.1.16之前的8.1.X和8.2.3之前的8.2.X中，HTTP表单上传中的部分数量过多会导致资源消耗和日志条目数量过多。这可能会耗尽CPU资源或磁盘空间，从而导致受影响服务器上的服务被拒绝。
+·CVE-2023-3823
+描述：在8.0.30之前的8.0.*、8.1.22之前的8.1.*和8.2.8之前的8.2.*版本中，各种XML函数都依赖于libxml全局状态来跟踪配置变量，比如是否加载了外部实体。除非用户通过调用适当的函数显式地更改此状态，否则假定此状态不变。然而，由于状态是进程全局的，其他模块（如ImageMagick）也可以在同一进程中使用此库，并出于内部目的更改该全局状态，并使其处于启用外部实体加载的状态。这可能导致在加载外部实体的情况下解析外部XML，从而导致PHP可访问的任何本地文件被泄露。这种易受攻击的状态可能会在多个请求的同一进程中持续存在，直到进程关闭。
+·CVE-2023-3824
+描述：在8.0.30之前的PHP 8.0.*版本、8.1.22之前的8.1.*版本和8.2.8之前的8.2.*版本中，在加载phar文件时，在读取phar目录项时，长度检查不足可能会导致堆栈缓冲区溢出，从而可能导致内存损坏或RCE。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+php、php-bcmath、php-cli、php-common、php-dba、php-dbg、php-devel、php-embedded、php-enchant、php-fpm、php-gd、php-gmp、php-help、php-intl、php-json、php-ldap、php-mbstring、php-mysqlnd、php-odbc、php-opcache、php-pdo、php-pgsql、php-process、php-recode、php-snmp、php-soap、php-sodium、php-tidy、php-xml、php-xmlrpc
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+php-7.2.34-3.p02.a.ky10或以上版本
+php-bcmath-7.2.34-3.p02.a.ky10或以上版本
+php-cli-7.2.34-3.p02.a.ky10或以上版本
+php-common-7.2.34-3.p02.a.ky10或以上版本
+php-dba-7.2.34-3.p02.a.ky10或以上版本
+php-dbg-7.2.34-3.p02.a.ky10或以上版本
+php-devel-7.2.34-3.p02.a.ky10或以上版本
+php-embedded-7.2.34-3.p02.a.ky10或以上版本
+php-enchant-7.2.34-3.p02.a.ky10或以上版本
+php-fpm-7.2.34-3.p02.a.ky10或以上版本
+php-gd-7.2.34-3.p02.a.ky10或以上版本
+php-gmp-7.2.34-3.p02.a.ky10或以上版本
+php-help-7.2.34-3.p02.a.ky10或以上版本
+php-intl-7.2.34-3.p02.a.ky10或以上版本
+php-json-7.2.34-3.p02.a.ky10或以上版本
+php-ldap-7.2.34-3.p02.a.ky10或以上版本
+php-mbstring-7.2.34-3.p02.a.ky10或以上版本
+php-mysqlnd-7.2.34-3.p02.a.ky10或以上版本
+php-odbc-7.2.34-3.p02.a.ky10或以上版本
+php-opcache-7.2.34-3.p02.a.ky10或以上版本
+php-pdo-7.2.34-3.p02.a.ky10或以上版本
+php-pgsql-7.2.34-3.p02.a.ky10或以上版本
+php-process-7.2.34-3.p02.a.ky10或以上版本
+php-recode-7.2.34-3.p02.a.ky10或以上版本
+php-snmp-7.2.34-3.p02.a.ky10或以上版本
+php-soap-7.2.34-3.p02.a.ky10或以上版本
+php-sodium-7.2.34-3.p02.a.ky10或以上版本
+php-tidy-7.2.34-3.p02.a.ky10或以上版本
+php-xml-7.2.34-3.p02.a.ky10或以上版本
+php-xmlrpc-7.2.34-3.p02.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-31628:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-31630:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-0567:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-0568:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-0662:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-3823:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-3824:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+php(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-bcmath-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-cli-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-common-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-dba-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-dbg-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-devel-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-embedded-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-enchant-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-fpm-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-gd-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-gmp-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-help-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-intl-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-json-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-ldap-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-mbstring-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-mysqlnd-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-odbc-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-opcache-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-pdo-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-pgsql-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-process-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-recode-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-snmp-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-soap-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-sodium-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-tidy-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-xml-7.2.34-3.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/php-xmlrpc-7.2.34-3.p02.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

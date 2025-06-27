@@ -1,0 +1,67 @@
+Name:KYSA-202412-1211
+Severity:重要
+Summary:undertow安全漏洞
+Published:2024-12-24
+URL:/support/loophole/patch/7100.html
+Title:
+			公告ID：KYSA-202412-1211
+公告摘要：undertow安全漏洞
+等级：重要
+发布日期：2024-12-24
+		
+1.修复的漏洞
+·CVE-2021-3690
+描述：WordPress和WordPress plugin都是WordPress基金会的产品。WordPress是一套使用PHP语言开发的博客平台。该平台支持在PHP和MySQL的服务器上架设个人博客网站。WordPress plugin是一个应用插件。WordPress plugin Age Gate 2.1.70及其之前版本存在跨站脚本漏洞，该漏洞源于插件缺少参数的过滤转义。
+·CVE-2023-1973
+描述： Undertow是一款基于Java的嵌入式Web服务器，是Wildfly（Java应用服务器）默认的Web服务器。
+ Undertow 存在安全漏洞。攻击者利用该漏洞通过发送特制的请求来触发拒绝服务，从而导致服务器出现 OutofMemory 错误，耗尽服务器的内存。
+·CVE-2023-5379
+描述： Undertow是一款基于Java的嵌入式Web服务器，是Wildfly（Java应用服务器）默认的Web服务器。
+Undertow 存在安全漏洞，该漏洞源于当发送 AJP 请求后未收到 AJP 响应，从后端关闭 TCP 连接时，mod_proxy_cluster 会将 JBoss EAP 实例标记为错误工作器并停止转发，攻击者利用该漏洞可以重复发送超过最大标头大小的请求，从而导致拒绝服务。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·aarch64架构:
+undertow、undertow-javadoc
+·x86_64架构:
+undertow、undertow-javadoc
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (aarch64、x86_64)
+undertow-1.4.0-7.ky10h或以上版本
+undertow-javadoc-1.4.0-7.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+aarch64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-3690:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-1973:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-5379:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+undertow(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/undertow-1.4.0-7.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/undertow-javadoc-1.4.0-7.ky10h.noarch.rpm
+
+undertow(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/undertow-javadoc-1.4.0-7.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/undertow-1.4.0-7.ky10h.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

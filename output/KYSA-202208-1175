@@ -1,0 +1,60 @@
+Name:KYSA-202208-1175
+Severity:中等
+Summary:perl-Archive-Tar安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/2134.html
+Title:
+			公告ID：KYSA-202208-1175
+公告摘要：perl-Archive-Tar安全漏洞
+等级：Moderate
+发布日期：2022-08-15
+		
+1.修复的CVE
+·CVE-2018-12015
+描述：Perl是美国程序员拉里-沃尔（Larry Wall）所研发的一种免费且功能强大的跨平台编程语言。Archive：：Tar module是其中的一个用于处理tar文件的模块。Perl 5.26.2及之前版本中的Archive：：Tar模块存在安全漏洞。攻击者可借助带有相同名称的符号链接和常规文件的归档文件利用该漏洞绕过目录遍历保护机制并覆盖任意文件。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+perl-Archive-Tar
+·x86_64架构:
+perl-Archive-Tar
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+perl-Archive-Tar-1.92-3.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2018-12015:需要重启 perl-Archive-Tar 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+perl-Archive-Tar(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/perl-Archive-Tar-1.92-3.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/perl-Archive-Tar-1.92-3.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/perl-Archive-Tar-1.92-3.el7.noarch.rpm
+
+perl-Archive-Tar(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/perl-Archive-Tar-1.92-3.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/perl-Archive-Tar-1.92-3.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/perl-Archive-Tar-1.92-3.el7.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

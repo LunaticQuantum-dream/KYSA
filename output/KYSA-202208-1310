@@ -1,0 +1,72 @@
+Name:KYSA-202208-1310
+Severity:严重
+Summary:ipa安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/4273.html
+Title:
+			公告ID：KYSA-202208-1310
+公告摘要：ipa安全漏洞
+等级：Critical
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2010-5312
+描述：jQuery UI是jQuery团队开发的一套JavaScript函式库，它提供抽象化、可自订主题的GUI控件与动画效果，并支持建构交互式互联网应用程序。jQuery UI 1.10.0 rc1及之前版本的jquery.ui.dialog.js脚本中存在跨站脚本漏洞。远程攻击者可借助‘title’选项利用该漏洞注入任意Web脚本或HTML。
+·CVE-2012-4546
+描述：Enterprise Linux是面向企业用户的Linux操作系统配置错误，IPA服务器默认配置中存在漏洞，该漏洞源于撤销来自Identity Management副本的证书时，程序没有正确更新另一个Identity Management副本，导致不一致的Certificate Revocation Lists (CRLs)被使用，通过撤销的证书，远程攻击者利用该漏洞绕过预期的访问限制。
+·CVE-2012-5484
+描述：FreeIPA是一套集成的安全信息管理解决方案。该方案对Linux和Unix计算机网络提供了易于管理的身份、策略和审计（IPA）套件。FreeIPA 2.x版本和3.1.2之前的3.x版本中的客户端中存在漏洞，该漏洞源于程序没有从服务器正确获得Certification Authority (CA)证书。通过特制的证书，中间人攻击者可利用该漏洞欺骗加入过程。
+·CVE-2012-6662
+描述：jQuery UI是jQuery团队开发的一套JavaScript函式库，它提供抽象化、可自订主题的GUI控件与动画效果，并支持建构交互式互联网应用程序。Tooltip是其中的一个信息提示插件。jQuery UI 1.10.0 rc1及之前版本的Tooltip窗口小部件中jquery.ui.tooltip.js脚本的默认内容选项存在跨站脚本漏洞。远程攻击者可借助‘title’属性利用该漏洞注入任意Web脚本或HTML。
+·CVE-2016-5404
+描述：在本机匿名树内部有一个节点，外部有一个节点的选择中操作范围时，可能会发生“释放后使用”错误。这将导致潜在的可利用崩溃。此漏洞影响Firefox<52、Firefox ESR<45.8、Thunderbird<52和Thunderbird<45.8。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+ipa-admintools、ipa-client、ipa-python、ipa-server、ipa-server-selinux、ipa-server-trust-ad
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+ipa-admintools-3.0.0-51.el6或以上版本
+ipa-client-3.0.0-51.el6或以上版本
+ipa-python-3.0.0-51.el6或以上版本
+ipa-server-3.0.0-51.el6或以上版本
+ipa-server-selinux-3.0.0-51.el6或以上版本
+ipa-server-trust-ad-3.0.0-51.el6或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2010-5312:需要重启 ipa 以使漏洞修复生效。
+CVE-2012-4546:需要重启 ipa 以使漏洞修复生效。
+CVE-2012-5484:需要重启 ipa 以使漏洞修复生效。
+CVE-2012-6662:需要重启 ipa 以使漏洞修复生效。
+CVE-2016-5404:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+ipa(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/ipa-admintools-3.0.0-51.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/ipa-client-3.0.0-51.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/ipa-python-3.0.0-51.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/ipa-server-3.0.0-51.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/ipa-server-selinux-3.0.0-51.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/ipa-server-trust-ad-3.0.0-51.el6.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

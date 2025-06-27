@@ -1,0 +1,60 @@
+Name:KYSA-202203-0005
+Severity:重要
+Summary:expat安全漏洞
+Published:2023-02-08
+URL:/support/loophole/patch/2582.html
+Title:
+			公告ID：KYSA-202203-0005
+公告摘要：expat安全漏洞
+等级：重要
+发布日期：2023-02-08
+		
+1. 修复的CVE
+CVE-2022-25314
+Expat是一款使用C语言编写的快速流式XML解析器。Expat 存在安全漏洞，该漏洞源于在2.4.5之前的Expat(又名libexpat)中，copyString中有一个整数溢出。
+CVE-2022-25315
+Expat是一款使用C语言编写的快速流式XML解析器。Expat 存在输入验证错误漏洞，该漏洞源于 storeRawNames 中存在整数溢出。
+CVE-2022-25313
+Expat是一款使用C语言编写的快速流式XML解析器。Expat 存在资源管理错误漏洞，该漏洞源于攻击者可以通过 DTD 元素中的较大嵌套深度触发 build_model 中的堆栈耗尽。
+CVE-2022-25236
+Expat是一款使用C语言编写的快速流式XML解析器。Expat（又名 libexpat）2.4.5 之前存在输入验证错误漏洞，该漏洞源于 xmlparse.c 允许攻击者将命名空间分隔符插入命名空间 URI。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+expat、libexpat1
+arm64 架构：
+expat、libexpat1
+mips64el 架构：
+expat、libexpat1
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+2.1.0-7kord0.16.04.5+esm5
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libexpat1
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/expat/expat_2.1.0-7kord0.16.04.5%2Besm5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/expat/libexpat1_2.1.0-7kord0.16.04.5%2Besm5_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/expat/expat_2.1.0-7kord0.16.04.5%2Besm5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/expat/libexpat1_2.1.0-7kord0.16.04.5%2Besm5_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/expat/expat_2.1.0-7kord0.16.04.5%2Besm5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/expat/libexpat1_2.1.0-7kord0.16.04.5%2Besm5_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

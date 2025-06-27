@@ -1,0 +1,55 @@
+Name:KYSA-202204-0018
+Severity:中等
+Summary:kylin-installer安全漏洞
+Published:2023-12-14
+URL:/support/loophole/patch/4712.html
+Title:
+			公告ID：KYSA-202204-0018
+公告摘要：kylin-installer安全漏洞
+等级：中等
+发布日期：2023-12-14
+		
+1. 修复的CVE
+KVE-2022-0406
+Kylin Installer安装程序是用于安装和管理deb包的工具。该程序存在栈溢出漏洞，可能导致系统崩溃。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+kylin-installer
+arm64 架构：
+kylin-installer
+mips64el 架构：
+kylin-installer
+loongarch64 架构：
+kylin-installer
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+2.0.2.1-0k2.12
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install kylin-installer
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/k/kylin-installer/kylin-installer_2.0.2.1-0k2.12_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/k/kylin-installer/kylin-installer_2.0.2.1-0k2.12_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/k/kylin-installer/kylin-installer_2.0.2.1-0k2.12_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/k/kylin-installer/kylin-installer_2.0.2.1-0k2.12_loongarch64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

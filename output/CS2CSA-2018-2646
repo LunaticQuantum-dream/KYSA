@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-2646
+Severity:中等
+Summary:mysql数据库 DML漏洞
+Published:2018-01-16
+URL:/support/loophole/patch/123.html
+Title:
+			摘要：             mysql数据库 DML漏洞
+安全等级：          中等
+公告ID：           CS2CSA-2018-2646
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-01-16
+CVE：             CVE-2018-2646 CVSS3评分：4.9
+		
+1. 概述：中标麒麟高级服务器操作系统V6、V7不受该漏洞影响。2. 描述：oracle mysql的DML漏洞。受影响的为5.7.20及更早的版本，此漏洞使攻击者可以通过多种协议访问数据库。这会导致未授权的用户访问数据库并引起数据库宕机。

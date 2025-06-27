@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-3144
+Severity:中等
+Summary:dhcp安全更新
+Published:2017-12-07
+URL:/support/loophole/patch/182.html
+Title:
+			摘要：             dhcp安全更新
+安全等级：          中等
+公告ID：           CS2CSA-2017-3144
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-12-07
+CVE：             CVE-2017-3144 CVSS3评分：5.3
+		
+1. 概述：中标麒麟高级服务器操作系统V6由于触发条件/影响有限/风险小，因此不修复。中标麒麟高级服务器操作系统V7有 dhcp 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。银河麒麟高级服务器操作系统 V10 SP3，不影响，无需修复。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述： DHCP 守护进程在某些情况下未正常清理关闭的 OMAPI 连接。这样，能够使得连接到 OMAPI 端口的远程攻击者，可以利用此漏洞，在 DHCP 守护进程用完文件描述符时, 导致 OMAPI 功能性地拒绝服务。4. 安装包列表：中标麒麟高级服务器操作系统V7：源代码包：dhcp-4.2.5-58.el7_4.1.src.rpm x86_64二进制包：dhclient-4.2.5-58.el7_4.1.x86_64.rpm       dhcp-4.2.5-58.el7_4.1.x86_64.rpm           dhcp-common-4.2.5-58.el7_4.1.x86_64.rpm       dhcp-debuginfo-4.2.5-58.el7_4.1.i686.rpm   dhcp-debuginfo-4.2.5-58.el7_4.1.i686.rpm   dhcp-debuginfo-4.2.5-58.el7_4.1.x86_64.rpm   dhcp-debuginfo-4.2.5-58.el7_4.1.x86_64.rpm   dhcp-devel-4.2.5-58.el7_4.1.i686.rpm       dhcp-devel-4.2.5-58.el7_4.1.x86_64.rpm       dhcp-libs-4.2.5-58.el7_4.1.i686.rpm           dhcp-libs-4.2.5-58.el7_4.1.x86_64.rpm 

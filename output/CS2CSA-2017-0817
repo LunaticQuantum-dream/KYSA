@@ -1,0 +1,16 @@
+Name:CS2CSA-2017-0817
+Severity:中等
+Summary:内核安全，漏洞修复，增强更新
+Published:2017-03-21
+URL:/support/loophole/patch/51.html
+Title:
+			摘要：                   内核安全，漏洞修复，增强更新
+安全等级：          中等
+公告 ID：              CS2CSA-2017-0817
+产品：                   中标麒麟高级服务器操作系统
+发布日期：            2017-03-21
+CVE ：           CVE-2016-2069 ，CVE-2016-2384 ，CVE-2016-6480 ，CVE-2016-7042 
+CVE-2016-7097 ，CVE-2016-8399 ，CVE-2016-9576 ，CVE-2016-10088 
+CVE-2016-10142
+		
+1. 概述：中标麒麟服务器操作系统V6有kernel可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟服务器操作系统V6-X86_64。3. 描述：此次升级包含内核及其其他相关组件包。4. 安全加固：*远程攻击者可以利用IPv6协议的原子碎片漏洞来触发任意的IPv6碎片漏洞，随后可以执行任何代码来进行攻击。(CVE-2016-10142，中度)*Linux内核在处理分页结构时会触发一个缺陷。当内核将不在使用的分页设置为无效的时候，原则上，通过竞争机制可以获取到cpu资源，这个cpu可以是一个正在发生进程切换的cpu。此时，本地用户可以使线程利用过时的缓存来提升它的权限。 *在Linux内核的aacraid实施时发现一个ioctl_send_fib()函数竞态漏洞。本地攻击者可以使用这个缺陷通过改变确定的大小值来导致拒绝服务（越界访问或系统崩溃）。（CVE-2016-6480，中度） *发现当启用GCC堆栈保护器时，读取 /proc/keys文件时堆栈可能导致Linux内核错误。这是因为错误的缓冲区大小被用来保持一个64位超时值周期性呈现。（CVE-2016-7042，中度） *发现当文件权限通过chmod修改时和用户修改他们不在所属组或CAP_FSETID组，setgid位将被清除。设置通过setxattr设置文件的权限以及新的ACL来设置POSIX，但不清除setgid位以类似的方式。这可以允许本地用户通过特定的setgid程序获得组特权。（CVE-2016-7097，中度） *在Linux网络子系统中发现了一个漏洞，有cap_net_admin能力的本地攻击者的会越界内存访问通过创建一个小于预期的ICMP头文件并通过sendto（）函数发送给目标。（CVE-2016-8399，中度） *发现在Linux内核的块设备功能blk_rq_map_user_iov()函数不适用限制的类型迭代器，它允许本地攻击者在任意内核内存位置读取或写入或导致拒绝服务（use-after-free）利用写访问/dev/sg设备。（CVE-2016-9576，CVE-2016-10088，中度）*在USB-MIDI Linux内核驱动程序发现一个缺陷：‘umidi’对象可能引发一个double-free错误。一个通过物理访问系统的攻击者可以使用这个漏洞来升级他们的权限。（CVE-2016-2384，低） 5. 安装包列表：中标麒麟高级服务器操作系统 V6源码包：kernel-2.6.32-696.el6.src.rpmx86_64：kernel-2.6.32-696.el6.x86_64.rpmkernel-debug-2.6.32-696.el6.x86_64.rpmkernel-debug-debuginfo-2.6.32-696.el6.i686.rpmkernel-debug-debuginfo-2.6.32-696.el6.x86_64.rpmkernel-debug-devel-2.6.32-696.el6.i686.rpmkernel-debug-devel-2.6.32-696.el6.x86_64.rpmkernel-debuginfo-2.6.32-696.el6.i686.rpmkernel-debuginfo-2.6.32-696.el6.x86_64.rpmkernel-debuginfo-common-i686-2.6.32-696.el6.i686.rpmkernel-debuginfo-common-x86_64-2.6.32-696.el6.x86_64.rpmkernel-devel-2.6.32-696.el6.x86_64.rpmkernel-headers-2.6.32-696.el6.x86_64.rpmperf-2.6.32-696.el6.x86_64.rpmperf-debuginfo-2.6.32-696.el6.i686.rpmperf-debuginfo-2.6.32-696.el6.x86_64.rpmpython-perf-debuginfo-2.6.32-696.el6.i686.rpmpython-perf-debuginfo-2.6.32-696.el6.x86_64.rpm			

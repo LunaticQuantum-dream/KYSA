@@ -1,0 +1,64 @@
+Name:KYSA-202312-1052
+Severity:重要
+Summary:qt安全漏洞
+Published:2023-12-20
+URL:/support/loophole/patch/4783.html
+Title:
+			公告ID：KYSA-202312-1052
+公告摘要：qt安全漏洞
+等级：Important
+发布日期：2023-12-20
+		
+1.修复的CVE
+·CVE-2023-32573
+描述：在5.15.14之前的Qt、6.2.9之前的6.0.x到6.2.x以及6.5.1之前的6.3.x到6.5.x中，QtSvg QSvgFont m_unitsPerEm初始化处理不当。
+·CVE-2023-34410
+描述：TLS的证书验证并不总是考虑链的根是否是已配置的CA证书。
+·CVE-2023-37369
+描述：在5.15.15之前的Qt、6.2.9之前的6.x以及6.5.2之前的6.3.x到6.5.x中，QXmlStreamReader中可能会通过特制的XML字符串发生应用程序崩溃，从而触发前缀大于长度的情况。
+·CVE-2023-38197
+描述：在5.15.15之前的Qt、6.2.10之前的6.x以及6.5.3之前的6.3.x到6.5.x中发现了一个问题。递归实体展开中有无限个循环。
+·CVE-2023-43114
+描述：使用GDI字体引擎时，如果通过QFontDatabase:：addApplicationFont｛FromData]加载损坏的字体，则可能会导致应用程序因缺少长度检查而崩溃。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+qt、qt-devel
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+qt-4.8.7-47.p08.a.ky10或以上版本
+qt-devel-4.8.7-47.p08.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-32573:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-34410:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-37369:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-38197:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-43114:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+qt(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qt-4.8.7-47.p08.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qt-devel-4.8.7-47.p08.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

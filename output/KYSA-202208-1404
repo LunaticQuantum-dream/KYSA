@@ -1,0 +1,95 @@
+Name:KYSA-202208-1404
+Severity:中等
+Summary:python安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/3943.html
+Title:
+			公告ID：KYSA-202208-1404
+公告摘要：python安全漏洞
+等级：Moderate
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2011-4940
+描述：Python是Python软件基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python 2.5.6c1，2.6.7 rc2之前的2.6.x版本，2.7.2之前的2.7.x版本中的SimpleHTTPServer中的Lib/SimpleHTTPServer.py中的list_directory函数中存在漏洞，该漏洞源于在Content-Type HTTP头中未正确放置charset参数。远程攻击者可利用该漏洞通过UTF-7编码进行跨站脚本(XSS)攻击。
+·CVE-2011-4944
+描述：Python是Python软件基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python 2.6至3.2版本在distutils组件创建.pypirc的实现上存在本地竞争条件漏洞。可以访问受害者主目录的攻击者可利用该漏洞绕过某些权限限制，泄露敏感信息。
+·CVE-2012-0845
+描述：Python是Python软件基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python 2.6.8之前版本、2.7.3之前的2.7.x版本、3.1.5之前的3.x版本、3.2.3之前的3.2.x版本中的SimpleXMLRPCServer.py中存在漏洞。远程攻击者可利用该漏洞通过XML-RPC POST超过指定的Content-Length头的包含较小量的数据的请求，导致拒绝服务（无限循环和CPU消耗）。
+·CVE-2012-1150
+描述：Python是Python软件基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python 2.6.8之前版本、2.7.3之前的2.7.x版本、3.1.5之前的3.x版本、3.2.3之前的3.2.x版本中存在漏洞，该漏洞源于计算哈希值时没有限制能够触发可预测的散列值冲突。上下文相关的攻击者可利用该漏洞通过特制的输入到保留哈希表的应用程序，导致拒绝服务（CPU消耗）。
+·CVE-2013-1752
+描述：Python是Python基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python 中存在安全漏洞。攻击者可利用该漏洞造成受影响应用程序消耗大量的内存，导致拒绝服务。
+·CVE-2013-4238
+描述：Python是Python软件基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python 2.6至3.4版本中的SSL模块中的‘ssl.match_hostname’函数中存在安全漏洞，SSL模块没有正确处理X.509证书的Subject Alternative Name字段中带有空字节的主机名。攻击者可通过中间人攻击利用该漏洞欺骗SSL服务器。成功的利用此漏洞需要获得由权威机构签署并且客户信任的证书。
+·CVE-2014-1912
+描述：Python是Python软件基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python的Modules/socketmodule.c文件中的‘socket.recvfrom_into’函数存在缓冲区溢出漏洞。远程攻击者可借助特制的字符串利用该漏洞执行任意代码。以下版本受到影响：Python 2.7.7之前的2.5版本，3.3.4之前的3.x版本，3.4rc1之前的3.4.x版本。
+·CVE-2014-4650
+描述：Python是Python软件基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python 2.7.5版本和3.3.4版本中的CGIHTTPServer模块存在路径遍历漏洞，该漏洞源于程序没有正确处理URL中编码的路径分隔符。攻击者可借助特制字符序列利用该漏洞获取CGI脚本的源代码。
+·CVE-2014-7185
+描述：Python是Python软件基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python 2.7.7及之前版本的bufferobject.c文件中存在整数溢出漏洞。攻击者可借助特制的‘buffer’函数利用该漏洞获取进程内存中的敏感信息。
+·CVE-2016-0772
+描述：Python是Python软件基金会的一套开源的、面向对象的程序设计语言，该语言具有可扩展、支持模块和包、支持多种平台等特点。CPython（又名Python）是一款用C语言实现的Python解释器。Python中的smtplib library中存在安全漏洞，该漏洞源于StartTLS失败时，程序没有返回错误消息。攻击者可利用该漏洞实现中间人攻击，绕过TLS保护。以下版本受到影响：Python 2.7.12版本，3.4.5之前的3.x版本，3.5.2之前的3.5.x版本。
+·CVE-2016-1000110
+描述：Python是Python软件基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python 2.7.12之前版本中的CGIHandler存在安全漏洞。远程攻击者可利用该漏洞重定向HTTP请求，进而查看敏感信息，回复畸形的数据或造成拒绝服务。
+·CVE-2016-5699
+描述：Python是Python软件基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python 2.7.10之前的版本和3.4.4之前的3.x 版本中的urllib2和urllib中的‘HTTPConnection.putheader’函数存在CRLF注入漏洞。远程攻击者可借助URL中的CRLF序列利用该漏洞注入任意HTTP头。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+python、python-devel、python-libs、python-test、python-tools、tkinter
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+python-2.6.6-66.el6_8或以上版本
+python-devel-2.6.6-66.el6_8或以上版本
+python-libs-2.6.6-66.el6_8或以上版本
+python-test-2.6.6-66.el6_8或以上版本
+python-tools-2.6.6-66.el6_8或以上版本
+tkinter-2.6.6-66.el6_8或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2011-4940:需要重启 python 以使漏洞修复生效。
+CVE-2011-4944:需要重启 python 以使漏洞修复生效。
+CVE-2012-0845:需要重启 python 以使漏洞修复生效。
+CVE-2012-1150:需要重启 python 以使漏洞修复生效。
+CVE-2013-1752:需要重启 python 以使漏洞修复生效。
+CVE-2013-4238:需要重启 python 以使漏洞修复生效。
+CVE-2014-1912:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2014-4650:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2014-7185:需要重启 python 以使漏洞修复生效。
+CVE-2016-0772:需要重启 python 以使漏洞修复生效。
+CVE-2016-1000110:需要重启 python 以使漏洞修复生效。
+CVE-2016-5699:需要重启 python 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+python(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/python-2.6.6-66.el6_8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/python-devel-2.6.6-66.el6_8.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/python-devel-2.6.6-66.el6_8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/python-libs-2.6.6-66.el6_8.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/python-libs-2.6.6-66.el6_8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/python-test-2.6.6-66.el6_8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/python-tools-2.6.6-66.el6_8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/tkinter-2.6.6-66.el6_8.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

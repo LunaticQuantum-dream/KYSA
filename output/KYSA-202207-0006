@@ -1,0 +1,53 @@
+Name:KYSA-202207-0006
+Severity:中等
+Summary:openssl安全漏洞
+Published:2023-02-08
+URL:/support/loophole/patch/2610.html
+Title:
+			公告ID：KYSA-202207-0006
+公告摘要：openssl安全漏洞
+等级：中等
+发布日期：2023-02-08
+		
+1. 修复的CVE
+CVE-2022-1473
+OpenSSL是Openssl团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL 存在安全漏洞，该漏洞源于清空哈希表的 OPENSSL_LH_flush() 函数包含一个错误，该错误会破坏已删除的哈希表条目占用的内存的重用。攻击者利用该漏洞可以实现拒绝服务攻击。
+CVE-2022-1292
+OpenSSL是Openssl团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL 存在操作系统命令注入漏洞，该漏洞源于c_rehash 脚本未正确清理 shell 元字符导致命令注入。攻击者利用该漏洞执行任意命令。
+CVE-2022-2068
+OpenSSL是Openssl团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL 1.0.2、1.1.1 和 3.0 版本存在安全漏洞，该漏洞源于错误地处理了 c_rehash 脚本。本地攻击者可能会在运行 c_rehash 时利用该漏洞执行任意命令。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+libssl1.0.0、openssl
+arm64 架构：
+libssl1.0.0、openssl
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+1.0.2g-1kord4.20+esm5
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install openssl
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/libssl1.0.0_1.0.2g-1kord4.20%2Besm5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/openssl_1.0.2g-1kord4.20%2Besm5_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/libssl1.0.0_1.0.2g-1kord4.20%2Besm5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/openssl_1.0.2g-1kord4.20%2Besm5_arm64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

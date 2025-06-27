@@ -1,0 +1,93 @@
+Name:KYSA-202211-0035
+Severity:中等
+Summary:webkit2gtk安全漏洞
+Published:2023-08-18
+URL:/support/loophole/patch/4026.html
+Title:
+			公告ID：KYSA-202211-0035
+公告摘要：webkit2gtk安全漏洞
+等级：中等
+发布日期：2023-08-18
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2022-42823
+Apple macOS Big Sur和Apple macOS Monterey都是美国苹果（Apple）公司的产品。Apple macOS Big Sur是苹果公司用于MAC操作系统macOS的第17个主要版本。Apple macOS Monterey是用于麦金塔桌面操作系统macOS的第18个主要版本。Apple macOS Big Sur和macOS Monterey存在安全漏洞。攻击者利用该漏洞通过特制的web内容执行任意代码。
+CVE-2022-32923
+Apple iOS和Apple iPadOS都是美国苹果（Apple）公司的产品。Apple iOS是一套为移动设备所开发的操作系统。Apple iPadOS是一套用于iPad平板电脑的操作系统。Apple iOS和iPadOS 存在安全漏洞。攻击者利用该漏洞导致信息泄露。以下产品及版本受到影响：iPhone 6s及更高版本、iPad Pro（所有型号）、iPad Air 2版本及更高版本、iPad第5代及更高版本，iPad mini 4及更高版本、iPod touch（第7代）。
+CVE-2022-32888
+Apple macOS是美国苹果（Apple）公司的一套专为Mac计算机所开发的专用操作系统。Apple macOS 存在安全漏洞，该漏洞源于越界写入，处理恶意制作的Web内容可能导致任意代码执行。以下产品和版本受到影响：Mac Studio（2022版本）、Mac Pro（2019及以后版本）、MacBook Air（2018及以后版本）、MacBook Pro（2017及以后版本）、Mac mini（2018及以后版本）、iMac（2017及以后版本）、MacBook（2017）和iMac Pro（2017）。
+CVE-2022-42824
+Apple macOS Big Sur和Apple macOS Monterey都是美国苹果（Apple）公司的产品。Apple macOS Big Sur是苹果公司用于MAC操作系统macOS的第17个主要版本。Apple macOS Monterey是用于麦金塔桌面操作系统macOS的第18个主要版本。Apple macOS Big Sur和macOS Monterey存在安全漏洞。攻击者利用该漏洞通过特制的web内容泄露用户敏感信息。
+CVE-2022-42799
+Apple macOS Big Sur和Apple macOS Monterey都是美国苹果（Apple）公司的产品。Apple macOS Big Sur是苹果公司用于MAC操作系统macOS的第17个主要版本。Apple macOS Monterey是用于麦金塔桌面操作系统macOS的第18个主要版本。Apple macOS Big Sur和macOS Monterey存在安全漏洞。攻击者利用该漏洞导致用户访问恶意网站。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303
+x86_64 架构：
+gir1.2-javascriptcoregtk-4.0、gir1.2-webkit2-4.0、libjavascriptcoregtk-4.0-18、libjavascriptcoregtk-4.0-bin、libwebkit2gtk-4.0-37-gtk2、libwebkit2gtk-4.0-37、webkit2gtk-driver
+arm64 架构：
+gir1.2-javascriptcoregtk-4.0、gir1.2-webkit2-4.0、libjavascriptcoregtk-4.0-18、libjavascriptcoregtk-4.0-bin、libwebkit2gtk-4.0-37-gtk2、libwebkit2gtk-4.0-37、webkit2gtk-driver
+mips64el 架构：
+gir1.2-javascriptcoregtk-4.0、gir1.2-webkit2-4.0、libjavascriptcoregtk-4.0-18、libjavascriptcoregtk-4.0-bin、libwebkit2gtk-4.0-37-gtk2、libwebkit2gtk-4.0-37、webkit2gtk-driver
+loongarch64 架构：
+gir1.2-javascriptcoregtk-4.0、gir1.2-webkit2-4.0、libjavascriptcoregtk-4.0-18、libjavascriptcoregtk-4.0-bin、libwebkit2gtk-4.0-37-gtk2、libwebkit2gtk-4.0-37、webkit2gtk-driver
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303
+2.38.6-0kylin0.20.04.1k0.2
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libwebkit2gtk-4.0-37
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/gir1.2-javascriptcoregtk-4.0_2.38.6-0kylin0.20.04.1k0.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/gir1.2-webkit2-4.0_2.38.6-0kylin0.20.04.1k0.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libjavascriptcoregtk-4.0-18_2.38.6-0kylin0.20.04.1k0.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libjavascriptcoregtk-4.0-bin_2.38.6-0kylin0.20.04.1k0.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libwebkit2gtk-4.0-37-gtk2_2.38.6-0kylin0.20.04.1k0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libwebkit2gtk-4.0-37_2.38.6-0kylin0.20.04.1k0.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/webkit2gtk-driver_2.38.6-0kylin0.20.04.1k0.2_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/gir1.2-javascriptcoregtk-4.0_2.38.6-0kylin0.20.04.1k0.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/gir1.2-webkit2-4.0_2.38.6-0kylin0.20.04.1k0.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libjavascriptcoregtk-4.0-18_2.38.6-0kylin0.20.04.1k0.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libjavascriptcoregtk-4.0-bin_2.38.6-0kylin0.20.04.1k0.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libwebkit2gtk-4.0-37-gtk2_2.38.6-0kylin0.20.04.1k0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libwebkit2gtk-4.0-37_2.38.6-0kylin0.20.04.1k0.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/webkit2gtk-driver_2.38.6-0kylin0.20.04.1k0.2_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/gir1.2-javascriptcoregtk-4.0_2.38.6-0kylin0.20.04.1k0.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/gir1.2-webkit2-4.0_2.38.6-0kylin0.20.04.1k0.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libjavascriptcoregtk-4.0-18_2.38.6-0kylin0.20.04.1k0.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libjavascriptcoregtk-4.0-bin_2.38.6-0kylin0.20.04.1k0.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libwebkit2gtk-4.0-37-gtk2_2.38.6-0kylin0.20.04.1k0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libwebkit2gtk-4.0-37_2.38.6-0kylin0.20.04.1k0.2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/webkit2gtk-driver_2.38.6-0kylin0.20.04.1k0.2_mips64el.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/gir1.2-javascriptcoregtk-4.0_2.38.6-0kylin0.20.04.1k0.2_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/gir1.2-webkit2-4.0_2.38.6-0kylin0.20.04.1k0.2_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libjavascriptcoregtk-4.0-18_2.38.6-0kylin0.20.04.1k0.2_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libjavascriptcoregtk-4.0-bin_2.38.6-0kylin0.20.04.1k0.2_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libwebkit2gtk-4.0-37-gtk2_2.38.6-0kylin0.20.04.1k0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/libwebkit2gtk-4.0-37_2.38.6-0kylin0.20.04.1k0.2_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/w/webkit2gtk/webkit2gtk-driver_2.38.6-0kylin0.20.04.1k0.2_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

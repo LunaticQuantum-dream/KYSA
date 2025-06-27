@@ -1,0 +1,127 @@
+Name:KYSA-202309-1024
+Severity:重要
+Summary:firefox安全漏洞
+Published:2023-09-19
+URL:/support/loophole/patch/4143.html
+Title:
+			公告ID：KYSA-202309-1024
+公告摘要：firefox安全漏洞
+等级：Important
+发布日期：2023-09-19
+		
+1.修复的CVE
+·CVE-2023-4051
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 116 版本存在安全漏洞，该漏洞源于网站可能通过使用文件打开对话框来遮挡全屏通知。这可能会导致用户困惑并可能导致欺骗攻击。
+·CVE-2023-4053
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 116 版本存在后置链接漏洞，该漏洞源于网站可能通过使用具有由外部程序处理的方案（例如 mailto URL）的 URL 来遮挡全屏通知。这可能会导致用户困惑并可能导致欺骗攻击。
+·CVE-2023-4573
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 存在资源管理错误漏洞，该漏洞源于当通过 IPC 接收渲染数据时，mStream初始化时可能会被破坏，这可能会导致释放后使用，从而导致潜在的可利用崩溃。
+·CVE-2023-4574
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 存在资源管理错误漏洞，该漏洞源于当通过 IPC 创建回调以显示颜色选择器窗口时，可能会同时创建多个相同的回调，并最终在其中一个回调完成后同时销毁。这可能会导致释放后使用，从而导致潜在的可利用崩溃。
+·CVE-2023-4575
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 存在资源管理错误漏洞，该漏洞源于当通过 IPC 创建回调以显示文件选择器窗口时，可能会同时创建多个相同的回调，并最终在其中一个回调完成后同时销毁。这可能会导致释放后使用，从而导致潜在的可利用崩溃。
+·CVE-2023-4577
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+
+Mozilla Firefox 存在安全漏洞，该漏洞源于当UpdateRegExpStatics尝试访问时initialStringHeap，它可能在进入该函数之前就已被垃圾收集，这可能会导致可利用的崩溃。
+·CVE-2023-4578
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+
+Mozilla Firefox 存在安全漏洞，该漏洞源于调用时JS::CheckRegExpSyntax可能会设置语法错误，这将导致调用convertToRuntimeErrorAndClear. 当没有可用内存时，函数中的路径可能会尝试分配内存，这将导致新创建的内存不足异常被错误地处理为语法错误。
+·CVE-2023-4580
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+
+Mozilla Firefox 存在安全漏洞，该漏洞源于以隐私浏览模式存储在磁盘上的推送通知未加密，可能会导致敏感信息泄露。
+·CVE-2023-4581
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+
+Mozilla Firefox 存在安全漏洞，该漏洞源于Excel.xll加载项文件可在没有警告的情况下下载。
+·CVE-2023-4583
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+
+Mozilla Firefox 存在安全漏洞，该漏洞源于在某些情况下关闭私有窗口时可能未清除浏览环境。
+·CVE-2023-4584
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+
+Mozilla Firefox 存在缓冲区错误漏洞，该漏洞源于存在可以导致任意代码执行的问题。
+·CVE-2023-4585
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+
+Mozilla Firefox 存在安全漏洞，该漏洞源于存在可以导致任意代码执行的问题。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+firefox
+·x86_64架构:
+firefox
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+firefox
+·x86_64架构:
+firefox
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+firefox-102.15.0-1.el7_9.ns7.01或以上版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+firefox-102.15.0-1.el7_9.ns7.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-4051:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4053:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4573:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4574:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4575:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4577:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4578:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4580:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4581:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4583:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4584:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4585:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+firefox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/firefox-102.15.0-1.el7_9.ns7.01.aarch64.rpm
+
+firefox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/firefox-102.15.0-1.el7_9.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/firefox-102.15.0-1.el7_9.ns7.01.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+firefox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/firefox-102.15.0-1.el7_9.ns7.01.aarch64.rpm
+
+firefox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/firefox-102.15.0-1.el7_9.ns7.01.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

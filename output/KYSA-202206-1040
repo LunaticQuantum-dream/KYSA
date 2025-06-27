@@ -1,0 +1,13 @@
+Name:KYSA-202206-1040
+Severity:重要
+Summary:maven-shared-utils安全漏洞
+Published:2022-06-21
+URL:/support/loophole/patch/1280.html
+Title:
+			公告ID：KYSA-202206-1040
+公告摘要：maven-shared-utils安全漏洞
+安全等级：Important
+发布日期：2022年06月21日
+影响CVE：CVE-2022-29599
+		
+1. 修复的CVE·CVE-2022-29599描述：Apache Maven是美国阿帕奇（Apache）基金会的一个应用软件。一个软件项目管理和理解工具。Apache Maven Shared Utils存在操作系统命令注入漏洞，该漏洞源于处理双引号字符串时输入验证不当。远程攻击者利用该漏洞将特制的数据传递给应用程序，并在目标系统上执行任意shell命令。2. 受影响的软件包·中标麒麟高级服务器操作系统 V7aarch64架构:maven-shared-utils、maven-shared-utils-javadocx86_64架构:maven-shared-utils、maven-shared-utils-javadoc3. 软件包修复版本·中标麒麟高级服务器操作系统 V7maven-shared-utils-0.4-4.el7_9.ns7.01maven-shared-utils-javadoc-0.4-4.el7_9.ns7.014. 修复方法方法一：配置源进行升级安装1. 打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 中标麒麟高级服务器操作系统 V7aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/2. 配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3. 升级完成后是否需要重启服务或操作系统：·CVE-2022-29599：无需重启操作系统与服务即可使漏洞修复生效。5. 软件包下载地址·中标麒麟高级服务器操作系统 V7 maven-shared-utils（aarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/maven-shared-utils-0.4-4.el7_9.ns7.01.noarch.rpmhttps://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/maven-shared-utils-javadoc-0.4-4.el7_9.ns7.01.noarch.rpm maven-shared-utils（x86_64）软件包下载地址:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/maven-shared-utils-0.4-4.el7_9.ns7.01.noarch.rpmhttps://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/maven-shared-utils-javadoc-0.4-4.el7_9.ns7.01.noarch.rpm 注：其他相关依赖包请到相同目录下载6. 修复验证使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。sudo rpm -qa | grep Packagename 

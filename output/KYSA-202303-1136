@@ -1,0 +1,100 @@
+Name:KYSA-202303-1136
+Severity:重要
+Summary:mariadb安全漏洞
+Published:2023-03-29
+URL:/support/loophole/patch/3829.html
+Title:
+			公告ID：KYSA-202303-1136
+公告摘要：mariadb安全漏洞
+等级：Important
+发布日期：2023-03-29
+		
+1.修复的CVE
+·CVE-2021-46657
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 10.6.2 之前存在安全漏洞，该漏洞源于 get_sort_by_table 允许通过使用 ORDER BY 的某些子查询导致应用程序崩溃。
+·CVE-2021-46659
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 10.7.2 之前的版本存在安全漏洞，该漏洞源于它无法识别 SELECT_LEX：：nest_level 对于每个 VIEW 都是本地的。
+·CVE-2021-46661
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 中存在代码问题漏洞，该漏洞源于产品在使用 find_field_in_tables 和 find_order_in_list 未初始化的表达式时存在错误。攻击者可通过该漏洞导致应用崩溃。 以下产品及版本受到影响：MariaDB 10.5.9 版本。
+·CVE-2021-46669
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB 中存在资源管理错误漏洞，该漏洞源于产品的convert_const_to_int函数在使用BIGINT数据类型时对已释放的资源重复利用。攻击者可通过该漏洞导致程序崩溃。以下产品及版本受到影响：MariaDB 10.5.9。
+·CVE-2022-27376
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6.5存在安全漏洞，目前暂无该漏洞信息，请随时关注CNNVD或厂商公告。
+·CVE-2022-27377
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6.3 及更低版本存在安全漏洞，该漏洞源于在组件 Item_func_in：：cleanup() 中包含 use-after-free，该组件通过特制的 SQL 语句被利用。
+·CVE-2022-27378
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.7存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+·CVE-2022-27379
+描述：MariaDB是MariaDB（Mariadb）基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。MariaDB Server v10.6.2 及更低版本存在安全漏洞，该漏洞允许攻击者通过特制的 SQL 语句导致拒绝服务 (DoS)。
+·CVE-2022-32088
+描述：MariaDB是Mariadb基金会的一套免费开源的数据库管理系统，也是一个采用Maria存储引擎的MySQL分支版本。
+
+该漏洞源于通过组件 Exec_time_tracker：：get_loops/Filesort_tracker：：report_use/filesort 发现存在分段错误。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+mariadb、mariadb-backup、mariadb-common、mariadb-cracklib、mariadb-devel、mariadb-embedded、mariadb-embedded-devel、mariadb-errmessage、mariadb-gssapi-server、mariadb-oqgraph-engine、mariadb-server、mariadb-server-galera、mariadb-test
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+mariadb-10.3.35-1.p02.a.ky10或以上版本
+mariadb-backup-10.3.35-1.p02.a.ky10或以上版本
+mariadb-common-10.3.35-1.p02.a.ky10或以上版本
+mariadb-cracklib-10.3.35-1.p02.a.ky10或以上版本
+mariadb-devel-10.3.35-1.p02.a.ky10或以上版本
+mariadb-embedded-10.3.35-1.p02.a.ky10或以上版本
+mariadb-embedded-devel-10.3.35-1.p02.a.ky10或以上版本
+mariadb-errmessage-10.3.35-1.p02.a.ky10或以上版本
+mariadb-gssapi-server-10.3.35-1.p02.a.ky10或以上版本
+mariadb-oqgraph-engine-10.3.35-1.p02.a.ky10或以上版本
+mariadb-server-10.3.35-1.p02.a.ky10或以上版本
+mariadb-server-galera-10.3.35-1.p02.a.ky10或以上版本
+mariadb-test-10.3.35-1.p02.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-46657:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46659:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46661:需要重启 mariadb 以使漏洞修复生效。
+CVE-2021-46669:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27376:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27377:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-27378:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-27379:需要重启 mariadb 以使漏洞修复生效。
+CVE-2022-32088:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+mariadb(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-backup-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-common-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-cracklib-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-devel-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-embedded-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-embedded-devel-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-errmessage-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-gssapi-server-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-oqgraph-engine-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-server-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-server-galera-10.3.35-1.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/mariadb-test-10.3.35-1.p02.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

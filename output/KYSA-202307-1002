@@ -1,0 +1,92 @@
+Name:KYSA-202307-1002
+Severity:重要
+Summary:ImageMagick安全漏洞
+Published:2023-07-04
+URL:/support/loophole/patch/3782.html
+Title:
+			公告ID：KYSA-202307-1002
+公告摘要：ImageMagick安全漏洞
+等级：Important
+发布日期：2023-07-04
+		
+1.修复的CVE
+·CVE-2022-44267
+描述：ImageMagick 7.1.0-49易受拒绝服务攻击。当它解析PNG图像（例如，用于调整大小）时，转换过程可能会等待stdin输入。
+·CVE-2022-44268
+描述：ImageMagick 7.1.0-49易受信息泄露攻击。当它解析PNG图像（例如，用于调整大小）时，生成的图像可能嵌入了任意图像的内容。文件（如果magik二进制文件具有读取权限）。
+·CVE-2023-1289
+描述：在ImageMagick中发现一个漏洞，在该漏洞中，一个专门创建的SVG文件加载自身并导致分段错误。此漏洞允许远程攻击者传递一个特制的SVG文件，该文件会导致分段错误，从而在/tmp中生成许多垃圾文件，从而导致拒绝服务。当ImageMagick崩溃时，它会生成大量垃圾文件。如果SVG文件包含许多渲染操作，则这些垃圾文件可能很大。在拒绝服务攻击中，如果远程攻击者上传了大小为t的SVG文件，ImageMagick会生成大小为103*t的文件。如果攻击者上传100M SVG，服务器将生成约10G。
+·CVE-2023-1906
+描述：在MagickCore/quantum import.c中的ImageMagick的ImportMultiSpectralQuantum（）函数中发现了基于堆的缓冲区溢出问题。攻击者可以传递特制的文件进行转换，从而触发越界读取错误，导致应用程序崩溃，从而导致拒绝服务。
+·CVE-2023-2157
+描述：在ImageMagick包中发现了一个基于堆的缓冲区溢出漏洞，该漏洞可能导致应用程序崩溃。
+·CVE-2023-34151
+描述：在ImageMagick中发现一个漏洞。此问题作为未定义的行为出现，在svg、mvg和其他编码器中将double强制转换为size_t。
+·CVE-2023-34152
+描述：在ImageMagick中发现一个漏洞。这个问题可以允许在配置了--enable管道的OpenBlob中远程执行代码。
+·CVE-2023-34153
+描述：在ImageMagick中发现一个漏洞。这个问题可能允许在video编码/解码中通过video:vsync或video:pixel格式选项注入shell命令。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+ImageMagick、ImageMagick-c++、ImageMagick-c++-devel、ImageMagick-devel、ImageMagick-help、ImageMagick-perl
+·x86_64架构:
+ImageMagick、ImageMagick-c++、ImageMagick-c++-devel、ImageMagick-devel、ImageMagick-help、ImageMagick-perl
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+ImageMagick-6.9.12.86-2.ky10或以上版本
+ImageMagick-c++-6.9.12.86-2.ky10或以上版本
+ImageMagick-c++-devel-6.9.12.86-2.ky10或以上版本
+ImageMagick-devel-6.9.12.86-2.ky10或以上版本
+ImageMagick-help-6.9.12.86-2.ky10或以上版本
+ImageMagick-perl-6.9.12.86-2.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-44267:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-44268:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-1289:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-1906:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-2157:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-34151:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-34152:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-34153:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+ImageMagick(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-6.9.12.86-2.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-c++-6.9.12.86-2.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-c++-devel-6.9.12.86-2.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-devel-6.9.12.86-2.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-help-6.9.12.86-2.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-perl-6.9.12.86-2.ky10.aarch64.rpm
+
+ImageMagick(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-6.9.12.86-2.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-c++-6.9.12.86-2.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-c++-devel-6.9.12.86-2.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-devel-6.9.12.86-2.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-help-6.9.12.86-2.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-perl-6.9.12.86-2.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

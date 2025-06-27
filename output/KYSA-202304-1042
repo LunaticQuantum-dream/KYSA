@@ -1,0 +1,59 @@
+Name:KYSA-202304-1042
+Severity:重要
+Summary:openssl安全漏洞
+Published:2023-04-25
+URL:/support/loophole/patch/5336.html
+Title:
+			公告ID：KYSA-202304-1042
+公告摘要：openssl安全漏洞
+等级：Important
+发布日期：2023-04-25
+		
+1.修复的CVE
+·CVE-2023-0464
+描述：在处理证书policy校验的时候未做限制，导致遇到恶意证书链时，无法识别。攻击者可以通过创建恶意证书链来利用此漏洞，从而触发计算资源的大量消耗，对系统进行拒绝服务（DOS）攻击。
+·CVE-2023-0465
+描述：openssl会忽略有问题的叶子证书中的policy校验。恶意的CA可以使用它故意颁发无效的证书，以便规避检查证书的policy。应用程序在验证证书时使用非默认选项的时候，可能容易受到恶意CA的攻击，以规避某些检查，导致证书无法被正确校验
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+openssl、openssl-devel、openssl-help、openssl-libs
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+openssl-1.1.1f-4.p11.a.ky10或以上版本
+openssl-devel-1.1.1f-4.p11.a.ky10或以上版本
+openssl-help-1.1.1f-4.p11.a.ky10或以上版本
+openssl-libs-1.1.1f-4.p11.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-0464:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-0465:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+openssl(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/openssl-1.1.1f-4.p11.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/openssl-devel-1.1.1f-4.p11.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/openssl-help-1.1.1f-4.p11.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/openssl-libs-1.1.1f-4.p11.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

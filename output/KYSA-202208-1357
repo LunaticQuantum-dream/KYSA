@@ -1,0 +1,90 @@
+Name:KYSA-202208-1357
+Severity:重要
+Summary:libvirt安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/4276.html
+Title:
+			公告ID：KYSA-202208-1357
+公告摘要：libvirt安全漏洞
+等级：Important
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2012-3411
+描述：Dnsmasq是软件开发者Simon Kelley所研发的一款使用C语言编写的开源轻量级DNS转发和DHCP、TFTP服务器。Dnsmasq 2.63test1之前版本中存在漏洞，该漏洞源于程序与某些libvirt配置使用时，回复来自禁止接口的请求。通过伪造的DNS查询，远程攻击者利用该漏洞导致拒绝服务漏洞（流量扩增）。
+·CVE-2013-1962
+描述：libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。libvirt 1.0.5版本中的存储池管理器中的‘remoteDispatchStoragePoolListAllVolumes’函数中存在漏洞。远程攻击者可通过大量的请求‘对特定的池列出所有的卷’利用该漏洞造成拒绝服务（文件描述符消耗）。
+·CVE-2013-4296
+描述：libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。libvirt中的daemon/remote.c文件中的‘remoteDispatchDomainMemoryStats’函数中的‘stats’变量中存在漏洞。远程经过授权的攻击者可借助特制的RPC调用利用该漏洞导致拒绝服务（未初始化指针引用以及死机）。以下版本受到影响：libvirt 0.9.1至0.10.1.x版本，0.10.2.8之前的0.10.2.x版本，1.0.5.6之前的1.0.x版本，以及1.1.2之前的1.1.x版本。
+·CVE-2013-4311
+描述：libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。libvirt中存在安全漏洞，该漏洞源于程序调用PolicyKit pkcheck小工具处理授权时存在竞争条件。本地攻击者可通过setuid或pkexec进程利用该漏洞绕过既定的访问限制。以下版本受到影响：libvirt 1.0.5.6之前的1.0.5.x版本，0.10.2.8之前的0.10.2.x版本，0.9.12.2之前的0.9.12.x版本。
+·CVE-2013-6458
+描述：libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。libvirt 1.2.1之前版本中的virDomainBlockStats、virDomainGetBlockInf、qemuDomainBlockJobImpl以及virDomainGetBlockIoTune函数中存在多个竞争条件漏洞，该漏洞源于程序没有正确地检验是否连接磁盘。具有只读权限的远程攻击者可借助virDomainDetachDeviceFlags命令利用该漏洞导致拒绝服务（libvirtd崩溃）。
+·CVE-2013-7336
+描述：libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。libvirt 1.1.2及之前的版本的qemu/qemu_migration.c文件中的‘qemuMigrationWaitForSpice’函数存在安全漏洞，该漏洞源于在移动SPICE期间，不能正常进入显示器。本地攻击者可利用该漏洞造成拒绝服务（空指针逆向引用和libvirtd崩溃）。
+·CVE-2014-0179
+描述：libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。libvirt 0.7.5至1.2.4版本中存在安全漏洞。本地攻击者可通过向virConnectCompareCPU或virConnectBaselineCPU API方法发送特制的XML文件利用该漏洞造成拒绝服务（读取块和挂起）。
+·CVE-2014-1447
+描述：libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。libvirt 1.2.0及之前版本中的‘virNetServerClientStartKeepAlive’函数中存在竞争条件漏洞。远程攻击者可通过在发送keepalive响应前关闭连接，利用该漏洞造成拒绝服务（libvirtd崩溃）。
+·CVE-2014-3633
+描述：libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。libvirt 1.2.8及之前版本中qemu/qemu_driver.c文件中的‘qemuDomainGetBlockIoTune’函数中存在安全漏洞，该漏洞源于程序没有正确处理磁盘的热插和删除。远程攻击者可借助特制的blkiotune查询利用该漏洞造成拒绝服务（崩溃）或读取敏感的堆信息。
+·CVE-2014-3657
+描述：libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。libvirt 1.2.8及之前版本中的conf/domain_conf.c脚本中的‘virDomainListPopulate’函数中存在安全漏洞，该漏洞源于程序没有正确清除域列表的锁定。远程攻击者可借助virConnectListAllDomains API命令的‘second’参数的空值利用该漏洞造成拒绝服务（死锁）。
+·CVE-2014-7823
+描述：libvirt 1.2.10及之前版本的virDomainGetXMLDesc API中存在安全漏洞，该漏洞源于程序处理qemuDomainFormatXML命令时没有正确处理权限。远程只读攻击者可通过使用VIR_DOMAIN_XML_MIGRATABLE利用该漏洞获取VNC密码。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+libvirt、libvirt-client、libvirt-devel、libvirt-lock-sanlock、libvirt-python
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+libvirt-0.10.2-62.el6_9.1或以上版本
+libvirt-client-0.10.2-62.el6_9.1或以上版本
+libvirt-devel-0.10.2-62.el6_9.1或以上版本
+libvirt-lock-sanlock-0.10.2-62.el6_9.1或以上版本
+libvirt-python-0.10.2-62.el6_9.1或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2012-3411:需要重启 libvirt 以使漏洞修复生效。
+CVE-2013-1962:需要重启 libvirt 以使漏洞修复生效。
+CVE-2013-4296:需要重启 libvirt 以使漏洞修复生效。
+CVE-2013-4311:需要重启 libvirt 以使漏洞修复生效。
+CVE-2013-6458:需要重启 libvirt 以使漏洞修复生效。
+CVE-2013-7336:需要重启 libvirt 以使漏洞修复生效。
+CVE-2014-0179:需要重启 libvirt 以使漏洞修复生效。
+CVE-2014-1447:需要重启 libvirt 以使漏洞修复生效。
+CVE-2014-3633:需要重启 libvirt 以使漏洞修复生效。
+CVE-2014-3657:需要重启 libvirt 以使漏洞修复生效。
+CVE-2014-7823:需要重启 libvirt 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+libvirt(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libvirt-0.10.2-62.el6_9.1.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libvirt-client-0.10.2-62.el6_9.1.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libvirt-client-0.10.2-62.el6_9.1.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libvirt-devel-0.10.2-62.el6_9.1.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libvirt-devel-0.10.2-62.el6_9.1.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libvirt-lock-sanlock-0.10.2-62.el6_9.1.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libvirt-python-0.10.2-62.el6_9.1.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

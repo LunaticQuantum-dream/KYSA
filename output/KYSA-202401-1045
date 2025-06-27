@@ -1,0 +1,129 @@
+Name:KYSA-202401-1045
+Severity:重要
+Summary:xorg-x11-server安全漏洞
+Published:2024-01-09
+URL:/support/loophole/patch/4961.html
+Title:
+			公告ID：KYSA-202401-1045
+公告摘要：xorg-x11-server安全漏洞
+等级：Important
+发布日期：2024-01-09
+		
+1.修复的CVE
+·CVE-2023-6377
+描述：xorg-x11-server是X.org基金会的一款X窗口系统显示服务器。
+xorg-server 21.1.10之前版本、xwayland 23.2.3之前版本存在安全漏洞，该漏洞源于通过查询或更改 XKB 按钮操作可能会导致内存读写越界，在涉及 X11 转发的情况下，这可能允许本地权限升级或可能的远程代码执行。
+·CVE-2023-6478
+描述：xorg-x11-server是X.org基金会的一款X窗口系统显示服务器。
+xorg-server 21.1.10之前版本、xwayland 23.2.3之前版本存在安全漏洞，该漏洞源于对 RRChangeProviderProperty 或 RRChangeOutputProperty 的特制请求可能会触发整数溢出，从而导致敏感信息泄露。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+xorg-x11-server-Xdmx、xorg-x11-server-Xephyr、xorg-x11-server-Xnest、xorg-x11-server-Xorg、xorg-x11-server-Xvfb、xorg-x11-server-Xwayland、xorg-x11-server-common、xorg-x11-server-devel、xorg-x11-server-source
+·x86_64架构:
+xorg-x11-server-Xdmx、xorg-x11-server-Xephyr、xorg-x11-server-Xnest、xorg-x11-server-Xorg、xorg-x11-server-Xvfb、xorg-x11-server-Xwayland、xorg-x11-server-common、xorg-x11-server-devel、xorg-x11-server-source
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+xorg-x11-server-Xdmx、xorg-x11-server-Xephyr、xorg-x11-server-Xnest、xorg-x11-server-Xorg、xorg-x11-server-Xvfb、xorg-x11-server-Xwayland、xorg-x11-server-common、xorg-x11-server-devel、xorg-x11-server-source
+·x86_64架构:
+xorg-x11-server-Xdmx、xorg-x11-server-Xephyr、xorg-x11-server-Xnest、xorg-x11-server-Xorg、xorg-x11-server-Xvfb、xorg-x11-server-Xwayland、xorg-x11-server-common、xorg-x11-server-devel、xorg-x11-server-source
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+xorg-x11-server-Xdmx-1.20.4-25.el7_9或以上版本
+xorg-x11-server-Xephyr-1.20.4-25.el7_9或以上版本
+xorg-x11-server-Xnest-1.20.4-25.el7_9或以上版本
+xorg-x11-server-Xorg-1.20.4-25.el7_9或以上版本
+xorg-x11-server-Xvfb-1.20.4-25.el7_9或以上版本
+xorg-x11-server-Xwayland-1.20.4-25.el7_9或以上版本
+xorg-x11-server-common-1.20.4-25.el7_9或以上版本
+xorg-x11-server-devel-1.20.4-25.el7_9或以上版本
+xorg-x11-server-source-1.20.4-25.el7_9或以上版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+xorg-x11-server-Xdmx-1.20.4-25.el7_9或以上版本
+xorg-x11-server-Xephyr-1.20.4-25.el7_9或以上版本
+xorg-x11-server-Xnest-1.20.4-25.el7_9或以上版本
+xorg-x11-server-Xorg-1.20.4-25.el7_9或以上版本
+xorg-x11-server-Xvfb-1.20.4-25.el7_9或以上版本
+xorg-x11-server-Xwayland-1.20.4-25.el7_9或以上版本
+xorg-x11-server-common-1.20.4-25.el7_9或以上版本
+xorg-x11-server-devel-1.20.4-25.el7_9或以上版本
+xorg-x11-server-source-1.20.4-25.el7_9或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-6377:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-6478:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+xorg-x11-server(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xdmx-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xephyr-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xnest-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xorg-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xvfb-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xwayland-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-common-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-devel-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-source-1.20.4-25.el7_9.noarch.rpm
+
+xorg-x11-server(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xdmx-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xephyr-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xnest-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xorg-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xvfb-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xwayland-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-common-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-devel-1.20.4-25.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-devel-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-source-1.20.4-25.el7_9.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+xorg-x11-server(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xdmx-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xephyr-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xnest-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xorg-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xvfb-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-Xwayland-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-common-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-devel-1.20.4-25.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/xorg-x11-server-source-1.20.4-25.el7_9.noarch.rpm
+
+xorg-x11-server(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xdmx-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xephyr-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xnest-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xorg-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xvfb-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-Xwayland-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-common-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-devel-1.20.4-25.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-devel-1.20.4-25.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/xorg-x11-server-source-1.20.4-25.el7_9.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

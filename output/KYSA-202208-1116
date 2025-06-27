@@ -1,0 +1,95 @@
+Name:KYSA-202208-1116
+Severity:中等
+Summary:kernel安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1672.html
+Title:
+			公告ID：KYSA-202208-1116
+公告摘要：kernel安全漏洞
+安全等级：Moderate
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2015-9289
+描述：在Linux内核的CX24116电视卡驱动程序中发现了一个漏洞，该漏洞在检查driver / media / dvb-frontends / cx24116.c中的用户空间参数时发生越界读取。攻击者可以利用此漏洞将内核私有信息泄漏到用户空间。
+·CVE-2018-7191
+描述：在Linux内核的网络隧道设备ioctl的实现中发现了一个缺陷。本地攻击者可以通过具有包含/字符的开发人员名称的ioctl（TUNSETIFF）调用，导致拒绝服务（NULL指针取消引用和崩溃）。
+·CVE-2019-0136
+描述：Intel PROSet/Wireless WiFi Software driver是美国英特尔（Intel）公司的一款无线网卡驱动程序。Intel PROSet/Wireless WiFi Software driver 21.10之前版本中存在访问控制错误漏洞。该漏洞源于网络系统或产品未正确限制来自未授权角色的资源访问。以下产品及版本受到影响：Intel Dual Band Wireless-AC 3160；Dual Band Wireless-AC 7260；Dual Band Wireless-N 7260；Wireless-N 7260；Dual Band Wireless-AC 7260 for Desktop；Dual Band Wireless-AC 7265 (Rev. C)；Dual Band Wireless-N 7265 (Rev. C)；Wireless-N 7265 (Rev. C)；Dual Band Wireless-AC 3165；Dual Band Wireless-AC 7265 (Rev. D)；Dual Band Wireless-N 7265 (Rev. D)；Wireless-N 7265 (Rev. D)；Dual Band Wireless-AC 3168；Tri-Band Wireless-AC 17265；Dual Band Wireless-AC 8260；Tri-Band Wireless-AC 18260；Dual Band Wireless-AC 8265；Dual Band Wireless-AC 8265 Desktop Kit；Tri-Band Wireless-AC 18265；Wireless-AC 9560；Wireless-AC 9461；Wireless-AC 9462；Wireless-AC 9260；Wi-Fi 6 AX200；Wi-Fi 6 AX201。
+·CVE-2019-11190
+描述：Linux内核中load_elf_binary（）函数中存在一个缺陷，使得本地攻击者能够泄漏setuid二进制文件的.text和stack部分的基地址，并绕过ASLR，因为在该函数中调用install_exec_creds（）超时了。
+·CVE-2019-13233
+描述：在Linux内核的arch / x86 / lib / insn-eval.c函数中发现一个漏洞。 攻击者可能会由于modify_ldt（）与违反MPX界限的#BR异常之间的竞争条件而导致对LDT条目的自由使用后访问存在缺陷，从而破坏了内存。
+·CVE-2019-13648
+描述：在PowerPc平台中发现了一个缺陷，如果禁用事务内存，内核将死机。攻击者可以利用此漏洞通过事务性内存MSR位集构造信号上下文来使系统死机。
+·CVE-2019-14814
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel中存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2019-18660
+描述：Linux内核在PowerPC平台上实现计数缓存（间接分支缓存）和链接（返回地址）堆栈的软件刷新时发现了一个缺陷。这些结构的刷新有助于防止类似spectersb的攻击，这种攻击可能会将信息从一个用户进程泄漏到另一个用户进程。未经授权的用户可以利用此漏洞，通过执行有针对性的缓存侧通道攻击，越过系统调用或进程边界，读取特权内存。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+x86_64架构:
+bpftool、kernel、kernel-abi-whitelists、kernel-debug、kernel-debug-devel、kernel-devel、kernel-doc、kernel-headers、kernel-tools、kernel-tools-libs、kernel-tools-libs-devel、perf、python-perf
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+bpftool-3.10.0-1127.el7
+kernel-3.10.0-1127.el7
+kernel-abi-whitelists-3.10.0-1127.el7
+kernel-debug-3.10.0-1127.el7
+kernel-debug-devel-3.10.0-1127.el7
+kernel-devel-3.10.0-1127.el7
+kernel-doc-3.10.0-1127.el7
+kernel-headers-3.10.0-1127.el7
+kernel-tools-3.10.0-1127.el7
+kernel-tools-libs-3.10.0-1127.el7
+kernel-tools-libs-devel-3.10.0-1127.el7
+perf-3.10.0-1127.el7
+python-perf-3.10.0-1127.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+175.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/
+176.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+177.升级完成后是否需要重启服务或操作系统：
+·CVE-2015-9289：需要重启操作系统以使漏洞修复生效。
+·CVE-2018-7191：需要重启操作系统以使漏洞修复生效。
+·CVE-2019-0136：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2019-11190：需要重启操作系统以使漏洞修复生效。
+·CVE-2019-13233：需要重启操作系统以使漏洞修复生效。
+·CVE-2019-13648：需要重启操作系统以使漏洞修复生效。
+·CVE-2019-14814：需要重启 kernel、kernel-alt 以使漏洞修复生效。
+·CVE-2019-18660：需要重启 kernel、kernel-alt 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+kernel（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/bpftool-3.10.0-1127.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/kernel-3.10.0-1127.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/kernel-abi-whitelists-3.10.0-1127.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/kernel-debug-3.10.0-1127.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/kernel-debug-devel-3.10.0-1127.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/kernel-devel-3.10.0-1127.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/kernel-doc-3.10.0-1127.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/kernel-headers-3.10.0-1127.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/kernel-tools-3.10.0-1127.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/kernel-tools-libs-3.10.0-1127.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/kernel-tools-libs-devel-3.10.0-1127.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/perf-3.10.0-1127.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/python-perf-3.10.0-1127.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

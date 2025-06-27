@@ -1,0 +1,100 @@
+Name:KYSA-202310-1031
+Severity:中等
+Summary:mutt安全漏洞
+Published:2023-10-17
+URL:/support/loophole/patch/4340.html
+Title:
+			公告ID：KYSA-202310-1031
+公告摘要：mutt安全漏洞
+等级：Moderate
+发布日期：2023-10-17
+		
+1.修复的CVE
+·CVE-2021-32055
+描述：Mutt是Michael Elkins个人开发者的一款用于类Unix系统下且基于文本的邮件客户端。Mutt 1.11.0 版本至2.0.x系列2.0.7之前版本 存在安全漏洞，该漏洞源于一个超出范围的读取。
+·CVE-2023-4874
+描述：在Mutt>1.5.2<2.2.12中查看特制电子邮件时的空指针取消引用
+·CVE-2023-4875
+描述：在Mutt>1.5.2<2.2.12中从特制的草稿消息编写时取消引用空指针
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·aarch64架构:
+mutt、mutt-help
+·x86_64架构:
+mutt、mutt-help
+·银河麒麟高级服务器操作系统 V10 SP3 2309a
+·aarch64架构:
+mutt、mutt-help
+·银河麒麟云底座操作系统 V10
+·aarch64架构:
+mutt、mutt-help
+·x86_64架构:
+mutt、mutt-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (aarch64、x86_64)
+mutt-2.2.12-1.ky10h或以上版本
+mutt-help-2.2.12-1.ky10h或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309a (aarch64)
+mutt-2.2.12-1.ky10h或以上版本
+mutt-help-2.2.12-1.ky10h或以上版本
+·银河麒麟云底座操作系统 V10 (aarch64、x86_64)
+mutt-2.2.12-1.ky10h或以上版本
+mutt-help-2.2.12-1.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+aarch64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309a
+aarch64:https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/
+银河麒麟云底座操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-32055:需要重启 mutt 以使漏洞修复生效。
+CVE-2023-4874:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-4875:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+mutt(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/mutt-2.2.12-1.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/mutt-help-2.2.12-1.ky10h.noarch.rpm
+
+mutt(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/mutt-2.2.12-1.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/mutt-help-2.2.12-1.ky10h.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309a
+
+mutt(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/mutt-2.2.12-1.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309A/os/adv/lic/updates/aarch64/Packages/mutt-help-2.2.12-1.ky10h.noarch.rpm
+
+·银河麒麟云底座操作系统 V10
+
+mutt(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/mutt-2.2.12-1.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/mutt-help-2.2.12-1.ky10h.noarch.rpm
+
+mutt(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/mutt-2.2.12-1.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/mutt-help-2.2.12-1.ky10h.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

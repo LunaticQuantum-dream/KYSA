@@ -1,0 +1,59 @@
+Name:KYSA-202206-0005
+Severity:低等
+Summary:protobuf安全漏洞
+Published:2023-02-08
+URL:/support/loophole/patch/2617.html
+Title:
+			公告ID：KYSA-202206-0005
+公告摘要：protobuf安全漏洞
+等级：低等
+发布日期：2023-02-08
+		
+1. 修复的CVE
+CVE-2021-22570
+Google protobuf是美国谷歌（Google）公司的一种数据交换格式。Google protobuf 存在代码问题漏洞，该漏洞源于当原始符号中存在空字符时，Nullptr 取消引用。 符号解析不正确，导致在生成错误消息期间未经检查地调用 proto 文件的名称。 由于符号解析不正确，因此文件为 nullptr。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+libprotobuf-java、libprotobuf-lite9v5、libprotobuf9v5、libprotoc9v5、protobuf-compiler、python-protobuf
+arm64 架构：
+libprotobuf-java、libprotobuf-lite9v5、libprotobuf9v5、libprotoc9v5、protobuf-compiler、python-protobuf
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+2.6.1-1.3kord0.1~esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libprotoc9v5
+$sudo apt install libprotobuf-lite9v5
+$sudo apt install libprotobuf9v5
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/libprotobuf-java_2.6.1-1.3kord0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/libprotobuf-lite9v5_2.6.1-1.3kord0.1~esm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/libprotobuf9v5_2.6.1-1.3kord0.1~esm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/libprotoc9v5_2.6.1-1.3kord0.1~esm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/protobuf-compiler_2.6.1-1.3kord0.1~esm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/python-protobuf_2.6.1-1.3kord0.1~esm1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/libprotobuf-java_2.6.1-1.3kord0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/libprotobuf-lite9v5_2.6.1-1.3kord0.1~esm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/libprotobuf9v5_2.6.1-1.3kord0.1~esm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/libprotoc9v5_2.6.1-1.3kord0.1~esm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/protobuf-compiler_2.6.1-1.3kord0.1~esm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/protobuf/python-protobuf_2.6.1-1.3kord0.1~esm1_arm64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

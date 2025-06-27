@@ -1,0 +1,134 @@
+Name:KYSA-202303-1081
+Severity:重要
+Summary:glib2安全漏洞
+Published:2023-03-21
+URL:/support/loophole/patch/3274.html
+Title:
+			公告ID：KYSA-202303-1081
+公告摘要：glib2安全漏洞
+等级：Important
+发布日期：2023-03-21
+		
+1.修复的CVE
+·CVE-2022-22624
+描述：Apple iOS和Apple iPadOS都是美国苹果（Apple）公司的产品。Apple iOS是一套为移动设备所开发的操作系统。Apple iPadOS是一套用于iPad平板电脑的操作系统。Apple iOS 15.4 和 iPadOS 15.4 之前的 WebKit 存在资源管理错误漏洞，该漏洞源于处理恶意制作的 Web 内容可能会导致任意代码执行。以下产品和版本受到影响：iPhone 6s and later, iPad Pro (all models), iPad Air 2 and later, iPad 5th generation and later, iPad mini 4 and later, and iPod touch (7th generation)。
+·CVE-2022-22628
+描述：Apple iOS和Apple iPadOS都是美国苹果（Apple）公司的产品。Apple iOS是一套为移动设备所开发的操作系统。Apple iPadOS是一套用于iPad平板电脑的操作系统。Apple iOS 15.4 和 iPadOS 15.4 之前的 WebKit 存在资源管理错误漏洞，该漏洞源于处理恶意制作的 Web 内容可能会导致任意代码执行。以下产品和版本受到影响：iPhone 6s and later, iPad Pro (all models), iPad Air 2 and later, iPad 5th generation and later, iPad mini 4 and later, and iPod touch (7th generation)。
+·CVE-2022-22629
+描述：Apple iOS和Apple iPadOS都是美国苹果（Apple）公司的产品。Apple iOS是一套为移动设备所开发的操作系统。Apple iPadOS是一套用于iPad平板电脑的操作系统。Apple iOS 15.4 和 iPadOS 15.4 之前的 WebKit 存在缓冲区错误漏洞，该漏洞源于处理恶意制作的 Web 内容可能会导致任意代码执行。以下产品和版本受到影响：iPhone 6s and later, iPad Pro (all models), iPad Air 2 and later, iPad 5th generation and later, iPad mini 4 and later, and iPod touch (7th generation)。
+·CVE-2022-22662
+描述：Apple iOS和Apple iPadOS都是美国苹果（Apple）公司的产品。Apple iOS是一套为移动设备所开发的操作系统。Apple iPadOS是一套用于iPad平板电脑的操作系统。Apple iOS 和 iPadOS WebKit存在信息泄露漏洞，该漏洞源于处理恶意制作的网页内容可能会泄露敏感的用户信息。以下机型将会受到影响：iPhone 6s 及更新机型、iPad Pro（所有型号）、iPad Air 2 及更新机型、iPad 第 5 代及更新机型、iPad mini 4 及更新机型和 iPod touch（第 7 代）。
+·CVE-2022-26700
+描述：Apple tvOS是美国苹果（Apple）公司的一套智能电视操作系统。tvOS 15.0 19J346 - 15.4.1 19L452 版本存在缓冲区错误漏洞，该漏洞源于在 WebKit 中处理 HTML 内容时出现边界错误。远程攻击者利用该漏洞可在目标系统上执行任意代码。
+·CVE-2022-26709
+描述：Apple tvOS是美国苹果（Apple）公司的一套智能电视操作系统。Apple tvOS 15.0 19J346 - 15.4.1 19L452 版本存在资源管理错误漏洞，该漏洞源于在 WebKit 中处理 HTML 内容时出现释放后使用错误。远程攻击者利用该漏洞可破坏易受攻击的系统。
+·CVE-2022-26710
+描述：Apple tvOS是美国苹果（Apple）公司的一套智能电视操作系统。Apple tvOS 15.0 19J346 - 15.4.1 19L452 版本存在资源管理错误漏洞，该漏洞源于在 WebKit 中处理 HTML 内容时出现释放后使用错误。远程攻击者利用该漏洞可破坏易受攻击的系统。
+·CVE-2022-26716
+描述：WebKit是一个快速、开源的 网络浏览器引擎。Apple WebKit 存在缓冲区错误漏洞，该漏洞源于WebKit处理HTML内容时存在边界错误。 远程攻击者可以诱导受害者访问一个特别制作的网站，触发内存损坏，并在目标系统上执行任意代码。以下产品及版本受到影响：Apple TV 4K, Apple TV 4K (2nd generation), 和 Apple TV HD。
+·CVE-2022-26717
+描述：WebKit是一个快速、开源的 网络浏览器引擎。Apple WebKit 存在资源管理错误漏洞，该漏洞源于WebKit在处理HTML内容时存在释放后重用错误。远程攻击者可以诱导受害者访问一个特别制作的网站，触发内存损坏和执行系统上的任意代码。以下产品及版本受到影响：Apple TV 4K, Apple TV 4K (2nd generation), and Apple TV HD。
+·CVE-2022-26719
+描述：WebKit是一个快速、开源的 网络浏览器引擎。Apple WebKit 存在缓冲区错误漏洞，该漏洞源于WebKit处理HTML内容时存在边界错误。 远程攻击者可以诱导受害者访问一个特别制作的网站，触发内存损坏，并在目标系统上执行任意代码。以下产品及版本受到影响：Apple TV 4K, Apple TV 4K (2nd generation), 和 Apple TV HD。
+·CVE-2022-30293
+描述：WebKitGTK是KDE、苹果（Apple）、谷歌（Google）等公司共同开发的一套开源的Web浏览器引擎。WebKitGTK 2.36.0版本及之前版本存在安全漏洞，该漏洞源于WebCore/platform/graphics/texmap/TextureMapperLayer.cpp中的WebCore：：TextureMapperLayer：：setContentsLayer存在基于堆的缓冲区溢出。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统（兼容版） V10
+·aarch64架构:
+glib2、glib2-devel、glib2-doc、glib2-fam、glib2-static、glib2-tests
+·x86_64架构:
+glib2、glib2-devel、glib2-doc、glib2-fam、glib2-static、glib2-tests
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统（兼容版） V10 (aarch64、x86_64)
+glib2-2.56.4-159.el8或以上版本
+glib2-devel-2.56.4-159.el8或以上版本
+glib2-doc-2.56.4-159.el8或以上版本
+glib2-fam-2.56.4-159.el8或以上版本
+glib2-static-2.56.4-159.el8或以上版本
+glib2-tests-2.56.4-159.el8或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统（兼容版） V10
+aarch64:https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-22624:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-22628:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-22629:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-22662:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-26700:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-26709:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-26710:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-26716:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-26717:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-26719:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-30293:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统（兼容版） V10
+
+glib2(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/aarch64/Packages/glib2-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/glib2-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/glib2-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/aarch64/Packages/glib2-devel-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/glib2-devel-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/glib2-devel-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/aarch64/Packages/glib2-doc-2.56.4-159.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/glib2-doc-2.56.4-159.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/glib2-doc-2.56.4-159.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/aarch64/Packages/glib2-fam-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/glib2-fam-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/glib2-fam-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/aarch64/Packages/glib2-static-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/glib2-static-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/glib2-static-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/aarch64/Packages/glib2-tests-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/aarch64/Packages/glib2-tests-2.56.4-159.el8.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/aarch64/Packages/glib2-tests-2.56.4-159.el8.aarch64.rpm
+
+glib2(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/x86_64/Packages/glib2-2.56.4-159.el8.i686.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/glib2-2.56.4-159.el8.i686.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/glib2-2.56.4-159.el8.i686.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/x86_64/Packages/glib2-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/glib2-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/glib2-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/x86_64/Packages/glib2-devel-2.56.4-159.el8.i686.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/glib2-devel-2.56.4-159.el8.i686.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/glib2-devel-2.56.4-159.el8.i686.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/x86_64/Packages/glib2-devel-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/glib2-devel-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/glib2-devel-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/x86_64/Packages/glib2-doc-2.56.4-159.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/glib2-doc-2.56.4-159.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/glib2-doc-2.56.4-159.el8.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/x86_64/Packages/glib2-fam-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/glib2-fam-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/glib2-fam-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/x86_64/Packages/glib2-static-2.56.4-159.el8.i686.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/glib2-static-2.56.4-159.el8.i686.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/glib2-static-2.56.4-159.el8.i686.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/x86_64/Packages/glib2-static-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/glib2-static-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/glib2-static-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/AppStream-updates/x86_64/Packages/glib2-tests-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/BaseOS-updates/x86_64/Packages/glib2-tests-2.56.4-159.el8.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/8U2/os/adv/lic/PowerTools-updates/x86_64/Packages/glib2-tests-2.56.4-159.el8.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

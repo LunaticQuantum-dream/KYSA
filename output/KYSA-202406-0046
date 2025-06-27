@@ -1,0 +1,148 @@
+Name:KYSA-202406-0046
+Severity:重要
+Summary:thunderbird安全漏洞
+Published:2025-03-12
+URL:/support/loophole/patch/7458.html
+Title:
+			公告ID：KYSA-202406-0046
+公告摘要：thunderbird安全漏洞
+等级：重要
+发布日期：2025-03-12
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2403 Update2版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2024-5688
+MozillaFirefox是一款开源Web浏览器。MozillaFirefox127版本之前存在安全漏洞，该漏洞源于如果在正确的时间触发了垃圾收集，则在对象移植期间可能会发生释放后重用的情况。
+CVE-2024-5690
+MozillaFirefox是一款开源Web浏览器。MozillaFirefox127版本之前存在安全漏洞，该漏洞源于通过监视某些操作所花费的时间，攻击者可以猜测出用户系统上哪些外部协议处理程序在运行。
+CVE-2024-5702
+MozillaFirefox是一款开源Web浏览器。MozillaFirefox125版本之前存在安全漏洞，该漏洞源于网络堆栈中的内存损坏可能会导致潜在的可利用的崩溃。
+CVE-2024-5700
+MozillaFirefox是一款开源Web浏览器。MozillaFirefox127版本之前存在安全漏洞，该漏洞源于存在内存安全漏洞。
+CVE-2024-5696
+MozillaFirefox是一款开源Web浏览器。MozillaFirefox127版本之前存在安全漏洞，该漏洞源于通过操纵input标签中的文本，攻击者可能导致内存损坏，从而导致可能被利用的崩溃。
+CVE-2024-5693
+MozillaFirefox是一款开源Web浏览器。MozillaFirefox127版本之前存在安全漏洞，该漏洞源于屏幕外画布(OffscreenCanvas)未能正确跟踪跨源污染，这可能会被用来访问来自其他站点的图像数据，从而违反同源策略。
+CVE-2024-5691
+MozillaFirefox是一款开源Web浏览器。MozillaFirefox127版本之前存在安全漏洞，该漏洞源于通过使用标题欺骗浏览器X-Frame-Options，沙盒中的iframe可能会显示一个按钮，如果用户点击该按钮，就会绕过限制打开一个新窗口。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2403 Update2
+x86_64 架构：
+thunderbird-gnome-support、thunderbird-locale-af、thunderbird-locale-ar、thunderbird-locale-ast、thunderbird-locale-be、thunderbird-locale-bg、thunderbird-locale-bn-bd、thunderbird-locale-bn、thunderbird-locale-br、thunderbird-locale-ca、thunderbird-locale-cak、thunderbird-locale-cs、thunderbird-locale-cy、thunderbird-locale-da、thunderbird-locale-de、thunderbird-locale-dsb、thunderbird-locale-el、thunderbird-locale-en-gb、thunderbird-locale-en-us、thunderbird-locale-en、thunderbird-locale-es-ar、thunderbird-locale-es-es、thunderbird-locale-es、thunderbird-locale-et、thunderbird-locale-eu、thunderbird-locale-fa、thunderbird-locale-fi、thunderbird-locale-fr、thunderbird-locale-fy-nl、thunderbird-locale-fy、thunderbird-locale-ga-ie、thunderbird-locale-ga、thunderbird-locale-gd、thunderbird-locale-gl、thunderbird-locale-he、thunderbird-locale-hr、thunderbird-locale-hsb、thunderbird-locale-hu、thunderbird-locale-hy、thunderbird-locale-id、thunderbird-locale-is、thunderbird-locale-it、thunderbird-locale-ja、thunderbird-locale-ka、thunderbird-locale-kab、thunderbird-locale-kk、thunderbird-locale-ko、thunderbird-locale-lt、thunderbird-locale-lv、thunderbird-locale-mk、thunderbird-locale-ms、thunderbird-locale-nb-no、thunderbird-locale-nb、thunderbird-locale-nl、thunderbird-locale-nn-no、thunderbird-locale-nn、thunderbird-locale-pa-in、thunderbird-locale-pa、thunderbird-locale-pl、thunderbird-locale-pt-br、thunderbird-locale-pt-pt、thunderbird-locale-pt、thunderbird-locale-rm、thunderbird-locale-ro、thunderbird-locale-ru、thunderbird-locale-si、thunderbird-locale-sk、thunderbird-locale-sl、thunderbird-locale-sq、thunderbird-locale-sr、thunderbird-locale-sv-se、thunderbird-locale-sv、thunderbird-locale-ta-lk、thunderbird-locale-ta、thunderbird-locale-th、thunderbird-locale-tr、thunderbird-locale-uk、thunderbird-locale-uz、thunderbird-locale-vi、thunderbird-locale-zh-cn、thunderbird-locale-zh-hans、thunderbird-locale-zh-hant、thunderbird-locale-zh-tw、thunderbird-mozsymbols、thunderbird、xul-ext-calendar-timezones、xul-ext-gdata-provider、xul-ext-lightning
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2403 Update2
+1:115.13.0+build5-0kylin0.20.04.1k0.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install thunderbird
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2403 Update2
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-gnome-support_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-af_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ar_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ast_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-be_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-bg_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-bn-bd_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-bn_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-br_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ca_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-cak_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-cs_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-cy_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-da_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-de_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-dsb_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-el_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-en-gb_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-en-us_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-en_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-es-ar_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-es-es_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-es_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-et_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-eu_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-fa_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-fi_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-fr_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-fy-nl_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-fy_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ga-ie_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ga_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-gd_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-gl_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-he_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-hr_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-hsb_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-hu_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-hy_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-id_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-is_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-it_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ja_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ka_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-kab_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-kk_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ko_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-lt_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-lv_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-mk_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ms_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-nb-no_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-nb_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-nl_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-nn-no_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-nn_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-pa-in_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-pa_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-pl_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-pt-br_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-pt-pt_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-pt_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-rm_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ro_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ru_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-si_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-sk_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-sl_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-sq_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-sr_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-sv-se_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-sv_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ta-lk_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-ta_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-th_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-tr_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-uk_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-uz_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-vi_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-zh-cn_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-zh-hans_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-zh-hant_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-locale-zh-tw_115.13.0+build5-0kylin0.20.04.1k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird-mozsymbols_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/thunderbird_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/xul-ext-calendar-timezones_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/xul-ext-gdata-provider_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/thunderbird/xul-ext-lightning_115.13.0+build5-0kylin0.20.04.1k0.1_amd64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2403 Update2版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

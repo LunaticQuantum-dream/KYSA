@@ -1,0 +1,126 @@
+Name:KYSA-202209-0026
+Severity:重要
+Summary:xen安全漏洞
+Published:2023-11-23
+URL:/support/loophole/patch/4518.html
+Title:
+			公告ID：KYSA-202209-0026
+公告摘要：xen安全漏洞
+等级：重要
+发布日期：2023-11-23
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2020-25599
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.14版本及之前版本中存在安全漏洞，该漏洞源于EVTCHNOP reset or XEN DOMCTL soft reset违反各种内部假设，从而导致超出范围的内存访问或触发错误检查。攻击者可利用该漏洞拒绝服务（DoS）。
+CVE-2020-11740
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.13.x及之前版本中的xenoprof存在安全漏洞。攻击者可利用该漏洞获取敏感信息。
+CVE-2020-11739
+Xen是英国剑桥（Cambridge）大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.13.x 版本及之前版本中存在竞争条件问题漏洞，该漏洞源于读写解锁路径中缺少内存屏障。攻击者可利用该漏洞导致拒绝服务，可能获取敏感信息或提升权限。
+CVE-2020-15567
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。 Xen 4.13.x及之前版本中存在安全漏洞。攻击者可利用该漏洞造成拒绝服务或提升权限。
+CVE-2020-15563
+Xen是英国剑桥（Cambridge）大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.8 版本至 4.13.x 版本中存在缓冲区错误漏洞。攻击者可利用该漏洞导致虚拟机管理程序崩溃，造成拒绝服务。
+CVE-2020-25596
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.14版本及之前版本中存在安全漏洞。攻击者可利用该漏洞通过SYSENTER的x86 pv guest虚拟机内核DoS。
+CVE-2020-25600
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。 Xen 4.14版本及之前版本中存在缓冲区错误漏洞。该漏洞源于32位x86域的越界事件通道的可用性造成的。攻击者可利用该漏洞在整个系统上导致拒绝服务。
+CVE-2020-25602
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.14及之前版本存在安全漏洞。该漏洞源于MSR MISC启用触发致命错误，攻击者可利用该漏洞触发拒绝服务。
+CVE-2020-11743
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.13.x及之前版本中存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。
+CVE-2020-11741
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.13.x及之前版本中的xenoprof存在安全漏洞。攻击者可利用该漏洞获取敏感信息，导致拒绝服务或可能提升权限。
+CVE-2020-15564
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。 Xen 4.13.x及之前版本中存在安全漏洞。攻击者可利用该漏洞导致虚拟机管理程序崩溃。
+CVE-2020-0543
+Intel 06_3DH和Intel 06_9EH都是美国英特尔（Intel）公司的一款中央处理器（CPU）产品。多款Intel产品中存在信息泄露漏洞。攻击者可利用该漏洞获取敏感信息。以下产品及版本受到影响：Intel Celeron 1000M；Celeron 1005M；Celeron 1007U；Celeron 1019Y；Celeron 1020m等。
+CVE-2020-15566
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.13.x及之前版本中存在安全漏洞。攻击者可利用该漏洞导致主机操作系统崩溃。
+CVE-2020-15565
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.13.x及之前版本中存在安全漏洞。攻击者可利用该漏洞导致主机操作系统崩溃或提升权限。
+CVE-2020-25604
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。 Xen 4.14版本及之前版本中存在安全漏洞。该漏洞源于定时器触发一个致命错误。攻击者可利用该漏洞拒绝服务的主机系统。
+CVE-2020-25597
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.14版本及之前版本中存在安全漏洞。该漏洞源于事件通道未转为无效时的错误引起的。攻击者可以利用该漏洞导致主机崩溃。
+CVE-2020-25603
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.14版本及之前版本中存在安全漏洞。该漏洞源于在访问/分配事件通道时缺少内存屏障。
+CVE-2020-25601
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.14版本及之前版本中存在资源管理错误漏洞。该漏洞源于网络系统或产品对系统资源（如内存、磁盘空间、文件等）的管理不当。
+CVE-2020-25595
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。Xen 4.14版本及之前版本中存在安全漏洞。该漏洞源于Xen的MSI处理中的代码路径已经被识别出来，这些代码路径作用于从设备硬件寄存器读回的未消毒的值。虽然严格符合PCI规范的设备不应该影响这些寄存器，但设备有超出规范的后门操作。
+CVE-2020-11742
+Xen是英国剑桥大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。 Xen 4.13.x及之前版本中存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303
+x86_64 架构：
+libxencall1、libxendevicemodel1、libxenevtchn1、libxenforeignmemory1、libxengnttab1、libxenmisc4.11、libxenstore3.0、libxentoolcore1、libxentoollog1、xen-hypervisor-4.11-amd64、xen-hypervisor-4.9-amd64、xen-hypervisor-common、xen-system-amd64、xen-utils-4.11、xen-utils-common、xenstore-utils
+arm64 架构：
+libxencall1、libxendevicemodel1、libxenevtchn1、libxenforeignmemory1、libxengnttab1、libxenmisc4.11、libxenstore3.0、libxentoolcore1、libxentoollog1、xen-hypervisor-4.11-arm64、xen-hypervisor-4.9-arm64、xen-hypervisor-common、xen-system-arm64、xen-utils-4.11、xen-utils-common、xenstore-utils
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303
+4.11.3+24-g14b62ab3e5-1kylin2.3kylin0
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libxengnttab1
+$sudo apt install libxenmisc4.11
+$sudo apt install xenstore-utils
+$sudo apt install xen-utils-4.11
+$sudo apt install xen-utils-common
+$sudo apt install libxenevtchn1
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxencall1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxendevicemodel1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxenevtchn1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxenforeignmemory1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxengnttab1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxenmisc4.11_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxenstore3.0_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxentoolcore1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxentoollog1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-hypervisor-4.11-amd64_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-hypervisor-4.9-amd64_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-hypervisor-common_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-system-amd64_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-utils-4.11_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-utils-common_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xenstore-utils_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxencall1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxendevicemodel1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxenevtchn1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxenforeignmemory1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxengnttab1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxenmisc4.11_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxenstore3.0_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxentoolcore1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/libxentoollog1_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-hypervisor-4.11-arm64_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-hypervisor-4.9-arm64_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-hypervisor-common_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-system-arm64_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-utils-4.11_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xen-utils-common_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/x/xen/xenstore-utils_4.11.3%2B24-g14b62ab3e5-1kylin2.3kylin0_arm64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

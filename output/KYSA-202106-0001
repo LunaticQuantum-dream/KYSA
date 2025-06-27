@@ -1,0 +1,13 @@
+Name:KYSA-202106-0001
+Severity:中等
+Summary:gupnp安全漏洞
+Published:2021-06-30
+URL:/support/loophole/patch/473.html
+Title:
+			摘要：gupnp安全漏洞
+安全等级：中等
+公告ID： KYSA-202106-0001
+发布日期：2021-06-30
+影响CVE：CVE-2021-33516
+		
+1. 修复的CVE信息CVE-2021-33516UPnP是Open Connectivity Foundation基金会的一款通用即插即用协议。GUPnP 1.0.7之前版本，1.1.x系列和1.2.5之前的1.2 x存在安全漏洞。该漏洞允许重新绑定DNS。远程web服务器可以利用这个漏洞诱导受害者的浏览器，使其触发针对使用这个库实现的本地UPnP服务的操作。2. 受影响的软件包银河麒麟桌面操作系统V10 SP1gir1.2-gupnp-1.2libgupnp-1.2-0libgupnp-1.2-devlibgupnp-doc3. 影响的操作系统银河麒麟桌面操作系统V10 SP14. 修复版本软件包：gupnp1.2.3-0kylin0.20.04.2(V10 SP1)5. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2-desktop main restricted universe multiverse4.0.2-sp1桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10SP1版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级。$sudo apt update方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists6. 软件包下载地址银河麒麟桌面操作系统V10 SP1X86下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/g/gupnp/libgupnp-doc_1.2.3-0kylin0.20.04.2_all.deb 

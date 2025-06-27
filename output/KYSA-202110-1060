@@ -1,0 +1,13 @@
+Name:KYSA-202110-1060
+Severity:中等
+Summary:gd漏洞
+Published:2021-10-22
+URL:/support/loophole/patch/594.html
+Title:
+			摘要：gd漏洞
+安全等级：中等
+公告ID：KYSA-202110-1060
+发布日期：2021-10-22
+影响CVE：CVE-2021-40812
+		
+1. 修复的CVE信息CVE-2021-40812描述：GD Graphics Library是一个开源代码库，用于程序员动态创建图像。GD Graphics Library (aka LibGD)2.3.2及之前版本存在安全漏洞，该漏洞源于缺少某些 gdGetBuf 和 gdPutBuf 返回值检查。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2gd-2.3.0-3.ky10gd-devel-2.3.0-3.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:gd、gd-develx86_64:gd、gd-devel4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP2aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP2 gd aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/gd-2.3.0-3.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/gd-devel-2.3.0-3.ky10.aarch64.rpm gd x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/gd-2.3.0-3.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/gd-devel-2.3.0-3.ky10.x86_64.rpm注：其他相关依赖包请到相同目录下载 

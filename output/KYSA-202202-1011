@@ -1,0 +1,140 @@
+Name:KYSA-202202-1011
+Severity:严重
+Summary:samba安全漏洞
+Published:2022-02-12
+URL:/support/loophole/patch/4128.html
+Title:
+			公告ID：KYSA-202202-1011
+公告摘要：samba安全漏洞
+等级：Critical
+发布日期：2022-02-12
+		
+1.修复的CVE
+·CVE-2016-2124
+描述：Samba是用于 Linux 和 Unix 的标准 Windows 互操作性程序套件。Samba存在访问控制错误漏洞，目前暂无该漏洞信息。
+·CVE-2020-1472
+描述：Microsoft Windows Netlogon是美国微软（Microsoft）的Windows的一个重要组件，主要功能是用户和机器在域内网络上的认证，以及复制数据库以进行域控备份，同时还用于维护域成员与域之间、域与域控之间、域DC与跨域DC之间的关系。Microsoft Windows NetLogon中存在安全漏洞。攻击者可借助特制应用程序利用该漏洞获取管理员访问权限。以下产品及版本受到影响：Microsoft Windows Server 2008 R2 SP1，Windows Server 2012，Windows Server 2012 R2，Windows Server 2016，Windows Server 2019，Windows Server 1903版本，Windows Server 1909版本，Windows Server 2004版本。
+·CVE-2020-25717
+描述：此缺陷能够使samba的AD域用户在被查找失败的情况下被映射为本地的同名用户，此本地用户的权限可能比AD域用户高，由此导致AD域用户获得提权。此漏洞带来的最大威胁是对系统机密性和完整性的威胁。
+·CVE-2020-25718
+描述：Samba是用于 Linux 和 Unix 的标准 Windows 互操作性程序套件。Samba存在权限许可和访问控制问题漏洞，该漏洞源于在作为 Active Directory 域控制器的 samba 能够支持 RODC（只读域控制器）的方式中发现了一个缺陷。这将允许 RODC 打印管理员票证。
+·CVE-2020-25719
+描述：在作为 AD域控制器的Samba实现基于Kerberos名称的身份验证的方式中发现了一个缺陷。如果Samba AD DC不严格要求Kerberos PAC并始终使用其中找到的 SID，则它可能无法分辨凭证所代表的用户。
+·CVE-2020-25721
+描述：Samba是用于 Linux 和 Unix 的标准 Windows 互操作性程序套件。Samba存在授权问题漏洞，目前暂无该漏洞信息，请随时关注CNNVD或厂商公告。
+·CVE-2020-25722
+描述：Samba是用于 Linux 和 Unix 的标准 Windows 互操作性程序套件。Samba存在权限许可和访问控制问题漏洞，该漏洞源于在 samba AD DC 实现存储数据的访问和一致性检查的方式中发现了多个缺陷。攻击者可以利用此缺陷来导致整个域遭到破坏。
+·CVE-2020-27840
+描述：在samba中发现了一个缺陷。域名（DN）周围的字符串中使用的空格虽然应该被忽略，但可能会导致带有空格的无效DN字符串将零字节写入越界内存，从而导致崩溃。此漏洞的最大威胁是系统可用性。
+·CVE-2021-20254
+描述：Samba是Samba团队的一套可使UNIX系列的操作系统与微软Windows操作系统的SMB/CIFS网络协议做连结的自由软件。该软件支持共享打印机、互相传输资料文件等。Samba 存在缓冲区错误漏洞，该漏洞源于在将Windows组标识(sid)映射到unix组标识(gid)时存在边界条件，这导致在Samba服务器进程令牌中创建负面的idmap缓存项 。
+·CVE-2021-20277
+描述：Samba是Samba团队的一套可使UNIX系列的操作系统与微软Windows操作系统的SMB/CIFS网络协议做连结的自由软件。该软件支持共享打印机、互相传输资料文件等。 Samba 存在安全漏洞，攻击者可利用该漏洞可以通过AD DC LDAP Server强制读取无效地址，以触发拒绝服务，或获取敏感信息。
+·CVE-2021-3671
+描述：Samba是用于 Linux 和 Unix 的标准 Windows 互操作性程序套件。Samba存在代码问题漏洞，该漏洞源于在Samba Kerberos服务器处理TGS-REQ (Ticket Granting server - Request)中丢失sname的方式中存在空指针引用。经过身份验证的用户可以使用此漏洞使amba服务器崩溃。
+·CVE-2021-3738
+描述：Samba AD DC RPC服务器中存在释放后使用问题，这可能允许句柄指向不同的用户状态，从而导致更具特权的访问。
+·CVE-2021-43566
+描述：Samba是用于 Linux 和 Unix 的标准 Windows 互操作性程序套件。Samba file server 存在后置链接漏洞，该漏洞源于创建目录时的符号链接竞争条件而存在的。 远程认证用户可以使用 SMB1 或 NFS 符号链接竞争在共享定义之外的 Unix 文件系统上创建目录。 该漏洞允许远程用户绕过实施的安全限制。
+·CVE-2021-44142
+描述：Samba是用于 Linux 和 Unix 的标准 Windows 互操作性程序套件。
+Samba 存在安全漏洞，该漏洞源于在将用户提供的数据复制到固定长度的基于堆的缓冲区之前缺乏对长度的正确验证。攻击者可以利用此漏洞在 root 环境中执行代码。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+ctdb、ctdb-tests、libsmbclient、libsmbclient-devel、libwbclient、libwbclient-devel、python3-samba、python3-samba-dc、python3-samba-test、samba、samba-client、samba-common、samba-common-tools、samba-dc、samba-dc-bind-dlz、samba-dc-provision、samba-devel、samba-help、samba-krb5-printing、samba-libs、samba-pidl、samba-test、samba-winbind、samba-winbind-clients、samba-winbind-krb5-locator、samba-winbind-modules
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+ctdb-4.11.12-8.p02.a.ky10或以上版本
+ctdb-tests-4.11.12-8.p02.a.ky10或以上版本
+libsmbclient-4.11.12-8.p02.a.ky10或以上版本
+libsmbclient-devel-4.11.12-8.p02.a.ky10或以上版本
+libwbclient-4.11.12-8.p02.a.ky10或以上版本
+libwbclient-devel-4.11.12-8.p02.a.ky10或以上版本
+python3-samba-4.11.12-8.p02.a.ky10或以上版本
+python3-samba-dc-4.11.12-8.p02.a.ky10或以上版本
+python3-samba-test-4.11.12-8.p02.a.ky10或以上版本
+samba-4.11.12-8.p02.a.ky10或以上版本
+samba-client-4.11.12-8.p02.a.ky10或以上版本
+samba-common-4.11.12-8.p02.a.ky10或以上版本
+samba-common-tools-4.11.12-8.p02.a.ky10或以上版本
+samba-dc-4.11.12-8.p02.a.ky10或以上版本
+samba-dc-bind-dlz-4.11.12-8.p02.a.ky10或以上版本
+samba-dc-provision-4.11.12-8.p02.a.ky10或以上版本
+samba-devel-4.11.12-8.p02.a.ky10或以上版本
+samba-help-4.11.12-8.p02.a.ky10或以上版本
+samba-krb5-printing-4.11.12-8.p02.a.ky10或以上版本
+samba-libs-4.11.12-8.p02.a.ky10或以上版本
+samba-pidl-4.11.12-8.p02.a.ky10或以上版本
+samba-test-4.11.12-8.p02.a.ky10或以上版本
+samba-winbind-4.11.12-8.p02.a.ky10或以上版本
+samba-winbind-clients-4.11.12-8.p02.a.ky10或以上版本
+samba-winbind-krb5-locator-4.11.12-8.p02.a.ky10或以上版本
+samba-winbind-modules-4.11.12-8.p02.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2016-2124:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-1472:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-25717:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-25718:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-25719:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-25721:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-25722:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-27840:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-20254:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-20277:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-3671:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-3738:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-43566:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-44142:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+samba(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/ctdb-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/ctdb-tests-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/libsmbclient-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/libsmbclient-devel-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/libwbclient-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/libwbclient-devel-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/python3-samba-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/python3-samba-dc-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/python3-samba-test-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-client-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-common-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-common-tools-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-dc-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-dc-bind-dlz-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-dc-provision-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-devel-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-help-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-krb5-printing-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-libs-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-pidl-4.11.12-8.p02.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-test-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-winbind-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-winbind-clients-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-winbind-krb5-locator-4.11.12-8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/samba-winbind-modules-4.11.12-8.p02.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,111 @@
+Name:KYSA-202303-0012
+Severity:严重
+Summary:sox安全漏洞
+Published:2024-01-18
+URL:/support/loophole/patch/3863.html
+Title:
+			公告ID：KYSA-202303-0012
+公告摘要：sox安全漏洞
+等级：严重
+发布日期：2024-01-18
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2021-3643
+SoX是一套开源的音频处理工具。该产品支持播放、转换和录制多种格式音频。SoX 14.4.1 版本存在安全漏洞，该漏洞源于 libsox 中的 lsx_adpcm_init 函数会导致全局缓冲区溢出。
+CVE-2021-23172
+SoX是一套开源的音频处理工具。该产品支持播放、转换和录制多种格式音频。SoX存在安全漏洞，该漏洞源于其 hcom.c组件的startread()函数在处理攻击者提供的精心制作的hcomn文件时出现堆缓冲区溢出导致应用程序崩溃。
+CVE-2021-23159
+SoX是一套开源的音频处理工具。该产品支持播放、转换和录制多种格SoX是一套开源的音频处理工具。该产品支持播放、转换和录制多种格式音频。
+
+SoX 14.4.1 版本存在安全漏洞，该漏洞源于 libsox 中的 lsx_adpcm_init 函数会导致全局缓冲区溢出。式音频。SoX存在安全漏洞，该漏洞源于其formats_i.c组件的lsx_read_w_buf()函数在处理攻击者提供的精心制作的文件时出现堆缓冲区溢出导致应用程序崩溃。
+CVE-2022-31650
+SoX是一套开源的音频处理工具。该产品支持播放、转换和录制多种格式音频。SoX 14.4.2 版本存在安全漏洞，该漏洞源于 libsox.a 中的 aiff.c 中的 lsx_aiffstartwrite 存在浮点异常。
+CVE-2019-13590
+SoX是一套开源的音频处理工具。该产品支持播放、转换和录制多种格式音频。SoX 14.4.2版本中的libsox.a文件存在代码问题漏洞。该漏洞源于网络系统或产品的代码开发过程中存在设计或实现不当的问题。
+CVE-2021-40426
+Sound Exchange libsox是Sound Exchange组织的一个声音样本文件格式读取器/写入器和音效处理器的库。主要是为 SoX 使用而开发的，但对任何声音应用程序都很有用。Sound Exchange libsox 14.4.2版本存在安全漏洞，该漏洞源于sphere.c的start_read()函数中存在堆缓冲区溢出漏洞，特制文件可能导致堆缓冲区溢出。攻击者利用该漏洞提供恶意文件从而触发此漏洞。
+CVE-2021-33844
+SoX是一套开源的音频处理工具。该产品支持播放、转换和录制多种格式音频。SoX存在安全漏洞，该漏洞源于其wav.c组件的startread()函数在处理攻击者提供的wav文件时出现浮点数异常导致应用程序崩溃。
+CVE-2021-23210
+SoX是一套开源的音频处理工具。该产品支持播放、转换和录制多种格式音频。SoX存在安全漏洞，该漏洞源于其voc.c组件的read_samples()函数处理攻击者精心制作的文件时出现浮点数异常（被零除）导致应用程序崩溃。
+CVE-2022-31651
+SoX是一套开源的音频处理工具。该产品支持播放、转换和录制多种格式音频。SoX 14.4.2 版本存在安全漏洞，该漏洞源于libsox.a 中 rate.c 中的 rate_init 中存在断言失败。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303
+x86_64 架构：
+libsox-fmt-all、libsox-fmt-alsa、libsox-fmt-ao、libsox-fmt-base、libsox-fmt-mp3、libsox-fmt-oss、libsox-fmt-pulse、libsox3、sox
+arm64 架构：
+libsox-fmt-all、libsox-fmt-alsa、libsox-fmt-ao、libsox-fmt-base、libsox-fmt-mp3、libsox-fmt-oss、libsox-fmt-pulse、libsox3、sox
+mips64el 架构：
+libsox-fmt-all、libsox-fmt-alsa、libsox-fmt-ao、libsox-fmt-base、libsox-fmt-mp3、libsox-fmt-oss、libsox-fmt-pulse、libsox3、sox
+loongarch64 架构：
+libsox-fmt-all、libsox-fmt-alsa、libsox-fmt-ao、libsox-fmt-base、libsox-fmt-mp3、libsox-fmt-oss、libsox-fmt-pulse、libsox3、sox
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303
+14.4.2+git20190427-2+deb11u2build0.20.04.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install sox
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-all_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-alsa_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-ao_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-base_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-mp3_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-oss_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-pulse_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox3_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/sox_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-all_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-alsa_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-ao_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-base_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-mp3_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-oss_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-pulse_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox3_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/sox_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-all_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-alsa_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-ao_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-base_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-mp3_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-oss_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-pulse_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox3_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/sox_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_mips64el.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-all_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-alsa_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-ao_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-base_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-mp3_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-oss_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox-fmt-pulse_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/libsox3_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/sox/sox_14.4.2%2Bgit20190427-2%2Bdeb11u2build0.20.04.1_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

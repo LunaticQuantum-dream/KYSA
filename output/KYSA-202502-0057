@@ -1,0 +1,185 @@
+Name:KYSA-202502-0057
+Severity:重要
+Summary:symfony安全漏洞
+Published:2025-05-23
+URL:/support/loophole/patch/7877.html
+Title:
+			公告ID：KYSA-202502-0057
+公告摘要：symfony安全漏洞
+等级：重要
+发布日期：2025-05-23
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2503版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2022-24894
+Sensio Labs Symfony是法国Sensio Labs公司的一套免费的、基于MVC架构的PHP开发框架。该框架提供常用的功能组件及工具，可用于快速创建复杂的WEB程序。Symfony存在授权问题漏洞，该漏洞源于Symfony会缓存整个响应（包括标头）并将其返回给客户端。
+CVE-2022-24895
+Sensio Labs Symfony是法国Sensio Labs公司的一套免费的、基于MVC架构的PHP开发框架。该框架提供常用的功能组件及工具，可用于快速创建复杂的WEB程序。Sensio Labs Symfony 存在授权问题漏洞，该漏洞源于不会在登录时清除跨站请求伪造令牌。
+CVE-2023-46734
+Symfony是Symfony公司的一个用于Web和控制台应用程序的PHP框架以及一组可重用的PHP组件。Symfony存在安全漏洞，该漏洞源于输入过滤不当。
+CVE-2024-50345
+Symfony是Symfony公司的一个用于Web和控制台应用程序的PHP框架以及一组可重用的PHP组件。Symfony存在输入验证错误漏洞，该漏洞源于攻击者可以欺骗依赖Request类的验证器将用户重定向到另一个域。
+CVE-2024-50343
+Symfony是Symfony公司的一个用于Web和控制台应用程序的PHP框架以及一组可重用的PHP组件。Symfony存在输入验证错误漏洞。攻击者利用该漏洞可以使用“$"元字符欺骗配置了正则表达式的"Validator"。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2503
+sw64 架构：
+php-symfony-amazon-mailer、php-symfony-asset、php-symfony-browser-kit、php-symfony-cache、php-symfony-config、php-symfony-console、php-symfony-css-selector、php-symfony-debug-bundle、php-symfony-debug、php-symfony-dependency-injection、php-symfony-doctrine-bridge、php-symfony-dom-crawler、php-symfony-dotenv、php-symfony-event-dispatcher、php-symfony-expression-language、php-symfony-filesystem、php-symfony-finder、php-symfony-form、php-symfony-framework-bundle、php-symfony-google-mailer、php-symfony-http-client、php-symfony-http-foundation、php-symfony-http-kernel、php-symfony-inflector、php-symfony-intl、php-symfony-ldap、php-symfony-lock、php-symfony-mailchimp-mailer、php-symfony-mailer、php-symfony-mailgun-mailer、php-symfony-messenger、php-symfony-mime、php-symfony-monolog-bridge、php-symfony-options-resolver、php-symfony-phpunit-bridge、php-symfony-postmark-mailer、php-symfony-process、php-symfony-property-access、php-symfony-property-info、php-symfony-proxy-manager-bridge、php-symfony-routing、php-symfony-security-bundle、php-symfony-security-core、php-symfony-security-csrf、php-symfony-security-guard、php-symfony-security-http、php-symfony-security、php-symfony-sendgrid-mailer、php-symfony-serializer、php-symfony-stopwatch、php-symfony-templating、php-symfony-translation、php-symfony-twig-bridge、php-symfony-twig-bundle、php-symfony-validator、php-symfony-var-dumper、php-symfony-var-exporter、php-symfony-web-link、php-symfony-web-profiler-bundle、php-symfony-web-server-bundle、php-symfony-workflow、php-symfony-yaml、php-symfony
+loongarch64 架构：
+php-symfony-amazon-mailer、php-symfony-asset、php-symfony-browser-kit、php-symfony-cache、php-symfony-config、php-symfony-console、php-symfony-css-selector、php-symfony-debug-bundle、php-symfony-debug、php-symfony-dependency-injection、php-symfony-doctrine-bridge、php-symfony-dom-crawler、php-symfony-dotenv、php-symfony-event-dispatcher、php-symfony-expression-language、php-symfony-filesystem、php-symfony-finder、php-symfony-form、php-symfony-framework-bundle、php-symfony-google-mailer、php-symfony-http-client、php-symfony-http-foundation、php-symfony-http-kernel、php-symfony-inflector、php-symfony-intl、php-symfony-ldap、php-symfony-lock、php-symfony-mailchimp-mailer、php-symfony-mailer、php-symfony-mailgun-mailer、php-symfony-messenger、php-symfony-mime、php-symfony-monolog-bridge、php-symfony-options-resolver、php-symfony-phpunit-bridge、php-symfony-postmark-mailer、php-symfony-process、php-symfony-property-access、php-symfony-property-info、php-symfony-proxy-manager-bridge、php-symfony-routing、php-symfony-security-bundle、php-symfony-security-core、php-symfony-security-csrf、php-symfony-security-guard、php-symfony-security-http、php-symfony-security、php-symfony-sendgrid-mailer、php-symfony-serializer、php-symfony-stopwatch、php-symfony-templating、php-symfony-translation、php-symfony-twig-bridge、php-symfony-twig-bundle、php-symfony-validator、php-symfony-var-dumper、php-symfony-var-exporter、php-symfony-web-link、php-symfony-web-profiler-bundle、php-symfony-web-server-bundle、php-symfony-workflow、php-symfony-yaml、php-symfony
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2503
+4.3.8+dfsg-1kylin1+esm2
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install php-symfony
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2503
+sw64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-amazon-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-asset_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-browser-kit_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-cache_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-config_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-console_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-css-selector_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-debug-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-debug_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-dependency-injection_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-doctrine-bridge_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-dom-crawler_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-dotenv_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-event-dispatcher_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-expression-language_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-filesystem_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-finder_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-form_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-framework-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-google-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-http-client_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-http-foundation_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-http-kernel_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-inflector_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-intl_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-ldap_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-lock_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-mailchimp-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-mailgun-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-messenger_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-mime_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-monolog-bridge_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-options-resolver_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-phpunit-bridge_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-postmark-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-process_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-property-access_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-property-info_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-proxy-manager-bridge_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-routing_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security-core_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security-csrf_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security-guard_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security-http_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-sendgrid-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-serializer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-stopwatch_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-templating_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-translation_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-twig-bridge_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-twig-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-validator_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-var-dumper_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-var-exporter_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-web-link_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-web-profiler-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-web-server-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-workflow_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-yaml_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony_4.3.8+dfsg-1kylin1+esm2_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-amazon-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-asset_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-browser-kit_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-cache_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-config_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-console_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-css-selector_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-debug-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-debug_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-dependency-injection_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-doctrine-bridge_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-dom-crawler_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-dotenv_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-event-dispatcher_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-expression-language_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-filesystem_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-finder_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-form_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-framework-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-google-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-http-client_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-http-foundation_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-http-kernel_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-inflector_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-intl_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-ldap_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-lock_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-mailchimp-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-mailgun-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-messenger_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-mime_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-monolog-bridge_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-options-resolver_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-phpunit-bridge_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-postmark-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-process_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-property-access_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-property-info_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-proxy-manager-bridge_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-routing_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security-core_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security-csrf_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security-guard_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security-http_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-security_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-sendgrid-mailer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-serializer_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-stopwatch_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-templating_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-translation_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-twig-bridge_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-twig-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-validator_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-var-dumper_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-var-exporter_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-web-link_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-web-profiler-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-web-server-bundle_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-workflow_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony-yaml_4.3.8+dfsg-1kylin1+esm2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/symfony/php-symfony_4.3.8+dfsg-1kylin1+esm2_all.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2503版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

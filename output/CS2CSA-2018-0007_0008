@@ -1,0 +1,16 @@
+Name:CS2CSA-2018-0007/0008
+Severity:重要
+Summary:内核安全更新（针对Intel硬件缺陷）
+Published:2018-01-04
+URL:/support/loophole/patch/67.html
+Title:
+			摘要：             kernel 安全更新
+安全等级：          重要
+公告ID：           CS2CSA-2018-0007/0008
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-01-04
+CVE ：         CVE-2017-5753  CVSS3评分：8.2
+                  CVE-2017-5715  CVSS3评分：8.2
+                  CVE-2017-5754  CVSS3评分：7.9
+		
+1. 概述：中标麒麟高级服务器操作系统V6有kernel可用的更新。中标麒麟高级服务器操作系统V7有kernel可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：kernel与microcode_ctl安全更新。4. 安全更新：在现代的微处理器（CPU）设计上一个常用的性能优化方法就是实现了对指令的推测执行（speculative execution）。这种优化方法在实际的工业制造过程中发现了一个目前全CPU行业都存在的设计缺陷。如果这一硬件缺陷被利用（利用该缺陷需要很高的技能，一般的恶意攻击者目前还无法做到，目前尚未有任何一起真实世界攻击），那么在同一物理空间的虚拟用户可以任意越级访问到另一个虚拟用户的数据，包括受保护的密码、应用程序密匙等。注意：这个问题存在于硬件中的，不能通过软件更新达到完全修复的效果。更新的内核为这个硬件缺陷提供了软件缓解，代价是潜在的性能损失。有关这个问题和性能影响的进一步信息，请参考稍后的评测数据。注意：CVE-2017-5754存在于Intel x86-64架构，AMD x86-64架构不受影响。升级建议:  公有云用户建议升级，内网虚拟化用户可缓时日，龙芯架构用户不受影响。升级后性能： 潜在的性能损失    5. 安装包列表：中标麒麟高级服务器操作系统V6：源码包：kernel-2.6.32-696.18.7.el6.src.rpmmicrocode_ctl-1.17-25.2.el6_9.src.rpmx86_64二进制包:kernel-2.6.32-696.18.7.el6.x86_64.rpmkernel-debug-2.6.32-696.18.7.el6.x86_64.rpmkernel-debug-debuginfo-2.6.32-696.18.7.el6.i686.rpmkernel-debug-debuginfo-2.6.32-696.18.7.el6.x86_64.rpmkernel-debug-devel-2.6.32-696.18.7.el6.i686.rpmkernel-debug-devel-2.6.32-696.18.7.el6.x86_64.rpmkernel-debuginfo-2.6.32-696.18.7.el6.i686.rpmkernel-debuginfo-2.6.32-696.18.7.el6.x86_64.rpmkernel-debuginfo-common-i686-2.6.32-696.18.7.el6.i686.rpmkernel-debuginfo-common-x86_64-2.6.32-696.18.7.el6.x86_64.rpmkernel-devel-2.6.32-696.18.7.el6.x86_64.rpmkernel-headers-2.6.32-696.18.7.el6.x86_64.rpmperf-2.6.32-696.18.7.el6.x86_64.rpmperf-debuginfo-2.6.32-696.18.7.el6.i686.rpmperf-debuginfo-2.6.32-696.18.7.el6.x86_64.rpmpython-perf-debuginfo-2.6.32-696.18.7.el6.i686.rpmpython-perf-debuginfo-2.6.32-696.18.7.el6.x86_64.rpmmicrocode_ctl-1.17-25.2.el6_9.x86_64.rpmmicrocode_ctl-debuginfo-1.17-25.2.el6_9.x86_64.rpm中标麒麟高级服务器操作系统V7：源码包：kernel-3.10.0-693.11.6.el7.src.rpmmicrocode_ctl-2.1-22.2.el7.src.rpmx86_64二进制包:kernel-3.10.0-693.11.6.el7.x86_64.rpmkernel-debug-3.10.0-693.11.6.el7.x86_64.rpmkernel-debug-debuginfo-3.10.0-693.11.6.el7.x86_64.rpmkernel-debug-devel-3.10.0-693.11.6.el7.x86_64.rpmkernel-debuginfo-3.10.0-693.11.6.el7.x86_64.rpmkernel-debuginfo-common-x86_64-3.10.0-693.11.6.el7.x86_64.rpmkernel-devel-3.10.0-693.11.6.el7.x86_64.rpmkernel-headers-3.10.0-693.11.6.el7.x86_64.rpmkernel-tools-3.10.0-693.11.6.el7.x86_64.rpmkernel-tools-debuginfo-3.10.0-693.11.6.el7.x86_64.rpmkernel-tools-libs-3.10.0-693.11.6.el7.x86_64.rpmperf-3.10.0-693.11.6.el7.x86_64.rpmperf-debuginfo-3.10.0-693.11.6.el7.x86_64.rpmpython-perf-3.10.0-693.11.6.el7.x86_64.rpmpython-perf-debuginfo-3.10.0-693.11.6.el7.x86_64.rpmmicrocode_ctl-2.1-22.2.el7.x86_64.rpmmicrocode_ctl-debuginfo-2.1-22.2.el7.x86_64.rpm			

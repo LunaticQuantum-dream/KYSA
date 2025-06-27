@@ -1,0 +1,130 @@
+Name:KYSA-202504-1149
+Severity:中等
+Summary:kernel安全漏洞
+Published:2025-04-29
+URL:/support/loophole/patch/7757.html
+Title:
+			公告ID：KYSA-202504-1149
+公告摘要：kernel安全漏洞
+等级：中等
+发布日期：2025-04-29
+		
+1.修复的漏洞
+·CVE-2024-50058
+描述：Linux kernel存在安全漏洞，该漏洞源于串行子系统中对uart_port_dtr_rts函数的不当保护，在关闭uart时可能引发内核崩溃。
+·CVE-2024-56583
+描述：Linux kernel存在安全漏洞，该漏洞源于sched/deadline模块中migrate_enable对提升任务的警告。
+·CVE-2024-56600
+描述：Linux kernel存在安全漏洞，该漏洞源于scsi:hisi_sas模块中未正确处理聚合ID，可能导致内核崩溃。
+·CVE-2024-56603
+描述：Linux kernel存在安全漏洞，该漏洞源于scsi:qedi模块中qedi_alloc_and_init_sb函数中的内存泄漏问题。
+·CVE-2024-56662
+描述：Linux kernel存在安全漏洞，该漏洞源于acpi:nfit模块中acpi_nfit_ctl函数中的vmalloc越界读取。
+·CVE-2024-56688
+描述：Linux kernel存在安全漏洞，该漏洞源于sunrpc模块中XPRT_SOCK_UPD_TIMEOUT未被清除的问题。
+·CVE-2024-56723
+描述：Linux kernel存在安全漏洞，该漏洞源于mfd:intel_soc_pmic_bxtwc模块中未使用IRQ域为PMIC设备。
+·CVE-2024-56724
+描述：Linux kernel存在安全漏洞，该漏洞源于tcp_bpf模块中tcp_bpf_sendmsg函数的sk_mem_uncharge逻辑。
+·CVE-2024-56778
+描述：Linux kernel存在代码问题漏洞，该漏洞源于STI DRM驱动在sti_hqvdp_atomic_check函数中未检查drm_atomic_get_crtc_state的返回值，可能导致错误指针的解引用，影响显示系统的稳定性和性能。
+·CVE-2024-57896
+描述：Linux kernel存在安全漏洞，该漏洞源于在卸载期间未先停止cleaner kthread。
+·CVE-2024-57899
+描述：Linux kernel存在安全漏洞，该漏洞源于在32位系统上mbss changed flags损坏。
+·CVE-2024-57900
+描述：Linux kernel存在安全漏洞，该漏洞源于在注册网络钩子时存在竞争问题。
+·CVE-2024-57931
+描述：Linux kernel存在安全漏洞，该漏洞源于selinux模块在处理扩展权限时未忽略未知权限。这可能导致系统崩溃或权限处理错误。
+·CVE-2025-21664
+描述：Linux kernel存在安全漏洞，该漏洞源于dm thin模块中get_first_thin函数未正确使用RCU安全的列表操作。这可能导致内存访问错误或系统崩溃。
+·CVE-2025-21785
+描述：Linux kernel存在安全漏洞，该漏洞源于未正确处理缓存信息数组的越界写入。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+kernel-modules-extra、kernel-modules、kernel-abi-whitelists、kernel-doc、kernel-tools、kernel-kdump-modules-internal、kernel-core、kernel-headers、kernel、kernel-devel、kernel-kdump-core、perf、kernel-kdump、kernel-kdump-modules、kernel-cross-headers、bpftool、kernel-kdump-modules-extra、kernel-kdump-devel、kernel-modules-internal、python3-perf
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+kernel-modules-extra-4.19.90-52.46.v2207.a.ky10或以上版本
+perf-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-kdump-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-headers-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-devel-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-abi-whitelists-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-kdump-devel-4.19.90-52.46.v2207.a.ky10或以上版本
+python3-perf-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-cross-headers-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-modules-internal-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-core-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-doc-4.19.90-52.46.v2207.a.ky10或以上版本
+bpftool-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-kdump-modules-extra-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-tools-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-modules-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-kdump-core-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-kdump-modules-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-kdump-modules-internal-4.19.90-52.46.v2207.a.ky10或以上版本
+kernel-4.19.90-52.46.v2207.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2024-50058:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-56583:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-56600:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-56603:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-56662:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-56688:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-56723:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-56724:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-56778:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-57896:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-57899:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-57900:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-57931:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-21664:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-21785:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+kernel(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-kdump-devel-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-kdump-modules-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-kdump-core-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-modules-internal-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-modules-extra-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-modules-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-kdump-modules-internal-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-kdump-modules-extra-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-tools-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/python3-perf-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/perf-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-kdump-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-headers-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-devel-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-cross-headers-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/bpftool-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-core-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-abi-whitelists-4.19.90-52.46.v2207.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-4.19.90-52.46.v2207.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/kernel-doc-4.19.90-52.46.v2207.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

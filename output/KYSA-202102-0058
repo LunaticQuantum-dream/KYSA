@@ -1,0 +1,100 @@
+Name:KYSA-202102-0058
+Severity:中等
+Summary:python3.5安全漏洞
+Published:2022-02-24
+URL:/support/loophole/patch/896.html
+Title:
+			公告ID：KYSA-202102-0058
+公告摘要：python3.5安全漏洞
+等级：中等
+发布日期：2022-02-24
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V4 SP1、银河麒麟桌面操作系统V4 SP2、银河麒麟桌面操作系统V4 SP3、银河麒麟桌面操作系统V4 SP4
+银河麒麟服务器操作系统V4 SP1、银河麒麟服务器操作系统V4 SP2、银河麒麟服务器操作系统V4 SP3、银河麒麟服务器操作系统V4 SP版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2021-3737
+Python是Python基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。Python 中存在代码问题漏洞，该漏洞源于产品未能正确处理服务响应。攻击者可通过该漏洞导致拒绝服务。 以下产品及版本受到影响：Python 3.4 For Ubuntu 14.04、Python3.4-minimal For Ubuntu 16.04。
+CVE-2020-27619
+Python是Python基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。
+Python 3 3.9版本存在安全漏洞，该漏洞源于Lib/test/multibytecodec_support.py CJK 编辑器测试对通过HTTP检索的内容调用eval（）函数。
+CVE-2021-3177
+Python是Python基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。
+Python 3.x through 3.9.1 存在缓冲区错误漏洞，该漏洞源于PyCArg_repr in _ctypes/callproc.c，攻击者可利用该漏洞执行远程代码。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V4 SP1、银河麒麟桌面操作系统V4 SP2、银河麒麟桌面操作系统V4 SP3、银河麒麟桌面操作系统V4 SP4
+x86_64 架构：
+idle-python3.5、libpython3.5-minimal、libpython3.5-stdlib、libpython3.5-testsuite、libpython3.5、python3.5-examples、python3.5-minimal、python3.5-venv、python3.5
+arm64 架构：
+idle-python3.5、libpython3.5-minimal、libpython3.5-stdlib、libpython3.5-testsuite、libpython3.5、python3.5-examples、python3.5-minimal、python3.5-venv、python3.5
+·银河麒麟服务器操作系统V4 SP1、银河麒麟服务器操作系统V4 SP2、银河麒麟服务器操作系统V4 SP3、银河麒麟服务器操作系统V4 SP4
+x86_64 架构：
+idle-python3.5、libpython3.5-minimal、libpython3.5-stdlib、libpython3.5-testsuite、libpython3.5、python3.5-examples、python3.5-minimal、python3.5-venv、python3.5
+arm64 架构：
+idle-python3.5、libpython3.5-minimal、libpython3.5-stdlib、libpython3.5-testsuite、libpython3.5、python3.5-examples、python3.5-minimal、python3.5-venv、python3.5
+
+3. 软件包修复版本
+软件包：python3.5
+3.5.2-2kord0~16.04.13（V4）
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1桌面版:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2桌面版:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3桌面版:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4桌面版:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+4.0.2-sp1服务器版:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-server main restricted universe multiverse
+4.0.2-sp2服务器版:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-server main restricted universe multiverse
+4.0.2-sp3服务器版:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-server main restricted universe multiverse
+4.0.2-sp4服务器版:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-server main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+$sudo apt install python2.7
+$sudo apt install python3.5
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V4、银河麒麟服务器操作系统V4
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/idle-python3.5_3.5.2-2kord0~16.04.13_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-minimal_3.5.2-2kord0~16.04.13_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-stdlib_3.5.2-2kord0~16.04.13_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-testsuite_3.5.2-2kord0~16.04.13_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5_3.5.2-2kord0~16.04.13_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-examples_3.5.2-2kord0~16.04.13_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-minimal_3.5.2-2kord0~16.04.13_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-venv_3.5.2-2kord0~16.04.13_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5_3.5.2-2kord0~16.04.13_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/idle-python3.5_3.5.2-2kord0~16.04.13_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-minimal_3.5.2-2kord0~16.04.13_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-stdlib_3.5.2-2kord0~16.04.13_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5-testsuite_3.5.2-2kord0~16.04.13_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/libpython3.5_3.5.2-2kord0~16.04.13_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-examples_3.5.2-2kord0~16.04.13_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-minimal_3.5.2-2kord0~16.04.13_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5-venv_3.5.2-2kord0~16.04.13_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python3.5/python3.5_3.5.2-2kord0~16.04.13_arm64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V4 SP1、银河麒麟桌面操作系统V4 SP2、银河麒麟桌面操作系统V4 SP3、银河麒麟桌面操作系统V4 SP4
+银河麒麟服务器操作系统V4 SP1、银河麒麟服务器操作系统V4 SP2、银河麒麟服务器操作系统V4 SP3、银河麒麟服务器操作系统V4 SP版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

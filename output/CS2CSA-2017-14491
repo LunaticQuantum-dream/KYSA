@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-14491
+Severity:严重
+Summary:Dnsmasq 缓冲区错误漏洞
+Published:2017-10-02
+URL:/support/loophole/patch/256.html
+Title:
+			摘要：          Dnsmasq 缓冲区错误漏洞
+安全等级：          严重
+公告ID：         CS2CSA-2017-14491
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2017-10-02
+CVE：          CVE-2017-14491
+		
+1. 概述：中标麒麟高级服务器操作系统软件V7有dnsmasq可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：Dnsmasq是软件开发者SimonKelley所研发的一款使用C语言编写的开源轻量级DNS转发和DHCP、TFTP服务器。Dnsmasq2.78之前的版本中存在基于堆的缓冲区溢出漏洞。远程攻击者可借助特制的DNS响应利用该漏洞造成拒绝服务（崩溃）或执行任意代码。

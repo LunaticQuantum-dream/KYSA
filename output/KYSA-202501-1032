@@ -1,0 +1,116 @@
+Name:KYSA-202501-1032
+Severity:严重
+Summary:gstreamer1-plugins-base安全漏洞
+Published:2025-01-21
+URL:/support/loophole/patch/7205.html
+Title:
+			公告ID：KYSA-202501-1032
+公告摘要：gstreamer1-plugins-base安全漏洞
+等级：严重
+发布日期：2025-01-21
+		
+1.修复的漏洞
+·CVE-2023-37328
+描述：GStreamer是一套用于处理流媒体的框架。
+GStreamer 1.0版本存在安全漏洞。攻击者利用该漏洞可以执行任意代码。
+·CVE-2024-47538
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+
+GStreamer存在缓冲区错误漏洞，该漏洞源于在gstvorbisdec.c中的vorbis_handle_identification_packet函数中检测到堆栈缓冲区溢出。
+·CVE-2024-47541
+描述：GStreamer 是一个构建媒体处理组件图的库。在 gstssaparse.c 文件的 gst_ssa_parse_remove_override_codes 函数中发现了一个越界写（OOB-write）漏洞。该函数负责解析和移除 SSA（SubStation Alpha）样式的覆盖代码，这些代码被大括号（{}）包围。问题出现在输入字符串中，关闭大括号 "}" 出现在打开大括号 "{" 之前的情况下。在这种情况下，memmove() 错误地复制了一个子字符串。随着每次循环迭代，传递给 memmove() 的大小（strlen(end+1)）会逐渐增大，导致写入超出分配的内存边界。此漏洞已在 1.24.10 版本中修复。
+·CVE-2024-47542
+描述：GStreamer 是一个构建媒体处理组件图的库。在 id3v2.c 文件中的 id3v2_read_synch_uint 函数中发现了一个空指针解引用漏洞。如果在调用 id3v2_read_synch_uint 时，传入的 work->hdr.frame_data 为 null，指针 guint8 *data 会在没有验证的情况下被访问，从而导致空指针解引用。此漏洞可能通过触发段错误（SEGV）导致服务拒绝（DoS）。该漏洞已在 1.24.10 版本中修复。
+
+·CVE-2024-47600
+描述：GStreamer 是一个构建媒体处理组件图的库。在 gst-discoverer.c 文件中的 format_channel_mask 函数中发现了一个越界读取（OOB-read）漏洞。该漏洞影响了一个大小固定为 64 元素的局部数组 position。然而，gst_discoverer_audio_info_get_channels 函数可能返回一个大于 64 的 guint channels 值。这导致 for 循环尝试访问超出 position 数组边界的内存，当使用大于 63 的索引时，发生越界读取。此漏洞可能导致从栈中读取不该读取的字节。此外，在越界读取后解引用 value->value_nick 可能导致进一步的内存损坏或未定义行为。该漏洞已在 1.24.10 版本中修复。
+
+·CVE-2024-47607
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+
+GStreamer存在安全漏洞，该漏洞源于在gstopusdec.c中的gst_opus_dec_parse_header函数中检测到堆栈缓冲区溢出。
+·CVE-2024-47615
+描述：GStreamer是GStreamer开源的一套用于处理流媒体的框架。
+
+GStreamer存在缓冲区错误漏洞，该漏洞源于在vorbis_parse.c中的gst_parse_vorbis_setup_packet函数中检测到越界写入。
+·CVE-2024-47835
+描述：GStreamer 是一个构建媒体处理组件图的库。在 gstsubparse.c 文件中的 parse_lrc 函数中发现了一个空指针解引用漏洞。parse_lrc 函数调用 strchr() 来查找字符串 line 中的字符 ]。该调用返回的指针随后传递给 g_strdup()。然而，如果字符串 line 中不包含字符 ]，strchr() 将返回 NULL，而调用 g_strdup(start + 1) 会导致空指针解引用。该漏洞已在 1.24.10 版本中修复。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·aarch64架构:
+gstreamer1-plugins-base、gstreamer1-plugins-base-help、gstreamer1-plugins-base-devel
+·x86_64架构:
+gstreamer1-plugins-base、gstreamer1-plugins-base-help、gstreamer1-plugins-base-devel
+·银河麒麟云底座操作系统 V10
+·aarch64架构:
+gstreamer1-plugins-base、gstreamer1-plugins-base-help、gstreamer1-plugins-base-devel
+·x86_64架构:
+gstreamer1-plugins-base、gstreamer1-plugins-base-help、gstreamer1-plugins-base-devel
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (aarch64、x86_64)
+gstreamer1-plugins-base-1.18.4-8.ky10h或以上版本
+gstreamer1-plugins-base-help-1.18.4-8.ky10h或以上版本
+gstreamer1-plugins-base-devel-1.18.4-8.ky10h或以上版本
+·银河麒麟云底座操作系统 V10 (aarch64、x86_64)
+gstreamer1-plugins-base-1.18.4-8.ky10h或以上版本
+gstreamer1-plugins-base-help-1.18.4-8.ky10h或以上版本
+gstreamer1-plugins-base-devel-1.18.4-8.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+aarch64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+银河麒麟云底座操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-37328:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47538:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47541:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47542:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47600:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47607:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47615:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-47835:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+gstreamer1-plugins-base(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-base-devel-1.18.4-8.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-base-1.18.4-8.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-base-help-1.18.4-8.ky10h.noarch.rpm
+
+gstreamer1-plugins-base(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-base-1.18.4-8.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-base-help-1.18.4-8.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-base-devel-1.18.4-8.ky10h.x86_64.rpm
+
+·银河麒麟云底座操作系统 V10
+
+gstreamer1-plugins-base(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-base-devel-1.18.4-8.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-base-1.18.4-8.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/gstreamer1-plugins-base-help-1.18.4-8.ky10h.noarch.rpm
+
+gstreamer1-plugins-base(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-base-devel-1.18.4-8.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-base-1.18.4-8.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/gstreamer1-plugins-base-help-1.18.4-8.ky10h.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

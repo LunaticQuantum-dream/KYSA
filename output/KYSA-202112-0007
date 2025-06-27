@@ -1,0 +1,13 @@
+Name:KYSA-202112-0007
+Severity:重要
+Summary:nss安全漏洞
+Published:2021-12-27
+URL:/support/loophole/patch/726.html
+Title:
+			摘要：nss安全漏洞
+安全等级：重要
+公告ID：KYSA-202112-0007
+发布日期：2021-12-27
+影响CVE：CVE-2021-43527
+		
+1.修复的CVE    CVE-2021-43527    Mozilla Network Security Services（NSS）是美国Mozilla基金会的一个函数库（网络安全服务库）。该产品可跨平台提供SSL、S/MIME和其他Internet安全标准支持。Mozilla Network Security Services（NSS）中的 verifies certificates 存在安全漏洞，该漏洞源于在NSS验证证书的方式中存在缺陷。攻击者可通过使用NSS编译的客户端应用程序发起SSL TLS连接来触发漏洞。    2.影响的操作系统    银河麒麟桌面操作系统V10 SP1    3.修复版本    软件包：nss    2:3.49.1-1kylin1.6(V10 SP1)    4.受影响的软件包    ·银河麒麟桌面操作系统V10 SP1    libnss3    libnss3-dev    libnss3-tools    5.修复方法方法一：配置源进行升级安装    打开软件包源配置文件，根据仓库地址进行修改。    4.0.2桌面版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2-desktop main restricted universe multiverse    4.0.2-sp1桌面版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse    4.0.2-sp2桌面版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse    4.0.2-sp3桌面版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse    4.0.2-sp4桌面版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse    10.0版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse    10SP1版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse    配置完成后执行更新命令进行升级    $sudo apt update方法二：下载安装包进行升级安装    通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。    $dpkg -i Packagelists    6.软件包下载地址银河麒麟操作系统桌面版V10 SP1X86_64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-dev_3.49.1-1kylin1.6_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-tools_3.49.1-1kylin1.6_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3_3.49.1-1kylin1.6_amd64.debarm64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-dev_3.49.1-1kylin1.6_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-tools_3.49.1-1kylin1.6_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3_3.49.1-1kylin1.6_arm64.debmips64el软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-dev_3.49.1-1kylin1.6_mips64el.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-tools_3.49.1-1kylin1.6_mips64el.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3_3.49.1-1kylin1.6_mips64el.deb 

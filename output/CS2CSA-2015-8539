@@ -1,0 +1,14 @@
+Name:CS2CSA-2015-8539
+Severity:重要
+Summary:Linux kernel 安全漏洞
+Published:2015-12-09
+URL:/support/loophole/patch/113.html
+Title:
+			摘要：             Linux kernel 安全漏洞
+安全等级：          重要
+公告ID：           CS2CSA-2015-8539
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2015-12-09
+CVE：             CVE-2015-8539 CVSS3评分：7.8
+		
+1. 概述：中标麒麟高级服务器操作系统V7有 Linux kernel 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：在Linux内核的密钥管理系统中发现了一个漏洞，攻击者可以升级特权或使机器崩溃。如果用户密钥被负实例化，则在有效载荷区域中缓存错误代码。然后，可以通过用有效数据更新负实例化密钥来实例化一个负实例化密钥。但是更新密钥类型方法必须知道错误代码可能存在。4. 安装包列表：中标麒麟高级服务器操作系统V7：源代码包：kernel-3.10.0-693.17.1.el7.src.rpm x86_64二进制包：kernel-3.10.0-693.17.1.el7.x86_64.rpm   kernel-abi-whitelists-3.10.0-693.17.1.el7.noarch.rpm    kernel-debug-3.10.0-693.17.1.el7.x86_64.rpm kernel-debug-debuginfo-3.10.0-693.17.1.el7.x86_64.rpm   kernel-debug-debuginfo-3.10.0-693.17.1.el7.x86_64.rpm   kernel-debug-devel-3.10.0-693.17.1.el7.x86_64.rpm   kernel-debuginfo-3.10.0-693.17.1.el7.x86_64.rpm kernel-debuginfo-3.10.0-693.17.1.el7.x86_64.rpm kernel-debuginfo-common-x86_64-3.10.0-693.17.1.el7.x86_64.rpm   kernel-debuginfo-common-x86_64-3.10.0-693.17.1.el7.x86_64.rpm   kernel-devel-3.10.0-693.17.1.el7.x86_64.rpm kernel-doc-3.10.0-693.17.1.el7.noarch.rpm   kernel-headers-3.10.0-693.17.1.el7.x86_64.rpm   kernel-tools-3.10.0-693.17.1.el7.x86_64.rpm kernel-tools-debuginfo-3.10.0-693.17.1.el7.x86_64.rpm   kernel-tools-debuginfo-3.10.0-693.17.1.el7.x86_64.rpm   kernel-tools-libs-3.10.0-693.17.1.el7.x86_64.rpm    kernel-tools-libs-devel-3.10.0-693.17.1.el7.x86_64.rpm  perf-3.10.0-693.17.1.el7.x86_64.rpm perf-debuginfo-3.10.0-693.17.1.el7.x86_64.rpm   perf-debuginfo-3.10.0-693.17.1.el7.x86_64.rpm   python-perf-3.10.0-693.17.1.el7.x86_64.rpm  python-perf-debuginfo-3.10.0-693.17.1.el7.x86_64.rpm    python-perf-debuginfo-3.10.0-693.17.1.el7.x86_64.rpm 			

@@ -1,0 +1,63 @@
+Name:KYSA-201704-0001
+Severity:中等
+Summary:nss安全漏洞
+Published:2023-03-28
+URL:/support/loophole/patch/3212.html
+Title:
+			公告ID：KYSA-201704-0001
+公告摘要：nss安全漏洞
+等级：中等
+发布日期：2023-03-28
+		
+1. 修复的CVE
+CVE-2016-2183
+TLS（Transport Layer Security，安全传输层协议）是一套用于在两个通信应用程序之间提供保密性和数据完整性的协议。SSH（全称Secure Shell）是国际互联网工程任务组（IETF）的网络小组（Network Working Group）所制定的一套创建在应用层和传输层基础上的安全协议。IPSec（全称InternetProtocolSecurity）是国际互联网工程任务组（IETF）的IPSec小组建立的一组IP安全协议集。DES和Triple DES都是加密算法。 TLS、SSH和IPSec协议和其它协议及产品中使用的DES和Triple DES密码算法存在信息泄露漏洞。该漏洞源于网络系统或产品在运行过程中存在配置等错误。未授权的攻击者可利用漏洞获取受影响组件敏感信息。
+CVE-2017-5461
+Mozilla Network Security Services（NSS）是美国Mozilla基金会开发的一个函数库（网络安全服务库），它可跨平台提供SSL、S/MIME和其他Internet安全标准支持。 
+Mozilla NSS中存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（越边界写入）。以下版本受到影响：Mozilla Network Security Services 3.21.4之前的版本, 3.22.x版本至3.28.4版本（不包含此版本），3.29.5之前的3.29.x版本，3.30.1之前的3.30.x版本。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+libnss3-1d、libnss3-nssdb、libnss3-tools、libnss3
+arm64 架构：
+libnss3-1d、libnss3-nssdb、libnss3-tools、libnss3
+mips64el 架构：
+libnss3-1d、libnss3-nssdb、libnss3-tools、libnss3
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+2:3.28.4-0kord0.16.04.14+esm2
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libnss3
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-1d_3.28.4-0kord0.16.04.14%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-nssdb_3.28.4-0kord0.16.04.14%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-tools_3.28.4-0kord0.16.04.14%2Besm2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3_3.28.4-0kord0.16.04.14%2Besm2_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-1d_3.28.4-0kord0.16.04.14%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-nssdb_3.28.4-0kord0.16.04.14%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-tools_3.28.4-0kord0.16.04.14%2Besm2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3_3.28.4-0kord0.16.04.14%2Besm2_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-1d_3.28.4-0kord0.16.04.14%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-nssdb_3.28.4-0kord0.16.04.14%2Besm2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3-tools_3.28.4-0kord0.16.04.14%2Besm2_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nss/libnss3_3.28.4-0kord0.16.04.14%2Besm2_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

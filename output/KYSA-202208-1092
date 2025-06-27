@@ -1,0 +1,82 @@
+Name:KYSA-202208-1092
+Severity:重要
+Summary:graphite2安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1683.html
+Title:
+			公告ID：KYSA-202208-1092
+公告摘要：graphite2安全漏洞
+等级：Important
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2017-7771
+描述：Mozilla Firefox和Mozilla Firefox ESR都是美国Mozilla基金会的产品。Mozilla Firefox是一款开源Web浏览器。Mozilla Firefox ESR是Firefox(Web浏览器)的一个延长支持版本。Mozilla Firefox 54之前的版本和Firefox ESR 52.2之前的版本中的Graphite2库的‘graphite2：：Pass：：readPass’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2017-7772
+描述：Mozilla Firefox和Mozilla Firefox ESR都是美国Mozilla基金会的产品。Mozilla Firefox是一款开源Web浏览器。Mozilla Firefox ESR是Firefox(Web浏览器)的一个延长支持版本。Mozilla Firefox 54之前的版本和Firefox ESR 52.2之前的版本中的Graphite 2 1.3.10之前的版本存在安全漏洞。攻击者可利用该漏洞可能执行任意代码或造成拒绝服务（崩溃）。
+·CVE-2017-7773
+描述：Mozilla Firefox和Mozilla Firefox ESR都是美国Mozilla基金会的产品。Mozilla Firefox是一款开源Web浏览器。Mozilla Firefox ESR是Firefox(Web浏览器)的一个延长支持版本。Mozilla Firefox 54之前的版本和Firefox ESR 52.2之前的版本中的Graphite2库存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2017-7774
+描述：Mozilla Firefox和Mozilla Firefox ESR都是美国Mozilla基金会的产品。Mozilla Firefox是一款开源Web浏览器。Mozilla Firefox ESR是Firefox(Web浏览器)的一个延长支持版本。Mozilla Firefox 54之前的版本和Firefox ESR 52.2之前的版本中的Graphite2库的‘graphite2：：Silf：：readGraphite’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2017-7775
+描述：Mozilla Firefox和Firefox ESR都是美国Mozilla基金会开发的浏览器产品。Firefox是一款开源Web浏览器；Firefox ESR是Firefox的一个延长支持版本。Graphite是一套使用Python语言编写、采用Django框架的企业级开源系统监控工具（数据绘图），它通过第三方工具或插件进行数据收集、统计，最后完成数据绘图。Graphite 2是Graphite的一个升级版。Mozilla Firefox 54之前的版本和Firefox ESR 52.2之前的版本中的Graphite 2 1.3.10之前的版本存在安全漏洞。攻击者可利用该漏洞造成拒绝服务（崩溃）。
+·CVE-2017-7776
+描述：Mozilla Firefox和Mozilla Firefox ESR都是美国Mozilla基金会的产品。Mozilla Firefox是一款开源Web浏览器。Mozilla Firefox ESR是Firefox(Web浏览器)的一个延长支持版本。Mozilla Firefox 54之前的版本和Firefox ESR 52.2之前的版本中的Graphite 2 1.3.10之前的版本缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2017-7777
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。Mozilla Firefox 54之前的版本中的Graphite2库的‘graphite2：：GlyphCache：：Loader：：read_glyph’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2017-7778
+描述：Mozilla Firefox和Firefox ESR都是美国Mozilla基金会开发的浏览器产品。Firefox是一款开源Web浏览器；Firefox ESR是Firefox的一个延长支持版本。Graphite是一套使用Python语言编写、采用Django框架的企业级开源系统监控工具（数据绘图），它通过第三方工具或插件进行数据收集、统计，最后完成数据绘图。Graphite 2是Graphite的一个升级版。Mozilla Firefox 54之前的版本和Firefox ESR 52.2之前的版本中的Graphite 2 1.3.10之前的版本存在安全漏洞。攻击者可利用该漏洞造成拒绝服务（越边界写入）。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+graphite2、graphite2-devel
+x86_64架构:
+graphite2、graphite2-devel
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+graphite2-1.3.10-1.el7_3
+graphite2-devel-1.3.10-1.el7_3
+
+4.修复方法
+方法一：配置源进行升级安装
+142.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+143.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+144.升级完成后是否需要重启服务或操作系统：
+·CVE-2017-7771：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-7772：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-7773：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-7774：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-7775：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-7776：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-7777：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-7778：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+graphite2（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/graphite2-1.3.10-1.el7_3.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/graphite2-devel-1.3.10-1.el7_3.aarch64.rpm
+
+graphite2（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/graphite2-1.3.10-1.el7_3.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/graphite2-1.3.10-1.el7_3.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/graphite2-devel-1.3.10-1.el7_3.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/graphite2-devel-1.3.10-1.el7_3.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

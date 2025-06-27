@@ -1,0 +1,16 @@
+Name:CS2CSA-2017-1615
+Severity:重要
+Summary:kernel 安全更新
+Published:2017-06-28
+URL:/support/loophole/patch/34.html
+Title:
+			摘要：             kernel 安全更新
+安全等级：         重要
+公告ID：           CS2CSA-2017-1615
+产品：             中标麒麟高级服务器操作系统      
+发布日期：         2017-06-28
+CVE：              CVE-2017-2583 CVSS3评分：4.9，CVE-2017-6214 CVSS3评分：6.5
+                   CVE-2017-7477 CVSS3评分：8.1，CVE-2017-7645 CVSS3评分：7.1
+                   CVE-2017-7895 CVSS3评分：6.5
+		
+1. 概述：中标麒麟高级服务器操作系统V7有kernel可用的安全更新.中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：kernel升级包。4. 安全加固：* 在内核套接字缓冲（skb_buff）中，从一个碎片列表（skb_shinfo(skb)->frag_list）中创建scattergather列表时，分配堆内存会触发一个缺陷。如果'MAX_SKB_FRAGS +1'参数与‘NETIF_F_FRAGLIST'功能一起使用的话，这个缺陷可以引起堆内存的溢出。 远程攻用户或进程利用这个缺陷有提升权限的可能性。(CVE-2017-7477, 重要的)* NFS2/3 RPC客户端可以给NFS服务器发送一串很长的参数，这些参数被编码后放到内存页中，并通过指针进行访问。如果任何不加限制的增加这类长参数的话，可能会导致指针越界访问的发生。远程用户或程序利用这个缺陷可以造成内核崩溃（DOS）。(CVE-2017-7645, 重要的)* 内核4.10.13版本中NFSv2与NFSv3服务器实现上，缺乏对缓冲区边界的有效检测手段。远程攻击者可以触发一个指针运算错误或者引起其他的不利影响（源码位置：fs/nfsd/nfs3xdr.c与fs/nfsd/nfsxdr.c）(CVE-2017-7895, 重要的)* 内核虚拟机KVM对SS寄存器产生的错误处理起来非常不好。SS寄存器在长模式下填充数据的时容易产生错误，而此时Guset机中的用户或者进程就可以利用这个缺陷导致guset机器死机。(CVE-2017-2583, 中等的)* 内核在处理URG标识的数据包的时候发现一个缺陷。如果程序使用了函数splice()与函数tcp_splice_read()，可能会允许远程攻击者强制内核进入一个无限循环的状态。(CVE-2017-6214, 中等的)5. 缺陷修复：CVE-2017-2583 Kernel：Kvm: vmx/svm guest主机内的权限提升CVE-2017-6214 kernel：ipv4/tcp: 函数tcp_splice_read()无限循环CVE-2017-7645 kernel：nfsd: 无法响应过长的RPC请求CVE-2017-7477 kernel：net: 在macsec.c源码中，从skb到sgvec转换过程中，出现堆内存益处CVE-2017-7895 kernel：NFSv3 服务器实现上存在不妥善的处理写请求有效负载边界的检查6. 安装包列表：中标麒麟高级服务器操作系统V7： 源码包： kernel-3.10.0-514.26.1.el7.src.rpmx86_64二进制包：kernel-3.10.0-514.26.1.el7.x86_64.rpmkernel-debug-3.10.0-514.26.1.el7.x86_64.rpmkernel-debug-debuginfo-3.10.0-514.26.1.el7.x86_64.rpmkernel-debug-devel-3.10.0-514.26.1.el7.x86_64.rpmkernel-debuginfo-3.10.0-514.26.1.el7.x86_64.rpmkernel-debuginfo-common-x86_64-3.10.0-514.26.1.el7.x86_64.rpmkernel-devel-3.10.0-514.26.1.el7.x86_64.rpmkernel-headers-3.10.0-514.26.1.el7.x86_64.rpmkernel-tools-3.10.0-514.26.1.el7.x86_64.rpmkernel-tools-debuginfo-3.10.0-514.26.1.el7.x86_64.rpmkernel-tools-libs-3.10.0-514.26.1.el7.x86_64.rpmperf-3.10.0-514.26.1.el7.x86_64.rpmperf-debuginfo-3.10.0-514.26.1.el7.x86_64.rpmpython-perf-3.10.0-514.26.1.el7.x86_64.rpmpython-perf-debuginfo-3.10.0-514.26.1.el7.x86_64.rpm			

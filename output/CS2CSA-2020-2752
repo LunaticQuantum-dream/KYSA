@@ -1,0 +1,14 @@
+Name:CS2CSA-2020-2752
+Severity:中等
+Summary:Oracle MySQL Server 安全漏洞
+Published:2020-04-14
+URL:/support/loophole/patch/292.html
+Title:
+			摘要：         Oracle MySQL Server 安全漏洞
+安全等级：          中等
+公告ID：         CS2CSA-2020-2752
+产品：             银河麒麟高级服务器操作系统V10（SP1）      
+发布日期：         2020-04-14
+CVE：          CVE-2020-2752
+		
+1. 概述：银河麒麟高级服务器操作系统V10（SP1）有mariadb的可用更新。2. 相关版本/架构：银河麒麟高级服务器操作系统V10（sp1）-X86_64。3. 描述：Oracle MySQL中的MySQL Client 5.6.47及之前版本，5.7.27及之前版本和8.0.17及之前版本的C API组件存在安全漏洞。攻击者可利用该漏洞造成拒绝服务（挂起或频繁崩溃），影响数据的可用性。4.影响系统情况：中标麒麟高级服务器操作系统软件V7：已修复。银河麒麟高级服务器操作系统V10：已修复。银河麒麟高级服务器操作系统V10(SP1)：已修复。

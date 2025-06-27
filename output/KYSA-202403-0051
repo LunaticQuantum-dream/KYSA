@@ -1,0 +1,171 @@
+Name:KYSA-202403-0051
+Severity:重要
+Summary:ffmpeg安全漏洞
+Published:2025-04-01
+URL:/support/loophole/patch/7586.html
+Title:
+			公告ID：KYSA-202403-0051
+公告摘要：ffmpeg安全漏洞
+等级：重要
+发布日期：2025-04-01
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2403版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2020-22042
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2存在安全漏洞，该漏洞源于libavfilter/graphparser.c 中的 link_filter_inouts 函数中的内存泄漏。成功利用该漏洞可能会导致拒绝服务。
+CVE-2020-21697
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2 版本存在安全漏洞，攻击者可利用该漏洞引起拒绝服务(DOS)。
+CVE-2020-20450
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2版本存在安全漏洞，该漏洞可导致拒绝服务。
+CVE-2020-22032
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2存在安全漏洞，该漏洞源于存在一个基于堆的缓冲区溢出漏洞，这可能会导致内存损坏和其他潜在的后果。
+CVE-2020-22017
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2存在安全漏洞，该漏洞由于一个基于堆的缓冲区溢出漏洞，它可能会导致内存损坏和其他潜在的后果。
+CVE-2020-22026
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2中的libavfilter / af_tremolo.c中的config_input函数存在安全漏洞，该漏洞可能允许远程攻击者导致拒绝服务。
+CVE-2020-22037
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2 存在安全漏洞，该漏洞源于options.c的avcodec_alloc_context3内存泄漏。
+CVE-2020-20445
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。Divi是一款数字货币。FFmpeg 4.2 版本存在安全漏洞，该漏洞源于 libavcodec/lpc.h的\"除零\"问题，这允许远程恶意用户导致拒绝服务。
+CVE-2020-22020
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 存在缓冲区错误漏洞，该漏洞源于FFmpeg 4.2版本libavfilter/vf_fieldmatch.c中的build_diff_map方法存在缓冲区溢出漏洞。远程攻击者可通过该漏洞导致拒绝服务。
+CVE-2020-22034
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2存在缓冲区错误漏洞，该漏洞源于存在一个基于堆的缓冲区溢出漏洞可能会导致内存损坏。
+CVE-2020-22028
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2中的libavfilter / vf_avgblur.c中的filter_vertically_8存在安全漏洞，该漏洞可能允许远程攻击者导致拒绝服务。
+CVE-2020-22025
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg中的gaussian_blur 存在安全漏洞，该漏洞源于libavfilter/vf_edgedetect.c存在基于堆的缓冲区溢出，导致内存损坏和其他潜在的后果。
+CVE-2020-21041
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.1版本存在缓冲区错误漏洞，该漏洞可能会让远程恶意用户导致拒绝服务
+CVE-2020-22019
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 存在缓冲区错误漏洞，该漏洞源于FFmpeg 4.2版本在convolution_y_10bit in libavfilter/vf_vmafmotion.c中convolution_y_10bit存在缓冲区溢出漏洞，远程攻击者可通过该漏洞导致拒绝服务。
+CVE-2021-38114
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg存在安全漏洞，该漏洞源于FFmpeg 4.4中的libavcodec dnxhddec.c没有检查init vlc函数的返回值。
+CVE-2020-22036
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2 存在安全漏洞，该漏洞源于libavfilter vf bwdif.c的filter intra中存在一个基于堆的缓冲区溢出，成功利用该漏洞可能会导致内存损坏和其他潜在的后果。
+CVE-2020-22033
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2存在安全漏洞，该漏洞源于FFmpeg 4.2在libavfilter vf vmafmotion.c可以让远程恶意用户导致拒绝服务。
+CVE-2020-22031
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2版本存在安全漏洞，该漏洞源于libavfilter/vf_w3fdif.c的filter16_complex_low中存在基于堆的缓冲区溢出漏洞，这可能会导致内存损坏和其他潜在后果。
+CVE-2020-22021
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 存在缓冲区错误漏洞，该漏洞源于Ffmpeg 4.2版本libavfilter/vf_yadif.c中filter_edges方法存在缓冲区溢出漏洞。攻击者可通过该漏洞导致拒绝服务。
+CVE-2020-22023
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2中libavfilter vf bitplanenoise.c的filter frame中存在安全漏洞，该漏洞源于基于堆的缓冲区溢出，这可能会导致内存损坏和其他潜在的后果。
+CVE-2020-35965
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.3.1版本存在缓冲区错误漏洞，该漏洞源于计算何时执行memset零操作时出现了错误。
+CVE-2020-20446
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2版本存在安全漏洞，该漏洞源于libavcodec/aacpsy.c的“除零”问题，这允许远程恶意用户导致拒绝服务。
+CVE-2020-21688
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2 版本存在安全漏洞，攻击者可利用该漏洞执行任意代码。
+CVE-2020-20453
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2 版本存在安全漏洞，该漏洞源于 libavcodec/aaccoder的“除零”问题，这允许远程恶意用户导致拒绝服务
+CVE-2020-22015
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2 存在缓冲区错误漏洞，该漏洞可能让远程恶意用户获取敏感信息，导致拒绝服务，或执行任意代码。
+CVE-2021-38171
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。Ffmpeg 存在安全漏洞，该漏洞源于FFmpeg 4.4 中 libavformat/adtsenc.c 中的 adts_decode_extradata 不检查 init_get_bits 返回值，这是必要的步骤，因为可以制作 init_get_bits 的第二个参数。
+CVE-2022-1475
+FFmpeg是Ffmpeg团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 5.0.1 版本及之前版本 llibavcodec/g729_parser.c 存在输入验证错误漏洞，该漏洞源于在处理特制文件时 g729_parse 函数中发现了一个整数溢出漏洞。
+CVE-2020-22022
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 4.2存在安全漏洞，该漏洞源于存在一个基于堆的缓冲区溢出漏洞，可能导致内存损坏和其他潜在的后果。
+CVE-2021-38291
+FFmpeg是FFmpeg（Ffmpeg）团队的一套可录制、转换以及流化音视频的完整解决方案。FFmpeg 存在安全漏洞，该漏洞源于src/libavutil/mathematics.c 处遭遇断言失败。
+CVE-2022-22025
+MicrosoftWindowsInternetInformationServices（IIS）是美国微软（Microsoft）公司的一款适用于WindowsServer平台的Web服务器。MicrosoftWindowsInternetInformationServicesCachuriModule存在输入验证错误漏洞，攻击者利用该漏洞可导致拒绝服务。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2403
+x86_64 架构：
+ffmpeg、libavcodec-extra58、libavcodec-extra、libavcodec58、libavdevice58、libavfilter-extra7、libavfilter-extra、libavfilter7、libavformat58、libavresample4、libavutil56、libpostproc55、libswresample3、libswscale5
+arm64 架构：
+ffmpeg、libavcodec-extra58、libavcodec-extra、libavcodec58、libavdevice58、libavfilter-extra7、libavfilter-extra、libavfilter7、libavformat58、libavresample4、libavutil56、libpostproc55、libswresample3、libswscale5
+sw64 架构：
+ffmpeg、libavcodec-extra58、libavcodec-extra、libavcodec58、libavdevice58、libavfilter-extra7、libavfilter-extra、libavfilter7、libavformat58、libavresample4、libavutil56、libpostproc55、libswresample3、libswscale5
+loongarch64 架构：
+ffmpeg、libavcodec-extra58、libavcodec-extra、libavcodec58、libavdevice58、libavfilter-extra7、libavfilter-extra、libavfilter7、libavformat58、libavresample4、libavutil56、libpostproc55、libswresample3、libswscale5
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2403
+7:4.2.2-1kylin1k23.8
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install ffmpeg
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2403
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/ffmpeg_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec-extra58_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec-extra_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec58_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavdevice58_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter-extra7_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter-extra_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter7_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavformat58_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavresample4_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavutil56_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libpostproc55_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libswresample3_4.2.2-1kylin1k23.8_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libswscale5_4.2.2-1kylin1k23.8_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/ffmpeg_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec-extra58_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec-extra_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec58_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavdevice58_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter-extra7_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter-extra_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter7_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavformat58_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavresample4_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavutil56_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libpostproc55_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libswresample3_4.2.2-1kylin1k23.8_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libswscale5_4.2.2-1kylin1k23.8_arm64.deb
+sw64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/ffmpeg_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec-extra58_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec-extra_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec58_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavdevice58_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter-extra7_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter-extra_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter7_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavformat58_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavresample4_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavutil56_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libpostproc55_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libswresample3_4.2.2-1kylin1k23.8_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libswscale5_4.2.2-1kylin1k23.8_sw64.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/ffmpeg_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec-extra58_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec-extra_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavcodec58_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavdevice58_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter-extra7_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter-extra_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavfilter7_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavformat58_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavresample4_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libavutil56_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libpostproc55_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libswresample3_4.2.2-1kylin1k23.8_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/f/ffmpeg/libswscale5_4.2.2-1kylin1k23.8_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2403版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

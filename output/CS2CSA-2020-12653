@@ -1,0 +1,14 @@
+Name:CS2CSA-2020-12653
+Severity:重要
+Summary:Linux kernel 安全漏洞
+Published:2020-05-06
+URL:/support/loophole/patch/245.html
+Title:
+			摘要：          Linux kernel 安全漏洞  
+安全等级：          重要
+公告ID：         CS2CSA-2020-12653
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2020-05-06
+CVE：          CVE-2020-12653
+		
+1. 概述：中标麒麟高级服务器操作系统V7有kernel, kernel-rt可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：Linux内核的Marvell WiFi Ex驱动程序中的mwifiex_cmd_append_vsie_tlv（）处理特定于供应商的信息元素时发现了一个缺陷。本地用户可以利用此漏洞升级其在系统上的权限。

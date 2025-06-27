@@ -1,0 +1,227 @@
+Name:KYSA-202208-1111
+Severity:严重
+Summary:java-1.8.0-openjdk安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1674.html
+Title:
+			公告ID：KYSA-202208-1111
+公告摘要：java-1.8.0-openjdk安全漏洞
+等级：Critical
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2017-10078
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE中的Java SE组件8u131版本的Scripting子组件存在安全漏洞。远程攻击者可利用该漏洞未授权访问、创建、删除或更改数据，影响数据的保密性和完整性。
+·CVE-2017-10111
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE中的Java SE组件8u131版本和Java SE Embedded组件8u131版本的Libraries子组件存在安全漏洞。远程攻击者可利用该漏洞控制组件，影响数据的保密性、可用性和完整性。
+·CVE-2018-2582
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE中的Java SE组件8u152版本、9.0.1版本和Java SE Embedded组件8u151版本的Hotspot子组件存在访问控制错误漏洞。攻击者可利用该漏洞未授权创建、删除或更改数据，影响数据的完整性。
+·CVE-2020-14556
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE 8u251版本、11.0.7版本和14.0.1版本和Java SE Embedded 8u251版本中的Libraries组件存在安全漏洞。攻击者可利用该漏洞未授权读取、更新、插入或删除数据，影响数据的保密性和完整性。
+·CVE-2020-14577
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE和Java SE Embedded中的JSSE组件存在安全漏洞。攻击者可利用该漏洞未授权读取数据，影响数据的保密性。以下产品及版本受到影响：Oracle Java SE 7u261版本，8u251版本，11.0.7版本，14.0.1版本；Java SE Embedded 8u251版本。
+·CVE-2020-14578
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE 7u261版本和8u251版本和Java SE Embedded 8u251版本中的Libraries组件存在安全漏洞。攻击者可利用该漏洞造成拒绝服务，影响数据的可用性。
+·CVE-2020-14579
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE 7u261版本和8u251版本和Java SE Embedded 8u251版本中的Libraries组件存在安全漏洞。攻击者可利用该漏洞造成拒绝服务，影响数据的可用性。
+·CVE-2020-14583
+描述：Oracle GraalVM是美国甲骨文（Oracle）公司的一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。GraalVM Enterprise Edition是GraalVM的企业版。Oracle GraalVM Enterprise Edition 19.3.2版本和20.1.0版本中的Java组件存在安全漏洞。攻击者可利用该漏洞控制Oracle GraalVM Enterprise Edition，影响数据的可用性、保密性和完整性。
+·CVE-2020-14593
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE和Java SE Embedded中的2D组件存在安全漏洞。攻击者可利用该漏洞未授权创建、删除或修改数据，影响数据的完整性。以下产品及版本受到影响：Oracle Java SE 7u261版本，8u251版本，11.0.7版本，14.0.1版本；Java SE Embedded 8u251版本。
+·CVE-2020-14621
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE和Java SE Embedded中的JAXP组件存在安全漏洞。攻击者可利用该漏洞未授权更新、插入或删除数据，影响数据的完整性。以下产品及版本受到影响：Oracle Java SE 7u261版本，8u251版本，11.0.7版本，14.0.1版本；Java SE Embedded 8u251版本。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+java-1.8.0-openjdk、java-1.8.0-openjdk-accessibility、java-1.8.0-openjdk-accessibility-debug、java-1.8.0-openjdk-debug、java-1.8.0-openjdk-demo、java-1.8.0-openjdk-demo-debug、java-1.8.0-openjdk-devel、java-1.8.0-openjdk-devel-debug、java-1.8.0-openjdk-headless、java-1.8.0-openjdk-headless-debug、java-1.8.0-openjdk-javadoc、java-1.8.0-openjdk-javadoc-debug、java-1.8.0-openjdk-javadoc-zip、java-1.8.0-openjdk-javadoc-zip-debug、java-1.8.0-openjdk-src、java-1.8.0-openjdk-src-debug
+x86_64架构:
+java-1.8.0-openjdk、java-1.8.0-openjdk-accessibility、java-1.8.0-openjdk-accessibility-debug、java-1.8.0-openjdk-debug、java-1.8.0-openjdk-demo、java-1.8.0-openjdk-demo-debug、java-1.8.0-openjdk-devel、java-1.8.0-openjdk-devel-debug、java-1.8.0-openjdk-headless、java-1.8.0-openjdk-headless-debug、java-1.8.0-openjdk-javadoc、java-1.8.0-openjdk-javadoc-debug、java-1.8.0-openjdk-javadoc-zip、java-1.8.0-openjdk-javadoc-zip-debug、java-1.8.0-openjdk-src、java-1.8.0-openjdk-src-debug
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+java-1.8.0-openjdk-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-accessibility-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-accessibility-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-demo-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-demo-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-devel-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-devel-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-headless-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-javadoc-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-javadoc-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-javadoc-zip-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-javadoc-zip-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-src-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-src-debug-1.8.0.262.b10-1.el7.ns7.01
+
+4.修复方法
+方法一：配置源进行升级安装
+169.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+170.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+171.升级完成后是否需要重启服务或操作系统：
+·CVE-2017-10078：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-10111：需要重启 java-1.8.0-openjdk 以使漏洞修复生效。
+·CVE-2018-2582：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14556：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14577：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14578：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14579：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14583：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14593：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14621：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+java-1.8.0-openjdk（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-accessibility-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-accessibility-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-demo-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-demo-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-devel-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-devel-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-headless-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-javadoc-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-javadoc-debug-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-javadoc-zip-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-javadoc-zip-debug-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-src-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-src-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+
+java-1.8.0-openjdk（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_6修复的CVE
+·CVE-2017-10078
+描述：Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE中的Java SE组件8u131版本的Scripting子组件存在安全漏洞。远程攻击者可利用该漏洞未授权访问、创建、删除或更改数据，影响数据的保密性和完整性。
+·CVE-2017-10111
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE中的Java SE组件8u131版本和Java SE Embedded组件8u131版本的Libraries子组件存在安全漏洞。远程攻击者可利用该漏洞控制组件，影响数据的保密性、可用性和完整性。
+·CVE-2018-2582
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE中的Java SE组件8u152版本、9.0.1版本和Java SE Embedded组件8u151版本的Hotspot子组件存在访问控制错误漏洞。攻击者可利用该漏洞未授权创建、删除或更改数据，影响数据的完整性。
+·CVE-2020-14556
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE 8u251版本、11.0.7版本和14.0.1版本和Java SE Embedded 8u251版本中的Libraries组件存在安全漏洞。攻击者可利用该漏洞未授权读取、更新、插入或删除数据，影响数据的保密性和完整性。
+·CVE-2020-14577
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE和Java SE Embedded中的JSSE组件存在安全漏洞。攻击者可利用该漏洞未授权读取数据，影响数据的保密性。以下产品及版本受到影响：Oracle Java SE 7u261版本，8u251版本，11.0.7版本，14.0.1版本；Java SE Embedded 8u251版本。
+·CVE-2020-14578
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE 7u261版本和8u251版本和Java SE Embedded 8u251版本中的Libraries组件存在安全漏洞。攻击者可利用该漏洞造成拒绝服务，影响数据的可用性。
+·CVE-2020-14579
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE 7u261版本和8u251版本和Java SE Embedded 8u251版本中的Libraries组件存在安全漏洞。攻击者可利用该漏洞造成拒绝服务，影响数据的可用性。
+·CVE-2020-14583
+描述：Oracle GraalVM是美国甲骨文（Oracle）公司的一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。GraalVM Enterprise Edition是GraalVM的企业版。Oracle GraalVM Enterprise Edition 19.3.2版本和20.1.0版本中的Java组件存在安全漏洞。攻击者可利用该漏洞控制Oracle GraalVM Enterprise Edition，影响数据的可用性、保密性和完整性。
+·CVE-2020-14593
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE和Java SE Embedded中的2D组件存在安全漏洞。攻击者可利用该漏洞未授权创建、删除或修改数据，影响数据的完整性。以下产品及版本受到影响：Oracle Java SE 7u261版本，8u251版本，11.0.7版本，14.0.1版本；Java SE Embedded 8u251版本。
+·CVE-2020-14621
+描述：Oracle Java SE和Oracle Java SE Embedded都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Java SE和Java SE Embedded中的JAXP组件存在安全漏洞。攻击者可利用该漏洞未授权更新、插入或删除数据，影响数据的完整性。以下产品及版本受到影响：Oracle Java SE 7u261版本，8u251版本，11.0.7版本，14.0.1版本；Java SE Embedded 8u251版本。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+java-1.8.0-openjdk、java-1.8.0-openjdk-accessibility、java-1.8.0-openjdk-accessibility-debug、java-1.8.0-openjdk-debug、java-1.8.0-openjdk-demo、java-1.8.0-openjdk-demo-debug、java-1.8.0-openjdk-devel、java-1.8.0-openjdk-devel-debug、java-1.8.0-openjdk-headless、java-1.8.0-openjdk-headless-debug、java-1.8.0-openjdk-javadoc、java-1.8.0-openjdk-javadoc-debug、java-1.8.0-openjdk-javadoc-zip、java-1.8.0-openjdk-javadoc-zip-debug、java-1.8.0-openjdk-src、java-1.8.0-openjdk-src-debug
+x86_64架构:
+java-1.8.0-openjdk、java-1.8.0-openjdk-accessibility、java-1.8.0-openjdk-accessibility-debug、java-1.8.0-openjdk-debug、java-1.8.0-openjdk-demo、java-1.8.0-openjdk-demo-debug、java-1.8.0-openjdk-devel、java-1.8.0-openjdk-devel-debug、java-1.8.0-openjdk-headless、java-1.8.0-openjdk-headless-debug、java-1.8.0-openjdk-javadoc、java-1.8.0-openjdk-javadoc-debug、java-1.8.0-openjdk-javadoc-zip、java-1.8.0-openjdk-javadoc-zip-debug、java-1.8.0-openjdk-src、java-1.8.0-openjdk-src-debug
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+java-1.8.0-openjdk-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-accessibility-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-accessibility-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-demo-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-demo-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-devel-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-devel-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-headless-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-javadoc-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-javadoc-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-javadoc-zip-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-javadoc-zip-debug-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-src-1.8.0.262.b10-1.el7.ns7.01
+java-1.8.0-openjdk-src-debug-1.8.0.262.b10-1.el7.ns7.01
+
+4.修复方法
+方法一：配置源进行升级安装
+169.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+170.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+171.升级完成后是否需要重启服务或操作系统：
+·CVE-2017-10078：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-10111：需要重启 java-1.8.0-openjdk 以使漏洞修复生效。
+·CVE-2018-2582：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14556：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14577：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14578：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14579：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14583：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14593：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2020-14621：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+java-1.8.0-openjdk（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-accessibility-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-accessibility-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-demo-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-demo-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-devel-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-devel-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-headless-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-javadoc-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-javadoc-debug-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-javadoc-zip-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-javadoc-zip-debug-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-src-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/java-1.8.0-openjdk-src-debug-1.8.0.262.b10-1.el7.ns7.01.aarch64.rpm
+
+java-1.8.0-openjdk（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-accessibility-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-accessibility-debug-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-debug-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-demo-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-demo-debug-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-devel-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-devel-debug-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-headless-debug-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-javadoc-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-javadoc-debug-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-javadoc-zip-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-javadoc-zip-debug-1.8.0.262.b10-1.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-src-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/java-1.8.0-openjdk-src-debug-1.8.0.262.b10-1.el7.ns7.01.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

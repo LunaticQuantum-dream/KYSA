@@ -1,0 +1,13 @@
+Name:KYSA-202202-1001
+Severity:中等
+Summary:mutt漏洞
+Published:2022-02-10
+URL:/support/loophole/patch/865.html
+Title:
+			公告ID：KYSA-202202-1001
+公告摘要：mutt漏洞
+安全等级：Moderate
+发布日期：2022年02月10日
+影响CVE：CVE-2020-14154
+		
+1. 修复的CVECVE-2020-14154描述：在Mutt继续连接，即使在响应GnuTLS证书提示时，用户拒绝了一个过期的中间证书。2. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64架构:mutt、mutt-helpx86_64架构:mutt、mutt-help3. 软件包修复版本银河麒麟高级服务器操作系统 V10 SP2mutt-1.10.1-9.ky10mutt-help-1.10.1-9.ky104. 修复方法方法一：配置源进行升级安装1. 打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP2aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2. 配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3. 升级完成后是否需要重启服务或操作系统：CVE-2020-14154：无需重启操作系统与服务即可使漏洞修复生效。5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP2 mutt（aarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mutt-1.10.1-9.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mutt-help-1.10.1-9.ky10.noarch.rpm mutt（x86_64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mutt-1.10.1-9.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mutt-help-1.10.1-9.ky10.noarch.rpm 注：其他相关依赖包请到相同目录下载

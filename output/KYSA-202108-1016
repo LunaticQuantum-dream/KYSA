@@ -1,0 +1,13 @@
+Name:KYSA-202108-1016
+Severity:中等
+Summary:squid漏洞
+Published:2021-08-20
+URL:/support/loophole/patch/429.html
+Title:
+			摘要：squid漏洞
+安全等级：中等
+公告ID：KYSA-202108-1016
+发布日期：2021-08-20
+影响CVE：CVE-2021-28651、CVE-2021-28652、CVE-2021-28662、CVE-2021-31806、CVE-2021-31808、CVE-2021-33620
+		
+1. 修复的CVE信息CVE-2021-28651描述：在 4.15 之前的 Squid 和 5.0.6 之前的 5.x 中发现了一个问题。由于缓冲区管理错误，它允许拒绝服务。当使用 urn: 方案解析请求时，解析器会泄漏少量内存。但是，有一种未指定的攻击方法可以轻松触发大量内存消耗。CVE-2021-28652描述：在 4.15 之前的 Squid 和 5.0.6 之前的 5.x 中发现了一个问题。由于解析器验证不正确，它允许对缓存管理器 API 进行拒绝服务攻击。这允许受信任的客户端触发内存泄漏。随着时间的推移，通过未指定的短查询字符串导致拒绝服务。此攻击仅限于具有缓存管理器 API 访问权限的客户端。CVE-2021-28662描述：在 4.15 之前的 Squid 4.x 和 5.0.6 之前的 5.x 中发现了一个问题。如果远程服务器通过 HTTP 或 HTTPS 发送某个响应标头，则存在拒绝服务。此标头可能出现在良性网络流量中。CVE-2021-31806描述：在 4.15 之前的 Squid 和 5.0.6 之前的 5.x 中发现了一个问题。由于内存管理错误，它容易受到通过 HTTP 范围请求处理的拒绝服务攻击（针对所有使用代理的客户端）。CVE-2021-31808描述：在 4.15 之前的 Squid 和 5.0.6 之前的 5.x 中发现了一个问题。由于输入验证错误，它容易受到拒绝服务攻击（针对所有使用代理的客户端）。客户端发送一个 HTTP 范围请求来触发它。CVE-2021-33620描述：4.15 之前的 Squid 和 5.0.6 之前的 5.x 允许远程服务器通过 HTTP 响应导致拒绝服务（影响所有客户端的可用性）。问题触发器是一个标头，可以预期它存在于 HTTP 流量中，而服务器没有任何恶意意图。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2squid-4.9-8.ky10squid-debugsource-4.9-8.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:squid、squid-debugsourcex86_64:squid、squid-debugsource4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP2aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP2 squid aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/squid-4.9-8.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/squid-debugsource-4.9-8.ky10.aarch64.rpm  squid x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/squid-4.9-8.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/squid-debugsource-4.9-8.ky10.x86_64.rpm 注：其他相关依赖包请到相同目录下载 

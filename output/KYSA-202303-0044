@@ -1,0 +1,89 @@
+Name:KYSA-202303-0044
+Severity:严重
+Summary:php-twig安全漏洞
+Published:2023-08-07
+URL:/support/loophole/patch/3865.html
+Title:
+			公告ID：KYSA-202303-0044
+公告摘要：php-twig安全漏洞
+等级：严重
+发布日期：2023-08-07
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2019-9942
+Sensio Labs Twig是法国Sensio Labs公司的一个PHP模板引擎，它支持自定义标签和过滤器，并创建DSL。Sensio Labs Twig 1.38.0之前版本和2.7.0之前的2.x版本中的沙盒存在安全漏洞。攻击者可利用该漏洞泄露敏感信息（例如：数据库条目ID，用户名等）。
+CVE-2022-23614
+Sensio Labs Twig是法国Sensio Labs公司的一个PHP模板引擎，它支持自定义标签和过滤器，并创建DSL。Sensio Labs Twig 存在注入漏洞，在沙箱模式下，sort过滤器的 arrow 参数必须是一个闭包，以避免攻击者利用该漏洞运行任意PHP函数。在受影响的版本中，这个约束没有被适当地强制执行，可能导致任意PHP代码的代码注入。
+CVE-2022-39261
+Sensio Labs Twig是法国Sensio Labs公司的一个PHP模板引擎，它支持自定义标签和过滤器，并创建DSL。Twig 1.44.7 版本之前的 1.x 版本、2.15.3 版本之前的 2.x 版本和 3.4.3 版本之前的 3.x 版本存在路径遍历漏洞，该漏洞源于使用特定命名空间时可以使用 source 和 include 从模板目录引用任意文件。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303
+x86_64 架构：
+php-twig-cssinliner-extra、php-twig-extra-bundle、php-twig-html-extra、php-twig-inky-extra、php-twig-intl-extra、php-twig-markdown-extra、php-twig
+arm64 架构：
+php-twig-cssinliner-extra、php-twig-extra-bundle、php-twig-html-extra、php-twig-inky-extra、php-twig-intl-extra、php-twig-markdown-extra、php-twig
+mips64el 架构：
+php-twig-cssinliner-extra、php-twig-extra-bundle、php-twig-html-extra、php-twig-inky-extra、php-twig-intl-extra、php-twig-markdown-extra、php-twig
+loongarch64 架构：
+php-twig-cssinliner-extra、php-twig-extra-bundle、php-twig-html-extra、php-twig-inky-extra、php-twig-intl-extra、php-twig-markdown-extra、php-twig
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303
+2.12.5-1kylin0.1~esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install php-twig
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-cssinliner-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-extra-bundle_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-html-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-inky-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-intl-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-markdown-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig_2.12.5-1kylin0.1~esm1_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-cssinliner-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-extra-bundle_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-html-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-inky-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-intl-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-markdown-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig_2.12.5-1kylin0.1~esm1_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-cssinliner-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-extra-bundle_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-html-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-inky-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-intl-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-markdown-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig_2.12.5-1kylin0.1~esm1_all.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-cssinliner-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-extra-bundle_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-html-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-inky-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-intl-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig-markdown-extra_2.12.5-1kylin0.1~esm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/php-twig/php-twig_2.12.5-1kylin0.1~esm1_all.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

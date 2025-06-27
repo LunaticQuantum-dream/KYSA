@@ -1,0 +1,77 @@
+Name:KYSA-202306-0022
+Severity:严重
+Summary:netatalk安全漏洞
+Published:2023-08-07
+URL:/support/loophole/patch/3877.html
+Title:
+			公告ID：KYSA-202306-0022
+公告摘要：netatalk安全漏洞
+等级：严重
+发布日期：2023-08-07
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2022-23123
+Netatalk是一款开源软件，为 Classic Mac OS 和 macOS 在 Unix-like OS 上提供 AFP 文件服务器功能。Netatalk getdirparams 方法存在缓冲区错误漏洞，该漏洞源于对用户提供的数据缺乏适当的验证，这可能导致读取超出分配的缓冲区的末尾。攻击者可以利用此漏洞在 root 环境中执行任意代码。
+CVE-2022-43634
+Netatalk是一款开源软件，为 Classic Mac OS 和 macOS 在 Unix-like OS 上提供 AFP 文件服务器功能。Netatalk存在安全漏洞，该漏洞源于在将用户提供的数据复制到固定长度的基于堆的缓冲区之前，没有对用户提供的数据的长度进行适当的验证。攻击者利用该漏洞在root环境中执行代码。
+CVE-2022-23122
+Netatalk是一款开源软件，为 Classic Mac OS 和 macOS 在 Unix-like OS 上提供 AFP 文件服务器功能。Netatalk 存在安全漏洞，该漏洞允许远程攻击者在受影响的 Netatalk 安装上执行任意代码。利用此漏洞不需要身份验证。
+CVE-2021-31439
+Synology DiskStation Manager（DSM）是中国台湾群晖科技（Synology）公司的一套用于网络储存服务器（NAS）上的操作系统。该操作系统可管理资料、文件、照片、音乐等信息。Synology DiskStation DS418play 存在安全漏洞，该漏洞源于由于在将用户提供的数据复制到基于堆的缓冲区之前，没有对其长度进行适当的验证。攻击者可利用该漏洞可以利用这个漏洞在当前进程的上下文中执行代码。
+CVE-2022-23121
+Netatalk是一款开源软件，为 Classic Mac OS 和 macOS 在 Unix-like OS 上提供 AFP 文件服务器功能。Netatalk 存在安全漏洞，该漏洞源于在解析 AppleDouble 条目时缺乏正确的错误处理。攻击者可以利用此漏洞在 root 环境中执行代码。
+CVE-2022-23124
+Netatalk是一款开源软件，为 Classic Mac OS 和 macOS 在 Unix-like OS 上提供 AFP 文件服务器功能。Netatalk 存在缓冲区错误漏洞，该漏洞源于对用户提供的数据缺乏适当的验证，这可能导致读取超出分配的缓冲区的末尾。攻击者可以利用此漏洞在 root 环境中执行任意代码。
+CVE-2022-23125
+Netatalk是一款开源软件，为 Classic Mac OS 和 macOS 在 Unix-like OS 上提供 AFP 文件服务器功能。Netatalk 存在安全漏洞，该漏洞源于解析 len 元素时，该过程在将用户提供的数据复制到固定长度的基于堆栈的缓冲区之前未正确验证其长度。攻击者可以利用此漏洞在 root 环境中执行代码。
+CVE-2022-0194
+Netatalk是一款开源软件，为 Classic Mac OS 和 macOS 在 Unix-like OS 上提供 AFP 文件服务器功能。Netatalk 存在安全漏洞，该漏洞由于在将用户提供的数据复制到固定长度的基于堆栈的缓冲区之前缺乏对长度的正确验证。攻击者可以利用此漏洞在 root 上下文中执行代码。
+CVE-2022-45188
+Netatalk是一款开源软件，为 Classic Mac OS 和 macOS 在 Unix-like OS 上提供 AFP 文件服务器功能。Netatalk 3.1.13及以前的版本存在安全漏洞，该漏洞源于其afp_getappl基于堆的缓冲区溢出允许攻击者通过精心制作的.appl文件实现命令执行。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303
+x86_64 架构：
+netatalk
+arm64 架构：
+netatalk
+mips64el 架构：
+netatalk
+loongarch64 架构：
+netatalk
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303
+3.1.12~ds-4kylin0.20.04.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install netatalk
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/n/netatalk/netatalk_3.1.12~ds-4kylin0.20.04.1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/n/netatalk/netatalk_3.1.12~ds-4kylin0.20.04.1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/n/netatalk/netatalk_3.1.12~ds-4kylin0.20.04.1_mips64el.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/n/netatalk/netatalk_3.1.12~ds-4kylin0.20.04.1_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

@@ -1,0 +1,101 @@
+Name:KYSA-202110-1029
+Severity:重要
+Summary:jackson-databind安全漏洞
+Published:2021-10-16
+URL:/support/loophole/patch/2147.html
+Title:
+			公告ID：KYSA-202110-1029
+公告摘要：jackson-databind安全漏洞
+等级：Important
+发布日期：2021-10-16
+		
+1.修复的CVE
+·CVE-2020-35490
+描述：FasterXML jackson-databind是一个基于JAVA可以将XML和JSON等数据格式与JAVA对象进行转换的库。Jackson可以轻松的将Java对象转换成json对象和xml文档，同样也可以将json、xml转换成Java对象。FasterXML jackson-databind 2.x before 2.9.10.8 存在代码问题漏洞，该漏洞源于错误地处理了序列化小工具和类型之间的交互，这与org.apache.commons.dbcp2.datasources.PerUserPoolDataSource有关。
+·CVE-2020-35491
+描述：FasterXML jackson-databind是一个基于JAVA可以将XML和JSON等数据格式与JAVA对象进行转换的库。Jackson可以轻松的将Java对象转换成json对象和xml文档，同样也可以将json、xml转换成Java对象。FasterXML jackson-databind 2.x系列2.9.10.8之前版本存在代码问题漏洞，该漏洞源于错误地处理了序列化小工具和类型之间的交互，这与org.apache.commons.dbcp2.datasources.SharedPoolDataSource有关。
+·CVE-2020-35728
+描述：FasterXML jackson-databind是一个基于JAVA可以将XML和JSON等数据格式与JAVA对象进行转换的库。Jackson可以轻松的将Java对象转换成json对象和xml文档，同样也可以将json、xml转换成Java对象。FasterXML jackson-databind 2.x版本至2.9.10.8版本存在代码问题漏洞，该漏洞源于错误地处理了序列化小工具和类型之间的交互，涉及到com.oracle.wls.shaded.org.apache.xalan.lib.sql.JNDIConnectionPool (aka embedded Xalan in org.glassfish.web/javax.servlet.jsp.jstl)。
+·CVE-2020-36179
+描述：FasterXML jackson-databind版本 2.x 至版本 2.9.10.8 中没能妥善处理序列化工具之间的互动和打字,oadd.org.apache.commons.dbcp.cpdsadapter.DriverAdapterCPDS有关。
+·CVE-2020-36180
+描述：FasterXML jackson-databind 2.x before 2.9.10.8 存在代码问题漏洞，该漏洞源于org.apache.commons.dbcp2.cpdsadapter.DriverAdapterCPDS错误地处理serialization gadgets 和 typing的交互。
+·CVE-2020-36181
+描述：FasterXML jackson-databind 版本 2.x 至版本 2.9.10.8 中存在代码问题漏洞，该漏洞源于处理org.apache.tomcat.dbcp.dbcp.cpdsadapter.DriverAdapterCPDS相关的序列化小工具与输入交互错误。
+·CVE-2020-36182
+描述：FasterXML jackson-databind 2.x 在2.9.10.8之前 存在代码问题漏洞，该漏洞源于org.apache.tomcat.dbcp.dbcp2.cpdsadapter.DriverAdapterCPDS处理序列化小工具与类型交互错误。
+·CVE-2020-36183
+描述：FasterXML jackson-databind 2.x 在 2.9.10.8 之前存在代码问题漏洞，该漏洞源于该软件org.docx4j.org.apache.xalan.lib.sql.JNDIConnectionPool相关的序列化小工具与输入交互处理错误。
+·CVE-2020-36184
+描述：FasterXML jackson-databind版本 2.x 至版本 2.9.10.8 中没能妥善处理序列化工具之间的互动和打字,org.apache.tomcat.dbcp.dbcp2.datasources.PerUserPoolDataSource有关。
+·CVE-2020-36185
+描述：FasterXML jackson-databind是一个基于JAVA可以将XML和JSON等数据格式与JAVA对象进行转换的库。Jackson可以轻松的将Java对象转换成json对象和xml文档，同样也可以将json、xml转换成Java对象。FasterXML jackson-databind 2.x before 2.9.10.8 存在代码问题漏洞，该漏洞源于org.apache.tomcat.dbcp.dbcp2.datasources.SharedPoolDataSource错误地处理serialization gadgets 和 typing的交互。
+·CVE-2020-36186
+描述：FasterXML jackson-databind 版本 2.x 至版本 2.9.10.8 中存在代码问题漏洞，该漏洞源于错误地处理了与org.apache.tomcat.dbcp.dbcp.cpdsadapter.DriverAdapterCPDS相关的序列化小工具和键入之间的交互。
+·CVE-2020-36187
+描述：FasterXML jackson-databind 中存在代码问题漏洞，该漏洞源于该软件处理org.apache.tomcat.dbcp.dbcp.datasources.SharedPoolDataSource相关的序列化小工具与类型交互错误。
+·CVE-2020-36188
+描述：FasterXML jackson-databind版本 2.x 至版本 2.9.10.8 中对com.newrelic.agent. des.ch.qs.logback.core.db.jndiconnectionsource相关的序列化小工具与类型的交互处理错误。
+·CVE-2020-36189
+描述：FasterXML jackson-databind是一个基于JAVA可以将XML和JSON等数据格式与JAVA对象进行转换的库。Jackson可以轻松的将Java对象转换成json对象和xml文档，同样也可以将json、xml转换成Java对象。 FasterXML jackson-databind 2.x before 2.9.10.8 存在代码问题漏洞，该漏洞源于com.newrelic.agent.deps.ch.qos.logback.core.db.DriverManagerConnectionSource错误地处理serialization gadgets 和 typing的交互。
+·CVE-2021-20190
+描述：FasterXML jackson-databind是一个基于JAVA可以将XML和JSON等数据格式与JAVA对象进行转换的库。Jackson可以轻松的将Java对象转换成json对象和xml文档，同样也可以将json、xml转换成Java对象。 jackson-databind before 2.9.10.7 存在代码问题漏洞，该漏洞源于fastxml错误地处理了序列化小部件和类型之间的交互。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+jackson-databind、jackson-databind-javadoc
+·x86_64架构:
+jackson-databind、jackson-databind-javadoc
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+jackson-databind-2.9.8-7.ky10或以上版本
+jackson-databind-javadoc-2.9.8-7.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-35490:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-35491:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-35728:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-36179:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-36180:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-36181:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-36182:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-36183:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-36184:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-36185:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-36186:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-36187:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-36188:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2020-36189:需要重启 jackson-databind 以使漏洞修复生效。
+CVE-2021-20190:需要重启 jackson-databind 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+jackson-databind(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/jackson-databind-2.9.8-7.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/jackson-databind-javadoc-2.9.8-7.ky10.noarch.rpm
+
+jackson-databind(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/jackson-databind-2.9.8-7.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/jackson-databind-javadoc-2.9.8-7.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

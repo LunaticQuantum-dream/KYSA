@@ -1,0 +1,191 @@
+Name:KYSA-202501-1022
+Severity:中等
+Summary:busybox安全漏洞
+Published:2025-01-21
+URL:/support/loophole/patch/7195.html
+Title:
+			公告ID：KYSA-202501-1022
+公告摘要：busybox安全漏洞
+等级：中等
+发布日期：2025-01-21
+		
+1.修复的漏洞
+·CVE-2023-42364
+描述：BusyBox v.1.36.1中的释放后使用漏洞允许攻击者通过awk.c evaluate函数中特制的awk模式造成拒绝服务。
+·CVE-2023-42365
+描述：在BusyBox v.1.36.1中，通过在awk.c文件的copyvar函数中使用特制的awk模式，发现了一个释放后使用（use-after-free）漏洞。
+·CVE-2023-42366
+描述：在BusyBox v.1.36.1的awk.c文件的next_token函数（位于第1159行）中，发现了一个堆缓冲区溢出（heap-buffer-overflow）漏洞。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+busybox-petitboot、busybox-help、busybox
+·mips64el架构:
+busybox-petitboot、busybox-help、busybox
+·x86_64架构:
+busybox-petitboot、busybox-help、busybox
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+busybox-petitboot、busybox-help、busybox
+·x86_64架构:
+busybox-petitboot、busybox-help、busybox
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+busybox-petitboot、busybox-help、busybox
+·x86_64架构:
+busybox-petitboot、busybox-help、busybox
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+busybox-petitboot、busybox-help、busybox
+·x86_64架构:
+busybox-petitboot、busybox-help、busybox
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+·aarch64架构:
+busybox-petitboot、busybox-help、busybox
+·x86_64架构:
+busybox-petitboot、busybox-help、busybox
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+busybox-petitboot、busybox-help、busybox
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、mips64el、x86_64)
+busybox-petitboot-1.31.1-23.ky10或以上版本
+busybox-1.31.1-23.ky10或以上版本
+busybox-help-1.31.1-23.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+busybox-petitboot-1.31.1-23.ky10或以上版本
+busybox-1.31.1-23.ky10或以上版本
+busybox-help-1.31.1-23.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+busybox-petitboot-1.31.1-23.ky10或以上版本
+busybox-1.31.1-23.ky10或以上版本
+busybox-help-1.31.1-23.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+busybox-petitboot-1.31.1-23.ky10或以上版本
+busybox-1.31.1-23.ky10或以上版本
+busybox-help-1.31.1-23.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (aarch64、x86_64)
+busybox-petitboot-1.31.1-23.ky10或以上版本
+busybox-1.31.1-23.ky10或以上版本
+busybox-help-1.31.1-23.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+busybox-petitboot-1.31.1-23.ky10或以上版本
+busybox-1.31.1-23.ky10或以上版本
+busybox-help-1.31.1-23.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2403
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-42364:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-42365:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-42366:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+busybox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/busybox-help-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/busybox-petitboot-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/busybox-1.31.1-23.ky10.aarch64.rpm
+
+busybox(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/busybox-petitboot-1.31.1-23.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/busybox-help-1.31.1-23.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/busybox-1.31.1-23.ky10.mips64el.rpm
+
+busybox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/busybox-help-1.31.1-23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/busybox-petitboot-1.31.1-23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/busybox-1.31.1-23.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+busybox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/busybox-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/busybox-help-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/busybox-petitboot-1.31.1-23.ky10.aarch64.rpm
+
+busybox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/busybox-petitboot-1.31.1-23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/busybox-help-1.31.1-23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/busybox-1.31.1-23.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+busybox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/busybox-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/busybox-help-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/busybox-petitboot-1.31.1-23.ky10.aarch64.rpm
+
+busybox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/busybox-1.31.1-23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/busybox-help-1.31.1-23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/busybox-petitboot-1.31.1-23.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+busybox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/busybox-help-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/busybox-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/busybox-petitboot-1.31.1-23.ky10.aarch64.rpm
+
+busybox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/busybox-petitboot-1.31.1-23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/busybox-help-1.31.1-23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/busybox-1.31.1-23.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+
+busybox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/busybox-petitboot-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/busybox-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/busybox-help-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/busybox-petitboot-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/busybox-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/busybox-help-1.31.1-23.ky10.aarch64.rpm
+
+busybox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/busybox-help-1.31.1-23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/busybox-petitboot-1.31.1-23.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/busybox-1.31.1-23.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+busybox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/busybox-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/busybox-help-1.31.1-23.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/busybox-petitboot-1.31.1-23.ky10.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

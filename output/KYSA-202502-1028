@@ -1,0 +1,98 @@
+Name:KYSA-202502-1028
+Severity:严重
+Summary:qt5-qtbase安全漏洞
+Published:2025-02-11
+URL:/support/loophole/patch/7245.html
+Title:
+			公告ID：KYSA-202502-1028
+公告摘要：qt5-qtbase安全漏洞
+等级：严重
+发布日期：2025-02-11
+		
+1.修复的漏洞
+·CVE-2023-45935
+描述：Qt 6版本至6.6版本存在安全漏洞，该漏洞源于通过函数 QXcbConnection::initializeAllAtoms() 发现包含 NULL 指针取消引用漏洞。
+
+
+·CVE-2023-51714
+描述：在5.15.17之前的Qt、6.2.11之前的6.x、6.5.4之前的6.3.x到6.5.x以及6.6.2之前的6.6.x中，HTTP2的实施中发现了一个问题。network/access/http2/hpacktable.cpp的HPack整数溢出检查不正确。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+qt5-qtbase、qt5-qtbase-odbc、qt5-qtbase-gui、qt5-qtbase-common、qt5-qtbase-postgresql、qt5-qtbase-devel、qt5-qtbase-mysql
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+·loongarch64架构:
+qt5-qtbase、qt5-qtbase-odbc、qt5-qtbase-gui、qt5-qtbase-common、qt5-qtbase-postgresql、qt5-qtbase-devel、qt5-qtbase-mysql
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+qt5-qtbase-gui-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-common-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-devel-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-postgresql-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-mysql-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-odbc-5.11.1-22.p02.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (loongarch64)
+qt5-qtbase-gui-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-common-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-devel-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-postgresql-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-mysql-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-5.11.1-22.p02.a.ky10或以上版本
+qt5-qtbase-odbc-5.11.1-22.p02.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3 2403
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-45935:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-51714:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+qt5-qtbase(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-gui-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-odbc-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-devel-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-postgresql-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-common-5.11.1-22.p02.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-mysql-5.11.1-22.p02.a.ky10.loongarch64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+
+qt5-qtbase(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-common-5.11.1-22.p02.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-postgresql-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-common-5.11.1-22.p02.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-odbc-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-mysql-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-gui-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-gui-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-postgresql-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-devel-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-devel-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-odbc-5.11.1-22.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/qt5-qtbase-mysql-5.11.1-22.p02.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

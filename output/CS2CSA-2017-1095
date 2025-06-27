@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-1095
+Severity:重要
+Summary:bind（DNS服务器软件）安全漏洞修复
+Published:2017-04-19
+URL:/support/loophole/patch/57.html
+Title:
+			摘要：             bind（DNS服务器软件）安全漏洞修复
+安全等级：          重要
+公告ID：           CS2CSA-2017-1095
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-04-19
+CVE：             CVE-2017-3136，CVE-2017-3137
+		
+1. 概述：中标麒麟高级服务器操作系统V6有bind可用的更新。中标麒麟高级服务器操作系统V7有bind可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：BIND（The Berkeley Internet Name Domain）软件包集成了Linux下DNS服务器软件（named）以及相关工具。4. 安全加固：*在BIND相关组件处理含有非正常记录的CNAME或者DNAME请求的时候，会触发拒绝服务。远程攻击者利用这一点可以让named服务发生错误甚至是崩溃。(CVE-2017-3137)*在设置了“break-dnssec yes”这个选项后，如果使用DNS64来处理请求，会发生拒绝服务。远程攻击者利用这一点可以让named服务发生错误甚至是崩溃。(CVE-2017-3136)6. 安装包列表：中标麒麟高级服务器操作系统V6： 源码包： bind-9.8.2-0.62.rc1.el6_9.1.src.rpmx86_64二进制包：bind-9.8.2-0.62.rc1.el6_9.1.x86_64.rpmbind-chroot-9.8.2-0.62.rc1.el6_9.1.x86_64.rpmbind-debuginfo-9.8.2-0.62.rc1.el6_9.1.i686.rpmbind-debuginfo-9.8.2-0.62.rc1.el6_9.1.x86_64.rpmbind-libs-9.8.2-0.62.rc1.el6_9.1.i686.rpmbind-libs-9.8.2-0.62.rc1.el6_9.1.x86_64.rpmbind-utils-9.8.2-0.62.rc1.el6_9.1.x86_64.rpm中标麒麟高级服务器操作系统V7：源码包：bind-9.9.4-38.el7_3.3.src.rpmx86_64二进制包：bind-9.9.4-38.el7_3.3.x86_64.rpmbind-chroot-9.9.4-38.el7_3.3.x86_64.rpmbind-debuginfo-9.9.4-38.el7_3.3.i686.rpmbind-debuginfo-9.9.4-38.el7_3.3.x86_64.rpmbind-libs-9.9.4-38.el7_3.3.i686.rpmbind-libs-9.9.4-38.el7_3.3.x86_64.rpmbind-libs-lite-9.9.4-38.el7_3.3.i686.rpmbind-libs-lite-9.9.4-38.el7_3.3.x86_64.rpmbind-pkcs11-9.9.4-38.el7_3.3.x86_64.rpmbind-pkcs11-libs-9.9.4-38.el7_3.3.i686.rpmbind-pkcs11-libs-9.9.4-38.el7_3.3.x86_64.rpmbind-pkcs11-utils-9.9.4-38.el7_3.3.x86_64.rpmbind-utils-9.9.4-38.el7_3.3.x86_64.rpm			

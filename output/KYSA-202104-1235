@@ -1,0 +1,275 @@
+Name:KYSA-202104-1235
+Severity:中等
+Summary:autotrace安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/4830.html
+Title:
+			公告ID：KYSA-202104-1235
+公告摘要：autotrace安全漏洞
+等级：Moderate
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2017-1000476
+描述：ImageMagick 7.0.7-12 Q16版本中的coders/dds.c文件的‘ReadDDSInfo’函数存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。
+·CVE-2017-11166
+描述：ImageMagick 7.0.5-6中coders\xwd.c中的ReadXWDImage函数存在内存泄漏漏洞，该漏洞可通过xwd文件头中特制的length（颜色映射条目数）字段导致内存耗尽。
+·CVE-2017-12805
+描述：在ImageMagick 7.0.6-6中，在函数ReadTIFFImage中发现内存耗尽漏洞，攻击者可利用该漏洞造成拒绝服务。
+·CVE-2017-12806
+描述：在ImageMagick 7.0.6-6中，在函数format8BIM中发现了一个内存耗尽漏洞，使得攻击者能够造成拒绝服务。
+·CVE-2017-18251
+描述：在coders/pcd.c文件的ReadPCDImage函数的ImageMagick中发现内存泄漏漏洞。攻击者可以利用此漏洞通过精心编制的文件来造成拒绝服务。
+·CVE-2017-18252
+描述：在ImageMagick 7.0.7中发现一个问题。MagickWand/mogrify.c中的MogrifyImageList函数允许攻击者通过特制的文件造成拒绝服务（ReplaceImageInList中的断言失败和应用程序退出）。
+·CVE-2017-18254
+描述：在coders/gif.c文件的WriteGIFImage函数的ImageMagick中发现内存泄漏漏洞。攻击者可以利用此漏洞通过精心编制的文件来造成拒绝服务。
+·CVE-2017-18271
+描述：在ImageMagick 7.0.7-16 Q16 x86_64 2017-12-22中，coders/miff.c中的函数ReadMIFFImage中发现一个无限循环漏洞，攻击者可借助特制的miff图像文件造成拒绝服务（CPU耗尽）。
+·CVE-2017-18273
+描述：在ImageMagick 7.0.7-16 Q16 x86_64 2017-12-22中，coders/txt.c中的函数ReadTXTImage中发现一个无限循环漏洞，该漏洞允许攻击者通过在GetImageIndexInList调用中处理不当的特制图像文件来引起拒绝服务（CPU耗尽）。
+·CVE-2018-10177
+描述：在ImageMagick读取多图像网络图形（MNG）数据的方式中发现了一个无限循环。攻击者可利用此漏洞通过精心编制的MNG文件造成拒绝服务。
+·CVE-2018-10804
+描述：ImageMagick版本7.0.7-28在coders/tiff.c的writeTimeImage中包含内存泄漏。
+·CVE-2018-10805
+描述：ImageMagick版本7.0.7-28在coders/ycbcr.c的ReadYCBCRImage中包含内存泄漏。
+·CVE-2018-11656
+描述：在ImageMagick 7.0.7-20 Q16 x86_64中，coders/dcm.c中的函数ReadDCMImage存在内存泄漏漏洞，攻击者可借助特制的dcm图像文件造成拒绝服务。
+·CVE-2018-12599
+描述：在ImageMagick 7.0.8-3 Q16中，coders/bmp.c中的ReadBMPImage和WriteBMPImage允许攻击者通过特制的文件造成越界写入。
+·CVE-2018-12600
+描述：在ImageMagick 7.0.8-3 Q16中，coders/dib.c中的ReadDIBImage和WriteDIBImage允许攻击者通过特制的文件造成越界写入。
+·CVE-2018-13153
+描述：在animate.c文件的XMagickCommand函数的ImageMagick中发现内存泄漏。在堆上分配了一个名为filelist的字符串数组，但在函数ExpandFilenames返回错误代码时不会释放该数组。
+·CVE-2018-14434
+描述：ImageMagick 7.0.8-4在coders/mpc.c中WriteMPCImage中的colormap存在内存泄漏。
+·CVE-2018-14435
+描述：ImageMagick 7.0.8-4在coders/pcd.c中的DecodeImage内存泄漏。
+·CVE-2018-14436
+描述：ImageMagick 7.0.8-4在coders/miff.c的ReadMIFFImage中存在内存泄漏。
+·CVE-2018-14437
+描述：ImageMagick 7.0.8-4在coders/meta.c的parse8BIM中存在内存泄漏。
+·CVE-2018-15607
+描述：在ImageMagick 7.0.8-11 Q16中，一个很小的输入文件0x50 0x36 0x36 0x36 0x36 0x4c 0x36 0x38 0x36 0x36 0x36 0x36 0x36 0x36 0x36 0x1f 0x35 0x50 0x00可能导致数分钟的挂起，在此期间CPU和内存资源被消耗，直到最终尝试的大内存分配失败为止。远程攻击者可以利用此漏洞通过精心编制的文件造成拒绝服务。
+·CVE-2018-16328
+描述：在ImageMagick 7.0.8-8之前的版本中，MagickCore/log.c中的CheckEventLogging函数中存在空指针取消引用。
+·CVE-2018-16749
+描述：在ImageMagick 7.0.7-29及更早版本中，coders/png.c中ReadOneJNGImage中缺少空检查，攻击者可通过特制的文件造成拒绝服务（WriteBlob断言失败和应用程序退出）。
+·CVE-2018-16750
+描述：在ImageMagick 7.0.7-29及更早版本中，coders/meta.c中的formatIPTCfromBuffer函数内存泄漏。
+·CVE-2018-18544
+描述：ImageMagick 7.0.8-13 Q16中coders/msl.c的函数WriteMSLImage和GraphicsMagick 1.3.31之前版本中coders/msl.c的函数ProcessMSLScript存在内存泄漏。
+·CVE-2018-20467
+描述：在ImageMagick 7.0.8-16之前的coders/bmp.c中，输入文件可能导致无限循环和挂起，CPU和内存消耗较高。远程攻击者可以利用此漏洞通过精心编制的文件造成拒绝服务。
+·CVE-2018-8804
+描述：ImageMagick 7.0.7-25 Q16中coders/ept.c中的WriteEPTImage允许远程攻击者通过特制的文件造成拒绝服务（MagickCore/memory.c双重释放和应用程序崩溃）或可能产生其他未指明的影响。
+·CVE-2018-9133
+描述：ImageMagick 7.0.7-26 Q16在DecodeLabImage和EncodeLabImage函数（coders/tiff.c）中迭代过多，导致挂起（数十分钟）一个小的PoC文件。远程攻击者可以利用此漏洞通过特制的tiff文件造成拒绝服务。
+·CVE-2019-10131
+描述：在coders/meta.c中formattcfrombuffer函数的ImageMagick中发现了一个逐点读取漏洞。本地攻击者可以利用此漏洞读取缓冲区之外的内容或使程序崩溃。
+·CVE-2019-10650
+描述：在ImageMagick 7.0.8-36 Q16中，coders/tiff.c的函数writeTimeImage中存在一个基于堆的缓冲区覆盖，使得攻击者能够通过特制的图像文件造成拒绝服务或信息泄漏。
+·CVE-2019-11470
+描述：ImageMagick 7.0.8-26 Q16中的cineon解析组件允许攻击者通过制作具有不正确声明图像大小的cineon图像来引起拒绝服务（不受控制的资源消耗）。发生这种情况是因为coders/cin.c中的ReadCINImage没有检查文件中是否有足够的图像数据。
+·CVE-2019-11472
+描述：ImageMagick 7.0.8-41 Q16的xwd图像解析组件中coders/xwd.c中的ReadXWDImage允许攻击者通过制作一个xwd图像文件来引起拒绝服务（被零除错误），在该文件中，头既不指示LSB first，也不指示MSB first。
+·CVE-2019-11597
+描述：在ImageMagick 7.0.8-43 Q16中，coders/tiff.c的函数writeTimeImage中存在一个基于堆的缓冲区覆盖，使得攻击者能够通过特制的图像文件造成拒绝服务或可能的信息泄漏。
+·CVE-2019-11598
+描述：在ImageMagick 7.0.8-40 Q16中，coders/pnm.c的writepnimage函数中存在一个基于堆的缓冲区过度读取，使得攻击者能够通过特制的图像文件造成拒绝服务或可能的信息泄漏。这与MagickCore/quantize.c中的SetGrayscaleImage有关。
+·CVE-2019-12974
+描述：在Coders / pango.c中的功能ReadPANGOImage和ImageMagick 7.0.8-34中的Coders / vid.c中的功能ReadVIDImage中，使用NULL指针取消引用允许远程攻击者通过精心制作的图像导致拒绝服务。
+·CVE-2019-12975
+描述：发现在WriteDPXImage（）函数中发生某些错误情况时，ImageMagick无法正确释放获取的内存。 针对接受不可信图像的ImageMagick库编译的应用程序可能会被利用来使用所有可用内存并使它们崩溃。 攻击者可能通过提供特制图像来滥用此缺陷，并通过使用所有可用内存来导致拒绝服务。
+·CVE-2019-12976
+描述：发现在ReadPCLImage（）函数中发生某些错误情况时，ImageMagick无法正确释放获取的内存。 针对接受不可信图像的ImageMagick库编译的应用程序可能会被利用来使用所有可用内存并使它们崩溃。
+攻击者可能通过提供特制图像来滥用此缺陷，并通过使用所有可用内存来导致拒绝服务。
+·CVE-2019-12978
+描述：ImageMagick 7.0.8-34在coders / pango.c中的ReadPANGOImage函数中具有“使用未初始化的值”漏洞。
+·CVE-2019-12979
+描述：ImageMagick 7.0.8-34在MagickCore / image.c中的SyncImageSettings函数中具有“使用未初始化的值”漏洞。 这与magick / image.c中的AcquireImage有关。
+·CVE-2019-13133
+描述：7.0.8-50之前的ImageMagick在coders / bmp.c中的功能ReadBMPImage中具有内存泄漏漏洞。
+·CVE-2019-13134
+描述：7.0.8-50之前的ImageMagick在coders / viff.c中的函数ReadVIFFImage中具有内存泄漏漏洞。
+·CVE-2019-13135
+描述：7.0.8-50之前的ImageMagick在coders / cut.c中的ReadCUTImage函数中具有“使用未初始化的值”漏洞。
+·CVE-2019-13295
+描述：在ImageMagick中发现了基于堆的缓冲区过度读取的方式，该方法是由于错误处理宽度为零，因此基于像素局部邻域中强度值的范围为每个像素选择单独的阈值。 针对ImageMagick库编译的，接受不可信图像的应用程序可能容易受到此漏洞的影响。 攻击者可以通过提供特制的映像来使应用程序崩溃或泄漏应用程序数据，从而滥用此漏洞。
+·CVE-2019-13297
+描述：在ImageMagick中发现了基于堆的缓冲区过度读取的方式，即由于高度错误处理错误的高度为零，它基于其局部邻域中强度值的范围为每个像素选择一个单独的阈值。 针对ImageMagick库编译的，接受不可信图像的应用程序可能容易受到此漏洞的影响。 攻击者可以通过提供特制的映像来使应用程序崩溃或泄漏应用程序数据，从而滥用此漏洞。
+·CVE-2019-13300
+描述：在ImageMagick中发现了基于堆的缓冲区溢出，原因是由于对列的处理不当，它使用带有算术，关系或逻辑运算符的值应用于图像。 针对ImageMagick库编译的，接受不可信图像并使用评估序列选项或功能EvaluateImages的应用程序可能容易受到此漏洞的影响。 攻击者可以通过提供特制图像来使应用程序崩溃或可能执行代码，从而滥用此漏洞。
+·CVE-2019-13301
+描述：ImageMagick 7.0.8-50 Q16在AcquireMagickMemory中由于AnnotateImage错误而发生内存泄漏。
+·CVE-2019-13305
+描述：在ImageMagick中，由于strncpy的位置不正确和一一错误，在写入PNM图像时发现了基于堆栈的缓冲区溢出。 根据ImageMagick库编译的接受不可信图像或写入PNM图像的应用程序可能容易受到此漏洞的影响。 攻击者可以通过提供特制图像来使应用程序崩溃或可能执行代码，从而滥用此漏洞。
+·CVE-2019-13306
+描述：在ImageMagick中发现了基于堆栈的缓冲区溢出，原因是该缓冲区溢出了一次失误的错误。 根据ImageMagick库编译的接受不可信图像或写入PNM图像的应用程序可能容易受到此漏洞的影响。 攻击者可以通过提供特制图像来使应用程序崩溃或可能执行代码，从而滥用此漏洞。
+·CVE-2019-13307
+描述：当使用评估序列选项时，在ImageMagick中发现了基于堆的缓冲区溢出，该溢出是通过分析图像的方式进行的。 针对ImageMagick库编译的，接受不可信图像并使用评估序列选项或功能EvaluateImages的应用程序可能容易受到此漏洞的影响。 攻击者可以通过提供特制图像来使应用程序崩溃或可能执行代码，从而滥用此漏洞。
+·CVE-2019-13309
+描述：在ImageMagick版本7.0.8-50 Q16中发现了一个缺陷，其中包含由于对MagickWand / operation.c中的CLIListOperatorImages中的NoSuchImage错误处理不当而导致的AcquireMagickMemory内存泄漏。 发现满足某些错误条件或使用“比较”选项时，ImageMagick无法正确释放函数MogrifyImageList（）中的已获取内存。 针对接受不可信图像的ImageMagick库编译的应用程序可能会被利用来使用所有可用内存并使它们崩溃。 攻击者可能通过提供特制图像来滥用此缺陷，并通过使用所有可用内存来导致拒绝服务。
+·CVE-2019-13310
+描述：在ImageMagick版本7.0.8-50 Q16中发现一个缺陷，其中包含由于MagickWand / mogrify.c中发现的错误而导致AcquireMagickMemory发生内存泄漏。 发现在函数MogrifyImageList（）中发生某些错误情况时，ImageMagick无法正确释放获取的内存。 针对接受不可信图像的ImageMagick库编译的应用程序可能会被利用来使用所有可用内存并使它们崩溃。 攻击者可能通过提供特制图像来滥用此缺陷，并通过使用所有可用内存来导致拒绝服务。
+·CVE-2019-13311
+描述：在ImageMagick中发现一个缺陷，其中包含一个由于wand / mogrify.c错误导致的AcquireMagickMemory内存泄漏。 发现在函数MogrifyImageList（）中发生某些错误情况时，ImageMagick无法正确释放获取的内存。 攻击者可能通过提供特制图像来滥用此缺陷，并通过使用所有可用内存来导致拒绝服务。 针对接受不可信图像的ImageMagick库编译的应用程序可能会被利用来使用所有可用内存并使它们崩溃。
+·CVE-2019-13454
+描述：ImageMagick 7.0.8-54 Q16允许MagickCore/layer.c中的可移除的重复层被零除。
+·CVE-2019-14980
+描述：在ImageMagick 7.0.8-42之前的7.x版本和6.9.10-42之前的6.x版本中，UnmapBlob函数中存在释放后使用漏洞，攻击者可通过发送精编的文件造成拒绝服务。
+·CVE-2019-14981
+描述：在ImageMagick 7.0.8-41之前的7.x和6.9.10-41之前的6.x中，MeanShiftImage函数存在被零除的漏洞。它允许攻击者通过发送精编的文件来造成拒绝服务。
+·CVE-2019-15139
+描述：ImageMagick 7.0.8-41 Q16中的XWD image（X Window System Window dumping file）解析组件允许攻击者在coders/XWD.c中的ReadXWDImage中造成拒绝服务（由越界读取导致的应用程序崩溃），该漏洞与CVE-2019-11472不同。
+·CVE-2019-15140
+描述：ImageMagick 7.0.8-43 Q16中的coders/mat.c允许远程攻击者通过在MagickCore/composite.c中的ReadImage中创建一个错误处理的Matlab图像文件，造成拒绝服务（在释放和应用程序崩溃后使用）或可能产生其他未指明的影响。
+·CVE-2019-15141
+描述：ImageMagick 7.0.8-43 Q16中coders/tiff.c中的WriteTIFFImage允许攻击者通过特制的tiff图像文件（与LibTIFF的tiff diswrite directory、TIFFWriteDirectory、TIFFWriteDirectory和TIFFWriteDirectory.c中的TIFFWriteDirectory、TIFFWriteDirectorySec和TIFFWriteDirectoryTagColormap相关的特制tiff图像文件，造成拒绝服务（应用程序崩溃）。注：出现这种情况是因为CVE-2019-11597的修复不完整。
+·CVE-2019-16708
+描述：ImageMagick 7.0.8-35在magick/xwindow.c中存在与XCreateImage相关的内存泄漏。
+·CVE-2019-16709
+描述：ImageMagick 7.0.8-35在coders/dps.c中存在内存泄漏，如XCreateImage所示。
+·CVE-2019-16710
+描述：ImageMagick 7.0.8-35在coders/dot.c中存在内存泄漏，MagickCore/memory.c中的AcquireMagickMemory就证明了这一点。
+·CVE-2019-16711
+描述：ImageMagick 7.0.8-40在coders/ps2.c中的Huffman2DEncodeImage中存在内存泄漏。
+·CVE-2019-16712
+描述：ImageMagick 7.0.8-43在coders/ps3.c中的Huffman2DEncodeImage中存在内存泄漏，WritePS3Image演示了这一点。
+·CVE-2019-16713
+描述：ImageMagick 7.0.8-43在coders/dot.c中存在内存泄漏，MagickCore/composite.c中的PingImage就证明了这一点。
+·CVE-2019-17540
+描述：ImageMagick 7.0.8-54之前的版本在coders/ps.c的readpsifo中存在基于堆的缓冲区溢出。
+·CVE-2019-17541
+描述：ImageMagick 7.0.8-55之前的版本在MagickCore/string.c的DestroyStringInfo中有一个free之后的用法，因为在coders/jpeg.c中，错误管理器处理不当。
+·CVE-2019-19948
+描述：在使用不正确的列和行属性写入SGI映像时，在ImageMagick中发现了一个基于堆的缓冲区溢出缺陷。攻击者可诱使受害用户下载恶意图像文件并通过ImageMagick运行该文件，可能会在受害者用户的系统上执行代码。
+·CVE-2019-19949
+描述：在编写PNG图像时，在ImageMagick中发现了一个越界读取。攻击者可能会利用此漏洞诱使受害用户下载恶意图像文件并通过ImageMagick运行该文件，从而导致应用程序崩溃。
+·CVE-2019-7175
+描述：在ImageMagick 7.0.8-25之前的版本中，coders/pcd.c中的decode image中存在一些内存泄漏。
+·CVE-2019-7397
+描述：在ImageMagick 7.0.8-25之前版本和GraphicsMagick到1.3.31版本中，coders/pdf.c中的writepdimage中存在多个内存泄漏。
+·CVE-2019-7398
+描述：在ImageMagick 7.0.8-25之前的版本中，coders/dib.c中的writedimage中存在内存泄漏。
+·CVE-2019-9956
+描述：在ImageMagick 7.0.8-35 Q16中，coders/ps.c的函数PopHexPixel中存在基于堆栈的缓冲区溢出，攻击者可借助特制的图像文件造成拒绝服务或代码执行。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+autotrace、autotrace-devel
+·x86_64架构:
+autotrace、autotrace-devel
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+autotrace-0.31.1-38.el7或以上版本
+autotrace-devel-0.31.1-38.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2017-1000476:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-11166:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-12805:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-12806:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-18251:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-18252:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-18254:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-18271:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-18273:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-10177:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-10804:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-10805:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-11656:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-12599:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-12600:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-13153:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-14434:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-14435:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-14436:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-14437:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-15607:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-16328:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-16749:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-16750:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-18544:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-20467:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-8804:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-9133:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-10131:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-10650:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-11470:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-11472:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-11597:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-11598:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-12974:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-12975:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-12976:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-12978:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-12979:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13133:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13134:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13135:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13295:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13297:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13300:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13301:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13305:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13306:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13307:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13309:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13310:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13311:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-13454:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-14980:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-14981:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-15139:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-15140:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-15141:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-16708:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-16709:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-16710:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-16711:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-16712:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-16713:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-17540:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-17541:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-19948:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-19949:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-7175:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-7397:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-7398:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-9956:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+autotrace(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/autotrace-0.31.1-38.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/autotrace-devel-0.31.1-38.el7.aarch64.rpm
+
+autotrace(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/autotrace-0.31.1-38.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/autotrace-0.31.1-38.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/autotrace-devel-0.31.1-38.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/autotrace-devel-0.31.1-38.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

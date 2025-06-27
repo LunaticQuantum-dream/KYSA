@@ -1,0 +1,65 @@
+Name:KYSA-202402-1027
+Severity:中等
+Summary:qemu安全漏洞
+Published:2024-02-20
+URL:/support/loophole/patch/5345.html
+Title:
+			公告ID：KYSA-202402-1027
+公告摘要：qemu安全漏洞
+等级：Moderate
+发布日期：2024-02-20
+		
+1.修复的CVE
+·CVE-2023-1544
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。
+QEMU存在安全漏洞，该漏洞源于guest驱动程序会分配和初始化大量页表用作 CQ 和异步事件的描述符环，可能导致越界读取和 QEMU 崩溃。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+qemu、qemu-block-curl、qemu-block-iscsi、qemu-block-rbd、qemu-block-ssh、qemu-guest-agent、qemu-help、qemu-img
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+qemu-4.1.0-63.p24.a.ky10或以上版本
+qemu-block-curl-4.1.0-63.p24.a.ky10或以上版本
+qemu-block-iscsi-4.1.0-63.p24.a.ky10或以上版本
+qemu-block-rbd-4.1.0-63.p24.a.ky10或以上版本
+qemu-block-ssh-4.1.0-63.p24.a.ky10或以上版本
+qemu-guest-agent-4.1.0-63.p24.a.ky10或以上版本
+qemu-help-4.1.0-63.p24.a.ky10或以上版本
+qemu-img-4.1.0-63.p24.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-1544:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+qemu(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qemu-4.1.0-63.p24.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qemu-block-curl-4.1.0-63.p24.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qemu-block-iscsi-4.1.0-63.p24.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qemu-block-rbd-4.1.0-63.p24.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qemu-block-ssh-4.1.0-63.p24.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qemu-guest-agent-4.1.0-63.p24.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qemu-help-4.1.0-63.p24.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/qemu-img-4.1.0-63.p24.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

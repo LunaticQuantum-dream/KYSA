@@ -1,0 +1,92 @@
+Name:KYSA-202208-1129
+Severity:中等
+Summary:liblouis安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1661.html
+Title:
+			公告ID：KYSA-202208-1129
+公告摘要：liblouis安全漏洞
+等级：Moderate
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2014-8184
+描述：Liblouis是一款使用C语言编写的开源的盲文翻译器。Liblouis 2.5.4之前的2.5.x版本中存在基于栈的缓冲区错误漏洞，该漏洞源于程序没有正确的对用户提交的输入执行边界检测。远程攻击者可利用该漏洞在受影响应用程序上下文中执行任意代码或造成拒绝服务。
+·CVE-2017-13738
+描述：Liblouis是一款使用C语言编写的开源的盲文翻译器。Liblouis 3.2.0版本中的compileTranslationTable.c：346的‘_lou_getALine’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（崩溃）。
+·CVE-2017-13740
+描述：Liblouis是一款使用C语言编写的开源的盲文翻译器。Liblouis 3.2.0版本中的compileTranslationTable.c文件的‘parseChars()’函数存在基于栈的缓冲区溢出漏洞。远程攻击者可利用该漏洞造成拒绝服务。
+·CVE-2017-13741
+描述：Liblouis是一款使用C语言编写的开源的盲文翻译器。Liblouis 3.2.0版本中的compileTranslationTable.c文件的‘compileBrailleIndicator()’函数存在释放后重用漏洞。远程攻击者可利用该漏洞造成拒绝服务。
+·CVE-2017-13742
+描述：Liblouis是一款使用C语言编写的开源的盲文翻译器。Liblouis 3.2.0版本中的compileTranslationTable.c文件的‘includeFile()’函数存在基于栈的缓冲区溢出漏洞。远程攻击者可利用该漏洞造成拒绝服务。
+·CVE-2017-13743
+描述：Liblouis是一款使用C语言编写的开源的盲文翻译器。Liblouis 3.2.0版本中的utils.c文件的‘_lou_showString()’函数存在缓冲区溢出漏洞。远程者可利用该漏洞造成拒绝服务。
+·CVE-2017-13744
+描述：Liblouis是一款使用C语言编写的开源的盲文翻译器。Liblouis 3.2.0版本中的compileTranslationTable.c：343的‘_lou_getALine()’函数存在越边界读取漏洞。远程攻击者可利用该漏洞造成拒绝服务（崩溃）。
+·CVE-2017-15101
+描述：Liblouis是一款使用C语言编写的开源的盲文翻译器。liblouis 2.5.4之前版本中的‘findTable()’函数存在基于栈的缓冲区溢出漏洞。攻击者可利用该造成拒绝服务或执行任意代码。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+liblouis、liblouis-devel、liblouis-doc、liblouis-python、liblouis-utils
+x86_64架构:
+liblouis、liblouis-devel、liblouis-doc、liblouis-python、liblouis-utils
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+liblouis-2.5.2-12.el7_4
+liblouis-devel-2.5.2-12.el7_4
+liblouis-doc-2.5.2-12.el7_4
+liblouis-python-2.5.2-12.el7_4
+liblouis-utils-2.5.2-12.el7_4
+
+4.修复方法
+方法一：配置源进行升级安装
+208.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+209.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+210.升级完成后是否需要重启服务或操作系统：
+·CVE-2014-8184：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-13738：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-13740：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-13741：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-13742：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-13743：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-13744：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-15101：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+liblouis（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/liblouis-2.5.2-12.el7_4.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/liblouis-devel-2.5.2-12.el7_4.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/liblouis-doc-2.5.2-12.el7_4.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/liblouis-python-2.5.2-12.el7_4.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/liblouis-utils-2.5.2-12.el7_4.aarch64.rpm
+
+liblouis（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/liblouis-2.5.2-12.el7_4.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/liblouis-2.5.2-12.el7_4.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/liblouis-devel-2.5.2-12.el7_4.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/liblouis-devel-2.5.2-12.el7_4.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/liblouis-doc-2.5.2-12.el7_4.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/liblouis-python-2.5.2-12.el7_4.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/liblouis-utils-2.5.2-12.el7_4.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/liblouis-utils-2.5.2-12.el7_4.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

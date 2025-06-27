@@ -1,0 +1,74 @@
+Name:KYSA-202204-1040
+Severity:中等
+Summary:tomcat安全漏洞
+Published:2022-04-22
+URL:/support/loophole/patch/4246.html
+Title:
+			公告ID：KYSA-202204-1040
+公告摘要：tomcat安全漏洞
+等级：Moderate
+发布日期：2022-04-22
+		
+1.修复的CVE
+·CVE-2018-8014
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。CORS Filter是其中的一个提供跨源资源共享功能的组件。Apache Tomcat中存在安全漏洞，该漏洞源于不安全的CORS过滤器默认设置。远程攻击者可利用该漏洞对系统发起攻击。以下版本受到影响：Apache Tomcat 9.0.0.M1版本至9.0.8版本，8.5.0版本至8.5.31版本，8.0.0.RC1版本至8.0.52版本，7.0.41版本至7.0.88版本。
+·CVE-2018-8034
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat 7.0.25版本至7.0.88版本、8.5.0版本至8.5.31版本和9.0.0.M1版本和9.0.9版本中存在安全绕过漏洞，该漏洞源于程序没有验证主机名称。远程攻击者可利用该漏洞绕过安全限制，执行未授权的操作。
+·CVE-2019-17563
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 9.0.0.M1版本至9.0.29版本、8.5.0版本至8.5.49版本和7.0.0版本至7.0.98版本中存在授权问题漏洞。攻击者可借助FORM身份验证功能利用该漏洞访问其他用户的会话。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10
+·mips64el架构:
+tomcat、tomcat-admin-webapps、tomcat-docs-webapp、tomcat-el-2.2-api、tomcat-javadoc、tomcat-jsp-2.2-api、tomcat-jsvc、tomcat-lib、tomcat-servlet-3.0-api、tomcat-webapps
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 (mips64el)
+tomcat-7.0.76-16.ns7_4.01或以上版本
+tomcat-admin-webapps-7.0.76-16.ns7_4.01或以上版本
+tomcat-docs-webapp-7.0.76-16.ns7_4.01或以上版本
+tomcat-el-2.2-api-7.0.76-16.ns7_4.01或以上版本
+tomcat-javadoc-7.0.76-16.ns7_4.01或以上版本
+tomcat-jsp-2.2-api-7.0.76-16.ns7_4.01或以上版本
+tomcat-jsvc-7.0.76-16.ns7_4.01或以上版本
+tomcat-lib-7.0.76-16.ns7_4.01或以上版本
+tomcat-servlet-3.0-api-7.0.76-16.ns7_4.01或以上版本
+tomcat-webapps-7.0.76-16.ns7_4.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10
+mips64el:http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2018-8014:需要重启 tomcat 以使漏洞修复生效。
+CVE-2018-8034:需要重启 tomcat 以使漏洞修复生效。
+CVE-2019-17563:需要重启 tomcat 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10
+
+tomcat(mips64el)软件包下载地址:
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/tomcat-7.0.76-16.ns7_4.01.noarch.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/tomcat-admin-webapps-7.0.76-16.ns7_4.01.noarch.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/tomcat-docs-webapp-7.0.76-16.ns7_4.01.noarch.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/tomcat-el-2.2-api-7.0.76-16.ns7_4.01.noarch.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/tomcat-javadoc-7.0.76-16.ns7_4.01.noarch.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/tomcat-jsp-2.2-api-7.0.76-16.ns7_4.01.noarch.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/tomcat-jsvc-7.0.76-16.ns7_4.01.noarch.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/tomcat-lib-7.0.76-16.ns7_4.01.noarch.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/tomcat-servlet-3.0-api-7.0.76-16.ns7_4.01.noarch.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/tomcat-webapps-7.0.76-16.ns7_4.01.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,13 @@
+Name:KYSA-202203-1058
+Severity:重要
+Summary:ghostscript安全漏洞
+Published:2022-03-25
+URL:/support/loophole/patch/1020.html
+Title:
+			公告ID：KYSA-202203-1058
+公告摘要：ghostscript安全漏洞
+安全等级：Important
+发布日期：2022年03月25日
+影响CVE：CVE-2021-3781、CVE-2021-45949
+		
+1. 修复的CVE·CVE-2021-3781描述：Artifex Software Ghostscript是美国Artifex Software公司的一款开源的PostScript（一种用于电子产业和桌面出版领域的页面描述语言和编程语言）解析器。该产品可显示Postscript文件以及在非Postscript打印机上打印Postscript文件。ghostscript interpreter 存在输入验证错误漏洞，攻击者可以利用该漏洞在系统上执行任意命令。·CVE-2021-45949描述：Artifex Software Ghostscript是美国Artifex Software公司的一款开源的PostScript（一种用于电子产业和桌面出版领域的页面描述语言和编程语言）解析器。该产品可显示Postscript文件以及在非Postscript打印机上打印Postscript文件。GhostPDL 存在安全漏洞，该漏洞源于GhostPDL 在采样数据完成时(从采样数据continue和interp调用)有一个基于堆的缓冲区溢出。2. 受影响的软件包·银河麒麟高级服务器操作系统 V10 SP2aarch64架构:ghostscript、ghostscript-devel、ghostscript-help、ghostscript-tools-dvipdfx86_64架构:ghostscript、ghostscript-devel、ghostscript-help、ghostscript-tools-dvipdf3. 软件包修复版本·银河麒麟高级服务器操作系统 V10 SP2ghostscript-9.52-6.p01.ky10ghostscript-devel-9.52-6.p01.ky10ghostscript-help-9.52-6.p01.ky10ghostscript-tools-dvipdf-9.52-6.p01.ky104. 修复方法方法一：配置源进行升级安装1. 打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP2aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2. 配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3. 升级完成后是否需要重启服务或操作系统：·CVE-2021-3781：无需重启操作系统与服务即可使漏洞修复生效。·CVE-2021-45949：无需重启操作系统与服务即可使漏洞修复生效。5. 软件包下载地址·银河麒麟高级服务器操作系统 V10 SP2ghostscript（aarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ghostscript-9.52-6.p01.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ghostscript-devel-9.52-6.p01.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ghostscript-help-9.52-6.p01.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ghostscript-tools-dvipdf-9.52-6.p01.ky10.aarch64.rpmghostscript（x86_64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ghostscript-9.52-6.p01.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ghostscript-devel-9.52-6.p01.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ghostscript-help-9.52-6.p01.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ghostscript-tools-dvipdf-9.52-6.p01.ky10.x86_64.rpm注：其他相关依赖包请到相同目录下载6. 修复验证使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。sudo rpm -qa | grep Packagename

@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-10925
+Severity:重要
+Summary:PostgreSQL 安全漏洞
+Published:2018-08-09
+URL:/support/loophole/patch/152.html
+Title:
+			摘要：             PostgreSQL 安全漏洞
+安全等级：          重要
+公告ID：           CS2CSA-2018-10925
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-08-09
+CVE：             CVE-2018-10925 CVSS3评分：7.1
+		
+1. 概述：中标麒麟高级服务器操作系统V6、V7不受该漏洞影响。2. 描述：PostgreSQL没有正确地检查与“INSERT ... ON CONFLICT DO UPDATE”有关的某些语句的授权。一个带有“CREATE TABLE”特权的攻击者可以利用它来读取任意字节的服务器内存。如果攻击者对特定的表也有一定的“INSERT”和“UPDATE”特权，他们可以利用它来更新同一表中的其他列。			

@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-1486
+Severity:重要
+Summary:kernel 安全更新
+Published:2017-06-19
+URL:/support/loophole/patch/63.html
+Title:
+			摘要：             kernel 安全更新
+安全等级：          重要
+公告ID：           CS2CSA-2017-1486
+产品：             中标麒麟高级服务器操作系统      
+更新日期：          2017-06-19
+CVE：              CVE-2017-1000364 CVSS3评分 7.4
+		
+1. 概述：中标麒麟高级服务器操作系统V6有kernel可用的安全更新.中标麒麟高级服务器操作系统V7有kernel可用的安全更新.中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：kernel升级包。4. 安全加固：* 用户空间程序分配栈内存的处理方式上发现一个缺陷。如果堆（或者是不同的内存区域）和栈区域彼此相邻，攻击者可以利用此缺陷绕过堆栈之间的保护机制，从而引起进程栈或者相邻内存区域的内存错误，并因此提升攻击者的权限。减少这个缺陷的危害还需同时升级glibc。(CVE-2017-1000364，重要的)5. 缺陷修复CVE-2017-1000364 kernel： 堆/栈间安全保护机制缺陷6. 安装包列表：中标麒麟高级服务器操作系统V6： 源码包： kernel-2.6.32-696.3.2.el6.src.rpmx86_64二进制包：kernel-2.6.32-696.3.2.el6.x86_64.rpmkernel-debug-2.6.32-696.3.2.el6.x86_64.rpmkernel-debug-debuginfo-2.6.32-696.3.2.el6.i686.rpmkernel-debug-debuginfo-2.6.32-696.3.2.el6.x86_64.rpmkernel-debug-devel-2.6.32-696.3.2.el6.i686.rpmkernel-debug-devel-2.6.32-696.3.2.el6.x86_64.rpmkernel-debuginfo-2.6.32-696.3.2.el6.i686.rpmkernel-debuginfo-2.6.32-696.3.2.el6.x86_64.rpmkernel-debuginfo-common-i686-2.6.32-696.3.2.el6.i686.rpmkernel-debuginfo-common-x86_64-2.6.32-696.3.2.el6.x86_64.rpmkernel-devel-2.6.32-696.3.2.el6.x86_64.rpmkernel-headers-2.6.32-696.3.2.el6.x86_64.rpmperf-2.6.32-696.3.2.el6.x86_64.rpmperf-debuginfo-2.6.32-696.3.2.el6.i686.rpmperf-debuginfo-2.6.32-696.3.2.el6.x86_64.rpmpython-perf-debuginfo-2.6.32-696.3.2.el6.i686.rpmpython-perf-debuginfo-2.6.32-696.3.2.el6.x86_64.rpm中标麒麟高级服务器操作系统V7： 源码包： kernel-3.10.0-514.21.2.el7.src.rpmx86_64二进制包：kernel-3.10.0-514.21.2.el7.x86_64.rpmkernel-debug-3.10.0-514.21.2.el7.x86_64.rpmkernel-debug-debuginfo-3.10.0-514.21.2.el7.x86_64.rpmkernel-debug-devel-3.10.0-514.21.2.el7.x86_64.rpmkernel-debuginfo-3.10.0-514.21.2.el7.x86_64.rpmkernel-debuginfo-common-x86_64-3.10.0-514.21.2.el7.x86_64.rpmkernel-devel-3.10.0-514.21.2.el7.x86_64.rpmkernel-headers-3.10.0-514.21.2.el7.x86_64.rpmkernel-tools-3.10.0-514.21.2.el7.x86_64.rpmkernel-tools-debuginfo-3.10.0-514.21.2.el7.x86_64.rpmkernel-tools-libs-3.10.0-514.21.2.el7.x86_64.rpmperf-3.10.0-514.21.2.el7.x86_64.rpmperf-debuginfo-3.10.0-514.21.2.el7.x86_64.rpmpython-perf-3.10.0-514.21.2.el7.x86_64.rpmpython-perf-debuginfo-3.10.0-514.21.2.el7.x86_64.rpm			

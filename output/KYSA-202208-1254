@@ -1,0 +1,58 @@
+Name:KYSA-202208-1254
+Severity:低等
+Summary:coreutils安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/4267.html
+Title:
+			公告ID：KYSA-202208-1254
+公告摘要：coreutils安全漏洞
+等级：Low
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2013-0221
+描述：GNU Coreutils（GNU Core Utilities，GNU核心工具组）是一个包含了多个类Unix所需的基本工具的软件包，如textutils（文本工具组）、shellutils（shell工具组）、fileutils（文件工具组）等。 coreutils-i18n.patch文件中存在基于栈的缓冲区溢出漏洞，该漏洞源于sort命令没有限制使用‘alloca’函数。攻击者可通过发送较长的字符串利用该漏洞造成拒绝服务（段错误和崩溃）。
+·CVE-2013-0222
+描述：GNU Coreutils（GNU Core Utilities，GNU核心工具组）是GNU计划开发的一个包含了多个类Unix所需的基本工具的软件包，如textutils（文本工具组）、shellutils（shell工具组）、fileutils（文件工具组）等。 coreutils-i18n.patch文件中存在基于栈的缓冲区溢出漏洞，该漏洞源于uniq命令没有限制使用‘alloca’函数。攻击者可通过发送较长的字符串利用该漏洞造成拒绝服务（段错误和崩溃）。
+·CVE-2013-0223
+描述：GNU Coreutils（GNU Core Utilities，GNU核心工具组）是GNU计划开发的一个包含了多个类Unix所需的基本工具的软件包，如textutils（文本工具组）、shellutils（shell工具组）、fileutils（文件工具组）等。 coreutils-i18n.patch文件中存在基于栈的缓冲区溢出漏洞，该漏洞源于join命令没有限制使用‘alloca’函数。攻击者可通过发送较长的字符串利用该漏洞造成拒绝服务（段错误和崩溃）。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+coreutils、coreutils-libs
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+coreutils-8.4-46.el6或以上版本
+coreutils-libs-8.4-46.el6或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2013-0221:需要重启 coreutils 以使漏洞修复生效。
+CVE-2013-0222:需要重启 coreutils 以使漏洞修复生效。
+CVE-2013-0223:需要重启 coreutils 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+coreutils(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/coreutils-8.4-46.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/coreutils-libs-8.4-46.el6.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

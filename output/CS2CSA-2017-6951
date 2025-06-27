@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-6951
+Severity:中等
+Summary:Linux kernel 安全漏洞
+Published:2017-03-03
+URL:/support/loophole/patch/136.html
+Title:
+			摘要：             Linux kernel 安全漏洞
+安全等级：          中等
+公告ID：           CS2CSA-2017-6951
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-03-03
+CVE：             CVE-2017-6951 CVSS3评分：5.5
+		
+1. 概述：中标麒麟高级服务器操作系统V6触发条件/影响有限/风险小，因此不修复。中标麒麟高级服务器操作系统V7有 Linux kernel 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：security/keys/keyring.c中的keyring_search_aux函数会使本地用户通过request_key系统调用导致拒绝服务。4. 安装包列表：中标麒麟高级服务器操作系统V7：源代码包：kernel-3.10.0-693.el7.src.rpmx86_64二进制包：kernel-3.10.0-693.el7.x86_64.rpm    kernel-abi-whitelists-3.10.0-693.el7.noarch.rpm kernel-debug-3.10.0-693.el7.x86_64.rpm  kernel-debug-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-debug-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-debug-devel-3.10.0-693.el7.x86_64.rpm    kernel-debuginfo-3.10.0-693.el7.x86_64.rpm  kernel-debuginfo-3.10.0-693.el7.x86_64.rpm  kernel-debuginfo-common-x86_64-3.10.0-693.el7.x86_64.rpm    kernel-debuginfo-common-x86_64-3.10.0-693.el7.x86_64.rpm    kernel-devel-3.10.0-693.el7.x86_64.rpm  kernel-doc-3.10.0-693.el7.noarch.rpm    kernel-headers-3.10.0-693.el7.x86_64.rpm    kernel-tools-3.10.0-693.el7.x86_64.rpm  kernel-tools-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-tools-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-tools-libs-3.10.0-693.el7.x86_64.rpm kernel-tools-libs-devel-3.10.0-693.el7.x86_64.rpm   perf-3.10.0-693.el7.x86_64.rpm  perf-debuginfo-3.10.0-693.el7.x86_64.rpm    perf-debuginfo-3.10.0-693.el7.x86_64.rpm    python-perf-3.10.0-693.el7.x86_64.rpm   python-perf-debuginfo-3.10.0-693.el7.x86_64.rpm python-perf-debuginfo-3.10.0-693.el7.x86_64.rpm			

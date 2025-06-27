@@ -1,0 +1,14 @@
+Name:CS2CSA-2019-9506
+Severity:重要
+Summary:Bluetooth 安全漏洞
+Published:2020-05-05
+URL:/support/loophole/patch/229.html
+Title:
+			摘要：           Bluetooth 安全漏洞
+安全等级：          重要
+公告ID：         CS2CSA-2019-9506
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2020-05-05
+CVE：          CVE-2019-9506
+		
+1. 概述：中标麒麟高级服务器操作系统软件V7有kpatch-patch,kernel-rt,kernel-alt,kernel可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：在蓝牙协议中发现了一个缺陷。在附近位置连接蓝牙的攻击者可能会将加密协议降级，使其变得非常暴力。。

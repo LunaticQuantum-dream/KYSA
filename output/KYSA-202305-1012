@@ -1,0 +1,70 @@
+Name:KYSA-202305-1012
+Severity:重要
+Summary:rpm安全漏洞
+Published:2023-05-09
+URL:/support/loophole/patch/4318.html
+Title:
+			公告ID：KYSA-202305-1012
+公告摘要：rpm安全漏洞
+等级：Important
+发布日期：2023-05-09
+		
+1.修复的CVE
+·CVE-2021-20266
+描述：在RPM库lib/header.c中的hdrblobInit()中发现了一个缺陷。这个漏洞允许可以修改rpmdb的攻击者进行越界读取。此漏洞的最大威胁是系统可用性。
+·CVE-2021-20271
+描述：在读取包文件时，RPM的签名检查功能发现了一个缺陷。这个漏洞允许攻击者说服受害者安装一个看似可验证的包，该包的签名头被修改，从而导致RPM数据库损坏并执行代码。此漏洞的最大威胁是数据完整性、机密性和系统可用性。
+·CVE-2021-3421
+描述：在 RPM 软件包的读取功能中发现了一个漏洞。攻击者若能说服受害者安装一个看似可验证的软件包或入侵 RPM 软件源，就能利用此漏洞导致 RPM 数据库损坏。该漏洞的最大威胁是数据完整性。此漏洞影响 4.17.0-alpha 之前的 RPM 版本。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+python2-rpm、python3-rpm、rpm、rpm-build、rpm-devel、rpm-help、rpm-libs、rpm-plugin-systemd-inhibit
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+python2-rpm-4.15.1-36.p03.a.ky10或以上版本
+python3-rpm-4.15.1-36.p03.a.ky10或以上版本
+rpm-4.15.1-36.p03.a.ky10或以上版本
+rpm-build-4.15.1-36.p03.a.ky10或以上版本
+rpm-devel-4.15.1-36.p03.a.ky10或以上版本
+rpm-help-4.15.1-36.p03.a.ky10或以上版本
+rpm-libs-4.15.1-36.p03.a.ky10或以上版本
+rpm-plugin-systemd-inhibit-4.15.1-36.p03.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-20266:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-20271:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-3421:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+rpm(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/loongarch64/Packages/python2-rpm-4.15.1-36.p03.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/loongarch64/Packages/python3-rpm-4.15.1-36.p03.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/loongarch64/Packages/rpm-4.15.1-36.p03.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/loongarch64/Packages/rpm-build-4.15.1-36.p03.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/loongarch64/Packages/rpm-devel-4.15.1-36.p03.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/loongarch64/Packages/rpm-help-4.15.1-36.p03.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/loongarch64/Packages/rpm-libs-4.15.1-36.p03.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/loongarch64/Packages/rpm-plugin-systemd-inhibit-4.15.1-36.p03.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

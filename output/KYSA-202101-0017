@@ -1,0 +1,13 @@
+Name:KYSA-202101-0017
+Severity:中等
+Summary:icoutils漏洞
+Published:2021-03-02
+URL:/support/loophole/patch/348.html
+Title:
+			摘要：icoutils漏洞
+安全等级：中等
+公告ID：KYSA-202101-0017
+发布日期：2021-03-02
+影响CVE：CVE-2017-5332、CVE-2017-6011、CVE-2017-6009、CVE-2017-5331、CVE-2017-6010、CVE-2017-5208、CVE-2017-5333
+		
+1.公告详情：0.31.1之前的icoutils中wrestool / extract.c中的extract_group_icon_cursor_resource可以访问未分配的内存，这允许本地用户拒绝服务（进程崩溃）并通过精心设计的可执行文件执行任意代码。（CVE-2017-5332）在icoutils 0.31.1中发现了一个问题。在“ extract.c”源文件的“ simple_vec”函数中观察到越界读取导致缓冲区溢出。这会影响icotool。（CVE-2017-6011）在icoutils 0.31.1中发现了一个问题。在“ restable.c”源文件的“ decode_ne_resource_id”函数中观察到缓冲区溢出。之所以发生这种情况，是因为未检查memcpy的“ len”参数的大小，因此在该过程中该参数变为负整数，从而导致memcpy失败。这会影响工具凳。（CVE-2017-6009）0.31.1之前的icoutils中b / wrestool / fileread.c中check_offset函数的整数溢出允许本地用户导致拒绝服务（进程崩溃）并通过精心设计的可执行文件执行任意代码。（CVE-2017-5331）在icoutils 0.31.1中发现了一个问题。在“ extract.c”源文件的“ extract_icons”函数中观察到缓冲区溢出。通过处理损坏的ico文件可以触发此问题，并将导致icotool崩溃。（CVE-2017-6010）0.31.1之前的icoutils中wrestool程序中的整数溢出允许远程攻击者通过精心设计的可执行文件导致拒绝服务（内存损坏），从而触发拒绝服务（应用程序崩溃）或执行任意代码的可能性。（CVE-2017-5208）0.31.1之前的icoutils中b / wrestool / extract.c中的extract_group_icon_cursor_resource函数中的整数溢出允许本地用户导致拒绝服务（进程崩溃）或通过精心设计的可执行文件执行任意代码。（CVE-2017-5333）2. 受影响的操作系统：银河麒麟桌面操作系统V4银河麒麟桌面操作系统V4 SP1银河麒麟桌面操作系统V4 SP2银河麒麟桌面操作系统V4 SP3银河麒麟桌面操作系统V4 SP4银河麒麟桌面操作系统V10银河麒麟桌面操作系统V10 SP1银河麒麟服务器操作系统V4银河麒麟服务器操作系统V4 SP1银河麒麟服务器操作系统V4 SP2银河麒麟服务器操作系统V4 SP3银河麒麟服务器操作系统V4 SP43. 修复版本软件包：icoutilsicoutils - 0.31.0-3kord0.1（V4、V10）4. 受影响的软件包银河麒麟桌面操作系统V4桌面版：icoutils银河麒麟桌面操作系统V10桌面版：icoutils5.修复方法方法一：配置源进行升级安装                打开软件包源配置文件，根据仓库地址进行修改。                4.0.2:  http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2-desktop main restricted universe multiverse                4.0.2-sp1:  http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse                4.0.2-sp2: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse                4.0.2-sp3: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse                4.0.2-sp4: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse                10.0: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse                配置完成后执行更新命令进行升级    $sudo apt update方法二：下载安装包进行升级安装       通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists6. 软件包下载地址麒麟操作系统V10桌面版、V4X86_64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/icoutils/icoutils_0.31.0-3kord0.1_amd64.debarm64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/icoutils/icoutils_0.31.0-3kord0.1_arm64.deb 

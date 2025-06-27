@@ -1,0 +1,85 @@
+Name:KYSA-202208-1141
+Severity:重要
+Summary:libssh2安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1658.html
+Title:
+			公告ID：KYSA-202208-1141
+公告摘要：libssh2安全漏洞
+安等级：Important
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2019-17498
+描述：libssh2是一款实现SSH2协议的客户端C库，它能够执行远程命令、文件传输，同时为远程的程序提供安全的传输通道。libssh2 1.9.0及之前版本中的packet.c文件的SSH_MSG_DISCONNECT逻辑存在输入验证错误漏洞。攻击者可借助特制的SSH服务器利用该漏洞泄露敏感信息或造成拒绝服务。
+·CVE-2019-3855
+描述：libssh2是一款实现SSH2协议的客户端C库，它能够执行远程命令、文件传输，同时为远程的程序提供安全的传输通道。libssh2中存在输入验证错误漏洞，该漏洞源于_libssh2_transport_read()函数没有正确地检查来自服务器的packet_length值。远程攻击者可利用该漏洞在客户端系统上执行代码。
+·CVE-2019-3856
+描述：libssh2是一款实现SSH2协议的客户端C库，它能够执行远程命令、文件传输，同时为远程的程序提供安全的传输通道。libssh2中对键盘提示请求处理的方法存在输入验证错误漏洞，该漏洞源于userauth_keyboard_interactive()函数没有正确地检查服务器所发送提示的数量。远程攻击者可利用该漏洞在客户端系统上执行代码。
+·CVE-2019-3857
+描述：libssh2是一款实现SSH2协议的客户端C库，它能够执行远程命令、文件传输，同时为远程的程序提供安全的传输通道。libssh2中存在输入验证错误漏洞，该漏洞源于_libssh2_packet_add()函数没有正确地检查SSH_MSG_CHANNEL_REQUEST消息的namelen值。远程攻击者可利用该漏洞在客户端系统上执行代码。
+·CVE-2019-3858
+描述：libssh2是一款实现SSH2协议的客户端C库，它能够执行远程命令、文件传输，同时为远程的程序提供安全的传输通道。libssh2中存在越界读取漏洞。远程攻击者可借助特制的SFTP数据包利用该漏洞造成拒绝服务或读取客户端内存中的数据。
+·CVE-2019-3861
+描述：libssh2是一款实现SSH2协议的客户端C库，它能够执行远程命令、文件传输，同时为远程的程序提供安全的传输通道。libssh2中存在越界读取漏洞。远程攻击者可利用该漏洞造成拒绝服务或读取客户端内存中的数据。
+·CVE-2019-3862
+描述：libssh2是一款实现SSH2协议的客户端C库，它能够执行远程命令、文件传输，同时为远程的程序提供安全的传输通道。libssh2 1.8.1之前版本中存在缓冲区错误漏洞。远程攻击者可利用该漏洞造成拒绝服务或读取客户端内存中的数据。
+·CVE-2019-3863
+描述：libssh2是一款实现SSH2协议的客户端C库，它能够执行远程命令、文件传输，同时为远程的程序提供安全的传输通道。libssh2中的userauth.c文件的‘userauth_keyboard_interactive()’函数存在缓冲区错误漏洞。远程攻击者可利用该漏洞执行代码。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+libssh2、libssh2-devel、libssh2-docs
+x86_64架构:
+libssh2、libssh2-devel、libssh2-docs
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+libssh2-1.8.0-4.el7
+libssh2-devel-1.8.0-4.el7
+libssh2-docs-1.8.0-4.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+217.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+218.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+219.升级完成后是否需要重启服务或操作系统：
+·CVE-2019-17498：需要重启 libssh2 以使漏洞修复生效。
+·CVE-2019-3855：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2019-3856：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2019-3857：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2019-3858：需要重启 libssh2 以使漏洞修复生效。
+·CVE-2019-3861：需要重启 libssh2 以使漏洞修复生效。
+·CVE-2019-3862：需要重启 libssh2 以使漏洞修复生效。
+·CVE-2019-3863：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+libssh2（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/libssh2-1.8.0-4.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/libssh2-devel-1.8.0-4.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/libssh2-docs-1.8.0-4.el7.noarch.rpm
+
+libssh2（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libssh2-1.8.0-4.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libssh2-1.8.0-4.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libssh2-devel-1.8.0-4.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libssh2-devel-1.8.0-4.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libssh2-docs-1.8.0-4.el7.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

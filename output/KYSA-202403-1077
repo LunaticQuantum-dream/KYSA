@@ -1,0 +1,163 @@
+Name:KYSA-202403-1077
+Severity:重要
+Summary:freeglut安全漏洞
+Published:2024-03-26
+URL:/support/loophole/patch/5518.html
+Title:
+			公告ID：KYSA-202403-1077
+公告摘要：freeglut安全漏洞
+等级：Important
+发布日期：2024-03-26
+		
+1.修复的CVE
+·CVE-2024-24258
+描述：MuPDF是MuPDF开源的一款以 C 语言编写的自由及开放源代码软件库。用以渲染页面为位图，但也提供对其他操作诸如搜索和列举目录和链接的支持。
+MuPDF v1.23.9版本存在安全漏洞，该漏洞源于通过glutAddSubMenu函数中的menuEntry变量发现包含内存泄漏问题。
+·CVE-2024-24259
+描述：MuPDF是MuPDF开源的一款以 C 语言编写的自由及开放源代码软件库。用以渲染页面为位图，但也提供对其他操作诸如搜索和列举目录和链接的支持。
+MuPDF v1.23.9版本存在安全漏洞，该漏洞源于通过glutAddMenuEntry函数中的menuEntry变量发现包含内存泄漏问题。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+freeglut、freeglut-devel、freeglut-help
+·mips64el架构:
+freeglut、freeglut-devel、freeglut-help
+·x86_64架构:
+freeglut、freeglut-devel、freeglut-help
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+freeglut、freeglut-devel、freeglut-help
+·x86_64架构:
+freeglut、freeglut-devel、freeglut-help
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+freeglut、freeglut-devel、freeglut-help
+·x86_64架构:
+freeglut、freeglut-devel、freeglut-help
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+freeglut、freeglut-devel、freeglut-help
+·x86_64架构:
+freeglut、freeglut-devel、freeglut-help
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+freeglut、freeglut-devel、freeglut-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、mips64el、x86_64)
+freeglut-3.0.0-11.ky10或以上版本
+freeglut-devel-3.0.0-11.ky10或以上版本
+freeglut-help-3.0.0-11.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+freeglut-3.0.0-11.ky10或以上版本
+freeglut-devel-3.0.0-11.ky10或以上版本
+freeglut-help-3.0.0-11.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+freeglut-3.0.0-11.ky10或以上版本
+freeglut-devel-3.0.0-11.ky10或以上版本
+freeglut-help-3.0.0-11.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+freeglut-3.0.0-11.ky10或以上版本
+freeglut-devel-3.0.0-11.ky10或以上版本
+freeglut-help-3.0.0-11.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+freeglut-3.0.0-11.ky10或以上版本
+freeglut-devel-3.0.0-11.ky10或以上版本
+freeglut-help-3.0.0-11.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2024-24258:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-24259:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+freeglut(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/freeglut-3.0.0-11.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/freeglut-devel-3.0.0-11.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/freeglut-help-3.0.0-11.ky10.aarch64.rpm
+
+freeglut(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/freeglut-3.0.0-11.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/freeglut-devel-3.0.0-11.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/freeglut-help-3.0.0-11.ky10.mips64el.rpm
+
+freeglut(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/freeglut-3.0.0-11.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/freeglut-devel-3.0.0-11.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/freeglut-help-3.0.0-11.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+freeglut(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/freeglut-3.0.0-11.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/freeglut-devel-3.0.0-11.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/freeglut-help-3.0.0-11.ky10.aarch64.rpm
+
+freeglut(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/freeglut-3.0.0-11.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/freeglut-devel-3.0.0-11.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/freeglut-help-3.0.0-11.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+freeglut(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/freeglut-3.0.0-11.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/freeglut-devel-3.0.0-11.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/freeglut-help-3.0.0-11.ky10.aarch64.rpm
+
+freeglut(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/freeglut-3.0.0-11.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/freeglut-devel-3.0.0-11.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/freeglut-help-3.0.0-11.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+freeglut(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/freeglut-3.0.0-11.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/freeglut-devel-3.0.0-11.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/freeglut-help-3.0.0-11.ky10.aarch64.rpm
+
+freeglut(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/freeglut-3.0.0-11.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/freeglut-devel-3.0.0-11.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/freeglut-help-3.0.0-11.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+freeglut(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/freeglut-3.0.0-11.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/freeglut-devel-3.0.0-11.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/freeglut-help-3.0.0-11.ky10.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

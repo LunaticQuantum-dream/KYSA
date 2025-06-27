@@ -1,0 +1,77 @@
+Name:KYSA-202308-1007
+Severity:中等
+Summary:firefox安全漏洞
+Published:2023-08-01
+URL:/support/loophole/patch/3981.html
+Title:
+			公告ID：KYSA-202308-1007
+公告摘要：firefox安全漏洞
+等级：Moderate
+发布日期：2023-08-01
+		
+1.修复的CVE
+·CVE-2021-45960
+描述：Expat是一款使用C语言编写的快速流式XML解析器。Expat 存在安全漏洞，该漏洞源于Expat(又名libexpat)中，xmlparse.c中的storeAtts函数左移29(或更多)位可能会导致realloc错误行为(例如，分配的字节太少，或只释放内存)。
+·CVE-2021-46143
+描述：Expat是一款使用C语言编写的快速流式XML解析器。Expat 存在安全漏洞，该漏洞源于在2.4.3之前Expat(又名libexpat)的xmlparse.c中的doProlog，m个groupSize存在一个整数溢出。
+·CVE-2022-22822
+描述：Expat是一款使用C语言编写的快速流式XML解析器。Expat（又名 libexpat）2.4.3 之前的版本中存在安全漏洞，该漏洞源于 xmlparse.c 中的 addBinding 存在整数溢出。
+·CVE-2022-22823
+描述：Expat是一款使用C语言编写的快速流式XML解析器。Expat（又名 libexpat）2.4.3 之前的版本中存在安全漏洞，该漏洞源于 xmlparse.c 中的 build_model 有整数溢出。
+·CVE-2022-22824
+描述：Expat是一款使用C语言编写的快速流式XML解析器。Expat（又名 libexpat）2.4.3 之前的版本中存在安全漏洞，该漏洞源于 xmlparse.c 中的 defineAttribute 有整数溢出。
+·CVE-2022-22825
+描述：Expat是一款使用C语言编写的快速流式XML解析器。Expat（又名 libexpat）2.4.3 之前的版本中存在安全漏洞，该漏洞源于 xmlparse.c 中查找存在整数溢出。
+·CVE-2022-22826
+描述：Expat是一款使用C语言编写的快速流式XML解析器。Expat（又名 libexpat）2.4.3 之前的版本中存在安全漏洞，该漏洞源于 xmlparse.c 中的 nextScaffoldPart 存在整数溢出。
+·CVE-2022-22827
+描述：Expat是一款使用C语言编写的快速流式XML解析器。libexpat是一款使用C语言编写的流式XML解析器。Expat（又名 libexpat）2.4.3 之前的版本中存在安全漏洞，该漏洞源于 xmlparse.c 中的 storeAtts 存在整数溢出。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+firefox
+·x86_64架构:
+firefox
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+firefox-79.0-7.p10.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-45960:需要重启 firefox 以使漏洞修复生效。
+CVE-2021-46143:需要重启 firefox 以使漏洞修复生效。
+CVE-2022-22822:需要重启 firefox 以使漏洞修复生效。
+CVE-2022-22823:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-22824:需要重启 firefox 以使漏洞修复生效。
+CVE-2022-22825:需要重启 firefox 以使漏洞修复生效。
+CVE-2022-22826:需要重启 firefox 以使漏洞修复生效。
+CVE-2022-22827:需要重启 firefox 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+firefox(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/firefox-79.0-7.p10.ky10.aarch64.rpm
+
+firefox(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/firefox-79.0-7.p10.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

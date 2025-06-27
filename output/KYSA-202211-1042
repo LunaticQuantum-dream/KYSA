@@ -1,0 +1,122 @@
+Name:KYSA-202211-1042
+Severity:中等
+Summary:rpm安全漏洞
+Published:2022-11-15
+URL:/support/loophole/patch/2719.html
+Title:
+			公告ID：KYSA-202211-1042
+公告摘要：rpm安全漏洞
+等级：Moderate
+发布日期：2022-11-15
+		
+1.修复的CVE
+·CVE-2021-35937
+描述：rpm是一个强大的命令行驱动的软件包管理工具，用来安装、卸载、校验、查询和更新 Linux 系统上的软件包。rpm 存在安全漏洞，该漏洞源于在rpm中发现竞争条件漏洞，本地非特权用户可以利用这个缺陷绕过响应CVE-2017-7500和CVE-2017-7501时引入的检查，从而可能获得根权限。攻击者可利用该漏洞威胁数据机密性和完整性以及系统可用性。
+·CVE-2021-35938
+描述：rpm是一个强大的命令行驱动的软件包管理工具，用来安装、卸载、校验、查询和更新 Linux 系统上的软件包。rpm 存在安全漏洞，该漏洞源于当rpm在安装文件后设置所需的权限和凭据时，就会出现符号链接问题。攻击者可利用该漏洞威胁数据机密性和完整性以及系统可用性。
+·CVE-2021-35939
+描述：rpm是一个强大的命令行驱动的软件包管理工具，用来安装、卸载、校验、查询和更新 Linux 系统上的软件包。rpm存在安全漏洞，该漏洞源于没有对中间目录执行不安全符号链接检查。攻击者利用该漏洞可能会获取到root权限。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+python2-rpm、python3-rpm、rpm、rpm-build、rpm-devel、rpm-help、rpm-libs、rpm-plugin-systemd-inhibit
+·x86_64架构:
+python2-rpm、python3-rpm、rpm、rpm-build、rpm-devel、rpm-help、rpm-libs、rpm-plugin-systemd-inhibit
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+python2-rpm、python3-rpm、rpm、rpm-build、rpm-devel、rpm-help、rpm-libs、rpm-plugin-systemd-inhibit
+·x86_64架构:
+python2-rpm、python3-rpm、rpm、rpm-build、rpm-devel、rpm-help、rpm-libs、rpm-plugin-systemd-inhibit
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、x86_64)
+python2-rpm-4.15.1-28.p01.ky10或以上版本
+python3-rpm-4.15.1-28.p01.ky10或以上版本
+rpm-4.15.1-28.p01.ky10或以上版本
+rpm-build-4.15.1-28.p01.ky10或以上版本
+rpm-devel-4.15.1-28.p01.ky10或以上版本
+rpm-help-4.15.1-28.p01.ky10或以上版本
+rpm-libs-4.15.1-28.p01.ky10或以上版本
+rpm-plugin-systemd-inhibit-4.15.1-28.p01.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+python2-rpm-4.15.1-28.p01.ky10或以上版本
+python3-rpm-4.15.1-28.p01.ky10或以上版本
+rpm-4.15.1-28.p01.ky10或以上版本
+rpm-build-4.15.1-28.p01.ky10或以上版本
+rpm-devel-4.15.1-28.p01.ky10或以上版本
+rpm-help-4.15.1-28.p01.ky10或以上版本
+rpm-libs-4.15.1-28.p01.ky10或以上版本
+rpm-plugin-systemd-inhibit-4.15.1-28.p01.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-35937:需要重启 rpm 以使漏洞修复生效。
+CVE-2021-35938:需要重启 rpm 以使漏洞修复生效。
+CVE-2021-35939:需要重启 rpm 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+rpm(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/python2-rpm-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/python3-rpm-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/rpm-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/rpm-build-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/rpm-devel-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/rpm-help-4.15.1-28.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/rpm-libs-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/rpm-plugin-systemd-inhibit-4.15.1-28.p01.ky10.aarch64.rpm
+
+rpm(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/python2-rpm-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/python3-rpm-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/rpm-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/rpm-build-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/rpm-devel-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/rpm-help-4.15.1-28.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/rpm-libs-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/rpm-plugin-systemd-inhibit-4.15.1-28.p01.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+rpm(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/python2-rpm-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/python3-rpm-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/rpm-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/rpm-build-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/rpm-devel-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/rpm-help-4.15.1-28.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/rpm-libs-4.15.1-28.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/rpm-plugin-systemd-inhibit-4.15.1-28.p01.ky10.aarch64.rpm
+
+rpm(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/python2-rpm-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/python3-rpm-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/rpm-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/rpm-build-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/rpm-devel-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/rpm-help-4.15.1-28.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/rpm-libs-4.15.1-28.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/rpm-plugin-systemd-inhibit-4.15.1-28.p01.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

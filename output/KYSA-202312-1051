@@ -1,0 +1,54 @@
+Name:KYSA-202312-1051
+Severity:重要
+Summary:python-werkzeug安全漏洞
+Published:2023-12-20
+URL:/support/loophole/patch/4782.html
+Title:
+			公告ID：KYSA-202312-1051
+公告摘要：python-werkzeug安全漏洞
+等级：Important
+发布日期：2023-12-20
+		
+1.修复的CVE
+·CVE-2023-25577
+描述：python-werkzeug是一个全面的WSGI web应用程序库。在2.2.3版本之前，Werkzeug的多部分表单数据解析器将解析无限数量的部分，包括文件部分。部分可以是少量的字节，但每个部分都需要CPU时间来解析，并且可能会使用更多的内存作为Python数据。如果可以向访问“request.data”、“request.form”、“request.files”或“request.get_data（parse_form_data=False）”的端点发出请求，则可能会导致意外的高资源使用率。这使得攻击者可以通过将精心编制的多部分数据发送到将对其进行解析的端点来造成拒绝服务。所需的CPU时间可能会阻止工作进程处理合法请求。所需的RAM数量可能会触发进程的内存不足终止。无限的文件部分可能会占用内存和文件句柄。如果连续发送许多并发请求，这可能会耗尽或杀死所有可用的工作者。2.2.3版包含针对此问题的修补程序。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+python2-werkzeug、python3-werkzeug、python3-werkzeug-doc
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+python2-werkzeug-1.0.1-2.a.ky10或以上版本
+python3-werkzeug-1.0.1-2.a.ky10或以上版本
+python3-werkzeug-doc-1.0.1-2.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-25577:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+python-werkzeug(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/python2-werkzeug-1.0.1-2.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/python3-werkzeug-1.0.1-2.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/python3-werkzeug-doc-1.0.1-2.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

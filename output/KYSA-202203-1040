@@ -1,0 +1,110 @@
+Name:KYSA-202203-1040
+Severity:重要
+Summary:log4j12安全漏洞
+Published:2022-03-18
+URL:/support/loophole/patch/4243.html
+Title:
+			公告ID：KYSA-202203-1040
+公告摘要：log4j12安全漏洞
+等级：Important
+发布日期：2022-03-18
+		
+1.修复的CVE
+·CVE-2021-4104
+描述：Apache Log4j是美国阿帕奇（Apache）基金会的一款基于Java的开源日志记录工具。Apache Log4j 1.2存在代码问题漏洞，攻击者可利用该漏洞通过JMSApender反序列化来运行代码。
+·CVE-2022-23302
+描述：Apache Log4j是美国阿帕奇（Apache）基金会的一款基于Java的开源日志记录工具。Log4j 存在代码问题漏洞，该漏洞源于当攻击者对 Log4j 配置具有写访问权限或配置引用攻击者有权访问的 LDAP 服务时，所有 Log4j 1.x 版本中的 JMSSink 都容易受到不受信任数据的反序列化。 攻击者可以提供一个 TopicConnectionFactoryBindingName 配置，使 JMSSink 执行 JNDI 请求，从而以类似于 CVE-2021-4104 的方式执行远程代码。 请注意，此问题仅在专门配置为使用 JMSSink（不是默认设置）时影响 Log4j 1.x。 Apache Log4j 1.2 已于 2015 年 8 月结束生命周期。用户应升级到 Log4j 2，因为它解决了以前版本中的许多其他问题。
+·CVE-2022-23305
+描述：Apache Log4j是美国阿帕奇（Apache）基金会的一款基于Java的开源日志记录工具。Apache Log4j 存在SQL注入漏洞，该漏洞源于 Log4j 1.2.x 中的 JDBCAppender 接受 SQL 语句作为配置参数，其中要插入的值是来自 PatternLayout 的转换器。 消息转换器 \\%m 可能总是包含在内。 这允许攻击者通过将精心制作的字符串输入到记录的应用程序的输入字段或标题中来操纵 SQL，从而允许执行意外的 SQL 查询。 请注意，此问题仅在专门配置为使用 JDBCAppender（不是默认设置）时才会影响 Log4j 1.x。 从 2.0-beta8 版本开始，重新引入了 JDBCAppender，适当支持参数化 SQL 查询，并进一步自定义写入日志的列。 Apache Log4j 1.2 已于 2015 年 8 月结束生命周期。用户应升级到 Log4j 2，因为它解决了以前版本中的许多其他问题。
+·CVE-2022-23307
+描述：Apache Log4j是美国阿帕奇（Apache）基金会的一款基于Java的开源日志记录工具。Apache log4j 1.x存在代码问题漏洞，该漏洞源于在log4j的chainsaw组件中某些日志条目的内容被反序列化并可能允许代码执行。攻击者可以在运行 chainsaw 组件时向服务器发送带有序列化数据的请求，进而执行恶意代码。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+log4j12、log4j12-help
+·x86_64架构:
+log4j12、log4j12-help
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+log4j12、log4j12-help
+·x86_64架构:
+log4j12、log4j12-help
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+log4j12、log4j12-help
+·x86_64架构:
+log4j12、log4j12-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+log4j12-1.2.17-25.p01.ky10或以上版本
+log4j12-help-1.2.17-25.p01.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+log4j12-1.2.17-25.p01.ky10或以上版本
+log4j12-help-1.2.17-25.p01.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+log4j12-1.2.17-25.p01.ky10或以上版本
+log4j12-help-1.2.17-25.p01.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-4104:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-23302:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-23305:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-23307:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+log4j12(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/log4j12-1.2.17-25.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/log4j12-help-1.2.17-25.p01.ky10.noarch.rpm
+
+log4j12(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/log4j12-1.2.17-25.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/log4j12-help-1.2.17-25.p01.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+log4j12(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/aarch64/Packages/log4j12-1.2.17-25.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/aarch64/Packages/log4j12-help-1.2.17-25.p01.ky10.noarch.rpm
+
+log4j12(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/x86_64/Packages/log4j12-1.2.17-25.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/base/x86_64/Packages/log4j12-help-1.2.17-25.p01.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+log4j12(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/log4j12-1.2.17-25.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/aarch64/Packages/log4j12-help-1.2.17-25.p01.ky10.noarch.rpm
+
+log4j12(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/log4j12-1.2.17-25.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/base/x86_64/Packages/log4j12-help-1.2.17-25.p01.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

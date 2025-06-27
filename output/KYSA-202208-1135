@@ -1,0 +1,57 @@
+Name:KYSA-202208-1135
+Severity:中等
+Summary:libreswan安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1659.html
+Title:
+			公告ID：KYSA-202208-1135
+公告摘要：libreswan安全漏洞
+等级：Moderate
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2015-3240
+描述：Xelerance Openswan是加拿大Xelerance公司的一个基于FreeS/WAN项目的用于Linux系统下的IPSEC实现，它主要用于保证数据传输中的安全性、完整性等问题。Libreswan是软件开发者Paul Wouters所研发的一个类似于Openswan的IPsec实现，它主要用于保证数据传输中的安全性、完整性问题。Libreswan 3.15之前版本和Xelerance Openswan 2.6.45之前版本中的pluto IKE守护进程存在安全漏洞。当程序使用NSS执行build操作时，远程攻击者可借助IKE数据包中的KE负载的零长度‘DH g^x’值利用该漏洞造成拒绝服务（断言失败和守护进程重启）。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+libreswan
+x86_64架构:
+libreswan
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+libreswan-3.25-2.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+214.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+215.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+216.升级完成后是否需要重启服务或操作系统：
+·CVE-2015-3240：需要重启 libreswan 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+libreswan（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/libreswan-3.25-2.el7.aarch64.rpm
+
+libreswan（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/libreswan-3.25-2.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/libreswan-3.25-2.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

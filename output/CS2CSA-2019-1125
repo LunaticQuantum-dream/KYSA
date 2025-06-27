@@ -1,0 +1,14 @@
+Name:CS2CSA-2019-1125
+Severity:重要
+Summary:Microsoft Windows 信息泄露漏洞
+Published:2020-05-28
+URL:/support/loophole/patch/234.html
+Title:
+			摘要：           Microsoft Windows 信息泄露漏洞
+安全等级：          重要
+公告ID：         CS2CSA-2019-1125
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2020-05-28
+CVE：          CVE-2019-1125
+		
+1. 概述：中标麒麟高级服务器操作系统软件V6有kernel 可用的更新。中标麒麟高级服务器操作系统软件V7有kernel-rt可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V6-X86_64。中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：在Linux内核的系统中断实现中发现了一个Spectre小工具。具有本地访问权限的攻击者可以使用此信息通过类似Spectre的侧通道泄露私人数据。

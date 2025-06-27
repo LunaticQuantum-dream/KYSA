@@ -1,0 +1,87 @@
+Name:KYSA-202410-1027
+Severity:重要
+Summary:microcode_ctl安全漏洞
+Published:2024-10-08
+URL:/support/loophole/patch/6456.html
+Title:
+			公告ID：KYSA-202410-1027
+公告摘要：microcode_ctl安全漏洞
+等级：重要
+发布日期：2024-10-08
+		
+1.修复的漏洞
+·CVE-2023-42667
+描述：Intel Core Ultra Processors是美国英特尔（Intel）公司的一款Core系列中央处理器（CPU）。
+Intel Core Ultra Processors存在安全漏洞，该漏洞源于缓存机制中的不当隔离，可能允许经过身份验证的用户通过本地访问潜在地提升权限。
+·CVE-2023-49141
+描述：Intel Processors（英特尔处理器）是美国英特尔（Intel）公司的提供解释计算机指令以及处理计算机软件中的数据。
+Intel Processors存在安全漏洞，该漏洞源于缓存机制中的不当隔离，可能允许经过身份验证的用户通过本地访问潜在地提升权限。
+·CVE-2024-23984
+描述：Intel Processors（英特尔处理器）是美国英特尔（Intel）公司的提供解释计算机指令以及处理计算机软件中的数据。
+Intel Processors存在安全漏洞，该漏洞源于运行平均功率限制 (RAPL) 接口中存在潜在的安全漏洞，可能会导致信息泄露。
+·CVE-2024-24853
+描述：Intel Processors（英特尔处理器）是美国英特尔（Intel）公司的提供解释计算机指令以及处理计算机软件中的数据。
+Intel Processors存在安全漏洞，该漏洞源于执行监视器和SMI传输监视器之间的转换行为顺序不正确，可能允许特权用户通过本地访问潜在地提升权限。
+·CVE-2024-24968
+描述：Intel Processors（英特尔处理器）是美国英特尔（Intel）公司的提供解释计算机指令以及处理计算机软件中的数据。
+Intel Processors存在安全漏洞，该漏洞源于有限状态机 (FSM) 中包含一个硬件逻辑错误。可能允许特权用户通过本地访问潜在地启用拒绝服务。
+·CVE-2024-24980
+描述：Intel Xeon Processors是美国英特尔（Intel）公司的一款Intel Xeon系列中央处理器（CPU）。
+Intel Xeon Processors 3rd、4th和5th存在安全漏洞，该漏洞源于处理器的保护机制故障，可能允许特权用户通过本地访问实现权限提升。
+·CVE-2024-25939
+描述：Intel 3rd Generation Intel Xeon Scalable Processors是美国英特尔（Intel）公司的一系列可扩展处理器。
+Intel 3rd Generation Intel Xeon Scalable Processors存在安全漏洞，该漏洞源于具有不同值的镜像区域，允许特权用户通过本地访问潜在地启用拒绝服务。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·x86_64架构:
+microcode_ctl
+·银河麒麟云底座操作系统 V10
+·x86_64架构:
+microcode_ctl
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (x86_64)
+microcode_ctl-20240910-1.ky10h或以上版本
+·银河麒麟云底座操作系统 V10 (x86_64)
+microcode_ctl-20240910-1.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+银河麒麟云底座操作系统 V10
+x86_64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-42667:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-49141:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-23984:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-24853:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-24968:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-24980:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-25939:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+microcode_ctl(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/microcode_ctl-20240910-1.ky10h.x86_64.rpm
+
+·银河麒麟云底座操作系统 V10
+
+microcode_ctl(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/microcode_ctl-20240910-1.ky10h.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,13 @@
+Name:KYSA-202108-1004
+Severity:重要
+Summary:docker-runc漏洞
+Published:2021-08-13
+URL:/support/loophole/patch/417.html
+Title:
+			摘要：docker-runc漏洞
+安全等级：重要
+公告ID：KYSA-202108-1004
+发布日期：2021-08-13
+影响CVE：CVE-2021-30465
+		
+1. 修复的CVE信息CVE-2021-30465描述：runc 包容易受到符号链接交换攻击，攻击者可以通过这种攻击请求看似无害的容器配置，从而导致主机文件系统被绑定安装到容器中。此漏洞的最大威胁是数据机密性和完整性以及系统可用性。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP1docker-runc-1.0.0.rc3-201.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP1aarch64:docker-runcx86_64:docker-runc4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP1   aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/    x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP1 docker-runc aarch64软件包下载地址: http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/docker-runc-1.0.0.rc3-201.ky10.aarch64.rpm docker-runc x86_64软件包下载地址: http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/docker-runc-1.0.0.rc3-201.ky10.x86_64.rpm注：其他相关依赖包请到相同目录下载 

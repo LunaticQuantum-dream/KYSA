@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-15107
+Severity:中等
+Summary:Dnsmasq 安全漏洞
+Published:2018-01-19
+URL:/support/loophole/patch/83.html
+Title:
+			摘要：             Dnsmasq 安全漏洞
+安全等级：          中等
+公告ID：           CVE-2017-15107
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-01-19
+CVE：             CVE-2017-15107 CVSS3评分：5.4
+		
+1. 概述：中标麒麟高级服务器操作系统V6、V7不受该漏洞影响。2. 描述：在Dnsmasq的DNSSEC实施中发现了一个漏洞。 可以错误地解释通配符合成的NSEC记录，以证明实际存在的主机名不存在。			

@@ -1,0 +1,79 @@
+Name:KYSA-202208-1090
+Severity:中等
+Summary:gnutls安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1684.html
+Title:
+			公告ID：KYSA-202208-1090
+公告摘要：gnutls安全漏洞
+安全等级：Moderate
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2018-10844
+描述：HMAC-SHA-256是一种加密算法。GnuTLS implementation是一个SSL、TLS和DTLS协议的安全通信库的实现。HMAC-SHA-256中的GnuTLS实现存在加密问题漏洞。该漏洞源于网络系统或产品未正确使用相关密码算法，导致内容未正确加密、弱加密、明文存储敏感信息等。
+·CVE-2018-10845
+描述：HMAC-SHA-384是一种加密算法。GnuTLS implementation是一个SSL、TLS和DTLS协议的安全通信库的实现。HMAC-SHA-384中的GnuTLS实现中存在加密问题漏洞。该漏洞源于网络系统或产品未正确使用相关密码算法，导致内容未正确加密、弱加密、明文存储敏感信息等。
+·CVE-2018-10846
+描述：GnuTLS是一款免费的用于实现SSL、TLS和DTLS协议的安全通信库。GnuTLS中存在加密问题漏洞。该漏洞源于网络系统或产品未正确使用相关密码算法，导致内容未正确加密、弱加密、明文存储敏感信息等。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+gnutls、gnutls-c++、gnutls-dane、gnutls-devel、gnutls-utils
+x86_64架构:
+gnutls、gnutls-c++、gnutls-dane、gnutls-devel、gnutls-utils
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+gnutls-3.3.29-8.el7
+gnutls-c++-3.3.29-8.el7
+gnutls-dane-3.3.29-8.el7
+gnutls-devel-3.3.29-8.el7
+gnutls-utils-3.3.29-8.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+139.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+140.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+141.升级完成后是否需要重启服务或操作系统：
+·CVE-2018-10844：需要重启 gnutls 以使漏洞修复生效。
+·CVE-2018-10845：需要重启 gnutls 以使漏洞修复生效。
+·CVE-2018-10846：需要重启 gnutls 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+gnutls（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gnutls-3.3.29-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gnutls-c++-3.3.29-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gnutls-dane-3.3.29-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gnutls-devel-3.3.29-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/gnutls-utils-3.3.29-8.el7.aarch64.rpm
+
+gnutls（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gnutls-3.3.29-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gnutls-3.3.29-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gnutls-c++-3.3.29-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gnutls-c++-3.3.29-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gnutls-dane-3.3.29-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gnutls-dane-3.3.29-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gnutls-devel-3.3.29-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gnutls-devel-3.3.29-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gnutls-utils-3.3.29-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/gnutls-utils-3.3.29-8.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

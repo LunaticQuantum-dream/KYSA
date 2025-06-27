@@ -1,0 +1,82 @@
+Name:KYSA-202109-0019
+Severity:中等
+Summary:apache2安全漏洞
+Published:2022-01-11
+URL:/support/loophole/patch/2504.html
+Title:
+			公告ID：KYSA-202109-0019
+公告摘要：apache2安全漏洞
+等级：中等
+发布日期：2022-01-11
+		
+1. 修复的CVE
+CVE-2021-26691
+Apache HTTP Server是美国阿帕奇（Apache）基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.4.0 to 2.4.46存在缓冲区错误漏洞，该漏洞允许远程攻击者可利用该漏洞执行拒绝服务(DoS)攻击。
+CVE-2020-35452
+EasyApache是Apache基金会的一个功能强大且易于使用的工具，内置在WHM/cPanel中，可以使用它来更新和配置Apache web服务器。EasyApache 存在缓冲区错误漏洞，该漏洞源于mod_auth_digest 中每零字节的堆栈溢出。
+CVE-2021-30641
+Apache HTTP Server是美国阿帕奇（Apache）基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 存在安全漏洞，该漏洞允许远程攻击者执行拒绝服务(DoS)攻击。
+CVE-2021-26690
+Apache HTTP Server是美国阿帕奇（Apache）基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 存在代码问题漏洞，该漏洞源于在mod会话中一个NULL指针解引用错误。远程攻击者可利用该漏洞将专门设计的数据传递给应用程序，并执行拒绝服务(DoS)攻击。
+CVE-2021-33193
+Apache HTTP Server是美国阿帕奇（Apache）基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.4.17 至 2.4.48 版本存在安全漏洞，该漏洞可通过HTTP/2发送的精心制作的方法绕过身份验证，并由mod_proxy转发。
+CVE-2021-34798
+Apache HTTP Server是美国阿帕奇（Apache）基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.4.48及之前版本存在代码问题漏洞，该漏洞源于格式错误的请求可能会导致服务器取消对NULL指针的引用。
+CVE-2021-36160
+Apache HTTP Server是美国阿帕奇（Apache）基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 存在缓冲区错误漏洞，攻击者可利用该漏洞通过一个精心设计的请求uri路径导致mod代理uwsgi读取上面分配的内存并崩溃(DoS)。
+CVE-2021-39275
+Apache HTTP Server是美国阿帕奇（Apache）基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.4.48及之前版本存在缓冲区错误漏洞，该漏洞源于当给定恶意输入时，ap_escape_quotes（）可能会写入缓冲区之外的内容。
+CVE-2021-40438
+Apache HTTP Server是美国阿帕奇（Apache）基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server存在代码问题漏洞，该漏洞是由于系统对用户的输入没有进行严格的过滤导致，攻击者可以构造恶意数据对目标服务器进行SSRF攻击。该漏洞可做为攻击目标服务器内网的跳板，以此对服务器所在内网进行端口扫描、攻击运行在内网的应用程序、下载内网资源等。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+apache2-bin、apache2-data、apache2-suexec-custom、apache2-suexec-pristine、apache2-utils、apache2
+arm64 架构：
+apache2-bin、apache2-data、apache2-suexec-custom、apache2-suexec-pristine、apache2-utils、apache2
+mips64el 架构：
+apache2-bin、apache2-data、apache2-suexec-custom、apache2-suexec-pristine、apache2-utils、apache2
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+2.4.18-2kord3.17+esm4
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install apache2
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-bin_2.4.18-2kord3.17%2Besm4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-data_2.4.18-2kord3.17%2Besm4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-suexec-custom_2.4.18-2kord3.17%2Besm4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-suexec-pristine_2.4.18-2kord3.17%2Besm4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-utils_2.4.18-2kord3.17%2Besm4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2_2.4.18-2kord3.17%2Besm4_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-bin_2.4.18-2kord3.17%2Besm4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-data_2.4.18-2kord3.17%2Besm4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-suexec-custom_2.4.18-2kord3.17%2Besm4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-suexec-pristine_2.4.18-2kord3.17%2Besm4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-utils_2.4.18-2kord3.17%2Besm4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2_2.4.18-2kord3.17%2Besm4_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-bin_2.4.18-2kord3.17%2Besm4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-data_2.4.18-2kord3.17%2Besm4_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-suexec-custom_2.4.18-2kord3.17%2Besm4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-suexec-pristine_2.4.18-2kord3.17%2Besm4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2-utils_2.4.18-2kord3.17%2Besm4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apache2/apache2_2.4.18-2kord3.17%2Besm4_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

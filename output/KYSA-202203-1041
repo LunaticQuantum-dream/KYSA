@@ -1,0 +1,119 @@
+Name:KYSA-202203-1041
+Severity:重要
+Summary:tomcat安全漏洞
+Published:2022-03-18
+URL:/support/loophole/patch/2317.html
+Title:
+			公告ID：KYSA-202203-1041
+公告摘要：tomcat安全漏洞
+等级：Important
+发布日期：2022-03-18
+		
+1.修复的CVE
+·CVE-2019-12418
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 9.0.0.M1版本至9.0.28版本、8.5.0版本至8.5.47版本和7.0.0版本至7.0.97版本中存在安全漏洞。攻击者可通过实施中间人攻击利用该漏洞获取用户名和密码，访问JMX界面，控制Tomcat实例。
+·CVE-2019-17563
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 9.0.0.M1版本至9.0.29版本、8.5.0版本至8.5.49版本和7.0.0版本至7.0.98版本中存在授权问题漏洞。攻击者可借助FORM身份验证功能利用该漏洞访问其他用户的会话。
+·CVE-2020-11996
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 10.0.0-M1版本至10.0.0-M5版本、9.0.0.M1版本至9.0.35版本和8.5.0版本至8.5.55版本中存在安全漏洞。攻击者可通过发出大量请求利用该漏洞导致服务器无法响应。
+·CVE-2020-13934
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 10.0.0-M1版本至10.0.0-M6版本，9.0.0.M5版本至9.0.36版本和8.5.1版本至8.5.56中存在缓冲区错误漏洞。攻击者可借助大量请求利用该漏洞造成拒绝服务。
+·CVE-2020-13943
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat存在安全漏洞，该漏洞源于如果一个HTTP/2客户端连接到超过约定的最大数量的并发流连接(违反HTTP / 2协议),它是可能的后续请求在该连接可以包含HTTP头信息,包括HTTP / 2伪头,从先前的请求而不是标题。这可能导致用户看到对意外资源的响应。以下产品及版本受到影响：10.0.0-M1版本至10.0.0-M7版本, 9.0.0.M1版本至9.0.37版本，8.5.0版本至8.5.57版本。
+·CVE-2020-17527
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 存在信息泄露漏洞，该漏洞源于可以重用HTTP 2连接上接收到的前一个流的HTTP请求头值，用于与后续流相关联的请求。虽然这很可能会导致错误和HTTP 2连接的关闭，但信息可能会在请求之间泄漏。
+·CVE-2020-1935
+描述：Apache Tomcat中发现了一个缺陷。HTTP头解析代码使用了一种行结束（EOL）解析方法，允许将一些无效的HTTP头解析为有效的。如果Tomcat位于反向代理的后面，而反向代理以特定的方式错误地处理了无效的传输编码头，那么这就导致了HTTP请求走私的可能性。此漏洞的最大威胁是系统可用性。
+·CVE-2020-9484
+描述：在apachetomcat使用文件存储时发现了反序列化缺陷。在特定情况下，攻击者可以使用巧尽心思构建的请求，通过对其控制下的文件进行反序列化来触发远程代码执行。该漏洞的最大威胁是数据机密性和完整性以及系统可用性。
+·CVE-2021-24122
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 存在信息泄露漏洞，该漏洞源于JRE API File.getCanonicalPath() 与 Windows API (FindFirstFileW)行为不一致。以下产品及版本受到影响：Apache Tomcat versions 10.0.0-M1 to 10.0.0-M9, 9.0.0.M1 to 9.0.39, 8.5.0 to 8.5.59 and 7.0.0 to 7.0.106。
+·CVE-2021-25122
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat versions 10.0.0-M1 to 10.0.0, 9.0.0.M1 to 9.0.41 and 8.5.0 to 8.5.61 存在信息泄露漏洞，该漏洞源于可以在一个请求到另一个请求中复制请求头和数量有限的请求体，这意味着用户a和用户B都可以看到用户a的请求结果。
+·CVE-2021-33037
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat存在环境问题漏洞，该漏洞源于Apache Tomcat 在某些情况下没有正确解析 HTTP 传输编码请求标头，导致在与反向代理一起使用时可能会请求走私。
+·CVE-2022-23181
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 存在权限许可和访问控制问题漏洞，攻击者可以通过 FileStore Sessions 绕过 Apache Tomcat 的限制，以提升他的权限。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+tomcat、tomcat-help、tomcat-jsvc
+·x86_64架构:
+tomcat、tomcat-help、tomcat-jsvc
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+tomcat、tomcat-help、tomcat-jsvc
+·x86_64架构:
+tomcat、tomcat-help、tomcat-jsvc
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、x86_64)
+tomcat-9.0.10-25.ky10或以上版本
+tomcat-help-9.0.10-25.ky10或以上版本
+tomcat-jsvc-9.0.10-25.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+tomcat-9.0.10-25.ky10或以上版本
+tomcat-help-9.0.10-25.ky10或以上版本
+tomcat-jsvc-9.0.10-25.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2019-12418:需要重启 tomcat 以使漏洞修复生效。
+CVE-2019-17563:需要重启 tomcat 以使漏洞修复生效。
+CVE-2020-11996:需要重启 tomcat 以使漏洞修复生效。
+CVE-2020-13934:需要重启 tomcat 以使漏洞修复生效。
+CVE-2020-13943:需要重启 tomcat 以使漏洞修复生效。
+CVE-2020-17527:需要重启 tomcat 以使漏洞修复生效。
+CVE-2020-1935:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-9484:需要重启 tomcat 以使漏洞修复生效。
+CVE-2021-24122:需要重启 tomcat 以使漏洞修复生效。
+CVE-2021-25122:需要重启 tomcat 以使漏洞修复生效。
+CVE-2021-33037:需要重启 tomcat 以使漏洞修复生效。
+CVE-2022-23181:需要重启 tomcat 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+tomcat(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/tomcat-9.0.10-25.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/tomcat-help-9.0.10-25.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/tomcat-jsvc-9.0.10-25.ky10.noarch.rpm
+
+tomcat(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/tomcat-9.0.10-25.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/tomcat-help-9.0.10-25.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/tomcat-jsvc-9.0.10-25.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+tomcat(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/tomcat-9.0.10-25.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/tomcat-help-9.0.10-25.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/tomcat-jsvc-9.0.10-25.ky10.noarch.rpm
+
+tomcat(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/tomcat-9.0.10-25.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/tomcat-help-9.0.10-25.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/tomcat-jsvc-9.0.10-25.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

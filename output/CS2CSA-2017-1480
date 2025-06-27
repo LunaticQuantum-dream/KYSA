@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-1480
+Severity:重要
+Summary:glibc 安全更新
+Published:2017-06-19
+URL:/support/loophole/patch/62.html
+Title:
+			摘要：             glibc 安全更新
+安全等级：          重要
+公告ID：           CS2CSA-2017-1480
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-06-19
+CVE：              CVE-2017-1000366  CVSS3评分 7.4
+		
+1. 概述：中标麒麟高级服务器操作系统V6有glibc可用的安全更新.中标麒麟高级服务器操作系统V7有glibc可用的安全更新.中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：glibc包提供了标准C库(libc)，POSIX线程库(libpthread)，标准的数学库(libm)，名称服务缓存守护进程(nscd)等多进程。如果没有这些库，Linux系统将不能正常工作。4. 安全加固：* 用户空间程序分配栈内存的处理方式上发现一个缺陷。如果堆（或者是不同的内存区域）和栈区域彼此相邻，攻击者可以利用此缺陷绕过堆栈之间的保护机制，从而引起进程栈或者相邻内存区域的内存错误，并因此提升攻击者的权限。减少这个缺陷的危害还需同时升级kernel。(CVE-2017-1000366，重要的)5. 缺陷修复CVE-2017-1000366 glibc: 堆/栈间安全保护机制缺陷6. 安装包列表：中标麒麟高级服务器操作系统V6： 源码包： glibc-2.12-1.209.el6_9.2.src.rpmx86_64二进制包：glibc-2.12-1.209.el6_9.2.i686.rpmglibc-2.12-1.209.el6_9.2.x86_64.rpmglibc-common-2.12-1.209.el6_9.2.x86_64.rpmglibc-debuginfo-2.12-1.209.el6_9.2.i686.rpmglibc-debuginfo-2.12-1.209.el6_9.2.x86_64.rpmglibc-debuginfo-common-2.12-1.209.el6_9.2.i686.rpmglibc-debuginfo-common-2.12-1.209.el6_9.2.x86_64.rpmglibc-devel-2.12-1.209.el6_9.2.i686.rpmglibc-devel-2.12-1.209.el6_9.2.x86_64.rpmglibc-headers-2.12-1.209.el6_9.2.x86_64.rpmglibc-utils-2.12-1.209.el6_9.2.x86_64.rpmnscd-2.12-1.209.el6_9.2.x86_64.rpm中标麒麟高级服务器操作系统V7： 源码包： glibc-2.17-157.el7_3.4.src.rpmx86_64二进制包：glibc-2.17-157.el7_3.4.i686.rpmglibc-2.17-157.el7_3.4.x86_64.rpmglibc-common-2.17-157.el7_3.4.x86_64.rpmglibc-debuginfo-2.17-157.el7_3.4.i686.rpmglibc-debuginfo-2.17-157.el7_3.4.x86_64.rpmglibc-debuginfo-common-2.17-157.el7_3.4.i686.rpmglibc-debuginfo-common-2.17-157.el7_3.4.x86_64.rpmglibc-devel-2.17-157.el7_3.4.i686.rpmglibc-devel-2.17-157.el7_3.4.x86_64.rpmglibc-headers-2.17-157.el7_3.4.x86_64.rpmglibc-utils-2.17-157.el7_3.4.x86_64.rpmnscd-2.17-157.el7_3.4.x86_64.rpm

@@ -1,0 +1,15 @@
+Name:KYSA-202401-1056
+Severity:中等
+Summary:ntp安全漏洞
+Published:2024-01-09
+URL:/support/loophole/patch/4972.html
+Title:
+			公告ID：KYSA-202401-1056
+公告摘要：ntp安全漏洞
+等级：Moderate
+发布日期：2024-01-09
+		
+1.修复的CVE
+·CVE-2023-26551
+描述：在NTP 4.2.8p15中，libntp/mstolfp.c在cp
+	

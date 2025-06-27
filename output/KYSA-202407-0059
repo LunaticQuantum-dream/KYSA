@@ -1,0 +1,169 @@
+Name:KYSA-202407-0059
+Severity:重要
+Summary:imagemagick安全漏洞
+Published:2025-03-20
+URL:/support/loophole/patch/7476.html
+Title:
+			公告ID：KYSA-202407-0059
+公告摘要：imagemagick安全漏洞
+等级：重要
+发布日期：2025-03-20
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2403 Update2版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2023-1289
+ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。ImageMagick存在安全漏洞，该漏洞源于特制的SVG会导致分段错误。攻击者可利用该漏洞进行拒绝服务（DoS）攻击。
+CVE-2020-29599
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。ImageMagick 6.9.11-40版本和7.x版本和7.0.10-40之前版本存在安全漏洞，该漏洞源于错误地处理了-authenticate选项，该选项允许为受密码保护的PDF文件设置密码。用户控制的密码没有被正确地转义，因此有可能通过程序员的pdf.c注入额外的shell命令。
+CVE-2021-20224
+ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。ImageMagick存在安全漏洞，该漏洞源于其MagickCore/quantum-export.c组件的ExportIndexQuantum()函数调用GetPixelIndex()函数处理攻击者提交的精心制作的PDF文件时可能造成值超出unsigned char的可表示范围出现整数溢出，导致一个未定义行为或崩溃。
+CVE-2021-20241
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。 ImageMagick 存在数字错误漏洞，该漏洞源于WriteJP2Image()触发致命错误，从而触发拒绝服务。
+CVE-2021-20243
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。 ImageMagick 存在数字错误漏洞，该漏洞源于GetResizeFilterWeight()触发致命错误，从而触发拒绝服务。
+CVE-2021-20244
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。ImageMagick 存在数字错误漏洞，该漏洞源于ImplodeImage()触发致命错误，从而触发拒绝服务。
+CVE-2021-20309
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。ImageMagick 存在安全漏洞，攻击者可利用ImageMagick的多个漏洞。
+CVE-2021-20246
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。 ImageMagick 存在数字错误漏洞，该漏洞源于ScaleResampleFilter()触发致命错误，从而触发拒绝服务。
+CVE-2021-20312
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。ImageMagick 存在安全漏洞，攻击者可利用ImageMagick的多个漏洞。
+CVE-2021-20313
+ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。ImageMagick 存在安全漏洞，攻击者可利用ImageMagick的多个漏洞。
+CVE-2021-39212
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。ImageMagick 中存在竞争条件问题漏洞，该漏洞源于产品policy.xml文件中的module策略排除Postscript文件时会导致该文件可读写。
+CVE-2022-28463
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。ImageMagick 7.1.0-27版本存在安全漏洞，该漏洞源于易受到缓冲区溢出的影响。
+CVE-2022-32545
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。Imagemagick Studio ImageMagick 存在安全漏洞，该漏洞源于当处理精心设计的或不受信任的输入时，会导致 coders/psd.c 中“unsigned char”类型的可表示值超出范围。 这会导致对应用程序可用性的负面影响或与未定义行为相关的其他问题。
+CVE-2022-32546
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。Imagemagick Studio ImageMagick 存在安全漏洞，该漏洞源于当处理精心设计或不受信任的输入时，导致 coders/pcl.c 中“unsigned long”类型的可表示值超出范围。 这会导致对应用程序可用性的负面影响或与未定义行为相关的其他问题。
+CVE-2022-32547
+Imagemagick Studio ImageMagick是一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。Imagemagick Studio ImageMagick 存在安全漏洞，该漏洞源于在 MagickCore/property.c 中， double 类型和 float 类型需要 4 字节对齐，每当 ImageMagick 处理精心设计或不受信任的输入时，都会对应用程序可用性或与未定义行为相关的其他问题产生负面影响。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2403 Update2
+x86_64 架构：
+imagemagick-6-common、imagemagick-6.q16、imagemagick-6.q16hdri、imagemagick-common、imagemagick、libimage-magick-perl、libimage-magick-q16-perl、libimage-magick-q16hdri-perl、libmagick++-6-headers、libmagick++-6.q16-8、libmagick++-6.q16hdri-8、libmagickcore-6-arch-config、libmagickcore-6-headers、libmagickcore-6.q16-6-extra、libmagickcore-6.q16-6、libmagickcore-6.q16hdri-6-extra、libmagickcore-6.q16hdri-6、libmagickwand-6-headers、libmagickwand-6.q16-6、libmagickwand-6.q16hdri-6、perlmagick
+arm64 架构：
+imagemagick-6-common、imagemagick-6.q16、imagemagick-6.q16hdri、imagemagick-common、imagemagick、libimage-magick-perl、libimage-magick-q16-perl、libimage-magick-q16hdri-perl、libmagick++-6-headers、libmagick++-6.q16-8、libmagick++-6.q16hdri-8、libmagickcore-6-arch-config、libmagickcore-6-headers、libmagickcore-6.q16-6-extra、libmagickcore-6.q16-6、libmagickcore-6.q16hdri-6-extra、libmagickcore-6.q16hdri-6、libmagickwand-6-headers、libmagickwand-6.q16-6、libmagickwand-6.q16hdri-6、perlmagick
+sw64 架构：
+imagemagick-6-common、imagemagick-6.q16、imagemagick-6.q16hdri、imagemagick-common、imagemagick、libimage-magick-perl、libimage-magick-q16-perl、libimage-magick-q16hdri-perl、libmagick++-6-headers、libmagick++-6.q16-8、libmagick++-6.q16hdri-8、libmagickcore-6-arch-config、libmagickcore-6-headers、libmagickcore-6.q16-6-extra、libmagickcore-6.q16-6、libmagickcore-6.q16hdri-6-extra、libmagickcore-6.q16hdri-6、libmagickwand-6-headers、libmagickwand-6.q16-6、libmagickwand-6.q16hdri-6、perlmagick
+loongarch64 架构：
+imagemagick-6-common、imagemagick-6.q16、imagemagick-6.q16hdri、imagemagick-common、imagemagick、libimage-magick-perl、libimage-magick-q16-perl、libimage-magick-q16hdri-perl、libmagick++-6-headers、libmagick++-6.q16-8、libmagick++-6.q16hdri-8、libmagickcore-6-arch-config、libmagickcore-6-headers、libmagickcore-6.q16-6-extra、libmagickcore-6.q16-6、libmagickcore-6.q16hdri-6-extra、libmagickcore-6.q16hdri-6、libmagickwand-6-headers、libmagickwand-6.q16-6、libmagickwand-6.q16hdri-6、perlmagick
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2403 Update2
+8:6.9.10.23+dfsg-2.1kylin11.10k0.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install imagemagick
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2403 Update2
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6-common_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6.q16_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6.q16hdri_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-common_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-q16-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-q16hdri-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6.q16-8_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6.q16hdri-8_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6-arch-config_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16-6-extra_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16hdri-6-extra_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16hdri-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6.q16-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6.q16hdri-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/perlmagick_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6-common_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6.q16_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6.q16hdri_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-common_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-q16-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-q16hdri-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6.q16-8_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6.q16hdri-8_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6-arch-config_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16-6-extra_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16hdri-6-extra_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16hdri-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6.q16-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6.q16hdri-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/perlmagick_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+sw64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6-common_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6.q16_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6.q16hdri_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-common_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-q16-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-q16hdri-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6.q16-8_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6.q16hdri-8_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6-arch-config_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16-6-extra_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16hdri-6-extra_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16hdri-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6.q16-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6.q16hdri-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/perlmagick_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6-common_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6.q16_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-6.q16hdri_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick-common_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/imagemagick_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-q16-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libimage-magick-q16hdri-perl_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6.q16-8_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagick++-6.q16hdri-8_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6-arch-config_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16-6-extra_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16hdri-6-extra_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickcore-6.q16hdri-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6-headers_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6.q16-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/libmagickwand-6.q16hdri-6_6.9.10.23+dfsg-2.1kylin11.10k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/i/imagemagick/perlmagick_6.9.10.23+dfsg-2.1kylin11.10k0.1_all.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2403 Update2版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

@@ -1,0 +1,14 @@
+Name:CS2CSA-2016-10011
+Severity:低级
+Summary:openssh 安全漏洞
+Published:2016-12-19
+URL:/support/loophole/patch/176.html
+Title:
+			摘要：             openssh 安全漏洞
+安全等级：          低级
+公告ID：           CS2CSA-2016-10011
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2016-12-19
+CVE：             CVE-2016-10011 CVSS3评分：2.5
+		
+1. 概述：中标麒麟高级服务器操作系统V6由于触发条件/影响有限/风险小，因此不修复。中标麒麟高级服务器操作系统V7有 openssh 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：主机私钥材料可能会通过重新分配的内存泄露给特权分离的子进程。这样, 攻击者就能够破坏特权分离过程, 获取泄漏的密钥信息。4. 安装包列表：中标麒麟高级服务器操作系统V7：源代码包：openssh-7.4p1-11.el7.src.rpm x86_64二进制包：openssh-7.4p1-11.el7.x86_64.rpm openssh-askpass-7.4p1-11.el7.x86_64.rpm openssh-cavs-7.4p1-11.el7.x86_64.rpm    openssh-clients-7.4p1-11.el7.x86_64.rpm openssh-debuginfo-7.4p1-11.el7.i686.rpm openssh-debuginfo-7.4p1-11.el7.x86_64.rpm   openssh-debuginfo-7.4p1-11.el7.x86_64.rpm   openssh-keycat-7.4p1-11.el7.x86_64.rpm  openssh-ldap-7.4p1-11.el7.x86_64.rpm    openssh-server-7.4p1-11.el7.x86_64.rpm  openssh-server-sysvinit-7.4p1-11.el7.x86_64.rpm pam_ssh_agent_auth-0.10.3-1.11.el7.i686.rpm pam_ssh_agent_auth-0.10.3-1.11.el7.x86_64.rpm   			

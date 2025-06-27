@@ -1,0 +1,111 @@
+Name:KYSA-202104-1220
+Severity:中等
+Summary:postgresql安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/4223.html
+Title:
+			公告ID：KYSA-202104-1220
+公告摘要：postgresql安全漏洞
+等级：Moderate
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2016-5423
+描述：PostgreSQL server处理包含CASE/WHEN命令的某些SQL语句时发现了一个缺陷。经过身份验证的远程攻击者可以使用巧尽心思构建的SQL语句来导致PostgreSQL崩溃或泄漏几个字节的服务器内存，或者可能执行任意代码。
+·CVE-2017-12172
+描述：在PostgreSQL的初始化脚本中发现权限提升缺陷。有权访问postgres用户帐户的攻击者可以利用这些漏洞在服务器计算机上获得根用户访问权限。
+·CVE-2017-15097
+描述：在PostgreSQL的初始化脚本中发现权限提升缺陷。有权访问postgres用户帐户的攻击者可以利用这些漏洞在服务器计算机上获得根用户访问权限。
+·CVE-2017-7484
+描述：发现一些选择性估计函数在提供pg_统计信息之前没有检查用户权限，这可能是信息泄漏。非管理数据库用户可以利用此缺陷从表中窃取一些信息，否则他们将无法访问这些信息。
+·CVE-2017-7486
+描述：发现pg_user_mappings视图可以向非管理数据库用户披露有关用户映射到外部数据库的信息。具有此映射的使用特权的数据库用户可以在查询视图时获取用户映射数据，例如用于连接到外部数据库的用户名和密码。
+·CVE-2017-7546
+描述：我们发现，尽管libpq拒绝发送空密码，但使用空密码对PostgreSQL数据库帐户进行身份验证是可行的。远程攻击者可能会利用此漏洞访问密码为空的数据库帐户。
+·CVE-2017-7547
+描述：PostgreSQL在处理对外部服务器上pg_user_mappings视图的访问时发现了一个授权漏洞。经过身份验证的远程攻击者可能会利用此漏洞从外部服务器所有者定义的用户映射中检索密码，而实际上却没有这样做的权限。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+postgresql、postgresql-contrib、postgresql-devel、postgresql-docs、postgresql-libs、postgresql-plperl、postgresql-plpython、postgresql-pltcl、postgresql-server、postgresql-static、postgresql-test、postgresql-upgrade
+·x86_64架构:
+postgresql、postgresql-contrib、postgresql-devel、postgresql-docs、postgresql-libs、postgresql-plperl、postgresql-plpython、postgresql-pltcl、postgresql-server、postgresql-static、postgresql-test、postgresql-upgrade
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+postgresql-9.2.24-2.el7或以上版本
+postgresql-contrib-9.2.24-2.el7或以上版本
+postgresql-devel-9.2.24-2.el7或以上版本
+postgresql-docs-9.2.24-2.el7或以上版本
+postgresql-libs-9.2.24-2.el7或以上版本
+postgresql-plperl-9.2.24-2.el7或以上版本
+postgresql-plpython-9.2.24-2.el7或以上版本
+postgresql-pltcl-9.2.24-2.el7或以上版本
+postgresql-server-9.2.24-2.el7或以上版本
+postgresql-static-9.2.24-2.el7或以上版本
+postgresql-test-9.2.24-2.el7或以上版本
+postgresql-upgrade-9.2.24-2.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2016-5423:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-12172:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-15097:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-7484:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-7486:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-7546:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-7547:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+postgresql(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-9.2.24-2.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-contrib-9.2.24-2.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-devel-9.2.24-2.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-docs-9.2.24-2.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-libs-9.2.24-2.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-plperl-9.2.24-2.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-plpython-9.2.24-2.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-pltcl-9.2.24-2.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-server-9.2.24-2.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-static-9.2.24-2.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-test-9.2.24-2.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/postgresql-upgrade-9.2.24-2.el7.aarch64.rpm
+
+postgresql(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-9.2.24-2.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-9.2.24-2.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-contrib-9.2.24-2.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-devel-9.2.24-2.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-devel-9.2.24-2.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-docs-9.2.24-2.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-libs-9.2.24-2.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-libs-9.2.24-2.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-plperl-9.2.24-2.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-plpython-9.2.24-2.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-pltcl-9.2.24-2.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-server-9.2.24-2.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-static-9.2.24-2.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-static-9.2.24-2.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-test-9.2.24-2.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/postgresql-upgrade-9.2.24-2.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

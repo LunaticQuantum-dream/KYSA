@@ -1,0 +1,13 @@
+Name:KYSA-202201-1026
+Severity:中等
+Summary:logback漏洞
+Published:2022-01-27
+URL:/support/loophole/patch/797.html
+Title:
+			公告ID：KYSA-202201-1026
+公告摘要：logback漏洞
+安全等级：Moderate
+发布日期：2022年01月27日
+影响CVE：CVE-2021-42550
+		
+1. 修复的CVECVE-2021-42550描述：Quality Open Software Logback是瑞士Quality Open Software公司的一个 Java 应用程序的日志记录框架。Quality Open Software logback 1.2.7及之前版本存在代码问题漏洞，攻击者可利用该漏洞精心设计恶意配置，从而允许执行从LDAP服务器加载的任意代码。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2logback-1.2.8-1.ky10logback-access-1.2.8-1.ky10logback-examples-1.2.8-1.ky10logback-help-1.2.8-1.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:logback、logback-access、logback-examples、logback-help、x86_64:logback、logback-access、logback-examples、logback-help、4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP2aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址：银河麒麟高级服务器操作系统 V10 SP2 logback aarch64软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/logback-1.2.8-1.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/logback-access-1.2.8-1.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/logback-examples-1.2.8-1.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/logback-help-1.2.8-1.ky10.noarch.rpm logback x86_64软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/logback-1.2.8-1.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/logback-access-1.2.8-1.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/logback-examples-1.2.8-1.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/logback-help-1.2.8-1.ky10.noarch.rpm 注：其他相关依赖包请到相同目录下载

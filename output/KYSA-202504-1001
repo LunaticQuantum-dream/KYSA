@@ -1,0 +1,87 @@
+Name:KYSA-202504-1001
+Severity:重要
+Summary:ansible安全漏洞
+Published:2025-04-01
+URL:/support/loophole/patch/7588.html
+Title:
+			公告ID：KYSA-202504-1001
+公告摘要：ansible安全漏洞
+等级：重要
+发布日期：2025-04-01
+		
+1.修复的漏洞
+·CVE-2021-3620
+描述：Johnson Controls Metasys ADS/ADX/OAS Servers是美国江森自控（Johnson Controls）公司的一种应用程序和数据服务器。Johnson Controls Metasys ADS/ADX/OAS 10版本和11版本存在访问控制错误漏洞，该漏洞源于在某些情况下，未经身份验证的用户可以访问Metasys ADS/ADX/OAS Web API并枚举用户。
+·CVE-2022-3697
+描述：在使用亚马逊云服务（Amazon Web Services，AWS）集合中的 Ansible 时，发现当使用来自amazon.aws.ec2_instance模块的tower_callback参数时存在一个漏洞，因为该模块对该参数的处理方式不安全，从而导致密码在日志中泄露。
+·CVE-2023-5115
+描述：Ansible自动化平台存在一种绝对路径遍历攻击。此漏洞允许攻击者制作恶意的Ansible角色并使受害者执行该角色。符号链接可用于覆盖提取路径之外的文件
+·CVE-2024-8775
+描述：存储在Ansible Vault文件中的敏感信息可能以明文形式暴露。当使用诸如include vars之类的任务来加载vault变量而不设置no log: true参数时，就会出现这种情况，导致敏感数据被打印到剧本输出或日志中。这可能会导致密码或API密钥等秘密在无意中泄露，从而危及安全性，并可能允许未经授权的访问或操作。
+·CVE-2024-9902
+描述：在Ansible中发现了一个缺陷。ansible-core ‘ user’模块允许非特权用户静默地创建或替换任何系统路径上的任何文件的内容，并在特权用户对非特权用户的主目录执行‘ user’模块时获得该文件的所有权。如果非特权用户对包含被利用的目标文件的目录具有遍历权限，那么他们将作为文件的所有者保留对文件内容的完全控制。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+ansible
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+ansible
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+·loongarch64架构:
+ansible
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+ansible-2.8.8-1.p04.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+ansible-2.8.8-1.p04.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (loongarch64)
+ansible-2.8.8-1.p04.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3 2403
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-3620:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-3697:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-5115:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-8775:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-9902:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+ansible(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/ansible-2.8.8-1.p04.a.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+ansible(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/ansible-2.8.8-1.p04.a.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+
+ansible(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/ansible-2.8.8-1.p04.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/ansible-2.8.8-1.p04.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

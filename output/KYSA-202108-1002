@@ -1,0 +1,13 @@
+Name:KYSA-202108-1002
+Severity:严重
+Summary:gssproxy漏洞
+Published:2021-08-13
+URL:/support/loophole/patch/415.html
+Title:
+			摘要：gssproxy漏洞
+安全等级：严重
+公告ID：KYSA-202108-1002
+发布日期：2021-08-13
+影响CVE：CVE-2020-12658
+		
+1. 修复的CVE信息CVE-2020-12658描述：** 有争议 ** 0.8.3 之前的 gssproxy（又名 gss-proxy）在 gp_workers.c 中的 gp_worker_main() 中的 pthread 退出之前不会解锁 cond_mutex。注意：上游评论指出“在运行有问题的代码时，我们已经处于关闭路径上，因此 DoS 没有任何意义，并且没有向我们提供其他信息（作为上游）来说明为什么会这样成为问题。”2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP1gssproxy-0.8.3-1.ky10gssproxy-debugsource-0.8.3-1.ky10gssproxy-help-0.8.3-1.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP1aarch64:gssproxy、gssproxy-debugsource、gssproxy-helpx86_64:gssproxy、gssproxy-debugsource、gssproxy-help4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP1  aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/  x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP1 gssproxy aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/gssproxy-0.8.3-1.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/gssproxy-debugsource-0.8.3-1.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/gssproxy-help-0.8.3-1.ky10.aarch64.rpm gssproxy x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/gssproxy-0.8.3-1.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/gssproxy-debugsource-0.8.3-1.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/gssproxy-help-0.8.3-1.ky10.x86_64.rpm 注：其他相关依赖包请到相同目录下载 

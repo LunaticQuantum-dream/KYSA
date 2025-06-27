@@ -1,0 +1,91 @@
+Name:KYSA-202308-0069
+Severity:中等
+Summary:elfutils安全漏洞
+Published:2024-01-25
+URL:/support/loophole/patch/5020.html
+Title:
+			公告ID：KYSA-202308-0069
+公告摘要：elfutils安全漏洞
+等级：中等
+发布日期：2024-01-25
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303 Update2 版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2021-33294
+Cuviper Elfutils是一套用于读取、创建和修改ELF二进制文件的实用程序和库的集合。 elfutils 0.183版本存在安全漏洞，该漏洞源于函数handle_symtab存在无限循环问题，攻击者可利用该漏洞导致拒绝服务。
+CVE-2020-21047
+Cuviper Elfutils是一套用于读取、创建和修改ELF二进制文件的实用程序和库的集合。 elfutils 0.177 版本存在安全漏洞，该漏洞源于libasm 使用的 libcpu 组件存在越界写入问题。
+CVE-2018-18521
+elfutils是一套用于读取、创建和修改ELF二进制文件的实用程序和库的集合。 elfutils 0.174版本中的arlib.c文件的‘arlib_add_symbols()’函数存在数字错误漏洞。该漏洞源于网络系统或产品未正确计算或转换所产生的数字。攻击者可利用该漏洞导致整数溢出或符号错误等。
+CVE-2018-18520
+elfutils是一套用于读取、创建和修改ELF二进制文件的实用程序和库的集合。libelf是一个用于解析ELF格式的二进制文件并与之交互的库。 elfutils 0.174及之前版本中的libelf的‘elf_end’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+CVE-2019-7665
+elfutils是一套用于读取、创建和修改ELF二进制文件的实用程序和库的集合。 elfutils 0.175版本中的elf32_xlatetom.c文件的‘elf32_xlatetom’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+CVE-2018-16062
+elfutils是一套用于读取、创建和修改ELF二进制文件的实用程序和库的集合。libdw是其中的一个ELF操作库。 elfutils 2018-08-18之前版本中的libdw的dwarf_getaranges.c文件的‘dwarf_getaranges’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+CVE-2019-7150
+elfutils是一套用于读取、创建和修改ELF二进制文件的实用程序和库的集合。 elfutils 0.175版本中的libelf/elf32_xlatetom.c文件的‘elf64_xlatetom’函数存在安全漏洞，该漏洞源于在读取core文件数据时，程序没有检查是否获取了全部数据。攻击者可借助特制的输入利用该漏洞造成拒绝服务（程序崩溃）。
+CVE-2018-16403
+elfutils是一套用于读取、创建和修改ELF二进制文件的实用程序和库的集合。libdw是其中的一个ELF操作库。 elfutils 0.173版本中的libdw存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+CVE-2019-7149
+elfutils是一套用于读取、创建和修改ELF二进制文件的实用程序和库的集合。libdw是其中的一个ELF操作库。 elfutils 0.175版本中的libdw的dwarf_getsrclines.c文件的‘read_srclines’函数存在基于堆的缓冲区越界读取漏洞。攻击者可借助特制的输入利用该漏洞造成拒绝服务（段错误）。
+CVE-2018-18310
+elfutils是一套用于读取、创建和修改ELF二进制文件的实用程序和库的集合。 elfutils 0.174及之前版本中的libdwfl的dwfl_segment_report_module.c文件存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303 Update2 
+x86_64 架构：
+elfutils、libasm1、libdw1、libelf1
+arm64 架构：
+elfutils、libasm1、libdw1、libelf1
+mips64el 架构：
+elfutils、libasm1、libdw1、libelf1
+loongarch64 架构：
+elfutils、libasm1、libdw1、libelf1
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303 Update2 
+0.176-1.1kylin0.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install elfutils
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303 Update2 
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/elfutils_0.176-1.1kylin0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libasm1_0.176-1.1kylin0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libdw1_0.176-1.1kylin0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libelf1_0.176-1.1kylin0.1_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/elfutils_0.176-1.1kylin0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libasm1_0.176-1.1kylin0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libdw1_0.176-1.1kylin0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libelf1_0.176-1.1kylin0.1_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/elfutils_0.176-1.1kylin0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libasm1_0.176-1.1kylin0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libdw1_0.176-1.1kylin0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libelf1_0.176-1.1kylin0.1_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/elfutils_0.176-1.1kylin0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libasm1_0.176-1.1kylin0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libdw1_0.176-1.1kylin0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/elfutils/libelf1_0.176-1.1kylin0.1_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303 Update2 版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

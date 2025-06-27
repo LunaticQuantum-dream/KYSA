@@ -1,0 +1,71 @@
+Name:KYSA-202205-0028
+Severity:重要
+Summary:curl安全漏洞
+Published:2024-03-18
+URL:/support/loophole/patch/5447.html
+Title:
+			公告ID：KYSA-202205-0028
+公告摘要：curl安全漏洞
+等级：重要
+发布日期：2024-03-18
+		
+1. 修复的CVE
+CVE-2022-27780
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在代码问题漏洞，该漏洞源于 URL 解析器在解码 URL 的主机名部分时错误地接受百分比编码的 URL 分隔符。
+CVE-2022-27782
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在信任管理问题漏洞，攻击者利用该漏洞可获得对敏感信息的访问权限。
+CVE-2022-27781
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在安全漏洞，攻击者利用该漏洞可执行拒绝服务 (DoS) 攻击。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+curl、libcurl3-gnutls、libcurl3-nss、libcurl4
+arm64 架构：
+curl、libcurl3-gnutls、libcurl3-nss、libcurl4
+mips64el 架构：
+curl、libcurl3-gnutls、libcurl3-nss、libcurl4
+loongarch64 架构：
+curl、libcurl3-gnutls、libcurl3-nss、libcurl4
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+7.68.0-1kylin2.12
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install curl
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/curl_7.68.0-1kylin2.12_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-gnutls_7.68.0-1kylin2.12_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-nss_7.68.0-1kylin2.12_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4_7.68.0-1kylin2.12_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/curl_7.68.0-1kylin2.12_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-gnutls_7.68.0-1kylin2.12_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-nss_7.68.0-1kylin2.12_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4_7.68.0-1kylin2.12_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/curl_7.68.0-1kylin2.12_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-gnutls_7.68.0-1kylin2.12_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-nss_7.68.0-1kylin2.12_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4_7.68.0-1kylin2.12_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/curl_7.68.0-1kylin2.12_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-gnutls_7.68.0-1kylin2.12_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-nss_7.68.0-1kylin2.12_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4_7.68.0-1kylin2.12_loongarch64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

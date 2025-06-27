@@ -1,0 +1,13 @@
+Name:KYSA-202104-0007
+Severity:中等
+Summary:gst-plugins-good1.0安全漏洞
+Published:2021-04-30
+URL:/support/loophole/patch/442.html
+Title:
+			摘要：gst-plugins-good1.0安全漏洞
+安全等级：中等
+公告ID：KYSA-202104-0007
+发布日期：2021-04-30
+影响CVE：CVE-2021-3498，CVE-2021-3497
+		
+1. 修复的CVE信息CVE-2021-3498GStreamer是一套用于处理流媒体的框架。GStreamer 1.18.4之前版本存在缓冲区错误漏洞，该漏洞源于在解析某些格式不正确的Matroska文件时可能会导致堆损坏。CVE-2021-3497GStreamer是一套用于处理流媒体的框架。GStreamer 1.18.4之前版本存在资源管理错误漏洞，该漏洞源于对某些格式错误的Matroska文件进行解析时，可能会在错误代码路径中访问已释放的内存。2. 受影响的软件包银河麒麟桌面操作系统V10 SP1gstreamer1.0-gtk3gstreamer1.0-plugins-goodgstreamer1.0-plugins-good-dbggstreamer1.0-plugins-good-docgstreamer1.0-pulseaudiogstreamer1.0-qt5libgstreamer-plugins-good1.0-0libgstreamer-plugins-good1.0-dev3. 影响的操作系统银河麒麟桌面操作系统V10 SP14. 修复版本软件包：gst-plugins-good1.01.16.2-1kylin2.1(V10 SP1)5. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2-desktop main restricted universe multiverse4.0.2-sp1桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10SP1版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级。$sudo apt update方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists6. 软件包下载地址银河麒麟桌面操作系统V10 SP1X86下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/gstreamer1.0-pulseaudio_1.16.2-1kylin2.1_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/gstreamer1.0-plugins-good-doc_1.16.2-1kylin2.1_all.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/libgstreamer-plugins-good1.0-dev_1.16.2-1kylin2.1_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/libgstreamer-plugins-good1.0-0_1.16.2-1kylin2.1_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/gstreamer1.0-plugins-good_1.16.2-1kylin2.1_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/g/gst-plugins-good1.0/gstreamer1.0-plugins-good-dbg_1.16.2-1kylin2.1_amd64.deb

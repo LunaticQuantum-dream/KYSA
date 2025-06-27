@@ -1,0 +1,13 @@
+Name:KYSA-202111-1002
+Severity:中等
+Summary:libEMF漏洞
+Published:2021-11-11
+URL:/support/loophole/patch/617.html
+Title:
+			摘要：libEMF漏洞
+安全等级：中等
+公告ID：KYSA-202111-1002
+发布日期：2021-11-11
+影响CVE：CVE-2020-11863、CVE-2020-11864、CVE-2020-11865、CVE-2020-11866、CVE-2020-13999
+		
+1. 修复的CVE信息CVE-2020-11863描述：libEMF 存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。CVE-2020-11864描述：libEMF 存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。CVE-2020-11865描述：libEMF 存在缓冲区错误漏洞。攻击者可借助特制文件利用该漏洞获取敏感信息。CVE-2020-11866描述：libEMF 存在资源管理错误漏洞。攻击者可借助特制文件利用该漏洞在系统上执行任意代码。CVE-2020-13999描述：libEMF 中的libemf.cpp文件的ScaleViewPortExtEx存在输入验证错误漏洞。攻击者可借助特制的EMF文件利用该漏洞造成拒绝服务。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2libEMF-1.0.13-1.ky10libEMF-devel-1.0.13-1.ky10libEMF-help-1.0.13-1.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:libEMF、libEMF-devel、libEMF-helpx86_64:libEMF、libEMF-devel、libEMF-help4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP2aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP2 libEMF aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libEMF-1.0.13-1.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libEMF-devel-1.0.13-1.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libEMF-help-1.0.13-1.ky10.aarch64.rpm libEMF x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libEMF-1.0.13-1.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libEMF-devel-1.0.13-1.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libEMF-help-1.0.13-1.ky10.x86_64.rpm注：其他相关依赖包请到相同目录下载 

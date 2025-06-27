@@ -1,0 +1,13 @@
+Name:KYSA-202110-1020
+Severity:重要
+Summary:spice漏洞
+Published:2021-10-16
+URL:/support/loophole/patch/542.html
+Title:
+			摘要：spice漏洞
+安全等级：重要
+公告ID：KYSA-202110-1020
+发布日期：2021-10-16
+影响CVE：CVE-2020-14355
+		
+1. 修复的CVE信息CVE-2020-14355描述：在SPICE远程显示系统QUIC图像解码过程中发现多个缓冲区溢出漏洞。SPICE客户机(SPICE -gtk)和服务器都受到这些缺陷的影响。这些缺陷允许恶意客户端或服务器发送经过QUIC图像压缩算法处理的特别制作的消息，这些消息会导致进程崩溃或潜在的代码执行。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10spice-server-0.14.0-9.el7_9.1spice-server-devel-0.14.0-9.el7_9.1中标麒麟高级服务器操作系统 V7spice-server-0.14.0-9.el7_9.1spice-server-devel-0.14.0-9.el7_9.13. 受影响的软件包银河麒麟高级服务器操作系统 V10x86_64:spice-server、spice-server-devel中标麒麟高级服务器操作系统 V7x86_64:spice-server、spice-server-devel4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/ 中标麒麟高级服务器操作系统 V7x86_64:http://update.cs2c.com.cn:8080/NS/V7/V7Update9/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 spice x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/spice-server-0.14.0-9.el7_9.1.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/spice-server-devel-0.14.0-9.el7_9.1.x86_64.rpm中标麒麟高级服务器操作系统 V7 spice x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/spice-server-0.14.0-9.el7_9.1.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/spice-server-devel-0.14.0-9.el7_9.1.x86_64.rpm注：其他相关依赖包请到相同目录下载 

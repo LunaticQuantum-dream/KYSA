@@ -1,0 +1,139 @@
+Name:KYSA-202104-1207
+Severity:重要
+Summary:glibc安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/5047.html
+Title:
+			公告ID：KYSA-202104-1207
+公告摘要：glibc安全漏洞
+等级：Important
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2016-10739
+描述：在GNUC库（又称glibc或libc6）到2.28中，getaddrinfo函数将成功解析包含IPv4地址后跟空格和任意字符的字符串，这可能导致应用程序错误地认为它解析了有效的字符串，不可能嵌入HTTP报头或其他潜在危险的子字符串。
+·CVE-2017-1000366
+描述：在为用户空间二进制文件在堆栈上分配内存的方式中发现了一个缺陷。如果堆（或不同的内存区域）和堆栈内存区域彼此相邻，攻击者可以利用此漏洞跳过堆栈保护间隙，在进程堆栈或相邻内存区域上造成受控内存损坏，从而增加他们在系统上的权限。这是glibc端的缓解措施，它阻止在安全执行模式下运行的程序处理LD_LIBRARY_路径，并减少LD_AUDIT、LD_PRELOAD和LD_HWCAP_MASK的处理执行的分配数量，使成功利用此问题更加困难。
+·CVE-2017-12132
+描述：在2.26版本之前的GNU C库（也。称为glibc或libc6）中，启用EDNS支持时，DNS存根解析程序将从名称服务器请求大量UDP响应，从而可能简化由于IP碎片而导致的非路径DNS欺骗攻击
+·CVE-2017-15670
+描述：2.27之前的gnuc库（又称glibc或libc6）包含一个off-by-one错误，导致glob.C中glob函数中基于堆的缓冲区溢出，这与使用~运算符后跟长字符串处理主目录有关。
+·CVE-2017-15804
+描述：glob.c函数中的glob.27或glob.2函数中的glob.2或glob.2函数中的glob.2或glob.2中的glob。
+·CVE-2017-16997
+描述：GNU c Library（aka glibc or libc6）2.19至2.26中的elf/dl load.c错误地处理了一个特权（setuid或AT_SECURE）程序的RPATH和包含$ORIGIN的RUNPATH，这使得本地用户可以通过当前工作目录中的特洛伊木马程序库获得特权，该程序与fillin_RPATH和decomposite_RPATH函数有关。这与错误地将空RPATH/RUNPATH令牌解释为“./”目录有关。注意：对于特权程序，这种RPATH/RUNPATH配置显然非常少见；很有可能，任何常见的Linux发行版都没有这样的程序。
+·CVE-2018-1000001
+描述：在glibc2.26及更早版本中，realpath（）对getcwd（）的用法存在混乱，它可用于在目标缓冲区之前写入，从而导致缓冲区下溢和潜在的代码执行。
+·CVE-2018-11236
+描述：GNU c Library（aka glib or libc6）2.27及更早版本中的stdlib/canonicalize.c在处理realpath函数的很长路径名参数时，可能在32位体系结构上遇到整数溢出，导致基于堆栈的缓冲区溢出，并可能导致任意代码执行。
+·CVE-2018-6485
+描述：GNU C库（又名glibc或libc6）2.26及更早版本中memalign函数中posix_memalign的实现中发生整数溢出可能会导致这些函数将指针返回到太小的堆区域，从而可能导致堆损坏。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+glibc、glibc-common、glibc-devel、glibc-headers、glibc-static、glibc-utils、nscd
+·x86_64架构:
+glibc、glibc-common、glibc-devel、glibc-headers、glibc-static、glibc-utils、nscd
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+glibc-2.17-292.el7.ns7.01或以上版本
+glibc-common-2.17-292.el7.ns7.01或以上版本
+glibc-devel-2.17-292.el7.ns7.01或以上版本
+glibc-headers-2.17-292.el7.ns7.01或以上版本
+glibc-static-2.17-292.el7.ns7.01或以上版本
+glibc-utils-2.17-292.el7.ns7.01或以上版本
+nscd-2.17-292.el7.ns7.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2016-10739:需要重启 glibc 以使漏洞修复生效。
+CVE-2017-1000366:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-12132:需要重启 glibc 以使漏洞修复生效。
+CVE-2017-15670:需要重启 glibc 以使漏洞修复生效。
+CVE-2017-15804:需要重启 glibc 以使漏洞修复生效。
+CVE-2017-16997:需要重启 glibc 以使漏洞修复生效。
+CVE-2018-1000001:需要重启操作系统以使漏洞修复生效。
+CVE-2018-11236:需要重启 glibc 以使漏洞修复生效。
+CVE-2018-6485:需要重启 glibc 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+glibc(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/glibc-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/glibc-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/glibc-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/glibc-common-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/glibc-common-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/glibc-common-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/glibc-devel-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/glibc-devel-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/glibc-devel-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/glibc-headers-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/glibc-headers-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/glibc-headers-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/glibc-static-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/glibc-static-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/glibc-static-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/glibc-utils-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/glibc-utils-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/glibc-utils-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/nscd-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/nscd-2.17-292.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/nscd-2.17-292.el7.ns7.01.aarch64.rpm
+
+glibc(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/glibc-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/glibc-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/glibc-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/glibc-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-common-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-common-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/glibc-common-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/glibc-common-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-devel-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/glibc-devel-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/glibc-devel-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-devel-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/glibc-devel-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/glibc-devel-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-headers-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-headers-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/glibc-headers-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/glibc-headers-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-static-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/glibc-static-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/glibc-static-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-static-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/glibc-static-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/glibc-static-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-utils-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/glibc-utils-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/glibc-utils-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/glibc-utils-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/nscd-2.17-292.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/nscd-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/nscd-2.17-292.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/nscd-2.17-292.el7.ns7.01.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

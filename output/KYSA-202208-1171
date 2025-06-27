@@ -1,0 +1,59 @@
+Name:KYSA-202208-1171
+Severity:低等
+Summary:patch安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1643.html
+Title:
+			公告ID：KYSA-202208-1171
+公告摘要：patch安全漏洞
+安全漏等级：Low
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2016-10713
+描述：GNU patch是GNU项目的一部分，它是一套用于生成补丁文件的工具。GNU patch 2.7.6之前版本中的pch.c文件的‘pch_write_line()’函数存在缓冲区溢出漏洞。远程攻击者可借助特制的输入文件利用该漏洞造成拒绝服务。
+·CVE-2018-6952
+描述：GNU patch是GNU项目的一部分，它是一套用于生成补丁文件的工具。GNU patch 2.7.6及之前版本中的pch.c文件的‘another_hunk’函数存在双重释放漏洞。远程攻击者可利用该漏洞造成拒绝服务。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+patch
+x86_64架构:
+patch
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+patch-2.7.1-11.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+262.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/
+263.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+264.升级完成后是否需要重启服务或操作系统：
+·CVE-2016-10713：需要重启 patch 以使漏洞修复生效。
+·CVE-2018-6952：需要重启 patch 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+patch（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/patch-2.7.1-11.el7.aarch64.rpm
+
+patch（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/patch-2.7.1-11.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

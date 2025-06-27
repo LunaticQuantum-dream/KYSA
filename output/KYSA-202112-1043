@@ -1,0 +1,12 @@
+Name:KYSA-202112-1043
+Severity:低等
+Summary:gmp漏洞
+Published:2021-12-31
+URL:/support/loophole/patch/718.html
+Title:
+			摘要：gmp漏洞
+安全等级：低等
+发布日期：2021-12-31
+影响CVE：CVE-2021-43618
+		
+1.修复的CVECVE-2021-43618描述：Gnu Multiple Precision Arithmetic Library（Gmp）是Gnu Project的一个任意精度算术的免费库。用于对有符号整数、有理数和浮点数进行运算。GNU Multiple Precision Arithmetic Library (GMP) 6.2.1及之前版本存在安全漏洞，该漏洞源于mpz/inp_raw.c整数溢出和通过特制输入产生的缓冲区溢出，导致32位平台上的分段错误。2.影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2debug/gmp-debuginfo-6.2.0-2.ky10gmp-6.2.0-2.ky10gmp-c++-6.2.0-2.ky10gmp-devel-6.2.0-2.ky103.受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:debug/gmp-debuginfo、gmp、gmp-c++、gmp-devel、x86_64:debug/gmp-debuginfo、gmp、gmp-c++、gmp-devel、4.修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP2aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5.软件包下载地址：银河麒麟高级服务器操作系统 V10 SP2 gmp aarch64软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/debug/gmp-debuginfo-6.2.0-2.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/gmp-6.2.0-2.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/gmp-c++-6.2.0-2.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/gmp-devel-6.2.0-2.ky10.aarch64.rpm gmp x86_64软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/debug/gmp-debuginfo-6.2.0-2.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/gmp-6.2.0-2.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/gmp-c++-6.2.0-2.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/gmp-devel-6.2.0-2.ky10.x86_64.rpm注：其他相关依赖包请到相同目录下载 

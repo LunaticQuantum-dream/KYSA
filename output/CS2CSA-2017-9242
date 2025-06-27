@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-9242
+Severity:中等
+Summary:Linux kernel 安全漏洞
+Published:2017-05-17
+URL:/support/loophole/patch/95.html
+Title:
+			摘要：              Linux kernel 安全漏洞
+安全等级：          中等
+公告ID：           CS2CSA-2017-9242
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-05-17
+CVE：             CVE-2017-9242 CVSS3评分：5.5
+		
+1. 概述：中标麒麟高级服务器操作系统V7有 Linux kernel 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：ipv6/ip6_output 中的 ip6_append_data 函数在 Linux 4.11.3内核中无法检查是否可能发生 skb 数据结构的改写, 这允许本地用户通过精心编制的系统调用导致拒绝服务 (系统崩溃)。4. 安装包列表： 中标麒麟高级服务器操作系统V7：源码包：kernel-3.10.0-693.el7.src.rpmx86_64二进制包：kernel-3.10.0-693.el7.x86_64.rpm    kernel-abi-whitelists-3.10.0-693.el7.noarch.rpm kernel-debug-3.10.0-693.el7.x86_64.rpm  kernel-debug-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-debug-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-debug-devel-3.10.0-693.el7.x86_64.rpm    kernel-debuginfo-3.10.0-693.el7.x86_64.rpm  kernel-debuginfo-3.10.0-693.el7.x86_64.rpm  kernel-debuginfo-common-x86_64-3.10.0-693.el7.x86_64.rpm    kernel-debuginfo-common-x86_64-3.10.0-693.el7.x86_64.rpm    kernel-devel-3.10.0-693.el7.x86_64.rpm  kernel-doc-3.10.0-693.el7.noarch.rpm    kernel-headers-3.10.0-693.el7.x86_64.rpm    kernel-tools-3.10.0-693.el7.x86_64.rpm  kernel-tools-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-tools-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-tools-libs-3.10.0-693.el7.x86_64.rpm kernel-tools-libs-devel-3.10.0-693.el7.x86_64.rpm   perf-3.10.0-693.el7.x86_64.rpm  perf-debuginfo-3.10.0-693.el7.x86_64.rpm    perf-debuginfo-3.10.0-693.el7.x86_64.rpm    python-perf-3.10.0-693.el7.x86_64.rpm   python-perf-debuginfo-3.10.0-693.el7.x86_64.rpm python-perf-debuginfo-3.10.0-693.el7.x86_64.rpm			

@@ -1,0 +1,125 @@
+Name:KYSA-202409-1145
+Severity:重要
+Summary:nodejs安全漏洞
+Published:2024-09-24
+URL:/support/loophole/patch/6379.html
+Title:
+			公告ID：KYSA-202409-1145
+公告摘要：nodejs安全漏洞
+等级：重要
+发布日期：2024-09-24
+		
+1.修复的漏洞
+·CVE-2023-0464
+描述：在处理证书policy校验的时候未做限制，导致遇到恶意证书链时，无法识别。攻击者可以通过创建恶意证书链来利用此漏洞，从而触发计算资源的大量消耗，对系统进行拒绝服务（DOS）攻击。
+·CVE-2023-0465
+描述：openssl会忽略有问题的叶子证书中的policy校验。恶意的CA可以使用它故意颁发无效的证书，以便规避检查证书的policy。应用程序在验证证书时使用非默认选项的时候，可能容易受到恶意CA的攻击，以规避某些检查，导致证书无法被正确校验
+·CVE-2023-44487
+描述：HTTP/2是超文本传输协议的第二版，主要用于保证客户机与服务器之间的通信。
+Apache HTTP/2存在安全漏洞。攻击者利用该漏洞导致系统拒绝服务。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·aarch64架构:
+nodejs-libs、nodejs-devel、nodejs-docs、nodejs、npm、v8-devel、nodejs-full-i18n
+·x86_64架构:
+nodejs-libs、nodejs-devel、nodejs-docs、nodejs、npm、v8-devel、nodejs-full-i18n
+·银河麒麟云底座操作系统 V10
+·aarch64架构:
+nodejs-libs、nodejs-devel、nodejs-docs、nodejs、npm、v8-devel、nodejs-full-i18n
+·x86_64架构:
+nodejs-libs、nodejs-devel、nodejs-docs、nodejs、npm、v8-devel、nodejs-full-i18n
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (aarch64)
+npm-6.14.16-1.12.22.11.5.p02.ky10h或以上版本
+nodejs-full-i18n-12.22.11-5.p02.ky10h或以上版本
+nodejs-devel-12.22.11-5.p02.ky10h或以上版本
+nodejs-docs-12.22.11-5.p02.ky10h或以上版本
+nodejs-libs-12.22.11-5.p02.ky10h或以上版本
+nodejs-12.22.11-5.p02.ky10h或以上版本
+v8-devel-7.8.279.23-1.12.22.11.5.p02.ky10h或以上版本
+·银河麒麟高级服务器操作系统 V10 HPC (x86_64)
+nodejs-full-i18n-12.22.11-5.p02.ky10h或以上版本
+npm-6.14.16-1.12.22.11.5.p02.ky10h或以上版本
+nodejs-devel-12.22.11-5.p02.ky10h或以上版本
+nodejs-docs-12.22.11-5.p02.ky10h或以上版本
+nodejs-libs-12.22.11-5.p02.ky10h或以上版本
+nodejs-12.22.11-5.p02.ky10h或以上版本
+v8-devel-7.8.279.23-1.12.22.11.5.p02.ky10h或以上版本
+·银河麒麟云底座操作系统 V10 (aarch64、x86_64)
+nodejs-full-i18n-12.22.11-5.p02.ky10h或以上版本
+npm-6.14.16-1.12.22.11.5.p02.ky10h或以上版本
+nodejs-devel-12.22.11-5.p02.ky10h或以上版本
+nodejs-docs-12.22.11-5.p02.ky10h或以上版本
+nodejs-libs-12.22.11-5.p02.ky10h或以上版本
+nodejs-12.22.11-5.p02.ky10h或以上版本
+v8-devel-7.8.279.23-1.12.22.11.5.p02.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+aarch64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+银河麒麟云底座操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-0464:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-0465:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-44487:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+nodejs(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nodejs-devel-12.22.11-5.p02.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nodejs-12.22.11-5.p02.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/npm-6.14.16-1.12.22.11.5.p02.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nodejs-docs-12.22.11-5.p02.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/v8-devel-7.8.279.23-1.12.22.11.5.p02.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nodejs-full-i18n-12.22.11-5.p02.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nodejs-libs-12.22.11-5.p02.ky10h.aarch64.rpm
+
+nodejs(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nodejs-12.22.11-5.p02.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nodejs-docs-12.22.11-5.p02.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/v8-devel-7.8.279.23-1.12.22.11.5.p02.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nodejs-devel-12.22.11-5.p02.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nodejs-full-i18n-12.22.11-5.p02.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/npm-6.14.16-1.12.22.11.5.p02.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nodejs-libs-12.22.11-5.p02.ky10h.x86_64.rpm
+
+·银河麒麟云底座操作系统 V10
+
+nodejs(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/nodejs-12.22.11-5.p02.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/nodejs-devel-12.22.11-5.p02.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/nodejs-docs-12.22.11-5.p02.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/nodejs-full-i18n-12.22.11-5.p02.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/nodejs-libs-12.22.11-5.p02.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/npm-6.14.16-1.12.22.11.5.p02.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/aarch64/Packages/v8-devel-7.8.279.23-1.12.22.11.5.p02.ky10h.aarch64.rpm
+
+nodejs(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/nodejs-12.22.11-5.p02.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/nodejs-libs-12.22.11-5.p02.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/nodejs-devel-12.22.11-5.p02.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/nodejs-full-i18n-12.22.11-5.p02.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/nodejs-docs-12.22.11-5.p02.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/v8-devel-7.8.279.23-1.12.22.11.5.p02.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/HOST/2309/os/adv/lic/updates/x86_64/Packages/npm-6.14.16-1.12.22.11.5.p02.ky10h.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

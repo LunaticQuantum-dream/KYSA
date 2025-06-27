@@ -1,0 +1,15 @@
+Name:CS2CSA-2019-8070
+Severity:严重
+Summary:Adobe Flash Player 资源管理错误漏洞
+Published:2019-04-09
+URL:/support/loophole/patch/208.html
+Title:
+			摘要：             Adobe Flash Player 资源管理错误漏洞
+安全等级：          严重
+公告ID：         CS2CSA-2019-8070
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2019-04-9
+CVE：            CVE-2019-8070  CVE-2019-8069 CVE-2019-7845    
+                      CVE-2019-7837   CVE-2019-7096 CVSS3评分：8.8
+		
+1. 概述：中标麒麟高级服务器操作系统V6有Adobe Flash Player可用的更新。中标麒麟高级服务器操作系统V7有Adobe Flash Player 可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：Adobe Flash Player是美国奥多比（Adobe）公司的一款跨平台、基于浏览器的多媒体播放器产品。该产品支持跨屏幕和浏览器查看应用程序、内容和视频。Adobe Flash Player中存在资源管理错误漏洞。攻击者可利用该漏洞在当前用户的上下文中执行任意代码。Adobe Flash Player中存在释放后重用漏洞。该漏洞源于网络系统或产品对系统资源（如内存、磁盘空间、文件等）的管理不当。

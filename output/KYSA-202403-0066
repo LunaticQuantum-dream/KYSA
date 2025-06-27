@@ -1,0 +1,149 @@
+Name:KYSA-202403-0066
+Severity:重要
+Summary:curl安全漏洞
+Published:2025-02-25
+URL:/support/loophole/patch/7310.html
+Title:
+			公告ID：KYSA-202403-0066
+公告摘要：curl安全漏洞
+等级：重要
+发布日期：2025-02-25
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2107、银河麒麟桌面操作系统V10 SP1 2203版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2021-22876
+HAXX Haxx libcurl是一个免费、开源的客户端URL传输库。该库支持FTP、FTPS、TFTP、HTTP等。libcurl 存在信息泄露漏洞，攻击者可利用该漏洞绕过对数据的访问限制，以获取敏感信息。
+CVE-2021-22890
+HAXX Haxx libcurl是一个免费、开源的客户端URL传输库。该库支持FTP、FTPS、TFTP、HTTP等。libcurl 存在安全漏洞，攻击者可利用该漏洞可以通过会话票证代理主机混淆来充当中间人。
+CVE-2021-22924
+Arch Linux是Arch开源的一个应用系统。一个轻量级且灵活的Linux®发行版，试图使它保持简单。Arch Linux中存在信任管理问题漏洞，该漏洞源于产品的配置匹配函数不能正确处理 issuer cert 并且比较路径时逻辑错误。攻击者可通过该漏洞访问系统的敏感信息。 以下产品及版本受到影响：libcurl-gnutls  7.78.0-1 之前版本。
+CVE-2021-22898
+HAXX Haxx libcurl是一个免费、开源的客户端URL传输库。该库支持FTP、FTPS、TFTP、HTTP等。HAXX libcurl存在信息泄露漏洞，该漏洞源于libcurl可以将未初始化的数据从基于堆栈的缓冲区传递到服务器导致使用明文网络协议将敏感的内部信息泄露给服务。
+CVE-2021-22925
+Arch Linux是Arch开源的一个应用系统。一个轻量级且灵活的Linux®发行版，试图使它保持简单。Arch Linux中存在安全漏洞，该漏洞源于处理TELNET请求并解析NEW_ENV时使用了未初始化的变量，远程攻击者可以利用该漏最多读取1800字节的影响控制TELNET服务器。 受影响的产品及版本包括：Arch Linux：所有版本
+CVE-2021-22946
+HAXX Haxx curl是一套利用URL语法在命令行下工作的文件传输工具。该工具支持文件上传和下载，并包含一个用于程序开发的libcurl（客户端URL传输库）。Haxx curl 存在安全漏洞，该漏洞将使curl在没有TLS的情况下默默地继续其操作，这与指令和预期相反，可能会在网络上以明文形式暴露敏感数据。
+CVE-2021-22947
+HAXX Haxx curl是一套利用URL语法在命令行下工作的文件传输工具。该工具支持文件上传和下载，并包含一个用于程序开发的libcurl（客户端URL传输库）。Haxx curl 存在数据伪造问题漏洞，该漏洞源于网络系统或产品未充分验证数据的来源或真实性。攻击者可利用伪造的数据进行攻击。
+CVE-2023-28321
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在安全漏洞，该漏洞源于IDN 通配符匹配可能导致不正确的证书验证。
+CVE-2023-28322
+libcurl是一款用于从服务器传输数据或向服务器传输数据的工具。 libcurl 存在安全漏洞，该漏洞源于重用句柄的逻辑中存在问题。
+CVE-2023-27533
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 8.0之前版本存在安全漏洞，该漏洞源于存在输入验证漏洞，可能允许攻击者能够在系统上执行任意代码。
+CVE-2023-27534
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。FTP是一个简单 FTP 客户端和服务器的实现。curl 8.0之前版本存在安全漏洞，该漏洞源于存在路径遍历漏洞，攻击者可以利用此漏洞可以绕过过滤或执行任意代码。
+CVE-2023-27536
+curl是libcurl是got是 curl 8.0之前版本存在安全漏洞，该漏洞源于存在身份验证绕过漏洞，可能导致未经授权访问敏感信息。
+CVE-2023-27535
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 8.0之前版本存在安全漏洞，该漏洞源于存在身份验证绕过漏洞，可能允许未经授权访问敏感信息。
+CVE-2023-27538
+libcurl是一款用于从服务器传输数据或向服务器传输数据的工具。 libcurl v8.0.0版本存在授权问题漏洞，该漏洞源于可以重用先前建立的SSH连接，存在身份验证绕过漏洞。
+CVE-2023-46219
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。curl 7.46.0到 8.4.0版本存在安全漏洞，该漏洞源于 save函数会在文件名后附加后缀，并创建了一个临时文件，当文件名长度接近文件系统允许的限制时，curl 可能会删除所有内容。
+CVE-2023-46218
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。curl 7.46.0到 8.4.0版本存在安全漏洞，该漏洞源于 curl函数中存在混合大小写缺陷，允许恶意 HTTP server在curl 中设置 super cookies，然后传回更多的信息。
+CVE-2024-2004
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。curl 7.85.0版本至8.6.0版本存在安全漏洞，该漏洞源于删除协议的逻辑错误，对输入存在误解。
+CVE-2024-2398
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。Curl 7.44.0 到 8.6.0版本存在安全漏洞，该漏洞源于允许 HTTP/2 推送，当接收到的推送标头数量超过允许的最大限制 (1000) 时，libcurl 会中止服务器推送，中止时，导致内存泄漏。
+CVE-2023-38546
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 7.9.1至8.3.0版本存在安全漏洞，该漏洞源于存在cookie注入漏洞，允许攻击者将cookie插入正在运行的程序中。
+CVE-2022-32207
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 7.69.0版本到7.83.1版本存在安全漏洞，该漏洞源于在重命名操作中curl会意外夸大目标文件的权限。
+CVE-2022-32206
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 7.57.0版本到7.83.1版本存在资源管理错误漏洞，该漏洞源于curl支持的链式HTTP压缩算法缺少对于链接的数量限制。攻击者利用该漏洞可以会导致内存分配过大从而导致堆错误。
+CVE-2022-32205
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 7.71.0版本到7.83.1版本存在资源管理错误漏洞，该漏洞源于curl对于生成的HTTP请求中Set-Cookie大小缺少限制。攻击者利用该漏洞可以实现拒绝服务攻击。
+CVE-2022-32208
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 7.16.4 版本之后包括 7.83.1 版本存在缓冲区错误漏洞，该漏洞源于错误地处理了某些 cookie。攻击者利用该漏洞可执行拒绝服务攻击。
+CVE-2022-27780
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在代码问题漏洞，该漏洞源于 URL 解析器在解码 URL 的主机名部分时错误地接受百分比编码的 URL 分隔符。
+CVE-2022-27782
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在信任管理问题漏洞，攻击者利用该漏洞可获得对敏感信息的访问权限。
+CVE-2022-27781
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在安全漏洞，攻击者利用该漏洞可执行拒绝服务 (DoS) 攻击。
+CVE-2022-27774
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在信息泄露漏洞，该漏洞源于当它遵循从受身份验证保护的 HTTP(S) URL 到其他协议和端口号的重定向时，此安全漏洞允许将凭据泄露给其他服务器。
+CVE-2022-27776
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在信息泄露漏洞。此安全漏洞允许泄漏身份验证或 HTTP 上的 cookie 标头数据重定向到同一主机但另一个端口号。 对于传递自定义 Authorization: 或 Cookie: 标头的应用程序而言，将同一组标头发送到不同端口号上的服务器是一个问题。 这些标头通常包含隐私敏感信息或数据。
+CVE-2022-22576
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在访问控制错误漏洞，该漏洞源于应用重用OAUTH2身份验证的连接。无需正确确保使用为此传输设置的相同凭据对连接进行身份验证。攻击者利用该漏洞可以实现身份验证绕过。
+CVE-2022-27775
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在资源管理错误漏洞，该漏洞源于配置匹配功能未考虑 IPv6 地址区域 ID 的逻辑错误。当一次传输使用区域 id 并且后续传输使用另一个时，此问题可能导致 curl 重用错误的连接。
+CVE-2022-32221
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl 存在安全漏洞。攻击者利用该漏洞发送错误数据。
+CVE-2022-35260
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl存在安全漏洞，该漏洞源于curl可以读取超过基于堆栈的缓冲区的末尾，从而发生拒绝服务。
+CVE-2022-42916
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl存在安全漏洞，该漏洞源于HSTS检查可以被绕过以欺骗它继续使用HTTP。
+CVE-2022-42915
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl存在安全漏洞，该漏洞源于错误/清理处理中存在问题，如果使用HTTP代理进行具有非HTTP(S) URL的传输，则会导致双重释放。
+CVE-2022-43551
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl存在安全漏洞，该漏洞源于HSTS检查被绕过，以欺骗它继续使用HTTP。攻击者利用该漏洞可以访问curl上的数据，以读取敏感信息。
+CVE-2022-43552
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl存在安全漏洞。攻击者利用该漏洞强制重用curl已释放的内存区域，以触发拒绝服务，并可能运行代码。
+CVE-2023-23915
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl v7.88.0之前版本存在安全漏洞，该漏洞源于存在敏感信息明文传输漏洞，攻击者利用该漏洞可以通过并行请求多个URL导致HSTS功能失效。
+CVE-2023-23914
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl v7.88.0之前版本存在安全漏洞，该漏洞源于存在敏感信息明文传输漏洞，攻击者利用该漏洞可以通过连续请求多个URL导致HSTS功能失效。
+CVE-2023-23916
+curl是一款用于从服务器传输数据或向服务器传输数据的工具。 curl v7.88.0之前版本存在安全漏洞，该漏洞源于存在无限制或节流资源分配漏洞。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2107、银河麒麟桌面操作系统V10 SP1 2203
+x86_64 架构：
+curl、libcurl3-gnutls、libcurl3-nss、libcurl4
+arm64 架构：
+curl、libcurl3-gnutls、libcurl3-nss、libcurl4
+mips64el 架构：
+curl、libcurl3-gnutls、libcurl3-nss、libcurl4
+loongarch64 架构：
+curl、libcurl3-gnutls、libcurl3-nss、libcurl4
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2107、银河麒麟桌面操作系统V10 SP1 2203
+7.68.0-1kylin2.22
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install curl
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2107、银河麒麟桌面操作系统V10 SP1 2203
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/curl_7.68.0-1kylin2.22_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-gnutls_7.68.0-1kylin2.22_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-nss_7.68.0-1kylin2.22_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4_7.68.0-1kylin2.22_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/curl_7.68.0-1kylin2.22_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-gnutls_7.68.0-1kylin2.22_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-nss_7.68.0-1kylin2.22_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4_7.68.0-1kylin2.22_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/curl_7.68.0-1kylin2.22_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-gnutls_7.68.0-1kylin2.22_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-nss_7.68.0-1kylin2.22_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4_7.68.0-1kylin2.22_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/curl_7.68.0-1kylin2.22_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-gnutls_7.68.0-1kylin2.22_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-nss_7.68.0-1kylin2.22_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4_7.68.0-1kylin2.22_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2107、银河麒麟桌面操作系统V10 SP1 2203版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

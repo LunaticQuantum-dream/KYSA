@@ -1,0 +1,118 @@
+Name:KYSA-202208-1235
+Severity:重要
+Summary:libreport安全漏洞
+Published:2022-08-16
+URL:/support/loophole/patch/4265.html
+Title:
+			公告ID：KYSA-202208-1235
+公告摘要：libreport安全漏洞
+等级：Important
+发布日期：2022-08-16
+		
+1.修复的CVE
+·CVE-2011-4088
+描述：abrt中存在信息泄露漏洞。攻击者可利用该漏洞获得潜在地敏感信息，这将有助于进一步的攻击。abrt 2.0.6版本中存在该漏洞，其他版本也可能受影响。
+·CVE-2012-1106
+描述：Automatic Bug Reporting Tool(ABRT)2.0.8版本和早期版本中的C处理程序插件中存在漏洞，该漏洞源于sysctl fs.suid_dumpable操作设置为2时未正确设置组(GID)在核心文件的setuid程序中的权限。本地攻击者可利用该漏洞获取敏感信息。
+·CVE-2012-5659
+描述：ABRT是一套自动BUG报告工具。Automatic Bug Reporting Tool (ABRT) 2.0.9和较早版本中的plugins/abrt-action-install-debuginfo-to-abrt-cache.c中存在不可信搜索路径漏洞。通过修改PYTHONPATH环境变量来引用恶意的Python模块，本地攻击者利用该漏洞加载并执行任意Python模块。
+·CVE-2012-5660
+描述：ABRT是一套自动BUG报告工具。Automatic Bug Reporting Tool (ABRT) 2.0.9和较早版本中的abrt-action-install-debuginfo中存在漏洞。通过对‘用于存储有关崩溃信息的目录’进行符号链接攻击，本地攻击者利用该漏洞设置任意文件为全局可写并获得权限。
+·CVE-2015-1869
+描述：ABRT是一套自动BUG报告工具。ABRT中存在权限许可和访问控制问题漏洞。本地攻击者可利用该漏洞获取root权限。
+·CVE-2015-1870
+描述：Automatic Bug Reporting Tool（ABRT）是一个帮助用户检测和报告应用程序崩溃的工具。
+
+Automatic Bug Reporting Tool存在信息泄露漏洞，该漏洞源于程序为受影响路径下的sosreport的复制文件分配全域可读权限。本地攻击者可利用该漏洞获从/var/log/messages中获取敏感信息。
+·CVE-2015-3142
+描述：Automatic Bug Reporting Tool（ABRT）是一个帮助用户检测和报告应用程序崩溃的工具。
+
+Automatic Bug Reporting Tool存在信息泄露漏洞，该漏洞源于在将core dumps写入文件时，程序没有检测文件的所有权。本地攻击者可利用该漏洞获取敏感信息。
+·CVE-2015-3147
+描述：ABRT是一套自动BUG报告工具。ABRT中存在权限许可和访问控制问题漏洞。攻击者可利用该漏洞绕过安全限制，执行未授权操作。
+·CVE-2015-3159
+描述：ABRT是一套自动BUG报告工具。ABRT中存在权限许可和访问控制问题漏洞。本地攻击者可利用该漏洞获取root权限。
+·CVE-2015-3315
+描述：ABRT中存在安全漏洞。本地攻击者可借助符号链接攻击利用该漏洞读取、更改文件的所有权。
+·CVE-2015-5302
+描述：libreport是一套使用C＃语言在DotNET1.1环境下开发的用于建立主从关系、分组报表的组件。libreport 2.6.3之前2.0.7版本中存在安全漏洞，该漏洞源于程序在编辑崩溃报告时只保存对第一个文件的更改。远程攻击者可利用该漏洞获取敏感信息。受影响的文件包括backtrace，cmdline，environ，open_fds，maps，smaps，hostname，remote，ks.cfg，anaconda-tb文件附件。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+libreport、libreport-cli、libreport-compat、libreport-devel、libreport-filesystem、libreport-gtk、libreport-gtk-devel、libreport-newt、libreport-plugin-bugzilla、libreport-plugin-kerneloops、libreport-plugin-logger、libreport-plugin-mailx、libreport-plugin-reportuploader、libreport-plugin-rhtsupport、libreport-plugin-ureport、libreport-python
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+libreport-2.0.9-33.el6.ns6.01或以上版本
+libreport-cli-2.0.9-33.el6.ns6.01或以上版本
+libreport-compat-2.0.9-33.el6.ns6.01或以上版本
+libreport-devel-2.0.9-33.el6.ns6.01或以上版本
+libreport-filesystem-2.0.9-33.el6.ns6.01或以上版本
+libreport-gtk-2.0.9-33.el6.ns6.01或以上版本
+libreport-gtk-devel-2.0.9-33.el6.ns6.01或以上版本
+libreport-newt-2.0.9-33.el6.ns6.01或以上版本
+libreport-plugin-bugzilla-2.0.9-33.el6.ns6.01或以上版本
+libreport-plugin-kerneloops-2.0.9-33.el6.ns6.01或以上版本
+libreport-plugin-logger-2.0.9-33.el6.ns6.01或以上版本
+libreport-plugin-mailx-2.0.9-33.el6.ns6.01或以上版本
+libreport-plugin-reportuploader-2.0.9-33.el6.ns6.01或以上版本
+libreport-plugin-rhtsupport-2.0.9-33.el6.ns6.01或以上版本
+libreport-plugin-ureport-2.0.9-33.el6.ns6.01或以上版本
+libreport-python-2.0.9-33.el6.ns6.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2011-4088:需要重启 libreport 以使漏洞修复生效。
+CVE-2012-1106:需要重启 libreport 以使漏洞修复生效。
+CVE-2012-5659:需要重启 libreport 以使漏洞修复生效。
+CVE-2012-5660:需要重启 libreport 以使漏洞修复生效。
+CVE-2015-1869:需要重启 libreport 以使漏洞修复生效。
+CVE-2015-1870:需要重启 libreport 以使漏洞修复生效。
+CVE-2015-3142:需要重启 libreport 以使漏洞修复生效。
+CVE-2015-3147:需要重启 libreport 以使漏洞修复生效。
+CVE-2015-3159:需要重启 libreport 以使漏洞修复生效。
+CVE-2015-3315:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2015-5302:需要重启 libreport 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+libreport(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-2.0.9-33.el6.ns6.01.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-cli-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-compat-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-devel-2.0.9-33.el6.ns6.01.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-devel-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-filesystem-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-gtk-2.0.9-33.el6.ns6.01.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-gtk-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-gtk-devel-2.0.9-33.el6.ns6.01.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-gtk-devel-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-newt-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-plugin-bugzilla-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-plugin-kerneloops-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-plugin-logger-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-plugin-mailx-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-plugin-reportuploader-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-plugin-rhtsupport-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-plugin-ureport-2.0.9-33.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libreport-python-2.0.9-33.el6.ns6.01.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

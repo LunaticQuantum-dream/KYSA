@@ -1,0 +1,131 @@
+Name:KYSA-202012-1010
+Severity:重要
+Summary:tomcat安全漏洞
+Published:2020-12-01
+URL:/support/loophole/patch/3200.html
+Title:
+			公告ID：KYSA-202012-1010
+公告摘要：tomcat安全漏洞
+等级：Important
+发布日期：2020-12-01
+		
+1.修复的CVE
+·CVE-2020-1938
+描述：CVE-2020-1938是Apache Tomcat中AJP连接器中的文件读取/包含漏洞。默认情况下启用此功能，默认配置端口为8009。未经验证的远程攻击者可以利用此漏洞从易受攻击的服务器读取web应用程序文件。在易受攻击的服务器允许上载文件的情况下，攻击者可以上载各种文件类型中的恶意JavaServer Pages（JSP）代码，并触发此漏洞以获得远程代码执行（RCE).
+·CVE-2020-9484
+描述：在apachetomcat使用文件存储时发现了反序列化缺陷。在特定情况下，攻击者可以使用巧尽心思构建的请求，通过对其控制下的文件进行反序列化来触发远程代码执行。该漏洞的最大威胁是数据机密性和完整性以及系统可用性。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+tomcat、tomcat-admin-webapps、tomcat-docs-webapp、tomcat-el-2.2-api、tomcat-javadoc、tomcat-jsp-2.2-api、tomcat-jsvc、tomcat-lib、tomcat-servlet-3.0-api、tomcat-webapps
+·x86_64架构:
+tomcat、tomcat-admin-webapps、tomcat-docs-webapp、tomcat-el-2.2-api、tomcat-javadoc、tomcat-jsp-2.2-api、tomcat-jsvc、tomcat-lib、tomcat-servlet-3.0-api、tomcat-webapps
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+tomcat、tomcat-admin-webapps、tomcat-docs-webapp、tomcat-el-2.2-api、tomcat-javadoc、tomcat-jsp-2.2-api、tomcat-jsvc、tomcat-lib、tomcat-servlet-3.0-api、tomcat-webapps
+·x86_64架构:
+tomcat、tomcat-admin-webapps、tomcat-docs-webapp、tomcat-el-2.2-api、tomcat-javadoc、tomcat-jsp-2.2-api、tomcat-jsvc、tomcat-lib、tomcat-servlet-3.0-api、tomcat-webapps
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+tomcat-7.0.76-15.el7或以上版本
+tomcat-admin-webapps-7.0.76-15.el7或以上版本
+tomcat-docs-webapp-7.0.76-15.el7或以上版本
+tomcat-el-2.2-api-7.0.76-15.el7或以上版本
+tomcat-javadoc-7.0.76-15.el7或以上版本
+tomcat-jsp-2.2-api-7.0.76-15.el7或以上版本
+tomcat-jsvc-7.0.76-15.el7或以上版本
+tomcat-lib-7.0.76-15.el7或以上版本
+tomcat-servlet-3.0-api-7.0.76-15.el7或以上版本
+tomcat-webapps-7.0.76-15.el7或以上版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+tomcat-7.0.76-15.el7或以上版本
+tomcat-admin-webapps-7.0.76-15.el7或以上版本
+tomcat-docs-webapp-7.0.76-15.el7或以上版本
+tomcat-el-2.2-api-7.0.76-15.el7或以上版本
+tomcat-javadoc-7.0.76-15.el7或以上版本
+tomcat-jsp-2.2-api-7.0.76-15.el7或以上版本
+tomcat-jsvc-7.0.76-15.el7或以上版本
+tomcat-lib-7.0.76-15.el7或以上版本
+tomcat-servlet-3.0-api-7.0.76-15.el7或以上版本
+tomcat-webapps-7.0.76-15.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-1938:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-9484:需要重启 tomcat 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+tomcat(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-admin-webapps-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-docs-webapp-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-el-2.2-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-javadoc-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-jsp-2.2-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-jsvc-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-lib-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-servlet-3.0-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/tomcat-webapps-7.0.76-15.el7.noarch.rpm
+
+tomcat(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-admin-webapps-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-docs-webapp-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-el-2.2-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-javadoc-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-jsp-2.2-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-jsvc-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-lib-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-servlet-3.0-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/tomcat-webapps-7.0.76-15.el7.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+tomcat(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/tomcat-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/tomcat-admin-webapps-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/tomcat-docs-webapp-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/tomcat-el-2.2-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/tomcat-javadoc-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/tomcat-jsp-2.2-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/tomcat-jsvc-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/tomcat-lib-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/tomcat-servlet-3.0-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/tomcat-webapps-7.0.76-15.el7.noarch.rpm
+
+tomcat(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/tomcat-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/tomcat-admin-webapps-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/tomcat-docs-webapp-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/tomcat-el-2.2-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/tomcat-javadoc-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/tomcat-jsp-2.2-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/tomcat-jsvc-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/tomcat-lib-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/tomcat-servlet-3.0-api-7.0.76-15.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/tomcat-webapps-7.0.76-15.el7.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

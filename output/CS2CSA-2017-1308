@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-1308
+Severity:重要
+Summary:kernel安全更新与缺陷修复
+Published:2017-05-25
+URL:/support/loophole/patch/60.html
+Title:
+			摘要：             kernel安全更新与缺陷修复
+安全等级：          重要
+公告ID：           CS2CSA-2017-1308
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-05-25
+CVE：             CVE-2016-10208，CVE-2016-7910，CVE-2016-8646，CVE-2017-5986，CVE-2017-7308
+		
+1. 概述：中标麒麟高级服务器操作系统V7有kernel可用的安全更新与缺陷修复。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：kernel升级包。4. 安全加固：* 内核网络实现层的packet_set_ring()函数不能够正确验证块大小的数据，拥有CAP_NET_RAW（这是caplist数组中的一个值，即允许使用原始(raw)套接字，使用该capability编程的程序可以接收到本机网卡上的数据帧或者数据包）能力相关程序的本地攻击者可以利用该缺陷触发内存泄漏，从而导致系统崩溃。该漏洞的特性不能完全排除权限提升的可能。(CVE-2017-7308， 重要的)* 以只读方式挂载一个EXT4格式的磁盘镜像的时候，会导致攻击者对非法内存地址进行读取。(CVE-2016-10208，中等的)* 内核序列文件接口（seq_file，普通文件read中加入了内核缓冲的功能，从而实现顺序多次遍历）的实现上存在一个缺陷，本地攻击者利用该漏洞可以篡改put()函数指针。这会导致内存发生错误，并有可能提升用户权限。(CVE-2016-7910，中等的)* 一个未授权的本地用户试图在使用内核散列算法处理空数据集的时候，可能会触发shash_async_export()调用崩溃。(CVE-2016-8646，中等的)* 在内核v4.10-rc8版本之前，应用程序在运行的时候，如果socket的tx缓冲满了，可能会触发sctp_wait_for_sndbuf调用的BUG_ON。(CVE-2017-5986，中等的)5. 缺陷修复：CVE-2017-7308 kernel： net/packet：修复检查priv大小时溢出。6. 安装包列表：中标麒麟高级服务器操作系统V7： 源码包： kernel-3.10.0-514.21.1.el7.src.rpmx86_64二进制包：kernel-3.10.0-514.21.1.el7.x86_64.rpmkernel-debug-3.10.0-514.21.1.el7.x86_64.rpmkernel-debug-debuginfo-3.10.0-514.21.1.el7.x86_64.rpmkernel-debug-devel-3.10.0-514.21.1.el7.x86_64.rpmkernel-debuginfo-3.10.0-514.21.1.el7.x86_64.rpmkernel-debuginfo-common-x86_64-3.10.0-514.21.1.el7.x86_64.rpmkernel-devel-3.10.0-514.21.1.el7.x86_64.rpmkernel-headers-3.10.0-514.21.1.el7.x86_64.rpmkernel-tools-3.10.0-514.21.1.el7.x86_64.rpmkernel-tools-debuginfo-3.10.0-514.21.1.el7.x86_64.rpmkernel-tools-libs-3.10.0-514.21.1.el7.x86_64.rpmperf-3.10.0-514.21.1.el7.x86_64.rpmperf-debuginfo-3.10.0-514.21.1.el7.x86_64.rpmpython-perf-3.10.0-514.21.1.el7.x86_64.rpmpython-perf-debuginfo-3.10.0-514.21.1.el7.x86_64.rpm			

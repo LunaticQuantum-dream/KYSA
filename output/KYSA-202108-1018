@@ -1,0 +1,95 @@
+Name:KYSA-202108-1018
+Severity:重要
+Summary:tomcat安全漏洞
+Published:2021-08-20
+URL:/support/loophole/patch/3198.html
+Title:
+			公告ID：KYSA-202108-1018
+公告摘要：tomcat安全漏洞
+等级：Important
+发布日期：2021-08-20
+		
+1.修复的CVE
+·CVE-2020-13935
+描述：Apache Tomcat中的WebSocket存在安全漏洞，该漏洞源于程序没有正确验证payload的长度。攻击者可利用该漏洞造成拒绝服务（无限循环）。
+·CVE-2020-1938
+描述：CVE-2020-1938是Apache Tomcat中AJP连接器中的文件读取/包含漏洞。默认情况下启用此功能，默认配置端口为8009。未经验证的远程攻击者可以利用此漏洞从易受攻击的服务器读取web应用程序文件。在易受攻击的服务器允许上载文件的情况下，攻击者可以上载各种文件类型中的恶意JavaServer Pages（JSP）代码，并触发此漏洞以获得远程代码执行（RCE).
+·CVE-2021-25329
+描述：CVE-2020-9484 的修复不完整。使用 Apache Tomcat 时，Tomcat 实仍然容易受到 CVE-2020-9494 的攻击。请注意，之前发布的 CVE-2020-9484 先决条件和之前发布的 CVE-2020-9484 缓解措施也适用于此问题。
+·CVE-2021-30640
+描述：Apache Tomcat 的 JNDI 领域中的一个漏洞允许攻击者使用有效用户名的变体进行身份验证和/或绕过锁定领域提供的某些保护。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+tomcat、tomcat-help、tomcat-jsvc
+·x86_64架构:
+tomcat、tomcat-help、tomcat-jsvc
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+tomcat、tomcat-help、tomcat-jsvc
+·x86_64架构:
+tomcat、tomcat-help、tomcat-jsvc
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、x86_64)
+tomcat-9.0.10-20.ky10或以上版本
+tomcat-help-9.0.10-20.ky10或以上版本
+tomcat-jsvc-9.0.10-20.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+tomcat-9.0.10-20.ky10或以上版本
+tomcat-help-9.0.10-20.ky10或以上版本
+tomcat-jsvc-9.0.10-20.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-13935:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-1938:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-25329:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-30640:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+tomcat(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/tomcat-9.0.10-20.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/tomcat-help-9.0.10-20.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/tomcat-jsvc-9.0.10-20.ky10.noarch.rpm
+
+tomcat(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/tomcat-9.0.10-20.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/tomcat-help-9.0.10-20.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/tomcat-jsvc-9.0.10-20.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+tomcat(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/tomcat-9.0.10-20.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/tomcat-help-9.0.10-20.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/tomcat-jsvc-9.0.10-20.ky10.noarch.rpm
+
+tomcat(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/tomcat-9.0.10-20.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/tomcat-help-9.0.10-20.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/tomcat-jsvc-9.0.10-20.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

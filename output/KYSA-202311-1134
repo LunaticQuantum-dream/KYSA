@@ -1,0 +1,92 @@
+Name:KYSA-202311-1134
+Severity:重要
+Summary:glibc安全漏洞
+Published:2023-11-28
+URL:/support/loophole/patch/4631.html
+Title:
+			公告ID：KYSA-202311-1134
+公告摘要：glibc安全漏洞
+等级：Important
+发布日期：2023-11-28
+		
+1.修复的CVE
+·CVE-2023-4911
+描述：在处理GLIBC_TUNABLES环境变量时，在GNU C库的动态加载器ld.so中发现了缓冲区溢出。这个问题可能会允许本地攻击者在启动具有SUID权限的二进制文件时使用恶意制作的GLIBC_TUNABLES环境变量来执行具有提升权限的代码。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·aarch64架构:
+glibc、glibc-all-langpacks、glibc-common、glibc-compat-2.17、glibc-debugutils、glibc-devel、glibc-help、glibc-locale-archive、glibc-locale-source、glibc-nss-devel、libnsl、nscd、nss_modules
+·x86_64架构:
+glibc、glibc-all-langpacks、glibc-common、glibc-compat-2.17、glibc-debugutils、glibc-devel、glibc-help、glibc-locale-archive、glibc-locale-source、glibc-nss-devel、libnsl、nscd、nss_modules
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (aarch64、x86_64)
+glibc-2.34-124.p06.ky10h或以上版本
+glibc-all-langpacks-2.34-124.p06.ky10h或以上版本
+glibc-common-2.34-124.p06.ky10h或以上版本
+glibc-compat-2.17-2.34-124.p06.ky10h或以上版本
+glibc-debugutils-2.34-124.p06.ky10h或以上版本
+glibc-devel-2.34-124.p06.ky10h或以上版本
+glibc-help-2.34-124.p06.ky10h或以上版本
+glibc-locale-archive-2.34-124.p06.ky10h或以上版本
+glibc-locale-source-2.34-124.p06.ky10h或以上版本
+glibc-nss-devel-2.34-124.p06.ky10h或以上版本
+libnsl-2.34-124.p06.ky10h或以上版本
+nscd-2.34-124.p06.ky10h或以上版本
+nss_modules-2.34-124.p06.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+aarch64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-4911:需要重启操作系统以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+glibc(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/glibc-2.34-124.p06.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/glibc-all-langpacks-2.34-124.p06.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/glibc-common-2.34-124.p06.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/glibc-compat-2.17-2.34-124.p06.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/glibc-debugutils-2.34-124.p06.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/glibc-devel-2.34-124.p06.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/glibc-help-2.34-124.p06.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/glibc-locale-archive-2.34-124.p06.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/glibc-locale-source-2.34-124.p06.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/glibc-nss-devel-2.34-124.p06.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/libnsl-2.34-124.p06.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nscd-2.34-124.p06.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nss_modules-2.34-124.p06.ky10h.aarch64.rpm
+
+glibc(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/glibc-2.34-124.p06.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/glibc-all-langpacks-2.34-124.p06.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/glibc-common-2.34-124.p06.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/glibc-compat-2.17-2.34-124.p06.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/glibc-debugutils-2.34-124.p06.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/glibc-devel-2.34-124.p06.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/glibc-help-2.34-124.p06.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/glibc-locale-archive-2.34-124.p06.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/glibc-locale-source-2.34-124.p06.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/glibc-nss-devel-2.34-124.p06.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/libnsl-2.34-124.p06.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nscd-2.34-124.p06.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nss_modules-2.34-124.p06.ky10h.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

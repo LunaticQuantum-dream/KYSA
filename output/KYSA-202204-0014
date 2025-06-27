@@ -1,0 +1,57 @@
+Name:KYSA-202204-0014
+Severity:中等
+Summary:python-django安全漏洞
+Published:2023-04-19
+URL:/support/loophole/patch/3373.html
+Title:
+			公告ID：KYSA-202204-0014
+公告摘要：python-django安全漏洞
+等级：中等
+发布日期：2023-04-19
+		
+1. 修复的CVE
+CVE-2022-22818
+Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。Django 中存在跨站脚本漏洞，该漏洞源于产品的{\\% debug \\%}模版标签不能正确的编码上下文数据。攻击者可通过该漏洞执行客户端代码。以下产品及版本受到影响：Django 2.2.27 之前版本，Django 3.2.12 之前版本，Django 4.0.2 之前版本。
+CVE-2022-23833
+Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。Django 中存在代码问题漏洞，该漏洞源于产品的MultiPartParser在处理多部分表单是存在错误。攻击者可通过该漏洞导致无限循环。以下产品及版本受到影响：Django 2.2.27 之前版本，Django 3.2.12 之前版本，Django 4.0.2 之前版本。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+python3-django
+arm64 架构：
+python3-django
+mips64el 架构：
+python3-django
+loongarch64 架构：
+python3-django
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+2:2.2.12-1kylin0.10
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install python3-django
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.10_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.10_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.10_all.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.10_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

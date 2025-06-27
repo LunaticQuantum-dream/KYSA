@@ -1,0 +1,103 @@
+Name:KYSA-202102-0019
+Severity:中等
+Summary:openssl安全漏洞
+Published:2022-12-07
+URL:/support/loophole/patch/2466.html
+Title:
+			公告ID：KYSA-202102-0019
+公告摘要：openssl安全漏洞
+等级：中等
+发布日期：2022-12-07
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V4 SP1
+银河麒麟桌面操作系统V4 SP2
+银河麒麟桌面操作系统V4 SP3
+银河麒麟桌面操作系统V4 SP4
+银河麒麟桌面操作系统V10
+银河麒麟桌面操作系统V10 SP1
+银河麒麟服务器操作系统V4 SP1
+银河麒麟服务器操作系统V4 SP2
+银河麒麟服务器操作系统V4 SP3
+银河麒麟服务器操作系统V4 SP4版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2021-23841
+描述：OpenSSL是Openssl团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL public API 存在输入验证错误漏洞，该漏洞源于X509_issuer_and_serial_hash函数不能正确处理解析issuer字段时可能发生的任何错误。
+CVE-2021-23840
+描述：OpenSSL是Openssl团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL 存在安全漏洞，攻击者可利用该漏洞导致应用程序行为不正确或崩溃。
+
+2. 受影响的操作系统及软件包
+银河麒麟桌面操作系统V4桌面版
+libssl-dev
+libssl-doc
+libssl1.0.0-dbg
+libssl1.0.0
+openssl
+银河麒麟桌面操作系统V10桌面版
+libssl-dev
+libssl-doc
+libssl1.0.0-dbg
+libssl1.0.0
+openssl
+银河麒麟桌面操作系统V10 SP1
+libssl1.1
+openssl
+
+3. 软件包修复版本
+软件包：openssl
+1.0.2g-1kord4.19（V4、V10）
+1.1.1f-1kylin2.12k1（V10 SP1）
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级       $sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+$dpkg -i Packagelists
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10、V4
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/libssl1.0.0_1.0.2g-1kord4.19_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/openssl_1.0.2g-1kord4.19_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/libssl1.0.0_1.0.2g-1kord4.19_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/openssl_1.0.2g-1kord4.19_arm64.deb
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/libssl1.1_1.1.1f-1kylin2.12k1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/openssl_1.1.1f-1kylin2.12k1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/libssl1.1_1.1.1f-1kylin2.12k1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/openssl_1.1.1f-1kylin2.12k1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/libssl1.1_1.1.1f-1kylin2.12k1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/openssl_1.1.1f-1kylin2.12k1_mips64el.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/libssl1.1_1.1.1f-1kylin2.12k1_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/openssl_1.1.1f-1kylin2.12k1_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V4 SP1
+银河麒麟桌面操作系统V4 SP2
+银河麒麟桌面操作系统V4 SP3
+银河麒麟桌面操作系统V4 SP4
+银河麒麟桌面操作系统V10
+银河麒麟桌面操作系统V10 SP1
+银河麒麟服务器操作系统V4 SP1
+银河麒麟服务器操作系统V4 SP2
+银河麒麟服务器操作系统V4 SP3
+银河麒麟服务器操作系统V4 SP4版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

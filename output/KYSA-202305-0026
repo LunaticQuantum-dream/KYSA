@@ -1,0 +1,141 @@
+Name:KYSA-202305-0026
+Severity:中等
+Summary:nova安全漏洞
+Published:2024-11-20
+URL:/support/loophole/patch/6709.html
+Title:
+			公告ID：KYSA-202305-0026
+公告摘要：nova安全漏洞
+等级：中等
+发布日期：2024-11-20
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2403、银河麒麟桌面操作系统V10 SP1 2303、银河麒麟桌面操作系统V10 SP1 2303 Update2版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2023-2088
+OpenStack是一个云平台管理项目。OpenStack cinder 存在安全漏洞，该漏洞源于 Cinder 和 Nova 之间未保持一致。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2403、银河麒麟桌面操作系统V10 SP1 2303、银河麒麟桌面操作系统V10 SP1 2303 Update2
+x86_64 架构：
+nova-ajax-console-proxy、nova-api-metadata、nova-api-os-compute、nova-api-os-volume、nova-api、nova-cells、nova-common、nova-compute-kvm、nova-compute-libvirt、nova-compute-lxc、nova-compute-qemu、nova-compute-vmware、nova-compute-xen、nova-compute、nova-conductor、nova-novncproxy、nova-scheduler、nova-serialproxy、nova-spiceproxy、nova-volume、python3-nova
+arm64 架构：
+nova-ajax-console-proxy、nova-api-metadata、nova-api-os-compute、nova-api-os-volume、nova-api、nova-cells、nova-common、nova-compute-kvm、nova-compute-libvirt、nova-compute-lxc、nova-compute-qemu、nova-compute-vmware、nova-compute-xen、nova-compute、nova-conductor、nova-novncproxy、nova-scheduler、nova-serialproxy、nova-spiceproxy、nova-volume、python3-nova
+mips64el 架构：
+nova-ajax-console-proxy、nova-api-metadata、nova-api-os-compute、nova-api-os-volume、nova-api、nova-cells、nova-common、nova-compute-kvm、nova-compute-libvirt、nova-compute-lxc、nova-compute-qemu、nova-compute-vmware、nova-compute-xen、nova-compute、nova-conductor、nova-novncproxy、nova-scheduler、nova-serialproxy、nova-spiceproxy、nova-volume、python3-nova
+loongarch64 架构：
+nova-ajax-console-proxy、nova-api-metadata、nova-api-os-compute、nova-api-os-volume、nova-api、nova-cells、nova-common、nova-compute-kvm、nova-compute-libvirt、nova-compute-lxc、nova-compute-qemu、nova-compute-vmware、nova-compute-xen、nova-compute、nova-conductor、nova-novncproxy、nova-scheduler、nova-serialproxy、nova-spiceproxy、nova-volume、python3-nova
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2403、银河麒麟桌面操作系统V10 SP1 2303、银河麒麟桌面操作系统V10 SP1 2303 Update2
+2:21.2.4-0kylin2.5
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install python3-nova
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2403、银河麒麟桌面操作系统V10 SP1 2303、银河麒麟桌面操作系统V10 SP1 2303 Update2
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-ajax-console-proxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-metadata_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-os-compute_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-os-volume_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-cells_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-common_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-kvm_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-libvirt_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-lxc_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-qemu_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-vmware_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-xen_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-conductor_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-novncproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-scheduler_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-serialproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-spiceproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-volume_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/python3-nova_21.2.4-0kylin2.5_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-ajax-console-proxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-metadata_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-os-compute_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-os-volume_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-cells_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-common_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-kvm_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-libvirt_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-lxc_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-qemu_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-vmware_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-xen_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-conductor_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-novncproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-scheduler_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-serialproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-spiceproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-volume_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/python3-nova_21.2.4-0kylin2.5_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-ajax-console-proxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-metadata_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-os-compute_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-os-volume_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-cells_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-common_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-kvm_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-libvirt_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-lxc_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-qemu_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-vmware_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-xen_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-conductor_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-novncproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-scheduler_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-serialproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-spiceproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-volume_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/python3-nova_21.2.4-0kylin2.5_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-ajax-console-proxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-metadata_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-os-compute_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api-os-volume_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-api_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-cells_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-common_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-kvm_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-libvirt_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-lxc_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-qemu_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-vmware_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute-xen_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-compute_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-conductor_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-novncproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-scheduler_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-serialproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-spiceproxy_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/nova-volume_21.2.4-0kylin2.5_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/nova/python3-nova_21.2.4-0kylin2.5_all.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2403、银河麒麟桌面操作系统V10 SP1 2303、银河麒麟桌面操作系统V10 SP1 2303 Update2版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

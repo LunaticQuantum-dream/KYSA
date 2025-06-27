@@ -1,0 +1,76 @@
+Name:KYSA-202409-1076
+Severity:中等
+Summary:kernel安全漏洞
+Published:2024-09-17
+URL:/support/loophole/patch/6307.html
+Title:
+			公告ID：KYSA-202409-1076
+公告摘要：kernel安全漏洞
+等级：中等
+发布日期：2024-09-17
+		
+1.修复的漏洞
+·CVE-2024-42232
+描述：Linux kernel 存在安全漏洞，该漏洞源于 libceph 模块在ceph_monc_stop中处理延迟工作的方式存在竞争条件，可能导致monc和挂靠在其上的对象出现释放后重用问题。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·x86_64架构:
+perf、kernel、bpftool、kernel-doc、kernel-abi-whitelists、kernel-debug-devel、kernel-debug、kernel-tools-libs-devel、kernel-debuginfo-common-x86_64、kernel-devel、kernel-tools、kernel-headers、python-perf、kernel-tools-libs
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (x86_64)
+kernel-debug-devel-3.10.0-1160.123.1.el7.02或以上版本
+kernel-devel-3.10.0-1160.123.1.el7.02或以上版本
+kernel-3.10.0-1160.123.1.el7.02或以上版本
+kernel-tools-3.10.0-1160.123.1.el7.02或以上版本
+python-perf-3.10.0-1160.123.1.el7.02或以上版本
+bpftool-3.10.0-1160.123.1.el7.02或以上版本
+kernel-tools-libs-devel-3.10.0-1160.123.1.el7.02或以上版本
+kernel-tools-libs-3.10.0-1160.123.1.el7.02或以上版本
+kernel-abi-whitelists-3.10.0-1160.123.1.el7.02或以上版本
+perf-3.10.0-1160.123.1.el7.02或以上版本
+kernel-headers-3.10.0-1160.123.1.el7.02或以上版本
+kernel-debug-3.10.0-1160.123.1.el7.02或以上版本
+kernel-debuginfo-common-x86_64-3.10.0-1160.123.1.el7.02或以上版本
+kernel-doc-3.10.0-1160.123.1.el7.02或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2024-42232:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+kernel(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-debug-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/perf-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-abi-whitelists-3.10.0-1160.123.1.el7.02.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-headers-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-debug-devel-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/python-perf-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-tools-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-devel-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/bpftool-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-devel-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-debuginfo-common-x86_64-3.10.0-1160.123.1.el7.02.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/kernel-doc-3.10.0-1160.123.1.el7.02.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

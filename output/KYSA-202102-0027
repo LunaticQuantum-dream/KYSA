@@ -1,0 +1,95 @@
+Name:KYSA-202102-0027
+Severity:中等
+Summary:dnsmasq安全漏洞
+Published:2023-01-03
+URL:/support/loophole/patch/2465.html
+Title:
+			公告ID：KYSA-202102-0027
+公告摘要：dnsmasq安全漏洞
+等级：Moderate
+发布日期：2023-01-03
+		
+1. 修复的CVE
+CVE-2020-25684
+描述：Dnsmasq是一款使用C语言编写的轻量级DNS转发和DHCP、TFTP服务器。dnsmasq 2.83版本之前存在安全漏洞，攻击者可以利用该漏洞执行DNS缓存中毒攻击。
+CVE-2020-25683
+描述：Dnsmasq是一款使用C语言编写的轻量级DNS转发和DHCP、TFTP服务器。Dnsmasq 存在安全漏洞，该漏洞源于在没有dnnssec的情况下编译时使用弱哈希算法(CRC32)来验证DNS响应。
+CVE-2020-25686
+描述：Dnsmasq是一款使用C语言编写的轻量级DNS转发和DHCP、TFTP服务器。Dnsmasq 存在安全特征问题漏洞，该漏洞源于不会检查现有的同名待处理请求，并转发一个新的请求，从而允许攻击者执行一个“生日攻击”场景来伪造应答，并可能破坏DNS缓存。
+CVE-2020-25687
+描述：Dnsmasq是一款使用C语言编写的轻量级DNS转发和DHCP、TFTP服务器。Dnsmasq 存在缓冲区错误漏洞，该漏洞源于sort rrset子例程中的基于堆的缓冲区溢出，该子例程在启用DNSSEC时并在验证接收到的DNS条目之前发生。
+CVE-2020-25681
+描述：Dnsmasq是一款使用C语言编写的轻量级DNS转发和DHCP、TFTP服务器。Dnsmasq 存在缓冲区错误漏洞，该漏洞源于dnsmasq中的基于堆的缓冲区溢出，在未经请求的DNS响应中使用DNSSEC数据验证rrset之前，对rrset进行排序。
+CVE-2019-14834
+描述：在2.81版之前的dnsmasq中发现一个漏洞，该漏洞中的内存泄漏使远程攻击者可以通过涉及DHCP响应创建的媒介来导致拒绝服务（内存消耗）。
+CVE-2020-25682
+描述：Dnsmasq是一款使用C语言编写的轻量级DNS转发和DHCP、TFTP服务器。Dnsmasq 存在缓冲区错误漏洞，该漏洞源于在用DNSSEC数据验证DNS包之前，dnsmasq从DNS包中提取名称的方式存在缓冲区溢出漏洞。
+
+2. 受影响的操作系统及软件包
+银河麒麟桌面操作系统V4桌面版
+dnsmasq-base
+dnsmasq-utils
+dnsmasq
+银河麒麟桌面操作系统V10桌面版
+dnsmasq-base
+dnsmasq-utils
+dnsmasq
+银河麒麟桌面操作系统V10 SP1
+dnsmasq-base-lua
+dnsmasq-base
+dnsmasq-utils
+dnsmasq
+
+3. 软件包修复版本
+软件包：dnsmasq
+dnsmasq-2.75-1kord0.16.04.8（V4、V10）
+dnsmasq-utils-2.75-1kord0.16.04.8（V4、V10）
+dnsmasq-base-2.75-1kord0.16.04.8（V4、V10）
+dnsmasq-2.80-1.1kylin1.4（V10 SP1）
+dnsmasq-utils-2.80-1.1kylin1.4（V10 SP1）
+dnsmasq-base-2.80-1.1kylin1.4（V10 SP1）
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级    $sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。    $dpkg -i Packagelists
+
+5. 软件包下载地址
+麒麟操作系统V10桌面版、V4
+X86_64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-base_2.75-1kord0.16.04.8_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-utils_2.75-1kord0.16.04.8_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq_2.75-1kord0.16.04.8_all.deb
+arm64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-base_2.75-1kord0.16.04.8_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-utils_2.75-1kord0.16.04.8_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq_2.75-1kord0.16.04.8_all.deb
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-base-lua_2.80-1.1kylin1.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-base_2.80-1.1kylin1.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-utils_2.80-1.1kylin1.4_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq_2.80-1.1kylin1.4_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-base-lua_2.80-1.1kylin1.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-base_2.80-1.1kylin1.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-utils_2.80-1.1kylin1.4_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq_2.80-1.1kylin1.4_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-base-lua_2.80-1.1kylin1.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-base_2.80-1.1kylin1.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq-utils_2.80-1.1kylin1.4_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/d/dnsmasq/dnsmasq_2.80-1.1kylin1.4_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

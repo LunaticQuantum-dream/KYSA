@@ -1,0 +1,338 @@
+Name:KYSA-202104-1419
+Severity:严重
+Summary:java-1.8.0-openjdk安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/2181.html
+Title:
+			公告ID：KYSA-202104-1419
+公告摘要：java-1.8.0-openjdk安全漏洞
+等级：Critical
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2016-0686
+描述：Oracle Java SE 6u113、7u99和8u77以及Java SE Embedded 8u77中存在未明漏洞，远程攻击者可借助与序列化相关的向量影响机密性、完整性和可用性。
+·CVE-2016-0687
+描述：Oracle Java SE 6u113、7u99和8u77以及Java SE Embedded 8u77中存在未明漏洞，远程攻击者可借助与热点子组件相关的向量影响机密性、完整性和可用性。
+·CVE-2016-0695
+描述：发现OpenJDK中的安全组件在生成DSA签名时未能检查摘要算法的强度。使用弱于密钥强度的摘要可能会导致生成比预期弱的签名。
+·CVE-2016-10165
+描述：Little CMS（aka lcms2）中cmstypes.c中的Type_MLU_Read函数允许远程攻击者通过一个特制的ICC配置文件的图像获取敏感信息或引起拒绝服务，从而触发超出边界的堆读取。
+·CVE-2016-3425
+描述：我们发现OpenJDK中的JAXP组件未能正确处理作为XML属性值一部分使用的Unicode代理项对。特别构建的XML输入可能会导致Java应用程序在解析时使用过多的内存。
+·CVE-2016-3427
+描述：Oracle Java SE等都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Embedded是一款针对嵌入式系统的、可移植的应用程序的Java平台。Oracle Jrockit是一款内置于Oracle融合中间件中的Java虚拟机。Oracle Java SE、Java SE Embedded和JRockit中的JMX子组件存在安全漏洞。远程攻击者可利用该漏洞控制组件，影响数据的保密性，完整性及可用性。以下版本受到影响：Oracle Java SE 6u113版本，7u99版本，8u77版本，Java SE Embedded 8u77版本，Jrockit R28.3.9版本。
+·CVE-2016-3458
+描述：Oracle Java SE 6u115、7u101和8u92；以及Java SE Embedded 8u91中存在未明漏洞，远程攻击者可借助与CORBA相关的向量影响完整性。
+·CVE-2016-3500
+描述：Oracle Java SE 6u115、7u101和8u92；Java SE Embedded 8u91；和JRockit R28.3.10中的未指明漏洞允许远程攻击者通过与JAXP相关的向量来影响可用性，这是一个与CVE-2016-3508不同的漏洞。
+·CVE-2016-3508
+描述：Oracle Java SE 6u115、7u101和8u92；Java SE Embedded 8u91；和JRockit R28.3.10中的未指明漏洞允许远程攻击者通过与JAXP相关的向量来影响可用性，这是一个与CVE-2016-3500不同的漏洞。
+·CVE-2016-3550
+描述：Oracle Java SE 6u115、7u101和8u92以及Java SE Embedded 8u91中存在未明漏洞，远程攻击者可借助与热点相关的向量影响机密性。
+·CVE-2016-3606
+描述：Oracle Java SE 7u101和8u92以及Java SE Embedded 8u91中存在未明漏洞，远程攻击者可借助与热点相关的向量影响机密性、完整性和可用性。
+·CVE-2016-5542
+描述：我们发现OpenJDK的Libraries组件没有限制用于JAR完整性验证的算法集。此漏洞允许攻击者修改使用弱签名密钥或哈希算法的JAR文件的内容。
+·CVE-2016-5546
+描述：我们发现OpenJDK的Libraries组件使用非规范的DER编码接受ECDSA签名。这可能导致Java应用程序以其他加密工具无法接受的错误格式接受签名。
+·CVE-2016-5547
+描述：我们发现OpenJDK的Libraries组件在分配内存来存储OID之前没有验证从DER输入读取的对象标识符的长度。攻击者能够使Java应用程序解码巧尽心思构建的DER输入，可能会导致应用程序消耗过多内存。
+·CVE-2016-5548
+描述：在OpenJDK的Libraries组件的DSA实现中发现了一个隐蔽的定时通道缺陷。远程攻击者可能利用此漏洞通过定时侧通道提取有关所用密钥的特定信息。
+·CVE-2016-5552
+描述：我们发现OpenJDK的网络组件无法正确解析URL中的用户信息。远程攻击者可能会导致Java应用程序错误地解析攻击者提供的URL，并以与处理同一URL的其他应用程序不同的方式对其进行解释。
+·CVE-2016-5554
+描述：在OpenJDK的JMX组件处理类加载器的方式中发现了一个缺陷。不受信任的Java应用程序或小程序可以利用此缺陷绕过某些Java沙盒限制。
+·CVE-2016-5573
+描述：我们发现OpenJDK的热点组件没有正确检查接收到的Java调试线协议（JDWP）包。如果攻击者能够使受害者的浏览器向调试应用程序的JDWP端口发送HTTP请求，则攻击者可能会利用此漏洞向运行调试的Java程序发送调试命令。
+·CVE-2016-5582
+描述：我们发现OpenJDK的热点组件没有正确检查系统阵列复制（）在某些情况下起作用。不受信任的Java应用程序或小程序可以利用此漏洞破坏虚拟机的内存，并完全绕过Java沙盒限制。
+·CVE-2016-5597
+描述：在OpenJDK的网络组件处理HTTP代理身份验证的方式中发现了一个缺陷。如果代理请求身份验证，Java应用程序可能会通过纯文本网络连接到HTTP代理来公开HTTPS服务器身份验证凭据。
+·CVE-2017-10053
+描述：我们发现OpenJDK的2D组件中的JPEGImageReader实现在某些情况下会读取所有图像数据，即使以后不使用它。巧尽心思构建的映像可能会导致Java应用程序临时使用过多的CPU和内存。
+·CVE-2017-10067
+描述：Oracle Java SE的Java SE组件中存在漏洞（子组件：安全性）。受影响的受支持版本是javase:6u151、7u141和8u131。难以利用的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞可导致接管Java SE。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分7.5（机密性、完整性和可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H）。
+·CVE-2017-10074
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：热点）中的漏洞。受影响的受支持版本是javase:6u151、7u141和8u131；javase Embedded:8u131。难以利用的漏洞允许未经身份验证的攻击者通过多个协议访问网络，危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE，Java SE Embedded。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分8.3（机密性、完整性和可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2017-10081
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：热点）中的漏洞。受影响的受支持版本是javase:6u151、7u141和8u131；javase Embedded:8u131。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞可导致未经授权更新、插入或删除对Java SE、Java SE嵌入的可访问数据的访问。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分4.3（完整性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N）。
+·CVE-2017-10087
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：库）中存在漏洞。受影响的受支持版本是javase:6u151、7u141和8u131；javase Embedded:8u131。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE，Java SE Embedded。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分9.6（机密性、完整性和可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2017-10089
+描述：Oracle Java SE的Java SE组件（子组件：ImageIO）中存在漏洞。受影响的受支持版本是javase:6u151、7u141和8u131。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于Java SE中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分9.6（机密性、完整性和可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2017-10090
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：库）中存在漏洞。受影响的受支持版本是javase:7u141和8u131；javase Embedded:8u131。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE，Java SE Embedded。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分9.6（机密性、完整性和可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2017-10096
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：JAXP）中存在漏洞。受影响的受支持版本是javase:6u151、7u141和8u131；javase Embedded:8u131。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE，Java SE Embedded。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分9.6（机密性、完整性和可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2017-10101
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：JAXP）中存在漏洞。受影响的受支持版本是javase:6u151、7u141和8u131；javase Embedded:8u131。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE，Java SE Embedded。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分9.6（机密性、完整性和可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2017-10102
+描述：我们发现OpenJDK的RMI组件中的DCG实现无法正确处理引用。远程攻击者可能利用此漏洞以RMI注册表或Java RMI应用程序的权限执行任意代码。
+·CVE-2017-10107
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：RMI）中存在漏洞。受影响的受支持版本是javase:6u151、7u141和8u131；javase EmbedAded:8u131。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE，Java SE Embedded。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分9.6（机密性、完整性和可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2017-10108
+描述：Oracle Java SE的Java SE、Java SE Embedded、JRockit组件（子组件：序列化）中存在漏洞。受影响的受支持版本是javase:6u151、7u141和8u131；javase Embedded:8u131；JRockit:R28.3.14。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分5.3（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2017-10109
+描述：Oracle Java SE的Java SE、Java SE Embedded、JRockit组件（子组件：序列化）中存在漏洞。受影响的受支持版本是javase:6u151、7u141和8u131；javase Embedded:8u131；JRockit:R28.3.14。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分5.3（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2017-10110
+描述：Oracle Java SE的Java SE组件（子组件：AWT）中存在漏洞。受影响的受支持版本是javase:6u151、7u141和8u131。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于Java SE中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分9.6（机密性、完整性和可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2017-10115
+描述：在OpenJDK的JCE组件的DSA实现中发现了一个隐蔽的定时通道缺陷。能够使Java应用程序按需生成DSA签名的远程攻击者可能利用此漏洞通过定时侧通道提取有关所用密钥的特定信息。
+·CVE-2017-10116
+描述：我们发现OpenJDK的安全组件中的LDAPCertStore类遵循LDAP对任意url的引用。巧尽心思构建的LDAP引用URL可能会导致LDAPCertStore与非LDAP服务器通信。
+·CVE-2017-10135
+描述：OpenJDK的JCE组件中的PKCS#8实现中发现了一个隐蔽的定时通道缺陷。能够使Java应用程序反复将PKCS#8密钥与攻击者控制的值进行比较的远程攻击者可能利用此漏洞通过定时侧通道确定密钥。
+·CVE-2017-10193
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：安全性）中的漏洞。受影响的受支持版本是javase:6u151、7u141和8u131；javase Embedded:8u131。难以利用的漏洞允许未经身份验证的攻击者通过多个协议访问网络，危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞可导致对Java SE、Java SE嵌入式可访问数据的子集进行未经授权的读取访问。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分3.1（保密影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N）。
+·CVE-2017-10198
+描述：我们发现OpenJDK的安全组件可能无法正确执行为处理X.509证书链而定义的限制。远程攻击者可能利用此漏洞使Java接受使用禁用算法之一的证书。
+·CVE-2017-10243
+描述：我们发现OpenJDK的JAX-WS组件中的wsdlimport工具在解析WSDL-XML文档时没有使用安全的XML解析器设置。巧尽心思构建的WSDL文档可能会导致wsdlimport使用过多的CPU和内存、打开与其他主机的连接或泄漏信息。
+·CVE-2017-10274
+描述：Oracle Java SE的Java SE组件（子组件：智能卡IO）中存在漏洞。受影响的受支持版本是javase:6u161、7u151、8u144和9。难以利用的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞可导致未经授权创建、删除或修改关键数据或所有Java SE可访问数据，以及未经授权访问关键数据或完全访问所有Java SE可访问数据。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分6.8（机密性和完整性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N）。
+·CVE-2017-10281
+描述：Oracle Java SE的Java SE、Java SE Embedded、JRockit组件（子组件：序列化）中存在漏洞。受影响的受支持版本是javase:6u161、7u151、8u144和9；javase Embedded:8u144；JRockit:R28.3.15。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分5.3（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2017-10285
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：RMI）中存在漏洞。受影响的受支持版本是javase:6u161、7u151、8u144和9；javase Embedded:8u144。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE，Java SE Embedded。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分9.6（机密性、完整性和可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2017-10295
+描述：发现OpenJDK的网络组件中的HttpURLConnection和HttpsURLConnection类无法检查url中嵌入的换行字符。如果攻击者能够使用攻击者提供的URL使Java应用程序执行HTTP请求，则可能会向请求中注入额外的标头。
+·CVE-2017-10345
+描述：Oracle Java SE的Java SE、Java SE Embedded、JRockit组件（子组件：序列化）中存在漏洞。受影响的受支持版本是javase:6u161、7u151、8u144和9；javase Embedded:8u144；JRockit:R28.3.15。难以利用的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分3.1（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L）。
+·CVE-2017-10346
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：热点）中的漏洞。受影响的受支持版本是javase:6u161、7u151、8u144和9；javase Embedded:8u144。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE，Java SE Embedded。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分9.6（机密性、完整性和可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2017-10347
+描述：Oracle Java SE的JRockit组件（子组件：序列化）中的漏洞。受影响的受支持版本是javase:6u161、7u151、8u144和9；javase Embedded:8u144。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、JRockit。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE JRockit的部分拒绝服务（部分拒绝服务）。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分5.3（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2017-10348
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：库）中存在漏洞。受影响的受支持版本是javase:6u161、7u151、8u144和9；javase Embedded:8u144。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功攻击此漏洞可导致未经授权的能力，从而导致Java SE、Java SE Embedded的部分拒绝服务（部分DOS）。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分5.3（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2017-10349
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：JAXP）中存在漏洞。受影响的受支持版本是javase:6u161、7u151、8u144和9；javase Embedded:8u144。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功攻击此漏洞可导致未经授权的能力，从而导致Java SE、Java SE Embedded的部分拒绝服务（部分DOS）。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分5.3（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2017-10350
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：JAX-WS）中存在漏洞。受影响的受支持版本是javase:7u151、8u144和9；javase Embedded:8u144。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功攻击此漏洞可导致未经授权的能力，从而导致Java SE、Java SE Embedded的部分拒绝服务（部分DOS）。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分5.3（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2017-10355
+描述：我们发现OpenJDK的Networking组件中的FtpClient实现在默认情况下没有设置connect和read超时。恶意FTP服务器或中间人攻击者可以利用此漏洞阻止连接到FTP服务器的Java应用程序的执行。
+·CVE-2017-10356
+描述：我们发现OpenJDK的安全组件生成了基于弱密码的加密密钥，用于保护存储在密钥库中的私钥。这使得在攻击者能够访问密钥存储时，更容易执行密码猜测攻击来解密存储的密钥。
+·CVE-2017-10357
+描述：Oracle Java SE的Java SE、Java SE嵌入组件（子组件：序列化）中存在漏洞。受影响的受支持版本是javase:6u161、7u151、8u144和9；javase Embedded:8u144。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功攻击此漏洞可导致未经授权的能力，从而导致Java SE、Java SE Embedded的部分拒绝服务（部分DOS）。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分5.3（可用性影响）。CVSS矢量：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2017-10388
+描述：我们发现OpenJDK的Libraries组件中的Kerberos客户机实现使用了来自纯文本部分的sname字段，而不是KDC应答消息的加密部分。中间人攻击者可能会利用此漏洞将Kerberos服务模拟到充当Kerberos客户端的Java应用程序中。
+·CVE-2017-3231
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：网络）中存在漏洞。受影响的受支持版本是javase:6u131、7u121和8u112；javase Embedded:8u111。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞可导致对Java SE、Java SE嵌入式可访问数据的子集进行未经授权的读取访问。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS v3.0基本得分4.3（机密性影响）。
+·CVE-2017-3241
+描述：OpenJDK的RMI组件中的RMI注册中心和DCG实现执行了不可信输入的反序列化。远程攻击者可能利用此漏洞以RMI注册表或Java RMI应用程序的权限执行任意代码。
+·CVE-2017-3252
+描述：我们发现OpenJDK的JAAS组件没有使用正确的方法从用户搜索LDAP查询的结果中提取用户DN。巧尽心思构建的用户LDAP条目可能会导致应用程序使用不正确的DN。
+·CVE-2017-3253
+描述：OpenJDK的2D组件执行iTXt和zTXt PNG图像块的解析，即使配置为忽略元数据。能够使Java应用程序解析巧尽心思构建的PNG图像的攻击者可能会导致应用程序消耗过多的内存。
+·CVE-2017-3261
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：网络）中存在漏洞。受影响的受支持版本是javase:6u131、7u121和8u112；javase Embedded:8u111。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞可导致对Java SE、Java SE嵌入式可访问数据的子集进行未经授权的读取访问。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS v3.0基本得分4.3（机密性影响）。
+·CVE-2017-3272
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：库）中存在漏洞。受影响的受支持版本是javase:6u131、7u121和8u112；javase Embedded:8u111。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE，Java SE Embedded。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS v3.0基本得分9.6（机密性、完整性和可用性影响）。
+·CVE-2017-3289
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：热点）中的漏洞。受影响的受支持版本是javase:7u121和8u112；javase Embedded:8u111。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE，Java SE Embedded。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS v3.0基本得分9.6（机密性、完整性和可用性影响）。
+·CVE-2017-3509
+描述：OpenJDK的网络组件中的HTTP客户端实现可以在不同的安全上下文中缓存和重用经过NTLM身份验证的连接。远程攻击者可能利用此漏洞使Java应用程序执行使用其他用户的凭据进行身份验证的HTTP请求
+·CVE-2017-3511
+描述：在OpenJDK的JCE组件中发现了一个不受信任的库搜索路径缺陷。本地攻击者可能会利用此漏洞导致使用JCE的Java应用程序加载攻击者控制的库，从而提升其权限。
+·CVE-2017-3526
+描述：发现OpenJDK的JAXP组件在解析XML文档时未能正确地执行解析树大小限制。能够使Java应用程序解析巧尽心思构建的XML文档的攻击者可以利用此漏洞使其消耗过多的CPU和内存。
+·CVE-2017-3533
+描述：在OpenJDK的网络组件的FTP客户端实现中发现了一个新行注入缺陷。远程攻击者可能利用此漏洞操纵Java应用程序建立的FTP连接。
+·CVE-2017-3539
+描述：OpenJDK的安全组件不允许用户限制Jar完整性验证所允许的算法集。此漏洞允许攻击者修改使用弱签名密钥或哈希算法的Jar文件的内容。
+·CVE-2017-3544
+描述：在OpenJDK的网络组件的SMTP客户端实现中发现了一个新行注入缺陷。远程攻击者可能利用此漏洞操纵Java应用程序建立的SMTP连接。
+·CVE-2018-2579
+描述：我们发现OpenJDK的Libraries组件中的多个加密密钥类不能正确同步对其内部数据的访问。这可能会导致多线程Java应用程序对数据应用弱加密，因为使用的密钥被清零。
+·CVE-2018-2588
+描述：我们发现OpenJDK的LDAP组件在将用户名中的特殊字符添加到LDAP搜索查询时未能正确编码。远程攻击者可能利用此漏洞操纵LdapLoginModule类执行的LDAP查询。
+·CVE-2018-2599
+描述：我们发现OpenJDK的JNDI组件中的DNS客户端实现在发送DNS查询时没有使用随机源端口。这会使远程攻击者更容易伪造对这些查询的响应。
+·CVE-2018-2602
+描述：我们发现OpenJDK的I18n组件在加载资源包类时可能使用不可信的搜索路径。本地攻击者可能利用此漏洞，通过使其Java应用程序加载攻击者控制的类文件，以另一个本地用户的身份执行任意代码。
+·CVE-2018-2603
+描述：我们发现OpenJDK的Libraries组件在读取DER编码的输入时未能充分限制分配的内存量。如果Java应用程序解析了攻击者提供的DER编码输入，则远程攻击者可能会利用此缺陷使其使用过多的内存。
+·CVE-2018-2618
+描述：我们发现OpenJDK的JCE组件中的密钥协议实现不能保证使用的密钥有足够的强度来充分保护生成的共享秘密。这使得通过攻击密钥协议而不是使用协商的秘密加密更容易破坏数据加密。
+·CVE-2018-2629
+描述：我们发现OpenJDK的JGSS组件在某些情况下无法正确处理本地GSS库包装器中的GSS上下文。远程攻击者可能使用JGSS生成Java应用程序，以使用先前释放的上下文。
+·CVE-2018-2633
+描述：我们发现OpenJDK的JNDI组件中的LDAPCertStore类无法安全地处理LDAP引用。攻击者可能利用此漏洞获取攻击者控制的证书数据。
+·CVE-2018-2634
+描述：OpenJDK的JGSS组件忽略javax.security.auth.useSubjectCredsOnly属性在使用HTTP/SPNEGO身份验证时始终使用全局凭据。发现这可能会导致不受信任的Java应用程序意外地使用全局凭据。
+·CVE-2018-2637
+描述：我们发现OpenJDK的JMX组件在某些情况下未能正确设置SingleEntryRegistry的反序列化过滤器。远程攻击者可能利用此漏洞绕过预期的反序列化限制。
+·CVE-2018-2641
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：AWT）中存在漏洞。受影响的受支持版本是javase:6u171、7u161、8u152和9.0.1；javase Embedded:8u151。难以利用的漏洞允许未经身份验证的攻击者通过多个协议访问网络，危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致未经授权创建、删除或修改对关键数据或所有Java SE、Java SE嵌入的可访问数据的访问。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分6.1（完整性影响）。CVSS Vector: (CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:N/I:H/A:N).
+·CVE-2018-2663
+描述：Oracle Java SE的Java SE、Java SE Embedded、JRockit组件（子组件：库）中存在漏洞。受影响的受支持版本有：6u171、7u161、8u152和9.0.1；javase Embedded:8u151；JRockit:R28.3.16。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：此漏洞适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分4.3（可用性影响）。
+·CVE-2018-2677
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：AWT）中存在漏洞。受影响的受支持版本是javase:6u171、7u161、8u152和9.0.1；javase Embedded:8u151。易受攻击的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞可导致未经授权的能力，从而导致Java SE、Java SE Embedded的部分拒绝服务（部分DOS）。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分4.3（可用性影响）。CVSS Vector: (CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L).
+·CVE-2018-2678
+描述：Oracle Java SE的Java SE、Java SE Embedded、JRockit组件（子组件：JNDI）中存在漏洞。受影响的受支持版本有：6u171、7u161、8u152和9.0.1；javase Embedded:8u151；JRockit:R28.3.16。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：此漏洞适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分4.3（可用性影响）。CVSS Vector：(CVSS:3.0/AV：N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L）。
+·CVE-2018-2790
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：安全性）中的漏洞。受影响的受支持版本是javase:6u181、7u171、8u162和10；javase Embedded:8u161。难以利用的漏洞允许未经身份验证的攻击者通过多个协议访问网络，危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞可导致未经授权更新、插入或删除对Java SE、Java SE嵌入的可访问数据的访问。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分3.1（完整性影响）。CVSS Vector：(CVSS:3.0/AV：N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N）。
+·CVE-2018-2794
+描述：Java SE中的漏洞，Oracle Java SE的JRockit组件（子组件：安全性）。受影响的受支持版本是javase:6u181、7u171、8u162、10和JRockit:R28.3.17。难以利用的漏洞允许未经身份验证的攻击者登录到执行Java SE、JRockit的基础设施，从而危害Java SE、JRockit。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于Java SE、JRockit中，但攻击可能会显著影响其他产品。成功攻击此漏洞可导致接管Java SE、JRockit。注意：适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分7.7（机密性、完整性和可用性影响）。CVSS Vector：(CVSS:3.0/AV：L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2018-2795
+描述：Oracle Java SE的Java SE，Java SE Embedded，JRockit组件中的漏洞（子组件：安全性）。受影响的受支持版本有：6u181、7u171、8u162和10；javase Embedded:8u161；JRockit:R28.3.17。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分5.3（可用性影响）。CVSS Vector：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2018-2796
+描述：Oracle Java SE的Java SE、Java SE Embedded、JRockit组件（子组件：并发）中存在漏洞。受影响的受支持版本有：7u171、8u162和10；javase Embedded:8u161；JRockit:R28.3.17。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分5.3（可用性影响）。CVSS Vector：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2018-2797
+描述：Oracle Java SE的Java SE，Java SE Embedded，JRockit组件（子组件：JMX）中存在漏洞。受影响的受支持版本有：6u181、7u171、8u162和10；javase Embedded:8u161；JRockit:R28.3.17。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分5.3（可用性影响）。CVSS Vector：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2018-2798
+描述：Oracle Java SE的Java SE，Java SE Embedded，JRockit组件（子组件：AWT）中存在漏洞。受影响的受支持版本有：6u181、7u171、8u162和10；javase Embedded:8u161；JRockit:R28.3.17。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分5.3（可用性影响）。CVSS Vector：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2018-2799
+描述：Oracle Java SE的Java SE、Java SE Embedded、JRockit组件（子组件：JAXP）中存在漏洞。受影响的受支持版本有：7u171、8u162和10；javase Embedded:8u161；JRockit:R28.3.17。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分5.3（可用性影响）。CVSS Vector：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2018-2800
+描述：Java SE中的漏洞，Oracle Java SE的JRockit组件（子组件：RMI）。受影响的受支持版本是javase:6u181、7u171和8u162；JRockit:R28.3.17。难以利用的漏洞允许未经身份验证的攻击者通过多个协议访问网络，从而危害Java SE、JRockit。成功的攻击需要攻击者以外的人与人进行交互。成功攻击此漏洞可导致对某些Java SE、JRockit可访问数据的未经授权的更新、插入或删除访问，以及对Java SE、JRockit可访问数据的子集的未经授权的读取访问。注意：只有通过向指定组件中的API提供数据而不使用不受信任的Java Web Start应用程序或不受信任的Java小程序（如通过Web服务）来攻击此漏洞。CVSS 3.0基本得分4.2（机密性和完整性影响）。CVSS Vector：(CVSS:3.0/AV：N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N）。
+·CVE-2018-2814
+描述：Oracle Java SE的Java SE、Java SE嵌入式组件（子组件：热点）中的漏洞。受影响的受支持版本是javase:6u181、7u171、8u162和10；javase Embedded:8u161。难以利用的漏洞允许未经身份验证的攻击者通过多个协议访问网络，危害Java SE、Java SE Embedded。成功的攻击需要攻击者以外的人与人交互，虽然漏洞存在于javase中，但攻击可能会严重影响其他产品。成功攻击此漏洞可导致接管Java SE，Java SE Embedded。注意：此漏洞适用于Java部署，通常在运行沙盒Java Web Start应用程序或沙盒Java小程序的客户端中，这些客户端加载并运行不受信任的代码（例如，来自internet的代码）并依赖Java沙盒来确保安全。此漏洞不适用于仅加载和运行受信任代码（例如，由管理员安装的代码）的Java部署，通常在服务器中。CVSS 3.0基本得分8.3（机密性、完整性和可用性影响）。CVSS Vector：(CVSS:3.0/AV：N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H）。
+·CVE-2018-2815
+描述：Oracle Java SE的Java SE、Java SE Embedded、JRockit组件（子组件：序列化）中存在漏洞。受影响的受支持版本有：6u181、7u171、8u162和10；javase Embedded:8u161；JRockit:R28.3.17。易受攻击的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分5.3（可用性影响）。CVSS Vector：(CVSS:3.0/AV：N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+·CVE-2018-2952
+描述：Oracle Java SE的Java SE、Java SE Embedded、JRockit组件（子组件：并发）中存在漏洞。受影响的受支持版本有：6u191、7u181、8u172和10.0.1；javase Embedded:8u171；JRockit:R28.3.18。难以利用的漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而危害Java SE、Java SE Embedded、JRockit。成功攻击此漏洞会导致未经授权的能力，从而导致Java SE、Java SE Embedded、JRockit的部分拒绝服务（部分拒绝服务）。注意：适用于Java的客户端和服务器部署。此漏洞可通过沙盒Java Web Start应用程序和沙盒Java小程序进行攻击。也可以通过向指定组件中的api提供数据而不使用沙盒javawebstart应用程序或沙盒Java applet（例如通过Web服务）来攻击它。CVSS 3.0基本得分3.7（可用性影响）。CVSS Vector：(CVSS:3.0/AV：N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L）。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+java-1.8.0-openjdk、java-1.8.0-openjdk-accessibility、java-1.8.0-openjdk-accessibility-debug、java-1.8.0-openjdk-debug、java-1.8.0-openjdk-demo、java-1.8.0-openjdk-demo-debug、java-1.8.0-openjdk-devel、java-1.8.0-openjdk-devel-debug、java-1.8.0-openjdk-headless、java-1.8.0-openjdk-headless-debug、java-1.8.0-openjdk-javadoc、java-1.8.0-openjdk-javadoc-debug、java-1.8.0-openjdk-javadoc-zip、java-1.8.0-openjdk-javadoc-zip-debug、java-1.8.0-openjdk-src、java-1.8.0-openjdk-src-debug
+·x86_64架构:
+java-1.8.0-openjdk、java-1.8.0-openjdk-accessibility、java-1.8.0-openjdk-accessibility-debug、java-1.8.0-openjdk-debug、java-1.8.0-openjdk-demo、java-1.8.0-openjdk-demo-debug、java-1.8.0-openjdk-devel、java-1.8.0-openjdk-devel-debug、java-1.8.0-openjdk-headless、java-1.8.0-openjdk-headless-debug、java-1.8.0-openjdk-javadoc、java-1.8.0-openjdk-javadoc-debug、java-1.8.0-openjdk-javadoc-zip、java-1.8.0-openjdk-javadoc-zip-debug、java-1.8.0-openjdk-src、java-1.8.0-openjdk-src-debug
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+java-1.8.0-openjdk-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-accessibility-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-accessibility-debug-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-debug-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-demo-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-demo-debug-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-devel-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-devel-debug-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-headless-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-headless-debug-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-javadoc-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-javadoc-debug-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-javadoc-zip-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-javadoc-zip-debug-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-src-1.8.0.181-7.b13.el7或以上版本
+java-1.8.0-openjdk-src-debug-1.8.0.181-7.b13.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2016-0686:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-0687:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-0695:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-10165:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-3425:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-3427:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-3458:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-3500:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-3508:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-3550:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-3606:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5542:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5546:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5547:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5548:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5552:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5554:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5573:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5582:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-5597:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10053:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10067:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10074:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10081:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10087:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10089:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10090:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10096:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10101:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10102:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10107:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10108:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10109:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10110:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10115:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10116:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10135:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10193:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10198:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10243:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10274:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10281:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10285:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10295:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10345:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10346:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10347:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10348:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10349:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10350:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10355:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10356:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10357:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-10388:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3231:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3241:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3252:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3253:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3261:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3272:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3289:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3509:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3511:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3526:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3533:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3539:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-3544:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2579:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2588:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2599:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2602:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2603:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2618:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2629:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2633:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2634:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2637:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2641:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2663:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2677:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2678:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2790:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2794:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2795:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2796:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2797:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2798:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2799:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2800:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2814:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2815:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-2952:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+java-1.8.0-openjdk(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/java-1.8.0-openjdk-1.8.0.181-7.b13.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/java-1.8.0-openjdk-accessibility-1.8.0.181-7.b13.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/java-1.8.0-openjdk-accessibility-debug-1.8.0.181-7.b13.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Pac

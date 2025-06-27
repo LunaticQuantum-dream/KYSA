@@ -1,0 +1,59 @@
+Name:KYSA-202208-1024
+Severity:重要
+Summary:libuser安全漏洞
+Published:2022-08-09
+URL:/support/loophole/patch/4255.html
+Title:
+			公告ID：KYSA-202208-1024
+公告摘要：libuser安全漏洞
+等级：Important
+发布日期：2022-08-09
+		
+1.修复的CVE
+·CVE-2015-3245
+描述：libuser存在输入验证错误漏洞。本地攻击者可借助GECOS字段中的换行符利用该漏洞造成拒绝服务。
+·CVE-2015-3246
+描述：usermode程序包中的userhelper程序中使用的libuser 0.56.13-5及之前版本和0.60-7之前0.60版本中存在安全漏洞，该漏洞源于程序直接修改/etc/passwd文件。本地攻击者可通过在执行修改操作时触发错误利用该漏洞造成拒绝服务（不一致的文件状态）。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+libuser、libuser-devel、libuser-python
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+libuser-0.56.13-8.el6_7或以上版本
+libuser-devel-0.56.13-8.el6_7或以上版本
+libuser-python-0.56.13-8.el6_7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2015-3245:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2015-3246:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+libuser(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libuser-0.56.13-8.el6_7.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libuser-0.56.13-8.el6_7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libuser-devel-0.56.13-8.el6_7.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libuser-devel-0.56.13-8.el6_7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/libuser-python-0.56.13-8.el6_7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

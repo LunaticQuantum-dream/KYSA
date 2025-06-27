@@ -1,0 +1,13 @@
+Name:KYSA-202111-0008
+Severity:重要
+Summary:openexr安全漏洞
+Published:2022-01-19
+URL:/support/loophole/patch/753.html
+Title:
+			摘要：openexr安全漏洞
+安全等级：重要
+公告ID：KYSA-202111-0008
+发布日期：2022-01-19
+影响CVE：CVE-2021-3933、CVE-2021-3941
+		
+1.修复的CVE    CVE-2021-3933    ILM OpenEXR是美国Industrial Light and Magic（ILM）公司的一种图像文件格式，适用于高动态范围（HDR）图像。ILM OpenEXR 存在安全漏洞，攻击者可利用该漏洞通过精心构造的EXR文件导致程序崩溃或者执行任意代码。    CVE-2021-3941    ILM OpenEXR是美国Industrial Light and Magic（ILM）公司的一种图像文件格式，适用于高动态范围（HDR）图像。ILM OpenEXR 存在安全漏洞，该漏洞源于 OpenEXR 错误地处理了某些 EXR 图像文件。攻击者可能会利用此问题导致崩溃。2.影响的操作系统    银河麒麟桌面操作系统V4 SP1    银河麒麟桌面操作系统V4 SP2    银河麒麟桌面操作系统V4 SP3    银河麒麟桌面操作系统V4 SP4    银河麒麟服务器操作系统V4 SP1    银河麒麟服务器操作系统V4 SP2    银河麒麟服务器操作系统V4 SP3    银河麒麟服务器操作系统V4 SP4    银河麒麟桌面操作系统V103.修复版本    软件包：openexr    2.2.0-10kord2.6+esm3（V4、V10）4.受影响的软件包    ·银河麒麟操作系统V10桌面版、V4    libopenexr-dev    libopenexr22    openexr-doc    openexr5.修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2-sp1:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10.0 SP1:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级$sudo apt update6.软件包下载地址银河麒麟操作系统V10桌面版、V4X86_64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/libopenexr-dev_2.2.0-10kord2.6%2Besm3_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/libopenexr22_2.2.0-10kord2.6%2Besm3_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/openexr-doc_2.2.0-10kord2.6%2Besm3_all.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/openexr_2.2.0-10kord2.6%2Besm3_amd64.debarm64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/libopenexr-dev_2.2.0-10kord2.6%2Besm3_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/libopenexr22_2.2.0-10kord2.6%2Besm3_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/openexr-doc_2.2.0-10kord2.6%2Besm3_all.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openexr/openexr_2.2.0-10kord2.6%2Besm3_arm64.deb

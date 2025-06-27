@@ -1,0 +1,115 @@
+Name:KYSA-202205-0019
+Severity:低等
+Summary:ncurses安全漏洞
+Published:2023-02-08
+URL:/support/loophole/patch/2608.html
+Title:
+			公告ID：KYSA-202205-0019
+公告摘要：ncurses安全漏洞
+等级：低等
+发布日期：2023-02-08
+		
+1. 修复的CVE
+CVE-2017-13729
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。 
+ncurses 6.0版本中的alloc_entry.c文件的‘_nc_save_str’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（访问不合法的地址）。
+CVE-2017-13731
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。 
+ncurses 6.0版本中的parse_entry.c文件的‘postprocess_termcap()’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（访问不合法的地址）。
+CVE-2017-11113
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。ncurses 6.0版本中的tinfo/parse_entry.c文件的‘the _nc_parse_entry’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（空指针逆向引用）。
+CVE-2017-13732
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。 
+ncurses 6.0版本中的progs/dump_entry.c文件的‘dump_uses()’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（访问不合法的地址）。
+CVE-2017-11112
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。 
+ncurses 6.0版本中的tinfo/parse_entry.c文件的‘append_acs’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务。
+CVE-2017-13733
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。ncurses 6.0版本中的progs/dump_entry.c文件的‘fmt_entry’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（访问不合法的地址）。
+CVE-2017-13730
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。 
+ncurses 6.0版本中的progs/tic.c文件的‘_nc_read_entry_source()’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（访问不合法的地址）。
+CVE-2017-10685
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。 
+ncurses 6.0版本中的‘fmt_entry’函数存在格式化字符串漏洞。远程攻击者可借助特制的输入利用该漏洞执行任意代码。
+CVE-2017-10684
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。ncurses 6.0版本中的‘fmt_entry’函数存在基于栈的缓冲区溢出漏洞。远程攻击者可借助特制的输入利用该漏洞执行任意代码。
+CVE-2017-13734
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。 
+ncurses 6.0版本中的‘_nc_safe_strcat’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（访问不合法的地址）。
+CVE-2017-13728
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。ncurses 6.0版本中的comp_scan.c文件的‘next_char’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（无限循环）。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+lib32ncurses5、lib32ncursesw5、lib32tinfo5、libncurses5、libncursesw5、libtinfo5、libx32ncurses5、libx32ncursesw5、libx32tinfo5、ncurses-base、ncurses-bin、ncurses-examples、ncurses-term
+arm64 架构：
+libncurses5、libncursesw5、libtinfo5、ncurses-base、ncurses-bin、ncurses-examples、ncurses-term
+mips64el 架构：
+libncurses5、libncursesw5、libtinfo5、ncurses-base、ncurses-bin、ncurses-examples、ncurses-term
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+6.0+20160213-1kord1+esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libx32ncurses5
+$sudo apt install lib32ncursesw5
+$sudo apt install lib32tinfo5
+$sudo apt install libtinfo5
+$sudo apt install lib64tinfo5
+$sudo apt install lib32ncurses5
+$sudo apt install ncurses-bin
+$sudo apt install lib64ncurses5
+$sudo apt install libncurses5
+$sudo apt install libncursesw5
+$sudo apt install ncurses-base
+$sudo apt install libx32ncursesw5
+$sudo apt install libx32tinfo5
+$sudo apt install ncurses-term
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/lib32ncurses5_6.0%2B20160213-1kord1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/lib32ncursesw5_6.0%2B20160213-1kord1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/lib32tinfo5_6.0%2B20160213-1kord1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncurses5_6.0%2B20160213-1kord1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncursesw5_6.0%2B20160213-1kord1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libtinfo5_6.0%2B20160213-1kord1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libx32ncurses5_6.0%2B20160213-1kord1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libx32ncursesw5_6.0%2B20160213-1kord1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libx32tinfo5_6.0%2B20160213-1kord1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-base_6.0%2B20160213-1kord1%2Besm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-bin_6.0%2B20160213-1kord1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-examples_6.0%2B20160213-1kord1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-term_6.0%2B20160213-1kord1%2Besm1_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncurses5_6.0%2B20160213-1kord1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncursesw5_6.0%2B20160213-1kord1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libtinfo5_6.0%2B20160213-1kord1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-base_6.0%2B20160213-1kord1%2Besm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-bin_6.0%2B20160213-1kord1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-examples_6.0%2B20160213-1kord1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-term_6.0%2B20160213-1kord1%2Besm1_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncurses5_6.0%2B20160213-1kord1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncursesw5_6.0%2B20160213-1kord1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libtinfo5_6.0%2B20160213-1kord1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-base_6.0%2B20160213-1kord1%2Besm1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-bin_6.0%2B20160213-1kord1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-examples_6.0%2B20160213-1kord1%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-term_6.0%2B20160213-1kord1%2Besm1_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

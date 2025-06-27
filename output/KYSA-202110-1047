@@ -1,0 +1,13 @@
+Name:KYSA-202110-1047
+Severity:中等
+Summary:jsoup漏洞
+Published:2021-10-16
+URL:/support/loophole/patch/569.html
+Title:
+			摘要：jsoup漏洞
+安全等级：中等
+公告ID：KYSA-202110-1047
+发布日期：2021-10-16
+影响CVE：CVE-2021-37714
+		
+1. 修复的CVE信息CVE-2021-37714描述：jsoup是一个用于处理HTML的Java库。那些使用1.14.2之前的jsoup版本解析不受信任的HTML或XML的人可能容易受到DOS攻击。如果解析器是在用户提供的输入上运行的，攻击者可能会提供导致解析器卡住（无限循环直至取消）、完成速度比平时慢或引发意外异常的内容。此效果可能支持拒绝服务攻击。该问题在版本1.14.2中进行了修补。有一些可用的解决方法。用户可以对输入解析进行分级限制，根据系统资源限制输入的大小，和/或实现线程看门狗来限制和超时解析运行时。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2jsoup-1.14.2-1.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:jsoupx86_64:jsoup4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP2aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP2 jsoup aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/jsoup-1.14.2-1.ky10.noarch.rpm jsoup x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/jsoup-1.14.2-1.ky10.noarch.rpm注：其他相关依赖包请到相同目录下载 

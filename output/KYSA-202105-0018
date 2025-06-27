@@ -1,0 +1,60 @@
+Name:KYSA-202105-0018
+Severity:中等
+Summary:isc-dhcp安全漏洞
+Published:2022-11-23
+URL:/support/loophole/patch/2379.html
+Title:
+			 公告ID：KYSA-202105-0018
+公告摘要： isc-dhcp安全漏洞
+等级：中等
+发布日期：2022-11-23
+		
+1. 修复的CVE
+CVE-2021-25217
+ISC DHCP是美国ISC公司的一套开源的动态主机配置协议服务器软件。ISC DHCP 存在缓冲区错误漏洞，该漏洞源于程序在读取不正确的租约时可能导致dhclient崩溃，这可能会由于缺少正在运行的DHCP客户端进程而导致受影响系统的网络连接问题。
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1
+isc-dhcp-client
+isc-dhcp-client-ddns
+isc-dhcp-common
+isc-dhcp-dev
+isc-dhcp-relay
+isc-dhcp-server
+isc-dhcp-server-ldap
+3. 软件包修复版本
+软件包：isc-dhcp
+4.4.1-2.1kylin5.20.04.2(V10 SP1)
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+5. 软件包下载地址
+麒麟操作系统桌面版V10 SP1
+X86下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/i/isc-dhcp/isc-dhcp-relay_4.4.1-2.1kylin5.20.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/i/isc-dhcp/isc-dhcp-client-ddns_4.4.1-2.1kylin5.20.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/i/isc-dhcp/isc-dhcp-dev_4.4.1-2.1kylin5.20.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/i/isc-dhcp/isc-dhcp-client_4.4.1-2.1kylin5.20.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/i/isc-dhcp/isc-dhcp-common_4.4.1-2.1kylin5.20.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/i/isc-dhcp/isc-dhcp-server_4.4.1-2.1kylin5.20.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/i/isc-dhcp/isc-dhcp-server-ldap_4.4.1-2.1kylin5.20.04.2_amd64.deb
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

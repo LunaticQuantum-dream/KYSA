@@ -1,0 +1,123 @@
+Name:KYSA-202309-1041
+Severity:重要
+Summary:freerdp安全漏洞
+Published:2023-09-26
+URL:/support/loophole/patch/4181.html
+Title:
+			公告ID：KYSA-202309-1041
+公告摘要：freerdp安全漏洞
+等级：Important
+发布日期：2023-09-26
+		
+1.修复的CVE
+·CVE-2023-39350
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在数字错误漏洞，该漏洞源于当提供的 blockLen 不足且未执行适当的长度验证时，会发生整数下溢，从而导致拒绝服务 (DOS) 漏洞。
+·CVE-2023-39351
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在代码问题漏洞，该漏洞源于在某些特殊情况下，tiles的初始化过程没有完成，tiles将会有一个NULL指针。将会导致空指针取消引用。
+·CVE-2023-39352
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在缓冲区错误漏洞，该漏洞源于当值 rect->left 和 rect->top 完全等于 surface->width 和 surface->height 时，可以触发无效偏移量验证。
+·CVE-2023-39353
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在缓冲区错误漏洞，该漏洞源于在 libfreerdp/codec/rfx.c 文件中， tile->quantIdxY 、 tile->quantIdxCb 和 tile->quantIdxCr 中没有偏移验证。
+·CVE-2023-39354
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在缓冲区错误漏洞，该漏洞源于 nsc_rle_decompress_data 函数中处理 `context->Planes` 时没有检查它是否包含足够长度的数据。
+·CVE-2023-39356
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在缓冲区错误漏洞，该漏洞源于 gdi_multi_opaque_rect 函数中缺少偏移量验证导致越界读取。
+·CVE-2023-40181
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在数字错误漏洞，该漏洞源于 zgfx_decompress_segment 函数中的整数下溢导致越界读取。
+·CVE-2023-40186
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在输入验证错误漏洞，该漏洞源于 gdi_CreateSurface 函数中出现越界写入漏洞。
+·CVE-2023-40188
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在缓冲区错误漏洞，该漏洞源于 general_LumaToYUV444 函数在 in 变量上进行处理，而没有检查它是否包含足够长度的数据。
+·CVE-2023-40567
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在缓冲区错误漏洞，该漏洞源于 clear_decompress_bands_data 函数没有偏移验证。
+·CVE-2023-40569
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在缓冲区错误漏洞，该漏洞源于 progressive_decompress 函数中 nXSrc 和 nYSrc 变量的错误计算。
+·CVE-2023-40589
+描述：FreeRDP是FreeRDP团队的一款开源的远程桌面协议（RDP）的实现。
+FreeRDP 存在安全漏洞，该漏洞源于 ncrush_decompress 函数中存在全局缓冲区溢出。向此函数提供精心设计的输入可能会触发溢出，而这仅被证明会导致崩溃。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+freerdp、freerdp-devel、freerdp-help、libwinpr、libwinpr-devel
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+freerdp、freerdp-devel、freerdp-help、libwinpr、libwinpr-devel
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+freerdp-2.11.1-1.a.ky10或以上版本
+freerdp-devel-2.11.1-1.a.ky10或以上版本
+freerdp-help-2.11.1-1.a.ky10或以上版本
+libwinpr-2.11.1-1.a.ky10或以上版本
+libwinpr-devel-2.11.1-1.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+freerdp-2.11.1-1.a.ky10或以上版本
+freerdp-devel-2.11.1-1.a.ky10或以上版本
+freerdp-help-2.11.1-1.a.ky10或以上版本
+libwinpr-2.11.1-1.a.ky10或以上版本
+libwinpr-devel-2.11.1-1.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-39350:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-39351:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-39352:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-39353:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-39354:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-39356:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-40181:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-40186:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-40188:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-40567:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-40569:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-40589:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+freerdp(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/freerdp-2.11.1-1.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/freerdp-devel-2.11.1-1.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/freerdp-help-2.11.1-1.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/libwinpr-2.11.1-1.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/libwinpr-devel-2.11.1-1.a.ky10.loongarch64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+freerdp(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/freerdp-2.11.1-1.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/freerdp-devel-2.11.1-1.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/freerdp-help-2.11.1-1.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/libwinpr-2.11.1-1.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/libwinpr-devel-2.11.1-1.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

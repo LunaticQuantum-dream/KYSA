@@ -1,0 +1,14 @@
+Name:CS2CSA-2020-10772
+Severity:重要
+Summary:Unbound 安全漏洞
+Published:2020-06-11
+URL:/support/loophole/patch/244.html
+Title:
+			摘要：          Unbound 安全漏洞
+安全等级：          重要
+公告ID：         CS2CSA-2020-10772
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2020-06-11
+CVE：          CVE-2020-10772
+		
+1. 概述：中标麒麟高级服务器操作系统软件V7有unbound可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：CVE-2020-12662的不完整修复在NeoKylin Linux Advanced Server release V7中未绑定。易受攻击的Unbound版本仍然可以将传入的查询放大为大量指向目标的查询，即使与上述勘误表之前发布的Unbound版本相比，放大率更低。此问题是关于CVE-2020-12662的不完整修复，它不影响未绑定的上游版本。

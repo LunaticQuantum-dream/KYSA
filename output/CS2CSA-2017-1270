@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-1270
+Severity:重要
+Summary:samba 安全更新
+Published:2017-05-24
+URL:/support/loophole/patch/36.html
+Title:
+			摘要：             samba 安全更新
+安全等级：         重要
+公告ID：           CS2CSA-2017-1270
+产品：             中标麒麟高级服务器操作系统      
+发布日期：         2017-05-24
+CVE：              CVE-2017-7494
+		
+1. 概述：中标麒麟高级服务器操作系统V6有samba可用的安全更新。中标麒麟高级服务器操作系统V7有samba可用的安全更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：Samba是SMB协议与CIFS协议的开源实现，用于共享文件，打印机等。4. 安全加固：* 发现Samba有一个严重的远程代码执行漏洞。该漏洞只需要通过一个可写入的Samba用户权限就可以提取到root权限。攻击者获得root权限后即可让该服务器加载恶意so文件。samba程式中，高漏洞存在函数is_known_pipename()中。使用者也可通过配置文件中的"nt pipe support = no"选项来关闭该功能的支持。(CVE-2017-7494)5. 安装包列表：中标麒麟高级服务器操作系统V6：源码包：samba-3.6.23-43.el6_9.src.rpmx86_64二进制包：libsmbclient-3.6.23-43.el6_9.i686.rpmlibsmbclient-3.6.23-43.el6_9.x86_64.rpmsamba-3.6.23-43.el6_9.x86_64.rpmsamba-client-3.6.23-43.el6_9.x86_64.rpmsamba-common-3.6.23-43.el6_9.i686.rpmsamba-common-3.6.23-43.el6_9.x86_64.rpmsamba-debuginfo-3.6.23-43.el6_9.i686.rpmsamba-debuginfo-3.6.23-43.el6_9.x86_64.rpmsamba-winbind-3.6.23-43.el6_9.x86_64.rpmsamba-winbind-clients-3.6.23-43.el6_9.i686.rpmsamba-winbind-clients-3.6.23-43.el6_9.x86_64.rpm中标麒麟高级服务器操作系统V7： 源码包： samba-4.4.4-14.el7_3.src.rpmx86_64二进制包：libsmbclient-4.4.4-14.el7_3.i686.rpmlibsmbclient-4.4.4-14.el7_3.x86_64.rpmlibwbclient-4.4.4-14.el7_3.i686.rpmlibwbclient-4.4.4-14.el7_3.x86_64.rpmsamba-4.4.4-14.el7_3.x86_64.rpmsamba-client-4.4.4-14.el7_3.x86_64.rpmsamba-client-libs-4.4.4-14.el7_3.i686.rpmsamba-client-libs-4.4.4-14.el7_3.x86_64.rpmsamba-common-libs-4.4.4-14.el7_3.x86_64.rpmsamba-common-tools-4.4.4-14.el7_3.x86_64.rpmsamba-debuginfo-4.4.4-14.el7_3.i686.rpmsamba-debuginfo-4.4.4-14.el7_3.x86_64.rpmsamba-krb5-printing-4.4.4-14.el7_3.x86_64.rpmsamba-libs-4.4.4-14.el7_3.i686.rpmsamba-libs-4.4.4-14.el7_3.x86_64.rpmsamba-python-4.4.4-14.el7_3.x86_64.rpmsamba-winbind-4.4.4-14.el7_3.x86_64.rpmsamba-winbind-clients-4.4.4-14.el7_3.x86_64.rpmsamba-winbind-modules-4.4.4-14.el7_3.i686.rpmsamba-winbind-modules-4.4.4-14.el7_3.x86_64.rpm			

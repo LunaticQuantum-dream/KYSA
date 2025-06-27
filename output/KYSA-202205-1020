@@ -1,0 +1,13 @@
+Name:KYSA-202205-1020
+Severity:低等
+Summary:ntp安全漏洞
+Published:2022-05-10
+URL:/support/loophole/patch/1138.html
+Title:
+			公告ID：KYSA-202205-1020
+公告摘要：ntp安全漏洞
+安全等级：Low
+发布日期：2022年05月10日
+影响CVE：CVE-2020-15025
+		
+1. 修复的CVE·CVE-2020-15025描述：Network Time Protocol（NTP,网络时间协议）是一种以数据包交换把两台电脑的时钟同步化的网络协议。ntpd是其中的一个操作系统守护进程，它使用网络时间协议（NTP）与时间服务器的系统时间保持同步。Network Time Protocol 4.2.8p15之前的4.2.8版本和4.3.101之前的4.3.x版本中的ntpd存在安全漏洞。远程攻击者可通过发送数据包利用该漏洞导致拒绝服务（内存消耗）。2. 受影响的软件包·银河麒麟高级服务器操作系统 V10 SP2aarch64架构:ntp、ntp-help、ntp-perlx86_64架构:ntp、ntp-help、ntp-perl3. 软件包修复版本·银河麒麟高级服务器操作系统 V10 SP2ntp-4.2.8p14-5.p01.ky10ntp-help-4.2.8p14-5.p01.ky10ntp-perl-4.2.8p14-5.p01.ky104. 修复方法方法一：配置源进行升级安装1. 打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP2aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2. 配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3. 升级完成后是否需要重启服务或操作系统：·CVE-2020-15025：需要重启 ntp 以使漏洞修复生效。5. 软件包下载地址·银河麒麟高级服务器操作系统 V10 SP2 ntp（aarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ntp-4.2.8p14-5.p01.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ntp-help-4.2.8p14-5.p01.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ntp-perl-4.2.8p14-5.p01.ky10.noarch.rpm ntp（x86_64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ntp-4.2.8p14-5.p01.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ntp-help-4.2.8p14-5.p01.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ntp-perl-4.2.8p14-5.p01.ky10.noarch.rpm 注：其他相关依赖包请到相同目录下载6. 修复验证使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。sudo rpm -qa | grep Packagename

@@ -1,0 +1,89 @@
+Name:KYSA-202411-1058
+Severity:重要
+Summary:grub2安全漏洞
+Published:2024-11-26
+URL:/support/loophole/patch/6751.html
+Title:
+			公告ID：KYSA-202411-1058
+公告摘要：grub2安全漏洞
+等级：重要
+发布日期：2024-11-26
+		
+1.修复的漏洞
+·CVE-2021-3695
+描述：grub2是GNU社区的一款Linux系统引导程序。grub2 存在缓冲区错误漏洞，攻击者通过精心制作的PNG灰度图像利用该漏洞导致堆中越界写入。
+·CVE-2021-3696
+描述：grub2是GNU社区的一款Linux系统引导程序。grub2 存在缓冲区错误漏洞，攻击者通过精心制作的PNG图像利用该漏洞导致哈夫曼表处理时的越界写入。
+·CVE-2021-3697
+描述：grub2是GNU社区的一款Linux系统引导程序。grub2 存在缓冲区错误漏洞，攻击者通过精心制作的JPEG图像利用该漏洞导致堆中的缓冲区下溢写入。
+·CVE-2021-3981
+描述：grub2是GNU社区的一款Linux系统引导程序。grub2存在安全漏洞，该漏洞源于 grub.cfg 中的权限不正确，允许非特权用户读取文件内容。
+·CVE-2022-2601
+描述：grub2是一款Linux系统引导程序。
+grub2存在安全漏洞，该漏洞源于攻击者可以使用恶意制作的pf2字体实现越界写入导致内存损坏和安全引导规避。
+·CVE-2022-28733
+描述：grub2是GNU社区的一款Linux系统引导程序。grub2存在安全漏洞，该漏洞源于grub_net_recv_ip4_packets整数下溢。
+·CVE-2022-28734
+描述：grub2是GNU社区的一款Linux系统引导程序。grub2存在安全漏洞，该漏洞源于处理拆分HTTP header时出现越界写入。
+·CVE-2022-28736
+描述：grub2是GNU社区的一款Linux系统引导程序。grub2 存在安全漏洞，该漏洞源于在grub_cmd_chainloader()中释放后重用。
+·CVE-2022-3775
+描述：grub2 存在资源管理错误漏洞，该漏洞源于在grub_cmd_chainloader()中释放后重用。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+grub2-tools-minimal、grub2-help、grub2-efi-loongarch64-cdboot、grub2-efi-loongarch64-modules、grub2-tools、grub2-efi-loongarch64、grub2-tools-extra、grub2-common
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+grub2-efi-loongarch64-2.04-21.se.04.p20.a.ky10或以上版本
+grub2-common-2.04-21.se.04.p20.a.ky10或以上版本
+grub2-tools-2.04-21.se.04.p20.a.ky10或以上版本
+grub2-tools-extra-2.04-21.se.04.p20.a.ky10或以上版本
+grub2-help-2.04-21.se.04.p20.a.ky10或以上版本
+grub2-tools-minimal-2.04-21.se.04.p20.a.ky10或以上版本
+grub2-efi-loongarch64-cdboot-2.04-21.se.04.p20.a.ky10或以上版本
+grub2-efi-loongarch64-modules-2.04-21.se.04.p20.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-3695:需要重启操作系统以使漏洞修复生效。
+CVE-2021-3696:需要重启操作系统以使漏洞修复生效。
+CVE-2021-3697:需要重启操作系统以使漏洞修复生效。
+CVE-2021-3981:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-2601:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-28733:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-28734:需要重启操作系统以使漏洞修复生效。
+CVE-2022-28736:需要重启操作系统以使漏洞修复生效。
+CVE-2022-3775:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+grub2(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/grub2-tools-extra-2.04-21.se.04.p20.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/grub2-efi-loongarch64-cdboot-2.04-21.se.04.p20.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/grub2-efi-loongarch64-modules-2.04-21.se.04.p20.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/grub2-tools-minimal-2.04-21.se.04.p20.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/grub2-common-2.04-21.se.04.p20.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/grub2-tools-2.04-21.se.04.p20.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/grub2-efi-loongarch64-2.04-21.se.04.p20.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/grub2-help-2.04-21.se.04.p20.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

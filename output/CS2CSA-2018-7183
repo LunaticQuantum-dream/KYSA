@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-7183
+Severity:中等
+Summary:NTP ntpq 缓冲区错误漏洞
+Published:2018-02-27
+URL:/support/loophole/patch/133.html
+Title:
+			摘要：             NTP ntpq 缓冲区错误漏洞
+安全等级：          中等
+公告ID：           CS2CSA-2018-7183
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-02-27
+CVE：             CVE-2018-7183 CVSS3评分：5
+		
+1. 概述：中标麒麟高级服务器操作系统V6、V7不受该漏洞影响。2. 描述：在4.2.8p6到4.2.8p10版本的ntp中，decodearr函数会发生缓冲区溢出，这会让攻击者通过查询和发送响应来执行恶意代码。			

@@ -1,0 +1,99 @@
+Name:KYSA-202408-1049
+Severity:低等
+Summary:grub2安全漏洞
+Published:2024-08-13
+URL:/support/loophole/patch/6059.html
+Title:
+			公告ID：KYSA-202408-1049
+公告摘要：grub2安全漏洞
+等级：低等
+发布日期：2024-08-13
+		
+1.修复的漏洞
+·CVE-2024-1048
+描述：grub2是美国GNU社区的一款Linux系统引导程序。
+grub2存在安全漏洞，该漏洞源于如果程序在重命名操作之前被终止，临时文件将不会被删除，并且在多次调用时可能会填满文件系统，导致文件系统没有可用的 inode 或 blocks。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+grub2-pc-modules、grub2-tools、grub2-efi-aa64、grub2-efi-aa64-modules、grub2-common、grub2-help、grub2-efi-ia32-modules、grub2-efi-aa64-cdboot、grub2-efi-x64-modules
+·x86_64架构:
+grub2-efi-ia32-cdboot、grub2-pc-modules、grub2-tools、grub2-efi-ia32、grub2-efi-x64-cdboot、grub2-efi-aa64-modules、grub2-common、grub2-pc、grub2-efi-x64-modules、grub2-help、grub2-efi-x64、grub2-efi-ia32-modules、grub2-tools-efi
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64)
+grub2-common-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-pc-modules-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-aa64-modules-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-aa64-cdboot-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-ia32-modules-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-help-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-aa64-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-x64-modules-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-tools-2.02-77.1.se.04.p06.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP1 (x86_64)
+grub2-tools-efi-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-common-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-pc-modules-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-aa64-modules-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-ia32-modules-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-help-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-x64-cdboot-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-x64-modules-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-tools-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-x64-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-pc-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-ia32-cdboot-2.02-77.1.se.04.p06.ky10或以上版本
+grub2-efi-ia32-2.02-77.1.se.04.p06.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2024-1048:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+grub2(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/grub2-pc-modules-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/grub2-efi-x64-modules-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/grub2-help-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/grub2-efi-ia32-modules-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/grub2-tools-2.02-77.1.se.04.p06.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/grub2-efi-aa64-modules-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/grub2-efi-aa64-cdboot-2.02-77.1.se.04.p06.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/grub2-common-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/grub2-efi-aa64-2.02-77.1.se.04.p06.ky10.aarch64.rpm
+
+grub2(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-tools-efi-2.02-77.1.se.04.p06.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-efi-x64-cdboot-2.02-77.1.se.04.p06.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-tools-2.02-77.1.se.04.p06.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-efi-ia32-modules-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-efi-x64-2.02-77.1.se.04.p06.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-efi-aa64-modules-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-efi-ia32-2.02-77.1.se.04.p06.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-efi-ia32-cdboot-2.02-77.1.se.04.p06.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-efi-x64-modules-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-common-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-help-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-pc-modules-2.02-77.1.se.04.p06.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/grub2-pc-2.02-77.1.se.04.p06.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

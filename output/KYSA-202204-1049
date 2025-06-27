@@ -1,0 +1,13 @@
+Name:KYSA-202204-1049
+Severity:重要
+Summary:gnulib安全漏洞
+Published:2022-04-22
+URL:/support/loophole/patch/1077.html
+Title:
+			公告ID：KYSA-202204-1049
+公告摘要：gnulib安全漏洞
+安全等级：Important
+发布日期：2022年04月22日
+影响CVE：CVE-2018-17942
+		
+1. 修复的CVE·CVE-2018-17942描述：Gnulib是一个支持多系统运行的GNU可移植性库。Gnulib 2018-09-23之前版本中的vasnprintf.c文件的‘convert_to_decimal’函数存在基于堆的缓冲区溢出漏洞，该漏洞源于程序没有执行正确的边界检测。远程攻击者可借助特制的文件利用该漏洞在系统上执行任意代码。2. 受影响的软件包·银河麒麟高级服务器操作系统 V10 SP1loongarch64架构:gnulib-devel、gnulib-help3. 软件包修复版本·银河麒麟高级服务器操作系统 V10 SP1gnulib-devel-0-28.20180720git.p01.a.ky10gnulib-help-0-28.20180720git.p01.a.ky104. 修复方法方法一：配置源进行升级安装1. 打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP1loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/2. 配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3. 升级完成后是否需要重启服务或操作系统：·CVE-2018-17942：无需重启操作系统与服务即可使漏洞修复生效。5. 软件包下载地址·银河麒麟高级服务器操作系统 V10 SP1gnulib（loongarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/gnulib-devel-0-28.20180720git.p01.a.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/gnulib-help-0-28.20180720git.p01.a.ky10.loongarch64.rpm注：其他相关依赖包请到相同目录下载6. 修复验证使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。sudo rpm -qa | grep Packagename

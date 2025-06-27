@@ -1,0 +1,134 @@
+Name:KYSA-202104-1209
+Severity:中等
+Summary:ntp安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/1884.html
+Title:
+			公告ID：KYSA-202104-1209
+公告摘要：ntp安全漏洞
+等级：Moderate
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2016-1547
+描述：在NTP处理可抢占客户机关联的方式中发现了一个拒绝服务缺陷。远程攻击者可以向受害者客户端发送多个加密NAK数据包，每个数据包都带有一个现有关联对等方的伪造源地址，从而阻止该客户端同步其时间。
+·CVE-2016-1548
+描述：发现ntpd客户机可能被迫从基本客户机/服务器模式更改为交错对称模式。远程攻击者可以使用欺骗数据包，当ntpd客户端处理该数据包时，会导致该客户端拒绝所有未来的合法服务器响应，从而有效地禁用该客户端上的时间同步。
+·CVE-2016-1550
+描述：在NTP的libntp执行消息验证的方式中发现了一个缺陷。如果攻击者能够观察到包身份验证中使用的比较函数的时间，则可能会利用此漏洞恢复消息摘要。
+·CVE-2016-2518
+描述：在ntpd处理某些数据包的方式中发现了越界访问漏洞。经过身份验证的攻击者可以使用精心制作的数据包来创建hmode为7或更大的对等关联，这可能（尽管极不可能）导致ntpd崩溃。
+·CVE-2016-7426
+描述：已经发现，当为所有关联配置ntp速率限制时，该限制也适用于从其配置的源接收到的响应。知道来源的远程攻击者可以通过阻止ntpd接受来自其来源的有效响应来导致拒绝服务。
+·CVE-2016-7429
+描述：在具有多个网络接口的主机上运行的ntpd处理某些服务器响应的方式中发现了一个缺陷。远程攻击者可能会利用此缺陷，这将导致ntpd与源不同步。
+·CVE-2016-7433
+描述：在ntpd计算根延迟的方式中发现了一个缺陷。远程攻击者可能会发送特制的欺骗性数据包，从而导致拒绝服务或在某些特殊情况下甚至崩溃。
+·CVE-2016-9310
+描述：在ntpd的控制模式功能中发现一个缺陷。远程攻击者可以发送精心编制的控制模式数据包，这可能导致信息泄漏或导致DDoS放大攻击。
+·CVE-2016-9311
+描述：在ntpd实现陷阱服务的方式中发现了一个缺陷。远程攻击者可以发送精心编制的数据包，导致空指针取消引用，从而使ntpd崩溃，从而导致拒绝服务。
+·CVE-2017-6462
+描述：在分析来自/dev/datum设备的数据包时，在NTP中发现了一个漏洞。恶意设备可能会发送精心编制的消息，导致ntpd崩溃。
+·CVE-2017-6463
+描述：在NTP服务器解析配置指令时发现了一个漏洞。经过身份验证的远程攻击者可通过发送精心编制的消息导致ntpd崩溃。
+·CVE-2017-6464
+描述：在NTP服务器解析配置指令时发现了一个漏洞。经过身份验证的远程攻击者可通过发送精心编制的消息导致ntpd崩溃。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+ntp、ntp-doc、ntp-perl、ntpdate、sntp
+·x86_64架构:
+ntp、ntp-doc、ntp-perl、ntpdate、sntp
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+ntp、ntp-doc、ntp-perl、ntpdate、sntp
+·x86_64架构:
+ntp、ntp-doc、ntp-perl、ntpdate、sntp
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+ntp-4.2.6p5-28.el7.ns7.01或以上版本
+ntp-doc-4.2.6p5-28.el7.ns7.01或以上版本
+ntp-perl-4.2.6p5-28.el7.ns7.01或以上版本
+ntpdate-4.2.6p5-28.el7.ns7.01或以上版本
+sntp-4.2.6p5-28.el7.ns7.01或以上版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+ntp-4.2.6p5-28.el7.ns7.01或以上版本
+ntp-doc-4.2.6p5-28.el7.ns7.01或以上版本
+ntp-perl-4.2.6p5-28.el7.ns7.01或以上版本
+ntpdate-4.2.6p5-28.el7.ns7.01或以上版本
+sntp-4.2.6p5-28.el7.ns7.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2016-1547:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-1548:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-1550:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-2518:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-7426:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-7429:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-7433:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-9310:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2016-9311:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-6462:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-6463:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-6464:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+ntp(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ntp-4.2.6p5-28.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ntp-doc-4.2.6p5-28.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ntp-perl-4.2.6p5-28.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ntpdate-4.2.6p5-28.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/sntp-4.2.6p5-28.el7.ns7.01.aarch64.rpm
+
+ntp(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ntp-4.2.6p5-28.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ntp-4.2.6p5-28.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ntp-doc-4.2.6p5-28.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ntp-perl-4.2.6p5-28.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ntpdate-4.2.6p5-28.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ntpdate-4.2.6p5-28.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/sntp-4.2.6p5-28.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/sntp-4.2.6p5-28.el7.ns7.01.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+ntp(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/ntp-4.2.6p5-28.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/ntp-doc-4.2.6p5-28.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/ntp-perl-4.2.6p5-28.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/ntpdate-4.2.6p5-28.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/sntp-4.2.6p5-28.el7.ns7.01.aarch64.rpm
+
+ntp(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/ntp-4.2.6p5-28.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/ntp-doc-4.2.6p5-28.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/ntp-perl-4.2.6p5-28.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/ntpdate-4.2.6p5-28.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/sntp-4.2.6p5-28.el7.ns7.01.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

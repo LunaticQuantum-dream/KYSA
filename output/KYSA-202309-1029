@@ -1,0 +1,110 @@
+Name:KYSA-202309-1029
+Severity:中等
+Summary:libreswan安全漏洞
+Published:2023-09-19
+URL:/support/loophole/patch/4148.html
+Title:
+			公告ID：KYSA-202309-1029
+公告摘要：libreswan安全漏洞
+等级：Moderate
+发布日期：2023-09-19
+		
+1.修复的CVE
+·CVE-2023-38710
+描述：Libreswan是一个类似于Openswan的IPsec实现，它主要用于保证数据传输中的安全性、完整性问题。
+Libreswan 4.12之前版本存在安全漏洞，该漏洞源于在IKEv2子安全关联（Child SA）的重新协商（REKEY）数据包中，如果包含了无效的IPsec协议ID号（0或1），会发送一个错误通知（INVALID_SPI）。这个通知负载的协议ID是从传入的数据包中复制的，但是验证传出数据包的代码会失败，因为协议ID必须是ESP（2）或AH（3），这导致pluto守护进程崩溃并重新启动。
+·CVE-2023-38711
+描述：Libreswan是一个类似于Openswan的IPsec实现，它主要用于保证数据传输中的安全性、完整性问题。
+Libreswan 4.12之前版本存在安全漏洞，该漏洞源于当配置了使用ID_IPV4_ADDR或ID_IPV6_ADDR的IKEv1快速模式（Quick Mode）连接，而收到一个带有ID_FQDN的IDcr负载时，会导致空指针解引用，从而导致pluto守护进程崩溃并重新启动。
+·CVE-2023-38712
+描述：Libreswan是一个类似于Openswan的IPsec实现，它主要用于保证数据传输中的安全性、完整性问题。
+Libreswan 3.x版本、4.x版本至4.12之前版本存在安全漏洞，该漏洞源于当一个IKEv1 ISAKMP SA信息交换数据包包含一个Delete/Notify负载，随后又包含进一步操作ISAKMP SA的Notifies，比如重复的Delete/Notify消息，会导致一个空指针解引用，从而导致pluto守护进程崩溃并重新启动。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+libreswan、libreswan-help
+·x86_64架构:
+libreswan、libreswan-help
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+libreswan、libreswan-help
+·x86_64架构:
+libreswan、libreswan-help
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+libreswan、libreswan-help
+·x86_64架构:
+libreswan、libreswan-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+libreswan-4.12-1.ky10或以上版本
+libreswan-help-4.12-1.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+libreswan-4.12-1.ky10或以上版本
+libreswan-help-4.12-1.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+libreswan-4.12-1.ky10或以上版本
+libreswan-help-4.12-1.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-38710:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-38711:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-38712:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+libreswan(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libreswan-4.12-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libreswan-help-4.12-1.ky10.aarch64.rpm
+
+libreswan(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libreswan-4.12-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libreswan-help-4.12-1.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+libreswan(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/libreswan-4.12-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/libreswan-help-4.12-1.ky10.aarch64.rpm
+
+libreswan(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/libreswan-4.12-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/libreswan-help-4.12-1.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+libreswan(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/libreswan-4.12-1.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/libreswan-help-4.12-1.ky10.aarch64.rpm
+
+libreswan(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/libreswan-4.12-1.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/libreswan-help-4.12-1.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

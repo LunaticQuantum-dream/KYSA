@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-1057
+Severity:重要
+Summary:Samba AD DC 安全漏洞
+Published:2018-03-13
+URL:/support/loophole/patch/156.html
+Title:
+			摘要：             Samba AD DC 安全漏洞
+安全等级：          重要
+公告ID：           CS2CSA-2018-1057
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-03-13
+CVE：             CVE-2018-1057 CVSS3评分：7.4
+		
+1. 概述：中标麒麟高级服务器操作系统V6、V7不受该漏洞影响。2. 描述：在Samba AD DC 验证用户权限的方式中发现了一个缺陷。经过验证的攻击者可以使用此漏洞来更改任何其他用户密码，包括管理用户。

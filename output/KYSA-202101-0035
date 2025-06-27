@@ -1,0 +1,91 @@
+Name:KYSA-202101-0035
+Severity:中等
+Summary:p11-kit安全漏洞
+Published:2022-01-21
+URL:/support/loophole/patch/771.html
+Title:
+			公告ID：KYSA-202101-0035
+公告摘要：p11-kit安全漏洞
+等级：中等
+发布日期：2022-01-21
+		
+1. 漏洞概述
+CVE-2020-29361
+P11-glue P11-kit是P11-glue个人开发者的一个用于加载和枚举PKCS模块的工具软件。 在p11试剂盒0.21.1至0.23.21中发现了一个问题。在p11-kit库和p11-kit list命令的数组分配中发现了多个整数溢出，在调用realloc或calloc之前缺少溢出检查。
+CVE-2020-29362
+P11-glue P11-kit是P11-glue个人开发者的一个用于加载和枚举PKCS模块的工具软件。 P11-glue P11-kit server/remote 0.23.6版本至0.23.21版本存在缓冲区错误漏洞，该漏洞源于使用的RPC协议中发现了基于堆的缓冲区超读。当远程实体通过序列化的PKCS#11函数调用提供字节数组时，接收实体可能允许读取超过堆分配的最多4个字节的内存。
+CVE-2020-29363
+P11-glue P11-kit是P11-glue个人开发者的一个用于加载和枚举PKCS模块的工具软件。 P11-glue P11-kit server/remote 0.23.6版本至0.23.21版本存在缓冲区错误漏洞，该漏洞源于RPC协议中发现了基于堆的缓冲区溢出，当远程实体在CK_ATTRIBUTE中提供序列化的字节数组时，接收实体可能没有为缓冲区分配足够的长度来存储反序列化的值。
+
+2. 受影响的操作系统及软件包
+·银河麒麟操作系统V10桌面版、V4
+libp11-kit-dev
+libp11-kit0
+p11-kit
+p11-kit-modules
+·银河麒麟桌面操作系统V10 SP1
+libp11-kit-dev
+libp11-kit0
+p11-kit
+p11-kit-modules
+
+3. 软件包修复版本
+软件包：p11-kit
+0.23.2-5~kord16.04.2(V4、V10)
+0.23.20-1kylin0.1(V10 SP1)
+
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+
+5. 软件包下载地址
+银河麒麟操作系统V10桌面版、V4
+X86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/libp11-kit-dev_0.23.2-5~kord16.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/libp11-kit0_0.23.2-5~kord16.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/p11-kit-modules_0.23.2-5~kord16.04.2_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/p11-kit_0.23.2-5~kord16.04.2_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/libp11-kit-dev_0.23.2-5~kord16.04.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/libp11-kit0_0.23.2-5~kord16.04.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/p11-kit-modules_0.23.2-5~kord16.04.2_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/p11-kit_0.23.2-5~kord16.04.2_arm64.deb
+银河麒麟操作系统桌面版V10 SP1
+X86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/libp11-kit-dev_0.23.20-1kylin0.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/libp11-kit0_0.23.20-1kylin0.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/p11-kit-modules_0.23.20-1kylin0.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/p11-kit_0.23.20-1kylin0.1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/libp11-kit-dev_0.23.20-1kylin0.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/libp11-kit0_0.23.20-1kylin0.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/p11-kit-modules_0.23.20-1kylin0.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/p11-kit_0.23.20-1kylin0.1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/libp11-kit-dev_0.23.20-1kylin0.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/libp11-kit0_0.23.20-1kylin0.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/p11-kit-modules_0.23.20-1kylin0.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/p11-kit/p11-kit_0.23.20-1kylin0.1_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

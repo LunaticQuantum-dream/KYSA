@@ -1,0 +1,13 @@
+Name:KYSA-202108-0002
+Severity:中等
+Summary:c-ares安全漏洞
+Published:2021-11-16
+URL:/support/loophole/patch/597.html
+Title:
+			摘要：c-ares安全漏洞
+安全等级：中等
+公告ID：KYSA-202108-0002
+发布日期：2021-11-16
+影响CVE：CVE-2021-3672
+		
+1. 修复的CVE信息CVE-2021-3672libcares2是openSUSE项目的一个 C 库，可以异步执行 DNS 请求和名称解析。libcares2 存在安全漏洞，该漏洞源于对主机名的输入验证不当。2. 影响的操作系统银河麒麟桌面操作系统V4 SP1银河麒麟桌面操作系统V4 SP2银河麒麟桌面操作系统V4 SP3银河麒麟桌面操作系统V4 SP4银河麒麟服务器操作系统V4 SP1银河麒麟服务器操作系统V4 SP2银河麒麟服务器操作系统V4 SP3银河麒麟服务器操作系统V4 SP4银河麒麟桌面操作系统V10 SP13. 修复版本软件包：c-ares1.10.0-3kord0.2+esm1(V4、V10)1.15.0-1kylin0.1(V10 SP1)4. 受影响的软件包银河麒麟桌面操作系统V4libc-ares-devlibc-ares2银河麒麟桌面操作系统V10libc-ares-devlibc-ares2银河麒麟桌面操作系统V10 SP1libc-ares-devlibc-ares25. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2-sp1:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10.0 SP1:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级。$sudo apt update方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists 6. 软件包下载地址银河麒麟桌面操作系统V10、V4X86_64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/c-ares/libc-ares-dev_1.10.0-3kord0.2+esm1_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/c-ares/libc-ares2_1.10.0-3kord0.2+esm1_amd64.debarm64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/c-ares/libc-ares-dev_1.10.0-3kord0.2+esm1_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/c-ares/libc-ares2_1.10.0-3kord0.2+esm1_arm64.deb银河麒麟桌面操作系统V10 SP1X86_64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/c-ares/libc-ares2_1.15.0-1kylin0.1_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/c-ares/libc-ares-dev_1.15.0-1kylin0.1_amd64.debarm64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/c-ares/libc-ares2_1.15.0-1kylin0.1_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/c-ares/libc-ares-dev_1.15.0-1kylin0.1_arm64.debmips64el软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/c-ares/libc-ares2_1.15.0-1kylin0.1_mips64el.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/c-ares/libc-ares-dev_1.15.0-1kylin0.1_mips64el.deb   

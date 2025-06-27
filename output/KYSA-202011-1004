@@ -1,0 +1,78 @@
+Name:KYSA-202011-1004
+Severity:中等
+Summary:python-urllib3,python-virtualenv,python-pip安全漏洞
+Published:2020-11-01
+URL:/support/loophole/patch/1714.html
+Title:
+			公告ID：KYSA-202011-1004
+公告摘要：python-urllib3,python-virtualenv,python-pip安全漏洞
+等级：Moderate
+发布日期：2020/11/1
+		
+
+1.修复的CVE
+·CVE-2018-18074
+描述：在python请求中发现了一个凭据暴露缺陷，其中如果将具有身份验证的请求从同一主机上的HTTPS端点重定向（302）到HTTP端点，则不会剥离授权头，并且可以以纯文本形式读取凭据。中间人攻击者可以利用此漏洞获取用户的有效凭据。
+·CVE-2018-20060
+描述：在跨源重定向（即主机、端口或方案不同的重定向）之后，1.23版之前的urllib3不会删除Authorization HTTP头。这可以允许授权头中的凭证暴露给非预期的主机或以明文传输。
+·CVE-2019-11236
+描述：在urllib3库到1.24.1 for Python中，如果攻击者控制了请求参数，就有可能注入CRLF
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+python3-pip、python-urllib3、python-virtualenv
+x86_64架构:
+python3-pip、python-urllib3、python-virtualenv
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+python3-pip-9.0.3-8.el7
+python-urllib3-1.10.2-7.el7
+python-virtualenv-15.1.0-4.el7_8
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+·CVE-2018-18074：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2018-20060：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2019-11236：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+python-urllib3（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/python-urllib3-1.10.2-7.el7.noarch.rpm
+
+python-urllib3（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/python-urllib3-1.10.2-7.el7.noarch.rpm
+
+
+python-virtualenv（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/aarch64/Packages/python-virtualenv-15.1.0-4.el7_8.noarch.rpm
+
+python-virtualenv（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/python-virtualenv-15.1.0-4.el7_8.noarch.rpm
+
+
+python-pip（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/aarch64/Packages/python3-pip-9.0.3-8.el7.noarch.rpm
+
+python-pip（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/updates/x86_64/Packages/python3-pip-9.0.3-8.el7.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,85 @@
+Name:KYSA-202210-1120
+Severity:重要
+Summary:qemu-kvm安全漏洞
+Published:2022-10-25
+URL:/support/loophole/patch/3563.html
+Title:
+			公告ID：KYSA-202210-1120
+公告摘要：qemu-kvm安全漏洞
+等级：Important
+发布日期：2022-10-25
+		
+1.修复的CVE
+·CVE-2020-13253
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）软件开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 4.2.0版本中的hw/sd/sd.c文件中的sd_wp_addr存在缓冲区错误漏洞，该漏洞源于程序使用了未验证的地址。攻击者可利用该漏洞导致QEMU进程崩溃。
+·CVE-2020-14394
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU的USB xHCI控制器存在安全漏洞，该漏洞源于存在无限循环缺陷。攻击者利用该漏洞在主机上挂起 QEMU 进程，从而导致拒绝服务。
+·CVE-2021-20257
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 中的e1000 存在安全漏洞，攻击者可利用该漏洞触发拒绝服务。
+·CVE-2021-3608
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 存在缓冲区错误漏洞，该漏洞源于pvrdma_ring_init() 中未初始化的内存取消映射。
+·CVE-2021-3750
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 7.0.0 版本之前存在安全漏洞，该漏洞源于 EHCI 在传输 USB 数据包时不会验证缓冲区指针是否与其 MMIO 区域重叠。
+·CVE-2022-35414
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU的physmem.c 7.0.0版本及以下版本存在安全漏洞，该漏洞源于可以对translate_fail路径进行未初始化的读取，导致io_readx或io_writex崩溃。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+qemu-guest-agent、qemu-img、qemu-kvm、qemu-kvm-block-curl、qemu-kvm-block-gluster、qemu-kvm-block-iscsi、qemu-kvm-block-rbd、qemu-kvm-block-ssh、qemu-kvm-common、qemu-kvm-core、qemu-kvm-tests
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+qemu-guest-agent-4.2.0-34.8.p02.a.ky10或以上版本
+qemu-img-4.2.0-34.8.p02.a.ky10或以上版本
+qemu-kvm-4.2.0-34.8.p02.a.ky10或以上版本
+qemu-kvm-block-curl-4.2.0-34.8.p02.a.ky10或以上版本
+qemu-kvm-block-gluster-4.2.0-34.8.p02.a.ky10或以上版本
+qemu-kvm-block-iscsi-4.2.0-34.8.p02.a.ky10或以上版本
+qemu-kvm-block-rbd-4.2.0-34.8.p02.a.ky10或以上版本
+qemu-kvm-block-ssh-4.2.0-34.8.p02.a.ky10或以上版本
+qemu-kvm-common-4.2.0-34.8.p02.a.ky10或以上版本
+qemu-kvm-core-4.2.0-34.8.p02.a.ky10或以上版本
+qemu-kvm-tests-4.2.0-34.8.p02.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-13253:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2020-14394:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2021-20257:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2021-3608:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2021-3750:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2022-35414:需要重启 qemu-kvm 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+qemu-kvm(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/qemu-guest-agent-4.2.0-34.8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/qemu-img-4.2.0-34.8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/qemu-kvm-4.2.0-34.8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/qemu-kvm-block-curl-4.2.0-34.8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/qemu-kvm-block-gluster-4.2.0-34.8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/qemu-kvm-block-iscsi-4.2.0-34.8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/qemu-kvm-block-rbd-4.2.0-34.8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/qemu-kvm-block-ssh-4.2.0-34.8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/qemu-kvm-common-4.2.0-34.8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/qemu-kvm-core-4.2.0-34.8.p02.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/qemu-kvm-tests-4.2.0-34.8.p02.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

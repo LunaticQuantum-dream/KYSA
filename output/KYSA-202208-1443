@@ -1,0 +1,159 @@
+Name:KYSA-202208-1443
+Severity:重要
+Summary:tomcat6安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/4289.html
+Title:
+			公告ID：KYSA-202208-1443
+公告摘要：tomcat6安全漏洞
+等级：Important
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2011-1184
+描述：Apache Tomcat 7.0.0 到7.0.11，6.0.0到6.0.32，5.5.0到5.5.33版本中存在多个安全漏洞。攻击者可利用该漏洞绕过安全限制执行未授权的攻击。
+·CVE-2011-2204
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat 5.5.34之前的5.5.x版本，6.0.33之前的6.x版本，以及7.0.17之前的7.x版本中存在信息泄露漏洞。该漏洞源于使用MemoryUserDatabase的JMX在创建用户时产生的错误，本地用户可利用该漏洞在Tomcat日志中记录用户密码，导致泄露敏感信息。
+·CVE-2011-2526
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。当为HTTP APR或HTTP NIO连接器启用了sendfile时，Apache Tomcat 5.5.34之前的5.5.x版本，6.0.33之前的6.x版本，7.0.19之前的7.x版本没有验证某些请求属性。本地用户可利用不可信web应用程序绕过预设的文件访问限制或导致拒绝服务（无限循环或JVM崩溃）。
+·CVE-2011-3190
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Tomcat在AJP协议的实现上存在安全限制绕过漏洞。此漏洞源于Apache Tomcat错误处理了某些请求，可被利用注入任意AJP消息并泄露敏感信息或绕过身份验证机制。成功利用需要不使用org.apache.jk.server.JkCoyoteHandler AJP连接器，接受POST请求，不处理请求主体。远程攻击者可利用此漏洞绕过某些安全限制。
+·CVE-2011-4858
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat 5.5.35之前版本,6.0.35之前的6.x版本以及7.0.23之前的7.x版本中存在漏洞，该漏洞源于在没有限制触发预测哈希冲突的情况下为形式参数计算哈希值。远程攻击者可以通过发送多个特制参数导致拒绝服务。
+·CVE-2011-5062
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat 5.5.34之前的5.5.x版本，6.0.33之前的6.x版本，7.0.12之前的7.x版本中的HTTP摘要式身份验证时在实现上存在漏洞，该漏洞源于未检测qop值。远程攻击者可利用该漏洞借助特制的qop=auth的值绕过完整性保护限制。
+·CVE-2011-5063
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat的HTTP摘要式身份验证时在实现上中存在漏洞，该漏洞源于未校对realm值。远程攻击者可利用该漏洞借助具有较弱认证或授权要求的保护空间的可用性绕过预期的访问限制。
+·CVE-2011-5064
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat的HTTP摘要访问授权implementation（实施）中的DigestAuthenticator.java中存在漏洞，该漏洞源于其将Catalina作为私钥。远程攻击者可通过对该字符串的认知绕过加密的保护机制。
+·CVE-2012-0022
+描述：Apache Tomcat是一个流行的开放源码的JSP应用服务器程序。Apache Tomcat在参数处理的实现上存在拒绝服务漏洞。远程攻击者可通过特制的请求利用此漏洞消耗大量的CPU资源，造成拒绝服务。
+·CVE-2012-3546
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat 6.0.36之前的6.x版本以及7.0.30之前的7.x版本中的org/apache/catalina/realm/RealmBase.java中存在漏洞。在程序使用FORM身份验证的条件下，通过对之前的某setUserPrincipal调用进行利用并且在URI结尾处追加/j_security_check，远程攻击者利用该漏洞绕过安全强制检查。
+·CVE-2012-4534
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat 6.0.36之前的6.x版本和7.0.28之前的7.x版本中的org/apache/tomcat/util/net/NioEndpoint.java中存在漏洞。在sendfile和HTTPS同时发生的情况下使用NIO连接器，并在读响应的过程中终止其连接，远程攻击可者利用该漏洞导致拒绝服务（无限循环）。
+·CVE-2012-5885
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat 5.5.36之前的5.5.x版本、6.0.36之前的6.x版本、7.0.30之前的7.x版本中的HTTP Digest Access Authentication实现中的replay-countermeasure功能中存在漏洞，该漏洞源于程序追踪cnonce(又名客户端随机数)值而不是追踪nonce(又名服务器端随机数)和nc(又名随机数计数)值。远程攻击者利用该漏洞通过在网络中嗅探有效的请求，绕过预期的访问限制。
+·CVE-2012-5886
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat 5.5.36之前的5.5.x版本、6.0.36之前的6.x版本、7.0.30之前的7.x版本中的HTTP Digest Access Authentication实现中存在漏洞，该漏洞源于在会话状态中缓存相关身份验证用户的信息。远程攻击者利用该漏洞通过与会话ID相关的向量绕过身份验证。
+·CVE-2012-5887
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat 5.5.36之前的5.5.x版本、6.0.36之前的6.x版本、7.0.30之前的7.x版本中的HTTP Digest Access Authentication实现中存在漏洞，该漏洞源于程序在连带执行凭证检查的同时未对过期的随机数值进行正确的检查。通过在网络中嗅探有效的请求，远程攻击者可利用该漏洞绕过预期的访问限制。
+·CVE-2013-1976
+描述： Tomcat是一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。本地攻击者可通过在(a)tomcat5-initd.log，(b)tomcat6-initd.log，(c)catalina.out或(d)tomcat7-initd.log上的符号链接攻击利用该漏洞更改任意文件的所有权。
+·CVE-2013-2051
+描述：Tomcat是Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Tomcat 6 DIGEST身份认证功能中存在漏洞。远程攻击者可利用该漏洞绕过既定的访问限制。
+·CVE-2013-2067
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 6.0.21至6.0.36版本，7.0.33之前的7.x版本中的表单验证功能中的java/org/apache/catalina/authenticator/FormAuthenticator.java中存在漏洞，该漏洞源于程序没有正确处理身份认证要求和会话之间的关系。远程攻击者可通过在完成登录表单期间发送请求利用该漏洞注入请求到会话。
+·CVE-2013-4286
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在输入验证漏洞，该漏洞源于当使用HTTP或AJP连接器时，程序没有正确处理Content-Length HTTP请求头信息。远程攻击者可借助多个Content-Length头或使用块编码的Content-Length头利用该漏洞实施跨站脚本攻击，获取请求中的敏感信息。以下版本受到影响：Apache Tomcat 6.0.37及之前的版本，7.0.47之前的7.x版本，8.0.0-RC3之前的8.x版本。
+·CVE-2013-4322
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在输入验证漏洞。当处理分块传输编码时，远程攻击者可借助大量的分块数据或使用畸形的HTTP头利用该漏洞造成拒绝服务。以下版本受到影响：Apache Tomcat 6.0.37及之前的版本，7.0.47之前的7.x版本，8.0.0-RC3之前的8.x版本。
+·CVE-2013-4590
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在XML外部实体信息泄露漏洞，该漏洞源于当解析XML数据时，程序没有正确配置XML解析器。攻击者可借助特制的XML文档（如web.xml，context.xml，*.tld，*.tagx，*.jspx）利用该漏洞获取内部信息。以下版本受到影响：Apache Tomcat 6.0.37及之前的版本，7.0.47之前的7.x版本，8.0.0-RC3之前的8.x版本。
+·CVE-2014-0050
+描述：Apache Commons FileUpload是美国阿帕奇（Apache）基金会的一个可将文件上传到Servlet和Web应用程序的软件包。Apache Commons FileUpload 1.3.1及之前版本（用在Apache Tomcat和JBoss Web中）中的MultipartStream.java文件存在权限许可和访问控制问题漏洞。该漏洞源于网络系统或产品缺乏有效的权限许可和访问控制措施。
+·CVE-2014-0075
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中的java/org/apache/coyote/http11/filters/ChunkedInputFilter.java文件中的‘parseChunkHeader’函数存在整数溢出漏洞。远程攻击者可借助畸形的块数据利用该漏洞造成拒绝服务（资源消耗）。以下版本受到影响：Apache Tomcat 6.0.39及之前的版本，7.0.53之前的7.x版本，8.0.4之前的8.x版本。
+·CVE-2014-0096
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat的默认servlet中的java/org/apache/catalina/servlets/DefaultServlet.java文件存在安全漏洞，该漏洞源于程序没有正确限制XSLT样式表。远程攻击者可借助特制的应用程序利用该漏洞绕过安全限制，读取任意文件。以下版本受到影响：Apache Tomcat 6.0.39及之前的版本，7.0.53之前的7.x版本，8.0.4之前的8.x版本。
+·CVE-2014-0099
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中的java/org/apache/tomcat/util/buf/Ascii.java文件存在整数溢出漏洞。远程攻击者可借助特制的Content-Length HTTP头利用该漏洞实施HTTP请求走私攻击。以下版本受到影响：Apache Tomcat 6.0.39及之前的版本，7.0.53之前的7.x版本，8.0.4之前的8.x版本。
+·CVE-2014-0119
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在安全漏洞，该漏洞源于程序没有正确限制类加载器访问使用XSLT样式表的XML解析器。远程攻击者可借助特制的Web应用程序利用该漏洞读取任意文件，或读取不同Web应用程序相关的文件。以下版本受到影响：Apache Tomcat 6.0.39及之前的版本，7.0.54之前的7.x版本，8.0.6之前的8.x版本。
+·CVE-2014-0227
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中的java/org/apache/coyote/http11/filters/ChunkedInputFilter.java文件存在安全漏洞，该漏洞源于程序出现错误时，没有正确限制读取数据。远程攻击者可通过发送带有畸形编码块的流数据利用该漏洞实施HTTP请求走私攻击，或造成拒绝服务（资源耗尽）。以下版本受到影响：Apache Tomcat 6.0.42之前的6.x版本，7.0.55之前的7.x版本，8.0.9之前的8.x版本。
+·CVE-2014-7810
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在访问控制错误漏洞。该漏洞源于网络系统或产品未正确限制来自未授权角色的资源访问。
+·CVE-2015-5174
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat的RequestUtil.java文件中存在目录遍历漏洞，该漏洞源于getResource、getResourceAsStream和getResourcePaths函数没有充分过滤路径名中的目录遍历字符‘..’。远程攻击者可利用该漏洞绕过既定的SecurityManager限制，列出父目录。以下版本受到影响：Apache Tomcat 6.0.45之前6.x版本，7.0.65之前7.x版本，8.0.27之前8.x版本。
+·CVE-2015-5345
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat的Mapper组件中存在安全漏洞，该漏洞源于程序实现重定向前没有处理安全约束和过滤器。远程攻击者可借助缺少‘/’字符结尾的URL利用该漏洞确定目录的存在。以下版本受到影响：Apache Tomcat 6.0.45之前6.x版本，7.0.67之前7.x版本，8.0.30之前8.x版本，9.0.0.M2之前9.x版本。
+·CVE-2016-0706
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat中存在安全漏洞，该漏洞源于程序没有将org.apache.catalina.manager.StatusManagerServlet放到org/apache/catalina/core/RestrictedServlets.properties列表中。远程攻击者可借助特制的Web应用程序利用该漏洞绕过既定的SecurityManager限制，读取任意HTTP请求，发现会话ID。以下版本受到影响：Apache Tomcat 6.0.45之前6.x版本，7.0.68之前7.x版本，8.0.31之前8.x版本，9.0.0.M2之前9.x版本。
+·CVE-2016-0714
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat的session-persistence实现过程中存在安全漏洞，该漏洞源于程序没有正确处理会话属性。远程攻击者可借助将特制的对象放到会话中的Web应用程序利用该漏洞绕过既定的SecurityManager限制，以提升的权限执行任意代码。以下版本受到影响：Apache Tomcat 6.0.45之前6.x版本，7.0.68之前7.x版本，8.0.31之前8.x版本，9.0.0.M2之前9.x版本。
+·CVE-2016-5388
+描述：Apache Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat 8.5.4及之前的版本中存在安全漏洞，该漏洞源于程序没有解决RFC 3875模式下的命名空间冲突。程序没有正确处理来自HTTP_PROXY环境变量中不可信客户端数据应用程序。远程攻击者借助HTTP请求中特制的Proxy header消息利用该漏洞实施中间人攻击，指引服务器发送连接到任意主机。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+tomcat6、tomcat6-admin-webapps、tomcat6-docs-webapp、tomcat6-el-2.1-api、tomcat6-javadoc、tomcat6-jsp-2.1-api、tomcat6-lib、tomcat6-servlet-2.5-api、tomcat6-webapps
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+tomcat6-6.0.24-105.el6_8或以上版本
+tomcat6-admin-webapps-6.0.24-105.el6_8或以上版本
+tomcat6-docs-webapp-6.0.24-105.el6_8或以上版本
+tomcat6-el-2.1-api-6.0.24-105.el6_8或以上版本
+tomcat6-javadoc-6.0.24-105.el6_8或以上版本
+tomcat6-jsp-2.1-api-6.0.24-105.el6_8或以上版本
+tomcat6-lib-6.0.24-105.el6_8或以上版本
+tomcat6-servlet-2.5-api-6.0.24-105.el6_8或以上版本
+tomcat6-webapps-6.0.24-105.el6_8或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2011-1184:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2011-2204:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2011-2526:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2011-3190:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2011-4858:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2011-5062:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2011-5063:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2011-5064:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2012-0022:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2012-3546:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2012-4534:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2012-5885:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2012-5886:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2012-5887:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2013-1976:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2013-2051:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2013-2067:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2013-4286:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2013-4322:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2013-4590:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2014-0050:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2014-0075:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2014-0096:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2014-0099:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2014-0119:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2014-0227:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2014-7810:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2015-5174:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2015-5345:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2016-0706:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2016-0714:需要重启 tomcat6 以使漏洞修复生效。
+CVE-2016-5388:需要重启 tomcat6 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+tomcat6(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/tomcat6-6.0.24-105.el6_8.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/tomcat6-admin-webapps-6.0.24-105.el6_8.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/tomcat6-docs-webapp-6.0.24-105.el6_8.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/tomcat6-el-2.1-api-6.0.24-105.el6_8.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/tomcat6-javadoc-6.0.24-105.el6_8.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/tomcat6-jsp-2.1-api-6.0.24-105.el6_8.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/tomcat6-lib-6.0.24-105.el6_8.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/tomcat6-servlet-2.5-api-6.0.24-105.el6_8.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/tomcat6-webapps-6.0.24-105.el6_8.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

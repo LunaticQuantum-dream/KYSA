@@ -1,0 +1,59 @@
+Name:KYSA-202102-0053
+Severity:低等
+Summary:python-django安全漏洞
+Published:2023-02-08
+URL:/support/loophole/patch/2623.html
+Title:
+			公告ID：KYSA-202102-0053
+公告摘要：python-django安全漏洞
+等级：低等
+发布日期：2023-02-08
+		
+1. 修复的CVE
+CVE-2021-23336 
+cpython 存在环境问题漏洞，攻击者可利用该漏洞可以使用分号(;)分隔查询参数，导致恶意请求被缓存为完全安全的请求。以下产品及版本受到影响：before 3.6.13, from 3.7.0 and before 3.7.10, from 3.8.0 and before 3.8.8, from 3.9.0 and before 3.9.2。
+
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+python3-django
+arm64 架构：
+python3-django
+mips64el 架构：
+python3-django
+loongarch64 架构：
+python3-django
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+2:2.2.12-1kylin0.7
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+10.0 SP1:
+	http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+$sudo apt install python3-django
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.7_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.7_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.7_all.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.7_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

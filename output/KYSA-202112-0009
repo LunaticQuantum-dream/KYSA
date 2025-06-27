@@ -1,0 +1,13 @@
+Name:KYSA-202112-0009
+Severity:重要
+Summary:python-django安全漏洞
+Published:2021-12-27
+URL:/support/loophole/patch/728.html
+Title:
+			摘要：python-django安全漏洞
+安全等级：重要
+公告ID：KYSA-202112-0009
+发布日期：2021-12-27
+影响CVE：CVE-2021-44420
+		
+1.修复的CVE    CVE-2021-44420    Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。Django 存在授权问题漏洞，该漏洞源于带有尾随换行符的URL的HTTP请求可以绕过基于URL路径的上游访问控制。以下产品及版本受到影响：Django 2.2 before 2.2.25, 3.1 before 3.1.14, and 3.2 before 3.2.10。2.影响的操作系统    银河麒麟桌面操作系统V10 SP1    3.修复版本    软件包：python-django    2:2.2.12-1kylin0.8(V10 SP1)    4.受影响的软件包    ·银河麒麟桌面操作系统V10 SP1    python-django-doc    python3-django    5.修复方法方法一：配置源进行升级安装    打开软件包源配置文件，根据仓库地址进行修改。    4.0.2桌面版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2-desktop main restricted universe multiverse    4.0.2-sp1桌面版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse    4.0.2-sp2桌面版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse    4.0.2-sp3桌面版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse    4.0.2-sp4桌面版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse    10.0版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse    10SP1版本:    http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse    配置完成后执行更新命令进行升级    $sudo apt update方法二：下载安装包进行升级安装    通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。    $dpkg -i Packagelists    6.软件包下载地址银河麒麟操作系统桌面版V10 SP1X86_64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django-doc_2.2.12-1kylin0.8_all.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.8_all.debarm64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django-doc_2.2.12-1kylin0.8_all.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.8_all.debmips64el软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django-doc_2.2.12-1kylin0.8_all.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.8_all.deb 

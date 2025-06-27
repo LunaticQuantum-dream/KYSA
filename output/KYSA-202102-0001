@@ -1,0 +1,82 @@
+Name:KYSA-202102-0001
+Severity:中等
+Summary:python-django安全漏洞
+Published:2023-02-08
+URL:/support/loophole/patch/2624.html
+Title:
+			公告ID：KYSA-202102-0001
+公告摘要：python-django安全漏洞
+等级：中等
+发布日期：2023-02-08
+		
+1. 修复的CVE
+CVE-2021-3281
+描述：Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。Django 存在路径遍历漏洞，攻击者可利用该漏洞可以通过archive.extract()遍历目录，以便在服务根路径之外创建一个文件。
+CVE-2021-23336
+描述：cpython 存在环境问题漏洞，攻击者可利用该漏洞可以使用分号(;)分隔查询参数，导致恶意请求被缓存为完全安全的请求。以下产品及版本受到影响：before 3.6.13, from 3.7.0 and before 3.7.10, from 3.8.0 and before 3.8.8, from 3.9.0 and before 3.9.2。
+
+2. 受影响的操作系统及软件包
+银河麒麟桌面操作系统V4桌面版
+python-django-common
+python-django-doc
+python-django
+python3-django
+银河麒麟桌面操作系统V10桌面版
+python-django-common
+python-django-doc
+python-django
+python3-django
+银河麒麟桌面操作系统V10 SP1
+python3-django
+
+
+3. 软件包修复版本
+软件包：python-django
+python-django-1.8.7-1kord5.14（V4、V10）
+python3-django-1.8.7-1kord5.14（V4、V10）
+python3-django-2:2.2.12-1kylin0.7（V10 SP1）
+
+4. 修复方法
+方法一：配置源进行升级安装
+        打开软件包源配置文件，根据仓库地址进行修改。
+        4.0.2-sp1:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+        4.0.2-sp2:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+        4.0.2-sp3:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+        4.0.2-sp4:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+        10.0:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+       10.0 SP1:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+        配置完成后执行更新命令进行升级  $sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists
+
+5. 软件包下载地址
+麒麟操作系统V10桌面版、V4
+X86_64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django-common_1.8.7-1kord5.14_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django-doc_1.8.7-1kord5.14_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django_1.8.7-1kord5.14_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_1.8.7-1kord5.14_all.deb
+arm64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django-common_1.8.7-1kord5.14_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django-doc_1.8.7-1kord5.14_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django_1.8.7-1kord5.14_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_1.8.7-1kord5.14_all.deb
+mips64el软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django-common_1.8.7-1kord5.14_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django-doc_1.8.7-1kord5.14_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python-django_1.8.7-1kord5.14_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_1.8.7-1kord5.14_all.deb
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.7_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.7_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.7_all.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/python-django/python3-django_2.2.12-1kylin0.7_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

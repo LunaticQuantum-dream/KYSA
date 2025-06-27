@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-14646
+Severity:一般
+Summary:Linux kernel空指针漏洞
+Published:2020-05-13
+URL:/support/loophole/patch/231.html
+Title:
+			摘要：           Linux kernel空指针漏洞
+安全等级：          一般
+公告ID：         CS2CSA-2018-14646
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2020-05-13
+CVE：          CVE-2018-14646
+		
+1. 概述：中标麒麟高级服务器操作系统软件V7有kernel,kernel-rt可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：在4.15-rc8之前的Linux内核被发现易受net/netlink/af_netlink.c文件中的_netlink_ns_capable（）函数中的空指针取消引用错误的攻击。当分配带有netnsid的网络命名空间时，本地攻击者可以利用此漏洞造成内核死机和拒绝服务。

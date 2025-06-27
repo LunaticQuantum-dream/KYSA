@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-0454
+Severity:重要
+Summary:KVM安全更新
+Published:2017-03-07
+URL:/support/loophole/patch/43.html
+Title:
+			摘要：     KVM安全更新
+安全级别：  重要
+公告ID：           CS2CSA-2017-0454
+产品：                中标麒麟高级服务器操作系统
+发布日期：        2017-03-07
+CVE：        CVE-2017-2615，CVE-2017-2620
+		
+1. 概要：中标麒麟高级服务器操作系统V5系列有kvm可用更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V5 -x86_643. 描述：KVM(内核基于虚拟机)是在x86架构linux系统硬件上的一个完全虚拟化解决方案。使用KVM，可以运行安装linux或者winddows等不同镜像的多种虚拟机。 每个虚拟机有各自的虚拟硬件：网卡、磁盘、图形适配器等。4. 安全加固：*QEMU的VGA设备Cirrus CLGD 54xx VGA中存在一个内存越界访问读写漏洞。进行bitblt的拷贝操作时，这个问题可在复制的VGA数据通过BitBlt复制模式落后出现 。特权用户利用这个漏动攻击QEMU进程会导致Dos崩溃或者宿主机层面的任意代码执行。(CVE-2017-2615).* QEMU的VGA设备  Cirrus CLGD 54xx VGA中存在一个内存越界访问读写漏洞。这个问题可以在复制cirrus_bitblt_cputovideo VGA数据时发生。特权用户利用这个漏洞攻击QEMU进程可通过权限在主机上执行任意代码。(CVE-2017-2620)5. 安装包列表：中标麒麟高级服务器操作系统V5源码包：kvm-83-277.el5_11.src.rpmx86_64：kmod-kvm-83-277.el5_11.x86_64.rpmkmod-kvm-debug-83-277.el5_11.x86_64.rpmkvm-83-277.el5_11.x86_64.rpmkvm-debuginfo-83-277.el5_11.x86_64.rpmkvm-qemu-img-83-277.el5_11.x86_64.rpmkvm-tools-83-277.el5_11.x86_64.rpm			

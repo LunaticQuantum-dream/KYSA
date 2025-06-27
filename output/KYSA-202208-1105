@@ -1,0 +1,98 @@
+Name:KYSA-202208-1105
+Severity:严重
+Summary:ipa安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1677.html
+Title:
+			公告ID：KYSA-202208-1105
+公告摘要：ipa安全漏洞
+安全等级：Critical
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2016-5404
+描述：在本机匿名树内部有一个节点，外部有一个节点的选择中操作范围时，可能会发生“释放后使用”错误。这将导致潜在的可利用崩溃。此漏洞影响Firefox52、Firefox ESR45.8、Thunderbird52和Thunderbird45.8。
+·CVE-2016-7030
+描述：已发现，在一定次数的失败登录尝试之后锁定帐户的默认IdM密码策略也已应用于主机和服务帐户。远程未经身份验证的用户可能会利用此漏洞导致对以kerberized服务进行的拒绝服务攻击。
+·CVE-2016-9575
+描述：发现IdM的certprofile mod命令在修改证书配置文件时没有正确检查用户的权限。经过身份验证的未经授权的攻击者可以利用此漏洞修改配置文件，以颁发具有任意命名或密钥使用信息的证书，然后将此类证书用于其他攻击。
+·CVE-2017-2590
+描述：发现在Dogtag中修改ca时，IdM的ca del、ca disable和ca enable命令没有正确检查用户的权限。经过身份验证的未经授权的攻击者可以利用此漏洞删除、禁用或启用CA，从而导致证书颁发、OCSP签名和密钥删除等各种拒绝服务问题。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+ipa-client、ipa-client-common、ipa-common、ipa-python-compat、ipa-server、ipa-server-common、ipa-server-dns、ipa-server-trust-ad、python2-ipaclient、python2-ipalib、python2-ipaserver
+x86_64架构:
+ipa-client、ipa-client-common、ipa-common、ipa-python-compat、ipa-server、ipa-server-common、ipa-server-dns、ipa-server-trust-ad、python2-ipaclient、python2-ipalib、python2-ipaserver
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+ipa-client-4.6.4-10.el7.ns7.01
+ipa-client-common-4.6.4-10.el7.ns7.01
+ipa-common-4.6.4-10.el7.ns7.01
+ipa-python-compat-4.6.4-10.el7.ns7.01
+ipa-server-4.6.4-10.el7.ns7.01
+ipa-server-common-4.6.4-10.el7.ns7.01
+ipa-server-dns-4.6.4-10.el7.ns7.01
+ipa-server-trust-ad-4.6.4-10.el7.ns7.01
+python2-ipaclient-4.6.4-10.el7.ns7.01
+python2-ipalib-4.6.4-10.el7.ns7.01
+python2-ipaserver-4.6.4-10.el7.ns7.01
+
+4.修复方法
+方法一：配置源进行升级安装
+160.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+161.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+162.升级完成后是否需要重启服务或操作系统：
+·CVE-2016-5404：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2016-7030：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2016-9575：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2017-2590：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+ipa（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ipa-client-4.6.4-10.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ipa-client-common-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ipa-common-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ipa-python-compat-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ipa-server-4.6.4-10.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ipa-server-common-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ipa-server-dns-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/ipa-server-trust-ad-4.6.4-10.el7.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/python2-ipaclient-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/python2-ipalib-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/python2-ipaserver-4.6.4-10.el7.ns7.01.noarch.rpm
+
+ipa（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ipa-client-4.6.4-10.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ipa-client-4.6.4-10.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ipa-client-common-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ipa-common-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ipa-python-compat-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ipa-server-4.6.4-10.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ipa-server-4.6.4-10.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ipa-server-common-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ipa-server-dns-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ipa-server-trust-ad-4.6.4-10.el7.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/ipa-server-trust-ad-4.6.4-10.el7.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/python2-ipaclient-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/python2-ipalib-4.6.4-10.el7.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/python2-ipaserver-4.6.4-10.el7.ns7.01.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

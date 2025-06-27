@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-0501
+Severity:重要
+Summary:kernel安全和错误修正更新
+Published:2017-03-14
+URL:/support/loophole/patch/47.html
+Title:
+			摘要：   kernel安全和错误修正更新
+安全等级： 重要
+公告ID：  CS2CSA-2017-0501
+产品：                    中标麒麟高级服务器操作系统
+发布日期：          2017-03-14
+CVE：              CVE-2017-6074
+		
+1. 概述：中标麒麟高级服务器操作系统V7有kernel可用更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V7 -x86_643. 描述：此内核安装包包含任何Linux内核，任何linux内核的操作系统。4. 安全加固：*在scckets设置 IPV6_RECVPKTINFO，利用linux内核数据报拥塞控制协议（DCCP）实现SKB释放（socket buffer）时发现一个user-after-free 缺陷。一个本地的没有权限的用户可以使用这一缺陷改变内核内存,允许他们升级他们在系统上升级权限。(CVE-2017-6074，重要)5. 错误修正：*之前运行“ethtool - s”命令得到Brocade网络适配器(BNA)的统计数据有时可能导致内核错误。这个更新的补丁适用于bna驱动，上述情况的内核错误不再发生。*使用多线程负载高内存映射有时会导致内核错误，这取决于环境切换之间的竞态条件和pagetable升级。这个更新使用完整的评估参数而非asce_bits参数修复了switch_mm()。因此，上述场景不再导致内核错误。*以前，内核发送一个传输控制协议(TCP)零大小窗口，socke将收到一个空的队列。因此,TCP会话就会变得迟钝。这个更新修复了ibmveth驱动用来给gso_size和gso_type设置正确的变量值、计算gso_segs变量值的大的数据包。因此,TCP会话就不会再出现上述错误。*之前，在某些情况下引导kdump内核失败会报错：Kernel panic - not syncing: Watchdog detected hard LOCKUP on CPU 0。此次更新确保hpet定时计数器，包括hpet_default_delta 和hpet_t1_cmp，在一个中断请求注册前被初始化，现在kdump内核引导不会再有此报错。*由于megaraid_sas驱动发出了一个错误重置请求PowerEdgeRAID Controller(PERC)，所以当其中一个驱动器变得迟钝时，其他驱动也会间歇性挂起。这个更新补丁修复了megaraid_sas，因此一个驱动的挂起不会再导致系统上其他所有驱动器系统上的间歇性损失。6. 安装包列表：中标麒麟高级服务器操作系统V7源码包：kernel-3.10.0-327.49.2.el7.src.rpmx86_64：kernel-3.10.0-327.49.2.el7.x86_64.rpmkernel-debug-3.10.0-327.49.2.el7.x86_64.rpmkernel-debug-debuginfo-3.10.0-327.49.2.el7.x86_64.rpmkernel-debug-devel-3.10.0-327.49.2.el7.x86_64.rpmkernel-debuginfo-3.10.0-327.49.2.el7.x86_64.rpmkernel-debuginfo-common-x86_64-3.10.0-327.49.2.el7.x86_64.rpmkernel-devel-3.10.0-327.49.2.el7.x86_64.rpmkernel-headers-3.10.0-327.49.2.el7.x86_64.rpmkernel-tools-3.10.0-327.49.2.el7.x86_64.rpmkernel-tools-debuginfo-3.10.0-327.49.2.el7.x86_64.rpmkernel-tools-libs-3.10.0-327.49.2.el7.x86_64.rpmperf-3.10.0-327.49.2.el7.x86_64.rpmperf-debuginfo-3.10.0-327.49.2.el7.x86_64.rpmpython-perf-3.10.0-327.49.2.el7.x86_64.rpmpython-perf-debuginfo-3.10.0-327.49.2.el7.x86_64.rpmkernel-3.10.0-327.49.2.el7.src.rpm			

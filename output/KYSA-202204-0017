@@ -1,0 +1,55 @@
+Name:KYSA-202204-0017
+Severity:中等
+Summary:kylin-system-updater安全漏洞
+Published:2023-12-14
+URL:/support/loophole/patch/4711.html
+Title:
+			公告ID：KYSA-202204-0017
+公告摘要：kylin-system-updater安全漏洞
+等级：中等
+发布日期：2023-12-14
+		
+1. 修复的CVE
+KVE-2022-0405
+kylin-system-updater是中国麒麟软件（kylinos）公司的一个操作系统组件。该组件存在未授权卸载任意软件包漏洞，可导致普通用户卸载软件包。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+kylin-system-updater
+arm64 架构：
+kylin-system-updater
+mips64el 架构：
+kylin-system-updater
+loongarch64 架构：
+kylin-system-updater
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+2.0.5.16-0k2.33
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install kylin-system-updater
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/k/kylin-system-updater/kylin-system-updater_2.0.5.16-0k2.33_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/k/kylin-system-updater/kylin-system-updater_2.0.5.16-0k2.33_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/k/kylin-system-updater/kylin-system-updater_2.0.5.16-0k2.33_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/k/kylin-system-updater/kylin-system-updater_2.0.5.16-0k2.33_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

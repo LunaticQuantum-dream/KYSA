@@ -1,0 +1,70 @@
+Name:KYSA-202412-1213
+Severity:中等
+Summary:docker-engine安全漏洞
+Published:2024-12-31
+URL:/support/loophole/patch/7117.html
+Title:
+			公告ID：KYSA-202412-1213
+公告摘要：docker-engine安全漏洞
+等级：中等
+发布日期：2024-12-31
+		
+1.修复的漏洞
+·CVE-2021-41089
+描述：Docker Engine是美国Docker公司的一套轻量级的运行环境和包管理工具。Docker Engine 存在安全漏洞，该漏洞源于使用docker cp将文件复制到精心编制的容器中可能会导致主机中现有文件的Unix文件权限发生变化。攻击者可利用该漏洞访问受限数据。
+·CVE-2021-41091
+描述：Moby是一个开源项目，旨在推动软件的容器化，并帮助生态系统使容器技术主流化。Moby 存在安全漏洞，该漏洞源于在Moby (Docker Engine)中发现了一个bug，数据目录(通常是var lib Docker )包含的子目录权限没有受到足够的限制，允许没有特权的Linux用户遍历目录内容和执行程序。攻击者可利用该漏洞当容器包含具有扩展权限位(如setuid )的可执行程序时，没有特权的Linux用户可以发现并执行这些程序。
+·CVE-2021-41092
+描述：Docker是美国Docker公司的一款开源的应用容器引擎。该产品支持在Linux系统上创建一个容器（轻量级虚拟机）并部署和运行应用程序，以及通过配置文件实现应用程序的自动化安装、部署和升级。Docker CLI 存在信息泄露漏洞，该漏洞源于在 Docker CLI 中发现了一个错误，其中运行 docker login my-private-registry.example.com并带有一个错误配置的配置文件（通常是 ~/.docker/config.json），其中列出了 credsStore 或 credHelpers 无法执行将导致任何提供的凭据被发送到registry-1.docker.io而不是预期的私有注册表。
+·CVE-2024-24557
+描述：在github.com/moby/moby中发现了一个漏洞。Moby中的经典构建缓存系统在使用Dockerfile中的FROM scratch构建镜像时容易受到缓存污染攻击。这个漏洞允许攻击者利用对Dockerfile的了解，创建一个恶意缓存，并将其作为有效的缓存候选项被拉取并用于某些构建步骤。这个问题只在使用DOCKER_BUILDKIT=0或使用/build API端点时会影响到用户。
+·CVE-2024-29018
+描述：Moby是一个开源项目，旨在推动软件的容器化，并帮助生态系统使容器技术主流化。
+
+Moby存在安全漏洞，该漏洞源于外部DNS请求可能导致数据泄露。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+docker-engine
+·x86_64架构:
+docker-engine
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+docker-engine-18.09.0-202.p10.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-41089:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-41091:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-41092:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-24557:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-29018:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+docker-engine(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/docker-engine-18.09.0-202.p10.ky10.aarch64.rpm
+
+docker-engine(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/docker-engine-18.09.0-202.p10.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

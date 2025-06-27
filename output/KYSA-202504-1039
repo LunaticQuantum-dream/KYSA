@@ -1,0 +1,257 @@
+Name:KYSA-202504-1039
+Severity:重要
+Summary:podman安全漏洞
+Published:2025-04-01
+URL:/support/loophole/patch/7626.html
+Title:
+			公告ID：KYSA-202504-1039
+公告摘要：podman安全漏洞
+等级：重要
+发布日期：2025-04-01
+		
+1.修复的漏洞
+·CVE-2022-1962
+描述：Google Golang是美国谷歌（Google）公司的一种静态强类型、编译型语言。Go的语法接近C语言，但对于变量的声明有所不同。Go支持垃圾回收功能。Go的并行模型是以东尼·霍尔的通信顺序进程（CSP）为基础，采取类似模型的其他语言包括Occam和Limbo，但它也具有Pi运算的特征，比如通道传输。在1.8版本中开放插件（Plugin）的支持，这意味着现在能从Go中动态加载部分函数。Google Golang 1.18.4-r0之前版本存在安全漏洞，该漏洞源于攻击者可以通过go/parser Parse导致Go的致命错误，以触发拒绝服务。
+·CVE-2022-32189
+描述：Google Golang是美国谷歌（Google）公司的一种静态强类型、编译型语言。Go的语法接近C语言，但对于变量的声明有所不同。Go支持垃圾回收功能。Go的并行模型是以东尼·霍尔的通信顺序进程（CSP）为基础，采取类似模型的其他语言包括Occam和Limbo，但它也具有Pi运算的特征，比如通道传输。在1.8版本中开放插件（Plugin）的支持，这意味着现在能从Go中动态加载部分函数。Google Golang 存在安全漏洞，该漏洞源于过短的编码消息可能会导致 big.Float 和 big.Rat 中的 math/big 出现恐慌，从而导致拒绝服务。
+·CVE-2022-41715
+描述：Google Golang是美国谷歌（Google）公司的一种静态强类型、编译型语言。Go的语法接近C语言，但对于变量的声明有所不同。Go支持垃圾回收功能。Go的并行模型是以东尼·霍尔的通信顺序进程（CSP）为基础，采取类似模型的其他语言包括Occam和Limbo，但它也具有Pi运算的特征，比如通道传输。在1.8版本中开放插件（Plugin）的支持，这意味着现在能从Go中动态加载部分函数。 
+Google Golang 存在安全漏洞，该漏洞源于regexp/syntax限制解析正则表达式时使用的内存。
+·CVE-2023-45290
+描述：Google Go是美国谷歌（Google）公司的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言。 
+Google Go 存在安全漏洞，该漏洞源于允许用户输入大量字符，导致分配大量的内存，从而可能导致内存耗尽。
+·CVE-2024-24783
+描述：Google Go是美国谷歌（Google）公司的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言。 
+Google Go 存在安全漏洞，该漏洞源于验证包含具有未知公钥算法的证书的证书链将导致 Certificate.Verify 出现恐慌。
+·CVE-2024-24785
+描述：Google Go是美国谷歌（Google）公司的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言。 
+Google Go 存在安全漏洞。攻击者利用该漏洞将意外内容注入到模板中。
+·CVE-2024-24791
+描述：Google Golang是美国谷歌（Google）公司的一种静态强类型、编译型语言。Go的语法接近C语言，但对于变量的声明有所不同。Go支持垃圾回收功能。Go的并行模型是以东尼·霍尔的通信顺序进程（CSP）为基础，采取类似模型的其他语言包括Occam和Limbo，但它也具有Pi运算的特征，比如通道传输。在1.8版本中开放插件（Plugin）的支持，这意味着现在能从Go中动态加载部分函数。
+Google Golang存在安全漏洞，该漏洞源于客户端错误处理带有Expect:100-continue标头的请求，可能导致客户端连接处于无效状态，进而导致拒绝服务。
+·CVE-2024-9355
+描述：Golang FIPS OpenSSL中发现了一个漏洞。此漏洞允许恶意用户在FIPS模式下随机返回缓冲区为零的未初始化缓冲区长度变量。如果攻击者可以发送一个清零的缓冲区来代替预先计算的总和，那么在将可信的计算出的hmac总和与不可信的输入总和进行比较时，也可能强制非相等哈希之间进行误报匹配。也可以强制派生密钥为全零，而不是不可预测的值。这可能会对Go TLS堆栈产生后续影响。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+python3-pypodman、podman-help、podman、podman-docker、python3-podman
+·x86_64架构:
+python3-pypodman、podman-help、podman、podman-docker、python3-podman
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+python3-pypodman、podman-help、podman、podman-docker、python3-podman
+·x86_64架构:
+python3-pypodman、podman-help、podman、podman-docker、python3-podman
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+python3-pypodman、podman-help、podman、podman-docker、python3-podman
+·x86_64架构:
+python3-pypodman、podman-help、podman、podman-docker、python3-podman
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+python3-pypodman、podman-help、podman、podman-docker、python3-podman
+·x86_64架构:
+python3-pypodman、podman-help、podman、podman-docker、python3-podman
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+·aarch64架构:
+python3-pypodman、podman-help、podman、podman-docker、python3-podman
+·x86_64架构:
+python3-pypodman、podman-help、podman、podman-docker、python3-podman
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+python3-pypodman、podman-help、podman、podman-docker、python3-podman
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、x86_64)
+python3-podman-0.10.1-10.ky10或以上版本
+python3-pypodman-0.10.1-10.ky10或以上版本
+podman-0.10.1-10.ky10或以上版本
+podman-help-0.10.1-10.ky10或以上版本
+podman-docker-0.10.1-10.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64)
+python3-podman-0.10.1-10.ky10或以上版本
+python3-pypodman-0.10.1-10.ky10或以上版本
+podman-0.10.1-10.ky10或以上版本
+podman-help-0.10.1-10.ky10或以上版本
+podman-docker-0.10.1-10.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (x86_64)
+python3-pypodman-0.10.1-10.ky10或以上版本
+podman-help-0.10.1-10.ky10或以上版本
+podman-0.10.1-10.ky10或以上版本
+python3-podman-0.10.1-10.ky10或以上版本
+podman-docker-0.10.1-10.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+python3-podman-0.10.1-10.ky10或以上版本
+python3-pypodman-0.10.1-10.ky10或以上版本
+podman-0.10.1-10.ky10或以上版本
+podman-help-0.10.1-10.ky10或以上版本
+podman-docker-0.10.1-10.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64)
+python3-pypodman-0.10.1-10.ky10或以上版本
+podman-help-0.10.1-10.ky10或以上版本
+podman-0.10.1-10.ky10或以上版本
+python3-podman-0.10.1-10.ky10或以上版本
+podman-docker-0.10.1-10.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (x86_64)
+python3-podman-0.10.1-10.ky10或以上版本
+python3-pypodman-0.10.1-10.ky10或以上版本
+podman-0.10.1-10.ky10或以上版本
+podman-help-0.10.1-10.ky10或以上版本
+podman-docker-0.10.1-10.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (aarch64)
+python3-podman-0.10.1-10.ky10或以上版本
+python3-pypodman-0.10.1-10.ky10或以上版本
+podman-0.10.1-10.ky10或以上版本
+podman-help-0.10.1-10.ky10或以上版本
+podman-docker-0.10.1-10.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (x86_64)
+python3-pypodman-0.10.1-10.ky10或以上版本
+podman-help-0.10.1-10.ky10或以上版本
+podman-0.10.1-10.ky10或以上版本
+python3-podman-0.10.1-10.ky10或以上版本
+podman-docker-0.10.1-10.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+python3-podman-0.10.1-10.ky10或以上版本
+python3-pypodman-0.10.1-10.ky10或以上版本
+podman-0.10.1-10.ky10或以上版本
+podman-help-0.10.1-10.ky10或以上版本
+podman-docker-0.10.1-10.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2403
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-1962:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-32189:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-41715:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-45290:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-24783:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-24785:需要重启 podman 以使漏洞修复生效。
+CVE-2024-24791:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-9355:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+podman(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/podman-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/podman-help-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+
+podman(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/podman-0.10.1-10.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/podman-help-0.10.1-10.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+podman(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/podman-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/podman-help-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+
+podman(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/podman-0.10.1-10.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/podman-help-0.10.1-10.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+podman(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/podman-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/podman-help-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+
+podman(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/podman-help-0.10.1-10.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/podman-0.10.1-10.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+podman(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/podman-help-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/podman-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+
+podman(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/podman-help-0.10.1-10.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/podman-0.10.1-10.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+
+podman(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/podman-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/podman-help-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/podman-help-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/podman-0.10.1-10.ky10.aarch64.rpm
+
+podman(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/podman-help-0.10.1-10.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/podman-0.10.1-10.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+podman(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/python3-pypodman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/python3-podman-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/podman-help-0.10.1-10.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/podman-docker-0.10.1-10.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/podman-0.10.1-10.ky10.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

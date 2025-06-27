@@ -1,0 +1,249 @@
+Name:KYSA-202410-1041
+Severity:中等
+Summary:nginx安全漏洞
+Published:2024-10-12
+URL:/support/loophole/patch/6469.html
+Title:
+			公告ID：KYSA-202410-1041
+公告摘要：nginx安全漏洞
+等级：中等
+发布日期：2024-10-12
+		
+1.修复的漏洞
+·CVE-2024-7347
+描述：F5 Nginx是美国F5公司的一款轻量级Web服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，在BSD-like协议下发行。
+F5 Nginx存在安全漏洞，该漏洞源于可能允许攻击者使用特制的mp4文件过度读取NGINX工作内存导致其终止。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+nginx-mod-mail、nginx-mod-http-perl、nginx-help、nginx-mod-http-xslt-filter、nginx-mod-http-image-filter、nginx-all-modules、nginx-filesystem、nginx、nginx-mod-stream
+·mips64el架构:
+nginx-mod-mail、nginx-mod-http-perl、nginx-help、nginx-mod-http-xslt-filter、nginx-mod-http-image-filter、nginx-all-modules、nginx-filesystem、nginx、nginx-mod-stream
+·x86_64架构:
+nginx-mod-mail、nginx-mod-http-perl、nginx-help、nginx-mod-http-xslt-filter、nginx-mod-http-image-filter、nginx-all-modules、nginx-filesystem、nginx、nginx-mod-stream
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+nginx-mod-mail、nginx-mod-http-perl、nginx-help、nginx-mod-http-xslt-filter、nginx-mod-http-image-filter、nginx-all-modules、nginx-filesystem、nginx、nginx-mod-stream
+·x86_64架构:
+nginx-mod-mail、nginx-mod-http-perl、nginx-help、nginx-mod-http-xslt-filter、nginx-mod-http-image-filter、nginx-all-modules、nginx-filesystem、nginx、nginx-mod-stream
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+nginx-mod-mail、nginx-mod-http-perl、nginx-help、nginx-mod-http-xslt-filter、nginx-mod-http-image-filter、nginx-all-modules、nginx-filesystem、nginx、nginx-mod-stream
+·x86_64架构:
+nginx-mod-mail、nginx-mod-http-perl、nginx-help、nginx-mod-http-xslt-filter、nginx-mod-http-image-filter、nginx-all-modules、nginx-filesystem、nginx、nginx-mod-stream
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+nginx-mod-mail、nginx-mod-http-perl、nginx-help、nginx-mod-http-xslt-filter、nginx-mod-http-image-filter、nginx-all-modules、nginx-filesystem、nginx、nginx-mod-stream
+·x86_64架构:
+nginx-mod-mail、nginx-mod-http-perl、nginx-help、nginx-mod-http-xslt-filter、nginx-mod-http-image-filter、nginx-all-modules、nginx-filesystem、nginx、nginx-mod-stream
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+nginx-mod-mail、nginx-mod-http-perl、nginx-help、nginx-mod-http-xslt-filter、nginx-mod-http-image-filter、nginx-all-modules、nginx-filesystem、nginx、nginx-mod-stream
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、mips64el、x86_64)
+nginx-help-1.21.5-2.p04.ky10或以上版本
+nginx-mod-stream-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10或以上版本
+nginx-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-image-filter-1.21.5-2.p04.ky10或以上版本
+nginx-all-modules-1.21.5-2.p04.ky10或以上版本
+nginx-mod-mail-1.21.5-2.p04.ky10或以上版本
+nginx-filesystem-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-perl-1.21.5-2.p04.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+nginx-help-1.21.5-2.p04.ky10或以上版本
+nginx-mod-stream-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10或以上版本
+nginx-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-image-filter-1.21.5-2.p04.ky10或以上版本
+nginx-all-modules-1.21.5-2.p04.ky10或以上版本
+nginx-mod-mail-1.21.5-2.p04.ky10或以上版本
+nginx-filesystem-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-perl-1.21.5-2.p04.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+nginx-help-1.21.5-2.p04.ky10或以上版本
+nginx-mod-stream-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10或以上版本
+nginx-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-image-filter-1.21.5-2.p04.ky10或以上版本
+nginx-all-modules-1.21.5-2.p04.ky10或以上版本
+nginx-mod-mail-1.21.5-2.p04.ky10或以上版本
+nginx-filesystem-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-perl-1.21.5-2.p04.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+nginx-help-1.21.5-2.p04.ky10或以上版本
+nginx-mod-stream-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10或以上版本
+nginx-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-image-filter-1.21.5-2.p04.ky10或以上版本
+nginx-all-modules-1.21.5-2.p04.ky10或以上版本
+nginx-mod-mail-1.21.5-2.p04.ky10或以上版本
+nginx-filesystem-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-perl-1.21.5-2.p04.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+nginx-help-1.21.5-2.p04.ky10或以上版本
+nginx-mod-stream-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10或以上版本
+nginx-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-image-filter-1.21.5-2.p04.ky10或以上版本
+nginx-all-modules-1.21.5-2.p04.ky10或以上版本
+nginx-mod-mail-1.21.5-2.p04.ky10或以上版本
+nginx-filesystem-1.21.5-2.p04.ky10或以上版本
+nginx-mod-http-perl-1.21.5-2.p04.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2024-7347:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+nginx(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nginx-filesystem-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-image-filter-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nginx-help-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-perl-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nginx-mod-stream-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nginx-mod-mail-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nginx-all-modules-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/nginx-1.21.5-2.p04.ky10.aarch64.rpm
+
+nginx(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/nginx-mod-http-image-filter-1.21.5-2.p04.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/nginx-help-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/nginx-filesystem-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/nginx-all-modules-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/nginx-1.21.5-2.p04.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/nginx-mod-stream-1.21.5-2.p04.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/nginx-mod-mail-1.21.5-2.p04.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/nginx-mod-http-perl-1.21.5-2.p04.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10.mips64el.rpm
+
+nginx(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nginx-all-modules-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nginx-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-image-filter-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-perl-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nginx-help-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nginx-filesystem-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nginx-mod-stream-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/nginx-mod-mail-1.21.5-2.p04.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+nginx(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nginx-mod-stream-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nginx-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nginx-help-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nginx-mod-mail-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nginx-filesystem-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-image-filter-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nginx-all-modules-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-perl-1.21.5-2.p04.ky10.aarch64.rpm
+
+nginx(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-perl-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nginx-mod-stream-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nginx-help-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-image-filter-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nginx-mod-mail-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nginx-filesystem-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nginx-all-modules-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/nginx-1.21.5-2.p04.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+nginx(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nginx-help-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nginx-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-perl-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-image-filter-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nginx-all-modules-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nginx-mod-stream-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nginx-filesystem-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/nginx-mod-mail-1.21.5-2.p04.ky10.aarch64.rpm
+
+nginx(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nginx-help-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nginx-filesystem-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nginx-all-modules-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nginx-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nginx-mod-mail-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-perl-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-image-filter-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/nginx-mod-stream-1.21.5-2.p04.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+nginx(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nginx-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nginx-all-modules-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nginx-filesystem-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nginx-help-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nginx-mod-stream-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nginx-mod-mail-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-perl-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-image-filter-1.21.5-2.p04.ky10.aarch64.rpm
+
+nginx(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-image-filter-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nginx-all-modules-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nginx-filesystem-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-perl-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nginx-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nginx-mod-stream-1.21.5-2.p04.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nginx-help-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/nginx-mod-mail-1.21.5-2.p04.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+nginx(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nginx-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nginx-all-modules-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nginx-filesystem-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nginx-help-1.21.5-2.p04.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-image-filter-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-xslt-filter-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nginx-mod-http-perl-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nginx-mod-mail-1.21.5-2.p04.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/nginx-mod-stream-1.21.5-2.p04.ky10.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

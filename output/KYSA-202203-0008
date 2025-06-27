@@ -1,0 +1,51 @@
+Name:KYSA-202203-0008
+Severity:低等
+Summary:man-db安全漏洞
+Published:2023-02-08
+URL:/support/loophole/patch/2585.html
+Title:
+			公告ID：KYSA-202203-0008
+公告摘要：man-db安全漏洞
+等级：低等
+发布日期：2023-02-08
+		
+1. 修复的CVE
+CVE-2015-1336
+Ubuntu是英国科能（Canonical）公司和Ubuntu基金会共同开发的一套以桌面应用为主的GNU/Linux操作系统。Debian是Debian Project合作组织创建的以Linux或FreeBSD为内核的自由操作系统。man-db是其中的一个访问数据库的命令包。Ubuntu和Debian中的Man-db 2.7.6.1-1之前的版本的daily mandb cleanup job存在安全漏洞。本地攻击者可利用该漏洞获取权限。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+man-db
+arm64 架构：
+man-db
+mips64el 架构：
+man-db
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+2.7.5-1kord0.1~esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install man-db
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/man-db/man-db_2.7.5-1kord0.1~esm1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/man-db/man-db_2.7.5-1kord0.1~esm1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/man-db/man-db_2.7.5-1kord0.1~esm1_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

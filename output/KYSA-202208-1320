@@ -1,0 +1,56 @@
+Name:KYSA-202208-1320
+Severity:重要
+Summary:libX11安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/7257.html
+Title:
+			公告ID：KYSA-202208-1320
+公告摘要：libX11安全漏洞
+等级：重要
+发布日期：2022-08-23
+		
+1.修复的漏洞
+·CVE-2020-14363
+描述：X.Org libX11是X.Org基金会的一个X11（X Window系统）客户端库。X.Org libX11存在安全漏洞，
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+libX11、libX11-devel、libX11-common
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+libX11-common-1.6.4-4.el6_10或以上版本
+libX11-devel-1.6.4-4.el6_10或以上版本
+libX11-1.6.4-4.el6_10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-14363:需要重启 libX11 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+libX11(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libX11-devel-1.6.4-4.el6_10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libX11-devel-1.6.4-4.el6_10.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libX11-common-1.6.4-4.el6_10.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libX11-1.6.4-4.el6_10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/updates/x86_64/Packages/libX11-1.6.4-4.el6_10.i686.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

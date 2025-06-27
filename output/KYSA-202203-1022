@@ -1,0 +1,147 @@
+Name:KYSA-202203-1022
+Severity:中等
+Summary:vim安全漏洞
+Published:2022-03-04
+URL:/support/loophole/patch/3366.html
+Title:
+			公告ID：KYSA-202203-1022
+公告摘要：vim安全漏洞
+等级：Moderate
+发布日期：2022-03-04
+		
+1.修复的CVE
+·CVE-2021-4166
+描述：Vim是一款基于UNIX平台的编辑器。vim存在缓冲区错误漏洞，该漏洞源于vim很容易受到out -bounds Read的攻击。
+·CVE-2021-4192
+描述：Vim是一款基于UNIX平台的编辑器。vim 8.2存在资源管理错误漏洞，该漏洞源于在 vim 8.2.3931 (commit hash febb78fa1798e0f95983b3f7881419a754886df5) 中发现了一个 use after free 漏洞。
+·CVE-2021-4193
+描述：Vim是一款基于UNIX平台的编辑器。vim 8.2存在缓冲区错误漏洞，该漏洞源于在 vim 8.2.3931 (commit hash febb78fa1798e0f95983b3f7881419a754886df5) 中发现了一个 use after free 漏洞。
+·CVE-2022-0261
+描述：Vim是一款基于UNIX平台的编辑器。vim 8.2 之前存在安全漏洞，该漏洞源于vim中基于堆的缓冲区溢出。
+·CVE-2022-0318
+描述：Vim是一款基于UNIX平台的编辑器。vim 存在缓冲区错误漏洞，该漏洞源于 vim 中基于堆的缓冲区溢出。
+·CVE-2022-0351
+描述：Vim是一款基于UNIX平台的编辑器。vim 存在缓冲区错误漏洞，该漏洞源于 vim 在缓冲区开始之前访问内存位置。
+·CVE-2022-0359
+描述：Vim是一款基于UNIX平台的编辑器。vim 存在安全漏洞，该漏洞源于在8.2之前的vim中基于堆的缓冲区溢出。
+·CVE-2022-0361
+描述：Vim是一款基于UNIX平台的编辑器。vim 存在安全漏洞，该漏洞源于在8.2之前的vim中基于堆的缓冲区溢出。
+·CVE-2022-0368
+描述：Vim是一款基于UNIX平台的编辑器。vim 存在缓冲区错误漏洞，该漏洞源于在8.2之前的vim中读取超出边界。
+·CVE-2022-0392
+描述：Vim是一款基于UNIX平台的编辑器。vim 8.2 之前存在缓冲区错误漏洞，该漏洞源于基于堆的缓冲区溢出。
+·CVE-2022-0408
+描述：Vim是一款基于UNIX平台的编辑器。vim存在缓冲区错误漏洞，该漏洞源于这个漏洞允许攻击者可利用该漏洞输入一个特别制作的文件，导致崩溃或代码执行。
+·CVE-2022-0413
+描述：Vim是一款基于UNIX平台的编辑器。vim 存在资源管理错误漏洞，该漏洞源于这个漏洞允许攻击者可利用该漏洞输入一个特别制作的文件，导致崩溃或代码执行。
+·CVE-2022-0417
+描述：Vim是一款基于UNIX平台的编辑器。vim存在安全漏洞，该漏洞源于这个漏洞允许攻击者可利用该漏洞输入一个特别制作的文件，导致崩溃或代码执行。
+·CVE-2022-0443
+描述：Vim是一款基于UNIX平台的编辑器。vim存在资源管理错误漏洞，该漏洞源于使用释放的内存而产生的，攻击者可利用该漏洞输入一个特别制作的文件导致崩溃或代码执行。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+vim-X11、vim-common、vim-enhanced、vim-filesystem、vim-minimal
+·mips64el架构:
+vim-X11、vim-common、vim-enhanced、vim-filesystem、vim-minimal
+·x86_64架构:
+vim-X11、vim-common、vim-enhanced、vim-filesystem、vim-minimal
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+vim-X11、vim-common、vim-enhanced、vim-filesystem、vim-minimal
+·x86_64架构:
+vim-X11、vim-common、vim-enhanced、vim-filesystem、vim-minimal
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、mips64el、x86_64)
+vim-X11-8.2-17.p01.ky10或以上版本
+vim-common-8.2-17.p01.ky10或以上版本
+vim-enhanced-8.2-17.p01.ky10或以上版本
+vim-filesystem-8.2-17.p01.ky10或以上版本
+vim-minimal-8.2-17.p01.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+vim-X11-8.2-17.p01.ky10或以上版本
+vim-common-8.2-17.p01.ky10或以上版本
+vim-enhanced-8.2-17.p01.ky10或以上版本
+vim-filesystem-8.2-17.p01.ky10或以上版本
+vim-minimal-8.2-17.p01.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-4166:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-4192:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-4193:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-0261:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-0318:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-0351:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-0359:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-0361:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-0368:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-0392:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-0408:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-0413:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-0417:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-0443:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+vim(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/vim-X11-8.2-17.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/vim-common-8.2-17.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/vim-enhanced-8.2-17.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/vim-filesystem-8.2-17.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/vim-minimal-8.2-17.p01.ky10.aarch64.rpm
+
+vim(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/vim-X11-8.2-17.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/vim-common-8.2-17.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/vim-enhanced-8.2-17.p01.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/vim-filesystem-8.2-17.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/vim-minimal-8.2-17.p01.ky10.mips64el.rpm
+
+vim(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/vim-X11-8.2-17.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/vim-common-8.2-17.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/vim-enhanced-8.2-17.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/vim-filesystem-8.2-17.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/vim-minimal-8.2-17.p01.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+vim(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/vim-X11-8.2-17.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/vim-common-8.2-17.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/vim-enhanced-8.2-17.p01.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/vim-filesystem-8.2-17.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/vim-minimal-8.2-17.p01.ky10.aarch64.rpm
+
+vim(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/vim-X11-8.2-17.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/vim-common-8.2-17.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/vim-enhanced-8.2-17.p01.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/vim-filesystem-8.2-17.p01.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/vim-minimal-8.2-17.p01.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

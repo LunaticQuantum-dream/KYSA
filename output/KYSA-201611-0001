@@ -1,0 +1,49 @@
+Name:KYSA-201611-0001
+Severity:重要
+Summary:tar安全漏洞
+Published:2023-12-28
+URL:/support/loophole/patch/4799.html
+Title:
+			公告ID：KYSA-201611-0001
+公告摘要：tar安全漏洞
+等级：重要
+发布日期：2023-12-28
+		
+1. 修复的CVE
+CVE-2016-6321
+GNU Tar是-一套用于创建tar格式文件的工具。 GNU tar 1.14至1.29版本中的‘safer_name_suffix’函数存在目录遍历漏洞，该漏洞源于程序没有正确的过滤‘file_name’参数。远程攻击者可利用该漏洞绕过既定的保护机制并写入任意代码。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+tar-scripts、tar
+arm64 架构：
+tar-scripts、tar
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+1.28-2.1kord0.2
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install tar
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tar/tar-scripts_1.28-2.1kord0.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tar/tar_1.28-2.1kord0.2_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tar/tar-scripts_1.28-2.1kord0.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/t/tar/tar_1.28-2.1kord0.2_arm64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

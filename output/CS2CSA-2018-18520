@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-18520
+Severity:低等
+Summary:elfutils递归ar文件处理异常错误
+Published:2020-06-03
+URL:/support/loophole/patch/235.html
+Title:
+			摘要：           elfutils递归ar文件处理异常错误
+安全等级：          低等
+公告ID：         CS2CSA-2018-18520
+产品：             中标麒麟高级服务器操作系统软件      
+发布日期：          2020-06-03
+CVE：          CVE-2018-18520
+		
+1. 概述：中标麒麟高级服务器操作系统软件V7有elfutils可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：通过v0.174，elfutils的libelf中的elf_end函数中存在无效的内存地址取消引用。尽管eu-size旨在支持ar文件中的ar文件，但size.c中的handle_ar会在处理所有内部条目之前关闭外部ar文件。该漏洞使攻击者可以利用精心制作的ELF文件导致拒绝服务（应用程序崩溃）。

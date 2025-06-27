@@ -1,0 +1,111 @@
+Name:KYSA-202208-1146
+Severity:中等
+Summary:libxml2安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1657.html
+Title:
+			公告ID：KYSA-202208-1146
+公告摘要：libxml2安全漏洞
+安等级：Moderate
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2015-1819
+描述：Libxml是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。xmlreader是其中的一个用于读取XML的组件。libxml的xmlreader组件中存在安全漏洞。远程攻击者可借助特制的XML数据利用该漏洞造成拒绝服务（内存消耗）。
+·CVE-2015-5312
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。libxml2 2.9.3之前版本的parser.c文件中的‘xmlStringLenDecodeEntities’函数存在安全漏洞，该漏洞源于程序没有正确限制实体扩展。攻击者可借助特制的XML数据利用该漏洞造成拒绝服务（CPU资源消耗）。
+·CVE-2015-7497
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。Libxml2 2.9.3之前版本的dict.c文件中的‘xmlDictComputeFastQKey’函数存在基于堆的缓冲区溢出漏洞。攻击者可利用该漏洞造成拒绝服务。
+·CVE-2015-7498
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。Libxml2 2.9.3之前版本的parser.c文件中的‘xmlParseXmlDecl’函数存在基于堆的缓冲区溢出漏洞。攻击者可利用该漏洞造成拒绝服务。
+·CVE-2015-7499
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。libxml2 2.9.3之前版本的parser.c文件中的‘xmlParseXmlDecl’函数存在基于堆的缓冲区溢出漏洞。攻击者可利用该漏洞获取敏感的进程内存信息。
+·CVE-2015-7500
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。libxml2 2.9.3之前版本的parser.c文件中的‘xmlParseMisc’函数存在安全漏洞。攻击者可利用该漏洞造成拒绝服务（越边界堆读取）。
+·CVE-2015-7941
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。Libxml2 2.9.2版本中存在安全漏洞，该漏洞源于程序没有正确停止解析无效的输入。攻击者可借助parser.c文件中的‘xmlParseEntityDecl’或‘xmlParseConditionalSections’函数的特制的XML数据，利用该漏洞造成拒绝服务（越边界读取和Libxml2崩溃）。
+·CVE-2015-7942
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。Libxml2的parser.c文件中的‘xmlParseConditionalSections’函数中存在安全漏洞，该漏洞源于程序停止解析无效输入时没有正确跳过中间实体。攻击者可借助特制的XML数据利用该漏洞造成拒绝服务（越边界读取和崩溃）。
+·CVE-2015-8241
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。libxml2 2.9.2版本的‘xmlNextChar’函数中存在安全漏洞，该漏洞源于程序没有正确检查状态。攻击者可借助特制的XML数据利用该漏洞造成拒绝服务（基于堆的缓冲区越边界读取和应用程序崩溃），或获取敏感信息。
+·CVE-2015-8242
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。libxml2 2.9.3之前版本的HTML解析器中的push接口的SAX2.c文件中的‘xmlSAX2TextNode’函数存在安全漏洞。攻击者可借助特制的XML数据利用该漏洞造成拒绝服务（基于栈的缓冲区越边界读取和应用程序崩溃），或获取敏感信息。
+·CVE-2015-8317
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。libxml2 2.9.3之前版本的parser.c文件中的‘xmlParseXMLDecl’函数存在安全漏洞。攻击者可借助XML数据中未终止的编码值和未完成的XML声明利用该漏洞获取敏感信息。
+·CVE-2015-8710
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。Libxml2的HTMLparser.c文件中的‘htmlParseComment’函数存在安全漏洞。攻击者可借助打开的HTML评论利用该漏洞获取敏感信息，造成拒绝服务（越边界堆内存访问和应用程序崩溃）。
+·CVE-2016-1833
+描述：Apple iOS、watchOS、OS X El Capitan和tvOS都是美国苹果（Apple）公司的产品。Apple iOS是为移动设备所开发的一套操作系统；watchOS是一套智能手表操作系统；OS X El Capitan是为Mac计算机所开发的一套专用操作系统；tvOS是一套智能电视操作系统。Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。Apple iOS 9.3.2之前版本、watchOS 2.2.1之前版本、OS X El Capitan 10.11.5之前版本和tvOS 9.2.1之前版本的libxml2中存在安全漏洞。远程攻击者可借助特制的XML利用该漏洞造成拒绝服务（内存损坏）或执行任意代码。
+·CVE-2016-3627
+描述：Libxml2是GNOME项目组所研发的一个基于C语言的用来解析XML文档的函数库，它支持多种编码格式、Xpath解析、Well-formed和valid验证等。libxml2 2.9.3及之前版本的tree.c文件中的‘xmlStringGetNodeList’函数存在安全漏洞。当程序工作在恢复模式时，攻击者可借助特制的XML文档利用该漏洞造成拒绝服务（无限递归，栈损坏和应用程序崩溃）。
+·CVE-2020-7595
+描述：libxml2是开源的一个用来解析XML文档的函数库。它用C语言写成，并且能为多种语言所调用，例如C语言，C++，XSH。libxml2 2.9.10版本中的parser.c文件的xmlStringLenDecodeEntities存在安全漏洞。攻击者可利用该漏洞造成无限循环。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+libxml2、libxml2-devel、libxml2-python、libxml2-static
+x86_64架构:
+libxml2、libxml2-devel、libxml2-python、libxml2-static
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+libxml2-2.9.1-6.el7_2.3
+libxml2-devel-2.9.1-6.el7_2.3
+libxml2-python-2.9.1-6.el7_2.3
+libxml2-static-2.9.1-6.el7_2.3
+
+4.修复方法
+方法一：配置源进行升级安装
+220.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+221.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+222.升级完成后是否需要重启服务或操作系统：
+·CVE-2015-1819：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2015-5312：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2015-7497：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2015-7498：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2015-7499：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2015-7500：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2015-7941：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2015-7942：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2015-8241：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2015-8242：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2015-8317：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2015-8710：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2016-1833：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2016-3627：需要重启 libxml2 以使漏洞修复生效。
+·CVE-2020-7595：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+libxml2（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/libxml2-2.9.1-6.el7_2.3.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/libxml2-devel-2.9.1-6.el7_2.3.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/libxml2-python-2.9.1-6.el7_2.3.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/libxml2-static-2.9.1-6.el7_2.3.aarch64.rpm
+
+libxml2（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/libxml2-2.9.1-6.el7_2.3.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/libxml2-2.9.1-6.el7_2.3.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/libxml2-devel-2.9.1-6.el7_2.3.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/libxml2-devel-2.9.1-6.el7_2.3.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/libxml2-python-2.9.1-6.el7_2.3.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/libxml2-python-2.9.1-6.el7_2.3.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/libxml2-static-2.9.1-6.el7_2.3.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/libxml2-static-2.9.1-6.el7_2.3.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

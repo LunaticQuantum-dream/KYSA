@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-9798
+Severity:中等
+Summary:httpd 安全更新
+Published:2017-09-18
+URL:/support/loophole/patch/184.html
+Title:
+			摘要：             httpd 安全更新
+安全等级：          中等
+公告ID：           CS2CSA-2017-9798
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-09-18
+CVE：             CVE-2017-9798 CVSS3评分：5.9
+		
+1. 概述：中标麒麟高级服务器操作系统V6有 httpd 可用的更新。中标麒麟高级服务器操作系统V7有 httpd 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：在 nan*函数中发现堆栈溢出漏洞, 这可能会导致应用程序 (它处理具有 nan 函数的长字符串) 崩溃, 或者可能执行任意代码。4. 安装包列表：中标麒麟高级服务器操作系统V6： 源代码包：httpd-2.2.15-60.el6_9.6.ns6.01.src.rpm x86_64二进制包：httpd-2.2.15-60.el6_9.6.ns6.01.x86_64.rpm               httpd-debuginfo-2.2.15-60.el6_9.6.ns6.01.i686.rpm       httpd-debuginfo-2.2.15-60.el6_9.6.ns6.01.x86_64.rpm   httpd-devel-2.2.15-60.el6_9.6.ns6.01.i686.rpm           httpd-devel-2.2.15-60.el6_9.6.ns6.01.x86_64.rpm       httpd-manual-2.2.15-60.el6_9.6.ns6.01.noarch.rpm       httpd-tools-2.2.15-60.el6_9.6.ns6.01.x86_64.rpm       mod_ssl-2.2.15-60.el6_9.6.ns6.01.x86_64.rpm           httpd-2.2.15-60.el6_9.6.ns6.01.i686.rpm               httpd-debuginfo-2.2.15-60.el6_9.6.ns6.01.i686.rpm       httpd-devel-2.2.15-60.el6_9.6.ns6.01.i686.rpm           httpd-manual-2.2.15-60.el6_9.6.ns6.01.noarch.rpm       httpd-tools-2.2.15-60.el6_9.6.ns6.01.i686.rpm           mod_ssl-2.2.15-60.el6_9.6.ns6.01.i686.rpm               中标麒麟高级服务器操作系统V7：源代码包：httpd-2.4.6-67.el7_4.5.ns7.01.src.rpm x86_64二进制包：httpd-2.4.6-67.el7_4.5.ns7.01.x86_64.rpm   httpd-debuginfo-2.4.6-67.el7_4.5.ns7.01.x86_64.rpm httpd-debuginfo-2.4.6-67.el7_4.5.ns7.01.x86_64.rpm httpd-devel-2.4.6-67.el7_4.5.ns7.01.x86_64.rpm  httpd-manual-2.4.6-67.el7_4.5.ns7.01.noarch.rpm httpd-tools-2.4.6-67.el7_4.5.ns7.01.x86_64.rpm  mod_ldap-2.4.6-67.el7_4.5.ns7.01.x86_64.rpm  mod_proxy_html-2.4.6-67.el7_4.5.ns7.01.x86_64.rpm mod_session-2.4.6-67.el7_4.5.ns7.01.x86_64.rpm  mod_ssl-2.4.6-67.el7_4.5.ns7.01.x86_64.rpm 			

@@ -1,0 +1,183 @@
+Name:KYSA-202301-1012
+Severity:中等
+Summary:kernel安全漏洞
+Published:2023-01-17
+URL:/support/loophole/patch/3712.html
+Title:
+			公告ID：KYSA-202301-1012
+公告摘要：kernel安全漏洞
+等级：Moderate
+发布日期：2023-01-17
+		
+1.修复的CVE
+·CVE-2020-35499
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。Linux Kernel 中存在代码问题漏洞。该漏洞源于当使用BT_SNDMTU/BT_RCVMTU SCO sockets时，net/bluetooth/sco.c中的sco_sock_getsockopt函数没有检查Socket连接，本地攻击者可通过该漏洞攻击系统或获得敏感信息。 以下产品及版本受到影响：Linux Kernel 5.11。
+·CVE-2022-3107
+描述：一个问题被发现在Linux内核5.16将是。在司机/net/hyperv/netvsc_drv netvsc_get_ethtool_stats。c缺乏检查返回值的kvmalloc_array()和将导致空指针。
+·CVE-2022-3108
+描述：一个问题被发现在Linux内核5.16将是。kfd_parse_subtype_iolink司机/ gpu / drm / amd / amdkfd / kfd_crat。c缺乏检查返回值的kmemdup ()。
+·CVE-2022-3111
+描述：一个问题被发现在Linux内核5.16将是。free_charger_irq()司机/电力/供应/ wm8350_power。WM8350_IRQ_CHG_FAST_RDY c缺乏自由,这是在wm8350_init_charger注册()。
+·CVE-2022-3115
+描述：一个问题被发现在Linux内核5.16将是。malidp_crtc_reset司机/ gpu / drm /胳膊/ malidp_crtc。c缺乏检查返回值的kzalloc()和将导致空指针。
+·CVE-2022-3424
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞。攻击者利用该漏洞通过gru_set_context_option()强制重用已释放内存区域，以触发拒绝服务，并可能运行代码。
+·CVE-2022-3643
+描述：客人可以触发网卡接口复位/中止/崩溃通过人原本有可能客人来触发一个网卡接口复位/中止/崩溃在基于Linux网络后端通过发送特定的数据包。它似乎是一个(不成文的?)假设其他Linux网络栈的数据包协议标题都包含在SKB的线性部分和一些网卡如果不是这样。这是报道发生与思科(enic)和Broadcom NetXtrem II BCM5780 (bnx2x)尽管它可能是一个问题与其他网卡/驱动程序。以防前端与分裂标题发送请求,人原本将转发那些违反上述假设网络核心,导致不良行为说。
+·CVE-2022-4095
+描述：use-after-free缺陷被发现在Linux内核5.19.2之前。这个问题发生在cmd_hdl_filter司机/分期/ rtl8712 / rtl8712_cmd。c,允许攻击者发动当地拒绝服务攻击和获得特权升级。
+·CVE-2022-4129
+描述：一个缺陷被发现在Linux内核年代第二层隧道协议(L2TP)。缺少锁当清算sk_user_data会导致竞态条件和NULL指针。本地用户可以使用这一缺陷可能崩溃系统导致拒绝服务。
+·CVE-2022-41858
+描述：在司机/net/slip null-ptr-deref漏洞允许攻击者tocrash linux内核的linux通过模拟滑网卡的linux用户空间。(根本原因)当一个司机是分离,在slip_close()将tocleanup必要资源和sl - > tty设置为NULL inslip_close ()。与此同时,我们发送的数据包是封锁,sl_tx_timeout()调用。尽管slip_close () andsl_tx_timeout()使用sl - >同步锁,我们不判断sl - >在sl_tx_timeout tty等于零()和thenull指针会发生错误。(线程1)|(线程2)| slip_close () | spin_lock_bh (& sl - >锁)sl - > tty = NULL / / (1) sl_tx_timeout () | spin_unlock_bh (& sl - >锁)spin_lock (& sl - >锁);tty_chars_in_buffer (sl - > tty) |如果(tty - >操作- > . .)/ / (2)synchronize_rcu()我们将NULL sl - > tty的位置(1)和废弃sl - > ttyin位置(2)。
+·CVE-2022-42328
+描述：客人可以引发死锁人原本在Linux中司机T[他CNA信息记录与多个cf;文本解释哪些方面/ CVE漏洞对应。]补丁xsa - 392年引入了另一个问题可能导致死锁在免费的SKB包下降由于xsa - 392处理(cve - 2022 - 42328)。另外当滴包其他原因同样的僵局可能发生的netpoll活跃的界面xen-netback驱动程序连接到(cve - 2022 - 42329)。
+·CVE-2022-42329
+描述：Xen是英国剑桥（Cambridge）大学的一款开源的虚拟机监视器产品。该产品能够使不同和不兼容的操作系统运行在同一台计算机上，并支持在运行时进行迁移，保证正常运行并且避免宕机。
+
+Xen xen-netback存在安全漏洞，该漏洞源于在尝试释放因XSA-392处理而丢弃的数据包的SKB时可能会导致死锁，恶意攻击者可能会通过半虚拟化网络接口导致主机拒绝服务(DoS)。
+·CVE-2022-42896
+描述：有在Linux内核的net/bluetooth/l2cap_core use-after-free漏洞。c l2cap_connect l2cap_le_connect_req函数允许代码执行和内核内存泄漏(分别)远程通过蓝牙。远程攻击者可以通过蓝牙执行代码内核内存泄漏如果在邻近的受害者。我们建议升级过去提交https://www.google.com/url https://github.com/torvalds/linux/commit/711f8c3fb3db61897080468586b970c87c61d9e4 https://www.google.com/url
+·CVE-2022-45934
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 6.0.10及以前版本存在安全漏洞，该漏洞源于其net/bluetooth/l2cap_core.c组件通过L2CAP_CONF_REQ进行整数封装。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+bpftool、kernel、kernel-abi-whitelists、kernel-core、kernel-cross-headers、kernel-debug、kernel-debug-core、kernel-debug-devel、kernel-debug-modules、kernel-debug-modules-extra、kernel-debug-modules-internal、kernel-devel、kernel-headers、kernel-modules、kernel-modules-extra、kernel-modules-internal、kernel-tools、kernel-tools-libs、kernel-tools-libs-devel、perf、python3-perf
+·x86_64架构:
+bpftool、kernel、kernel-abi-whitelists、kernel-core、kernel-cross-headers、kernel-debug、kernel-debug-core、kernel-debug-devel、kernel-debug-modules、kernel-debug-modules-extra、kernel-debug-modules-internal、kernel-devel、kernel-headers、kernel-ipaclones-internal、kernel-modules、kernel-modules-extra、kernel-modules-internal、kernel-tools、kernel-tools-libs、kernel-tools-libs-devel、perf、python3-perf
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64)
+bpftool-4.19.90-25.23.v2101.ky10或以上版本
+kernel-4.19.90-25.23.v2101.ky10或以上版本
+kernel-abi-whitelists-4.19.90-25.23.v2101.ky10或以上版本
+kernel-core-4.19.90-25.23.v2101.ky10或以上版本
+kernel-cross-headers-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-core-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-devel-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-modules-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-modules-extra-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-modules-internal-4.19.90-25.23.v2101.ky10或以上版本
+kernel-devel-4.19.90-25.23.v2101.ky10或以上版本
+kernel-headers-4.19.90-25.23.v2101.ky10或以上版本
+kernel-modules-4.19.90-25.23.v2101.ky10或以上版本
+kernel-modules-extra-4.19.90-25.23.v2101.ky10或以上版本
+kernel-modules-internal-4.19.90-25.23.v2101.ky10或以上版本
+kernel-tools-4.19.90-25.23.v2101.ky10或以上版本
+kernel-tools-libs-4.19.90-25.23.v2101.ky10或以上版本
+kernel-tools-libs-devel-4.19.90-25.23.v2101.ky10或以上版本
+perf-4.19.90-25.23.v2101.ky10或以上版本
+python3-perf-4.19.90-25.23.v2101.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (x86_64)
+bpftool-4.19.90-25.23.v2101.ky10或以上版本
+kernel-4.19.90-25.23.v2101.ky10或以上版本
+kernel-abi-whitelists-4.19.90-25.23.v2101.ky10或以上版本
+kernel-core-4.19.90-25.23.v2101.ky10或以上版本
+kernel-cross-headers-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-core-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-devel-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-modules-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-modules-extra-4.19.90-25.23.v2101.ky10或以上版本
+kernel-debug-modules-internal-4.19.90-25.23.v2101.ky10或以上版本
+kernel-devel-4.19.90-25.23.v2101.ky10或以上版本
+kernel-headers-4.19.90-25.23.v2101.ky10或以上版本
+kernel-ipaclones-internal-4.19.90-25.23.v2101.ky10或以上版本
+kernel-modules-4.19.90-25.23.v2101.ky10或以上版本
+kernel-modules-extra-4.19.90-25.23.v2101.ky10或以上版本
+kernel-modules-internal-4.19.90-25.23.v2101.ky10或以上版本
+kernel-tools-4.19.90-25.23.v2101.ky10或以上版本
+kernel-tools-libs-4.19.90-25.23.v2101.ky10或以上版本
+kernel-tools-libs-devel-4.19.90-25.23.v2101.ky10或以上版本
+perf-4.19.90-25.23.v2101.ky10或以上版本
+python3-perf-4.19.90-25.23.v2101.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-35499:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-3107:需要重启操作系统以使漏洞修复生效。
+CVE-2022-3108:需要重启操作系统以使漏洞修复生效。
+CVE-2022-3111:需要重启操作系统以使漏洞修复生效。
+CVE-2022-3115:需要重启操作系统以使漏洞修复生效。
+CVE-2022-3424:需要重启操作系统以使漏洞修复生效。
+CVE-2022-3643:需要重启操作系统以使漏洞修复生效。
+CVE-2022-4095:需要重启操作系统以使漏洞修复生效。
+CVE-2022-4129:需要重启操作系统以使漏洞修复生效。
+CVE-2022-41858:需要重启操作系统以使漏洞修复生效。
+CVE-2022-42328:需要重启操作系统以使漏洞修复生效。
+CVE-2022-42329:需要重启操作系统以使漏洞修复生效。
+CVE-2022-42896:需要重启操作系统以使漏洞修复生效。
+CVE-2022-45934:需要重启操作系统以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+kernel(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/bpftool-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-abi-whitelists-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-core-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-cross-headers-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-core-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-devel-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-modules-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-modules-extra-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-modules-internal-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-devel-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-headers-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-modules-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-modules-extra-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-modules-internal-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-tools-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-tools-libs-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-tools-libs-devel-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/perf-4.19.90-25.23.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/python3-perf-4.19.90-25.23.v2101.ky10.aarch64.rpm
+
+kernel(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/bpftool-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-abi-whitelists-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-core-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-cross-headers-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-core-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-devel-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-modules-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-modules-extra-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-modules-internal-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-devel-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-headers-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-ipaclones-internal-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-modules-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-modules-extra-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-modules-internal-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-tools-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-devel-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/perf-4.19.90-25.23.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/python3-perf-4.19.90-25.23.v2101.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

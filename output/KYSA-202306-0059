@@ -1,0 +1,138 @@
+Name:KYSA-202306-0059
+Severity:重要
+Summary:qemu安全漏洞
+Published:2024-01-03
+URL:/support/loophole/patch/4859.html
+Title:
+			公告ID：KYSA-202306-0059
+公告摘要：qemu安全漏洞
+等级：重要
+发布日期：2024-01-03
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303 Update2 版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2022-4172
+QEMU（Quick Emulator）是一套模拟处理器软件。该软件具有速度快、跨平台等特点。 QEMU存在安全漏洞，该漏洞源于ACPI错误记录序列化表(ERST)设备的read_erst_record()和write_erst_record()函数中存在整数溢出和缓冲区溢出，可能允许客户机溢出为ERST内存设备分配的主机缓冲区，恶意攻击者可以利用这些问题使主机上的QEMU进程崩溃。
+CVE-2022-4144
+QEMU（Quick Emulator）是一套模拟处理器软件。该软件具有速度快、跨平台等特点。 QEMU存在安全漏洞，该漏洞源于qxl_phys2virt() 函数不检查客户物理地址所指向的结构的大小，可能会读取超过条空间末尾的相邻页面，攻击者利用该漏洞可以使主机上的 QEMU 进程崩溃，从而导致拒绝服务情况。
+CVE-2022-1050
+Guest是一个应用产品。 Guest存在资源管理错误漏洞，该漏洞源于当共享缓冲区尚未分配时，Guest driver会执行HW命令，从而导致空闲后使用。
+CVE-2023-0330
+QEMU（Quick Emulator）是一套模拟处理器软件。该软件具有速度快、跨平台等特点。 QEMU存在安全漏洞，该漏洞源于DMA重入问题，攻击者利用该漏洞会导致堆栈溢出。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303 Update2 
+x86_64 架构：
+qemu-block-extra、qemu-guest-agent、qemu-kvm、qemu-system-arm、qemu-system-common、qemu-system-data、qemu-system-gui、qemu-system-loongarch64、qemu-system-mips、qemu-system-misc、qemu-system-ppc、qemu-system-s390x、qemu-system-sparc、qemu-system-x86-microvm、qemu-system-x86-xen、qemu-system-x86、qemu-system、qemu-user-binfmt、qemu-user-static、qemu-user、qemu-utils、qemu
+arm64 架构：
+qemu-block-extra、qemu-guest-agent、qemu-kvm、qemu-system-arm、qemu-system-common、qemu-system-data、qemu-system-gui、qemu-system-loongarch64、qemu-system-mips、qemu-system-misc、qemu-system-ppc、qemu-system-s390x、qemu-system-sparc、qemu-system-x86、qemu-system、qemu-user-binfmt、qemu-user-static、qemu-user、qemu-utils、qemu
+mips64el 架构：
+qemu-block-extra、qemu-guest-agent、qemu-system-arm、qemu-system-common、qemu-system-data、qemu-system-gui、qemu-system-loongarch64、qemu-system-mips、qemu-system-misc、qemu-system-ppc、qemu-system-sparc、qemu-system-x86、qemu-system、qemu-user-binfmt、qemu-user-static、qemu-user、qemu-utils、qemu
+loongarch64 架构：
+qemu-block-extra、qemu-guest-agent、qemu-system-arm、qemu-system-common、qemu-system-data、qemu-system-gui、qemu-system-loongarch64、qemu-system-mips、qemu-system-misc、qemu-system-ppc、qemu-system-sparc、qemu-system-x86、qemu-system、qemu-utils、qemu
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303 Update2 
+1:4.2-3kylin6.24k0.0
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install qemu
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303 Update2 
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-block-extra_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-guest-agent_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-kvm_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-arm_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-common_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-data_4.2-3kylin6.24k0.0_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-gui_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-loongarch64_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-mips_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-misc_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-ppc_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-s390x_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-sparc_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-x86-microvm_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-x86-xen_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-x86_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-binfmt_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-static_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-utils_4.2-3kylin6.24k0.0_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu_4.2-3kylin6.24k0.0_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-block-extra_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-guest-agent_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-kvm_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-arm_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-common_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-data_4.2-3kylin6.24k0.0_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-gui_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-loongarch64_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-mips_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-misc_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-ppc_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-s390x_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-sparc_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-x86_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-binfmt_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-static_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-utils_4.2-3kylin6.24k0.0_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu_4.2-3kylin6.24k0.0_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-block-extra_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-guest-agent_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-arm_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-common_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-data_4.2-3kylin6.24k0.0_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-gui_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-loongarch64_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-mips_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-misc_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-ppc_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-sparc_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-x86_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-binfmt_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-static_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-utils_4.2-3kylin6.24k0.0_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu_4.2-3kylin6.24k0.0_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-block-extra_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-guest-agent_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-arm_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-common_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-data_4.2-3kylin6.24k0.0_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-gui_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-loongarch64_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-mips_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-misc_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-ppc_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-sparc_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-x86_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-utils_4.2-3kylin6.24k0.0_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu_4.2-3kylin6.24k0.0_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303 Update2 版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

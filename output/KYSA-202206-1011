@@ -1,0 +1,123 @@
+Name:KYSA-202206-1011
+Severity:重要
+Summary:kernel安全漏洞
+Published:2022-06-07
+URL:/support/loophole/patch/5056.html
+Title:
+			公告ID：KYSA-202206-1011
+公告摘要：kernel安全漏洞
+等级：Important
+发布日期：2022-06-07
+		
+1.修复的CVE
+·CVE-2012-6701
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 3.4.1之前版本的fs/aio.c文件中存在整数溢出漏洞。本地攻击者可借助较大的AIO iovec结构体利用该漏洞影响保密性、完整性和可用性。
+·CVE-2015-8830
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 4.0版本的fs/aio.c文件中的‘aio_setup_single_vector’函数存在整数溢出漏洞。本地攻击者可借助较大的AIO iovec利用该漏洞造成拒绝服务。
+·CVE-2017-1000371
+描述：在Linux内核映射ELF PIE二进制加载的实现中发现了一个缺陷，该实现允许规避旨在减轻这种行为的堆栈保护页面保护机制。这个问题似乎仅限于基于i386的系统。
+·CVE-2017-2671
+描述：在Linux内核的链接层控制实现中发现了导致空指针取消引用的竞争条件。具有ping套接字访问权限的本地攻击者可以利用此漏洞使系统崩溃。
+·CVE-2017-6074
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 4.9.11及之前的版本中的net/dccp/input.c文件中的‘dccp_rcv_state_process’函数存在安全漏洞，该漏洞源于程序没有正确处理DCCP_PKT_REQUEST数据结构。本地攻击者可借助IPV6_RECVPKTINFO setsockopt系统调用的应用程序利用该漏洞造成拒绝服务（无效的释放）。
+·CVE-2017-7308
+描述：我们发现Linux内核的网络实现的packet_set_ring（）函数没有正确验证某些块大小的数据。具有CAP_NET_RAW功能的本地攻击者可以利用此漏洞触发缓冲区溢出，从而导致系统崩溃或权限提升。
+·CVE-2017-8824
+描述：自2.6.16以来，在影响Linux内核的DCCP套接字代码中发现了一个释放后使用漏洞。此漏洞允许攻击者升级其权限。
+·CVE-2018-10872
+描述：内核存在安全漏洞，该漏洞源于在处理异常时出现错误。攻击者可利用该漏洞造成拒绝服务（系统内核崩溃）。
+·CVE-2018-10901
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。KVM virtualization subsystem是其中的一个虚拟化子系统。Linux kernel中的KVM virtualization子系统存在权限许可和访问控制问题漏洞。该漏洞源于网络系统或产品缺乏有效的权限许可和访问控制措施。
+·CVE-2018-13405
+描述：在LInux内核的fs/inode.c:inode_init_owner（）函数逻辑中发现一个漏洞，该漏洞允许本地用户创建具有意外组所有权、组执行和SGID权限位设置的文件，在这样的场景中，目录是SGID，属于某个组，并且可以由不是该组成员的用户写入。这可能会导致在不应该授予权限的情况下授予过多权限。
+·CVE-2018-3620
+描述：Intel Core i3 processor等都是美国英特尔（Intel）公司的产品。Intel Core i3 processor是一款酷睿（Core）i3系列中央处理器（CPU）。Intel Core i5 processor是一款酷睿（Core）i5系列中央处理器（CPU）。Intel Core i7 processor是一款酷睿（Core）i7系列中央处理器（CPU）。多款Intel产品（使用推测执行和地址转换）中存在信息泄露漏洞。该漏洞源于网络系统或产品在运行过程中存在配置等错误。未授权的攻击者可利用漏洞获取受影响组件敏感信息。以下产品受到影响：Intel Core i3 processor；Intel Core i5 processor；Intel Core i7 processor；Intel Core M processor family；2nd generation Intel Core processors；3rd generation Intel Core processors；4th generation Intel Core processors；5th generation Intel Core processors等。
+·CVE-2018-3639
+描述：AMD、ARM和Intel CPUs等都是不通厂商的CPU（中央处理器）产品。
+AMD、ARM和Intel CPUs存在信息泄露漏洞。攻击者可通过实施边信道攻击利用该漏洞获取信息。
+·CVE-2018-3646
+描述：Intel Core i3 processor等都是美国英特尔（Intel）公司的产品。Intel Core i3 processor是一款酷睿（Core）i3系列中央处理器（CPU）。Intel Core i5 processor是一款酷睿（Core）i5系列中央处理器（CPU）。Intel Core i7 processor是一款酷睿（Core）i7系列中央处理器（CPU）。多款Intel产品（使用推测执行和地址转换）中存在信息泄露漏洞。该漏洞源于网络系统或产品在运行过程中存在配置等错误。未授权的攻击者可利用漏洞获取受影响组件敏感信息。以下产品受到影响：Intel Core i3 processor；Intel Core i5 processor；Intel Core i7 processor；Intel Core M processor family；2nd generation Intel Core processors；3rd generation Intel Core processors；4th generation Intel Core processors；5th generation Intel Core processors等。
+·CVE-2018-8897
+描述：在通过Mov SS或Pop SS指令进行堆栈切换操作后，Linux内核处理异常的方式中发现了一个缺陷。在堆栈切换操作期间，处理器不传递中断和异常，而是在执行堆栈切换后的第一条指令时传递这些中断和异常。未经授权的系统用户可以利用此漏洞使系统内核崩溃，从而导致拒绝服务。
+·CVE-2019-11135
+描述：当发生TSX异步中止（TAA）错误时，英特尔CPU处理推测性执行指令的方式中发现了一个缺陷。可以监视执行时间的本地已验证攻击者可以通过比较中止执行时间来推断TSX内存状态。这可能允许通过此观察到的副渠道针对正在执行的任何TSX事务公开信息，同时攻击者可以观察中止时间。英特尔的事务性同步扩展（TSX）是一组指令，它们在锁定保护的关键部分中支持事务性内存，以改善多线程应用程序的性能。CPU在关键部分将指令作为事务执行，同时确保其原子状态。当这种交易执行不成功时，处理器无法确保对事务存储器的原子更新，因此处理器会回滚或中止此类事务执行。在TSX异步中止（TAA）处于挂起状态时，CPU可能会继续从体系结构缓冲区读取数据并将其传递给相关的推测操作。这可能会通过推测性边信道方式导致信息泄漏，这与微体系结构数据采样（MDS）问题非常相似。
+·CVE-2019-1125
+描述：在Linux内核的系统中断实现中发现了一个Spectre小工具。具有本地访问权限的攻击者可以使用此信息通过类似的侧通道泄露私有数据。
+·CVE-2019-11477
+描述：在Linux内核的网络子系统处理TCP选择性确认（SACK）段的方式中发现了一个整数溢出缺陷。在处理SACK段时，Linux内核的socket buffer（SKB）数据结构变得支离破碎。每个片段约为TCP最大段大小（MSS）字节。为了有效地处理SACK块，Linux内核将多个碎片skb合并到一个skb中，这可能会使保存段数的变量溢出。远程攻击者可以利用此漏洞在TCP连接上发送SACK段序列（TCP MSS值很小），从而使Linux内核崩溃，从而导致拒绝服务（DoS）。
+·CVE-2020-10711
+描述：在Linux内核的SELinux子系统中发现一个空指针取消引用缺陷。通过“ebitmap_netlbl_import”例程将商业IP安全选项（CIPSO）协议的类别位图导入到SELinux可扩展位图时，会出现此漏洞。在“CIPSO v4_parsetag_rbm”例程中处理CIPSO restricted bitmap标记时，它设置安全属性以指示类别位图存在，即使尚未分配。此问题导致在将同一类别位图导入SELinux时出现空指针取消引用问题。此漏洞允许远程网络用户使系统内核崩溃，从而导致拒绝服务。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+kernel、kernel-abi-whitelists、kernel-debug、kernel-debug-devel、kernel-debuginfo-common-x86_64、kernel-devel、kernel-doc、kernel-firmware、kernel-headers、perf、python-perf
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+kernel-2.6.32-754.35.1.el6或以上版本
+kernel-abi-whitelists-2.6.32-754.35.1.el6或以上版本
+kernel-debug-2.6.32-754.35.1.el6或以上版本
+kernel-debug-devel-2.6.32-754.35.1.el6或以上版本
+kernel-debuginfo-common-x86_64-2.6.32-754.35.1.el6或以上版本
+kernel-devel-2.6.32-754.35.1.el6或以上版本
+kernel-doc-2.6.32-754.35.1.el6或以上版本
+kernel-firmware-2.6.32-754.35.1.el6或以上版本
+kernel-headers-2.6.32-754.35.1.el6或以上版本
+perf-2.6.32-754.35.1.el6或以上版本
+python-perf-2.6.32-754.35.1.el6或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2012-6701:需要重启操作系统以使漏洞修复生效。
+CVE-2015-8830:需要重启操作系统以使漏洞修复生效。
+CVE-2017-1000371:需要重启操作系统以使漏洞修复生效。
+CVE-2017-2671:需要重启操作系统以使漏洞修复生效。
+CVE-2017-6074:需要重启操作系统以使漏洞修复生效。
+CVE-2017-7308:需要重启操作系统以使漏洞修复生效。
+CVE-2017-8824:需要重启操作系统以使漏洞修复生效。
+CVE-2018-10872:需要重启 kernel 以使漏洞修复生效。
+CVE-2018-10901:需要重启操作系统以使漏洞修复生效。
+CVE-2018-13405:需要重启 kernel 以使漏洞修复生效。
+CVE-2018-3620:需要重启操作系统以使漏洞修复生效。
+CVE-2018-3639:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-3646:需要重启 kernel 以使漏洞修复生效。
+CVE-2018-8897:需要重启操作系统以使漏洞修复生效。
+CVE-2019-11135:需要重启操作系统以使漏洞修复生效。
+CVE-2019-1125:需要重启操作系统以使漏洞修复生效。
+CVE-2019-11477:需要重启 kernel 以使漏洞修复生效。
+CVE-2020-10711:需要重启操作系统以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+kernel(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-2.6.32-754.35.1.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-abi-whitelists-2.6.32-754.35.1.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-debug-2.6.32-754.35.1.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-debug-devel-2.6.32-754.35.1.el6.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-debug-devel-2.6.32-754.35.1.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-debuginfo-common-x86_64-2.6.32-754.35.1.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-devel-2.6.32-754.35.1.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-doc-2.6.32-754.35.1.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-firmware-2.6.32-754.35.1.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/kernel-headers-2.6.32-754.35.1.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/perf-2.6.32-754.35.1.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.10/os/lic/updates/x86_64/Packages/python-perf-2.6.32-754.35.1.el6.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

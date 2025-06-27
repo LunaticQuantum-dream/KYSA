@@ -1,0 +1,13 @@
+Name:KYSA-202204-1016
+Severity:中等
+Summary:openjpeg2安全漏洞
+Published:2022-04-15
+URL:/support/loophole/patch/1044.html
+Title:
+			公告ID：KYSA-202204-1016
+公告摘要：openjpeg2安全漏洞
+安全等级：Moderate
+发布日期：2022年04月15日
+影响CVE：CVE-2019-12973、CVE-2021-3575
+		
+1. 修复的CVE·CVE-2019-12973描述：OpenJPEG是一款基于C语言的开源JPEG2000编码解码器。OpenJPEG 2.3.1版本中的openjp2/t1.c文件的’opj_t1_encode_cblks‘函数存在安全漏洞。攻击者可借助特制的bmp文件利用该漏洞造成拒绝服务。·CVE-2021-3575描述：OpenJPEG是一款基于C语言的开源JPEG2000编码解码器。OpenJPEG 存在安全漏洞，攻击者可利用该漏洞通过color.c触发缓冲区溢出，以触发拒绝服务，并可能运行代码。2. 受影响的软件包·银河麒麟高级服务器操作系统 V10 SP2aarch64架构:openjpeg2、openjpeg2-devel、openjpeg2-helpx86_64架构:openjpeg2、openjpeg2-devel、openjpeg2-help3. 软件包修复版本·银河麒麟高级服务器操作系统 V10 SP2openjpeg2-2.3.1-9.ky10openjpeg2-devel-2.3.1-9.ky10openjpeg2-help-2.3.1-9.ky104. 修复方法方法一：配置源进行升级安装1. 打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP2aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2. 配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3. 升级完成后是否需要重启服务或操作系统：·CVE-2019-12973：无需重启操作系统与服务即可使漏洞修复生效。·CVE-2021-3575：无需重启操作系统与服务即可使漏洞修复生效。5. 软件包下载地址·银河麒麟高级服务器操作系统 V10 SP2openjpeg2（aarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/openjpeg2-2.3.1-9.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/openjpeg2-devel-2.3.1-9.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/openjpeg2-help-2.3.1-9.ky10.noarch.rpmopenjpeg2（x86_64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/openjpeg2-2.3.1-9.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/openjpeg2-devel-2.3.1-9.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/openjpeg2-help-2.3.1-9.ky10.noarch.rpm注：其他相关依赖包请到相同目录下载6. 修复验证使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。sudo rpm -qa | grep Packagename

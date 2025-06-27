@@ -1,0 +1,51 @@
+Name:KYSA-202003-0001
+Severity:重要
+Summary:kernel安全漏洞
+Published:2024-03-15
+URL:/support/loophole/patch/5442.html
+Title:
+			公告ID：KYSA-202003-0001
+公告摘要：kernel安全漏洞
+等级：重要
+发布日期：2024-03-15
+		
+1. 修复的CVE
+CVE-2020-8835
+Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel中存在安全漏洞，攻击者可利用该漏洞在系统上执行任意代码。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+linux-headers、linux-image、linux-modules
+arm64 架构：
+linux-headers、linux-image、linux-modules
+mips64el 架构：
+linux-headers、linux-image、linux-modules
+loongarch64 架构：
+linux-headers、linux-image、linux-modules
+sw64架构：
+linux-headers、linux-image、linux-modules
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1-2107 受影响
+         影响范围：5.4.18-35.21<=linux<=5.4.18-38.26（修复版本：5.4.18-38.26cve）
+·银河麒麟桌面操作系统V10 SP1-2203 受影响
+         影响范围：5.4.18-53.42<=linux<=5.4.18-55.44（修复版本：5.4.18-53.42cve（amd64架构，arm64架构））
+         影响范围：5.4.18-53.42<=linux<=5.4.18-55.44（修复版本：5.4.18-55.44cve（loongarch64架构））
+·银河麒麟桌面操作系统V10 SP1-2303 受影响
+         影响范围：5.4.18-85.74<=linux<=5.4.18-91.80（修复版本：5.4.18-91.80cve）
+         影响范围：linux=5.4.18-100.89b1（修复版本：5.4.18-100.89cve9）
+
+4. 修复方法
+方法一：下载软件包进行升级安装
+通过附件软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+下载地址详见附件
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

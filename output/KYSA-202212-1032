@@ -1,0 +1,63 @@
+Name:KYSA-202212-1032
+Severity:重要
+Summary:libproxy安全漏洞
+Published:2022-12-23
+URL:/support/loophole/patch/2481.html
+Title:
+			公告ID：KYSA-202212-1032
+公告摘要：libproxy安全漏洞
+等级：Important
+发布日期：2022-12-23
+		
+1.修复的CVE
+·CVE-2020-25219
+描述：libproxy是个人开发者的一个提供自动配置代理的库。libproxy 0.4.x 到0.4.15版本中存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2020-26154
+描述：libproxy是个人开发者的一个提供自动配置代理的库。libproxy 0.4.15版本存在缓冲区错误漏洞，该漏洞源于urls .cpp很容易发生缓冲区溢出，这从一个没有内容长度头的大PAC文件就可以看出。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+libproxy、libproxy-devel、libproxy-help、libproxy-webkitgtk4、python2-libproxy、python3-libproxy
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+libproxy-0.4.15-18.a.ky10或以上版本
+libproxy-devel-0.4.15-18.a.ky10或以上版本
+libproxy-help-0.4.15-18.a.ky10或以上版本
+libproxy-webkitgtk4-0.4.15-18.a.ky10或以上版本
+python2-libproxy-0.4.15-18.a.ky10或以上版本
+python3-libproxy-0.4.15-18.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-25219:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-26154:需要重启 libproxy 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+libproxy(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/libproxy-0.4.15-18.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/libproxy-devel-0.4.15-18.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/libproxy-help-0.4.15-18.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/libproxy-webkitgtk4-0.4.15-18.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/python2-libproxy-0.4.15-18.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/python3-libproxy-0.4.15-18.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

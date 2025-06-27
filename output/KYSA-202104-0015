@@ -1,0 +1,13 @@
+Name:KYSA-202104-0015
+Severity:中等
+Summary:libcaca安全漏洞
+Published:2021-04-30
+URL:/support/loophole/patch/450.html
+Title:
+			摘要：libcaca安全漏洞
+安全等级：中等
+公告ID：KYSA-202104-0015
+发布日期：2021-04-30
+影响CVE：CVE-2021-3410
+		
+1. 修复的CVE信息CVE-2021-3410libcaca是开源的一个软件库。可将图像转换为彩色ASCII艺术品。libcaca v0.99.beta19 存在缓冲区错误漏洞，该漏洞源于libcaca caca canvas.c中的caca resize函数中的缓冲区溢出问题可能导致在用户上下文中执行任意代码。2. 受影响的软件包银河麒麟桌面操作系统V10 SP1caca-utilslibcaca-devlibcaca03. 影响的操作系统银河麒麟桌面操作系统V10 SP14. 修复版本软件包：libcaca0.99.beta19-2.1kylin1.20.04.1(V10 SP1)5. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2-desktop main restricted universe multiverse4.0.2-sp1桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10.1专业版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级。$sudo apt update方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists6. 软件包下载地址银河麒麟桌面操作系统V10 SP1X86下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libc/libcaca/caca-utils_0.99.beta19-2.1kylin1.20.04.1_amd64.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libc/libcaca/libcaca-dev_0.99.beta19-2.1kylin1.20.04.1_amd64.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libc/libcaca/libcaca0_0.99.beta19-2.1kylin1.20.04.1_amd64.deb 

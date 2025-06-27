@@ -1,0 +1,101 @@
+Name:KYSA-202104-1226
+Severity:重要
+Summary:kernel安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/3811.html
+Title:
+			公告ID：KYSA-202104-1226
+公告摘要：kernel安全漏洞
+等级：Important
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2016-9806
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。NFSv4 implementation是其中的一个分布式文件系统协议。Linux kernel 4.6.2及之前的版本中的net/netlink/af_netlink.c文件的‘netlink_dump’函数存在竞争条件漏洞。本地攻击者可借助特制的应用程序利用该漏洞造成拒绝服务（双重释放）。
+·CVE-2019-6974
+描述：在Linux内核的KVM hypervisor实现其设备控制API的方式中发现了一个释放后使用漏洞。当通过kvm_ioctl_create_device（）创建设备时，该设备保存对VM对象的引用，稍后该引用被传输到调用方的文件描述符表。如果要关闭这样的文件描述符，对VM对象的引用计数可能会变为零，这可能会导致释放后的使用问题。用户/进程可以利用此缺陷使来宾虚拟机崩溃，从而导致拒绝服务问题，或者可能获得对系统的特权访问。
+·CVE-2020-10711
+描述：在Linux内核的SELinux子系统中发现一个空指针取消引用缺陷。通过“ebitmap_netlbl_import”例程将商业IP安全选项（CIPSO）协议的类别位图导入到SELinux可扩展位图时，会出现此漏洞。在“CIPSO v4_parsetag_rbm”例程中处理CIPSO restricted bitmap标记时，它设置安全属性以指示类别位图存在，即使尚未分配。此问题导致在将同一类别位图导入SELinux时出现空指针取消引用问题。此漏洞允许远程网络用户使系统内核崩溃，从而导致拒绝服务。
+·CVE-2020-12351
+描述：Linux内核的蓝牙实现使用A2MP（备用MAC-PHY管理器协议）CID（通道标识符）处理L2CAP（逻辑链路控制和适配协议）数据包的方式中发现了一个缺陷。此漏洞允许相邻范围内的远程攻击者通过发送巧尽心思构建的L2CAP数据包使系统崩溃，从而导致拒绝服务或可能在系统上执行任意代码。此漏洞的最大威胁是数据机密性和完整性以及系统可用性。
+·CVE-2020-12352
+描述：Linux内核的蓝牙堆栈实现在处理某些AMP（备用MAC-PHY管理器协议）包时处理堆栈内存初始化的方式中发现了一个信息泄漏漏洞。此漏洞允许相邻范围内的远程攻击者通过发送巧尽心思构建的AMP数据包泄漏系统上的一小部分堆栈内存。此漏洞的最大威胁是数据机密性。
+·CVE-2020-12888
+描述：在Linux内核中发现了一个缺陷，该漏洞允许用户空间进程（例如来宾虚拟机）通过其VFIO驱动模块直接访问h/w设备。VFIO模块允许用户启用或禁用对设备的MMIO内存地址空间的访问。如果用户试图在读/写设备的MMIO地址空间被禁用时访问它，一些h/w设备会向CPU发出一个中断来指示严重的错误情况，从而导致系统崩溃。此漏洞允许来宾用户或进程崩溃主机系统，从而导致拒绝服务。
+·CVE-2020-8647
+描述：在Linux内核的虚拟控制台调整大小功能中发现了一个缺陷。具有虚拟控制台本地访问权限的攻击者可以使用虚拟控制台调整代码来收集内核内部数据结构。
+·CVE-2020-8649
+描述：当本地攻击者试图调整控制台大小时，在VGA控制台上的反转视频代码的Linux内核实现中发现了一个缺陷。可能发生越界读取，从而将信息泄漏到控制台.
+·CVE-2020-9383
+描述：在Linux内核的软盘驱动程序模块中发现了一个越界（OOB）内存访问缺陷。边界检查失败使本地攻击者能够访问越界内存，从而导致系统崩溃或内部内核信息泄漏。此漏洞的最大威胁是系统可用性。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+bpftool、kernel、kernel-devel、kernel-tools、kernel-tools-devel、perf、python2-perf、python3-perf
+·x86_64架构:
+bpftool、kernel、kernel-devel、kernel-tools、kernel-tools-devel、perf、python2-perf、python3-perf
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+bpftool-4.19.90-21.2.1或以上版本
+kernel-4.19.90-21.2.1或以上版本
+kernel-devel-4.19.90-21.2.1或以上版本
+kernel-tools-4.19.90-21.2.1或以上版本
+kernel-tools-devel-4.19.90-21.2.1或以上版本
+perf-4.19.90-21.2.1或以上版本
+python2-perf-4.19.90-21.2.1或以上版本
+python3-perf-4.19.90-21.2.1或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2016-9806:需要重启操作系统以使漏洞修复生效。
+CVE-2019-6974:需要重启 kernel 以使漏洞修复生效。
+CVE-2020-10711:需要重启操作系统以使漏洞修复生效。
+CVE-2020-12351:需要重启 kernel 以使漏洞修复生效。
+CVE-2020-12352:需要重启 kernel 以使漏洞修复生效。
+CVE-2020-12888:需要重启 kernel 以使漏洞修复生效。
+CVE-2020-8647:需要重启操作系统以使漏洞修复生效。
+CVE-2020-8649:需要重启操作系统以使漏洞修复生效。
+CVE-2020-9383:需要重启 kernel 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10
+
+kernel(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/bpftool-4.19.90-21.2.1.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/kernel-4.19.90-21.2.1.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/kernel-devel-4.19.90-21.2.1.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/kernel-tools-4.19.90-21.2.1.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/kernel-tools-devel-4.19.90-21.2.1.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/perf-4.19.90-21.2.1.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/python2-perf-4.19.90-21.2.1.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/python3-perf-4.19.90-21.2.1.aarch64.rpm
+
+kernel(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/bpftool-4.19.90-21.2.1.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/kernel-4.19.90-21.2.1.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/kernel-devel-4.19.90-21.2.1.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/kernel-tools-4.19.90-21.2.1.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/kernel-tools-devel-4.19.90-21.2.1.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/perf-4.19.90-21.2.1.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/python2-perf-4.19.90-21.2.1.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/python3-perf-4.19.90-21.2.1.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

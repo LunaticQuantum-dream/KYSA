@@ -1,0 +1,140 @@
+Name:KYSA-202209-1001
+Severity:中等
+Summary:ipa安全漏洞
+Published:2022-09-06
+URL:/support/loophole/patch/4130.html
+Title:
+			公告ID：KYSA-202209-1001
+公告摘要：ipa安全漏洞
+等级：Moderate
+发布日期：2022-09-06
+		
+1.修复的CVE
+·CVE-2015-9251
+描述：jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。jQuery 3.0.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。
+·CVE-2019-11358
+描述：jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。jQuery 3.4.0之前版本中存在跨站脚本漏洞，该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。
+·CVE-2020-25719
+描述：在作为 AD域控制器的Samba实现基于Kerberos名称的身份验证的方式中发现了一个缺陷。如果Samba AD DC不严格要求Kerberos PAC并始终使用其中找到的 SID，则它可能无法分辨凭证所代表的用户。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+ipa-client、ipa-client-common、ipa-common、ipa-python-compat、ipa-server、ipa-server-common、ipa-server-dns、ipa-server-trust-ad、python2-ipaclient、python2-ipalib、python2-ipaserver
+·x86_64架构:
+ipa-client、ipa-client-common、ipa-common、ipa-python-compat、ipa-server、ipa-server-common、ipa-server-dns、ipa-server-trust-ad、python2-ipaclient、python2-ipalib、python2-ipaserver
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+ipa-client、ipa-client-common、ipa-common、ipa-python-compat、ipa-server、ipa-server-common、ipa-server-dns、ipa-server-trust-ad、python2-ipaclient、python2-ipalib、python2-ipaserver
+·x86_64架构:
+ipa-client、ipa-client-common、ipa-common、ipa-python-compat、ipa-server、ipa-server-common、ipa-server-dns、ipa-server-trust-ad、python2-ipaclient、python2-ipalib、python2-ipaserver
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+ipa-client-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-client-common-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-common-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-python-compat-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-server-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-server-common-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-server-dns-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-server-trust-ad-4.6.8-5.el7_9.10.ns7.01或以上版本
+python2-ipaclient-4.6.8-5.el7_9.10.ns7.01或以上版本
+python2-ipalib-4.6.8-5.el7_9.10.ns7.01或以上版本
+python2-ipaserver-4.6.8-5.el7_9.10.ns7.01或以上版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+ipa-client-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-client-common-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-common-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-python-compat-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-server-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-server-common-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-server-dns-4.6.8-5.el7_9.10.ns7.01或以上版本
+ipa-server-trust-ad-4.6.8-5.el7_9.10.ns7.01或以上版本
+python2-ipaclient-4.6.8-5.el7_9.10.ns7.01或以上版本
+python2-ipalib-4.6.8-5.el7_9.10.ns7.01或以上版本
+python2-ipaserver-4.6.8-5.el7_9.10.ns7.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2015-9251:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-11358:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-25719:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+ipa(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/ipa-client-4.6.8-5.el7_9.10.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/ipa-client-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/ipa-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/ipa-python-compat-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/ipa-server-4.6.8-5.el7_9.10.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/ipa-server-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/ipa-server-dns-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/ipa-server-trust-ad-4.6.8-5.el7_9.10.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/python2-ipaclient-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/python2-ipalib-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/python2-ipaserver-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+
+ipa(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/ipa-client-4.6.8-5.el7_9.10.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/ipa-client-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/ipa-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/ipa-python-compat-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/ipa-server-4.6.8-5.el7_9.10.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/ipa-server-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/ipa-server-dns-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/ipa-server-trust-ad-4.6.8-5.el7_9.10.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/python2-ipaclient-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/python2-ipalib-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/python2-ipaserver-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+ipa(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/ipa-client-4.6.8-5.el7_9.10.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/ipa-client-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/ipa-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/ipa-python-compat-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/ipa-server-4.6.8-5.el7_9.10.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/ipa-server-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/ipa-server-dns-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/ipa-server-trust-ad-4.6.8-5.el7_9.10.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/python2-ipaclient-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/python2-ipalib-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/python2-ipaserver-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+
+ipa(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/ipa-client-4.6.8-5.el7_9.10.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/ipa-client-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/ipa-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/ipa-python-compat-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/ipa-server-4.6.8-5.el7_9.10.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/ipa-server-common-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/ipa-server-dns-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/ipa-server-trust-ad-4.6.8-5.el7_9.10.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/python2-ipaclient-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/python2-ipalib-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/python2-ipaserver-4.6.8-5.el7_9.10.ns7.01.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

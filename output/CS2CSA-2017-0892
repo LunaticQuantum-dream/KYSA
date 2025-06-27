@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-0892
+Severity:重要
+Summary:内核安全和漏洞修复更新
+Published:2017-04-11
+URL:/support/loophole/patch/55.html
+Title:
+			摘要：             内核安全和漏洞修复更新
+安全等级：          重要
+公告ID：           CS2CSA-2017-0892
+产品：             中标麒麟高级服务器操作系统
+发布日期：          2017-04-11
+CVE：          CVE-2016-7910，CVE-2017-2636
+		
+1. 概述：中标麒麟高级服务器操作系统V6有kernel可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。3. 描述：此次升级包含内核及其他相关组件包。4. 安全加固：*N_HLDC内核驱动存在一个漏洞，该驱动代码中的tbuf数据结构会导致发生多重释放内存的错误。本地的无特权用户能够通过tty设备进行设置HDLC相关策略的时候，利用这个漏洞来提升该用户的权限。（CVE-2017-2636，重要）*在Linux内核在执行seq_file相关代码的时候存在一个漏洞，本地攻击者可以在调用put()函数指针时操控内存，这可能导致与内存相关的错误发生或者提升该用户的权限。（CVE-2016-7910，中等）5. 缺陷修复：*修复Chelsio固件相关。 （CBZ#1433865）*在NUMA架构上，当多个并发进程尝试读取/proc/stat文件时，会触发过多的自旋锁，并消耗大量的CPU资源。该缺陷已经被修复。（CBZ#1428106）6. 安装包列表：中标麒麟高级服务器操作系统V6：源码包：kernel-2.6.32-696.1.1.el6.src.rpmx86_64：kernel-2.6.32-696.1.1.el6.x86_64.rpmkernel-debug-2.6.32-696.1.1.el6.x86_64.rpmkernel-debug-debuginfo-2.6.32-696.1.1.el6.i686.rpmkernel-debug-debuginfo-2.6.32-696.1.1.el6.x86_64.rpmkernel-debug-devel-2.6.32-696.1.1.el6.i686.rpmkernel-debug-devel-2.6.32-696.1.1.el6.x86_64.rpmkernel-debuginfo-2.6.32-696.1.1.el6.i686.rpmkernel-debuginfo-2.6.32-696.1.1.el6.x86_64.rpmkernel-debuginfo-common-i686-2.6.32-696.1.1.el6.i686.rpmkernel-debuginfo-common-x86_64-2.6.32-696.1.1.el6.x86_64.rpmkernel-devel-2.6.32-696.1.1.el6.x86_64.rpmkernel-headers-2.6.32-696.1.1.el6.x86_64.rpm			

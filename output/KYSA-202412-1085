@@ -1,0 +1,57 @@
+Name:KYSA-202412-1085
+Severity:重要
+Summary:pam安全漏洞
+Published:2024-12-10
+URL:/support/loophole/patch/6939.html
+Title:
+			公告ID：KYSA-202412-1085
+公告摘要：pam安全漏洞
+等级：重要
+发布日期：2024-12-10
+		
+1.修复的漏洞
+·CVE-2024-10963
+描述：在 pam_access 中发现了一个漏洞，某些配置文件中的规则被错误地当作主机名处理。此漏洞允许攻击者伪装成受信任的主机名，从而获得未授权的访问权限。这个问题对依赖该功能来控制谁可以访问特定服务或终端的系统构成风险。
+·CVE-2024-22365
+描述：在Linux PAM中发现一个漏洞。未在相应的装载命名空间（~/tmp作为多实例化目录装载）中的非特权=用户可以在那里放置FIFO，随后尝试以该用户的身份登录（配置了pam_namespace）将导致protect_dir（）中的openat（）阻止尝试，导致本地拒绝服务。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+pam-help、pam-devel、pam
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+pam-help-1.4.0-1.p09.a.ky10或以上版本
+pam-1.4.0-1.p09.a.ky10或以上版本
+pam-devel-1.4.0-1.p09.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2024-10963:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-22365:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+pam(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/pam-devel-1.4.0-1.p09.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/pam-1.4.0-1.p09.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/pam-help-1.4.0-1.p09.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

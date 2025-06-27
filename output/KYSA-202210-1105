@@ -1,0 +1,54 @@
+Name:KYSA-202210-1105
+Severity:重要
+Summary:tcl安全漏洞
+Published:2022-10-20
+URL:/support/loophole/patch/2074.html
+Title:
+			公告ID：KYSA-202210-1105
+公告摘要：tcl安全漏洞
+等级：Important
+发布日期：2022-10-20
+		
+1.修复的CVE
+·CVE-2021-35331
+描述：Tcl是一个免费可用的开源包。提供了一个强大的平台，用于创建将各种应用程序、协议、设备和框架联系在一起的集成应用程序。Tcl 8.6.11版本存在格式化字符串错误漏洞，该漏洞源于程序的nmakehlp.c中的格式字符串漏洞可能允许通过crated文件执行代码。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+tcl、tcl-devel、tcl-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+tcl-8.6.10-4.a.ky10或以上版本
+tcl-devel-8.6.10-4.a.ky10或以上版本
+tcl-help-8.6.10-4.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-35331:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+tcl(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/tcl-8.6.10-4.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/tcl-devel-8.6.10-4.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/tcl-help-8.6.10-4.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

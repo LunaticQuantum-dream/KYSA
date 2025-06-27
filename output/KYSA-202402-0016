@@ -1,0 +1,65 @@
+Name:KYSA-202402-0016
+Severity:重要
+Summary:ujson安全漏洞
+Published:2024-09-18
+URL:/support/loophole/patch/6223.html
+Title:
+			公告ID：KYSA-202402-0016
+公告摘要：ujson安全漏洞
+等级：重要
+发布日期：2024-09-18
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2403版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2021-45958
+UltraJSON是开源的一个JSON 编码器和解码器，用纯 C 语言编写，并绑定了 Python 3.7+。UltraJSON（又名 ujson）4.0.2 到 5.0.0 中存在缓冲区错误漏洞，该漏洞源于在 Buffer_AppendIndentUnchecked（从编码调用）中有一个基于堆栈的缓冲区溢出。
+CVE-2022-31116
+UltraJSON是开源的一个JSON 编码器和解码器，用纯 C 语言编写，并绑定了 Python 3.7+。UltraJSON 5.4.0之前版本存在安全漏洞，该漏洞源于无法正确解码某些字符，允许字典中潜在的键混淆和值覆盖。
+CVE-2022-31117
+UltraJSON是开源的一个JSON 编码器和解码器，用纯 C 语言编写，并绑定了 Python 3.7+。UltraJSON 5.4.0之前版本存在资源管理错误漏洞，该漏洞源于为字符串解码重新分配缓冲区时发生错误，可能导致缓冲区被释放两次。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2403
+x86_64 架构：
+python3-ujson
+arm64 架构：
+python3-ujson
+mips64el 架构：
+python3-ujson
+loongarch64 架构：
+python3-ujson
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2403
+1.35-4kylin0.1+esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install python3-ujson
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2403
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/u/ujson/python3-ujson_1.35-4kylin0.1%2Besm1_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/u/ujson/python3-ujson_1.35-4kylin0.1%2Besm1_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/u/ujson/python3-ujson_1.35-4kylin0.1%2Besm1_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/u/ujson/python3-ujson_1.35-4kylin0.1%2Besm1_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2403版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

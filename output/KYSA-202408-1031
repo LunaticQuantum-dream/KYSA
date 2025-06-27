@@ -1,0 +1,127 @@
+Name:KYSA-202408-1031
+Severity:中等
+Summary:binutils安全漏洞
+Published:2024-08-13
+URL:/support/loophole/patch/6042.html
+Title:
+			公告ID：KYSA-202408-1031
+公告摘要：binutils安全漏洞
+等级：中等
+发布日期：2024-08-13
+		
+1.修复的漏洞
+·CVE-2022-48064
+描述：GNU Binutils（GNU Binary Utilities或binutils）是美国GNU社区的开发的一组编程语言工具程序。该程序主要用于处理多种格式的目标文件，并提供有连接器、汇编器和其他用于目标文件和档案的工具。
+GNU Binutils 存在安全漏洞，该漏洞源于dwarf2.c 中的函数 bfd_dwarf2_find_nearest_line_with_alt 包含内存消耗过多漏洞。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+binutils、binutils-devel、binutils-help
+·x86_64架构:
+binutils、binutils-devel、binutils-help
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+binutils、binutils-help、binutils-devel
+·x86_64架构:
+binutils、binutils-help、binutils-devel
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+binutils、binutils-devel、binutils-help
+·x86_64架构:
+binutils、binutils-help、binutils-devel
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+binutils、binutils-devel、binutils-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+binutils-devel-2.34-19.p03.ky10或以上版本
+binutils-help-2.34-19.p03.ky10或以上版本
+binutils-2.34-19.p03.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+binutils-devel-2.34-19.p03.ky10或以上版本
+binutils-help-2.34-19.p03.ky10或以上版本
+binutils-2.34-19.p03.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+binutils-devel-2.34-19.p03.ky10或以上版本
+binutils-help-2.34-19.p03.ky10或以上版本
+binutils-2.34-19.p03.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+binutils-devel-2.34-19.p03.ky10或以上版本
+binutils-help-2.34-19.p03.ky10或以上版本
+binutils-2.34-19.p03.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-48064:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+binutils(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/binutils-2.34-19.p03.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/binutils-devel-2.34-19.p03.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/binutils-help-2.34-19.p03.ky10.aarch64.rpm
+
+binutils(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/binutils-2.34-19.p03.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/binutils-devel-2.34-19.p03.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/binutils-help-2.34-19.p03.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+binutils(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/binutils-devel-2.34-19.p03.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/binutils-help-2.34-19.p03.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/binutils-2.34-19.p03.ky10.aarch64.rpm
+
+binutils(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/binutils-2.34-19.p03.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/binutils-help-2.34-19.p03.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/binutils-devel-2.34-19.p03.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+binutils(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/binutils-devel-2.34-19.p03.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/binutils-2.34-19.p03.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/binutils-help-2.34-19.p03.ky10.aarch64.rpm
+
+binutils(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/binutils-2.34-19.p03.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/binutils-help-2.34-19.p03.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/binutils-devel-2.34-19.p03.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+binutils(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/binutils-2.34-19.p03.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/binutils-devel-2.34-19.p03.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/binutils-help-2.34-19.p03.ky10.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

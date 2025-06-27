@@ -1,0 +1,71 @@
+Name:KYSA-202403-0021
+Severity:重要
+Summary:puma安全漏洞
+Published:2024-10-16
+URL:/support/loophole/patch/6423.html
+Title:
+			公告ID：KYSA-202403-0021
+公告摘要：puma安全漏洞
+等级：重要
+发布日期：2024-10-16
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2403版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2024-21647
+Puma是一款针对高并发应用的Web服务器。Puma 6.4.2之前版本存在环境问题漏洞，该漏洞源于puma在解析分块传输编码体时存在安全漏洞，从而允许HTTP请求走私。
+CVE-2020-11076
+Puma是一款针对高并发应用的Web服务器。Puma (RubyGem) 4.3.4之前版本和3.12.5之前版本中存在环境问题漏洞。攻击者可借助无效的transfer-encoding标头利用该漏洞实施HTTP走私攻击。
+CVE-2023-40175
+Puma是美国一款针对高并发应用的Web服务器。Puma存在环境问题漏洞，该漏洞源于在解析分块传输编码主体中的尾随字段和零长度Content-Length标头时存在安全问题。受影响的产品和版本：Puma 6.3.1之前版本，5.6.7之前版本。
+CVE-2020-11077
+Puma是一款针对高并发应用的Web服务器。Puma (RubyGem) 4.3.5之前版本和3.12.6之前版本中存在环境问题漏洞。攻击者可利用该漏洞实施HTTP走私攻击。
+CVE-2022-23634
+Puma是一款针对高并发应用的Web服务器。Puma 存在信息泄露漏洞，该漏洞源于在puma版本5.6.2之前，puma可能并不总是在响应体上调用close，在版本7.0.2.2之前，Rails依赖于关闭响应体，以便其“CurrentAttributes”实现正确工作。这两种行为(Puma不关闭主体+ Rails的Executor实现)的结合会导致信息泄漏。
+CVE-2022-24790
+Puma是一款针对高并发应用的Web服务器。Puma 存在环境问题漏洞，该漏洞源于当在未正确验证传入 HTTP 请求是否符合 RFC7230 标准的代理后面使用 Puma 时，Puma 和前端代理可能会在请求开始和结束的位置上存在分歧。 这将允许通过前端代理将请求走私到 Puma。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2403
+x86_64 架构：
+puma
+arm64 架构：
+puma
+mips64el 架构：
+puma
+loongarch64 架构：
+puma
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2403
+3.12.4-1kylin2+esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install puma
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2403
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/puma/puma_3.12.4-1kylin2%2Besm1_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/puma/puma_3.12.4-1kylin2%2Besm1_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/puma/puma_3.12.4-1kylin2%2Besm1_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/p/puma/puma_3.12.4-1kylin2%2Besm1_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2403版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-7187
+Severity:中等
+Summary:Linux kernel 安全漏洞
+Published:2017-03-16
+URL:/support/loophole/patch/158.html
+Title:
+			摘要：             Linux kernel 安全漏洞
+安全等级：          中等
+公告ID：           CS2CSA-2017-7187
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-03-16
+CVE：             CVE-2017-7187 CVSS3评分：5.5
+		
+1. 概述：中标麒麟高级服务器操作系统V7有 Linux kernel 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：Linux内核中的驱动程序/scsi/sg.c 中的sg_ioctl 函数允许本地用户在SG_NEXT_CMD_LEN ioctl调用中通过较大的命令大小导致拒绝服务（基于堆栈的缓冲区溢出）或可能具有未指定的其他影响，导致sg_write函数中的越界写入访问。4. 安装包列表：中标麒麟高级服务器操作系统V7：源代码包：kernel-3.10.0-693.el7.src.rpmx86_64二进制包：kernel-3.10.0-693.el7.x86_64.rpm    kernel-abi-whitelists-3.10.0-693.el7.noarch.rpm kernel-debug-3.10.0-693.el7.x86_64.rpm  kernel-debug-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-debug-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-debug-devel-3.10.0-693.el7.x86_64.rpm    kernel-debuginfo-3.10.0-693.el7.x86_64.rpm  kernel-debuginfo-3.10.0-693.el7.x86_64.rpm  kernel-debuginfo-common-x86_64-3.10.0-693.el7.x86_64.rpm    kernel-debuginfo-common-x86_64-3.10.0-693.el7.x86_64.rpm    kernel-devel-3.10.0-693.el7.x86_64.rpm  kernel-doc-3.10.0-693.el7.noarch.rpm    kernel-headers-3.10.0-693.el7.x86_64.rpm    kernel-tools-3.10.0-693.el7.x86_64.rpm  kernel-tools-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-tools-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-tools-libs-3.10.0-693.el7.x86_64.rpm kernel-tools-libs-devel-3.10.0-693.el7.x86_64.rpm   perf-3.10.0-693.el7.x86_64.rpm  perf-debuginfo-3.10.0-693.el7.x86_64.rpm    perf-debuginfo-3.10.0-693.el7.x86_64.rpm    python-perf-3.10.0-693.el7.x86_64.rpm   python-perf-debuginfo-3.10.0-693.el7.x86_64.rpm python-perf-debuginfo-3.10.0-693.el7.x86_64.rpm			

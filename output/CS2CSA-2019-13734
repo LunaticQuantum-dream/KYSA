@@ -1,0 +1,14 @@
+Name:CS2CSA-2019-13734
+Severity:重要
+Summary:sqlite:fts3:改进阴影表损坏检测
+Published:2020-01-05
+URL:/support/loophole/patch/216.html
+Title:
+			摘要：           sqlite:fts3:改进阴影表损坏检测
+安全等级：          重要
+公告ID：         CS2CSA-2019-13734
+产品：             中标麒麟高级服务器操作系统软件     
+发布日期：          2020-01-05
+CVE：           CVE-2019-13734
+		
+1. 概述：中标麒麟高级服务器操作系统软件V7有sqlit可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统软件V7-X86_64。3. 描述：79.0.3945.79之前版本的Google Chrome中的Out-bounds write-in-SQLite允许远程攻击者通过特制的HTML页面利用堆损坏进行攻击。

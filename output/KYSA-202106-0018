@@ -1,0 +1,58 @@
+Name:KYSA-202106-0018
+Severity:中等
+Summary:rpcbind安全漏洞
+Published:2023-01-03
+URL:/support/loophole/patch/2461.html
+Title:
+			公告ID：KYSA-202106-0018
+公告摘要：rpcbind安全漏洞
+等级：Moderate
+发布日期：2023-01-03
+		
+1. 修复的CVE
+CVE-2017-8779
+描述：NTIRPC是一个使用在Linux系统中的用于nfs-ganesha的运输的独立RPC库。LIBTIRPC是一个使用在Linux系统中的包含支持使用远程过程调用（RPC）API程序的库的软件包。rpcbind是一个使用在Linux系统中的将RPC程序编号转换为通用地址的服务器。 rpcbind、LIBTIRPC和NTIRPC中存在资源管理错误漏洞，该漏洞源于程序在为XDR字符串分配内存时，没有确定最大RPC数据的大小。攻击者可通过向111端口发送特制的UDP数据包利用该漏洞造成拒绝服务（内存消耗）。以下产品和版本受到影响：rpcbind 0.2.4及之前的版本；LIBTIRPC 1.0.1及之前的版本，1.0.2-rc版本至1.0.2-rc3版本；NTIRPC 1.4.3及之前的版本。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V4
+rpcbind 
+·银河麒麟桌面操作系统V10
+rpcbind 
+
+3. 软件包修复版本
+软件包：rpcbind
+0.2.3-0.2kord0.16.04.1+esm3k1（V4、V10）
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+
+5. 软件包下载地址
+麒麟操作系统V10桌面版、V4
+X86_64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/r/rpcbind/rpcbind_0.2.3-0.2kord0.16.04.1+esm3k1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/r/rpcbind/rpcbind_0.2.3-0.2kord0.16.04.1+esm3k1_arm64.deb
+
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

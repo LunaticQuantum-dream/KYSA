@@ -1,0 +1,114 @@
+Name:KYSA-202302-1117
+Severity:重要
+Summary:bind安全漏洞
+Published:2023-02-28
+URL:/support/loophole/patch/2842.html
+Title:
+			公告ID：KYSA-202302-1117
+公告摘要：bind安全漏洞
+等级：Important
+发布日期：2023-02-28
+		
+1.修复的CVE
+·CVE-2022-2795
+描述：ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 9.16.33之前版本、9.18.7之前的9.18.x版本、9.19.5之前的9.19.x版本存在安全漏洞，该漏洞源于解析器代码中的缺陷可能会导致命名在处理大型委托上花费过多的时间,攻击者通过利用此漏洞向目标解析器充斥查询，可以显着削弱解析器的性能，从而有效地拒绝合法客户端访问DNS解析服务。
+·CVE-2022-2881
+描述：ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 9.18.7之前的9.18.x版本、9.19.5之前的9.19.x版本存在安全漏洞，该漏洞源于重用HTTP连接从stats通道请求统计信息时，连续响应的内容长度可能会增长到超过分配缓冲区的末尾，可能会导致读取超出缓冲区的末尾并读取它不应该读取的内存，或者使进程崩溃。
+·CVE-2022-2906
+描述：ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 9.18.7之前的9.18.x版本、9.19.5之前的9.19.x版本存在安全漏洞，该漏洞源于OpenSSL 1.x和OpenSSL 3.0之间的更改暴露了命名中的一个缺陷，当在Diffie-Hellman模式下与OpenSSL 3.0.0及更高版本一起使用TKEY记录时，该缺陷会导致密钥处理中出现少量内存泄漏。攻击者可以利用此漏洞逐渐侵蚀可用内存，以至于命名的内存因缺乏资源而崩溃，重新启动后，攻击者将不得不重新开始，但仍有可能拒绝服务。
+·CVE-2022-38177
+描述：ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。ISC BIND 9.8.4版本至9.16.32版本存在安全漏洞，该漏洞源于使用格式错误的ECDSA签名，欺骗目标解析程序，导致内存因资源不足而崩溃。
+·CVE-2022-38178
+描述：ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。BIND存在安全漏洞，该漏洞源于使用格式错误的EdDSA签名，欺骗目标解析程序，导致内存因资源不足而崩溃。以下产品及版本受到影响：9.9.12版本至9.9.13版本、9.10.7版本至9.10.8版本、9.11.3版本至9.16.32版本、9.18.0版本至 9.18.6版本、9.19.0版本至9.19.4版本。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+bind、bind-chroot、bind-devel、bind-export-devel、bind-export-libs、bind-libs、bind-libs-lite、bind-pkcs11、bind-pkcs11-devel、bind-utils、python3-bind
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+bind、bind-chroot、bind-devel、bind-export-devel、bind-export-libs、bind-libs、bind-libs-lite、bind-pkcs11、bind-pkcs11-devel、bind-utils、python3-bind
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+bind-9.11.21-10.p01.a.ky10或以上版本
+bind-chroot-9.11.21-10.p01.a.ky10或以上版本
+bind-devel-9.11.21-10.p01.a.ky10或以上版本
+bind-export-devel-9.11.21-10.p01.a.ky10或以上版本
+bind-export-libs-9.11.21-10.p01.a.ky10或以上版本
+bind-libs-9.11.21-10.p01.a.ky10或以上版本
+bind-libs-lite-9.11.21-10.p01.a.ky10或以上版本
+bind-pkcs11-9.11.21-10.p01.a.ky10或以上版本
+bind-pkcs11-devel-9.11.21-10.p01.a.ky10或以上版本
+bind-utils-9.11.21-10.p01.a.ky10或以上版本
+python3-bind-9.11.21-10.p01.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+bind-9.11.21-10.p01.a.ky10或以上版本
+bind-chroot-9.11.21-10.p01.a.ky10或以上版本
+bind-devel-9.11.21-10.p01.a.ky10或以上版本
+bind-export-devel-9.11.21-10.p01.a.ky10或以上版本
+bind-export-libs-9.11.21-10.p01.a.ky10或以上版本
+bind-libs-9.11.21-10.p01.a.ky10或以上版本
+bind-libs-lite-9.11.21-10.p01.a.ky10或以上版本
+bind-pkcs11-9.11.21-10.p01.a.ky10或以上版本
+bind-pkcs11-devel-9.11.21-10.p01.a.ky10或以上版本
+bind-utils-9.11.21-10.p01.a.ky10或以上版本
+python3-bind-9.11.21-10.p01.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-2795:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-2881:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-2906:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-38177:需要重启 bind 以使漏洞修复生效。
+CVE-2022-38178:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+bind(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/bind-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/bind-chroot-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/bind-devel-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/bind-export-devel-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/bind-export-libs-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/bind-libs-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/bind-libs-lite-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/bind-pkcs11-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/bind-pkcs11-devel-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/bind-utils-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/python3-bind-9.11.21-10.p01.a.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+bind(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/bind-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/bind-chroot-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/bind-devel-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/bind-export-devel-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/bind-export-libs-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/bind-libs-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/bind-libs-lite-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/bind-pkcs11-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/bind-pkcs11-devel-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/bind-utils-9.11.21-10.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/python3-bind-9.11.21-10.p01.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

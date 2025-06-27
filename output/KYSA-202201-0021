@@ -1,0 +1,53 @@
+Name:KYSA-202201-0021
+Severity:中等
+Summary:ldns安全漏洞
+Published:2022-01-11
+URL:/support/loophole/patch/2515.html
+Title:
+			公告ID：KYSA-202201-0021
+公告摘要：ldns安全漏洞
+等级：中等
+发布日期：2022-01-11
+		
+1. 修复的CVE
+CVE-2020-19860
+NLnet Labs ldns是荷兰NLnet Labs（Nlnet Labs）基金会的一个便于DNS工具编程的DNS库。Nlnet Labs ldns 存在安全漏洞，该漏洞源于 ldns 1.7.1 版本验证区域文件时，ldns_rr_new_frm_str_internal 函数存在堆越界读取漏洞。 攻击者可以通过构建区域文件有效负载来泄漏堆上的信息。
+CVE-2020-19861
+NLnet Labs ldns是荷兰NLnet Labs（Nlnet Labs）基金会的一个便于DNS工具编程的DNS库。Nlnet Labs ldns 存在安全漏洞，该漏洞源于 ldns 在解析区域文件时，函数 ldns_nsec3_salt_data 对于从区域文件中获取的长度值来说过于信任。 复制memcpy时，可以复制0xfe - ldns_rdf_size(salt_rdf)字节数据，导致堆溢出信息泄露。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+ldnsutils、libldns1、python-ldns
+arm64 架构：
+ldnsutils、libldns1、python-ldns
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+1.6.17-8kord0.1+esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libldns1
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/l/ldns/ldnsutils_1.6.17-8kord0.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/l/ldns/libldns1_1.6.17-8kord0.1%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/l/ldns/python-ldns_1.6.17-8kord0.1%2Besm1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/l/ldns/ldnsutils_1.6.17-8kord0.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/l/ldns/libldns1_1.6.17-8kord0.1%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/l/ldns/python-ldns_1.6.17-8kord0.1%2Besm1_arm64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

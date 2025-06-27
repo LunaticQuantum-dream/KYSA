@@ -1,0 +1,102 @@
+Name:KYSA-202205-0032
+Severity:重要
+Summary:apport安全漏洞
+Published:2024-03-18
+URL:/support/loophole/patch/5452.html
+Title:
+			公告ID：KYSA-202205-0032
+公告摘要：apport安全漏洞
+等级：重要
+发布日期：2024-03-18
+		
+1. 修复的CVE
+CVE-2022-28652
+Canonical Apport是一款用于收集并反馈错误信息（当应用程序崩溃时操作系统认为有用的信息）的工具包。 Canonical Apport 存在资源管理错误漏洞，该漏洞源于应用程序在读取用户设置文件时没有正确控制内部资源的消耗。
+CVE-2022-28658
+Canonical Apport是一款用于收集并反馈错误信息（当应用程序崩溃时操作系统认为有用的信息）的工具包。 Canonical Apport 存在安全漏洞，该漏洞源于错误地处理了文件名参数空白。本地攻击者可能会利用该漏洞欺骗 Appport 守护程序的参数。
+CVE-2022-28655
+Canonical Apport是一款用于收集并反馈错误信息（当应用程序崩溃时操作系统认为有用的信息）的工具包。 Canonical Apport 存在安全特征问题漏洞，该漏洞源于没有过滤 D-Bus 连接字符串。本地攻击者可能会利用该漏洞导致 Appport 进行任意网络连接。
+CVE-2022-28654
+Canonical Apport是一款用于收集并反馈错误信息（当应用程序崩溃时操作系统认为有用的信息）的工具包。 Canonical Apport 存在安全漏洞，该漏洞源于没有限制来自 D-Bus 连接的日志记录数量。本地攻击者可能会利用该漏洞填充 Appport 日志文件，从而导致拒绝服务。
+CVE-2021-3899
+Canonical Apport是一款用于收集并反馈错误信息（当应用程序崩溃时操作系统认为有用的信息）的工具包。 Canonical Apport 存在竞争条件问题漏洞，该漏洞源于Apport错误地检测奔溃后可执行文件是否被替换。本地攻击者可能会利用该漏洞以 root 用户身份执行任意代码。
+CVE-2022-28657
+Canonical Apport是一款用于收集并反馈错误信息（当应用程序崩溃时操作系统认为有用的信息）的工具包。 Canonical Apport存在安全特征问题漏洞，该漏洞源于系统中Appport在更改root目录进入容器之前没有禁用 python 崩溃处理程序。本地攻击者可能会利用该漏洞执行任意代码。
+CVE-2022-28656
+Canonical Apport是一款用于收集并反馈错误信息（当应用程序崩溃时操作系统认为有用的信息）的工具包。 Canonical Apport 存在安全漏洞，该漏洞源于系统中Appport在 chroot 进入容器之前没有禁用 python 崩溃处理程序。本地攻击者可能会利用该漏洞执行任意代码。
+CVE-2022-1242
+Canonical Apport是一款用于收集并反馈错误信息（当应用程序崩溃时操作系统认为有用的信息）的工具包。 Canonical Apport 存在安全特征问题漏洞，该漏洞源于不正确地处理与容器内的 Apport 套接字的连接。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+apport-gtk、apport-kde、apport-noui、apport-retrace、apport-valgrind、apport、dh-apport、python3-apport、python3-problem-report
+arm64 架构：
+apport-gtk、apport-kde、apport-noui、apport-retrace、apport-valgrind、apport、dh-apport、python3-apport、python3-problem-report
+mips64el 架构：
+apport-gtk、apport-kde、apport-noui、apport-retrace、apport-valgrind、apport、dh-apport、python3-apport、python3-problem-report
+loongarch64 架构：
+apport-gtk、apport-kde、apport-noui、apport-retrace、apport-valgrind、apport、dh-apport、python3-apport、python3-problem-report
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+2.20.11-0kylin27.24
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install python3-apport
+$sudo apt install apport
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-gtk_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-kde_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-noui_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-retrace_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-valgrind_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/dh-apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/python3-apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/python3-problem-report_2.20.11-0kylin27.24_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-gtk_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-kde_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-noui_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-retrace_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-valgrind_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/dh-apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/python3-apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/python3-problem-report_2.20.11-0kylin27.24_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-gtk_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-kde_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-noui_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-retrace_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-valgrind_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/dh-apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/python3-apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/python3-problem-report_2.20.11-0kylin27.24_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-gtk_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-kde_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-noui_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-retrace_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport-valgrind_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/dh-apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/python3-apport_2.20.11-0kylin27.24_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/a/apport/python3-problem-report_2.20.11-0kylin27.24_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

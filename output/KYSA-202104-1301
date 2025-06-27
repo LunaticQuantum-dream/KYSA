@@ -1,0 +1,102 @@
+Name:KYSA-202104-1301
+Severity:中等
+Summary:qt安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/2154.html
+Title:
+			公告ID：KYSA-202104-1301
+公告摘要：qt安全漏洞
+等级：中等
+发布日期：2021-04-08
+		
+1.修复的漏洞
+·CVE-2018-19872
+描述：Digia Qt是芬兰Digia公司的一套跨平台的C++应用程序开发框架。该框架可用于开发GUI程序。Qt 5.11版本中存在除零错误漏洞。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+qt-qvfb、qt-devel、qt-demos、qt-postgresql、qt、qt-examples、qt-assistant、qt-qdbusviewer、qt-doc、qt-devel-private、qt-odbc、qt-x11、qt-mysql、qt-config
+·x86_64架构:
+qt-qvfb、qt-devel、qt-demos、qt-postgresql、qt、qt-examples、qt-config、qt-qdbusviewer、qt-doc、qt-devel-private、qt-odbc、qt-x11、qt-mysql、qt-assistant
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+qt-devel-4.8.7-8.el7或以上版本
+qt-doc-4.8.7-8.el7或以上版本
+qt-odbc-4.8.7-8.el7或以上版本
+qt-postgresql-4.8.7-8.el7或以上版本
+qt-examples-4.8.7-8.el7或以上版本
+qt-devel-private-4.8.7-8.el7或以上版本
+qt-qvfb-4.8.7-8.el7或以上版本
+qt-4.8.7-8.el7或以上版本
+qt-x11-4.8.7-8.el7或以上版本
+qt-assistant-4.8.7-8.el7或以上版本
+qt-demos-4.8.7-8.el7或以上版本
+qt-qdbusviewer-4.8.7-8.el7或以上版本
+qt-config-4.8.7-8.el7或以上版本
+qt-mysql-4.8.7-8.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2018-19872:需要重启 qt 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+qt(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-x11-4.8.7-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-qvfb-4.8.7-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-qdbusviewer-4.8.7-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-postgresql-4.8.7-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-odbc-4.8.7-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-mysql-4.8.7-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-examples-4.8.7-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-doc-4.8.7-8.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-devel-private-4.8.7-8.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-devel-4.8.7-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-demos-4.8.7-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-config-4.8.7-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-assistant-4.8.7-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt-4.8.7-8.el7.aarch64.rpm
+
+qt(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-x11-4.8.7-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-x11-4.8.7-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-qvfb-4.8.7-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-qdbusviewer-4.8.7-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-postgresql-4.8.7-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-postgresql-4.8.7-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-odbc-4.8.7-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-odbc-4.8.7-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-mysql-4.8.7-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-mysql-4.8.7-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-examples-4.8.7-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-examples-4.8.7-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-doc-4.8.7-8.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-devel-private-4.8.7-8.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-devel-4.8.7-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-devel-4.8.7-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-assistant-4.8.7-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-demos-4.8.7-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-4.8.7-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-config-4.8.7-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt-4.8.7-8.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

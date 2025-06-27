@@ -1,0 +1,13 @@
+Name:KYSA-202201-1040
+Severity:中等
+Summary:lapack漏洞
+Published:2022-01-27
+URL:/support/loophole/patch/846.html
+Title:
+			公告ID：KYSA-202201-1040
+公告摘要：lapack漏洞
+安全等级：Moderate
+发布日期：2022年01月27日
+影响CVE：CVE-2021-4048
+		
+1. 修复的CVECVE-2021-4048描述：Lapack是Lapack社区的一个用于数值线性代数的标准软件库。lapack 存在缓冲区错误漏洞，该漏洞源于 lapack 中的 CLARRV、DLARRV、SLARRV 和 ZLARRV 函数中发现了越界读取缺陷，OpenBLAS 也使用了这种缺陷。传递给这些函数的特制输入可能会导致使用 lapack 的应用程序崩溃或可能泄露部分内存 。2. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP1aarch64架构:lapack、lapack-devel、lapack-helpmips64el架构:lapack、lapack-devel、lapack-helpx86_64架构:lapack、lapack-devel、lapack-help3. 软件包修复版本银河麒麟高级服务器操作系统 V10 SP1lapack-3.9.0-4.ky10lapack-devel-3.9.0-4.ky10lapack-help-3.9.0-4.ky104. 修复方法方法一：配置源进行升级安装1. 打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP1aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/2. 配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3. 升级完成后是否需要重启服务或操作系统：CVE-2021-4048：无需重启操作系统与服务即可使漏洞修复生效。5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP1 lapack（aarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/lapack-3.9.0-4.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/lapack-devel-3.9.0-4.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/lapack-help-3.9.0-4.ky10.aarch64.rpm lapack（mips64el）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/lapack-3.9.0-4.ky10.mips64el.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/lapack-devel-3.9.0-4.ky10.mips64el.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/lapack-help-3.9.0-4.ky10.mips64el.rpm lapack（x86_64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/lapack-3.9.0-4.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/lapack-devel-3.9.0-4.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/lapack-help-3.9.0-4.ky10.x86_64.rpm 注：其他相关依赖包请到相同目录下载

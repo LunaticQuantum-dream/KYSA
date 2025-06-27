@@ -1,0 +1,79 @@
+Name:KYSA-202302-1080
+Severity:重要
+Summary:xorg-x11-server安全漏洞
+Published:2023-02-17
+URL:/support/loophole/patch/2775.html
+Title:
+			公告ID：KYSA-202302-1080
+公告摘要：xorg-x11-server安全漏洞
+等级：Important
+发布日期：2023-02-17
+		
+1.修复的CVE
+·CVE-2022-4283
+描述：在X.Org中发现一个漏洞。发生此安全漏洞是因为XkbCopyNames函数留下了一个指向已释放内存的悬空指针，导致后续XkbGetKbdByName请求访问内存超出限制。此问题可能导致X服务器运行特权的系统上的本地特权提升，并导致ssh X转发会话的远程代码执行。
+·CVE-2022-46340
+描述：在X.Org中发现一个漏洞。如果通过XTestFakeInput请求发送长度大于32字节的GenericEvents，则XTest扩展的XTestFakeInput请求的交换处理程序可能会破坏堆栈，因此会出现此安全缺陷。此问题可能导致X服务器运行特权的系统上的本地特权提升，并导致ssh X转发会话的远程代码执行。此问题不会影响客户端和服务器使用相同字节顺序的系统。
+·CVE-2022-46341
+描述：在X.Org中发现一个漏洞。出现此安全缺陷的原因是，当使用高键码或按钮代码调用XIPassiveUngrab请求的处理程序时，该处理程序访问了超出边界的内存。此问题可能导致X服务器运行特权的系统上的本地特权提升，并导致ssh X转发会话的远程代码执行。
+·CVE-2022-46342
+描述：在X.Org中发现一个漏洞。出现此安全缺陷是因为XvdiSelectVideoNotify请求的处理程序可能在释放请求后写入内存。
+·CVE-2022-46343
+描述：在X.Org中发现一个漏洞。出现此安全缺陷是因为ScreenSaverSetAttributes请求的处理程序在释放请求后可能会写入内存。此问题可能导致X服务器运行特权的系统上的本地特权提升，并导致ssh X转发会话的远程代码执行
+·CVE-2022-46344
+描述：在X.Org中发现一个漏洞。出现此安全缺陷是因为XIChangeProperty请求的处理程序存在长度验证问题，导致超出边界的内存读取和潜在的信息泄露。此问题可能导致X服务器运行特权的系统上的本地特权提升，并导致ssh X转发会话的远程代码执行
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10
+·mips64el架构:
+xorg-x11-server-Xdmx、xorg-x11-server-Xephyr、xorg-x11-server-Xnest、xorg-x11-server-Xorg、xorg-x11-server-Xvfb、xorg-x11-server-common、xorg-x11-server-devel、xorg-x11-server-source
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 (mips64el)
+xorg-x11-server-Xdmx-1.19.3-11.ns7_4.13或以上版本
+xorg-x11-server-Xephyr-1.19.3-11.ns7_4.13或以上版本
+xorg-x11-server-Xnest-1.19.3-11.ns7_4.13或以上版本
+xorg-x11-server-Xorg-1.19.3-11.ns7_4.13或以上版本
+xorg-x11-server-Xvfb-1.19.3-11.ns7_4.13或以上版本
+xorg-x11-server-common-1.19.3-11.ns7_4.13或以上版本
+xorg-x11-server-devel-1.19.3-11.ns7_4.13或以上版本
+xorg-x11-server-source-1.19.3-11.ns7_4.13或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10
+mips64el:http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-4283:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-46340:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-46341:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-46342:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-46343:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-46344:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10
+
+xorg-x11-server(mips64el)软件包下载地址:
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/xorg-x11-server-Xdmx-1.19.3-11.ns7_4.13.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/xorg-x11-server-Xephyr-1.19.3-11.ns7_4.13.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/xorg-x11-server-Xnest-1.19.3-11.ns7_4.13.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/xorg-x11-server-Xorg-1.19.3-11.ns7_4.13.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/xorg-x11-server-Xvfb-1.19.3-11.ns7_4.13.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/xorg-x11-server-common-1.19.3-11.ns7_4.13.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/xorg-x11-server-devel-1.19.3-11.ns7_4.13.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/xorg-x11-server-source-1.19.3-11.ns7_4.13.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

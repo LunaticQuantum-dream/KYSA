@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-17449
+Severity:中等
+Summary:Linux kernel 安全漏洞
+Published:2017-12-05
+URL:/support/loophole/patch/119.html
+Title:
+			摘要：             Linux kernel 安全漏洞
+安全等级：          中等
+公告ID：           CS2CSA-2017-17449
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-12-05
+CVE：             CVE-2017-17449 CVSS3评分：3.3
+		
+1. 概述：中标麒麟高级服务器操作系统V7有 Linux kernel 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：在Linux内核4.14.4中通过net/netlink/af_netlink.c 中的 __netlink_deliver_tap_skb函数，在启用CONFIG_NLMON时，不会将Netlink消息的观察限制在单个网络命名空间。这允许本地用户通过利用CAP_NET_ADMIN能力来嗅探系统上所有Netlink活动的nlmon接口来获得敏感信息。4. 安装包列表：中标麒麟高级服务器操作系统V7：源代码包：kernel-3.10.0-693.25.2.el7.src.rpm x86_64二进制包：kernel-3.10.0-693.25.2.el7.x86_64.rpm   kernel-abi-whitelists-3.10.0-693.25.2.el7.noarch.rpm    kernel-debug-3.10.0-693.25.2.el7.x86_64.rpm kernel-debug-debuginfo-3.10.0-693.25.2.el7.x86_64.rpm   kernel-debug-debuginfo-3.10.0-693.25.2.el7.x86_64.rpm   kernel-debug-devel-3.10.0-693.25.2.el7.x86_64.rpm   kernel-debuginfo-3.10.0-693.25.2.el7.x86_64.rpm kernel-debuginfo-3.10.0-693.25.2.el7.x86_64.rpm kernel-debuginfo-common-x86_64-3.10.0-693.25.2.el7.x86_64.rpm   kernel-debuginfo-common-x86_64-3.10.0-693.25.2.el7.x86_64.rpm   kernel-devel-3.10.0-693.25.2.el7.x86_64.rpm kernel-doc-3.10.0-693.25.2.el7.noarch.rpm   kernel-headers-3.10.0-693.25.2.el7.x86_64.rpm   kernel-tools-3.10.0-693.25.2.el7.x86_64.rpm kernel-tools-debuginfo-3.10.0-693.25.2.el7.x86_64.rpm   kernel-tools-debuginfo-3.10.0-693.25.2.el7.x86_64.rpm   kernel-tools-libs-3.10.0-693.25.2.el7.x86_64.rpm    kernel-tools-libs-devel-3.10.0-693.25.2.el7.x86_64.rpm  perf-3.10.0-693.25.2.el7.x86_64.rpm perf-debuginfo-3.10.0-693.25.2.el7.x86_64.rpm   perf-debuginfo-3.10.0-693.25.2.el7.x86_64.rpm   python-perf-3.10.0-693.25.2.el7.x86_64.rpm  python-perf-debuginfo-3.10.0-693.25.2.el7.x86_64.rpm    python-perf-debuginfo-3.10.0-693.25.2.el7.x86_64.rpm    			

@@ -1,0 +1,118 @@
+Name:KYSA-202205-0024
+Severity:中等
+Summary:libvirt安全漏洞
+Published:2024-03-11
+URL:/support/loophole/patch/5398.html
+Title:
+			公告ID：KYSA-202205-0024
+公告摘要：libvirt安全漏洞
+等级：中等
+发布日期：2024-03-11
+		
+1. 修复的CVE
+CVE-2021-3631
+Red Hat libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。 Red Hat libvirt 存在安全漏洞，攻击者可以通过libvirt绕过限制，以提升他在主机系统上的权限。
+CVE-2020-25637
+Red Hat libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。 Red Hat libvirt 资源管理错误漏洞。该漏洞源于网络系统或产品对系统资源（如内存、磁盘空间、文件等）的管理不当。
+CVE-2021-4147
+Red Hat libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。 Red Hat libvirt 存在安全漏洞，攻击者可利用该漏洞触发主机系统上的拒绝服务。
+CVE-2022-0897
+Red Hat libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。 libvirt nwfilter driver存在安全漏洞，该漏洞源于virNWFilterObjListNumOfNWFilters方法在迭代virNWFilterObj实例之前未能获取“driver->nwfilters”互斥锁，不能阻止另一个线程同时修改“driver->nwfilters”对象。攻击者利用该漏洞通过libvirt的API virConnectNumOfNWFilters使网络过滤器管理守护进程(libvirtd/virtnwfilterd)崩溃。
+CVE-2021-3975
+Red Hat libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。 Red Hat libvirt 存在资源管理错误漏洞，该漏洞源于 VM 关闭期间的分段错误会导致 vdsm 挂起。
+CVE-2021-3667
+Red Hat libvirt是一个用于实现Linux虚拟化功能的Linux API，它支持各种Hypervisor，包括Xen和KVM，以及QEMU和用于其他操作系统的一些虚拟产品。 在libvirt的virStoragePoolLookupByTargetPath API中发现不正确的锁定问题。连接到ACL权限有限的读写套接字的客户端可能会使用此漏洞获取锁并阻止其他用户访问存储池/卷API，从而导致拒绝服务的情况。此漏洞的最大威胁是系统可用性。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+libnss-libvirt、libvirt-clients、libvirt-daemon-driver-lxc、libvirt-daemon-driver-qemu、libvirt-daemon-driver-storage-gluster、libvirt-daemon-driver-storage-rbd、libvirt-daemon-driver-storage-zfs、libvirt-daemon-driver-vbox、libvirt-daemon-driver-xen、libvirt-daemon-system-systemd、libvirt-daemon-system-sysv、libvirt-daemon-system、libvirt-daemon、libvirt-sanlock、libvirt-wireshark、libvirt0
+arm64 架构：
+libnss-libvirt、libvirt-clients、libvirt-daemon-driver-lxc、libvirt-daemon-driver-qemu、libvirt-daemon-driver-storage-gluster、libvirt-daemon-driver-storage-rbd、libvirt-daemon-driver-storage-zfs、libvirt-daemon-driver-xen、libvirt-daemon-system-systemd、libvirt-daemon-system-sysv、libvirt-daemon-system、libvirt-daemon、libvirt-sanlock、libvirt-wireshark、libvirt0
+mips64el 架构：
+libnss-libvirt、libvirt-clients、libvirt-daemon-driver-lxc、libvirt-daemon-driver-qemu、libvirt-daemon-driver-storage-gluster、libvirt-daemon-system-systemd、libvirt-daemon-system-sysv、libvirt-daemon-system、libvirt-daemon、libvirt-sanlock、libvirt-wireshark、libvirt0
+loongarch64 架构：
+libnss-libvirt、libvirt-clients、libvirt-daemon-driver-lxc、libvirt-daemon-driver-qemu、libvirt-daemon-driver-storage-gluster、libvirt-daemon-driver-storage-rbd、libvirt-daemon-driver-storage-zfs、libvirt-daemon-system-systemd、libvirt-daemon-system-sysv、libvirt-daemon-system、libvirt-daemon、libvirt-sanlock、libvirt-wireshark、libvirt0
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+6.0.0-0kylin8.4k1.2
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libvirt0
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libnss-libvirt_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-clients_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-lxc_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-qemu_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-storage-gluster_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-storage-rbd_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-storage-zfs_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-vbox_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-xen_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system-systemd_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system-sysv_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-sanlock_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-wireshark_6.0.0-0kylin8.4k1.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt0_6.0.0-0kylin8.4k1.2_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libnss-libvirt_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-clients_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-lxc_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-qemu_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-storage-gluster_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-storage-rbd_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-storage-zfs_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-xen_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system-systemd_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system-sysv_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-sanlock_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-wireshark_6.0.0-0kylin8.4k1.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt0_6.0.0-0kylin8.4k1.2_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libnss-libvirt_6.0.0-0kylin8.4k1.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-clients_6.0.0-0kylin8.4k1.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-lxc_6.0.0-0kylin8.4k1.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-qemu_6.0.0-0kylin8.4k1.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-storage-gluster_6.0.0-0kylin8.4k1.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system-systemd_6.0.0-0kylin8.4k1.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system-sysv_6.0.0-0kylin8.4k1.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system_6.0.0-0kylin8.4k1.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon_6.0.0-0kylin8.4k1.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-sanlock_6.0.0-0kylin8.4k1.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-wireshark_6.0.0-0kylin8.4k1.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt0_6.0.0-0kylin8.4k1.2_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libnss-libvirt_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-clients_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-lxc_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-qemu_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-storage-gluster_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-storage-rbd_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-driver-storage-zfs_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system-systemd_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system-sysv_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon-system_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-daemon_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-sanlock_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt-wireshark_6.0.0-0kylin8.4k1.2_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libv/libvirt/libvirt0_6.0.0-0kylin8.4k1.2_loongarch64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

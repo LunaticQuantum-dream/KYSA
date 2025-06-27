@@ -1,0 +1,150 @@
+Name:KYSA-202104-1352
+Severity:重要
+Summary:qemu-kvm安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/5051.html
+Title:
+			公告ID：KYSA-202104-1352
+公告摘要：qemu-kvm安全漏洞
+等级：Important
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2016-1714
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 2.4之前版本的hw/nvram/fw_cfg.c文件中的‘fw_cfg_write’和‘fw_cfg_read’函数存在安全漏洞。当程序启用Firmware Configuration设备模拟支持时，拥有CAP_SYS_RAWIO权限的虚拟机端攻击者可借助硬件配置中无效的当前输入值，利用该漏洞造成拒绝服务（越边界读取或写入和进程崩溃），或执行任意代码。
+·CVE-2016-1981
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。基于e1000 NIC Emulation支持实现的QEMU中存在安全漏洞。攻击者可利用该漏洞造成QEMU实例崩溃，导致拒绝服务。
+·CVE-2016-2857
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU的net/checksum.c文件中的‘net_checksum_calculate’函数存在安全漏洞。攻击者可借助特制数据包中的负载长度利用该漏洞造成拒绝服务（越边界堆读取和崩溃）。
+·CVE-2016-3712
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。VGA是其中的一个用于连接液晶显示器的接口模块。QEMU的VGA模块中存在整数溢出漏洞。本地攻击者可通过在VBE模式中编辑VGA寄存器利用该漏洞造成拒绝服务（越边界读取和QEMU进程崩溃）。
+·CVE-2016-4020
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU的hw/i386/kvmvapic.c文件中的‘patch_instruction’函数存在安全漏洞，该漏洞源于程序没有初始化imm32变量。本地攻击者可通过访问Task Priorty Register (TPR)利用该漏洞获取主机栈内存中的敏感信息。
+·CVE-2016-5126
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU的block/iscsi.c文件中的‘iscsi_aio_ioctl’函数存在基于堆的缓冲区溢出漏洞。本地攻击者可借助特制的iSCSI asynchronous I/O ioctl调用利用该漏洞造成拒绝服务（QEMU进程崩溃）或执行任意代码。
+·CVE-2016-5403
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中的hw/virtio/virtio.c文件中的‘virtqueue_pop’函数存在安全漏洞。本地攻击者可借助提交请求利用该漏洞造成拒绝服务（内存消耗和QEMU进程崩溃）。
+·CVE-2016-9603
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。基于Cirrus CLGD 54xx VGA模拟器支持实现的QEMU 2.9之前版本中存在基于堆的缓冲区溢出漏洞。远程攻击者可利用该漏洞造成QEMU进程崩溃并可能在主机上以QEMU进程的权限执行任意代码。
+·CVE-2017-10664
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中的qemu-nbd存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（守护进程崩溃）。
+·CVE-2017-13672
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。基于VGA display虚拟机支持实现的QEMU中存在安全漏洞。本地攻击者可利用该漏洞造成拒绝服务（越边界读取和QEMU进程崩溃）。
+·CVE-2017-13711
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）软件开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中的slirp/socket.c文件的‘sofree’函数存在资源管理错误漏洞。攻击者可利用该漏洞造成拒绝服务（QEMU进程崩溃）。
+·CVE-2017-14167
+描述：QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）软件开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中的hw/i386/multiboot.c文件的‘load_multiboot’函数存在输入验证错误漏洞。本地攻击者可利用该漏洞在主机上执行任意代码（越边界写入）。
+·CVE-2017-15124
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 2.14.3之前的版本中的VNC server实现存在安全漏洞，该漏洞源于程序没有限制发送到客户端上帧缓存区更新。攻击者可利用该漏洞造成拒绝服务。
+·CVE-2017-15268
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 2.10.0及之前的版本中存在安全漏洞。远程攻击者可利用该漏洞造成内存泄露。
+·CVE-2017-15289
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中的hw/display/cirrus_vga.c文件的mode4and5写入函数存在安全漏洞。本地攻击者可利用该漏洞造成拒绝服务（越边界写入权限和QEMU进程崩溃）。
+·CVE-2017-2615
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU（基于Cirrus CLGD 54xx VGA emulator支持实现）中的hw/display/cirrus_vga.c文件存在远程代码执行漏洞。攻击者可利用该漏洞造成拒绝服务（QEMU进程崩溃）并可能以QEMU进程的权限执行任意代码。
+·CVE-2017-2620
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中存在远程代码执行漏洞。攻击者可利用该漏洞在受影响应用程序的上下文中执行任意代码，造成拒绝服务。
+·CVE-2017-2633
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中存在拒绝服务漏洞。攻击者可利用该漏洞造成拒绝服务（Qemu进程崩溃）。
+·CVE-2017-5898
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。基于CCID Card设备模拟器支持实现的QEMU中的usb/dev-smartcard-reader.c文件的‘emulated_apdu_from_guest’函数存在整数溢出漏洞。本地攻击者可借助较大的Application Protocol Data Units (APDU)单元利用该漏洞造成拒绝服务（应用程序崩溃）。
+·CVE-2017-7718
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中的hw/display/cirrus_vga_rop.h文件存在安全漏洞。本地攻击者可‘cirrus_bitblt_rop_fwd_transp_’和‘cirrus_bitblt_rop_fwd_’函数利用该漏洞造成拒绝服务（越边界读取和QEMU进程崩溃）。
+·CVE-2017-9524
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。Network Block Device（NBD，网络磁盘设备）Server是一套开源的网络存储软件。该软件能够创建基于Linux平台的网络存储系统。基于NBD Server支持实现的QEMU中的qemu-nbd server存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（段错误和服务器崩溃）。
+·CVE-2018-11806
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中的slirp/mbuf.c文件中的m_cat存在基于堆的缓冲区溢出漏洞，该漏洞源于程序没有正确的检测用户提交数据的长度，导致复制数据的大小超过了基于堆的固定长度缓冲区。远程攻击者可借助传入的数据包利用该漏洞执行任意代码。
+·CVE-2018-3639
+描述：AMD、ARM和Intel CPUs等都是不通厂商的CPU（中央处理器）产品。
+AMD、ARM和Intel CPUs存在信息泄露漏洞。攻击者可通过实施边信道攻击利用该漏洞获取信息。
+·CVE-2018-5683
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中的‘vga_draw_text’函数存在安全漏洞。本地攻击者可利用该漏洞造成拒绝服务（越边界读取和QEMU进程崩溃）。
+·CVE-2018-7550
+描述：QEMU（又名Quick Emulator）是法国程序员法布里斯-贝拉（Fabrice Bellard）所研发的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU中的hw/i386/multiboot.c文件的‘load_multiboot’函数存在安全漏洞。本地攻击者可借助大于mh_bss_end_addr的mh_load_end_addr值利用该漏洞在QEMU主机上执行任意代码。
+·CVE-2018-7858
+描述：快速仿真器（又名QEMU）与Cirrus CLGD 54xx VGA仿真器支持一起构建时，允许本地来宾OS特权用户通过更新VGA时利用错误的区域计算来导致拒绝服务（越界访问和QEMU进程崩溃） 显示。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·x86_64架构:
+qemu-img、qemu-kvm、qemu-kvm-common、qemu-kvm-tools
+·银河麒麟高级服务器操作系统 V10
+·x86_64架构:
+qemu-img、qemu-kvm、qemu-kvm-common、qemu-kvm-tools
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (x86_64)
+qemu-img-1.5.3-160.el7或以上版本
+qemu-kvm-1.5.3-160.el7或以上版本
+qemu-kvm-common-1.5.3-160.el7或以上版本
+qemu-kvm-tools-1.5.3-160.el7或以上版本
+·银河麒麟高级服务器操作系统 V10 (x86_64)
+qemu-img-1.5.3-160.el7或以上版本
+qemu-kvm-1.5.3-160.el7或以上版本
+qemu-kvm-common-1.5.3-160.el7或以上版本
+qemu-kvm-tools-1.5.3-160.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+银河麒麟高级服务器操作系统 V10
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2016-1714:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2016-1981:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2016-2857:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2016-3712:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2016-4020:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2016-5126:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2016-5403:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2016-9603:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-10664:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-13672:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-13711:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-14167:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-15124:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2017-15268:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-15289:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-2615:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-2620:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-2633:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-5898:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-7718:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2017-9524:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2018-11806:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-3639:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-5683:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2018-7550:需要重启 qemu-kvm 以使漏洞修复生效。
+CVE-2018-7858:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+qemu-kvm(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/qemu-img-1.5.3-160.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/qemu-kvm-1.5.3-160.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/qemu-kvm-common-1.5.3-160.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/qemu-kvm-tools-1.5.3-160.el7.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+qemu-kvm(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/qemu-img-1.5.3-160.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/qemu-kvm-1.5.3-160.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/qemu-kvm-common-1.5.3-160.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/qemu-kvm-tools-1.5.3-160.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

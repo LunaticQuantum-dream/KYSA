@@ -1,0 +1,140 @@
+Name:KYSA-202203-1034
+Severity:严重
+Summary:samba安全漏洞
+Published:2022-03-11
+URL:/support/loophole/patch/4240.html
+Title:
+			公告ID：KYSA-202203-1034
+公告摘要：samba安全漏洞
+等级：Critical
+发布日期：2022-03-11
+		
+1.修复的CVE
+·CVE-2016-2124
+描述：Samba是用于 Linux 和 Unix 的标准 Windows 互操作性程序套件。Samba存在访问控制错误漏洞，目前暂无该漏洞信息。
+·CVE-2018-10858
+描述：samba客户机处理目录列表中的超长文件名时发现堆缓冲区溢出。恶意的samba服务器可以利用此漏洞在samba客户端上导致任意代码执行。
+·CVE-2018-1139
+描述：在samba允许使用弱NTLMv1身份验证的方式中发现了一个缺陷，即使NTLMv1被显式禁用。中间人攻击者可以利用此漏洞读取在samba服务器和客户端之间传递的凭证和其他详细信息。
+·CVE-2019-10197
+描述：Samba是Samba团队的一套可使UNIX系列的操作系统与微软Windows操作系统的SMB/CIFS网络协议做连结的自由软件。该软件支持共享打印机、互相传输资料文件等。Samba 4.9.13之前的4.9.x版本、4.10.8之前的4.10.x版本和4.11.0rc3之前的4.11.x版本中存在安全漏洞。攻击者可利用该漏洞访问共享目录之外的内容。
+·CVE-2019-10218
+描述：在客户机提供的samba服务器路径中发现了恶意漏洞。这将允许客户端访问SMB网络路径名之外的文件和文件夹。攻击者可以利用此漏洞使用客户端用户的权限在当前工作目录之外创建文件.
+·CVE-2019-14907
+描述：所有samba版本4.9.18之前的4.9.x版本、4.10.12之前的4.10.x版本和4.11.5之前的4.11.x版本都存在一个问题，如果设置为"；log level=3"；（或更高版本），则在字符转换失败后，从客户端获取的字符串将被打印。在NTLMSSP身份验证交换期间可以提供这样的字符串。特别是在sambaaddc中，这可能会导致一个长期存在的进程（例如RPC服务器）终止。（在文件服务器的情况下，最有可能的目标smbd按每个客户端的进程运行，因此崩溃是无害的）。
+·CVE-2019-3880
+描述：在samba实现模拟Windows注册表服务API的RPC端点的方式中发现了一个缺陷。未经授权的攻击者可以利用此漏洞在其拥有unix权限的任何位置创建新的注册表配置单元文件，这可能导致在Samba共享中创建新文件。
+·CVE-2020-10730
+描述：在4.10.17之前、4.11.11之前和4.12.4之前的版本的Samba AD LDAP服务器中发现空指针取消引用或释放后可能使用漏洞。尽管Enterprise Linux附带的某些Samba版本不支持AD模式下的Samba，但受影响的代码是随libldb包附带的。此漏洞允许经过身份验证的用户在释放或空指针取消引用后可能触发使用。此漏洞的最大威胁是系统可用性。
+·CVE-2020-14318
+描述：Samba是Samba团队的一套可使UNIX系列的操作系统与微软Windows操作系统的SMB/CIFS网络协议做连结的自由软件。该软件支持共享打印机、互相传输资料文件等。Samba存在安全漏洞。通过身份验证的攻击者可以利用这个漏洞来访问某些文件和directorv信息。
+·CVE-2020-14323
+描述：Samba是Samba团队的一套可使UNIX系列的操作系统与微软Windows操作系统的SMB/CIFS网络协议做连结的自由软件。该软件支持共享打印机、互相传输资料文件等。Samba 存在安全漏洞，该漏洞源于一个空指针解引用缺陷。本地用户可以利用这个缺陷来崩溃winbind服务，从而导致拒绝服务。以下产品及版本受到影响：samba Winbind服务4.11.15之前版本，4.12.9之前版本和4.13.1之前版本。
+·CVE-2020-1472
+描述：Microsoft Windows Netlogon是美国微软（Microsoft）的Windows的一个重要组件，主要功能是用户和机器在域内网络上的认证，以及复制数据库以进行域控备份，同时还用于维护域成员与域之间、域与域控之间、域DC与跨域DC之间的关系。Microsoft Windows NetLogon中存在安全漏洞。攻击者可借助特制应用程序利用该漏洞获取管理员访问权限。以下产品及版本受到影响：Microsoft Windows Server 2008 R2 SP1，Windows Server 2012，Windows Server 2012 R2，Windows Server 2016，Windows Server 2019，Windows Server 1903版本，Windows Server 1909版本，Windows Server 2004版本。
+·CVE-2020-25717
+描述：此缺陷能够使samba的AD域用户在被查找失败的情况下被映射为本地的同名用户，此本地用户的权限可能比AD域用户高，由此导致AD域用户获得提权。此漏洞带来的最大威胁是对系统机密性和完整性的威胁。
+·CVE-2021-20254
+描述：Samba是Samba团队的一套可使UNIX系列的操作系统与微软Windows操作系统的SMB/CIFS网络协议做连结的自由软件。该软件支持共享打印机、互相传输资料文件等。Samba 存在缓冲区错误漏洞，该漏洞源于在将Windows组标识(sid)映射到unix组标识(gid)时存在边界条件，这导致在Samba服务器进程令牌中创建负面的idmap缓存项 。
+·CVE-2021-44142
+描述：Samba是用于 Linux 和 Unix 的标准 Windows 互操作性程序套件。
+Samba 存在安全漏洞，该漏洞源于在将用户提供的数据复制到固定长度的基于堆的缓冲区之前缺乏对长度的正确验证。攻击者可以利用此漏洞在 root 环境中执行代码。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10
+·mips64el架构:
+ctdb、ctdb-tests、libsmbclient、libsmbclient-devel、libwbclient、libwbclient-devel、samba、samba-client、samba-client-libs、samba-common、samba-common-libs、samba-common-tools、samba-dc、samba-dc-libs、samba-devel、samba-krb5-printing、samba-libs、samba-pidl、samba-python、samba-python-test、samba-test、samba-test-libs、samba-winbind、samba-winbind-clients、samba-winbind-krb5-locator、samba-winbind-modules
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 (mips64el)
+ctdb-4.10.16-18.ns7_4.01或以上版本
+ctdb-tests-4.10.16-18.ns7_4.01或以上版本
+libsmbclient-4.10.16-18.ns7_4.01或以上版本
+libsmbclient-devel-4.10.16-18.ns7_4.01或以上版本
+libwbclient-4.10.16-18.ns7_4.01或以上版本
+libwbclient-devel-4.10.16-18.ns7_4.01或以上版本
+samba-4.10.16-18.ns7_4.01或以上版本
+samba-client-4.10.16-18.ns7_4.01或以上版本
+samba-client-libs-4.10.16-18.ns7_4.01或以上版本
+samba-common-4.10.16-18.ns7_4.01或以上版本
+samba-common-libs-4.10.16-18.ns7_4.01或以上版本
+samba-common-tools-4.10.16-18.ns7_4.01或以上版本
+samba-dc-4.10.16-18.ns7_4.01或以上版本
+samba-dc-libs-4.10.16-18.ns7_4.01或以上版本
+samba-devel-4.10.16-18.ns7_4.01或以上版本
+samba-krb5-printing-4.10.16-18.ns7_4.01或以上版本
+samba-libs-4.10.16-18.ns7_4.01或以上版本
+samba-pidl-4.10.16-18.ns7_4.01或以上版本
+samba-python-4.10.16-18.ns7_4.01或以上版本
+samba-python-test-4.10.16-18.ns7_4.01或以上版本
+samba-test-4.10.16-18.ns7_4.01或以上版本
+samba-test-libs-4.10.16-18.ns7_4.01或以上版本
+samba-winbind-4.10.16-18.ns7_4.01或以上版本
+samba-winbind-clients-4.10.16-18.ns7_4.01或以上版本
+samba-winbind-krb5-locator-4.10.16-18.ns7_4.01或以上版本
+samba-winbind-modules-4.10.16-18.ns7_4.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10
+mips64el:http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2016-2124:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-10858:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-1139:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-10197:需要重启 samba 以使漏洞修复生效。
+CVE-2019-10218:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-14907:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-3880:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-10730:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-14318:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-14323:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-1472:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-25717:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-20254:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-44142:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10
+
+samba(mips64el)软件包下载地址:
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/ctdb-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/ctdb-tests-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/libsmbclient-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/libsmbclient-devel-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/libwbclient-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/libwbclient-devel-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-client-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-client-libs-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-common-4.10.16-18.ns7_4.01.noarch.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-common-libs-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-common-tools-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-dc-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-dc-libs-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-devel-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-krb5-printing-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-libs-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-pidl-4.10.16-18.ns7_4.01.noarch.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-python-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-python-test-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-test-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-test-libs-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-winbind-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-winbind-clients-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-winbind-krb5-locator-4.10.16-18.ns7_4.01.mips64el.rpm
+http://download.cs2c.com.cn/neokylin/server/updates/v10/ls_64/Packages/samba-winbind-modules-4.10.16-18.ns7_4.01.mips64el.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

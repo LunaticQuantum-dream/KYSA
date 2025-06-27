@@ -1,0 +1,13 @@
+Name:KYSA-202205-1010
+Severity:中等
+Summary:gdm安全漏洞
+Published:2022-05-10
+URL:/support/loophole/patch/1128.html
+Title:
+			公告ID：KYSA-202205-1010
+公告摘要：gdm安全漏洞
+安全等级：Moderate
+发布日期：2022年05月10日
+影响CVE：CVE-2019-3825
+		
+1. 修复的CVE·CVE-2019-3825描述：GNOME Display Manager（GDM）是一款显示管理器。gdm 3.31.4之前版本中存在安全漏洞。攻击者可通过选择定时登录用户利用该漏洞绕过锁屏界面，获得登录用户会话的访问权限。2. 受影响的软件包·银河麒麟高级服务器操作系统 V10 SP1aarch64架构:gdm、gdm-develmips64el架构:gdm、gdm-develx86_64架构:gdm、gdm-devel·银河麒麟高级服务器操作系统 V10 SP2aarch64架构:gdm、gdm-develx86_64架构:gdm、gdm-devel3. 软件包修复版本·银河麒麟高级服务器操作系统 V10 SP1gdm-3.30.1-10.p01.ky10gdm-devel-3.30.1-10.p01.ky10·银河麒麟高级服务器操作系统 V10 SP2gdm-3.30.1-10.p01.ky10gdm-devel-3.30.1-10.p01.ky104. 修复方法方法一：配置源进行升级安装1. 打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP1aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/银河麒麟高级服务器操作系统 V10 SP2aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2. 配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3. 升级完成后是否需要重启服务或操作系统：·CVE-2019-3825：需要重启 gdm 以使漏洞修复生效。5. 软件包下载地址·银河麒麟高级服务器操作系统 V10 SP1 gdm（aarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/gdm-3.30.1-10.p01.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/gdm-devel-3.30.1-10.p01.ky10.aarch64.rpm gdm（mips64el）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/gdm-3.30.1-10.p01.ky10.mips64el.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/gdm-devel-3.30.1-10.p01.ky10.mips64el.rpm gdm（x86_64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/gdm-3.30.1-10.p01.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/gdm-devel-3.30.1-10.p01.ky10.x86_64.rpm ·银河麒麟高级服务器操作系统 V10 SP2 gdm（aarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/gdm-3.30.1-10.p01.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/gdm-devel-3.30.1-10.p01.ky10.aarch64.rpm gdm（x86_64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/gdm-3.30.1-10.p01.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/gdm-devel-3.30.1-10.p01.ky10.x86_64.rpm 注：其他相关依赖包请到相同目录下载6. 修复验证使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。sudo rpm -qa | grep Packagename

@@ -1,0 +1,15 @@
+Name:CS2CSA-2019-9792
+Severity:严重
+Summary:Mozilla Firefox和Firefox ESR 安全漏洞
+Published:2019-03-20
+URL:/support/loophole/patch/207.html
+Title:
+			摘要：             Mozilla Firefox和Firefox ESR 安全漏洞
+安全等级：          严重
+公告ID：         CS2CSA-2019-9792
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2019-03-20
+CVE：            CVE-2019-9792 CVE-2019-9790 CVE-2019-9791 
+                      CVE-2019-9788      CVSS3评分：8.8
+		
+1. 概述：中标麒麟高级服务器操作系统V6有Mozilla Firefox和Firefox ESR可用的更新。中标麒麟高级服务器操作系统V7有Mozilla Firefox和Firefox ESR 可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：Mozilla Firefox和Firefox ESR都是美国Mozilla基金会的产品。Mozilla Firefox是一款开源Web浏览器。Firefox ESR是Firefox(Web浏览器)的一个延长支持版本。Mozilla Firefox 66之前版本和Firefox ESR 60.6之前版本中存在安全漏洞。远程攻击者可通过诱使用户访问特制的网站利用该漏洞造成拒绝服务（内存损坏和崩溃）。Mozilla Firefox 66之前版本和Firefox ESR 60.6之前版本中存在安全漏洞。远程攻击者可利用该漏洞任意读取和写入对象。Mozilla Firefox 66之前版本和Firefox ESR 60.6之前版本中存在释放后重用漏洞。远程攻击者可利用该漏洞执行任意代码或造成拒绝服务（崩溃）。Mozilla Firefox 65版本和Firefox ESR 60.5版本中存在安全漏洞。远程攻击者可利用该漏洞造成内存损坏或可能执行任意代码			

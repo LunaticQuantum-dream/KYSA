@@ -1,0 +1,73 @@
+Name:KYSA-202312-1042
+Severity:中等
+Summary:glibc安全漏洞
+Published:2023-12-19
+URL:/support/loophole/patch/5403.html
+Title:
+			公告ID：KYSA-202312-1042
+公告摘要：glibc安全漏洞
+等级：Moderate
+发布日期：2023-12-19
+		
+1.修复的CVE
+·CVE-2023-5156
+描述：GNU C Library（glibc，libc6）是一种按照LGPL许可协议发布的开源免费的C语言编译程序。
+GNU C存在安全漏洞，该漏洞源于存在内存泄露漏洞。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·mips64el架构:
+glibc、glibc-all-langpacks、glibc-benchtests、glibc-common、glibc-debugutils、glibc-devel、glibc-help、glibc-locale-source、glibc-nss-devel、libnsl、nscd、nss_modules
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (mips64el)
+glibc-2.28-36.p05.ky10或以上版本
+glibc-all-langpacks-2.28-36.p05.ky10或以上版本
+glibc-benchtests-2.28-36.p05.ky10或以上版本
+glibc-common-2.28-36.p05.ky10或以上版本
+glibc-debugutils-2.28-36.p05.ky10或以上版本
+glibc-devel-2.28-36.p05.ky10或以上版本
+glibc-help-2.28-36.p05.ky10或以上版本
+glibc-locale-source-2.28-36.p05.ky10或以上版本
+glibc-nss-devel-2.28-36.p05.ky10或以上版本
+libnsl-2.28-36.p05.ky10或以上版本
+nscd-2.28-36.p05.ky10或以上版本
+nss_modules-2.28-36.p05.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-5156:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+glibc(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/glibc-2.28-36.p05.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/glibc-all-langpacks-2.28-36.p05.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/glibc-benchtests-2.28-36.p05.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/glibc-common-2.28-36.p05.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/glibc-debugutils-2.28-36.p05.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/glibc-devel-2.28-36.p05.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/glibc-help-2.28-36.p05.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/glibc-locale-source-2.28-36.p05.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/glibc-nss-devel-2.28-36.p05.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libnsl-2.28-36.p05.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/nscd-2.28-36.p05.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/nss_modules-2.28-36.p05.ky10.mips64el.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

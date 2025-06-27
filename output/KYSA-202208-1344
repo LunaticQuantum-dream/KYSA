@@ -1,0 +1,56 @@
+Name:KYSA-202208-1344
+Severity:中等
+Summary:关于 libjpeg-turbo 的补丁包公告
+Published:2022-08-23
+URL:/support/loophole/patch/1734.html
+Title:
+			 的补丁包公告ID：KYSA-202208-1344
+ 的补丁包公告摘要：libjpeg-turbo 安全漏洞
+等级：Moderate
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2021-46822
+描述：libjpeg是一款用于处理JPEG格式图像数据的C语言库。该产品包括JPEG解码、JPEG编码和其他JPEG功能。libjpeg-turbo是libjpeg的一个优化改进版本。libjpeg-turbo 2.0.90版本及之前版本存在缓冲区错误漏洞，该漏洞源于通过 rdppm.c 中的 get_word_rgb_row 函数发现存在缓冲区溢出漏洞。
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+aarch64架构:
+libjpeg-turbo、libjpeg-turbo-devel、libjpeg-turbo-help
+x86_64架构:
+libjpeg-turbo、libjpeg-turbo-devel、libjpeg-turbo-help
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2
+libjpeg-turbo-2.0.5-2.ky10
+libjpeg-turbo-devel-2.0.5-2.ky10
+libjpeg-turbo-help-2.0.5-2.ky10
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+·CVE-2021-46822：无需重启操作系统与服务即可使漏洞修复生效。
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+libjpeg-turbo（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libjpeg-turbo-2.0.5-2.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libjpeg-turbo-devel-2.0.5-2.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libjpeg-turbo-help-2.0.5-2.ky10.noarch.rpm
+
+libjpeg-turbo（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libjpeg-turbo-2.0.5-2.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libjpeg-turbo-devel-2.0.5-2.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libjpeg-turbo-help-2.0.5-2.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

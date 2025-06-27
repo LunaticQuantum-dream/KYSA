@@ -1,0 +1,106 @@
+Name:KYSA-202106-1001
+Severity:中等
+Summary:wireshark安全漏洞
+Published:2021-06-01
+URL:/support/loophole/patch/3683.html
+Title:
+			公告ID：KYSA-202106-1001
+公告摘要：wireshark安全漏洞
+等级：Moderate
+发布日期：2021-06-01
+		
+1.修复的CVE
+·CVE-2019-13619
+描述：在Wireshark 中，ASN.1 BER解剖器和相关解剖器可能会崩溃。这在epan/asn1.c中通过适当限制缓冲区增量来解决。
+·CVE-2019-19553
+描述： Wireshark（前称Ethereal）是Wireshark团队的一套网络数据包分析软件。该软件的功能是截取网络数据包，并显示出详细的数据以供分析。 Wireshark 3.0.0版本至3.0.6版本和2.6.0版本至2.6.12版本中存在安全漏洞。攻击者可利用该漏洞造成CMS解析器崩溃。
+·CVE-2020-11647
+描述：Wireshark（前称Ethereal）是Wireshark团队的一套网络数据包分析软件。该软件的功能是截取网络数据包，并显示出详细的数据以供分析。BACapp dissector是其中的一个BACapp解析器。Wireshark 3.2.0至3.2.2版本、3.0.0至3.0.9版本和2.6.0至2.6.15版本中的BACapp dissector存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。
+·CVE-2020-9428
+描述：在Wireshark 3.2.0至3.2.1、3.0.0至3.0.8和2.6.0至2.6.14中，EAP解剖器可能会崩溃。这在epan/dissectors/packet eap.c中通过使用更仔细的sscanf解析来解决。
+·CVE-2020-9431
+描述：在LTE RRC剖析器的Wireshark中发现内存泄漏。此问题允许攻击者通过在导线上注入特殊数据包或说服受害用户打开格式错误的数据包跟踪文件来触发该漏洞。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+wireshark、wireshark-devel、wireshark-help
+·mips64el架构:
+wireshark、wireshark-devel、wireshark-help
+·x86_64架构:
+wireshark、wireshark-devel、wireshark-help
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+wireshark、wireshark-devel、wireshark-help
+·x86_64架构:
+wireshark、wireshark-devel、wireshark-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、mips64el、x86_64)
+wireshark-2.6.2-18.ky10或以上版本
+wireshark-devel-2.6.2-18.ky10或以上版本
+wireshark-help-2.6.2-18.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+wireshark-2.6.2-18.ky10或以上版本
+wireshark-devel-2.6.2-18.ky10或以上版本
+wireshark-help-2.6.2-18.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/base/mips64el/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2019-13619:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2019-19553:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-11647:需要重启 wireshark 以使漏洞修复生效。
+CVE-2020-9428:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-9431:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+wireshark(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/wireshark-2.6.2-18.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/wireshark-devel-2.6.2-18.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/wireshark-help-2.6.2-18.ky10.aarch64.rpm
+
+wireshark(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/base/mips64el/Packages/wireshark-2.6.2-18.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/base/mips64el/Packages/wireshark-devel-2.6.2-18.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/base/mips64el/Packages/wireshark-help-2.6.2-18.ky10.mips64el.rpm
+
+wireshark(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/wireshark-2.6.2-18.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/wireshark-devel-2.6.2-18.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/wireshark-help-2.6.2-18.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+wireshark(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/wireshark-2.6.2-18.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/wireshark-devel-2.6.2-18.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/wireshark-help-2.6.2-18.ky10.aarch64.rpm
+
+wireshark(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/wireshark-2.6.2-18.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/wireshark-devel-2.6.2-18.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/wireshark-help-2.6.2-18.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

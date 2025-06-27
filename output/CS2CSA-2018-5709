@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-5709
+Severity:中等
+Summary:MIT Kerberos 5 安全漏洞
+Published:2018-01-15
+URL:/support/loophole/patch/104.html
+Title:
+			摘要：             MIT Kerberos 5 安全漏洞
+安全等级：          中等
+公告ID：           CS2CSA-2018-5709
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-01-15
+CVE：             CVE-2018-5709 CVSS3评分：6.3
+		
+1. 概述：中标麒麟高级服务器操作系统V6、V7不受该漏洞影响。2. 描述：在MIT Kerberos 5（aka krb5）中发现了一个问题，到1.16。在 kadmin/dbutil/dump.c中有一个变量"dbentry->n_key_data"它可以存储16位数据，但在不知不觉中，开发人员为它分配了一个“u4”变量，这是32位数据。攻击者可以使用此漏洞来影响数据库的其他工件，因为我们知道Kerberos数据库转储文件包含可信数据。			

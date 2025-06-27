@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-0680
+Severity:中等
+Summary:glibc安全，漏洞修复，增强更新
+Published:2017-03-21
+URL:/support/loophole/patch/54.html
+Title:
+			摘要：                  glibc安全，漏洞修复，增强更新
+安全等级： 中等
+公告ID：             CS2CSA-2017-0680
+产品：                  中标麒麟高级服务器操作系统
+发布日期：          2017-03-21
+CVE：         CVE-2014-9761 ，CVE-2015-8776 ，CVE-2015-8778 ， CVE-2015-8779
+		
+1. 概述：中标麒麟高级服务器操作系统V6有glibc可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。3. 描述：在系统上glibc包提供了标准C库(libc)，POSIX线程库(libpthread)，标准的数学库(libm)，名称服务缓存守护进程(nscd)等多进程。如果没有这些库，Linux系统不能正常工作。4. 安全加固：*堆栈溢出漏洞被发现在 nan*开头的函数中，这会导致应用程序在处理长字符串函数的时候发生崩溃，或者有可能执行任意代码。(CVE - 2014 - 9761)*如果将非法的时间值当参数传给strftime()函数处理时，会导致一个界外内存访问，从而引起应用程序崩溃。(CVE - 2015 - 8776)*在hcreate()和hcreate_r()函数中发现一个整型变量溢出漏洞，这可能导致一个界外内存访问，并引起应用程序崩溃或任意代码执行。(CVE - 2015 - 8778)*在catopen()函数中发现一个基于堆栈缓冲区溢出的漏洞函数。在极端情况下，一个长符串类型参数传递给该函数，则可能会导致崩溃或者执行任意代码。(CVE - 2015 - 8779)5. 安装包列表：中标麒麟高级服务器操作系统 V6：源码包：glibc-2.12-1.209.el6.src.rpmx86_64版本：glibc-2.12-1.209.el6.i686.rpmglibc-2.12-1.209.el6.x86_64.rpmglibc-common-2.12-1.209.el6.x86_64.rpmglibc-debuginfo-2.12-1.209.el6.i686.rpmglibc-debuginfo-2.12-1.209.el6.x86_64.rpmglibc-debuginfo-common-2.12-1.209.el6.i686.rpmglibc-debuginfo-common-2.12-1.209.el6.x86_64.rpmglibc-devel-2.12-1.209.el6.i686.rpmglibc-devel-2.12-1.209.el6.x86_64.rpmglibc-headers-2.12-1.209.el6.x86_64.rpmglibc-utils-2.12-1.209.el6.x86_64.rpmnscd-2.12-1.209.el6.x86_64.rpm			

@@ -1,0 +1,85 @@
+Name:KYSA-202107-0004
+Severity:中等
+Summary:curl安全漏洞
+Published:2022-11-10
+URL:/support/loophole/patch/2365.html
+Title:
+			 公告ID：KYSA-202107-0004
+公告摘要： curl安全漏洞
+等级：中等
+发布日期：2022-11-10
+		
+1. 修复的CVE
+CVE-2021-22924
+Arch Linux是Arch开源的一个应用系统。一个轻量级且灵活的Linux®发行版，试图使它保持简单。Arch Linux中存在信任管理问题漏洞，该漏洞源于产品的配置匹配函数不能正确处理 issuer cert 并且比较路径时逻辑错误。攻击者可通过该漏洞访问系统的敏感信息。 以下产品及版本受到影响：libcurl-gnutls  7.78.0-1 之前版本。
+CVE-2021-22898
+HAXX Haxx libcurl是瑞典HAXX公司的一个免费、开源的客户端URL传输库。该库支持FTP、FTPS、TFTP、HTTP等。HAXX libcurl存在信息泄露漏洞，该漏洞源于libcurl可以将未初始化的数据从基于堆栈的缓冲区传递到服务器导致使用明文网络协议将敏感的内部信息泄露给服务。
+CVE-2021-22925
+Arch Linux是Arch开源的一个应用系统。一个轻量级且灵活的Linux®发行版，试图使它保持简单。Arch Linux中存在安全漏洞，该漏洞源于处理TELNET请求并解析NEW_ENV时使用了未初始化的变量，远程攻击者可以利用该漏最多读取1800字节的影响控制TELNET服务器。 受影响的产品及版本包括：Arch Linux：所有版本
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1
+curl
+libcurl3-gnutls
+libcurl3-nss
+libcurl4
+libcurl4-doc
+libcurl4-gnutls-dev
+libcurl4-nss-dev
+libcurl4-openssl-dev
+3. 软件包修复版本
+软件包：curl
+7.68.0-1kylin2.6(V10 SP1)
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+X86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-gnutls-dev_7.68.0-1kylin2.6_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-openssl-dev_7.68.0-1kylin2.6_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-gnutls_7.68.0-1kylin2.6_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-doc_7.68.0-1kylin2.6_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-nss_7.68.0-1kylin2.6_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-nss-dev_7.68.0-1kylin2.6_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/curl_7.68.0-1kylin2.6_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4_7.68.0-1kylin2.6_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-gnutls-dev_7.68.0-1kylin2.6_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-openssl-dev_7.68.0-1kylin2.6_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-gnutls_7.68.0-1kylin2.6_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-doc_7.68.0-1kylin2.6_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-nss_7.68.0-1kylin2.6_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-nss-dev_7.68.0-1kylin2.6_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/curl_7.68.0-1kylin2.6_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4_7.68.0-1kylin2.6_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-gnutls-dev_7.68.0-1kylin2.6_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-openssl-dev_7.68.0-1kylin2.6_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-gnutls_7.68.0-1kylin2.6_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-doc_7.68.0-1kylin2.6_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl3-nss_7.68.0-1kylin2.6_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4-nss-dev_7.68.0-1kylin2.6_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/curl_7.68.0-1kylin2.6_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/c/curl/libcurl4_7.68.0-1kylin2.6_mips64el.deb
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

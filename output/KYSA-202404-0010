@@ -1,0 +1,105 @@
+Name:KYSA-202404-0010
+Severity:重要
+Summary:util-linux安全漏洞
+Published:2024-11-28
+URL:/support/loophole/patch/6723.html
+Title:
+			公告ID：KYSA-202404-0010
+公告摘要：util-linux安全漏洞
+等级：重要
+发布日期：2024-11-28
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2403 Update1版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2024-28085
+util-linux是开源的一个软件包。util-linux 2.40及之前版本存在安全漏洞，该漏洞源于 wall 通常使用 setgid tty 权限安装，允许通过 argv 将转义序列发送到其他用户的终端，在某些情况下，可能会导致帐户被接管。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2403 Update1
+x86_64 架构：
+bsdutils、fdisk、libblkid1、libfdisk1、libmount1、libsmartcols1、libuuid1、mount、rfkill、util-linux-locales、util-linux、uuid-runtime
+arm64 架构：
+bsdutils、fdisk、libblkid1、libfdisk1、libmount1、libsmartcols1、libuuid1、mount、rfkill、util-linux-locales、util-linux、uuid-runtime
+sw64 架构：
+bsdutils、fdisk、libblkid1、libfdisk1、libmount1、libsmartcols1、libuuid1、mount、rfkill、util-linux-locales、util-linux、uuid-runtime
+loongarch64 架构：
+bsdutils、fdisk、libblkid1、libfdisk1、libmount1、libsmartcols1、libuuid1、mount、rfkill、util-linux-locales、util-linux、uuid-runtime
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2403 Update1
+2.34-0.1kylin19k0.13
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install util-linux
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2403 Update1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/bsdutils_2.34-0.1kylin19k0.13_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/fdisk_2.34-0.1kylin19k0.13_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libblkid1_2.34-0.1kylin19k0.13_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libfdisk1_2.34-0.1kylin19k0.13_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libmount1_2.34-0.1kylin19k0.13_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libsmartcols1_2.34-0.1kylin19k0.13_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libuuid1_2.34-0.1kylin19k0.13_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/mount_2.34-0.1kylin19k0.13_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/rfkill_2.34-0.1kylin19k0.13_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/util-linux-locales_2.34-0.1kylin19k0.13_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/util-linux_2.34-0.1kylin19k0.13_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/uuid-runtime_2.34-0.1kylin19k0.13_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/bsdutils_2.34-0.1kylin19k0.13_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/fdisk_2.34-0.1kylin19k0.13_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libblkid1_2.34-0.1kylin19k0.13_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libfdisk1_2.34-0.1kylin19k0.13_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libmount1_2.34-0.1kylin19k0.13_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libsmartcols1_2.34-0.1kylin19k0.13_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libuuid1_2.34-0.1kylin19k0.13_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/mount_2.34-0.1kylin19k0.13_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/rfkill_2.34-0.1kylin19k0.13_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/util-linux-locales_2.34-0.1kylin19k0.13_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/util-linux_2.34-0.1kylin19k0.13_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/uuid-runtime_2.34-0.1kylin19k0.13_arm64.deb
+sw64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/bsdutils_2.34-0.1kylin19k0.13_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/fdisk_2.34-0.1kylin19k0.13_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libblkid1_2.34-0.1kylin19k0.13_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libfdisk1_2.34-0.1kylin19k0.13_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libmount1_2.34-0.1kylin19k0.13_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libsmartcols1_2.34-0.1kylin19k0.13_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libuuid1_2.34-0.1kylin19k0.13_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/mount_2.34-0.1kylin19k0.13_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/rfkill_2.34-0.1kylin19k0.13_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/util-linux-locales_2.34-0.1kylin19k0.13_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/util-linux_2.34-0.1kylin19k0.13_sw64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/uuid-runtime_2.34-0.1kylin19k0.13_sw64.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/bsdutils_2.34-0.1kylin19k0.13_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/fdisk_2.34-0.1kylin19k0.13_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libblkid1_2.34-0.1kylin19k0.13_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libfdisk1_2.34-0.1kylin19k0.13_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libmount1_2.34-0.1kylin19k0.13_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libsmartcols1_2.34-0.1kylin19k0.13_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/libuuid1_2.34-0.1kylin19k0.13_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/mount_2.34-0.1kylin19k0.13_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/rfkill_2.34-0.1kylin19k0.13_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/util-linux-locales_2.34-0.1kylin19k0.13_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/util-linux_2.34-0.1kylin19k0.13_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/u/util-linux/uuid-runtime_2.34-0.1kylin19k0.13_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2403 Update1版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

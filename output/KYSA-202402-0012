@@ -1,0 +1,95 @@
+Name:KYSA-202402-0012
+Severity:严重
+Summary:libde265安全漏洞
+Published:2024-09-10
+URL:/support/loophole/patch/6221.html
+Title:
+			公告ID：KYSA-202402-0012
+公告摘要：libde265安全漏洞
+等级：严重
+发布日期：2024-09-10
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2403版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2022-43242
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于motion.cc 中的 mc_luma＜unsigned char＞包含堆缓冲区溢出，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+CVE-2022-43243
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于sse-motion.cc 中的 ff_hevc_put_weighted_pred_avg_8_sse包含堆缓冲区溢出，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+CVE-2021-36409
+Libde265是一个h.265视频编解码器。libde265 存在安全漏洞，该漏洞允许攻击者可利用该漏洞通过运行一个精心制作的文件或可能有未指定的其他影响的应用程序，从而导致拒绝服务(DoS)。
+CVE-2021-36410
+Libde265是一个h.265视频编解码器。libde265存在安全漏洞，该漏洞源于libde265 v1.0.8中存在stack-buffer-overflow。当运行程序dec265时，Cc在功能上把epel hv回退。
+CVE-2022-43240
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于sse-motion.cc 中的 ff_hevc_put_hevc_qpel_h_2_v_1_sse包含堆栈缓冲区溢出，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+CVE-2022-43239
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于motion.cc 中的 mc_chroma＜unsigned short＞包含堆栈缓冲区溢出，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+CVE-2022-43237
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于fallback-motion.cc 中的 void put_epel_hv_fallback＜unsigned short＞包含堆栈缓冲区溢出，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+CVE-2021-36411
+Libde265是一个h.265视频编解码器。libde265存在安全漏洞，该漏洞源于现象描述libde265 v1.0.8版本存在访问控制错误问题。由函数中的READ内存访问引起的SEGV派生出block的边界强度。cc。该漏洞会导致分段错误和应用程序崩溃，从而导致远程拒绝服务。
+CVE-2022-43236
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于fallback-motion.cc 中的 put_qpel_fallback包含堆缓冲区溢出，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+CVE-2022-43253
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于fallback-motion.cc 中的 put_unweighted_pred_16_fallback包含堆缓冲区溢出，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+CVE-2022-43241
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于sse-motion.cc 中的 ff_hevc_put_hevc_qpel_v_3_8_sse包含未知崩溃，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+CVE-2022-43235
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于sse-motion.cc 中的 ff_hevc_put_hevc_epel_pixels_8_sse 包含堆缓冲区溢出，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+CVE-2021-35452
+Libde265是一个h.265视频编解码器。libde265存在安全漏洞，该漏洞源于一个错误的访问控制漏洞存在于libde265 v1.0.8由于SEGV在slice.cc。
+CVE-2022-43252
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于fallback-motion.cc 中的 put_epel_16_fallback包含堆缓冲区溢出，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+CVE-2022-43238
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于sse-motion.cc 中的 ff_hevc_put_hevc_qpel_h_3_v_3_sse包含未知崩溃，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+CVE-2022-43248
+Libde265是一个h.265视频编解码器。Libde265 v1.0.8版本存在安全漏洞，该漏洞源于fallback-motion.cc 中的 put_weighted_pred_avg_16_fallback包含堆缓冲区溢出，攻击者利用该漏洞可以通过制作的视频文件造成拒绝服务 (DoS)。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2403
+x86_64 架构：
+libde265-0、libde265-examples
+arm64 架构：
+libde265-0、libde265-examples
+mips64el 架构：
+libde265-0、libde265-examples
+loongarch64 架构：
+libde265-0、libde265-examples
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2403
+1.0.4-1kylin0.4
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libde265-0
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2403
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libd/libde265/libde265-0_1.0.4-1kylin0.4_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libd/libde265/libde265-examples_1.0.4-1kylin0.4_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libd/libde265/libde265-0_1.0.4-1kylin0.4_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libd/libde265/libde265-examples_1.0.4-1kylin0.4_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libd/libde265/libde265-0_1.0.4-1kylin0.4_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libd/libde265/libde265-examples_1.0.4-1kylin0.4_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libd/libde265/libde265-0_1.0.4-1kylin0.4_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libd/libde265/libde265-examples_1.0.4-1kylin0.4_loongarch64.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2403版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

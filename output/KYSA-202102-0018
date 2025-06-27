@@ -1,0 +1,171 @@
+Name:KYSA-202102-0018
+Severity:中等
+Summary:bind9安全漏洞
+Published:2023-01-03
+URL:/support/loophole/patch/2467.html
+Title:
+			公告ID：KYSA-202102-0018
+公告摘要：bind9安全漏洞
+等级：Moderate
+发布日期：2023-01-03
+		
+1. 修复的CVE
+CVE-2020-8625
+描述：Bind Server是一款DNS（域名系统）协议的完整实现。BIND 存在安全漏洞，该漏洞源于通过显式地为tkey-gssapi-keytab或tkey-gssapi-credentialconfiguration选项设置有效值，服务器可能会变得脆弱。
+
+2. 受影响的操作系统及软件包
+银河麒麟桌面操作系统V4桌面版
+bind9-doc
+bind9-host
+bind9
+bind9utils
+dnsutils
+host
+libbind-dev
+libbind-export-dev
+libbind9-140
+libdns-export162
+libdns162
+libirs-export141
+libirs141
+libisc-export160
+libisc160
+libisccc-export140
+libisccc140
+libisccfg-export140
+libisccfg140
+liblwres141
+lwresd
+银河麒麟桌面操作系统V10桌面版
+bind9-doc
+bind9-host
+bind9
+bind9utils
+dnsutils
+host
+libbind-dev
+libbind-export-dev
+libbind9-140
+libdns-export162
+libdns162
+libirs-export141
+libirs141
+libisc-export160
+libisc160
+libisccc-export140
+libisccc140
+libisccfg-export140
+libisccfg140
+liblwres141
+lwresd
+银河麒麟桌面操作系统V10 SP1
+bind9-dnsutils
+bind9-host
+bind9-libs
+bind9-utils
+bind9
+bind9utils
+dnsutils
+
+3. 软件包修复版本
+软件包：bind9
+bind9-1:9.10.3.dfsg.P4-8kord1.18（V4、V10）
+bind9-1:9.16.1-0kylin2.9（V10 SP1）
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级    $sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。   $dpkg -i Packagelists
+
+5. 软件包下载地址
+麒麟操作系统V10桌面版、V4
+X86_64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-doc_9.10.3.dfsg.P4-8kord1.18_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/host_9.10.3.dfsg.P4-8kord1.18_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libbind-dev_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libbind-export-dev_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libbind9-140_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libdns-export162_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libdns162_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libirs-export141_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libirs141_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisc-export160_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisc160_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccc-export140_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccc140_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccfg-export140_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccfg140_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/liblwres141_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/lwresd_9.10.3.dfsg.P4-8kord1.18_amd64.deb
+arm64软件包下载地址：
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-doc_9.10.3.dfsg.P4-8kord1.18_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/host_9.10.3.dfsg.P4-8kord1.18_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libbind-dev_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libbind-export-dev_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libbind9-140_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libdns-export162_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libdns162_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libirs-export141_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libirs141_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisc-export160_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisc160_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccc-export140_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccc140_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccfg-export140_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/libisccfg140_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/liblwres141_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/lwresd_9.10.3.dfsg.P4-8kord1.18_arm64.deb
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-dnsutils_9.16.1-0kylin2.9_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.16.1-0kylin2.9_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-libs_9.16.1-0kylin2.9_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-utils_9.16.1-0kylin2.9_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.16.1-0kylin2.9_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.16.1-0kylin2.9_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.16.1-0kylin2.9_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-dnsutils_9.16.1-0kylin2.9_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.16.1-0kylin2.9_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-libs_9.16.1-0kylin2.9_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-utils_9.16.1-0kylin2.9_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.16.1-0kylin2.9_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.16.1-0kylin2.9_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.16.1-0kylin2.9_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-dnsutils_9.16.1-0kylin2.9_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.16.1-0kylin2.9_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-libs_9.16.1-0kylin2.9_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-utils_9.16.1-0kylin2.9_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.16.1-0kylin2.9_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.16.1-0kylin2.9_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.16.1-0kylin2.9_all.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-dnsutils_9.16.1-0kylin2.9_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-host_9.16.1-0kylin2.9_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-libs_9.16.1-0kylin2.9_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9-utils_9.16.1-0kylin2.9_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9_9.16.1-0kylin2.9_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/bind9utils_9.16.1-0kylin2.9_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/b/bind9/dnsutils_9.16.1-0kylin2.9_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

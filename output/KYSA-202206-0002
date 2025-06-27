@@ -1,0 +1,63 @@
+Name:KYSA-202206-0002
+Severity:中等
+Summary:e2fsprogs安全漏洞
+Published:2023-02-08
+URL:/support/loophole/patch/2614.html
+Title:
+			公告ID：KYSA-202206-0002
+公告摘要：e2fsprogs安全漏洞
+等级：中等
+发布日期：2023-02-08
+		
+1. 修复的CVE
+CVE-2022-1304
+E2fsprogs是一套用以维护ext2、ext3和ext4文件系统的工具程序集。E2fsprogs 1.46.5 版本存在安全漏洞，该漏洞源于应用中存在越界读取写入问题。攻击者利用该漏洞可以导致分段错误，并且可以通过特制文件系统执行任意代码。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+e2fsck-static、e2fslibs、e2fsprogs、libcomerr2、libss2
+arm64 架构：
+e2fsck-static、e2fslibs、e2fsprogs、libcomerr2、libss2
+mips64el 架构：
+e2fsck-static、e2fslibs、e2fsprogs、libcomerr2、libss2
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+1.42.13-1kord1.2+esm1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install e2fsprogs
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/e2fsck-static_1.42.13-1kord1.2%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/e2fslibs_1.42.13-1kord1.2%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/e2fsprogs_1.42.13-1kord1.2%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/libcomerr2_1.42.13-1kord1.2%2Besm1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/libss2_1.42.13-1kord1.2%2Besm1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/e2fsck-static_1.42.13-1kord1.2%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/e2fslibs_1.42.13-1kord1.2%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/e2fsprogs_1.42.13-1kord1.2%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/libcomerr2_1.42.13-1kord1.2%2Besm1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/libss2_1.42.13-1kord1.2%2Besm1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/e2fsck-static_1.42.13-1kord1.2%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/e2fslibs_1.42.13-1kord1.2%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/e2fsprogs_1.42.13-1kord1.2%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/libcomerr2_1.42.13-1kord1.2%2Besm1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/e2fsprogs/libss2_1.42.13-1kord1.2%2Besm1_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

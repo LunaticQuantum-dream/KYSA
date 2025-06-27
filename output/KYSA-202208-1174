@@ -1,0 +1,90 @@
+Name:KYSA-202208-1174
+Severity:重要
+Summary:pcre安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1640.html
+Title:
+			公告ID：KYSA-202208-1174
+公告摘要：pcre安全漏洞
+安全漏洞等级：Important
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2015-2328
+描述：PCRE（Perl Compatible Regular Expressions）是软件开发者Philip Hazel所研发的一个使用C语言编写的开源正则表达式函数库。PCRE 8.36之前版本中存在安全漏洞，该漏洞源于程序没有正确处理‘/((?(R)a|(?1)))+/’模式和带有特定递归的相关模式。远程攻击者可借助特制的正则表达式利用该漏洞造成拒绝服务（段错误）。
+·CVE-2015-3217
+描述：PCRE（Perl Compatible Regular Expressions）是软件开发者Philip Hazel所研发的一个使用C语言编写的开源正则表达式函数库。PCRE中存在基于栈的缓冲区溢出漏洞。攻击者可利用该漏洞在受影响应用程序上下文中执行任意代码，也可能造成拒绝服务。
+·CVE-2015-5073
+描述：PCRE（Perl Compatible Regular Expressions）是软件开发者Philip Hazel所研发的一个使用C语言编写的开源正则表达式函数库。PCRE中存在基于堆的缓冲区溢出漏洞。攻击者可利用该漏洞在受影响应用程序上下文中执行任意代码，也可能造成拒绝服务。
+·CVE-2015-8385
+描述：PCRE（Perl Compatible Regular Expressions）是软件开发者Philip Hazel所研发的一个使用C语言编写的开源正则表达式函数库。PCRE 8.38之前版本中存在安全漏洞，该漏洞源于程序没有正确处理‘/(?|(k\'\'Pm\'\')|(?\'\'Pm\'\'))/’模式和带有特定前向引用的相关模式。远程攻击者可借助特制的正则表达式利用该漏洞造成拒绝服务（缓冲区溢出）。
+·CVE-2015-8386
+描述：PCRE（Perl Compatible Regular Expressions）是软件开发者Philip Hazel所研发的一个使用C语言编写的开源正则表达式函数库。PCRE 8.38之前版本中存在安全漏洞，该漏洞源于程序没有正确处理后行断言和互递归子模式的交互。远程攻击者可借助特制的正则表达式利用该漏洞造成拒绝服务（缓冲区溢出）。
+·CVE-2015-8388
+描述：PCRE（Perl Compatible Regular Expressions）是软件开发者Philip Hazel所研发的一个使用C语言编写的开源正则表达式函数库。PCRE 8.38之前版本中存在安全漏洞，该漏洞源于程序没有正确处理‘/(?=di(?＆lt;=(?1))|(?=(.))))/’模式和带有无法匹配的括号的相关模式。远程攻击者可借助特制的正则表达式利用该漏洞造成拒绝服务（缓冲区溢出）。
+·CVE-2015-8391
+描述：PCRE（Perl Compatible Regular Expressions）是软件开发者Philip Hazel所研发的一个使用C语言编写的开源正则表达式函数库。PCRE 8.38之前版本的pcre_compile.c文件中的‘pcre_compile’函数存在安全漏洞，该漏洞源于程序没有正确处理特定的‘[：’嵌套。远程攻击者可借助特制的正则表达式利用该漏洞造成拒绝服务（CPU消耗）。
+·CVE-2016-3191
+描述：PCRE（Perl Compatible Regular Expressions）和PCRE2都是软件开发者Philip Hazel所研发的产品。前者是一个使用C语言编写的开源正则表达式函数库，后者是一个用于修改PCRE的API。PCRE 8.39之前8.x版本的pcre_compile.c文件和PCRE2 10.22之前版本的pcre2_compile.c文件中的‘compile_branch’函数存在安全漏洞，该漏洞源于程序没有正确处理包含‘(*ACCEPT)’子串和嵌套括号的正则表达式。远程攻击者可借助特制的正则表达式利用该漏洞执行任意代码，或造成拒绝服务（基于栈的缓冲区溢出）。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+pcre、pcre-devel、pcre-static、pcre-tools
+x86_64架构:
+pcre、pcre-devel、pcre-static、pcre-tools
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+pcre-8.32-17.el7
+pcre-devel-8.32-17.el7
+pcre-static-8.32-17.el7
+pcre-tools-8.32-17.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+271.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+272.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+273.升级完成后是否需要重启服务或操作系统：
+·CVE-2015-2328：需要重启 pcre 以使漏洞修复生效。
+·CVE-2015-3217：需要重启 pcre 以使漏洞修复生效。
+·CVE-2015-5073：需要重启 pcre 以使漏洞修复生效。
+·CVE-2015-8385：需要重启 pcre 以使漏洞修复生效。
+·CVE-2015-8386：需要重启 pcre 以使漏洞修复生效。
+·CVE-2015-8388：需要重启 pcre 以使漏洞修复生效。
+·CVE-2015-8391：需要重启 pcre 以使漏洞修复生效。
+·CVE-2016-3191：需要重启 pcre 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+pcre（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/pcre-8.32-17.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/pcre-devel-8.32-17.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/pcre-static-8.32-17.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/pcre-tools-8.32-17.el7.aarch64.rpm
+
+pcre（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/pcre-8.32-17.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/pcre-8.32-17.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/pcre-devel-8.32-17.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/pcre-devel-8.32-17.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/pcre-static-8.32-17.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/pcre-static-8.32-17.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/pcre-tools-8.32-17.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/pcre-tools-8.32-17.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

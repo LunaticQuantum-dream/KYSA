@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-14746
+Severity:重要
+Summary:Samba 安全漏洞
+Published:2017-11-21
+URL:/support/loophole/patch/157.html
+Title:
+			摘要：             Samba 安全漏洞 
+安全等级：          重要
+公告ID：           CS2CSA-2017-14746
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2017-11-21
+CVE：             CVE-2017-14746 CVSS3评分：6.3
+		
+1. 概述：中标麒麟高级服务器操作系统V6有 Samba 可用的更新。中标麒麟高级服务器操作系统V7有 Samba 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：在SAMBA服务器处理某些SMB1请求的方式中发现了一个释放后使用的缺陷。未经身份验证的攻击者可以发送特殊精心制作的SMB1请求，从而导致服务器崩溃或执行任意代码。4. 安装包列表：中标麒麟高级服务器操作系统V6： 源代码包：samba4-4.2.10-12.el6_9.src.rpmx86_64二进制包： samba4-4.2.10-12.el6_9.x86_64.rpm samba4-client-4.2.10-12.el6_9.x86_64.rpm samba4-common-4.2.10-12.el6_9.x86_64.rpm samba4-dc-4.2.10-12.el6_9.x86_64.rpm samba4-dc-libs-4.2.10-12.el6_9.x86_64.rpm samba4-devel-4.2.10-12.el6_9.x86_64.rpm samba4-libs-4.2.10-12.el6_9.x86_64.rpm samba4-pidl-4.2.10-12.el6_9.x86_64.rpm samba4-python-4.2.10-12.el6_9.x86_64.rpm samba4-test-4.2.10-12.el6_9.x86_64.rpm samba4-winbind-4.2.10-12.el6_9.x86_64.rpm samba4-winbind-clients-4.2.10-12.el6_9.x86_64.rpm samba4-winbind-krb5-locator-4.2.10-12.el6_9.x86_64.rpm samba4-debuginfo-4.2.10-12.el6_9.x86_64.rpm 中标麒麟高级服务器操作系统V7：源代码包：samba-4.6.2-12.el7_4.src.rpmx86_64二进制包： ctdb-4.6.2-12.el7_4.x86_64.rpm (info) (download)ctdb-tests-4.6.2-12.el7_4.x86_64.rpm (info) (download)libsmbclient-4.6.2-12.el7_4.x86_64.rpm (info) (download)libsmbclient-devel-4.6.2-12.el7_4.x86_64.rpm libwbclient-4.6.2-12.el7_4.x86_64.rpm libwbclient-devel-4.6.2-12.el7_4.x86_64.rpm samba-4.6.2-12.el7_4.x86_64.rpm samba-client-4.6.2-12.el7_4.x86_64.rpm samba-client-libs-4.6.2-12.el7_4.x86_64.rpm samba-common-libs-4.6.2-12.el7_4.x86_64.rpm samba-common-tools-4.6.2-12.el7_4.x86_64.rpm samba-dc-4.6.2-12.el7_4.x86_64.rpm samba-dc-libs-4.6.2-12.el7_4.x86_64.rpm samba-devel-4.6.2-12.el7_4.x86_64.rpm samba-krb5-printing-4.6.2-12.el7_4.x86_64.rpm samba-libs-4.6.2-12.el7_4.x86_64.rpm samba-python-4.6.2-12.el7_4.x86_64.rpm samba-test-4.6.2-12.el7_4.x86_64.rpm samba-test-libs-4.6.2-12.el7_4.x86_64.rpm samba-vfs-glusterfs-4.6.2-12.el7_4.x86_64.rpm samba-winbind-4.6.2-12.el7_4.x86_64.rpm samba-winbind-clients-4.6.2-12.el7_4.x86_64.rpm samba-winbind-krb5-locator-4.6.2-12.el7_4.x86_64.rpm samba-winbind-modules-4.6.2-12.el7_4.x86_64.rpm samba-debuginfo-4.6.2-12.el7_4.x86_64.rpm 			

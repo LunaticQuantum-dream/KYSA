@@ -1,0 +1,14 @@
+Name:CS2CSA-2019-11235
+Severity:严重
+Summary:FreeRADIUS 数据伪造问题漏洞
+Published:2019-04-10
+URL:/support/loophole/patch/191.html
+Title:
+			摘要：           FreeRADIUS 数据伪造问题漏洞
+安全等级：          严重
+公告ID：         CS2CSA-2019-11235
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2019-04-10
+CVE：             CVE-2019-11235  CVSS3评分：8.1
+		
+1. 概述：中标麒麟高级服务器操作系统V7有FreeRADIUS可用的更新。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：FreeRADIUS是FreeRADIUS Server项目的一套实现了RADIUS协议的软件。该软件主要用于账户认证管理、记账管理和上网账户管理等。FreeRADIUS 3.0.19之前版本中存在数据伪造问题漏洞。该漏洞源于网络系统或产品未充分验证数据的来源或真实性。攻击者可利用伪造的数据进行攻击。

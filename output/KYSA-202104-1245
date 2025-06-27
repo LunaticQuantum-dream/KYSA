@@ -1,0 +1,160 @@
+Name:KYSA-202104-1245
+Severity:重要
+Summary:kernel安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/4225.html
+Title:
+			公告ID：KYSA-202104-1245
+公告摘要：kernel安全漏洞
+等级：Important
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2017-17807
+描述：Linux内核中的KEYS子系统在向当前任务的默认keyring写入密钥时省略了访问控制检查，允许本地用户绕过对keyring的安全检查。这就损害了钥匙圈对那些依赖它的人的有效性。
+·CVE-2017-18595
+描述：在调试子系统的kernel/trace/trace.c中的allocate_trace_缓冲区中发现一个缺陷，当无法分配动态percpu区域时，将调用资源清理。指针（buf->buffer）仍然保留地址，并且没有设置为NULL，这可能导致释放后使用问题，从而导致悬空指针问题。
+·CVE-2018-10853
+描述：Linux kernel是美国Linux基金会发布的操作系统Linux所使用的内核。KVM是其中的一个基于内核的虚拟机。Linux kernel中的KVM 4.18之前版本存在安全漏洞，该漏洞源于程序没有检测CPL（当前执行任务或程序的特权级）。攻击者可利用该漏洞提升权限。
+·CVE-2018-12207
+描述：在Intel CPU处理CPU本地缓存中的虚拟到物理内存地址转换与系统软件的分页结构项之间的不一致时，发现了一个缺陷。特权来宾用户可能会利用此缺陷在主机处理器上引发硬件机器检查错误，从而通过停止处理器而导致严重的DoS情况。
+
+
+
+操作系统或虚拟机监视器（VMM）等系统软件使用虚拟内存系统在内存中存储程序指令和数据。虚拟内存系统使用页表和页目录等分页结构来管理系统内存。处理器的内存管理单元（MMU）使用分页结构条目将程序的虚拟内存地址转换为物理内存地址。处理器将这些地址转换存储到其本地缓存缓冲区（Translation Lookaside buffer，TLB）。TLB有两个部分，一个用于指令，另一个用于数据地址。
+
+
+
+系统软件可以修改其分页结构条目以更改地址映射或某些属性（如页面大小等）。在内存中发生此类分页结构更改时，系统软件必须使处理器TLB缓存中相应的地址转换无效。但在TLB失效发生之前，特权来宾用户可能会触发指令获取操作，该操作可能会使用已缓存但现在无效的从指令TLB（ITLB）的虚拟到物理地址转换。因此，访问一个无效的物理内存地址并导致由于页面大小更改时的机器检查错误（MCE）而导致处理器停止。
+·CVE-2018-16885
+描述：在内核中发现了一个缺陷，该缺陷允许用户空间以零偏移量和缓冲区长度调用memcpy_fromiovecend（）和类似函数，这会导致读取超出缓冲区边界，在某些情况下会导致内存访问故障，并因访问无效内存地址而导致系统停止。
+·CVE-2018-19985
+描述：在Linux内核中，在函数hso_probe（）中发现了一个缺陷，该函数从USB设备（作为u8）读取if_num值，并在未进行长度检查的情况下使用它来索引数组，从而导致在hso_probe（）或hso_get_config_data（）中读取OOB内存。攻击者使用伪造的USB设备和对系统的物理访问（连接此类设备所需）可能导致系统崩溃和拒绝服务。
+·CVE-2018-20169
+描述：在drivers/USB/core/USB.c中的uusb_get_extra_descriptor（）函数中，Linux内核的USB子系统中发现了一个缺陷，该漏洞在读取额外描述符数据期间错误地处理了大小检查。通过使用特制的USB设备发送伪造的额外描述符，具有对系统的物理访问权限的非特权用户可能会导致权限提升或触发系统崩溃或锁定，从而导致拒绝服务（DoS）。
+·CVE-2018-8087
+描述：Linux内核容易受到driver / net / wireless / mac80211_hwsim.c：hwsim_new_radio_nl（）函数中内存泄漏的影响。攻击者可能利用此漏洞导致潜在的拒绝服务。
+·CVE-2018-9517
+描述：在Linux内核中发现net/l2tp/l2tp_netlink.c中的pppol2tp_session_create（）和l2tp_eth_create（）之间存在竞争条件。调用l2tp_tunnel_find（）可能会导致使用以前删除的隧道的隧道id创建一个新隧道，引用计数器不会保护该隧道。
+·CVE-2019-0154
+描述：Intel graphics hardware（GPU）中发现了一个缺陷，如果在图形卡处于低功耗状态时读取MMIO寄存器，具有发出ioctl能力的本地攻击者可能会触发硬件级崩溃。这会造成拒绝服务的情况，GPU和连接的显示器将保持不可用状态，直到重新启动。
+·CVE-2019-0155
+描述：在Intel graphics hardware（GPU）中发现一个缺陷，本地攻击者能够向GPU发出命令，可能会无意中导致内存损坏和权限提升。攻击者可以使用GPU blitter执行权限MMIO操作，而不限于正确运行所需的地址空间。
+·CVE-2019-10207
+描述：在Linux内核的蓝牙UART实现中发现了一个缺陷。具有对蓝牙硬件的本地访问和写入权限的攻击者可以利用此漏洞发出构建的ioctl函数调用，并导致系统崩溃。
+·CVE-2019-10638
+描述：在Linux内核从nethush_mix（）函数返回的部分内核空间地址派生IP ID字段的方式中发现了一个缺陷。远程用户可以在这个字段中观察到一个弱的IP ID生成来跟踪Linux设备。
+·CVE-2019-10639
+描述：在Linux内核从nethush_mix（）函数返回的部分内核空间地址派生IP ID字段的方式中发现了一个缺陷。远程用户可以观察此IP ID字段，以提取用于获取其值的内核地址位，这可能导致散列密钥泄漏，并可能破坏KASLR。
+·CVE-2019-11884
+描述：在Linux内核的蓝牙人机接口设备协议（HIDP）的实现中发现了一个缺陷。 拥有蓝牙设备访问权限的本地攻击者可以发出IOCTL，这将触发net / bluetooth / hidp / sock.c.c中的do_hidp_sock_ioctl函数。 此功能可以通过HIDPCONNADD命令从内核堆栈内存中泄漏潜在的敏感信息，因为名称字段可能未正确以NULL终止。
+·CVE-2019-12382
+描述：在Linux内核的扩展显示标识数据（EDID）技术的实现中发现了一个缺陷。 固件标识符字符串与kstrdup函数重复，并且在内存非常低的情况下分配可能会失败。 攻击者可以通过导致拒绝服务并崩溃系统来滥用此缺陷。
+·CVE-2019-14283
+描述：在Linux内核的软盘驱动程序实现中发现了一个漏洞。有权访问软盘设备的本地攻击者可以调用drivers/block/floppy.c中的set_geometry，这不会验证sect和head字段，从而导致整数溢出和越界读取。此漏洞可能会使系统崩溃，或允许攻击者收集信息，从而导致后续成功的攻击。
+·CVE-2019-14815
+描述：在基于Marvell WiFi硬件（mwifiex）的Linux内核WMM实现中发现的漏洞可能导致拒绝服务或允许执行任意代码。要执行此漏洞，攻击者必须同时具有本地和特权。这一缺陷无法缓解。已提供修补程序来修复此缺陷。
+·CVE-2019-15221
+描述：在Linux内核中为USB包分配缓冲区的LINE6驱动程序中发现了一个空指针取消引用缺陷。此漏洞允许具有系统物理访问权限的攻击者使系统崩溃。
+·CVE-2019-15239
+描述：在Linux内核的网络子系统处理TCP断开和重新连接之间的写入队列时发现了一个缺陷。本地攻击者可以利用此漏洞在释放条件后触发多次使用，从而可能升级其在系统上的权限。
+·CVE-2019-15916
+描述：在网络子系统中发现了一个允许攻击者泄漏内核内存的缺陷，在该子系统中，具有创建tun/tap设备权限的攻击者可以创建拒绝服务并使系统死机。
+·CVE-2019-15927
+描述：Linux kernel是美国Linux基金会发布的开源操作系统Linux所使用的内核。Linux kernel 4.20.2之前版本中的file sound/usb/mixer.c文件的‘’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+·CVE-2019-16746
+描述：在Linux内核的WiFi信标验证代码中发现了一个缺陷。代码不检查信标头中可变长度元素的长度，这可能导致缓冲区溢出。系统可用性以及数据机密性和完整性都会受到此漏洞的影响。
+·CVE-2019-19768
+描述：在Linux内核的blktrace实现中发现了一个释放后使用漏洞。具有对设备运行块跟踪指令的权限的本地攻击者可能会造成这样的情况：核心block_trace对象被释放后会被使用。攻击者可以预先整理内存，以便在释放后与此使用竞争，从而造成内存损坏并导致权限提升的情况。
+·CVE-2019-9503
+描述：如果brcmfmac驱动程序从远程源接收到固件事件帧，则is_wlc_event_frame函数将导致此帧被丢弃而不被处理。如果驱动程序从主机接收到固件事件帧，则调用相应的处理程序。如果使用的总线是USB（例如通过WiFi加密狗），则可以绕过此帧验证。这会允许处理来自远程源的固件事件帧，从而导致拒绝服务（DoS）情况。
+·CVE-2020-10711
+描述：在Linux内核的SELinux子系统中发现一个空指针取消引用缺陷。通过“ebitmap_netlbl_import”例程将商业IP安全选项（CIPSO）协议的类别位图导入到SELinux可扩展位图时，会出现此漏洞。在“CIPSO v4_parsetag_rbm”例程中处理CIPSO restricted bitmap标记时，它设置安全属性以指示类别位图存在，即使尚未分配。此问题导致在将同一类别位图导入SELinux时出现空指针取消引用问题。此漏洞允许远程网络用户使系统内核崩溃，从而导致拒绝服务。
+·CVE-2020-12888
+描述：在Linux内核中发现了一个缺陷，该漏洞允许用户空间进程（例如来宾虚拟机）通过其VFIO驱动模块直接访问h/w设备。VFIO模块允许用户启用或禁用对设备的MMIO内存地址空间的访问。如果用户试图在读/写设备的MMIO地址空间被禁用时访问它，一些h/w设备会向CPU发出一个中断来指示严重的错误情况，从而导致系统崩溃。此漏洞允许来宾用户或进程崩溃主机系统，从而导致拒绝服务。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·x86_64架构:
+bpftool、kernel、kernel-abi-whitelists、kernel-debug、kernel-debug-devel、kernel-devel、kernel-doc、kernel-headers、kernel-tools、kernel-tools-libs、kernel-tools-libs-devel、perf、python-perf
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (x86_64)
+bpftool-3.10.0-1127.13.1.el7或以上版本
+kernel-3.10.0-1127.13.1.el7或以上版本
+kernel-abi-whitelists-3.10.0-1127.13.1.el7或以上版本
+kernel-debug-3.10.0-1127.13.1.el7或以上版本
+kernel-debug-devel-3.10.0-1127.13.1.el7或以上版本
+kernel-devel-3.10.0-1127.13.1.el7或以上版本
+kernel-doc-3.10.0-1127.13.1.el7或以上版本
+kernel-headers-3.10.0-1127.13.1.el7或以上版本
+kernel-tools-3.10.0-1127.13.1.el7或以上版本
+kernel-tools-libs-3.10.0-1127.13.1.el7或以上版本
+kernel-tools-libs-devel-3.10.0-1127.13.1.el7或以上版本
+perf-3.10.0-1127.13.1.el7或以上版本
+python-perf-3.10.0-1127.13.1.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2017-17807:需要重启操作系统以使漏洞修复生效。
+CVE-2017-18595:需要重启 kernel 以使漏洞修复生效。
+CVE-2018-10853:需要重启 kernel 以使漏洞修复生效。
+CVE-2018-12207:需要重启操作系统以使漏洞修复生效。
+CVE-2018-16885:需要重启 kernel 以使漏洞修复生效。
+CVE-2018-19985:需要重启操作系统以使漏洞修复生效。
+CVE-2018-20169:需要重启操作系统以使漏洞修复生效。
+CVE-2018-8087:需要重启操作系统以使漏洞修复生效。
+CVE-2018-9517:需要重启操作系统以使漏洞修复生效。
+CVE-2019-0154:需要重启操作系统以使漏洞修复生效。
+CVE-2019-0155:需要重启操作系统以使漏洞修复生效。
+CVE-2019-10207:需要重启操作系统以使漏洞修复生效。
+CVE-2019-10638:需要重启操作系统以使漏洞修复生效。
+CVE-2019-10639:需要重启操作系统以使漏洞修复生效。
+CVE-2019-11884:需要重启 kernel 以使漏洞修复生效。
+CVE-2019-12382:需要重启操作系统以使漏洞修复生效。
+CVE-2019-14283:需要重启操作系统以使漏洞修复生效。
+CVE-2019-14815:需要重启 kernel 以使漏洞修复生效。
+CVE-2019-15221:需要重启操作系统以使漏洞修复生效。
+CVE-2019-15239:需要重启操作系统以使漏洞修复生效。
+CVE-2019-15916:需要重启 kernel 以使漏洞修复生效。
+CVE-2019-15927:需要重启 kernel 以使漏洞修复生效。
+CVE-2019-16746:需要重启操作系统以使漏洞修复生效。
+CVE-2019-19768:需要重启 kernel 以使漏洞修复生效。
+CVE-2019-9503:需要重启操作系统以使漏洞修复生效。
+CVE-2020-10711:需要重启操作系统以使漏洞修复生效。
+CVE-2020-12888:需要重启 kernel 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+kernel(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/bpftool-3.10.0-1127.13.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/kernel-3.10.0-1127.13.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/kernel-abi-whitelists-3.10.0-1127.13.1.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/kernel-debug-3.10.0-1127.13.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/kernel-debug-devel-3.10.0-1127.13.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/kernel-devel-3.10.0-1127.13.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/kernel-doc-3.10.0-1127.13.1.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/kernel-headers-3.10.0-1127.13.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/kernel-tools-3.10.0-1127.13.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-3.10.0-1127.13.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-devel-3.10.0-1127.13.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/perf-3.10.0-1127.13.1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/updates/x86_64/Packages/python-perf-3.10.0-1127.13.1.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

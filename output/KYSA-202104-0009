@@ -1,0 +1,13 @@
+Name:KYSA-202104-0009
+Severity:中等
+Summary:edk2安全漏洞
+Published:2021-08-25
+URL:/support/loophole/patch/444.html
+Title:
+			摘要：edk2安全漏洞
+安全等级：中等
+公告ID：KYSA-202104-0009
+发布日期： 2021-08-25
+影响CVE：CVE-2021-28210，CVE-2021-28211
+		
+1. 修复的CVE信息CVE-2021-28210SUSE ovmf是德国SUSE公司的一个固件。用于为UEFI支持虚拟机。SUSE ovmf 存在安全漏洞，该漏洞源于无限制FV递归。CVE-2021-28211SUSE ovmf是德国SUSE公司的一个固件。用于为UEFI支持虚拟机。SUSE ovmf 存在缓冲区错误漏洞，该漏洞源于堆损坏。2. 受影响的软件包银河麒麟桌面操作系统V10 SP1ovmfqemu-efiqemu-efi-aarch64qemu-efi-arm3. 影响的操作系统银河麒麟桌面操作系统V10 SP14. 修复版本软件包：edk20~20191122.bd85bf54-2kylin3.2(V10 SP1)5. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2-desktop main restricted universe multiverse4.0.2-sp1桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10.1专业版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级。$sudo apt update方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists6. 软件包下载地址银河麒麟桌面操作系统V10 SP1X86下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/e/edk2/qemu-efi-arm_0~20191122.bd85bf54-2kylin3.2_all.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/e/edk2/qemu-efi_0~20191122.bd85bf54-2kylin3.2_all.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/e/edk2/qemu-efi-aarch64_0~20191122.bd85bf54-2kylin3.2_all.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/e/edk2/ovmf_0~20191122.bd85bf54-2kylin3.2_all.deb 

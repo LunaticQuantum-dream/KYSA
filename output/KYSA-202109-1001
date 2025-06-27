@@ -1,0 +1,13 @@
+Name:KYSA-202109-1001
+Severity:低等
+Summary:hunspell漏洞
+Published:2021-09-03
+URL:/support/loophole/patch/486.html
+Title:
+			摘要：hunspell漏洞
+安全等级：低等
+公告ID：KYSA-202109-1001
+发布日期： 2021-09-03
+影响CVE：CVE-2019-16707
+		
+1. 修复的CVE信息CVE-2019-16707描述：Hunspell 1.7.0 在suggestmgr.cxx 中的SuggestMgr::leftcommonsubstring 中有一个无效的读取操作。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP1hunspell-1.7.0-7.ky10hunspell-debugsource-1.7.0-7.ky10hunspell-devel-1.7.0-7.ky10hunspell-help-1.7.0-7.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP1aarch64:hunspell、hunspell-debugsource、hunspell-devel、hunspell-helpx86_64:hunspell、hunspell-debugsource、hunspell-devel、hunspell-help4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP1aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP1 hunspell aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/hunspell-1.7.0-7.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/hunspell-debugsource-1.7.0-7.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/hunspell-devel-1.7.0-7.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/hunspell-help-1.7.0-7.ky10.noarch.rpm hunspell x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/hunspell-1.7.0-7.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/hunspell-debugsource-1.7.0-7.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/hunspell-devel-1.7.0-7.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/hunspell-help-1.7.0-7.ky10.noarch.rpm注：其他相关依赖包请到相同目录下载 

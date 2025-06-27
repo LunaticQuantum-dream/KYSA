@@ -1,0 +1,89 @@
+Name:KYSA-202208-1215
+Severity:重要
+Summary:tomcat安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1612.html
+Title:
+			公告ID：KYSA-202208-1215
+公告摘要：tomcat安全漏洞
+安全等级：Important
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2018-1304
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat中存在安全漏洞。攻击者可利用该漏洞访问受保护的Web应用程序资源。以下版本受到影响：Apache Tomcat 9.0.0.M1到9.0.4版本，8.5.0版本到8.5.27版本，8.0.0.RC1版本至8.0.49版本，7.0.0版本至7.0.84版本。
+·CVE-2018-1305
+描述：Apache Tomcat是美国阿帕奇（Apache）软件基金会下属的Jakarta项目的一款轻量级Web应用服务器，它主要用于开发和调试JSP程序，适用于中小型系统。Apache Tomcat中存在安全漏洞。攻击者可利用该漏洞获取被限制的资源。以下版本受到影响：Apache Tomcat 9.0.0.M1版本至9.0.4版本，8.5.0版本至8.5.27版本，8.0.0.RC1版本至8.0.49版本，7.0.0版本至7.0.84版本。
+·CVE-2018-1336
+描述：在带有补充字符的UTF-8解码器中，如果处理不当，可能会导致解码器中出现无限循环，从而导致拒绝服务。受影响的版本：Apache Tomcat 9.0.0.M9到9.0.7，8.5.0到8.5.30，8.0.0.RC1到8.0.51，以及7.0.28到7.0.86。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+tomcat、tomcat-admin-webapps、tomcat-docs-webapp、tomcat-el-2.2-api、tomcat-javadoc、tomcat-jsp-2.2-api、tomcat-jsvc、tomcat-lib、tomcat-servlet-3.0-api、tomcat-webapps
+x86_64架构:
+tomcat、tomcat-admin-webapps、tomcat-docs-webapp、tomcat-el-2.2-api、tomcat-javadoc、tomcat-jsp-2.2-api、tomcat-jsvc、tomcat-lib、tomcat-servlet-3.0-api、tomcat-webapps
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+tomcat-7.0.76-9.el7
+tomcat-admin-webapps-7.0.76-9.el7
+tomcat-docs-webapp-7.0.76-9.el7
+tomcat-el-2.2-api-7.0.76-9.el7
+tomcat-javadoc-7.0.76-9.el7
+tomcat-jsp-2.2-api-7.0.76-9.el7
+tomcat-jsvc-7.0.76-9.el7
+tomcat-lib-7.0.76-9.el7
+tomcat-servlet-3.0-api-7.0.76-9.el7
+tomcat-webapps-7.0.76-9.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+355.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/
+356.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+357.升级完成后是否需要重启服务或操作系统：
+·CVE-2018-1304：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2018-1305：需要重启 tomcat 以使漏洞修复生效。
+·CVE-2018-1336：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+tomcat（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/tomcat-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/tomcat-admin-webapps-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/tomcat-docs-webapp-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/tomcat-el-2.2-api-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/tomcat-javadoc-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/tomcat-jsp-2.2-api-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/tomcat-jsvc-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/tomcat-lib-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/tomcat-servlet-3.0-api-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/tomcat-webapps-7.0.76-9.el7.noarch.rpm
+
+tomcat（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/tomcat-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/tomcat-admin-webapps-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/tomcat-docs-webapp-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/tomcat-el-2.2-api-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/tomcat-javadoc-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/tomcat-jsp-2.2-api-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/tomcat-jsvc-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/tomcat-lib-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/tomcat-servlet-3.0-api-7.0.76-9.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/tomcat-webapps-7.0.76-9.el7.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

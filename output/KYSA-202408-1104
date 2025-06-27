@@ -1,0 +1,58 @@
+Name:KYSA-202408-1104
+Severity:中等
+Summary:sqlite安全漏洞
+Published:2024-08-13
+URL:/support/loophole/patch/6112.html
+Title:
+			公告ID：KYSA-202408-1104
+公告摘要：sqlite安全漏洞
+等级：中等
+发布日期：2024-08-13
+		
+1.修复的漏洞
+·CVE-2023-7104
+描述：SQLite是一款轻型的数据库，是遵守ACID的关系型数据库管理系统。
+SQLite 3.43.0及之前版本存在安全漏洞，该漏洞源于文件ext/session/sqlite3session.c的函数sessionReadRecord会导致基于堆的缓冲区溢出。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+·loongarch64架构:
+sqlite-help、sqlite-devel、sqlite
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (loongarch64)
+sqlite-3.32.3-7.p01.a.ky10或以上版本
+sqlite-help-3.32.3-7.p01.a.ky10或以上版本
+sqlite-devel-3.32.3-7.p01.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3 2403
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-7104:需要重启 sqlite 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+
+sqlite(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/sqlite-help-3.32.3-7.p01.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/sqlite-3.32.3-7.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/sqlite-devel-3.32.3-7.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/sqlite-devel-3.32.3-7.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/sqlite-3.32.3-7.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/sqlite-help-3.32.3-7.p01.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

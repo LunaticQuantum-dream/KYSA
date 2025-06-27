@@ -1,0 +1,13 @@
+Name:KYSA-202205-1083
+Severity:中等
+Summary:python-jinja2安全漏洞
+Published:2022-05-31
+URL:/support/loophole/patch/1217.html
+Title:
+			公告ID：KYSA-202205-1083
+公告摘要：python-jinja2安全漏洞
+安全等级：Moderate
+发布日期：2022年05月31日
+影响CVE：CVE-2020-28493
+		
+1.修复的CVE·CVE-2020-28493描述：Jinja2是一款基于Python的模板引擎。该产品具有完整的Unicode支持，并提供了可选的沙箱模板执行环境。jinja2 from 0.0.0 and before 2.11.3 存在资源管理错误漏洞，该漏洞源于regex的ReDOS漏洞。2.受影响的软件包·银河麒麟高级服务器操作系统 V10 SP1loongarch64架构:python-jinja2-help、python2-jinja2、python3-jinja23.软件包修复版本·银河麒麟高级服务器操作系统 V10 SP1python-jinja2-help-2.11.2-2.p01.a.ky10python2-jinja2-2.11.2-2.p01.a.ky10python3-jinja2-2.11.2-2.p01.a.ky104.修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：	银河麒麟高级服务器操作系统 V10 SP1loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3.升级完成后是否需要重启服务或操作系统：·CVE-2020-28493：无需重启操作系统与服务即可使漏洞修复生效。5.软件包下载地址·银河麒麟高级服务器操作系统 V10 SP1python-jinja2（loongarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/python-jinja2-help-2.11.2-2.p01.a.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/python2-jinja2-2.11.2-2.p01.a.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/python3-jinja2-2.11.2-2.p01.a.ky10.noarch.rpm注：其他相关依赖包请到相同目录下载6.修复验证使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。sudo rpm -qa | grep Packagename

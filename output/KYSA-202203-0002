@@ -1,0 +1,13 @@
+Name:KYSA-202203-0002
+Severity:重要
+Summary:openssl安全漏洞
+Published:2022-05-06
+URL:/support/loophole/patch/998.html
+Title:
+			公告ID：KYSA-202203-0002
+公告摘要：openssl安全漏洞
+安全等级：中等
+发布日期：2022-05-06
+影响CVE：CVE-2022-0778
+		
+1. 修复的漏洞CVE-2022-0778OpenSSL是Openssl团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL1.0.2 版本、1.1.1版本和3.0版本存在安全漏洞，该漏洞源于计算模平方根的BN_mod_sqrt() 函数存在错误，可能导致对于非素数模数无线循环。攻击者可以发送特殊的函数参数值利用该漏洞导致应用在解析证书的过程中触发拒绝服务。2. 受影响的系统及软件包·银河麒麟桌面操作系统V10x86_64 架构：libssl1.0.0、opensslarm64 架构：libssl1.0.0、opensslmips64el 架构：libssl1.0.0、openssl3. 软件包修复版本·银河麒麟桌面操作系统V10openssl-1.0.2g-1kord4.20+esm24. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。10.0:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse配置完成后执行更新命令进行升级$sudo apt update$sudo apt install libssl1.0.0方法二：下载软件包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。5. 软件包下载地址银河麒麟桌面操作系统V10x86_64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/libssl1.0.0_1.0.2g-1kord4.20%2Besm2_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/openssl_1.0.2g-1kord4.20%2Besm2_amd64.debarm64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/libssl1.0.0_1.0.2g-1kord4.20%2Besm2_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/openssl_1.0.2g-1kord4.20%2Besm2_arm64.debmips64el软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/libssl1.0.0_1.0.2g-1kord4.20%2Besm2_mips64el.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssl/openssl_1.0.2g-1kord4.20%2Besm2_mips64el.deb6. 修复验证使用软件包查询命令，查看相关的软件包版本与修复版本一致则成功修复。$sudo dpkg -l |grep Package注：Package为软件包包名。 

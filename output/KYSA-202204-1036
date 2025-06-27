@@ -1,0 +1,13 @@
+Name:KYSA-202204-1036
+Severity:中等
+Summary:perl安全漏洞
+Published:2022-04-19
+URL:/support/loophole/patch/1064.html
+Title:
+			公告ID：KYSA-202204-1036
+公告摘要：perl安全漏洞
+安全等级：Moderate
+发布日期：2022年04月19日
+影响CVE：CVE-2020-10543
+		
+1. 修复的CVE·CVE-2020-10543描述：Perl是Perl社区的一款通用、解释型、动态的跨平台编程语言。 攻击者可利用该漏洞造成拒绝服务。2. 受影响的软件包·银河麒麟高级服务器操作系统 V10 SP1aarch64架构:perl、perl-devel、perl-help、perl-libsx86_64架构:perl、perl-devel、perl-help、perl-libs3. 软件包修复版本·银河麒麟高级服务器操作系统 V10 SP1perl-5.28.3-3.p01.ky10perl-devel-5.28.3-3.p01.ky10perl-help-5.28.3-3.p01.ky10perl-libs-5.28.3-3.p01.ky104. 修复方法方法一：配置源进行升级安装1. 打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP1aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/2. 配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3. 升级完成后是否需要重启服务或操作系统：·CVE-2020-10543：无需重启操作系统与服务即可使漏洞修复生效。5. 软件包下载地址·银河麒麟高级服务器操作系统 V10 SP1perl（aarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/perl-5.28.3-3.p01.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/perl-devel-5.28.3-3.p01.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/perl-help-5.28.3-3.p01.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/perl-libs-5.28.3-3.p01.ky10.aarch64.rpmperl（x86_64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/perl-5.28.3-3.p01.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/perl-devel-5.28.3-3.p01.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/perl-help-5.28.3-3.p01.ky10.noarch.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/perl-libs-5.28.3-3.p01.ky10.x86_64.rpm注：其他相关依赖包请到相同目录下载6. 修复验证使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。sudo rpm -qa | grep Packagename

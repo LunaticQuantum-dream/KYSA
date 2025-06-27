@@ -1,0 +1,14 @@
+Name:CS2CSA-2016-8645
+Severity:中等
+Summary:kernel拒绝服务漏洞
+Published:2016-11-10
+URL:/support/loophole/patch/75.html
+Title:
+			摘要：              kernel拒绝服务漏洞
+安全等级：          中等
+公告ID：           CS2CSA-2016-8645
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2016-11-10
+CVE：             CVE-2016-8645 CVSS3评分：6.2
+		
+1. 概述：中标麒麟高级服务器操作系统V7有kernel可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：kernel 4.8.10之前的版本中的TCP栈存在拒绝服务漏洞。本地攻击者可利用该漏洞造成拒绝服务（应用程序崩溃）。4. 安装包列表：中标麒麟高级服务器操作系统V7：源码包：kernel-3.10.0-693.el7.src.rpmx86_64二进制包：kernel-3.10.0-693.el7.x86_64.rpm    kernel-abi-whitelists-3.10.0-693.el7.noarch.rpm kernel-debug-3.10.0-693.el7.x86_64.rpm  kernel-debug-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-debug-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-debug-devel-3.10.0-693.el7.x86_64.rpm    kernel-debuginfo-3.10.0-693.el7.x86_64.rpm  kernel-debuginfo-3.10.0-693.el7.x86_64.rpm  kernel-debuginfo-common-x86_64-3.10.0-693.el7.x86_64.rpm    kernel-debuginfo-common-x86_64-3.10.0-693.el7.x86_64.rpm    kernel-devel-3.10.0-693.el7.x86_64.rpm  kernel-doc-3.10.0-693.el7.noarch.rpm    kernel-headers-3.10.0-693.el7.x86_64.rpm    kernel-tools-3.10.0-693.el7.x86_64.rpm  kernel-tools-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-tools-debuginfo-3.10.0-693.el7.x86_64.rpm    kernel-tools-libs-3.10.0-693.el7.x86_64.rpm kernel-tools-libs-devel-3.10.0-693.el7.x86_64.rpm   perf-3.10.0-693.el7.x86_64.rpm  perf-debuginfo-3.10.0-693.el7.x86_64.rpm    perf-debuginfo-3.10.0-693.el7.x86_64.rpm    python-perf-3.10.0-693.el7.x86_64.rpm   python-perf-debuginfo-3.10.0-693.el7.x86_64.rpm python-perf-debuginfo-3.10.0-693.el7.x86_64.rpm			

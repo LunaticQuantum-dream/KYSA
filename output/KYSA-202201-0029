@@ -1,0 +1,111 @@
+Name:KYSA-202201-0029
+Severity:中等
+Summary:systemd安全漏洞
+Published:2024-01-25
+URL:/support/loophole/patch/5034.html
+Title:
+			公告ID：KYSA-202201-0029
+公告摘要：systemd安全漏洞
+等级：中等
+发布日期：2024-01-25
+		
+1. 修复的CVE
+CVE-2021-3997
+systemd是一款基于Linux的系统和服务管理器。该产品兼容了SysV和LSB的启动脚本，且提供了一个用来表示系统服务间依赖关系的框架。 systemd 存在安全漏洞，该漏洞是由于systemd-tmpfiles中不受控制的递归而存在的。本地用户可以在tmp文件夹中创建多个嵌套目录，case systemd会在系统启动时崩溃。该漏洞允许本地用户执行拒绝服务(DoS)攻击。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+libnss-myhostname、libnss-mymachines、libnss-resolve、libnss-systemd、libpam-systemd、libsystemd0、libudev1、systemd-container、systemd-coredump、systemd-journal-remote、systemd-sysv、systemd-tests、systemd-timesyncd、systemd、udev
+arm64 架构：
+libnss-myhostname、libnss-mymachines、libnss-resolve、libnss-systemd、libpam-systemd、libsystemd0、libudev1、systemd-container、systemd-coredump、systemd-journal-remote、systemd-sysv、systemd-tests、systemd-timesyncd、systemd、udev
+mips64el 架构：
+libnss-myhostname、libnss-mymachines、libnss-resolve、libnss-systemd、libpam-systemd、libsystemd0、libudev1、systemd-container、systemd-coredump、systemd-journal-remote、systemd-sysv、systemd-tests、systemd-timesyncd、systemd、udev
+loongarch64 架构：
+libnss-myhostname、libnss-mymachines、libnss-resolve、libnss-systemd、libpam-systemd、libsystemd0、libudev1、systemd-container、systemd-coredump、systemd-journal-remote、systemd-sysv、systemd-tests、systemd-timesyncd、systemd、udev
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+245.4-4kylin3.20k0.7
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install systemd
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-myhostname_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-mymachines_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-resolve_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-systemd_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libpam-systemd_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libsystemd0_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libudev1_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-container_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-coredump_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-journal-remote_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-sysv_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-tests_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-timesyncd_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd_245.4-4kylin3.20k0.7_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/udev_245.4-4kylin3.20k0.7_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-myhostname_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-mymachines_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-resolve_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-systemd_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libpam-systemd_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libsystemd0_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libudev1_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-container_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-coredump_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-journal-remote_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-sysv_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-tests_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-timesyncd_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd_245.4-4kylin3.20k0.7_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/udev_245.4-4kylin3.20k0.7_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-myhostname_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-mymachines_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-resolve_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-systemd_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libpam-systemd_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libsystemd0_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libudev1_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-container_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-coredump_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-journal-remote_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-sysv_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-tests_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-timesyncd_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd_245.4-4kylin3.20k0.7_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/udev_245.4-4kylin3.20k0.7_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-myhostname_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-mymachines_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-resolve_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libnss-systemd_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libpam-systemd_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libsystemd0_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/libudev1_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-container_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-coredump_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-journal-remote_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-sysv_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-tests_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd-timesyncd_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/systemd_245.4-4kylin3.20k0.7_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/s/systemd/udev_245.4-4kylin3.20k0.7_loongarch64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

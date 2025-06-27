@@ -1,0 +1,13 @@
+Name:KYSA-202202-1002
+Severity:中等
+Summary:netty漏洞
+Published:2022-02-10
+URL:/support/loophole/patch/866.html
+Title:
+			公告ID：KYSA-202202-1002
+公告摘要：netty漏洞
+安全等级：Moderate
+发布日期：2022年02月10日
+影响CVE：CVE-2021-37136、CVE-2021-37137
+		
+1. 修复的CVECVE-2021-37136描述：Netty是Netty社区的一款非阻塞I/O客户端-服务器框架，它主要用于开发Java网络应用程序，如协议服务器和客户端等。netty 存在资源管理错误漏洞，该漏洞源于Bzip2 decompression decoder功能不允许对解压输出数据设置大小限制（这会影响解压期间使用的分配大小）。攻击者可利用该漏洞引发DoS攻击。CVE-2021-37137描述：Netty是Netty社区的一款非阻塞I/O客户端-服务器框架，它主要用于开发Java网络应用程序，如协议服务器和客户端等。netty存在资源管理错误漏洞，该漏洞源于Snappy frame decoder函数不限制块长度，这可能会导致过度内存使用。2. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64架构:netty、netty-helpx86_64架构:netty、netty-help3. 软件包修复版本银河麒麟高级服务器操作系统 V10 SP2netty-4.1.13-12.ky10netty-help-4.1.13-12.ky104. 修复方法方法一：配置源进行升级安装1. 打开软件包源配置文件，根据仓库地址进行修改。仓库源地址： 银河麒麟高级服务器操作系统 V10 SP2aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2. 配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename3. 升级完成后是否需要重启服务或操作系统：·CVE-2021-37136：无需重启操作系统与服务即可使漏洞修复生效。·CVE-2021-37137：无需重启操作系统与服务即可使漏洞修复生效。5. 软件包下载地址·银河麒麟高级服务器操作系统 V10 SP2 netty（aarch64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/netty-4.1.13-12.ky10.aarch64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/netty-help-4.1.13-12.ky10.noarch.rpm netty（x86_64）软件包下载地址:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/netty-4.1.13-12.ky10.x86_64.rpmhttps://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/netty-help-4.1.13-12.ky10.noarch.rpm 注：其他相关依赖包请到相同目录下载

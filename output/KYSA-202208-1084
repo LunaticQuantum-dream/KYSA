@@ -1,0 +1,107 @@
+Name:KYSA-202208-1084
+Severity:重要
+Summary:git安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1688.html
+Title:
+			公告ID：KYSA-202208-1084
+公告摘要：git安全漏洞
+安全等级：Important
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2019-1387
+描述：Git是一套免费、开源的分布式版本控制系统。Git中存在安全漏洞。攻击者可利用该漏洞执行代码。以下产品及版本受到影响：Git v2.24.1之前版本，v2.23.1之前版本，v2.22.2之前版本，v2.21.1之前版本，v2.20.2之前版本，v2.19.3之前版本，v2.18.2之前版本，v2.17.3之前版本，v2.16.6之前版本，v2.15.4之前版本，v2.14.6之前版本。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+emacs-git、emacs-git-el、git、git-all、git-bzr、git-cvs、git-daemon、git-email、git-gnome-keyring、git-gui、git-hg、git-instaweb、git-p4、git-svn、gitk、gitweb、perl-Git、perl-Git-SVN
+x86_64架构:
+emacs-git、emacs-git-el、git、git-all、git-bzr、git-cvs、git-daemon、git-email、git-gnome-keyring、git-gui、git-hg、git-instaweb、git-p4、git-svn、gitk、gitweb、perl-Git、perl-Git-SVN
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+emacs-git-1.8.3.1-21.el7_7
+emacs-git-el-1.8.3.1-21.el7_7
+git-1.8.3.1-21.el7_7
+git-all-1.8.3.1-21.el7_7
+git-bzr-1.8.3.1-21.el7_7
+git-cvs-1.8.3.1-21.el7_7
+git-daemon-1.8.3.1-21.el7_7
+git-email-1.8.3.1-21.el7_7
+git-gnome-keyring-1.8.3.1-21.el7_7
+git-gui-1.8.3.1-21.el7_7
+git-hg-1.8.3.1-21.el7_7
+git-instaweb-1.8.3.1-21.el7_7
+git-p4-1.8.3.1-21.el7_7
+git-svn-1.8.3.1-21.el7_7
+gitk-1.8.3.1-21.el7_7
+gitweb-1.8.3.1-21.el7_7
+perl-Git-1.8.3.1-21.el7_7
+perl-Git-SVN-1.8.3.1-21.el7_7
+
+4.修复方法
+方法一：配置源进行升级安装
+127.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/
+128.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+129.升级完成后是否需要重启服务或操作系统：
+·CVE-2019-1387：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+git（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/emacs-git-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/emacs-git-el-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-1.8.3.1-21.el7_7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-all-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-bzr-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-cvs-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-daemon-1.8.3.1-21.el7_7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-email-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-gnome-keyring-1.8.3.1-21.el7_7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-gui-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-hg-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-instaweb-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-p4-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/git-svn-1.8.3.1-21.el7_7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/gitk-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/gitweb-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/perl-Git-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/perl-Git-SVN-1.8.3.1-21.el7_7.noarch.rpm
+
+git（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/emacs-git-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/emacs-git-el-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-1.8.3.1-21.el7_7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-all-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-bzr-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-cvs-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-daemon-1.8.3.1-21.el7_7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-email-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-gnome-keyring-1.8.3.1-21.el7_7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-gui-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-hg-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-instaweb-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-p4-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/git-svn-1.8.3.1-21.el7_7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/gitk-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/gitweb-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/perl-Git-1.8.3.1-21.el7_7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/perl-Git-SVN-1.8.3.1-21.el7_7.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

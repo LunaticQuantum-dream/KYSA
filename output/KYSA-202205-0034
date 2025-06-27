@@ -1,0 +1,73 @@
+Name:KYSA-202205-0034
+Severity:重要
+Summary:pcre3安全漏洞
+Published:2024-03-18
+URL:/support/loophole/patch/5454.html
+Title:
+			公告ID：KYSA-202205-0034
+公告摘要：pcre3安全漏洞
+等级：重要
+发布日期：2024-03-18
+		
+1. 修复的CVE
+CVE-2020-14155
+PCRE是一款使用C语言编写的开源正则表达式函数库。 PCRE 8.44之前版本中的libpcre存在输入验证错误漏洞。攻击者可借助大量请求利用该漏洞在系统上执行任意代码或导致应用程序崩溃。
+CVE-2019-20838
+PCRE是一款使用C语言编写的开源正则表达式函数库。 PCRE 8.43之前版本中的libpcre存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+libpcre16-3、libpcre32-3、libpcre3、libpcrecpp0v5、pcregrep
+arm64 架构：
+libpcre16-3、libpcre32-3、libpcre3、libpcrecpp0v5、pcregrep
+mips64el 架构：
+libpcre16-3、libpcre32-3、libpcre3、libpcrecpp0v5、pcregrep
+loongarch64 架构：
+libpcre16-3、libpcre32-3、libpcre3、libpcrecpp0v5、pcregrep
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+2:8.39-12kylin0.1k0.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libpcre3
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre16-3_8.39-12kylin0.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre32-3_8.39-12kylin0.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre3_8.39-12kylin0.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcrecpp0v5_8.39-12kylin0.1k0.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/pcregrep_8.39-12kylin0.1k0.1_amd64.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre16-3_8.39-12kylin0.1k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre32-3_8.39-12kylin0.1k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre3_8.39-12kylin0.1k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcrecpp0v5_8.39-12kylin0.1k0.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/pcregrep_8.39-12kylin0.1k0.1_arm64.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre16-3_8.39-12kylin0.1k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre32-3_8.39-12kylin0.1k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre3_8.39-12kylin0.1k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcrecpp0v5_8.39-12kylin0.1k0.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/pcregrep_8.39-12kylin0.1k0.1_mips64el.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre16-3_8.39-12kylin0.1k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre32-3_8.39-12kylin0.1k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcre3_8.39-12kylin0.1k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/libpcrecpp0v5_8.39-12kylin0.1k0.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/pcre3/pcregrep_8.39-12kylin0.1k0.1_loongarch64.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

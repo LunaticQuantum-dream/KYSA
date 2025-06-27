@@ -1,0 +1,75 @@
+Name:KYSA-202208-1397
+Severity:中等
+Summary:pki-core安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/4281.html
+Title:
+			公告ID：KYSA-202208-1397
+公告摘要：pki-core安全漏洞
+等级：Moderate
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2012-2662
+描述：Certificate System是一套认证系统。该系统提供强大的安全框架来确保用户的身份以及通讯的私密性。Certificate System 8.1.1之前版本中存在多个跨站脚本漏洞。攻击者可利用这些漏洞绕过某些安全限制，在不知情用户浏览器中执行任意脚本代码，窃取基于cookie的认证证书，在受影响应用程序中执行某些管理权限操作。
+·CVE-2012-4543
+描述： Certificate System是一套认证系统。该系统提供强大的安全框架来确保用户的身份以及通讯的私密性。 Certificate System 8.1.3之前版本中存在多个跨站脚本漏洞，该漏洞源于‘displayCRL’脚本没有对参数‘pageStart’、‘pageSize’的内容做合法性验证及‘profileProcess’脚本也没有对参数‘nonce’的内容做合法性验证。攻击者可利用该漏洞对使用Certificate System Web的用户发动XSS攻击。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+pki-ca、pki-common、pki-common-javadoc、pki-java-tools、pki-java-tools-javadoc、pki-native-tools、pki-selinux、pki-setup、pki-silent、pki-symkey、pki-util、pki-util-javadoc
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+pki-ca-9.0.3-53.el6或以上版本
+pki-common-9.0.3-53.el6或以上版本
+pki-common-javadoc-9.0.3-53.el6或以上版本
+pki-java-tools-9.0.3-53.el6或以上版本
+pki-java-tools-javadoc-9.0.3-53.el6或以上版本
+pki-native-tools-9.0.3-53.el6或以上版本
+pki-selinux-9.0.3-53.el6或以上版本
+pki-setup-9.0.3-53.el6或以上版本
+pki-silent-9.0.3-53.el6或以上版本
+pki-symkey-9.0.3-53.el6或以上版本
+pki-util-9.0.3-53.el6或以上版本
+pki-util-javadoc-9.0.3-53.el6或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2012-2662:需要重启 pki-core 以使漏洞修复生效。
+CVE-2012-4543:需要重启 pki-core 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+pki-core(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-ca-9.0.3-53.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-common-9.0.3-53.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-common-javadoc-9.0.3-53.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-java-tools-9.0.3-53.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-java-tools-javadoc-9.0.3-53.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-native-tools-9.0.3-53.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-selinux-9.0.3-53.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-setup-9.0.3-53.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-silent-9.0.3-53.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-symkey-9.0.3-53.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-util-9.0.3-53.el6.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/pki-util-javadoc-9.0.3-53.el6.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

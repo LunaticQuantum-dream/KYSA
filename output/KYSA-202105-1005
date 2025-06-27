@@ -1,0 +1,110 @@
+Name:KYSA-202105-1005
+Severity:中等
+Summary:ImageMagick安全漏洞
+Published:2021-05-01
+URL:/support/loophole/patch/3283.html
+Title:
+			公告ID：KYSA-202105-1005
+公告摘要：ImageMagick安全漏洞
+等级：Moderate
+发布日期：2021-05-01
+		
+1.修复的CVE
+·CVE-2020-25676
+描述：Imagemagick Studio ImageMagick是美国ImageMagick Studio（Imagemagick Studio）公司的一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。使用了多个不受约束的像素偏移量计算。这些计算产生了超出范围和整数溢出形式的未定义行为，由UndefinedBehaviorSanitizer确认。能够提供由ImageMagick处理的精心制作的输入文件的攻击者可利用该漏洞可以触发这些未定义行为的实例。
+·CVE-2020-27757
+描述：Imagemagick Studio ImageMagick是美国ImageMagick Studio（Imagemagick Studio）公司的一套开源的图像处理软件。该软件可读取、转换或写入多种格式的图片。 该漏洞源于/MagickCore/quantum-private.h ScaleAnyToQuantum()中的浮点数学计算可能会导致未定义的行为，其形式是在类型unsigned long long范围之外的值。
+·CVE-2020-27758
+描述：在ImageMagick的coders / txt.c中发现了一个缺陷。提交由ImageMagick处理的特制文件的攻击者可能会以“ unsigned long long”类型范围之外的值形式触发未定义的行为。这很可能会影响应用程序的可用性，但可能会导致其他与未定义行为有关的问题。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+ImageMagick、ImageMagick-c++、ImageMagick-c++-devel、ImageMagick-devel、ImageMagick-help、ImageMagick-perl
+·x86_64架构:
+ImageMagick、ImageMagick-c++、ImageMagick-c++-devel、ImageMagick-devel、ImageMagick-help、ImageMagick-perl
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+ImageMagick、ImageMagick-c++、ImageMagick-c++-devel、ImageMagick-devel、ImageMagick-help、ImageMagick-perl
+·x86_64架构:
+ImageMagick、ImageMagick-c++、ImageMagick-c++-devel、ImageMagick-devel、ImageMagick-help、ImageMagick-perl
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、x86_64)
+ImageMagick-6.9.10.67-21.ky10或以上版本
+ImageMagick-c++-6.9.10.67-21.ky10或以上版本
+ImageMagick-c++-devel-6.9.10.67-21.ky10或以上版本
+ImageMagick-devel-6.9.10.67-21.ky10或以上版本
+ImageMagick-help-6.9.10.67-21.ky10或以上版本
+ImageMagick-perl-6.9.10.67-21.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+ImageMagick-6.9.10.67-21.ky10或以上版本
+ImageMagick-c++-6.9.10.67-21.ky10或以上版本
+ImageMagick-c++-devel-6.9.10.67-21.ky10或以上版本
+ImageMagick-devel-6.9.10.67-21.ky10或以上版本
+ImageMagick-help-6.9.10.67-21.ky10或以上版本
+ImageMagick-perl-6.9.10.67-21.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2020-25676:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-27757:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-27758:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+ImageMagick(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/ImageMagick-6.9.10.67-21.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/ImageMagick-c++-6.9.10.67-21.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/ImageMagick-c++-devel-6.9.10.67-21.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/ImageMagick-devel-6.9.10.67-21.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/ImageMagick-help-6.9.10.67-21.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/ImageMagick-perl-6.9.10.67-21.ky10.aarch64.rpm
+
+ImageMagick(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/ImageMagick-6.9.10.67-21.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/ImageMagick-c++-6.9.10.67-21.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/ImageMagick-c++-devel-6.9.10.67-21.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/ImageMagick-devel-6.9.10.67-21.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/ImageMagick-help-6.9.10.67-21.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/ImageMagick-perl-6.9.10.67-21.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+ImageMagick(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-6.9.10.67-21.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-c++-6.9.10.67-21.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-c++-devel-6.9.10.67-21.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-devel-6.9.10.67-21.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-help-6.9.10.67-21.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/ImageMagick-perl-6.9.10.67-21.ky10.aarch64.rpm
+
+ImageMagick(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-6.9.10.67-21.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-c++-6.9.10.67-21.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-c++-devel-6.9.10.67-21.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-devel-6.9.10.67-21.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-help-6.9.10.67-21.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/ImageMagick-perl-6.9.10.67-21.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

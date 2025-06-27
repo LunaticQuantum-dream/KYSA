@@ -1,0 +1,59 @@
+Name:KYSA-202208-1447
+Severity:中等
+Summary:unzip安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/1964.html
+Title:
+			公告ID：KYSA-202208-1447
+公告摘要：unzip安全漏洞
+等级：Moderate
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2014-8139
+描述：Info-ZIP UnZip是美国Greg Roelofs软件开发者的一套基于Unix平台的用于对“.zip”文件格式进行解压的工具。Info-ZIP UnZip 6.0及之前版本中的CRC32验证存在缓冲区错误漏洞，该漏洞源于程序没有正确验证边界。远程攻击者可借助特制zip文件利用该漏洞在系统上执行任意代码。
+·CVE-2014-8140
+描述：Info-ZIP UnZip是美国Greg Roelofs软件开发者的一套基于Unix平台的用于对“.zip”文件格式进行解压的工具。Info-ZIP UnZip 6.0及之前版本中的‘test_compr_eb’函数存在缓冲区错误漏洞，该漏洞源于程序没有正确验证边界。远程攻击者可借助特制zip文件利用该漏洞在系统上执行任意代码。
+·CVE-2014-8141
+描述：Info-ZIP UnZip是美国Greg Roelofs软件开发者的一套基于Unix平台的用于对“.zip”文件格式进行解压的工具。Info-ZIP UnZip 6.0及之前版本中的‘getZip64Data’函数存在缓冲区错误漏洞，该漏洞源于程序没有正确验证边界。远程攻击者可借助特制zip文件利用该漏洞在系统上执行任意代码。
+·CVE-2014-9636
+描述：Info-ZIP UnZip是美国软件开发者Greg Roelofs所研发的一套基于Unix平台的用于对“.zip”文件格式进行解压的工具。Info-ZIP UnZip 6.0版本中存在安全漏洞，该漏洞源于程序在解压缩时没有正确处理zip归档文件。远程攻击者可借助附加的字段利用该漏洞造成拒绝服务（崩溃和越边界读取或写入）。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+unzip
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+unzip-6.0-5.el6或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2014-8139:需要重启 unzip 以使漏洞修复生效。
+CVE-2014-8140:需要重启 unzip 以使漏洞修复生效。
+CVE-2014-8141:需要重启 unzip 以使漏洞修复生效。
+CVE-2014-9636:需要重启 unzip 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+unzip(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/unzip-6.0-5.el6.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

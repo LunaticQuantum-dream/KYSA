@@ -1,0 +1,13 @@
+Name:KYSA-202109-1006
+Severity:重要
+Summary:maven漏洞
+Published:2021-09-03
+URL:/support/loophole/patch/491.html
+Title:
+			摘要：maven漏洞
+安全等级：重要
+公告ID：KYSA-202109-1006
+发布日期：2021-09-03
+影响CVE：CVE-2021-26291
+		
+1. 修复的CVE信息CVE-2021-26291描述：Apache Maven 将遵循依赖项的项目对象模型 (pom) 中定义的存储库，这可能会让某些用户感到惊讶，如果恶意行为者接管该存储库或能够将自己插入到伪装的位置，则会导致那个存储库存在风险。 Maven 正在更改 3.8.1+ 中的默认行为，默认情况下不再遵循 http（非 SSL）存储库引用。参考网址中提供了更多详细信息。如果您当前正在使用存储库管理器来管理构建使用的存储库，则您不会受到遗留行为中存在的风险的影响，也不会受到此漏洞和默认行为更改的影响。有关存储库管理的更多信息，请参阅此链接：https://maven.apache.org/repository-management.html 2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2maven-3.5.4-10.ky10maven-javadoc-3.5.4-10.ky10maven-lib-3.5.4-10.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:maven、maven-javadoc、maven-libx86_64:maven、maven-javadoc、maven-lib4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP2aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP2 maven aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/maven-3.5.4-10.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/maven-javadoc-3.5.4-10.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/maven-lib-3.5.4-10.ky10.noarch.rpm  maven x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/maven-3.5.4-10.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/maven-javadoc-3.5.4-10.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/maven-lib-3.5.4-10.ky10.noarch.rpm 注：其他相关依赖包请到相同目录下载 

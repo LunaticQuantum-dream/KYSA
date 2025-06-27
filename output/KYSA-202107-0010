@@ -1,0 +1,207 @@
+Name:KYSA-202107-0010
+Severity:中等
+Summary:php7.4安全漏洞
+Published:2023-01-03
+URL:/support/loophole/patch/2456.html
+Title:
+			公告ID：KYSA-202107-0010
+公告摘要：php7.4安全漏洞
+等级：Moderate
+发布日期：2023-01-03
+		
+1. 修复的CVE
+CVE-2020-7068
+PHP（PHP：Hypertext Preprocessor，PHP：超文本预处理器）是PHPGroup和开放源代码社区的共同维护的一种开源的通用计算机脚本语言。该语言主要用于Web开发，支持多种数据库及操作系统。 
+PHP 中存在资源管理错误漏洞。该漏洞源于网络系统或产品对系统资源（如内存、磁盘空间、文件等）的管理不当。
+CVE-2021-21705
+EasyApache是Apache基金会的一个功能强大且易于使用的工具，内置在WHM/cPanel中，可以使用它来更新和配置Apache web服务器。EasyApache存在代码问题漏洞，攻击者可利用该漏洞通过PHP的FILTER VALIDATE URL欺骗用户，以便将其重定向到恶意站点。
+CVE-2021-21704
+EasyApache是Apache基金会的一个功能强大且易于使用的工具，内置在WHM/cPanel中，可以使用它来更新和配置Apache web服务器。EasyApache 存在安全漏洞，该漏洞源于EasyApache中PDO_Firebird的缓冲区溢出。攻击者可利用该漏洞触发拒绝服务，并可能运行代码。
+CVE-2021-21702
+PHP（PHP：Hypertext Preprocessor，PHP：超文本预处理器）是PHP社区的共同维护的一种开源的通用计算机脚本语言。该语言主要用于Web开发，支持多种数据库及操作系统。 
+Php SoapClient 存在代码问题漏洞，攻击者可利用该漏洞强制一个空指针被解引用，从而触发拒绝服务。以下产品及型号受到影响：7.3.x 至 7.3.27, 7.4.x 至 7.4.15 and 8.0.x 至 8.0.2。
+CVE-2020-7071
+PHP（PHP：Hypertext Preprocessor，PHP：超文本预处理器）是PHP社区的共同维护的一种开源的通用计算机脚本语言。该语言主要用于Web开发，支持多种数据库及操作系统。 
+PHP 存在输入验证错误漏洞，该漏洞源于php_url_parse_ex函数导致FILTER_VALIDATE_URL接受带有无效userinfo的URL。
+
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+libapache2-mod-php7.4、libphp7.4-embed、php7.4-bcmath、php7.4-bz2、php7.4-cgi、php7.4-cli、php7.4-common、php7.4-curl、php7.4-dba、php7.4-enchant、php7.4-fpm、php7.4-gd、php7.4-gmp、php7.4-imap、php7.4-interbase、php7.4-intl、php7.4-json、php7.4-ldap、php7.4-mbstring、php7.4-mysql、php7.4-odbc、php7.4-opcache、php7.4-pgsql、php7.4-phpdbg、php7.4-pspell、php7.4-readline、php7.4-snmp、php7.4-soap、php7.4-sqlite3、php7.4-sybase、php7.4-tidy、php7.4-xml、php7.4-xmlrpc、php7.4-xsl、php7.4-zip、php7.4
+arm64 架构：
+libapache2-mod-php7.4、libphp7.4-embed、php7.4-bcmath、php7.4-bz2、php7.4-cgi、php7.4-cli、php7.4-common、php7.4-curl、php7.4-dba、php7.4-enchant、php7.4-fpm、php7.4-gd、php7.4-gmp、php7.4-imap、php7.4-interbase、php7.4-intl、php7.4-json、php7.4-ldap、php7.4-mbstring、php7.4-mysql、php7.4-odbc、php7.4-opcache、php7.4-pgsql、php7.4-phpdbg、php7.4-pspell、php7.4-readline、php7.4-snmp、php7.4-soap、php7.4-sqlite3、php7.4-sybase、php7.4-tidy、php7.4-xml、php7.4-xmlrpc、php7.4-xsl、php7.4-zip、php7.4
+mips64el 架构：
+libapache2-mod-php7.4、libphp7.4-embed、php7.4-bcmath、php7.4-bz2、php7.4-cgi、php7.4-cli、php7.4-common、php7.4-curl、php7.4-dba、php7.4-enchant、php7.4-fpm、php7.4-gd、php7.4-gmp、php7.4-imap、php7.4-interbase、php7.4-intl、php7.4-json、php7.4-ldap、php7.4-mbstring、php7.4-mysql、php7.4-odbc、php7.4-opcache、php7.4-pgsql、php7.4-phpdbg、php7.4-pspell、php7.4-readline、php7.4-snmp、php7.4-soap、php7.4-sqlite3、php7.4-sybase、php7.4-tidy、php7.4-xml、php7.4-xmlrpc、php7.4-xsl、php7.4-zip、php7.4
+loongarch64 架构：
+libapache2-mod-php7.4、libphp7.4-embed、php7.4-bcmath、php7.4-bz2、php7.4-cgi、php7.4-cli、php7.4-common、php7.4-curl、php7.4-dba、php7.4-enchant、php7.4-fpm、php7.4-gd、php7.4-gmp、php7.4-imap、php7.4-interbase、php7.4-intl、php7.4-json、php7.4-ldap、php7.4-mbstring、php7.4-mysql、php7.4-odbc、php7.4-opcache、php7.4-pgsql、php7.4-phpdbg、php7.4-pspell、php7.4-readline、php7.4-snmp、php7.4-soap、php7.4-sqlite3、php7.4-sybase、php7.4-tidy、php7.4-xml、php7.4-xmlrpc、php7.4-xsl、php7.4-zip、php7.4
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+7.4.3-4kylin2.5
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install php7.4
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/libapache2-mod-php7.4_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/libphp7.4-embed_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-bcmath_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-bz2_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-cgi_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-cli_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-common_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-curl_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-dba_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-enchant_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-fpm_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-gd_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-gmp_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-imap_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-interbase_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-intl_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-json_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-ldap_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-mbstring_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-mysql_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-odbc_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-opcache_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-pgsql_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-phpdbg_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-pspell_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-readline_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-snmp_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-soap_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-sqlite3_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-sybase_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-tidy_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xml_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xmlrpc_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xsl_7.4.3-4kylin2.5_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-zip_7.4.3-4kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4_7.4.3-4kylin2.5_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/libapache2-mod-php7.4_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/libphp7.4-embed_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-bcmath_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-bz2_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-cgi_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-cli_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-common_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-curl_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-dba_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-enchant_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-fpm_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-gd_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-gmp_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-imap_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-interbase_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-intl_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-json_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-ldap_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-mbstring_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-mysql_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-odbc_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-opcache_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-pgsql_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-phpdbg_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-pspell_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-readline_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-snmp_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-soap_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-sqlite3_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-sybase_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-tidy_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xml_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xmlrpc_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xsl_7.4.3-4kylin2.5_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-zip_7.4.3-4kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4_7.4.3-4kylin2.5_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/libapache2-mod-php7.4_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/libphp7.4-embed_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-bcmath_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-bz2_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-cgi_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-cli_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-common_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-curl_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-dba_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-enchant_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-fpm_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-gd_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-gmp_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-imap_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-interbase_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-intl_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-json_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-ldap_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-mbstring_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-mysql_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-odbc_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-opcache_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-pgsql_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-phpdbg_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-pspell_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-readline_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-snmp_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-soap_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-sqlite3_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-sybase_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-tidy_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xml_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xmlrpc_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xsl_7.4.3-4kylin2.5_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-zip_7.4.3-4kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4_7.4.3-4kylin2.5_all.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/libapache2-mod-php7.4_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/libphp7.4-embed_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-bcmath_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-bz2_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-cgi_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-cli_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-common_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-curl_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-dba_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-enchant_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-fpm_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-gd_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-gmp_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-imap_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-interbase_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-intl_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-json_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-ldap_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-mbstring_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-mysql_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-odbc_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-opcache_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-pgsql_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-phpdbg_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-pspell_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-readline_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-snmp_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-soap_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-sqlite3_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-sybase_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-tidy_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xml_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xmlrpc_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-xsl_7.4.3-4kylin2.5_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4-zip_7.4.3-4kylin2.5_loongarch64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/p/php7.4/php7.4_7.4.3-4kylin2.5_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

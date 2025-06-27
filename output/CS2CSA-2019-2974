@@ -1,0 +1,14 @@
+Name:CS2CSA-2019-2974
+Severity:中等
+Summary:Oracle MySQL Server 安全漏洞
+Published:2019-10-15
+URL:/support/loophole/patch/287.html
+Title:
+			摘要：          Oracle MySQL Server 安全漏洞
+安全等级：          中等
+公告ID：         CS2CSA-2019-2974
+产品：             银河麒麟高级服务器操作系统V10（SP1）      
+发布日期：         2019-10-15
+CVE：          CVE-2019-2974
+		
+1. 概述：银河麒麟高级服务器操作系统V10（SP1）有mariadb的可用更新。2. 相关版本/架构：银河麒麟高级服务器操作系统V10（SP1）-X86_64。3. 描述：Oracle MySQL是美国甲骨文（Oracle）公司的一套开源的关系数据库管理系统。MySQL Server是其中的一个数据库服务器组件。Oracle MySQL中的MySQL Server 5.6.45及之前版本、5.7.27及之前版本和8.0.17及之前版本的Server： Optimizer组件存在安全漏洞。攻击者可利用该漏洞造成拒绝服务（挂起或频繁崩溃），影响数据的可用性。4.影响系统情况：中标麒麟高级服务器操作系统软件V7：已修复。银河麒麟高级服务器操作系统V10：已修复。银河麒麟高级服务器操作系统V10(SP1)：已修复。

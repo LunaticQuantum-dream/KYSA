@@ -1,0 +1,83 @@
+Name:KYSA-202104-1319
+Severity:中等
+Summary:qt5-qtwayland安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/2172.html
+Title:
+			公告ID：KYSA-202104-1319
+公告摘要：qt5-qtwayland安全漏洞
+等级：Moderate
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2018-15518
+描述：5.11.3之前的qt5.x中的QXmlStream在解析巧尽心思构建的非法XML文档时出现双重释放或损坏。
+·CVE-2018-19870
+描述：在GnuTLS中发现了一个缺陷，如果在意外的时间内发送no_重新协商警报，服务器可以触发客户机运行到堆缓冲区溢出。此缺陷允许客户端在会话取消初始化时崩溃。此漏洞的最大威胁是系统可用性。
+·CVE-2018-19873
+描述：在5.11.3之前的Qt中发现了一个问题。QBmpHandler通过BMP数据有缓冲区溢出。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+qt5-qtwayland、qt5-qtwayland-devel、qt5-qtwayland-doc、qt5-qtwayland-examples
+·x86_64架构:
+qt5-qtwayland、qt5-qtwayland-devel、qt5-qtwayland-doc、qt5-qtwayland-examples
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+qt5-qtwayland-5.9.7-1.el7或以上版本
+qt5-qtwayland-devel-5.9.7-1.el7或以上版本
+qt5-qtwayland-doc-5.9.7-1.el7或以上版本
+qt5-qtwayland-examples-5.9.7-1.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2018-15518:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-19870:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-19873:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+qt5-qtwayland(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/qt5-qtwayland-5.9.7-1.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt5-qtwayland-5.9.7-1.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/qt5-qtwayland-devel-5.9.7-1.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt5-qtwayland-devel-5.9.7-1.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/qt5-qtwayland-doc-5.9.7-1.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt5-qtwayland-doc-5.9.7-1.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/qt5-qtwayland-examples-5.9.7-1.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/qt5-qtwayland-examples-5.9.7-1.el7.aarch64.rpm
+
+qt5-qtwayland(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-5.9.7-1.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-5.9.7-1.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-5.9.7-1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-5.9.7-1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-devel-5.9.7-1.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-devel-5.9.7-1.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-devel-5.9.7-1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-devel-5.9.7-1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-doc-5.9.7-1.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-doc-5.9.7-1.el7.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-examples-5.9.7-1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/qt5-qtwayland-examples-5.9.7-1.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

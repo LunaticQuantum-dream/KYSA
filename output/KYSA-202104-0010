@@ -1,0 +1,13 @@
+Name:KYSA-202104-0010
+Severity:中等
+Summary:shibboleth-sp安全漏洞
+Published:2021-04-30
+URL:/support/loophole/patch/445.html
+Title:
+			摘要：shibboleth-sp安全漏洞
+安全等级：中等
+公告ID：KYSA-202104-0010
+发布日期：2021-04-30
+影响CVE：CVE-2021-28963
+		
+1. 修复的CVE信息CVE-2021-28963Shibboleth是英国Shibboleth公司的一套基于Windows平台的开源的SAML协议的Web单点登录系统。Shibboleth Service Provider before 3.2.1 存在安全漏洞，该漏洞源于模板生成使用攻击者控制的参数。2. 受影响的软件包银河麒麟桌面操作系统V10 SP1libapache2-mod-shiblibapache2-mod-shib2libshibsp-devlibshibsp-doclibshibsp-pluginslibshibsp8shibboleth-sp-commonshibboleth-sp-utilsshibboleth-sp2-commonshibboleth-sp2-utils3. 影响的操作系统银河麒麟桌面操作系统V10 SP14. 修复版本软件包：shibboleth-sp3.0.4+dfsg1-1kylin0.1(V10 SP1)5. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。4.0.2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2-desktop main restricted universe multiverse4.0.2-sp1桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse4.0.2-sp2桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse4.0.2-sp3桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse4.0.2-sp4桌面版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse10.0版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse10.1专业版本：http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级。$sudo apt update方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。$dpkg -i Packagelists6. 软件包下载地址银河麒麟桌面操作系统V10 SP1X86下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/shibboleth-sp/shibboleth-sp2-common_3.0.4+dfsg1-1kylin0.1_all.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/shibboleth-sp/shibboleth-sp2-utils_3.0.4+dfsg1-1kylin0.1_all.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/shibboleth-sp/libapache2-mod-shib2_3.0.4+dfsg1-1kylin0.1_all.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/shibboleth-sp/libshibsp-plugins_3.0.4+dfsg1-1kylin0.1_amd64.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/shibboleth-sp/libshibsp8_3.0.4+dfsg1-1kylin0.1_amd64.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/shibboleth-sp/shibboleth-sp-utils_3.0.4+dfsg1-1kylin0.1_amd64.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/shibboleth-sp/libshibsp-doc_3.0.4+dfsg1-1kylin0.1_all.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/shibboleth-sp/libapache2-mod-shib_3.0.4+dfsg1-1kylin0.1_amd64.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/shibboleth-sp/libshibsp-dev_3.0.4+dfsg1-1kylin0.1_amd64.deb http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/s/shibboleth-sp/shibboleth-sp-common_3.0.4+dfsg1-1kylin0.1_all.deb

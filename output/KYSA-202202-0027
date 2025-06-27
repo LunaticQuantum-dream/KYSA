@@ -1,0 +1,13 @@
+Name:KYSA-202202-0027
+Severity:重要
+Summary:kylin-activation安全漏洞
+Published:2022-03-16
+URL:/support/loophole/patch/1331.html
+Title:
+			公告ID：KYSA-202202-0027
+公告摘要：kylin-activation安全漏洞
+安全等级：重要
+发布日期：2022-03-16
+影响CVE：CVE-2023-1164（KVE-2022-0231）
+		
+1. 修复的CVECVE-2023-1164（KVE-2022-0231）kylin-activation软件包是用于授权验证与激活的组件。该软件包未对导入文件操作的合法性进行严格限制，因此造成系统配置文件所在目录被导入非法配置文件，从而造成普通用户本地权限提升。2. 受影响的操作系统及软件包银河麒麟桌面操作系统V10 SP1 x86_64 架构：kylin-activationarm64 架构：kylin-activationmips64el 架构：kylin-activationloongarch64 架构：kylin-activation3. 软件包修复版本银河麒麟桌面操作系统V10 SP11.3.11-234. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。10.0 SP1: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级$sudo apt update$sudo apt install kylin-activation方法二：下载软件包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。5. 软件包下载地址银河麒麟桌面操作系统V10 SP1x86_64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/k/kylin-activation/kylin-activation_1.3.11-23_amd64.debarm64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/k/kylin-activation/kylin-activation_1.3.11-23_arm64.debmips64el软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/k/kylin-activation/kylin-activation_1.3.11-23_mips64el.debloongarch64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/k/kylin-activation/kylin-activation_1.3.11-23_loongarch64.deb6. 修复验证使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。$sudo dpkg -l |grep Package注：Package为软件包包名。

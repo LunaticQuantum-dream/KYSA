@@ -1,0 +1,13 @@
+Name:KYSA-202109-1017
+Severity:中等
+Summary:curl漏洞
+Published:2021-09-10
+URL:/support/loophole/patch/502.html
+Title:
+			摘要：curl漏洞
+安全等级：中等
+公告ID：KYSA-202109-1017
+发布日期：2021-09-10
+影响CVE：CVE-2021-22924
+		
+1. 修复的CVE信息CVE-2021-22924描述：在 libcurl 处理以前使用的连接的方式中发现了一个漏洞，没有考虑“颁发者证书”并且不区分大小写地比较所涉及的路径。此漏洞允许 libcurl 使用错误的连接。此漏洞的最大威胁是机密性。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2curl-7.71.1-9.ky10curl-debugsource-7.71.1-9.ky10curl-help-7.71.1-9.ky10libcurl-7.71.1-9.ky10libcurl-devel-7.71.1-9.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:curl、curl-debugsource、curl-help、libcurl、libcurl-develx86_64:curl、curl-debugsource、curl-help、libcurl、libcurl-devel4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP2aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP2 curl aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/curl-7.71.1-9.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/curl-debugsource-7.71.1-9.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/curl-help-7.71.1-9.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libcurl-7.71.1-9.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/libcurl-devel-7.71.1-9.ky10.aarch64.rpm curl x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/curl-7.71.1-9.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/curl-debugsource-7.71.1-9.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/curl-help-7.71.1-9.ky10.noarch.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libcurl-7.71.1-9.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/libcurl-devel-7.71.1-9.ky10.x86_64.rpm 注：其他相关依赖包请到相同目录下载 

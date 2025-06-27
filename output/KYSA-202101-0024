@@ -1,0 +1,13 @@
+Name:KYSA-202101-0024
+Severity:中等
+Summary:mutt漏洞
+Published:2021-03-02
+URL:/support/loophole/patch/351.html
+Title:
+			摘要：mutt漏洞
+安全等级：中等
+公告ID：KYSA-202101-0024
+发布日期：2021-03-02
+影响CVE：CVE-2021-3181
+		
+1.公告详情：Mutt 2.0.4中的rfc822.c允许远程攻击者通过在RFC822地址字段（也称为空组的终止符）中发送带有分号字符序列的电子邮件，从而导致拒绝服务（邮箱不可用）。来自攻击者的少量电子邮件消息可能会占用大量内存，因此受害者可能看不到其他人的电子邮件消息。（CVE-2021-3181）2. 受影响的操作系统：银河麒麟桌面操作系统V10专业版银河麒麟桌面操作系统V4银河麒麟桌面操作系统V4 SP1银河麒麟桌面操作系统V4 SP2银河麒麟桌面操作系统V4 SP3银河麒麟桌面操作系统V4 SP4银河麒麟桌面操作系统V10银河麒麟桌面操作系统V10 SP1银河麒麟服务器操作系统V4银河麒麟服务器操作系统V4 SP1银河麒麟服务器操作系统V4 SP2银河麒麟服务器操作系统V4 SP3银河麒麟服务器操作系统V4 SP43. 修复版本软件包：muttmutt - 1.5.24-1kord0.6（V4、V10）mutt - 1.13.2-1kylin0.4（V10专业版）4. 受影响的软件包银河麒麟桌面操作系统V4桌面版mutt-dbgmutt-patchedmutt银河麒麟桌面操作系统V10桌面版mutt-dbgmutt-patchedmutt银河麒麟桌面操作系统V10专业版mutt5.修复方法方法一：配置源进行升级安装         打开软件包源配置文件，根据仓库地址进行修改。                4.0.2: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2-desktop main restricted universe multiverse                4.0.2-sp1: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse                4.0.2-sp2: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse                4.0.2-sp3: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse                4.0.2-sp4: http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse                10.0: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse                10.0专业版: http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse        配置完成后执行更新命令进行升级   $sudo apt update方法二：下载安装包进行升级安装        通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。 $dpkg -i Packagelists6. 软件包下载地址麒麟操作系统V10桌面版、V4X86_64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mutt/mutt-dbg_1.5.24-1kord0.6_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mutt/mutt-patched_1.5.24-1kord0.6_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mutt/mutt_1.5.24-1kord0.6_amd64.debarm64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mutt/mutt-dbg_1.5.24-1kord0.6_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mutt/mutt-patched_1.5.24-1kord0.6_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mutt/mutt_1.5.24-1kord0.6_arm64.deb银河麒麟桌面操作系统V10专业版X86_64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mutt/mutt_1.13.2-1kylin0.4_amd64.debarm64软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mutt/mutt_1.13.2-1kylin0.4_arm64.deb  mips64el软件包下载地址：http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/m/mutt/mutt_1.13.2-1kylin0.4_mips64el.deb 

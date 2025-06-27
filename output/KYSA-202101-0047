@@ -1,0 +1,13 @@
+Name:KYSA-202101-0047
+Severity:低等
+Summary:edk2安全漏洞
+Published:2022-03-02
+URL:/support/loophole/patch/949.html
+Title:
+			公告ID：KYSA-202101-0047
+公告摘要：edk2安全漏洞
+安全等级：低等
+发布日期：2022-03-02
+影响CVE：CVE-2019-14584、CVE-2019-14562
+		
+1. 修复的CVECVE-2019-14584Tianocore Edk2是Tianocore社区的一个遵循UEFI和PI规范的跨平台固件开发环境。 Tianocore Edk2 种存在安全漏洞，以下产品及版本受到影响：Red Hat Enterprise Linux 7，Red Hat Enterprise Linux 8，Ubuntu 21.04 (Hirsute Hippo)，Ubuntu 20.10 (Groovy Gorilla)，Ubuntu 20.04 LTS (Focal Fossa)，Ubuntu 18.04 LTS (Bionic Beaver)，Ubuntu 16.04 LTS (Xenial Xerus)，Ubuntu 14.04 ESM (Trusty Tahr)Ubuntu 12.04 ESM (Precise Pangolin)，SUSE Linux Enterprise Module for Open Buildservice Development Tools 15 SP2，SUSE Linux Enterprise Module for Server Applications 15 SP1，SUSE Linux Enterprise Module for Server Applications 15 SP2，SUSE Linux Enterprise Module for Server Applications 15 SP2CVE-2019-14562EDK2是TianoCore（Tianocore）社区的一套基于UEFI和PI规范的跨平台固件开发环境。TianoCore EDK II BIOS中存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。2. 受影响的操作系统及软件包·银河麒麟桌面操作系统V10x86_64 架构：ovmf、qemu-efiarm64 架构：ovmf、qemu-efimips64el 架构：ovmf、qemu-efiloongarch64 架构：ovmf、qemu-efi3. 软件包修复版本·银河麒麟桌面操作系统V100~20160408.ffea0a2c-2kord0.2 4. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。10.0:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse配置完成后执行更新命令进行升级$sudo apt update$sudo apt install ovmf$sudo apt install qemu-efi方法二：下载软件包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。 5. 软件包下载地址银河麒麟桌面操作系统V10x86_64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/multiverse/e/edk2/ovmf_0~20160408.ffea0a2c-2kord0.2_all.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/multiverse/e/edk2/qemu-efi_0~20160408.ffea0a2c-2kord0.2_all.debarm64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/multiverse/e/edk2/ovmf_0~20160408.ffea0a2c-2kord0.2_all.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/multiverse/e/edk2/qemu-efi_0~20160408.ffea0a2c-2kord0.2_all.debmips64el软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/multiverse/e/edk2/ovmf_0~20160408.ffea0a2c-2kord0.2_all.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/multiverse/e/edk2/qemu-efi_0~20160408.ffea0a2c-2kord0.2_all.debloongarch64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/multiverse/e/edk2/ovmf_0~20160408.ffea0a2c-2kord0.2_all.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/multiverse/e/edk2/qemu-efi_0~20160408.ffea0a2c-2kord0.2_all.deb6. 修复验证使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。$sudo dpkg -l |grep Package注：Package为软件包包名。

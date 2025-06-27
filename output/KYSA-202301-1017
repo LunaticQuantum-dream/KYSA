@@ -1,0 +1,79 @@
+Name:KYSA-202301-1017
+Severity:中等
+Summary:libexif安全漏洞
+Published:2023-01-17
+URL:/support/loophole/patch/2561.html
+Title:
+			公告ID：KYSA-202301-1017
+公告摘要：libexif安全漏洞
+等级：Moderate
+发布日期：2023-01-17
+		
+1.修复的CVE
+·CVE-2019-9278
+描述：Android是美国谷歌（Google）和开放手持设备联盟（简称OHA）的一套以Linux为基础的开源操作系统。Android 10版本中的libexif存在缓冲区错误漏洞。攻击者可利用该漏洞提升权限。
+·CVE-2020-0093
+描述：Android是美国谷歌（Google）和开放手持设备联盟（简称OHA）的一套以Linux为基础的开源操作系统。Media Framework是其中的一个多媒体开发框架。Android中的Media Framework存在安全漏洞。攻击者可利用该漏洞获取信息。以下产品及版本受到影响：Android 8.0版本，8.1版本，9版本，10版本。
+·CVE-2020-0181
+描述：Android是美国谷歌（Google）和开放手持设备联盟（简称OHA）的一套以Linux为基础的开源操作系统。Media Framework是其中的一个多媒体开发框架。Android 10版本中的Media Framework存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。
+·CVE-2020-0198
+描述：Android是美国谷歌（Google）和开放手持设备联盟（简称OHA）的一套以Linux为基础的开源操作系统。Media Framework是其中的一个多媒体开发框架。Android 10版本中的Media Framework存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+libexif、libexif-devel、libexif-help
+·mips64el架构:
+libexif、libexif-devel、libexif-help
+·x86_64架构:
+libexif、libexif-devel、libexif-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、mips64el、x86_64)
+libexif-0.6.21-24.ky10或以上版本
+libexif-devel-0.6.21-24.ky10或以上版本
+libexif-help-0.6.21-24.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2019-9278:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-0093:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-0181:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-0198:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+libexif(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/libexif-0.6.21-24.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/libexif-devel-0.6.21-24.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/libexif-help-0.6.21-24.ky10.noarch.rpm
+
+libexif(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libexif-0.6.21-24.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libexif-devel-0.6.21-24.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/libexif-help-0.6.21-24.ky10.noarch.rpm
+
+libexif(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/libexif-0.6.21-24.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/libexif-devel-0.6.21-24.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/libexif-help-0.6.21-24.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,13 @@
+Name:KYSA-202103-0025
+Severity:中等
+Summary:libzstd安全漏洞
+Published:2022-06-23
+URL:/support/loophole/patch/2191.html
+Title:
+			公告ID：KYSA-202103-0025
+公告摘要：libzstd安全漏洞
+等级：中等
+发布日期：2022-06-23
+影响CVE：CVE-2021-24032、CVE-2021-24031
+		
+1. 修复的CVECVE-2021-24032Facebook Zstandard是美国Facebook公司的一种开源的无损数据压缩算法。Zstandard command-line v1.4.1 and prior to v1.4.9 存在安全漏洞，该漏洞源于对CVE-2021-24031的修复不完整，Zstandard命令行工具使用默认权限创建输出文件，然后立即限制这些权限。CVE-2021-24031Facebook Zstandard是美国Facebook公司的一种开源的无损数据压缩算法。Zstandard command-line utility prior to v1.4.1 存在安全漏洞，该漏洞源于输出文件可以被非预期方读取或写入。 2. 受影响的操作系统及软件包·银河麒麟桌面操作系统V10 SP1x86_64 架构：libzstd1、zstdarm64 架构：libzstd1、zstdmips64el 架构：libzstd1、zstdloongarch64 架构：libzstd1、zstd3. 软件包修复版本·银河麒麟桌面操作系统V10 SP11.4.4+dfsg-3kylin0.14. 修复方法方法一：配置源进行升级安装打开软件包源配置文件，根据仓库地址进行修改。10.0 SP1:http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse配置完成后执行更新命令进行升级$sudo apt update$sudo apt install libzstd1$sudo apt install zstd方法二：下载软件包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。 5. 软件包下载地址银河麒麟桌面操作系统V10 SP1x86_64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libz/libzstd/libzstd1_1.4.4%2Bdfsg-3kylin0.1_amd64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libz/libzstd/zstd_1.4.4%2Bdfsg-3kylin0.1_amd64.debarm64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libz/libzstd/libzstd1_1.4.4%2Bdfsg-3kylin0.1_arm64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libz/libzstd/zstd_1.4.4%2Bdfsg-3kylin0.1_arm64.debmips64el软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libz/libzstd/libzstd1_1.4.4%2Bdfsg-3kylin0.1_mips64el.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/libz/libzstd/zstd_1.4.4%2Bdfsg-3kylin0.1_mips64el.debloongarch64软件包下载地址http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libz/libzstd/libzstd1_1.4.4%2Bdfsg-3kylin0.1_loongarch64.debhttp://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libz/libzstd/zstd_1.4.4%2Bdfsg-3kylin0.1_loongarch64.deb6. 修复验证使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。$sudo dpkg -l |grep Package注：Package为软件包包名。 

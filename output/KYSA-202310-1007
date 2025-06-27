@@ -1,0 +1,95 @@
+Name:KYSA-202310-1007
+Severity:严重
+Summary:nodejs安全漏洞
+Published:2023-10-10
+URL:/support/loophole/patch/4205.html
+Title:
+			公告ID：KYSA-202310-1007
+公告摘要：nodejs安全漏洞
+等级：Critical
+发布日期：2023-10-10
+		
+1.修复的CVE
+·CVE-2022-32214
+描述：IBM Answer Retrieval for Watson Discovery On Prem是美国IBM公司的一种基于微服务的云原生解决方案。IBM Answer Retrieval for Watson Discovery On Prem 存在环境问题漏洞，该漏洞源于HTTP模块中的llhttp解析器没有严格使用CRLF序列来分隔HTTP请求。远程攻击者可以向服务器发送特制的HTTP请求并偷换任意的HTTP头。该漏洞允许远程攻击者进行HTTP请求偷换攻击。
+·CVE-2023-23918
+描述：Node.js＜19.6.1、＜18.14.1、＜16.19.1和＜14.21.3中存在权限提升漏洞，可以绕过实验权限(https://nodejs.org/api/permissions.html)特性，并使用process.mainModule.require（）访问未授权的模块。这只影响使用--experimental策略启用了实验权限选项的用户。
+·CVE-2023-23920
+描述：Node.js中存在不受信任的搜索路径漏洞。＜19.6.1、＜18.14.1、＜16.19.1和＜14.21.3，攻击者可以在使用提升的权限运行时搜索并可能加载ICU数据。
+·CVE-2023-30581
+描述：process.mainModule.proto.require()中使用proto可以绕过策略机制，需要policy.json定义之外的模块。参考文献：https://nodejs.org/en/blog/vulnerability/june-2023-security-releases
+·CVE-2023-30590
+描述：crypto.createDiffieHellman（）返回的generateKeys（）API函数只生成丢失（或过期）的密钥，也就是说，如果还没有设置，它只生成私钥。参考文献：https://nodejs.org/en/blog/vulnerability/june-2023-security-releases
+·CVE-2023-32002
+描述：`Module的使用_load（）`可以绕过策略机制，并要求给定模块使用policy.json定义之外的模块。此漏洞影响所有活动发布行中使用实验策略机制的所有用户：16.x、18.x和20.x。请注意，在发布此CVE时，该策略是Node.js的实验功能。
+·CVE-2023-32006
+描述：使用`module.constructor.createRequire（）`可以绕过策略机制，并为给定模块要求policy.json定义之外的模块。此漏洞影响所有活动发布行中使用实验策略机制的所有用户：16.x、18.x和20.x。请注意，在发布此CVE时，该策略是Node.js的实验功能
+·CVE-2023-35256
+描述：Node v18.7.0中http模块中的llhttp解析器无法正确处理未以CLRF终止的标头字段。这可能导致HTTP请求走私。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·aarch64架构:
+nodejs、nodejs-devel、nodejs-docs、nodejs-full-i18n、nodejs-libs、npm、v8-devel
+·x86_64架构:
+nodejs、nodejs-devel、nodejs-docs、nodejs-full-i18n、nodejs-libs、npm、v8-devel
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (aarch64、x86_64)
+nodejs-12.22.11-5.p01.ky10h或以上版本
+nodejs-devel-12.22.11-5.p01.ky10h或以上版本
+nodejs-docs-12.22.11-5.p01.ky10h或以上版本
+nodejs-full-i18n-12.22.11-5.p01.ky10h或以上版本
+nodejs-libs-12.22.11-5.p01.ky10h或以上版本
+npm-6.14.16-1.12.22.11.5.p01.ky10h或以上版本
+v8-devel-7.8.279.23-1.12.22.11.5.p01.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+aarch64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-32214:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-23918:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-23920:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-30581:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-30590:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-32002:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-32006:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-35256:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+nodejs(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nodejs-12.22.11-5.p01.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nodejs-devel-12.22.11-5.p01.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nodejs-docs-12.22.11-5.p01.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nodejs-full-i18n-12.22.11-5.p01.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/nodejs-libs-12.22.11-5.p01.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/npm-6.14.16-1.12.22.11.5.p01.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/v8-devel-7.8.279.23-1.12.22.11.5.p01.ky10h.aarch64.rpm
+
+nodejs(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nodejs-12.22.11-5.p01.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nodejs-devel-12.22.11-5.p01.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nodejs-docs-12.22.11-5.p01.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nodejs-full-i18n-12.22.11-5.p01.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/nodejs-libs-12.22.11-5.p01.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/npm-6.14.16-1.12.22.11.5.p01.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/v8-devel-7.8.279.23-1.12.22.11.5.p01.ky10h.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,733 @@
+Name:KYSA-202504-1144
+Severity:重要
+Summary:kernel安全漏洞
+Published:2025-04-29
+URL:/support/loophole/patch/7752.html
+Title:
+			公告ID：KYSA-202504-1144
+公告摘要：kernel安全漏洞
+等级：重要
+发布日期：2025-04-29
+		
+1.修复的漏洞
+·CVE-2021-33631
+描述：openEuler是开放原子开源基金会的一款操作系统。
+openEuler kernel4.19.90版本至4.19.90-2401.3之前版本、5.10.0-60.18.0版本至5.10.0-183.0.0之前版本存在安全漏洞，该漏洞源于存在整数溢出漏洞。
+·CVE-2021-46953
+描述：Linux kernel 存在安全漏洞，该漏洞源于当固件属性无效而导致驱动程序探测失败时，GTDT 驱动程序会取消映射其之前映射的中断。
+·CVE-2021-46955
+描述：Linux kernel 存在安全漏洞，该漏洞源于 IPv4 数据包分段时，会导致越界读取问题。
+·CVE-2021-46992
+描述：Linux kernel 存在安全漏洞，该漏洞源于 nft_hash_buckets() 中存在溢出问题。
+·CVE-2021-46998
+描述：Linux kernel 存在安全漏洞，该漏洞源于 enic_hard_start_xmit 存在释放后重用问题。
+·CVE-2021-47013
+描述：Linux kernel 存在安全漏洞，该漏洞源于 emac_mac_tx_buf_send 中存在释放后的重用。
+·CVE-2021-47024
+描述：Linux kernel 存在安全漏洞，该漏洞源于存在内存泄漏。
+·CVE-2021-47056
+描述：Linux kernel 存在安全漏洞，该漏洞源于vf2pf_lock 在 adf_dev_init() 中初始化，当失败时，vf2pf_lock 要么未初始化，要么被销毁 ，后续使用 vf2pf_lock 将导致问题。
+·CVE-2021-47073
+描述：Linux kernel存在安全漏洞。
+·CVE-2021-47078
+描述：Linux kernel存在安全漏洞，该漏洞源于内存释放后重用。
+·CVE-2021-47103
+描述：Linux kernel存在安全漏洞，该漏洞源于存在释放后重用。
+·CVE-2021-47114
+描述：Linux kernel 存在安全漏洞，该漏洞源于 ocfs2 模块的 fallocate 会造成数据损坏。
+·CVE-2021-47117
+描述：Linux kernel 存在安全漏洞，该漏洞源于 ext4 模块的 ext4_es_cache_extent 方法中存在错误。
+·CVE-2021-47118
+描述：Linux kernel 存在安全漏洞，该漏洞源于 pid 模块存在引用计数错误。
+·CVE-2021-47119
+描述：Linux kernel 存在安全漏洞，该漏洞源于 ext4 模块的 ext4_fill_super 方法中存在内存泄漏。
+·CVE-2021-47121
+描述：Linux kernel 存在安全漏洞，该漏洞源于 net 模块的 cfusbl_device_notify 方法中存在内存泄漏。
+·CVE-2021-47122
+描述：Linux kernel 存在安全漏洞，该漏洞源于 net 模块的 caif_device_notify 方法中存在内存泄漏。
+·CVE-2021-47139
+描述：Linux kernel存在安全漏洞，该漏洞源于存在可用的时间窗口。
+·CVE-2021-47145
+描述：Linux kernel存在安全漏洞，该漏洞源于在注入测试时会引起内核恐慌。
+·CVE-2021-47160
+描述：Linux kernel存在安全漏洞，该漏洞源于当启用 VLAN 过滤时，PCR_MATRIX 字段设置为全 1，但是禁用时没有重置，可能会导致流量泄漏。
+·CVE-2022-2153
+描述：Linux kernel 存在代码问题漏洞，该漏洞源于kvm_irq_delivery_to_apic_fast()存在NULL指针解引用问题。攻击者利用该漏洞可以触发拒绝服务攻击。
+·CVE-2022-3169
+描述：RISC-V是一个基于精简指令集原则的开源指令集架构，简易解释为开源软件运动相对应的一种“开源硬件”。
+RISC-V kernel存在输入验证错误漏洞，该漏洞源于如果通过驱动程序的设备文件连续请求NVME_IOCTL_RESET和NVME_IOCTL_SUBSYS_RESET，可能会出现拒绝服务漏洞，导致PCIe链路断开。
+·CVE-2022-48828
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于NFSD模块中发现ia_size下溢问题。在处理大于S64_MAX的值时，可能会导致下溢。
+·CVE-2022-48875
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于 mac80211 驱动在AMPDU（Aggregated MAC Protocol Data Unit）会话开始时可能存在空指针问题。
+·CVE-2022-48920
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于__writeback_inodes_sb_nr函数中的WARN_ON条件不正确。
+·CVE-2022-48953
+描述：Linux kernel存在安全漏洞，该漏洞源于rtc子系统cmos驱动中的事件处理程序注册顺序问题。
+·CVE-2022-49006
+描述：Linux kernel存在安全漏洞，该漏洞源于tracing子系统中动态事件移除后缓冲区未释放的问题，可能导致内核崩溃。
+·CVE-2022-49013
+描述：Linux kernel存在安全漏洞，该漏洞源于sctp子系统sctp_stream_outq_migrate函数中的内存泄漏问题。
+·CVE-2022-49019
+描述：Linux kernel存在安全漏洞，该漏洞源于nixge_hw_dma_bd_release函数中可能对NULL指针priv->rx_bd_v进行取消引用，如果其在nixge_hw_dma_bd_init函数中分配失败。
+·CVE-2022-49026
+描述：Linux kernel存在安全漏洞，该漏洞源于e100_xmit_prepare函数中的错误处理，可能导致skb在映射失败时被错误释放，引起释放后重用错误。
+·CVE-2023-52911
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于 drm/msm 组件存在空指针解引用问题。
+·CVE-2023-52915
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于dvb-usb-v2驱动中的af9035_i2c_master_xfer函数对msg[i].buf未进行充分检查，当msg[i].buf为null且msg[i].len为零时，会导致空指针解引用错误。
+·CVE-2024-0775
+描述：Linux kernel存在安全漏洞，该漏洞源于ext4 的 fs/ext4/super.c 中的 __ext4_remount 存在释放后重用缺陷，允许本地用户在发生故障之前释放旧配额文件名，导致信息泄漏。
+·CVE-2024-26958
+描述：Linux kernel存在安全漏洞，该漏洞源于内存释放后重用。
+·CVE-2024-36013
+描述：Linux kernel存在安全漏洞，该漏洞源于内存释放后重用。
+·CVE-2024-39467
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于sanity_check_inode函数对 i_xattr_nid 没有进行健全性检查。
+·CVE-2024-39490
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于seg6_input_core中缺少sk_buff释放。
+·CVE-2024-40982
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于 ssb 组件在 ssb_device_uevent 函数中存在潜在的空指针取消引用问题。
+·CVE-2024-41012
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于 filelock 模块中，当 fcntl_setlk 函数与 close 函数竞争时，会使用 do_lock_file_wait 函数移除创建的锁。
+·CVE-2024-41066
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于在传输过程中，未检查skb地址是否为null，如果free_map和tx_buff列表不同步，可能导致skb内存泄漏。
+·CVE-2024-41071
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于在使用req->channels[]之前，req->n_channels必须被设置。
+·CVE-2024-41077
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于未验证块大小是否在512到PAGE_SIZE之间，并且是2的幂，导致可能的无效参数问题。
+·CVE-2024-42096
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于在profile_pc函数基于栈布局做出假设，这些假设在现代配置中可能不成立，导致KASAN警告。
+·CVE-2024-42110
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于net:ntb_netdev模块中在使用idxd (DSA) dmanegine作为ntb_transport的数据移动器时，idxd驱动程序的中断完成处理程序使用线程化中断，而线程处理程序不是硬中断或软中断，导致异常。
+·CVE-2024-42156
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于s390/pkey模块中在使用clear-key、protected-key或secure-key的IOCTLs时，如果转换过程中出现错误，应从栈上清除所有敏感数据。
+·CVE-2024-42244
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于 USB:serial:mos7840 模块在恢复过程中，由于多个读取URB的支持，如果第二个URB的上下文指针被错误地设置，可能会导致崩溃。
+·CVE-2024-42259
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于虚拟内存映射边界计算存在问题，可能会导致页面错误访问。
+·CVE-2024-42296
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于f2fs在f2fs_convert_inline_inode函数中未能正确处理只读设备，导致返回值错误。
+·CVE-2024-42312
+描述：Linux kernel存在安全漏洞，该漏洞源于未能始终初始化i_uid/i_gid。
+·CVE-2024-43853
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于 cgroup/cpuset 模块在读取/proc/cpuset时可能发生释放后重用，需要在proc_cpuset_show中使用rcu_read_lock来解决。
+·CVE-2024-43863
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞。攻击者利用该漏洞会导致死锁问题。
+·CVE-2024-43892
+描述：Linux kernel存在安全漏洞，该漏洞源于在访问mem_cgroup_idr时未保护并发访问，导致潜在的竞争条件。
+·CVE-2024-43902
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于在传递变量给函数之前未进行空值检查。
+·CVE-2024-43903
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于在amdgpu_dm_plane_handle_cursor_update函数中对 afb 变量进行取消引用前未进行空值检查。
+·CVE-2024-43907
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于在apply_state_adjust_rules中存在空指针取消引用问题。
+·CVE-2024-44942
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于在GC期间对F2FS_INLINE_DATA标志的inode进行操作时，未进行适当的健全性检查。
+·CVE-2024-44944
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于没有使用辅助函数计算期望ID。
+·CVE-2024-44946
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于内存释放后重用。
+·CVE-2024-44947
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于fuse_notify_store函数不启用页面清零。
+·CVE-2024-44948
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于x86/mtrr组件存在固定MTRRs存在性检查漏洞。
+·CVE-2024-44958
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于sched/smt组件存在调度SMT（同时多线程）状态统计不均衡的漏洞。
+·CVE-2024-44960
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于usb: gadget: core组件存在未设置描述符的检查漏洞。
+·CVE-2024-44965
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于x86/mm组件存在pti_clone_pgtable()函数的对齐假设错误漏洞。
+·CVE-2024-44969
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于s390/sclp组件存在I/O操作中缓冲区释放问题。
+·CVE-2024-44970
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于net/mlx5e组件存在逻辑漏洞。
+·CVE-2024-44982
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于dpu_format_populate_layout 函数失败时，帧缓冲（Frame Buffer，简称FB）没有被正确清理，导致GEM（Graphics Execution Manager）对象的pin_count引用计数器出现泄漏。
+·CVE-2024-44987
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于ipv6组件存在释放后重用漏洞。
+·CVE-2024-44988
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel 存在安全漏洞，该漏洞源于mv88e6xxx组件存在越界访问漏洞。
+·CVE-2024-44995
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于net: hns3组件存在配置TC期间重置可能导致的死锁问题。
+·CVE-2024-44998
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于atm: idt77252组件存在释放后重用漏洞。
+·CVE-2024-45006
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于xhci组件存在空指针解引用漏洞。
+·CVE-2024-45008
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于输入子系统（Input: MT）存在潜在的内存分配过大问题。
+·CVE-2024-45015
+描述：Linux kernel存在安全漏洞，该漏洞源于drm/msm/dpu组件存在编码器连接器分配问题。
+·CVE-2024-45016
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于netem组件存在重复入队失败返回值问题。
+·CVE-2024-45021
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于memcg_write_event_control组件存在用户触发的内核漏洞问题。
+·CVE-2024-45028
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于mmc:mmc_test组件存在分配失败时的空指针解引用问题。
+·CVE-2024-46673
+描述：Linux kernel存在资源管理错误漏洞，该漏洞源于存在内存双重释放问题。
+·CVE-2024-46674
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在资源管理错误漏洞，该漏洞源于在探测失败时未能正确处理平台设备引用计数，从而导致内存释放后重用。
+·CVE-2024-46675
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于core组件在运行时挂起期间可能访问无效的事件缓冲区地址。
+·CVE-2024-46676
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于在填充轮询模式列表时未检查填充是否成功，可能导致除以零错误。
+·CVE-2024-46677
+描述：Linux kernel存在代码问题漏洞，该漏洞源于在sockfd_lookup函数失败时未能正确处理返回的空指针，导致空指针取消引用。
+·CVE-2024-46679
+描述：Linux kernel存在安全漏洞，该漏洞源于ethtool组件在获取链接设置时未能检查设备是否存在。
+·CVE-2024-46681
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于在使用for_each_online_cpu循环时未正确加锁。
+·CVE-2024-46685
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于在获取pinmux_generic_get_function函数时未能正确检查返回值，可能导致空指针取消引用。
+·CVE-2024-46689
+描述：Linux kernel存在安全漏洞，该漏洞源于将共享内存映射为WC而不是WB，可能导致安全中断和信任区域的无限循环。
+·CVE-2024-46695
+描述：Linux kernel存在安全漏洞，该漏洞源于允许绕过权限检查。
+·CVE-2024-46715
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于空指针取消引用。
+·CVE-2024-46716
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于未正确管理资源。
+·CVE-2024-46721
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于空指针取消引用。
+·CVE-2024-46722
+描述：Linux kernel存在安全漏洞，该漏洞源于允许越界读取。
+·CVE-2024-46723
+描述：在Linux内核中，已解决以下漏洞：drm/amdgpu:fix ucode越界读取警告清除读取ucode[]可能越界的警告。
+·CVE-2024-46724
+描述：Linux kernel存在安全漏洞，该漏洞源于允许越界读取。
+·CVE-2024-46731
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于允许越界读取。
+·CVE-2024-46738
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于内存释放后重用。
+·CVE-2024-46739
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于空指针取消引用。
+·CVE-2024-46740
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于内存释放后重用。
+·CVE-2024-46743
+描述：Linux kernel存在安全漏洞，该漏洞源于存在越界读取问题。
+·CVE-2024-46744
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于未正确验证链接大小，可能导致未初始化的内存访问。
+·CVE-2024-46745
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于未正确限制槽位数量。
+·CVE-2024-46747
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于未正确验证数据的有效性。
+·CVE-2024-46750
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于缺少必要的锁定机制。
+·CVE-2024-46751
+描述：Linux kernel存在安全漏洞，该漏洞源于未正确处理错误情况。
+·CVE-2024-46754
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于自检用例中从未分配per-CPU变量seg6_bpf_srh_states::srh，但每个BPF函数都需要它。
+·CVE-2024-46755
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于未正确验证数据的有效性。
+·CVE-2024-46756
+描述：Linux kernel存在安全漏洞，该漏洞源于存在下溢问题。
+·CVE-2024-46757
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于在写入限制属性时存在下溢问题。
+·CVE-2024-46758
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于存在下溢问题。
+·CVE-2024-46759
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于在写入限制属性时存在下溢问题。
+·CVE-2024-46761
+描述：Linux kernel存在安全漏洞，该漏洞源于空指针取消引用。
+·CVE-2024-46771
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于未正确管理 proc 文件，可能导致资源泄漏。
+·CVE-2024-46777
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于未正确处理分区长度，可能导致整数溢出。
+·CVE-2024-46780
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。
+·CVE-2024-46782
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于内存释放后重用。
+·CVE-2024-46783
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+
+Linux kernel存在安全漏洞，该漏洞源于未正确处理返回值。
+·CVE-2024-46800
+描述：Linux kernel存在安全漏洞，该漏洞源于内存释放后重用。
+·CVE-2024-46802
+描述：Linux kernel存在安全漏洞，该漏洞源于在执行dc_validate_stream函数前，未检查dc和stream是否为NULL。
+·CVE-2024-46809
+描述：Linux kernel存在安全漏洞，该漏洞源于未进行空检查。
+·CVE-2024-46818
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于在使用gpio_id作为数组索引前，未检查其有效性。
+·CVE-2024-46826
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于kernel.randomize_va_space双重读取。
+·CVE-2024-46832
+描述：Linux kernel存在安全漏洞，该漏洞源于在处理计时器中断时，未正确处理计时器。
+·CVE-2024-46840
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于在处理快照删除时，未正确处理引用计数为0的情况。
+·CVE-2024-46849
+描述：Linux kernel存在安全漏洞，该漏洞源于内存释放后重用。
+·CVE-2024-46854
+描述：Linux kernel是美国Linux基金会的开源操作系统Linux所使用的内核。
+Linux kernel存在安全漏洞，该漏洞源于未正确填充以避免数据泄露。
+·CVE-2024-46855
+描述：Linux kernel存在安全漏洞，该漏洞源于在处理sk引用计数时，存在泄漏问题。
+·CVE-2024-46859
+描述：Linux kernel存在安全漏洞，该漏洞源于在访问SINF数组时，存在越界访问问题。
+·CVE-2024-47659
+描述：Linux kernel存在安全漏洞。攻击者利用该漏洞导致标签错误和未授权的写入。
+·CVE-2024-47663
+描述：Linux kernel存在安全漏洞，该漏洞源于未检查clk_get_rate的返回值，可能导致除以零错误。
+·CVE-2024-47666
+描述：Linux kernel存在安全漏洞，该漏洞源于在处理PHY控制响应时，未正确同步，导致在函数返回后访问不再有效的栈地址。
+·CVE-2024-47667
+描述：Linux kernel存在安全漏洞，该漏洞源于在特定硬件上可能发生数据包损坏。
+·CVE-2024-47668
+描述：Linux kernel存在安全漏洞，该漏洞源于lib组件中的generic-radix-tree在增加树深度时存在竞态条件，可能导致使用旧的根节点。
+·CVE-2024-47669
+描述：Linux kernel存在安全漏洞，该漏洞源于在写入日志函数中的错误路径管理不当，导致在失败时未清除写回标志和NILFS_I_COLLECTED标志。
+·CVE-2024-47672
+描述：Linux kernel存在安全漏洞，该漏洞源于在固件卡死后仍等待tx队列，导致警告。
+·CVE-2024-47679
+描述：Linux kernel存在安全漏洞，该漏洞源于vfs子系统evice_inodes、find_inode和iput函数间有竞争条件问题。
+·CVE-2024-47685
+描述：Linux kernel存在安全漏洞，该漏洞源于netfilter nf_reject_ipv6模块nf_reject_ip6_tcphdr_put函数中的初始化值问题。
+·CVE-2024-47697
+描述：Linux kernel存在安全漏洞，该漏洞源于dvb-frontends/rtl2830驱动中的越界写入错误。
+·CVE-2024-47698
+描述：Linux kernel存在安全漏洞，该漏洞源于drivers:media:dvb-frontends/rtl2832子系统中rtl2832_pid_filter函数中的越界写入错误。
+·CVE-2024-47699
+描述：Linux kernel存在安全漏洞，该漏洞源于nilfs2文件系统中对空b-tree节点的处理不当。
+·CVE-2024-47701
+描述：Linux kernel存在安全漏洞，该漏洞源于ext4文件系统在系统.data扩展属性变化时可能导致越界访问。
+·CVE-2024-47706
+描述：Linux kernel存在安全漏洞，该漏洞源于block, bfq子系统中bfqq->bic合并链的潜在释放后重用问题。
+·CVE-2024-47737
+描述：Linux kernel存在安全漏洞，该漏洞源于nfsd子系统中在xdr_reserve_space返回NULL时未正确释放缓存，可能导致资源泄露。
+·CVE-2024-47749
+描述：Linux kernel存在安全漏洞，该漏洞源于RDMA/cxgb4子系统中lookup_atid函数的空指针取消引用问题。
+·CVE-2024-47757
+描述：Linux kernel存在安全漏洞，该漏洞源于nilfs2文件系统中nilfs_btree_check_delete函数的越界读取问题。
+·CVE-2024-49867
+描述：Linux kernel存在安全漏洞，该漏洞源于在卸载过程中未等待fixup工作完成就停止cleaner kthread，可能导致使用已释放的cleaner kthread任务结构时发生崩溃。
+·CVE-2024-49882
+描述：Linux kernel存在安全漏洞，该漏洞源于ext4文件系统中对extents路径的双重释放问题。
+·CVE-2024-49883
+描述：Linux kernel存在安全漏洞，该漏洞源于在ext4_ext_insert_extent函数中路径可能被重新分配导致释放后重用错误。
+·CVE-2024-49894
+描述：Linux kernel存在安全漏洞，该漏洞源于drm/amd/display模块在degamma硬件格式转换中的索引越界问题。
+·CVE-2024-49896
+描述：Linux kernel存在安全漏洞，该漏洞源于drm/amd/display模块在比较流之前未检查流是否为NULL，可能导致空指针取消引用。
+·CVE-2024-49900
+描述：Linux kernel存在安全漏洞，该漏洞源于jfs文件系统在ea_buffer处理中未初始化值的使用。
+·CVE-2024-49902
+描述：Linux kernel存在安全漏洞，该漏洞源于jfs文件系统的dbFindLeaf函数中未检查leafidx是否大于dmap树的叶子数量。
+·CVE-2024-49903
+描述：Linux kernel存在安全漏洞，该漏洞源于jfs文件系统的dbFreeBits函数中的释放后重用问题。
+·CVE-2024-49924
+描述：Linux kernel存在安全漏洞，该漏洞源于fbdev组件pxafb在pxafb_task中的潜在释放后重用问题。
+·CVE-2024-49944
+描述：Linux kernel存在安全漏洞，该漏洞源于sctp子系统中在自动绑定失败时未将sk_state重置为CLOSED，可能导致空指针解引用。
+·CVE-2024-49952
+描述：Linux kernel存在安全漏洞，该漏洞源于netfilter组件nf_tables在nf_skb_duplicated的潜在腐败问题。
+·CVE-2024-49955
+描述：Linux kernel存在安全漏洞，该漏洞源于ACPI电池模块在注销电池钩子时可能发生崩溃。
+·CVE-2024-49957
+描述：Linux kernel存在安全漏洞，该漏洞源于ocfs2文件系统在日志加载失败时会导致空指针取消引用。
+·CVE-2024-49958
+描述：Linux kernel存在安全漏洞，该漏洞源于ocfs2文件系统在附加reflink树前未预留足够的空间给内联xattr。
+·CVE-2024-49959
+描述：Linux kernel存在安全漏洞，该漏洞源于jbd2处理错误时停止等待空间的问题。
+·CVE-2024-49962
+描述：Linux kernel存在安全漏洞，该漏洞源于ACPICA组件中ACPI_ALLOCATE_ZEROED函数返回值检查不当。
+·CVE-2024-49963
+描述：Linux kernel存在安全漏洞，该漏洞源于在Raspberry Pi的noirq挂起阶段，BCM2835邮件箱的IRQ被禁用，导致rpi_firmware_property_list函数超时。
+·CVE-2024-49965
+描述：Linux kernel存在安全漏洞，该漏洞源于ocfs2文件系统在ocfs2_read_blocks中的不当解锁。
+·CVE-2024-49966
+描述：Linux kernel存在安全漏洞，该漏洞源于ocfs2子系统中在释放oinfo前未取消dqi_sync_work导致的警告问题。
+·CVE-2024-49981
+描述：Linux kernel存在安全漏洞，该漏洞源于在venus_remove函数中由于竞争条件导致的释放后重用问题，可能允许攻击者通过精心设计的输入触发错误处理程序，从而破坏系统内存。
+·CVE-2024-49982
+描述：Linux kernel存在安全漏洞，该漏洞源于aoe模块在多个地方可能发生释放后重用问题。
+·CVE-2024-49997
+描述：Linux kernel存在安全漏洞，该漏洞源于在使用skb_put_padto函数进行以太网帧填充时未将缓冲区清零，导致内存信息泄露。
+·CVE-2024-50006
+描述：Linux kernel存在安全漏洞，该漏洞源于在ext4_ind_migrate函数中i_data_sem的解锁顺序不当，可能导致死锁。
+·CVE-2024-50024
+描述：Linux kernel存在安全漏洞，该漏洞源于net组件中对列表的不安全循环操作。
+·CVE-2024-50035
+描述：Linux kernel存在安全漏洞，该漏洞源于ppp组件在ppp_async_encode函数中的非法访问。
+·CVE-2024-50044
+描述：Linux kernel存在安全漏洞，该漏洞源于Bluetooth RFCOMM子系统中包含一个死锁问题。
+·CVE-2024-50059
+描述：Linux kernel存在安全漏洞，该漏洞源于ntb:ntb_hw_switchtec子系统中switchtec_ntb_remove函数中的释放后重用漏洞。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+kernel-debug-modules-internal、kernel-devel、kernel、kernel-tools-libs-devel、kernel-modules、kernel-debug-modules-extra、perf、kernel-core、kernel-debug-core、kernel-modules-internal、kernel-debug-modules、kernel-headers、kernel-cross-headers、kernel-tools、python3-perf、kernel-debug-devel、kernel-tools-libs、bpftool、kernel-modules-extra、kernel-debug、kernel-abi-whitelists
+·x86_64架构:
+kernel-debug-modules-internal、kernel、kernel-devel、kernel-tools-libs-devel、kernel-modules、kernel-debug-modules-extra、perf、kernel-core、kernel-debug-core、kernel-modules-internal、kernel-debug-modules、kernel-headers、kernel-cross-headers、kernel-tools、python3-perf、kernel-debug-devel、kernel-tools-libs、bpftool、kernel-modules-extra、kernel-debug、kernel-ipaclones-internal、kernel-abi-whitelists
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64)
+kernel-abi-whitelists-4.19.90-25.44.v2101.ky10或以上版本
+perf-4.19.90-25.44.v2101.ky10或以上版本
+kernel-headers-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-devel-4.19.90-25.44.v2101.ky10或以上版本
+kernel-4.19.90-25.44.v2101.ky10或以上版本
+kernel-tools-libs-devel-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-modules-internal-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-modules-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-4.19.90-25.44.v2101.ky10或以上版本
+kernel-modules-extra-4.19.90-25.44.v2101.ky10或以上版本
+kernel-modules-4.19.90-25.44.v2101.ky10或以上版本
+kernel-cross-headers-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-modules-extra-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-core-4.19.90-25.44.v2101.ky10或以上版本
+kernel-modules-internal-4.19.90-25.44.v2101.ky10或以上版本
+kernel-tools-libs-4.19.90-25.44.v2101.ky10或以上版本
+kernel-devel-4.19.90-25.44.v2101.ky10或以上版本
+kernel-tools-4.19.90-25.44.v2101.ky10或以上版本
+python3-perf-4.19.90-25.44.v2101.ky10或以上版本
+bpftool-4.19.90-25.44.v2101.ky10或以上版本
+kernel-core-4.19.90-25.44.v2101.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (x86_64)
+kernel-abi-whitelists-4.19.90-25.44.v2101.ky10或以上版本
+perf-4.19.90-25.44.v2101.ky10或以上版本
+kernel-headers-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-devel-4.19.90-25.44.v2101.ky10或以上版本
+kernel-4.19.90-25.44.v2101.ky10或以上版本
+kernel-tools-libs-devel-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-modules-internal-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-modules-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-4.19.90-25.44.v2101.ky10或以上版本
+kernel-modules-extra-4.19.90-25.44.v2101.ky10或以上版本
+kernel-modules-4.19.90-25.44.v2101.ky10或以上版本
+kernel-cross-headers-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-modules-extra-4.19.90-25.44.v2101.ky10或以上版本
+kernel-debug-core-4.19.90-25.44.v2101.ky10或以上版本
+kernel-modules-internal-4.19.90-25.44.v2101.ky10或以上版本
+kernel-tools-libs-4.19.90-25.44.v2101.ky10或以上版本
+kernel-devel-4.19.90-25.44.v2101.ky10或以上版本
+python3-perf-4.19.90-25.44.v2101.ky10或以上版本
+kernel-tools-4.19.90-25.44.v2101.ky10或以上版本
+bpftool-4.19.90-25.44.v2101.ky10或以上版本
+kernel-core-4.19.90-25.44.v2101.ky10或以上版本
+kernel-ipaclones-internal-4.19.90-25.44.v2101.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-33631:需要重启操作系统以使漏洞修复生效。
+CVE-2021-46953:需要重启操作系统以使漏洞修复生效。
+CVE-2021-46955:需要重启操作系统以使漏洞修复生效。
+CVE-2021-46992:需要重启操作系统以使漏洞修复生效。
+CVE-2021-46998:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47013:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47024:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47056:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47073:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47078:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47103:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47114:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47117:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47118:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47119:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47121:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47122:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47139:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47145:需要重启操作系统以使漏洞修复生效。
+CVE-2021-47160:需要重启操作系统以使漏洞修复生效。
+CVE-2022-2153:需要重启操作系统以使漏洞修复生效。
+CVE-2022-3169:需要重启操作系统以使漏洞修复生效。
+CVE-2022-48828:需要重启操作系统以使漏洞修复生效。
+CVE-2022-48875:需要重启操作系统以使漏洞修复生效。
+CVE-2022-48920:需要重启操作系统以使漏洞修复生效。
+CVE-2022-48953:需要重启操作系统以使漏洞修复生效。
+CVE-2022-49006:需要重启操作系统以使漏洞修复生效。
+CVE-2022-49013:需要重启操作系统以使漏洞修复生效。
+CVE-2022-49019:需要重启操作系统以使漏洞修复生效。
+CVE-2022-49026:需要重启操作系统以使漏洞修复生效。
+CVE-2023-52911:需要重启操作系统以使漏洞修复生效。
+CVE-2023-52915:需要重启操作系统以使漏洞修复生效。
+CVE-2024-0775:需要重启操作系统以使漏洞修复生效。
+CVE-2024-26958:需要重启操作系统以使漏洞修复生效。
+CVE-2024-36013:需要重启操作系统以使漏洞修复生效。
+CVE-2024-39467:需要重启操作系统以使漏洞修复生效。
+CVE-2024-39490:需要重启操作系统以使漏洞修复生效。
+CVE-2024-40982:需要重启操作系统以使漏洞修复生效。
+CVE-2024-41012:需要重启操作系统以使漏洞修复生效。
+CVE-2024-41066:需要重启操作系统以使漏洞修复生效。
+CVE-2024-41071:需要重启操作系统以使漏洞修复生效。
+CVE-2024-41077:需要重启操作系统以使漏洞修复生效。
+CVE-2024-42096:需要重启操作系统以使漏洞修复生效。
+CVE-2024-42110:需要重启操作系统以使漏洞修复生效。
+CVE-2024-42156:需要重启操作系统以使漏洞修复生效。
+CVE-2024-42244:需要重启操作系统以使漏洞修复生效。
+CVE-2024-42259:需要重启操作系统以使漏洞修复生效。
+CVE-2024-42296:需要重启操作系统以使漏洞修复生效。
+CVE-2024-42312:需要重启操作系统以使漏洞修复生效。
+CVE-2024-43853:需要重启操作系统以使漏洞修复生效。
+CVE-2024-43863:需要重启操作系统以使漏洞修复生效。
+CVE-2024-43892:需要重启操作系统以使漏洞修复生效。
+CVE-2024-43902:需要重启操作系统以使漏洞修复生效。
+CVE-2024-43903:需要重启操作系统以使漏洞修复生效。
+CVE-2024-43907:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44942:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44944:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44946:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44947:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44948:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44958:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44960:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44965:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44969:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44970:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44982:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44987:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44988:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44995:需要重启操作系统以使漏洞修复生效。
+CVE-2024-44998:需要重启操作系统以使漏洞修复生效。
+CVE-2024-45006:需要重启操作系统以使漏洞修复生效。
+CVE-2024-45008:需要重启操作系统以使漏洞修复生效。
+CVE-2024-45015:需要重启操作系统以使漏洞修复生效。
+CVE-2024-45016:需要重启操作系统以使漏洞修复生效。
+CVE-2024-45021:需要重启操作系统以使漏洞修复生效。
+CVE-2024-45028:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46673:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46674:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46675:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46676:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46677:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46679:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46681:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46685:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46689:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46695:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46715:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46716:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46721:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46722:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46723:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46724:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46731:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46738:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46739:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46740:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46743:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46744:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46745:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46747:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46750:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46751:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46754:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46755:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46756:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46757:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46758:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46759:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46761:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46771:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46777:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46780:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46782:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46783:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46800:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46802:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46809:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46818:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46826:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46832:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46840:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46849:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46854:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46855:需要重启操作系统以使漏洞修复生效。
+CVE-2024-46859:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47659:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47663:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47666:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47667:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47668:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47669:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47672:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47679:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47685:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47697:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47698:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47699:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47701:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47706:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47737:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47749:需要重启操作系统以使漏洞修复生效。
+CVE-2024-47757:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49867:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49882:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49883:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49894:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49896:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49900:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49902:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49903:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49924:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49944:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49952:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49955:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49957:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49958:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49959:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49962:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49963:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49965:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49966:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49981:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49982:需要重启操作系统以使漏洞修复生效。
+CVE-2024-49997:需要重启操作系统以使漏洞修复生效。
+CVE-2024-50006:需要重启操作系统以使漏洞修复生效。
+CVE-2024-50024:需要重启操作系统以使漏洞修复生效。
+CVE-2024-50035:需要重启操作系统以使漏洞修复生效。
+CVE-2024-50044:需要重启操作系统以使漏洞修复生效。
+CVE-2024-50059:需要重启操作系统以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+kernel(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-abi-whitelists-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-headers-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-core-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-modules-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-modules-extra-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-tools-libs-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-modules-internal-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-tools-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-cross-headers-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-core-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-devel-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-devel-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-modules-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-modules-extra-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-debug-modules-internal-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-tools-libs-devel-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/bpftool-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/perf-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/python3-perf-4.19.90-25.44.v2101.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/kernel-4.19.90-25.44.v2101.ky10.aarch64.rpm
+
+kernel(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/perf-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/bpftool-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/python3-perf-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-ipaclones-internal-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-cross-headers-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-modules-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-core-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-abi-whitelists-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-core-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-headers-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-devel-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-devel-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-modules-internal-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-modules-extra-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-debug-modules-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-tools-libs-devel-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-modules-internal-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-tools-4.19.90-25.44.v2101.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/kernel-modules-extra-4.19.90-25.44.v2101.ky10.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

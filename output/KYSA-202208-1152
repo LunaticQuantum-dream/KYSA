@@ -1,0 +1,50 @@
+Name:KYSA-202208-1152
+Severity:重要
+Summary:microcode_ctl安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1652.html
+Title:
+			公告ID：KYSA-202208-1152
+公告摘要：microcode_ctl安全漏洞
+等级：Important
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2019-0117
+描述：Intel 8th Generation Intel Core Processor等都是美国英特尔（Intel）公司的产品。Intel 8th Generation Intel Core Processor是一款第八代Core系列中央处理器（CPU）。Intel 7th Generation Intel Core Processor是一款第七代Core系列中央处理器（CPU）。Intel 6th Generation Core Processors是第六代Core（酷睿）系列中央处理器（CPU）产品。多款Intel产品中的被保护内容子系统（用于Intel SGX）存在信息泄露漏洞。该漏洞源于网络系统或产品在运行过程中存在配置等错误。未授权的攻击者可利用漏洞获取受影响组件敏感信息。以下产品及版本受到影响：Intel 6th Generation Intel Core processors；7th Generation Intel Core processors；8th Generation Intel Core processors；9th Generation Intel Core processors；Intel Xeon Processor E3 v5 Family；Intel Xeon Processor E3 v6 Family；Intel Xeon Processor E- 2100 Family；Intel Xeon Processor E-2200 Family。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+x86_64架构:
+microcode_ctl
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+microcode_ctl-2.1-53.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+235.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/
+236.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+237.升级完成后是否需要重启服务或操作系统：
+·CVE-2019-0117：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+microcode_ctl（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/microcode_ctl-2.1-53.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

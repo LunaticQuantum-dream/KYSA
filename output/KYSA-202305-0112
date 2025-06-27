@@ -1,0 +1,110 @@
+Name:KYSA-202305-0112
+Severity:重要
+Summary:ncurses安全漏洞
+Published:2025-03-03
+URL:/support/loophole/patch/7409.html
+Title:
+			公告ID：KYSA-202305-0112
+公告摘要：ncurses安全漏洞
+等级：重要
+发布日期：2025-03-03
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2107、银河麒麟桌面操作系统V10 SP1 2203、银河麒麟桌面操作系统（海思麒麟990）V10 SP1 2107、银河麒麟桌面操作系统（海思麒麟9006c）V10 SP1 2107、银河麒麟桌面操作系统（海思麒麟990）V10 SP1 2203、银河麒麟桌面操作系统（海思麒麟9006c）V10 SP1 2203版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2021-39537
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。ncurses存在安全漏洞，该漏洞源于captoinfo.c中的Nc captoinfo有一个基于堆的缓冲区溢出。
+CVE-2023-29491
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。ncurses 6.4 20230408之前版本存在安全漏洞。攻击者利用该漏洞导致内存损坏。
+CVE-2022-29458
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。ncurses 6.3 存在安全漏洞，该漏洞源于 在 terminfo 库的 tinfo/read_entry.c 中的 convert_strings 中存在越界读取和分段违规。
+CVE-2019-17594
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。ncurses 6.1-20191012之前版本中的terminfo库的tinfo/comp_hash.c文件的‘_nc_find_entry’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+CVE-2019-17595
+ncurses是一个字符终端处理库，它能够提供一系列函数以供用户调用并生成基于文本的用户界面。 
+ncurses 6.1-20191012之前版本中的terminfo库的tinfo/comp_hash.c文件的‘fmt_entry’函数存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2107、银河麒麟桌面操作系统V10 SP1 2203、银河麒麟桌面操作系统（海思麒麟990）V10 SP1 2107、银河麒麟桌面操作系统（海思麒麟9006c）V10 SP1 2107、银河麒麟桌面操作系统（海思麒麟990）V10 SP1 2203、银河麒麟桌面操作系统（海思麒麟9006c）V10 SP1 2203
+x86_64 架构：
+lib32ncurses6、lib32ncursesw6、lib32tinfo6、libncurses5、libncurses6、libncursesw5、libncursesw6、libtinfo5、libtinfo6、ncurses-base、ncurses-bin、ncurses-examples、ncurses-term
+arm64 架构：
+libncurses5、libncurses6、libncursesw5、libncursesw6、libtinfo5、libtinfo6、ncurses-base、ncurses-bin、ncurses-examples、ncurses-term
+mips64el 架构：
+libncurses5、libncurses6、libncursesw5、libncursesw6、libtinfo5、libtinfo6、ncurses-base、ncurses-bin、ncurses-examples、ncurses-term
+loongarch64 架构：
+libncurses5、libncurses6、libncursesw5、libncursesw6、libtinfo5、libtinfo6、ncurses-base、ncurses-bin、ncurses-examples、ncurses-term
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2107、银河麒麟桌面操作系统V10 SP1 2203、银河麒麟桌面操作系统（海思麒麟990）V10 SP1 2107、银河麒麟桌面操作系统（海思麒麟9006c）V10 SP1 2107、银河麒麟桌面操作系统（海思麒麟990）V10 SP1 2203、银河麒麟桌面操作系统（海思麒麟9006c）V10 SP1 2203
+6.2-0kylin2.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install libncurses6
+$sudo apt install libncurses5
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2107、银河麒麟桌面操作系统V10 SP1 2203、银河麒麟桌面操作系统（海思麒麟990）V10 SP1 2107、银河麒麟桌面操作系统（海思麒麟9006c）V10 SP1 2107、银河麒麟桌面操作系统（海思麒麟990）V10 SP1 2203、银河麒麟桌面操作系统（海思麒麟9006c）V10 SP1 2203
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/lib32ncurses6_6.2-0kylin2.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/lib32ncursesw6_6.2-0kylin2.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/lib32tinfo6_6.2-0kylin2.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncurses5_6.2-0kylin2.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncurses6_6.2-0kylin2.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncursesw5_6.2-0kylin2.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncursesw6_6.2-0kylin2.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libtinfo5_6.2-0kylin2.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libtinfo6_6.2-0kylin2.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-base_6.2-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-bin_6.2-0kylin2.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-examples_6.2-0kylin2.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-term_6.2-0kylin2.1_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncurses5_6.2-0kylin2.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncurses6_6.2-0kylin2.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncursesw5_6.2-0kylin2.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncursesw6_6.2-0kylin2.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libtinfo5_6.2-0kylin2.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libtinfo6_6.2-0kylin2.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-base_6.2-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-bin_6.2-0kylin2.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-examples_6.2-0kylin2.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-term_6.2-0kylin2.1_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncurses5_6.2-0kylin2.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncurses6_6.2-0kylin2.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncursesw5_6.2-0kylin2.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncursesw6_6.2-0kylin2.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libtinfo5_6.2-0kylin2.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libtinfo6_6.2-0kylin2.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-base_6.2-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-bin_6.2-0kylin2.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-examples_6.2-0kylin2.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-term_6.2-0kylin2.1_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncurses5_6.2-0kylin2.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncurses6_6.2-0kylin2.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncursesw5_6.2-0kylin2.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libncursesw6_6.2-0kylin2.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libtinfo5_6.2-0kylin2.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/libtinfo6_6.2-0kylin2.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-base_6.2-0kylin2.1_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-bin_6.2-0kylin2.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-examples_6.2-0kylin2.1_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/n/ncurses/ncurses-term_6.2-0kylin2.1_all.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2107、银河麒麟桌面操作系统V10 SP1 2203、银河麒麟桌面操作系统（海思麒麟990）V10 SP1 2107、银河麒麟桌面操作系统（海思麒麟9006c）V10 SP1 2107、银河麒麟桌面操作系统（海思麒麟990）V10 SP1 2203、银河麒麟桌面操作系统（海思麒麟9006c）V10 SP1 2203版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

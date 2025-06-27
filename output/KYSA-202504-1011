@@ -1,0 +1,173 @@
+Name:KYSA-202504-1011
+Severity:重要
+Summary:grub2安全漏洞
+Published:2025-04-01
+URL:/support/loophole/patch/7598.html
+Title:
+			公告ID：KYSA-202504-1011
+公告摘要：grub2安全漏洞
+等级：重要
+发布日期：2025-04-01
+		
+1.修复的漏洞
+·CVE-2024-45774
+描述：在 GRUB2 中发现一个缺陷。一个经过特殊构造的 JPEG 文件可能导致 GRUB2 的 JPEG 解析器错误检查其内部缓冲区的边界，进而引发越界写入。目前不排除存在通过覆盖敏感信息来绕过安全启动保护机制的可能性。
+·CVE-2024-45775
+描述：在 GRUB2 中发现了一个漏洞。grub_extcmd_dispatcher() 函数会调用 grub_arg_list_alloc() 为 GRUB 的参数列表分配内存。然而，它没有对内存分配失败的情况进行检查。一旦分配失败，parse_option() 函数就会处理空指针，这会导致 GRUB 崩溃，在某些罕见情况下，还会破坏中断向量表（IVT）数据。
+·CVE-2024-45776
+描述：在 grub_mofile_open() 函数读取语言 .mo 文件时，GRUB2 未对内部缓冲区分配过程中的整数溢出进行验证。精心构造的 .mo 文件可能导致缓冲区大小计算溢出，进而引发越界读写。利用该漏洞，攻击者可泄露敏感数据或覆盖关键数据，甚至可能绕过安全启动保护机制。
+·CVE-2024-45777
+描述：在 GRUB2 中发现一个缺陷。grub_gettext_getstr_from_position() 函数读取语言 .mo 文件时，翻译缓冲区的计算可能发生溢出，进而导致越界写入。攻击者可利用该问题覆盖 GRUB2 敏感的堆数据，最终实现绕过安全启动保护机制。
+·CVE-2024-45778
+描述：在读取 BFS 文件系统时发现了一个栈溢出漏洞。一个经过精心构造的 BFS 文件系统可能导致不受控制的循环，从而使 GRUB2 崩溃。
+·CVE-2024-45779
+描述：在 GRUB2 的 BFS 文件系统驱动中发现了一个整数溢出漏洞。当读取带有间接盘区映射的文件时，GRUB2 未能验证要读取的盘区条目数。精心构造或损坏的 BFS 文件系统可能在文件读取过程中引发整数溢出，导致堆越界读取。这一漏洞可能导致敏感数据泄露，或使 GRUB2 崩溃。
+·CVE-2024-45780
+描述：在 GRUB2 中发现了一个漏洞。当读取 tar 文件时，GRUB2 会为文件名分配一个内部缓冲区。然而，它未能针对可能出现的整数溢出情况对该内存分配操作进行恰当验证。通过精心构造的 tar 文件，有可能使分配长度发生溢出，从而导致堆越界写入问题。该漏洞最终会让攻击者绕过安全启动保护机制。
+·CVE-2024-45781
+描述：在 GRUB2 中发现了一个漏洞。当从 UFS 文件系统读取符号链接名称时，GRUB2 未能对作为输入的字符串长度进行验证。这种验证缺失可能会导致堆越界写入，引发数据完整性问题，最终使攻击者能够绕过安全启动保护机制。
+·CVE-2024-45782
+描述：在 HFS 文件系统中发现了一个漏洞。当 grub_fs_mount() 函数读取 HFS 卷的名称时，HFS 文件系统驱动程序在未正确验证卷名长度的情况下，直接使用用户提供的卷名作为输入执行 strcpy() 操作。这一问题可能导致基于堆的越界写入，破坏 GRUB 的敏感数据完整性，最终使攻击者能够绕过安全启动保护机制。
+·CVE-2024-45783
+描述：在 GRUB2 中发现了一个漏洞。当 GRUB2 挂载 HFS+ 文件系统失败时，HFS+ 文件系统驱动程序没有正确设置错误号（ERRNO）的值。这一问题可能会导致空指针访问。
+·CVE-2024-49504
+描述：GRUB2 允许能够访问 GRUB Shell 的攻击者访问加密磁盘上的文件。
+·CVE-2024-56737
+描述：截至 2.12 版本的 GNU GRUB（即 GRUB2）存在一个基于堆的缓冲区溢出漏洞，该漏洞位于 fs/hfs.c 文件中，可通过 HFS 文件系统中精心构造的超级块（sblock）数据触发。
+·CVE-2025-0622
+描述：在 command/gpg 中发现了一个漏洞。在某些情况下，当相关模块被卸载时，由已加载模块创建的钩子并未被移除。这一漏洞使攻击者能够在注册钩子的模块被卸载后，迫使 GRUB2 调用这些钩子，从而导致 “释放后使用” 漏洞。如果该漏洞被成功利用，可能会导致任意代码执行，最终使攻击者能够绕过安全启动保护机制。
+
+·CVE-2025-0624
+描述：在 GRUB2 中发现了一个漏洞。在网络启动过程中，当尝试搜索配置文件时，GRUB 使用 grub_strcpy() 函数将用户控制的环境变量数据复制到内部缓冲区。在此过程中，GRUB 未能在分配内部缓冲区时考虑环境变量的长度，从而导致越界写入。如果该漏洞被成功利用，攻击者可能通过 GRUB 搜索引导信息的同一网络段执行远程代码，进而绕过安全启动保护机制。
+·CVE-2025-0677
+描述：在 GRUB2 中发现了一个漏洞。当执行符号链接查找时，GRUB 的 UFS 模块会检查 inode 的数据大小以分配内部缓冲区来读取文件内容，但未验证符号链接数据大小是否发生溢出。当溢出发生时，grub_malloc() 可能会分配一个小于实际需求的内存空间。在进一步将磁盘数据读取到缓冲区时，grub_ufs_lookup_symlink() 函数会向已分配内存的末尾之外写入数据。攻击者可通过构造恶意文件系统利用此漏洞，最终破坏堆中存储的数据，实现任意代码执行，从而绕过安全启动机制。
+·CVE-2025-0678
+描述：在 GRUB2 中发现了一个漏洞。当从 squash4 文件系统读取数据时，GRUB 的 squash4 文件系统模块使用来自文件系统几何结构的用户控制参数来确定内部缓冲区大小，但未正确检查整数溢出。恶意构造的文件系统可能导致其中某些缓冲区大小计算发生溢出，使得 grub_malloc() 分配的内存空间小于实际需求。最终，direct_read() 函数在数据读取过程中会执行基于堆的越界写入。该漏洞可被利用来破坏 GRUB 的内部关键数据，并可能导致任意代码执行，从而绕过安全启动保护机制。
+·CVE-2025-0684
+描述：在 GRUB2 中发现了一个漏洞。当从 ReiserFS 文件系统执行符号链接查找时，GRUB 的 ReiserFS 文件系统模块会使用来自文件系统布局的用户可控参数来确定内部缓冲区的大小，但它没有正确检查整数溢出情况。恶意构造的文件系统可能会使其中一些缓冲区大小的计算结果溢出，从而导致 grub_malloc() 分配的内存大小比预期的小。
+·CVE-2025-0685
+描述：在 GRUB2 中发现了一个漏洞。当从 JFS 文件系统读取数据时，GRUB 的 JFS 文件系统模块会使用来自文件系统布局的用户可控参数来确定内部缓冲区的大小，然而，它没有正确检查整数溢出情况。恶意构造的文件系统可能会导致其中一些缓冲区大小的计算结果溢出，从而使它调用 grub_malloc() 函数分配比预期更小的内存空间.
+·CVE-2025-0686
+描述：在 GRUB2 中发现了一个漏洞。当从 romfs 文件系统执行符号链接查找时，GRUB 的 romfs 文件系统模块会使用来自文件系统布局的用户可控参数来确定内部缓冲区大小，但未正确检查整数溢出。恶意构造的文件系统可能导致其中一些缓冲区大小的计算结果溢出，使得 grub_malloc() 分配的内存空间小于实际需求。最终，grub_romfs_read_symlink() 函数在调用 grub_disk_read() 时可能引发越界写入。攻击者可利用此漏洞破坏 GRUB 的内部关键数据，并可能实现任意代码执行，从而绕过安全启动保护机制。
+·CVE-2025-0689
+描述：当从磁盘读取数据时，GRUB 的 UDF 文件系统模块会利用用户可控的数据长度元数据来分配其内部缓冲区。在某些情况下，在遍历磁盘扇区时，该模块会假定从磁盘读取的数据大小始终小于已分配的缓冲区大小，但这一点并不能得到保证。精心构造的文件系统映像可能会导致基于堆的缓冲区溢出，进而致使关键数据遭到破坏，引发绕过安全启动保护机制执行任意代码的风险。
+·CVE-2025-0690
+描述：read 命令用于读取用户的键盘输入。在读取时，它会将输入长度存储在一个 32 位整数值中，该值会进一步用于重新分配行缓冲区以接收下一个字符。在这个过程中，如果输入行足够长，就有可能使这个变量溢出，从而导致在基于堆的缓冲区中发生越界写入。攻击者可能会利用这个漏洞破坏 GRUB 的内部关键数据，并且不能排除其会导致绕过安全启动机制的可能性。
+·CVE-2025-1118
+描述：在 GRUB2 中发现了一个漏洞。当 GRUB 处于锁定模式时，其 dump 命令未被阻止，这使得用户能够读取任何内存信息，攻击者可能利用这一点从内存中提取签名、盐值和其他敏感信息。
+·CVE-2025-1125
+描述：在 GRUB2 中发现了一个漏洞。当从 HFS 文件系统读取数据时，GRUB 的 HFS 文件系统模块会使用来自文件系统元数据的用户控制参数来计算内部缓冲区大小，但未正确检查整数溢出。恶意构造的文件系统可能导致其中一些缓冲区大小计算发生溢出，使得 grub_malloc() 分配的内存空间小于实际需求。最终，hfsplus_open_compressed_real() 函数会向超出内部缓冲区长度的位置写入数据。该漏洞可被利用来破坏 GRUB 的内部关键数据，并可能导致任意代码执行，从而绕过安全启动保护机制。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+grub2-tools-minimal、grub2-tools、grub2-efi-aa64-modules、grub2-common、grub2-efi-aa64-cdboot、grub2-efi-aa64、grub2-pc-modules、grub2-tools-extra、grub2-efi-x64-modules、grub2-help、grub2-efi-ia32-modules
+·x86_64架构:
+grub2-tools-minimal、grub2-tools、grub2-efi-aa64-modules、grub2-efi-x64、grub2-common、grub2-efi-x64-cdboot、grub2-efi-ia32-cdboot、grub2-pc、grub2-efi-ia32、grub2-tools-efi、grub2-pc-modules、grub2-tools-extra、grub2-efi-x64-modules、grub2-help、grub2-efi-ia32-modules
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64)
+grub2-pc-modules-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-aa64-cdboot-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-aa64-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-ia32-modules-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-aa64-modules-2.04-5.se.01.p15.ky10或以上版本
+grub2-help-2.04-5.se.01.p15.ky10或以上版本
+grub2-tools-minimal-2.04-5.se.01.p15.ky10或以上版本
+grub2-tools-extra-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-x64-modules-2.04-5.se.01.p15.ky10或以上版本
+grub2-tools-2.04-5.se.01.p15.ky10或以上版本
+grub2-common-2.04-5.se.01.p15.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (x86_64)
+grub2-pc-modules-2.04-5.se.01.p15.ky10或以上版本
+grub2-pc-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-ia32-cdboot-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-ia32-2.04-5.se.01.p15.ky10或以上版本
+grub2-tools-efi-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-ia32-modules-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-aa64-modules-2.04-5.se.01.p15.ky10或以上版本
+grub2-help-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-x64-2.04-5.se.01.p15.ky10或以上版本
+grub2-tools-minimal-2.04-5.se.01.p15.ky10或以上版本
+grub2-tools-extra-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-x64-modules-2.04-5.se.01.p15.ky10或以上版本
+grub2-tools-2.04-5.se.01.p15.ky10或以上版本
+grub2-common-2.04-5.se.01.p15.ky10或以上版本
+grub2-efi-x64-cdboot-2.04-5.se.01.p15.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2024-45774:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-45775:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-45776:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-45777:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-45778:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-45779:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-45780:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-45781:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-45782:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-45783:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-49504:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-56737:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-0622:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-0624:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-0677:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-0678:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-0684:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-0685:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-0686:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-0689:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-0690:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-1118:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2025-1125:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+grub2(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/grub2-efi-aa64-cdboot-2.04-5.se.01.p15.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/grub2-efi-x64-modules-2.04-5.se.01.p15.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/grub2-tools-minimal-2.04-5.se.01.p15.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/grub2-pc-modules-2.04-5.se.01.p15.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/grub2-common-2.04-5.se.01.p15.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/grub2-tools-extra-2.04-5.se.01.p15.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/grub2-efi-aa64-2.04-5.se.01.p15.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/grub2-efi-aa64-modules-2.04-5.se.01.p15.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/grub2-efi-ia32-modules-2.04-5.se.01.p15.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/grub2-help-2.04-5.se.01.p15.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/grub2-tools-2.04-5.se.01.p15.ky10.aarch64.rpm
+
+grub2(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-pc-modules-2.04-5.se.01.p15.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-efi-ia32-modules-2.04-5.se.01.p15.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-common-2.04-5.se.01.p15.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-efi-ia32-cdboot-2.04-5.se.01.p15.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-efi-x64-2.04-5.se.01.p15.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-efi-aa64-modules-2.04-5.se.01.p15.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-pc-2.04-5.se.01.p15.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-efi-x64-cdboot-2.04-5.se.01.p15.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-tools-extra-2.04-5.se.01.p15.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-efi-ia32-2.04-5.se.01.p15.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-efi-x64-modules-2.04-5.se.01.p15.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-tools-minimal-2.04-5.se.01.p15.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-tools-efi-2.04-5.se.01.p15.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-tools-2.04-5.se.01.p15.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/grub2-help-2.04-5.se.01.p15.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

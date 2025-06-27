@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-1681
+Severity:重要
+Summary:qemu-kvm 安全更新
+Published:2017-07-05
+URL:/support/loophole/patch/35.html
+Title:
+			摘要：             qemu-kvm 安全更新
+安全等级：         重要
+公告ID：           CS2CSA-2017-1681
+产品：             中标麒麟高级服务器操作系统      
+发布日期：         2017-07-05
+CVE：              CVE-2017-9524 CVSS3评分：5
+		
+1. 概述：中标麒麟高级服务器操作系统V7有qemu-kvm可用的安全更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V7-X86_64。3. 描述：基于内核的虚拟机（KVM）是一个在各种体系结构上完整的Linux虚拟化解决方案。qemu-kvm包为使用KVM运行的虚拟机提供user-space组件。4. 安全加固：* qemu-nbd服务器存在一个NULL指针引用错误。该缺陷可能在发布客户端的时候触发，可以造成初始化失败。远程攻击者利用这个缺陷可以导致qemu-nbd服务器崩溃。(CVE-2017-9524，CVSS3评分：5)5. 缺陷修复：CVE-2017-9524 Qemu: nbd: 造成non-negotiation客户端段错误发生6. 安装包列表：中标麒麟高级服务器操作系统V7：源码包： qemu-kvm-1.5.3-126.el7_3.10.src.rpmx86_64二进制包：qemu-img-1.5.3-126.el7_3.10.x86_64.rpmqemu-kvm-1.5.3-126.el7_3.10.x86_64.rpmqemu-kvm-common-1.5.3-126.el7_3.10.x86_64.rpmqemu-kvm-debuginfo-1.5.3-126.el7_3.10.x86_64.rpmqemu-kvm-tools-1.5.3-126.el7_3.10.x86_64.rpm			

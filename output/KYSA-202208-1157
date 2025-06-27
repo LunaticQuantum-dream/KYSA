@@ -1,0 +1,67 @@
+Name:KYSA-202208-1157
+Severity:中等
+Summary:nspr安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1649.html
+Title:
+			公告ID：KYSA-202208-1157
+公告摘要：nspr安全漏洞
+安全漏洞等级：Moderate
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2018-0495
+描述：Libgcrypt是GNU计划开发的一个基于GnuPG代码的通用加密库。该库实现了各种加密算法，包括对称密码、哈希算法、公开密钥算法等。Libgcrypt 1.7.10之前版本和1.8.3之前的1.8.x版本中存在安全漏洞。攻击者可通过访问本地设备或同一物理主机上的其他虚拟设备利用该漏洞实施边信道攻击，获取ECDSA密钥。
+·CVE-2018-12404
+描述：Slackware是Patrick Volkerding软件开发者的一套开源的GNU/Linux操作系统。Slackware中的mozilla-nss中存在加密问题漏洞。该漏洞源于网络系统或产品未正确使用相关密码算法，导致内容未正确加密、弱加密、明文存储敏感信息等。以下版本受到影响：Slackware 14.0版本，14.1版本，14.2版本，-current版本。
+·CVE-2019-17007
+描述：Network Security Services（NSS）是一套用于跨平台开发且启用了安全功能的客户端和服务器应用的库，用NSS编译的应用可支持SSLv2、SSLv3、TLS等安全标准。NSS是美国Mozilla基金会的一个底层密码学库。该库支持多种加密算法，并且 Firefox 浏览器的TLS实现基于该库。Mozilla nss中存在信任管理问题漏洞。该漏洞源于网络系统或产品中缺乏有效的信任管理机制。攻击者可利用默认密码或者硬编码密码、硬编码证书等攻击受影响组件。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+nspr、nspr-devel
+x86_64架构:
+nspr、nspr-devel
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+nspr-4.21.0-1.el7
+nspr-devel-4.21.0-1.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+244.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+245.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+246.升级完成后是否需要重启服务或操作系统：
+·CVE-2018-0495：需要重启 nspr、openssl 以使漏洞修复生效。
+·CVE-2018-12404：需要重启 nspr 以使漏洞修复生效。
+·CVE-2019-17007：无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+nspr（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/nspr-4.21.0-1.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/nspr-devel-4.21.0-1.el7.aarch64.rpm
+
+nspr（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/nspr-4.21.0-1.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/nspr-4.21.0-1.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/nspr-devel-4.21.0-1.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/nspr-devel-4.21.0-1.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

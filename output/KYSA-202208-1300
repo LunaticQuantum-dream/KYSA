@@ -1,0 +1,116 @@
+Name:KYSA-202208-1300
+Severity:重要
+Summary:httpd安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/3940.html
+Title:
+			公告ID：KYSA-202208-1300
+公告摘要：httpd安全漏洞
+等级：Important
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2008-0455
+描述：Apache HTTP Server是一款流行的Web服务器。Apache HTTP Server 2.2.6和较早版本2.2.x系列、2.0.61和较早版本2.0.x系列、1.3.39和较早版本1.3.x系列中的mod_negotiation模块中存在跨站脚本漏洞。远程认证攻击者利用该漏洞通过上传带有包含XSS序列名字的文件和文件扩展，注入任意web脚本或HTML，文件扩展名请求被程序忽略，这将导致程序的（1）“406 Not Acceptable”页面或者（2）“300 Multiple Choices”HTTP响应页面受到注入攻击。
+·CVE-2011-3607
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server在\"ap_pregsub()\"函数的实现上存在本地权限提升漏洞。本地攻击者可利用此漏洞以提升的权限执行任意代码。
+·CVE-2011-3639
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server中的mod_proxy模块中存在漏洞。当Revision 1179239补丁在适当的位置时，不能正确的与（1） RewriteRule和（2）配置反代理服务器的ProxyPassMatch的模式匹配交互。远程攻击者可通过使用带有畸形URL，并且其中包含首字母为@（at符号）字符的HTTP/0.9协议发送请求到网路服务器。
+·CVE-2011-4317
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.x版本中存在漏洞。该漏洞源于Apache HTTP Server在反向代理模式中配置mod_proxy模块时错误地处理了某些Web请求，攻击者可利用该漏洞通过特制的URL向代理后方的服务器发送请求，从而绕过某些安全限制。
+·CVE-2012-0031
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server中存在漏洞，该漏洞源于其子进程可以更改scoreboard共享内存段的内存类型记录。本地恶意用户可利用该漏洞造成父进程关闭时无效的释放操作，使本地攻击者可绕过某些安全限制。
+·CVE-2012-0053
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.2.x版本至2.2.21版本中的protocol.c中存在漏洞，该漏洞源于在Bad Request（也称400）的构建过程中未正确限制表头信息。远程攻击者可利用此漏洞借助带有(1)长整形或(2)畸形的表头连接特制web脚本，向量获得HTTPOnly cookies值。
+·CVE-2012-2687
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.4.3之前的2.4.x版本中的mod_negotiation模块中的mod_negotiation.c内的‘make_variant_list’函数中存在多个跨站脚本(XSS)漏洞。当MultiViews选项启用时，远程攻击者可利用这些漏洞通过特制的构造列表变量期间未正确处理的文件名，注入任意web脚本或HTML。
+·CVE-2012-3499
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.2.24-dev之前的2.2.x版本和2.4.4之前的2.4.x版本中存在多个跨站脚本漏洞。通过包含在(1)mod_imagemap，(2)mod_info，(3)mod_ldap，(4)mod_proxy_ftp以及(5)mod_status模块中的主机名和URIs的向量，远程攻击者利用这些漏洞注入任意web脚本或HTML。
+·CVE-2012-4557
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.2.12版本至2.2.21版本中的mod_proxy_ajp模块中存在漏洞，该漏洞源于程序将工作节点放置于经一个较长的请求处理时间检测的错误状态下。远程攻击者可通过发送超长请求利用该漏洞造成拒绝服务（工作者耗尽）。
+·CVE-2012-4558
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.2.24-dev之前的2.2.x版本和2.4.4之前的2.4.x版本中的mod_proxy_balancer模块中的mod_proxy_balancer.c中的管理界面中的‘balancer_handler’中存在多个跨站脚本漏洞。通过特制的字符串，远程攻击者利用这些漏洞注入任意web脚本或HTML。
+·CVE-2013-1862
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.2.25之前的2.2.x版本中的mod_rewrite模块中的mod_rewrite.c中存在漏洞，该漏洞源于程序写数据到日志文件没有验证非打印字符。远程攻击者可通过包含终端模拟器的转义序列的HTTP请求利用该漏洞执行任意命令。
+·CVE-2013-1896
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.2.25之前的版本中的mod_dav.c中存在安全漏洞，该漏洞源于程序没有正确确认对URI是否启用DAV。远程攻击者可借助配置URI处理mod_dav_svn模块的MERGE请求，利用该漏洞造成拒绝服务（分段故障）。
+·CVE-2013-5704
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.2.22版本的mod_headers模块存在安全漏洞。远程攻击者可利用该漏洞绕过‘RequestHeader unset’指令。
+·CVE-2013-6438
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.4.7及之前版本的mod_dav模块中的main/util.c文件的‘dav_xml_get_cdata’函数存在输入验证漏洞，该漏洞源于程序没有正确删除CDATA段的空格字符。远程攻击者可通过发送特制的DAV WRITE请求利用该漏洞造成拒绝服务（守护进程崩溃）。
+·CVE-2014-0098
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.4.7及之前版本的mod_log_config模块中的mod_log_config.c文件的‘log_cookie’函数存在拒绝服务漏洞。远程攻击者可借助特制的cookie利用该漏洞造成拒绝服务（段错误和守护进程崩溃）。
+·CVE-2014-0118
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。mod_deflate是其中的一个压缩模块。Apache HTTP Server 2.4.1至2.4.9版本的mod_deflate模块的mod_deflate.c文件中的‘deflate_in_filter’函数存在安全漏洞。程序配置‘request body decompression’时，远程攻击者可通过发送特制的请求数据利用该漏洞造成拒绝服务（资源消耗）。
+·CVE-2014-0226
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。mod_status是其中的一个用于生成描述服务器状态的Web页面的模块。Apache HTTP Server 2.4.1至2.4.9版本的mod_status模块的modules/generators/mod_status.c文件中的‘status_handler’函数和modules/lua/lua_request.c文件中的‘lua_ap_scoreboard_worker’函数存在竞争条件漏洞。远程攻击者可通过发送特制的请求利用该漏洞造成拒绝服务（基于堆的缓冲区溢出），或获取敏感信息，也可能执行任意代码。
+·CVE-2014-0231
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。mod_cgid是其中的一个用于在线程型MPM（worker）上用一个外部CGI守护进程执行CGI脚本的模块。Apache HTTP Server 2.4.1至2.4.9版本的mod_cgid模块存在安全漏洞，该漏洞源于程序没有超时机制。远程攻击者可通过向CGI脚本发送特制的请求利用该漏洞造成拒绝服务（进程挂起）。
+·CVE-2015-3183
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.4.14之前版本的chunked transfer coding实现过程中存在安全漏洞，该漏洞源于程序没有正确解析数据块头部。远程攻击者可通过发送特制的请求利用该漏洞实施HTTP请求走私攻击。
+·CVE-2016-5387
+描述：Apache HTTP Server是美国阿帕奇（Apache）软件基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.4.23及之前的版本中存在安全漏洞，该漏洞源于程序没有解决RFC 3875模式下的命名空间冲突。程序没有正确处理来自HTTP_PROXY环境变量中不可信客户端数据应用程序。远程攻击者借助HTTP请求中特制的Proxy header消息利用该漏洞实施中间人攻击，指引服务器发送连接到任意主机。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+httpd、httpd-devel、httpd-manual、httpd-tools、mod_ssl
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+httpd-2.2.15-59.el6.ns6.01或以上版本
+httpd-devel-2.2.15-59.el6.ns6.01或以上版本
+httpd-manual-2.2.15-59.el6.ns6.01或以上版本
+httpd-tools-2.2.15-59.el6.ns6.01或以上版本
+mod_ssl-2.2.15-59.el6.ns6.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2008-0455:需要重启 httpd 以使漏洞修复生效。
+CVE-2011-3607:需要重启 httpd 以使漏洞修复生效。
+CVE-2011-3639:需要重启 httpd 以使漏洞修复生效。
+CVE-2011-4317:需要重启 httpd 以使漏洞修复生效。
+CVE-2012-0031:需要重启 httpd 以使漏洞修复生效。
+CVE-2012-0053:需要重启 httpd 以使漏洞修复生效。
+CVE-2012-2687:需要重启 httpd 以使漏洞修复生效。
+CVE-2012-3499:需要重启 httpd 以使漏洞修复生效。
+CVE-2012-4557:需要重启 httpd 以使漏洞修复生效。
+CVE-2012-4558:需要重启 httpd 以使漏洞修复生效。
+CVE-2013-1862:需要重启 httpd 以使漏洞修复生效。
+CVE-2013-1896:需要重启 httpd 以使漏洞修复生效。
+CVE-2013-5704:需要重启 httpd 以使漏洞修复生效。
+CVE-2013-6438:需要重启 httpd 以使漏洞修复生效。
+CVE-2014-0098:需要重启 httpd 以使漏洞修复生效。
+CVE-2014-0118:需要重启 httpd 以使漏洞修复生效。
+CVE-2014-0226:需要重启 httpd 以使漏洞修复生效。
+CVE-2014-0231:需要重启 httpd 以使漏洞修复生效。
+CVE-2015-3183:需要重启 httpd 以使漏洞修复生效。
+CVE-2016-5387:需要重启 httpd 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+httpd(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/httpd-2.2.15-59.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/httpd-devel-2.2.15-59.el6.ns6.01.i686.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/httpd-devel-2.2.15-59.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/httpd-manual-2.2.15-59.el6.ns6.01.noarch.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/httpd-tools-2.2.15-59.el6.ns6.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/mod_ssl-2.2.15-59.el6.ns6.01.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

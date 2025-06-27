@@ -1,0 +1,91 @@
+Name:KYSA-202110-1004
+Severity:重要
+Summary:qt5-qtimageformats安全漏洞
+Published:2021-10-16
+URL:/support/loophole/patch/3639.html
+Title:
+			公告ID：KYSA-202110-1004
+公告摘要：qt5-qtimageformats安全漏洞
+等级：Important
+发布日期：2021-10-16
+		
+1.修复的CVE
+·CVE-2018-25011
+描述：libwebp存在一个缺陷。在PutLE16()中发现基于堆的缓冲区溢出。来自该漏洞的最大威胁是数据机密性和完整性以及系统可用性。
+·CVE-2018-25014
+描述：在1.0.1之前的libwebp中发现了一个缺陷。ReadSymbol函数中使用了一个单变量。来自该漏洞的最大威胁是数据机密性和完整性以及系统可用性。
+·CVE-2020-36328
+描述：在1.0.1之前的libwebp中发现了一个缺陷。由于无效的缓冲区大小检查，函数WebPDecodeRGBInto可能会出现基于堆的缓冲区溢出。来自该漏洞的最大威胁是数据机密性和完整性以及系统可用性。
+·CVE-2020-36329
+描述：在1.0.1之前的libwebp中发现了一个缺陷。由于线程过早终止，发现了空闲后使用。来自该漏洞的最大威胁是数据机密性和完整性以及系统可用性。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+qt5-qtimageformats、qt5-qtimageformats-doc
+·x86_64架构:
+qt5-qtimageformats、qt5-qtimageformats-doc
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+qt5-qtimageformats、qt5-qtimageformats-doc
+·x86_64架构:
+qt5-qtimageformats、qt5-qtimageformats-doc
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+qt5-qtimageformats-5.9.7-2.el7_9或以上版本
+qt5-qtimageformats-doc-5.9.7-2.el7_9或以上版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+qt5-qtimageformats-5.9.7-2.el7_9或以上版本
+qt5-qtimageformats-doc-5.9.7-2.el7_9或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2018-25011:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-25014:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-36328:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2020-36329:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+qt5-qtimageformats(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/qt5-qtimageformats-5.9.7-2.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/qt5-qtimageformats-doc-5.9.7-2.el7_9.noarch.rpm
+
+qt5-qtimageformats(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/qt5-qtimageformats-5.9.7-2.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/qt5-qtimageformats-5.9.7-2.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/qt5-qtimageformats-doc-5.9.7-2.el7_9.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+qt5-qtimageformats(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/qt5-qtimageformats-5.9.7-2.el7_9.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/aarch64/Packages/qt5-qtimageformats-doc-5.9.7-2.el7_9.noarch.rpm
+
+qt5-qtimageformats(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/qt5-qtimageformats-5.9.7-2.el7_9.i686.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/qt5-qtimageformats-5.9.7-2.el7_9.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/updates/x86_64/Packages/qt5-qtimageformats-doc-5.9.7-2.el7_9.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

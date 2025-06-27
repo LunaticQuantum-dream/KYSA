@@ -1,0 +1,113 @@
+Name:KYSA-202412-1103
+Severity:重要
+Summary:tomcat安全漏洞
+Published:2024-12-10
+URL:/support/loophole/patch/6957.html
+Title:
+			公告ID：KYSA-202412-1103
+公告摘要：tomcat安全漏洞
+等级：重要
+发布日期：2024-12-10
+		
+1.修复的漏洞
+·CVE-2021-43980
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。
+Apache Tomcat存在安全漏洞，该漏洞源于阻塞读写的简化实现，存在并发错误，该错误可能导致客户端连接共享一个Http11Processor实例，从而导致响应或者部分响应，由错误的客户接收。以下产品和版本受到影响：Tomcat 10.1.0-M1至10.1.0-M12版本、10.0.0-M1至10.0.18版本、9.0.0-M1至9.0.60版本、8.5.0至8.5.77版本。
+·CVE-2022-25762
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 8.5.0到8.5.75版本 9.0.0.M1到9.0.20版本存在安全漏洞，该漏洞源于如果 Web 应用程序在 WebSocket 连接关闭的同时发送 WebSocket 消息，则应用程序可能会在关闭后继续使用该套接字，导致数据返回错误。
+·CVE-2023-44487
+描述：HTTP/2是超文本传输协议的第二版，主要用于保证客户机与服务器之间的通信。
+Apache HTTP/2存在安全漏洞。攻击者利用该漏洞导致系统拒绝服务。
+·CVE-2023-46589
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。
+Apache Tomcat存在环境问题漏洞，该漏洞源于存在不正确的输入验证漏洞，可能会导致将单个请求视为多个请求，从而在反向代理后面出现请求走私。
+·CVE-2024-23672
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。
+Apache Tomcat存在安全漏洞，该漏洞源于不完全清理，会导致拒绝服务。
+·CVE-2024-24549
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。
+Apache Tomcat存在输入验证错误漏洞，该漏洞源于HTTP/2请求的输入验证不正确，会导致拒绝服务。
+·CVE-2024-34750
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。
+Apache Tomcat存在安全漏洞，该漏洞源于存在异常情况处理不当、资源消耗不受控制的漏洞。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+tomcat-help、tomcat、tomcat-jsvc
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+tomcat-help、tomcat、tomcat-jsvc
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+·loongarch64架构:
+tomcat-help、tomcat、tomcat-jsvc
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+tomcat-jsvc-9.0.96-1.a.ky10或以上版本
+tomcat-help-9.0.96-1.a.ky10或以上版本
+tomcat-9.0.96-1.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+tomcat-jsvc-9.0.96-1.a.ky10或以上版本
+tomcat-help-9.0.96-1.a.ky10或以上版本
+tomcat-9.0.96-1.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (loongarch64)
+tomcat-jsvc-9.0.96-1.a.ky10或以上版本
+tomcat-help-9.0.96-1.a.ky10或以上版本
+tomcat-9.0.96-1.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3 2403
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-43980:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-25762:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-44487:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-46589:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-23672:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-24549:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-34750:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+tomcat(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/tomcat-9.0.96-1.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/tomcat-help-9.0.96-1.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/tomcat-jsvc-9.0.96-1.a.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+tomcat(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/tomcat-9.0.96-1.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/tomcat-help-9.0.96-1.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/tomcat-jsvc-9.0.96-1.a.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+
+tomcat(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/tomcat-9.0.96-1.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/tomcat-help-9.0.96-1.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/tomcat-jsvc-9.0.96-1.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/tomcat-9.0.96-1.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/tomcat-help-9.0.96-1.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/tomcat-jsvc-9.0.96-1.a.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

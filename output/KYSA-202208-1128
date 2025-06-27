@@ -1,0 +1,91 @@
+Name:KYSA-202208-1128
+Severity:中等
+Summary:libjpeg-turbo安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1662.html
+Title:
+			公告ID：KYSA-202208-1128
+公告摘要：libjpeg-turbo安全漏洞
+等级：Moderate
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2016-3616
+描述：libjpeg是一款用于处理JPEG格式图像数据的C语言库。该产品包括JPEG解码、JPEG编码和其他JPEG功能。libjpeg-turbo中存在代码问题漏洞。攻击者可利用该漏洞在受影响应用程序上下文中执行任意代码，或造成拒绝服务。
+·CVE-2018-11212
+描述：libjpeg是一款用于处理JPEG格式图像数据的C语言库。该产品包括JPEG解码、JPEG编码和其他JPEG功能。libjpeg 9a版本中存在数字错误漏洞。该漏洞源于网络系统或产品未正确计算或转换所产生的数字。攻击者可利用该漏洞导致整数溢出或符号错误等。
+·CVE-2018-11213
+描述：libjpeg是独立JPEG工作组（Independent JPEG Group，IJG）所维护的一个包含JPEG解码、JPEG编码和其他JPEG功能的C语言库。libjpeg 9a版本中的rdppm.c文件的‘get_text_gray_row’函数存在安全漏洞。远程攻击者可借助特制的文件利用该漏洞造成拒绝服务（段错误）。
+·CVE-2018-11214
+描述：libjpeg是独立JPEG工作组（Independent JPEG Group，IJG）所维护的一个包含JPEG解码、JPEG编码和其他JPEG功能的C语言库。libjpeg 9a版本中的rdppm.c文件的‘get_text_rgb_row’函数存在安全漏洞。远程攻击者可借助特制的文件利用该漏洞造成拒绝服务（段错误）。
+·CVE-2018-11813
+描述：libjpeg是独立JPEG工作组（Independent JPEG Group，IJG）所维护的一个包含JPEG解码、JPEG编码和其他JPEG功能的C语言库。libjpeg 9c版本中存在安全漏洞，该漏洞源于rdtarga.c文件没有正确处理文件结束符。远程攻击者可借助特制文件利用该漏洞导致拒绝服务。
+·CVE-2018-14498
+描述：libjpeg-turbo 1.5.90之前版本和MozJPEG 3.3.1之前版本中的rdbmp.c文件的‘get_8bit_row’函数存在缓冲区越界读取漏洞。攻击者可通借助8位的特制BMP图像利用该漏洞造成拒绝服务（程序崩溃）。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+libjpeg-turbo、libjpeg-turbo-devel、libjpeg-turbo-static、libjpeg-turbo-utils、turbojpeg、turbojpeg-devel
+x86_64架构:
+libjpeg-turbo、libjpeg-turbo-devel、libjpeg-turbo-static、libjpeg-turbo-utils、turbojpeg、turbojpeg-devel
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+libjpeg-turbo-1.2.90-8.el7
+libjpeg-turbo-devel-1.2.90-8.el7
+libjpeg-turbo-static-1.2.90-8.el7
+libjpeg-turbo-utils-1.2.90-8.el7
+turbojpeg-1.2.90-8.el7
+turbojpeg-devel-1.2.90-8.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+205.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/
+206.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+207.升级完成后是否需要重启服务或操作系统：
+·CVE-2016-3616：需要重启 libjpeg-turbo 以使漏洞修复生效。
+·CVE-2018-11212：无需重启操作系统与服务即可使漏洞修复生效。
+·CVE-2018-11213：需要重启 libjpeg-turbo 以使漏洞修复生效。
+·CVE-2018-11214：需要重启 libjpeg-turbo 以使漏洞修复生效。
+·CVE-2018-11813：需要重启 libjpeg-turbo 以使漏洞修复生效。
+·CVE-2018-14498：需要重启 libjpeg-turbo 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+libjpeg-turbo（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/libjpeg-turbo-1.2.90-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/libjpeg-turbo-devel-1.2.90-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/libjpeg-turbo-static-1.2.90-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/libjpeg-turbo-utils-1.2.90-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/turbojpeg-1.2.90-8.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/turbojpeg-devel-1.2.90-8.el7.aarch64.rpm
+
+libjpeg-turbo（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/libjpeg-turbo-1.2.90-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/libjpeg-turbo-1.2.90-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/libjpeg-turbo-devel-1.2.90-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/libjpeg-turbo-devel-1.2.90-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/libjpeg-turbo-static-1.2.90-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/libjpeg-turbo-static-1.2.90-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/libjpeg-turbo-utils-1.2.90-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/turbojpeg-1.2.90-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/turbojpeg-1.2.90-8.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/turbojpeg-devel-1.2.90-8.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/turbojpeg-devel-1.2.90-8.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

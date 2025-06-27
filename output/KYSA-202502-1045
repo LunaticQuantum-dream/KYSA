@@ -1,0 +1,97 @@
+Name:KYSA-202502-1045
+Severity:重要
+Summary:docker-engine安全漏洞
+Published:2025-02-18
+URL:/support/loophole/patch/7273.html
+Title:
+			公告ID：KYSA-202502-1045
+公告摘要：docker-engine安全漏洞
+等级：重要
+发布日期：2025-02-18
+		
+1.修复的漏洞
+·CVE-2022-24769
+描述：Moby是一个开源项目，旨在推动软件的容器化，并帮助生态系统使容器技术主流化。Moby 20.10.14 之前版本存在权限许可和访问控制问题漏洞，该漏洞源于容器使用非空的可继承 Linux 进程功能错误地启动，从而导致绕过安全限制和权限提升。攻击者可以通过默认可继承功能绕过容器的限制，以提升其权限。
+·CVE-2022-36109
+描述：Moby是一个开源项目，旨在推动软件的容器化，并帮助生态系统使容器技术主流化。
+
+Moby 20.10.18之前版本存在安全漏洞，该漏洞源于补充组设置不正确。攻击者利用该漏洞获得对敏感信息的访问权限或获得在该容器中执行代码的能力。
+·CVE-2024-36621
+描述：Moby v25.0.5 版本在 builder/builder-next/adapters/snapshot/layer.go 文件中存在一个竞争条件漏洞。该漏洞可能被利用触发并发构建，导致多个构建同时调用 EnsureLayer 函数，从而引发资源泄漏或资源耗尽。
+·CVE-2024-36623
+描述：Moby v25.0.3 版本在 streamformatter 包中存在一个竞争条件漏洞。该漏洞可能被利用触发多个并发的写操作，从而导致数据损坏或应用崩溃。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+docker-engine
+·x86_64架构:
+docker-engine
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+docker-engine
+·x86_64架构:
+docker-engine
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+docker-engine
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+docker-engine-18.09.0-206.p15.03.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+docker-engine-18.09.0-206.p15.03.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+docker-engine-18.09.0-206.p15.03.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-24769:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-36109:需要重启 docker-engine 以使漏洞修复生效。
+CVE-2024-36621:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-36623:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+docker-engine(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/docker-engine-18.09.0-206.p15.03.ky10.aarch64.rpm
+
+docker-engine(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/docker-engine-18.09.0-206.p15.03.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+docker-engine(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/docker-engine-18.09.0-206.p15.03.ky10.aarch64.rpm
+
+docker-engine(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/docker-engine-18.09.0-206.p15.03.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+docker-engine(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/docker-engine-18.09.0-206.p15.03.ky10.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

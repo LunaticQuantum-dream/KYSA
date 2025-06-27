@@ -1,0 +1,163 @@
+Name:KYSA-202208-1108
+Severity:重要
+Summary:jasper安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1675.html
+Title:
+			公告ID：KYSA-202208-1108
+公告摘要：jasper安全漏洞
+安全等级：Important
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2015-5203
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.17版本中‘jasper_image_stop_load’函数存在双重释放漏洞。远程攻击者可借助特制的JPEG 2000图像文件利用该漏洞造成拒绝服务（崩溃）。
+·CVE-2015-5221
+描述：JasPer JPEG-2000 library是加拿大软件开发者Michael Adams所研发的一个开源的JPEG-2000编码库。JasPer JPEG-2000 library 1.900.2之前的版本中的libjasper/mif/mif_cod.c文件的‘mif_process_cmpt’函数存在释放后重用漏洞。远程攻击者可借助特制的JPEG 2000图像文件利用该漏洞造成拒绝服务（崩溃）。
+·CVE-2016-10248
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.9之前的版本中的jpc_tsfb.c文件中的‘jpc_tsfb_synthesize’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（空指针逆向引用）。
+·CVE-2016-10249
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.12之前版本中的jpc_dec.c文件中的‘jpc_dec_tiledecode’函数存在整数溢出漏洞。远程攻击者可借助特制的图像文件利用该漏洞造成拒绝服务。
+·CVE-2016-10251
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.20之前版本中的jpc_t2cod.c文件中的‘jpc_pi_nextcprl’函数存在整数溢出漏洞。远程攻击者可借助特制的文件利用该漏洞造成拒绝服务。
+·CVE-2016-1577
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.1及之前版本的‘jas_iccattrval_destroy’函数中存在双重释放漏洞。远程攻击者可借助JPEG 2000图像文件中特制的ICC颜色配置利用该漏洞造成拒绝服务（崩溃），或执行任意代码。
+·CVE-2016-1867
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.1版本的‘jpc_pi_nextcprl’函数中存在安全漏洞。远程攻击者可借助特制的JPEG 2000图像利用该漏洞造成拒绝服务（越边界读取和应用程序崩溃）。
+·CVE-2016-2089
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.1版本的jas_seq.c文件中的‘jas_matrix_clip’函数存在安全漏洞。远程攻击者可借助特制的JPEG 2000图像利用该漏洞造成拒绝服务（无效的读取和应用程序崩溃）。
+·CVE-2016-2116
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.1及之前版本的‘jas_iccprof_createfrombuf’函数中存在内存泄露漏洞。远程攻击者可借助JPEG 2000图像文件中特制的ICC颜色配置利用该漏洞造成拒绝服务（内存消耗）。
+·CVE-2016-8654
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JPC codec是其中的一个JPC（图片格式）编解码器。JasPer 2.0.0之前版本中的JPC codec的QMFB代码存在基于堆的缓冲区溢出漏洞，该漏洞源于程序没有对用户提交的输入执行充分的边界检查。远程攻击者可利用该漏洞在应用程序上下文中执行任意代码或造成拒绝服务。
+·CVE-2016-8690
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.5之前的版本中的libjasper/bmp/bmp_dec.c文件的‘bmp_getdata’函数存在安全漏洞。远程攻击者可借助imginfo命令中特制的BMP图片利用该漏洞造成拒绝服务（空指针逆向引用）。
+·CVE-2016-8691
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.4之前的版本中的libjasper/jpc/jpc_dec.c文件的‘jpc_dec_process_siz’函数存在安全漏洞。远程攻击者可通过向imginfo发送特制的BMP图片利用该漏洞造成拒绝服务（除零错误和应用程序崩溃）。
+·CVE-2016-8692
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.4之前的版本中的libjasper/jpc/jpc_dec.c文件的‘jpc_dec_process_siz’函数存在安全漏洞。远程攻击者可通过向imginfo发送特制的BMP图片利用该漏洞造成拒绝服务（除零错误和应用程序崩溃）。
+·CVE-2016-8693
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.10之前的版本中的jas_stream.c文件的‘mem_close’函数存在双重释放漏洞。远程攻击者可通过向imginfo发送特制的BMP图片利用该漏洞造成拒绝服务（崩溃）。
+·CVE-2016-8883
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.8之前的版本中的jpc_dec.c文件的‘jpc_dec_tiledecode’函数存在安全漏洞。远程攻击者可借助特制的文件利用该漏洞造成拒绝服务（断言失败）。
+·CVE-2016-8884
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.5版本中的libjasper/bmp/bmp_dec.c文件的‘bmp_getdata’函数存在安全漏洞。远程攻击者可通过特制的BMP图片来调用imginfo命令利用该漏洞造成拒绝服务（空指针逆向引用）。
+·CVE-2016-8885
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.9之前版本中的libjasper/bmp/bmp_dec.c文件的‘bmp_getdata’函数存在安全漏洞。远程攻击者可借助特制的BMP图像利用该漏洞造成拒绝服务（空指针逆向引用）。
+·CVE-2016-9262
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.22之前的版本中的jas_realloc function in base/jas_malloc.c和mem_resize function in base/jas_stream.c文件中存在整数溢出漏洞。远程攻击者可借助特制的图像文件利用该漏洞造成拒绝服务。
+·CVE-2016-9387
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.13之前的版本中的libjasper/jpc/jpc_dec.c文件的‘jpc_dec_process_siz’函数存在整数溢出漏洞。远程攻击者可利用该漏洞执行任意代码，造成拒绝服务。
+·CVE-2016-9388
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.14之前的版本中的ras_dec.c文件的‘ras_getcmap’函数存在安全漏洞。远程攻击者可借助特制的图像文件利用该漏洞造成拒绝服务（声明失败）。
+·CVE-2016-9389
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.14之前的版本中的jpc_mct.c文件的‘jpc_irct’和‘jpc_iict’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（声明失败）。
+·CVE-2016-9390
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.14之前的版本中的jas_seq.c文件的‘jas_seq2d_create’函数存在安全漏洞。远程攻击者可借助特制的图像文件利用该漏洞造成拒绝服务（声明失败）。
+·CVE-2016-9391
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 2.0.10之前的版本中的jpc_bs.c文件的‘jpc_bitstream_getbits’函数存在安全漏洞。远程攻击者可利用该漏洞造成拒绝服务（声明失败）。
+·CVE-2016-9392
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.17之前的版本中的jpc_dec.c文件的‘calcstepsizes’函数存在安全漏洞。远程攻击者可借助特制的文件利用该漏洞造成拒绝服务（声明失败）。
+·CVE-2016-9393
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.17之前的版本中的jpc_t2cod.c文件的‘jpc_pi_nextrpcl’函数存在安全漏洞。远程攻击者可借助特制的文件利用该漏洞造成拒绝服务（声明失败）。
+·CVE-2016-9394
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 1.900.17之前的版本中的jas_seq.c文件的‘jas_seq2d_create’函数存在安全漏洞。远程攻击者可借助特制的文件利用该漏洞造成拒绝服务（声明失败）。
+·CVE-2016-9396
+描述：JasPer是加拿大Michael Adams软件开发者的一个JPEG-2000编解码器的开源实现。JasPer 1.900.12之前的版本中的jpc_t1cod.c文件的‘JPC_NOMINALGAIN’函数存在安全漏洞。远程攻击者可借助特制的文件利用该漏洞造成拒绝服务（声明失败）。
+·CVE-2016-9560
+描述：JasPer是Michael Adams个人开发者的一个基于C的用于处理图像的工具。该软件支持ISO / IEC 15444-1中定义的JPEG-2000格式，主要用于图像的编码和处理。JasPer 1.900.30之前的版本中的jpc_tsfb.c文件的‘jpc_tsfb_getbands2’函数存在缓冲区错误漏洞。远程攻击者可利用该漏洞在受影响的应用程序上下文中执行任意代码。
+·CVE-2016-9583
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 2.0.0版本至2.0.5版本中的jpc_t2cod.c文件的‘jpc_pi_nextpcrl()’函数存在越界读取漏洞。远程攻击者可借助特制的输入利用该漏洞在受影响应用程序上下文中执行任意代码或造成拒绝服务。
+·CVE-2016-9591
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 2.0.12之前版本中JPEG 2000图像的解码方法存在释放后重用漏洞。攻击者可借助利用该漏洞造成拒绝服务（崩溃）。
+·CVE-2016-9600
+描述：JasPer是加拿大软件开发者Michael Adams所研发的一个JPEG-2000编/解码器的开源实现。JasPer 2.0.10之前版本中存在安全漏洞。攻击者可借助特制的文件利用该漏洞造成拒绝服务（崩溃）。
+·CVE-2017-1000050
+描述：JasPer是Michael Adams个人开发者的一个基于C的用于处理图像的工具。该软件支持ISO / IEC 15444-1中定义的JPEG-2000格式，主要用于图像的编码和处理。JasPer 2.0.12版本中的‘jp2_encode’函数存在代码问题漏洞。攻击者可利用该漏洞造成拒绝服务。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+jasper、jasper-devel、jasper-libs、jasper-utils
+x86_64架构:
+jasper、jasper-devel、jasper-libs、jasper-utils
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+jasper-1.900.1-33.el7
+jasper-devel-1.900.1-33.el7
+jasper-libs-1.900.1-33.el7
+jasper-utils-1.900.1-33.el7
+
+4.修复方法
+方法一：配置源进行升级安装
+166.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+167.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+168.升级完成后是否需要重启服务或操作系统：
+·CVE-2015-5203：需要重启 jasper 以使漏洞修复生效。
+·CVE-2015-5221：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-10248：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-10249：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-10251：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-1577：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-1867：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-2089：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-2116：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-8654：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-8690：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-8691：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-8692：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-8693：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-8883：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-8884：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-8885：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9262：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9387：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9388：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9389：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9390：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9391：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9392：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9393：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9394：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9396：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9560：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9583：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9591：需要重启 jasper 以使漏洞修复生效。
+·CVE-2016-9600：需要重启 jasper 以使漏洞修复生效。
+·CVE-2017-1000050：需要重启 jasper 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+jasper（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/jasper-1.900.1-33.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/jasper-devel-1.900.1-33.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/jasper-libs-1.900.1-33.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/jasper-utils-1.900.1-33.el7.aarch64.rpm
+
+jasper（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/jasper-1.900.1-33.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/jasper-1.900.1-33.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/jasper-devel-1.900.1-33.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/jasper-devel-1.900.1-33.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/jasper-libs-1.900.1-33.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/jasper-libs-1.900.1-33.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/jasper-utils-1.900.1-33.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/jasper-utils-1.900.1-33.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename
+

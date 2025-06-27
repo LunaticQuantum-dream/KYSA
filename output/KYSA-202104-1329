@@ -1,0 +1,76 @@
+Name:KYSA-202104-1329
+Severity:中等
+Summary:zziplib安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/3635.html
+Title:
+			公告ID：KYSA-202104-1329
+公告摘要：zziplib安全漏洞
+等级：Moderate
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2018-16548
+描述：从0.13.69在ZZIPlib中发现了一个问题。在zip.c中的函数\uzzip_parse_root_目录中触发内存泄漏，这将导致拒绝服务攻击。
+·CVE-2018-6541
+描述：在ZZIPlib 0.13.67中，由于在__zzip_fetch_disk_trailer（zzip / zip.c）中加载未对齐的地址（在处理disk64_trailer本地条目时）而导致总线错误。远程攻击者可以利用此漏洞通过精心制作的zip文件导致拒绝服务。
+·CVE-2018-7725
+描述：使用ZZIPlib mem_disk功能时，在ZZIPlib的zzip_disk_fread函数（最大为0.13.68）中发现超出范围的读取。远程攻击者可以利用此漏洞通过精心制作的zip文件导致拒绝服务。
+·CVE-2018-7726
+描述：在ZZIPlib的function__zzip_fetch_disk_trailer中发现不正确的输入验证，最高为0.13.68，这可能导致zzip / zip.c的__zzip_parse_root_directory函数崩溃。 远程攻击者可以利用此漏洞通过精心制作的zip文件导致拒绝服务。
+·CVE-2018-7727
+描述：在ZZIPlib的unzip-mem.c和unzzip-mem.c中发现了内存泄漏，直到v0.13.68，这可能导致资源耗尽。本地攻击者可以利用此漏洞通过精心制作的zip文件导致拒绝服务。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+zziplib、zziplib-devel、zziplib-utils
+·x86_64架构:
+zziplib、zziplib-devel、zziplib-utils
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+zziplib-0.13.62-11.el7或以上版本
+zziplib-devel-0.13.62-11.el7或以上版本
+zziplib-utils-0.13.62-11.el7或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2018-16548:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-6541:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-7725:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-7726:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2018-7727:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+zziplib(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/zziplib-0.13.62-11.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/zziplib-devel-0.13.62-11.el7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/zziplib-utils-0.13.62-11.el7.aarch64.rpm
+
+zziplib(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/zziplib-0.13.62-11.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/zziplib-0.13.62-11.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/zziplib-devel-0.13.62-11.el7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/zziplib-devel-0.13.62-11.el7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/zziplib-utils-0.13.62-11.el7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

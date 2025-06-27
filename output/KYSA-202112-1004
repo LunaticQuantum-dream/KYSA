@@ -1,0 +1,13 @@
+Name:KYSA-202112-1004
+Severity:中等
+Summary:transfig漏洞
+Published:2021-12-03
+URL:/support/loophole/patch/671.html
+Title:
+			摘要：transfig漏洞
+安全等级：中等
+公告ID：KYSA-202112-1004
+发布日期：2021-12-03
+影响CVE：CVE-2021-32280
+		
+1. 修复的CVE信息CVE-2021-32280描述：Xfig fig2dev是一款用于打印和导出.fig格式文件的工具。fig2dev存在安全漏洞，该漏洞源于在位于trans spline.c中的compute closed spline()函数中存在一个空指针解引用。它允许攻击者可利用该漏洞引起拒绝服务。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP1transfig-3.2.6a-7.ky10transfig-help-3.2.6a-7.ky10银河麒麟高级服务器操作系统 V10 SP2transfig-3.2.6a-7.ky10transfig-help-3.2.6a-7.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP1aarch64:transfig、transfig-helpx86_64:transfig、transfig-help银河麒麟高级服务器操作系统 V10 SP2aarch64:transfig、transfig-helpx86_64:transfig、transfig-help4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP1aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/ 银河麒麟高级服务器操作系统 V10 SP2aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/ 2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP1 transfig aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/transfig-3.2.6a-7.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/transfig-help-3.2.6a-7.ky10.noarch.rpm  transfig x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/transfig-3.2.6a-7.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/transfig-help-3.2.6a-7.ky10.noarch.rpm 银河麒麟高级服务器操作系统 V10 SP2 transfig aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/transfig-3.2.6a-7.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/transfig-help-3.2.6a-7.ky10.noarch.rpm transfig x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/transfig-3.2.6a-7.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/transfig-help-3.2.6a-7.ky10.noarch.rpm注：其他相关依赖包请到相同目录下载 

@@ -1,0 +1,13 @@
+Name:KYSA-202109-1034
+Severity:中等
+Summary:openvswitch漏洞
+Published:2021-09-30
+URL:/support/loophole/patch/519.html
+Title:
+			摘要：openvswitch漏洞
+安全等级：中等
+公告ID：KYSA-202109-1034
+发布日期：2021-09-30
+影响CVE：CVE-2021-36980
+		
+1. 修复的CVE信息CVE-2021-36980描述：openvswitch（又名openvswitch）在解码RAW_ENCAP期间，针对_NXAST_RAW_ENCAP解码 （从ofpact\U decode和ofpacts\U decode调用）有一个内存块被释放之后再次被使用。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP1openvswitch-2.12.0-11.ky10openvswitch-devel-2.12.0-11.ky10openvswitch-help-2.12.0-11.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP1aarch64:openvswitch、openvswitch-devel、openvswitch-helpx86_64:openvswitch、openvswitch-devel、openvswitch-help4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP1aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP1 openvswitch aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/openvswitch-2.12.0-11.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/openvswitch-devel-2.12.0-11.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/openvswitch-help-2.12.0-11.ky10.aarch64.rpm openvswitch x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/openvswitch-2.12.0-11.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/openvswitch-devel-2.12.0-11.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/openvswitch-help-2.12.0-11.ky10.x86_64.rpm注：其他相关依赖包请到相同目录下载

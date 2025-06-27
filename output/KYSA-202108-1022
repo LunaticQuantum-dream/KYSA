@@ -1,0 +1,13 @@
+Name:KYSA-202108-1022
+Severity:中等
+Summary:lz4漏洞
+Published:2021-08-20
+URL:/support/loophole/patch/435.html
+Title:
+			摘要：lz4漏洞
+安全等级：中等
+公告ID：KYSA-202108-1022
+发布日期：2021-08-20
+影响CVE：CVE-2021-3520
+		
+1. 修复的CVE信息CVE-2021-3520描述：lz4有一个缺陷。向与 lz4 链接的应用程序提交精心制作的文件的攻击者可能能够触发整数溢出，从而导致对负大小参数调用 memmove()，从而导致越界写入和/或崩溃。此缺陷的最大影响是可用性，对机密性和完整性也有一些潜在影响。2. 影响的操作系统及修复版本银河麒麟高级服务器操作系统 V10 SP2lz4-1.9.2-3.ky10lz4-debugsource-1.9.2-3.ky10lz4-devel-1.9.2-3.ky10lz4-help-1.9.2-3.ky103. 受影响的软件包银河麒麟高级服务器操作系统 V10 SP2aarch64:lz4、lz4-debugsource、lz4-devel、lz4-helpx86_64:lz4、lz4-debugsource、lz4-devel、lz4-help4. 修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。仓库源地址：银河麒麟高级服务器操作系统 V10 SP2aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/ x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename5. 软件包下载地址银河麒麟高级服务器操作系统 V10 SP2 lz4 aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/lz4-1.9.2-3.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/lz4-debugsource-1.9.2-3.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/lz4-devel-1.9.2-3.ky10.aarch64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/lz4-help-1.9.2-3.ky10.noarch.rpm lz4 x86_64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/lz4-1.9.2-3.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/lz4-debugsource-1.9.2-3.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/lz4-devel-1.9.2-3.ky10.x86_64.rpmhttp://update.cs2c.com.cn:8080/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/lz4-help-1.9.2-3.ky10.noarch.rpm注：其他相关依赖包请到相同目录下载 

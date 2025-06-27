@@ -1,0 +1,67 @@
+Name:KYSA-202402-1012
+Severity:重要
+Summary:tomcat安全漏洞
+Published:2024-02-05
+URL:/support/loophole/patch/5269.html
+Title:
+			公告ID：KYSA-202402-1012
+公告摘要：tomcat安全漏洞
+等级：重要
+发布日期：2024-02-05
+		
+1.修复的漏洞
+·CVE-2023-24998
+描述：Apache Commons FileUpload是美国阿帕奇（Apache）基金会的一个可将文件上传到Servlet和Web应用程序的软件包。
+Apache Commons FileUpload 1.5之前版本存在安全漏洞，该漏洞源于没有限制请求的数量，从而导致系统拒绝服务。
+·CVE-2023-28709
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。
+Apache Tomcat存在安全漏洞。攻击者利用该漏洞导致系统拒绝服务。以下版本受到影响：11.0.0-M2版本至11.0.0-M4版本、10.1.5版本至10.1.7版本、9.0.71版本至9.0.73版本、8.5.85版本至8.5.87版本。
+·CVE-2023-42795
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。
+Apache Tomcat存在安全漏洞，该漏洞源于回收内部对象时存在安全漏洞，导致请求/响应信息泄露。受影响的产品和版本：Apache Tomcat 11.0.0-M1至11.0.0-M11版本，10.1.0-M1至10.1.13版本，9.0.0-M1至9.0.80版本，8.5.0至8.5.93版本。
+·CVE-2024-21733
+描述：Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。
+Apache Tomcat 8.5.7版本至8.5.63版本、9.0.0-M11版本至9.0.43版本存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·mips64el架构:
+tomcat、tomcat-help、tomcat-jsvc
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (mips64el)
+tomcat-help-9.0.10-28.p03.ky10或以上版本
+tomcat-9.0.10-28.p03.ky10或以上版本
+tomcat-jsvc-9.0.10-28.p03.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-24998:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-28709:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-42795:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-21733:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+tomcat(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/tomcat-jsvc-9.0.10-28.p03.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/tomcat-9.0.10-28.p03.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/tomcat-help-9.0.10-28.p03.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,68 @@
+Name:KYSA-202210-1115
+Severity:中等
+Summary:httpd安全漏洞
+Published:2022-10-25
+URL:/support/loophole/patch/2118.html
+Title:
+			公告ID：KYSA-202210-1115
+公告摘要：httpd安全漏洞
+等级：Moderate
+发布日期：2022-10-25
+		
+1.修复的CVE
+·CVE-2022-28330
+描述：Apache HTTP Server是美国阿帕奇（Apache）基金会的一款开源网页服务器。该服务器具有快速、可靠且可通过简单的API进行扩充的特点。Apache HTTP Server 2.4.53 之前版本存在缓冲区错误漏洞，该漏洞源于 mod_isapi 模块处理请求时存在越界问题。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+httpd、httpd-devel、httpd-filesystem、httpd-help、httpd-tools、mod_ldap、mod_md、mod_proxy_html、mod_session、mod_ssl
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+httpd-2.4.43-8.p05.a.ky10或以上版本
+httpd-devel-2.4.43-8.p05.a.ky10或以上版本
+httpd-filesystem-2.4.43-8.p05.a.ky10或以上版本
+httpd-help-2.4.43-8.p05.a.ky10或以上版本
+httpd-tools-2.4.43-8.p05.a.ky10或以上版本
+mod_ldap-2.4.43-8.p05.a.ky10或以上版本
+mod_md-2.4.43-8.p05.a.ky10或以上版本
+mod_proxy_html-2.4.43-8.p05.a.ky10或以上版本
+mod_session-2.4.43-8.p05.a.ky10或以上版本
+mod_ssl-2.4.43-8.p05.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2022-28330:需要重启 httpd 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+httpd(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/httpd-2.4.43-8.p05.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/httpd-devel-2.4.43-8.p05.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/httpd-filesystem-2.4.43-8.p05.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/httpd-help-2.4.43-8.p05.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/httpd-tools-2.4.43-8.p05.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/mod_ldap-2.4.43-8.p05.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/mod_md-2.4.43-8.p05.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/mod_proxy_html-2.4.43-8.p05.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/mod_session-2.4.43-8.p05.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/mod_ssl-2.4.43-8.p05.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

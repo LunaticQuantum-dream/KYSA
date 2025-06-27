@@ -1,0 +1,14 @@
+Name:CS2CSA-2018-5733
+Severity:中等
+Summary:ISC DHCP安全漏洞
+Published:2018-02-28
+URL:/support/loophole/patch/81.html
+Title:
+			摘要：             ISC DHCP安全漏洞
+安全等级：          中等
+公告ID：           CS2CSA-2018-5733
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-02-28
+CVE：             CVE-2018-5733 CVSS3评分：5.9
+		
+1. 概述：中标麒麟高级服务器操作系统V6有 ISC DHCP可用的更新。中标麒麟高级服务器操作系统V7有 ISC DHCP可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：在处理客户端请求时，dhcpd处理引用计数的方式中发现了拒绝服务缺陷。恶意DHCP客户端可能会利用此漏洞触发服务器端的引用计数溢出，从而可能通过发送大量流量导致dhcpd崩溃。4. 安装包列表：中标麒麟高级服务器操作系统V6： 源码包： dhcp-4.1.1-53.P1.el6_9.4.src.rpmx86_64二进制包：dhclient-4.1.1-53.P1.el6_9.4.x86_64.rpm dhcp-4.1.1-53.P1.el6_9.4.x86_64.rpm dhcp-common-4.1.1-53.P1.el6_9.4.x86_64.rpm dhcp-debuginfo-4.1.1-53.P1.el6_9.4.i686.rpm dhcp-debuginfo-4.1.1-53.P1.el6_9.4.x86_64.rpm dhcp-debuginfo-4.1.1-53.P1.el6_9.4.x86_64.rpm dhcp-devel-4.1.1-53.P1.el6_9.4.i686.rpm dhcp-devel-4.1.1-53.P1.el6_9.4.x86_64.rpm中标麒麟高级服务器操作系统V7：源码包：dhcp-4.2.5-58.el7_4.3.src.rpmx86_64二进制包：dhclient-4.2.5-58.el7_4.3.x86_64.rpm dhcp-4.2.5-58.el7_4.3.x86_64.rpmdhcp-common-4.2.5-58.el7_4.3.x86_64.rpmdhcp-libs-4.2.5-58.el7_4.3.x86_64.rpm			

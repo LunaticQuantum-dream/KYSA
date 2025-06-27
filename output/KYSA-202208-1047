@@ -1,0 +1,108 @@
+Name:KYSA-202208-1047
+Severity:严重
+Summary:apache-commons-collections安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/4257.html
+Title:
+			公告ID：KYSA-202208-1047
+公告摘要：apache-commons-collections安全漏洞
+等级：Critical
+发布日期：2022-08-15
+		
+1.修复的CVE
+·CVE-2015-7501
+描述：JBoss 存在反序列化漏洞，远程攻击者可借助特制的序列化Java对象利用该漏洞执行任意命令。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+apache-commons-collections、apache-commons-collections-javadoc、apache-commons-collections-testframework、apache-commons-collections-testframework-javadoc
+·x86_64架构:
+apache-commons-collections、apache-commons-collections-javadoc、apache-commons-collections-testframework、apache-commons-collections-testframework-javadoc
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+apache-commons-collections、apache-commons-collections-javadoc、apache-commons-collections-testframework、apache-commons-collections-testframework-javadoc
+·x86_64架构:
+apache-commons-collections、apache-commons-collections-javadoc、apache-commons-collections-testframework、apache-commons-collections-testframework-javadoc
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+apache-commons-collections-3.2.1-22.el7_2或以上版本
+apache-commons-collections-javadoc-3.2.1-22.el7_2或以上版本
+apache-commons-collections-testframework-3.2.1-22.el7_2或以上版本
+apache-commons-collections-testframework-javadoc-3.2.1-22.el7_2或以上版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+apache-commons-collections-3.2.1-22.el7_2或以上版本
+apache-commons-collections-javadoc-3.2.1-22.el7_2或以上版本
+apache-commons-collections-testframework-3.2.1-22.el7_2或以上版本
+apache-commons-collections-testframework-javadoc-3.2.1-22.el7_2或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2015-7501:需要重启 apache-commons-collections 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+apache-commons-collections(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/apache-commons-collections-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/apache-commons-collections-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/apache-commons-collections-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/apache-commons-collections-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/apache-commons-collections-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/apache-commons-collections-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/apache-commons-collections-testframework-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/apache-commons-collections-testframework-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/apache-commons-collections-testframework-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/apache-commons-collections-testframework-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/aarch64/Packages/apache-commons-collections-testframework-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/aarch64/Packages/apache-commons-collections-testframework-javadoc-3.2.1-22.el7_2.noarch.rpm
+
+apache-commons-collections(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/apache-commons-collections-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/apache-commons-collections-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/apache-commons-collections-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/apache-commons-collections-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/apache-commons-collections-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/apache-commons-collections-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/apache-commons-collections-testframework-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/apache-commons-collections-testframework-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/apache-commons-collections-testframework-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/apache-commons-collections-testframework-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/base/x86_64/Packages/apache-commons-collections-testframework-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update8/os/adv/lic/base/x86_64/Packages/apache-commons-collections-testframework-javadoc-3.2.1-22.el7_2.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+apache-commons-collections(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/apache-commons-collections-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/apache-commons-collections-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/apache-commons-collections-testframework-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/apache-commons-collections-testframework-javadoc-3.2.1-22.el7_2.noarch.rpm
+
+apache-commons-collections(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/apache-commons-collections-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/apache-commons-collections-javadoc-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/apache-commons-collections-testframework-3.2.1-22.el7_2.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/apache-commons-collections-testframework-javadoc-3.2.1-22.el7_2.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,96 @@
+Name:KYSA-202203-0033
+Severity:中等
+Summary:openjdk-lts安全漏洞
+Published:2024-01-25
+URL:/support/loophole/patch/5042.html
+Title:
+			公告ID：KYSA-202203-0033
+公告摘要：openjdk-lts安全漏洞
+等级：中等
+发布日期：2024-01-25
+		
+1. 修复的CVE
+CVE-2022-21248
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议进行网络访问，从而破坏 Oracle Java SE、Oracle GraalVM 企业版。成功攻击此漏洞可导致对部分 Oracle Java SE、Oracle GraalVM 企业版可访问数据进行未经授权的更新、插入或删除访问。
+CVE-2022-21277
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM 企业版存在输入验证错误漏洞，该漏洞源于序列化组件中的输入验证不正确。远程未经身份验证的攻击者可以利用此漏洞来操纵数据。
+CVE-2022-21282
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM 企业版中存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议进行网络访问，从而破坏 Oracle Java SE、Oracle GraalVM 企业版。成功攻击此漏洞可能导致对 Oracle Java SE、Oracle GraalVM 企业版可访问数据的子集进行未经授权的读取访问。
+CVE-2022-21283
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议进行网络访问，从而破坏 Oracle Java SE、Oracle GraalVM 企业版。成功攻击此漏洞可能会导致未经授权的能力导致 Oracle Java SE、Oracle GraalVM 企业版的部分拒绝服务（部分 DOS）。
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM 存在输入验证错误漏洞，该漏洞的存在是由于 Oracle GraalVM 企业版中序列化组件中的输入验证不正确。远程未经身份验证的攻击者可以利用此漏洞来操纵数据。
+CVE-2022-21293
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议进行网络访问，从而破坏 Oracle Java SE、Oracle GraalVM 企业版。成功攻击此漏洞可能会导致未经授权的能力导致 Oracle Java SE、Oracle GraalVM 企业版的部分拒绝服务（部分 DOS）。
+CVE-2022-21294
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM 企业版中存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议进行网络访问，从而破坏 Oracle Java SE、Oracle GraalVM 企业版。成功攻击此漏洞可能会导致未经授权的能力导致 Oracle Java SE、Oracle GraalVM 企业版的部分拒绝服务（部分 DOS）。
+CVE-2022-21296
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE 7u321，8u311，11.0.13，17.01版本和 Oracle GraalVM Enterprise Edition 20.3.4，21.3.0 版本中存在输入验证错误漏洞。未经身份验证的攻击者利用该漏洞可以对 Oracle Java SE、Oracle GraalVM Enterprise Edition 进行未经授权的读取访问。
+CVE-2022-21299
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM 企业版中存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议进行网络访问，从而破坏 Oracle Java SE、Oracle GraalVM 企业版。成功攻击此漏洞可能会导致未经授权的能力导致 Oracle Java SE、Oracle GraalVM 企业版的部分拒绝服务（部分 DOS）。
+CVE-2022-21305
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM 企业版中存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议进行网络访问，从而破坏 Oracle Java SE、Oracle GraalVM 企业版。成功攻击此漏洞可导致对部分 Oracle Java SE、Oracle GraalVM 企业版可访问数据进行未经授权的更新、插入或删除访问。
+CVE-2022-21340
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE 和Oracle GraalVM 企业版中存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议进行网络访问，从而破坏 Oracle Java SE、Oracle GraalVM 企业版。成功攻击此漏洞可能会导致 Oracle Java SE、Oracle GraalVM 企业版拒绝服务（DOS）。
+CVE-2022-21341
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM 存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议进行网络访问，从而破坏 Oracle Java SE、Oracle GraalVM 企业版。成功攻击此漏洞可能会导致 Oracle Java SE、Oracle GraalVM 企业版的部分拒绝服务（部分 DOS）。
+CVE-2022-21360
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM 企业版存在输入验证错误漏洞，该漏洞源于序列化组件中的输入验证不正确。远程未经身份验证的攻击者可以利用此漏洞来操纵数据。
+CVE-2022-21366
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM 企业版存在输入验证错误漏洞，该漏洞源于序列化组件中的输入验证不正确。远程未经身份验证的攻击者可以利用此漏洞来操纵数据。
+CVE-2022-21365
+Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。 Oracle Java SE和Oracle GraalVM 企业版存在输入验证错误漏洞，该漏洞源于序列化组件中的输入验证不正确。远程未经身份验证的攻击者可以利用此漏洞来操纵数据。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+openjdk-11-demo、openjdk-11-jdk-headless、openjdk-11-jdk、openjdk-11-jre-headless、openjdk-11-jre-zero、openjdk-11-jre、openjdk-11-source
+arm64 架构：
+openjdk-11-demo、openjdk-11-jdk-headless、openjdk-11-jdk、openjdk-11-jre-headless、openjdk-11-jre-zero、openjdk-11-jre、openjdk-11-source
+mips64el 架构：
+openjdk-11-demo、openjdk-11-jdk-headless、openjdk-11-jdk、openjdk-11-jre-headless、openjdk-11-jre、openjdk-11-source
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+11.0.15+10-0kylin0.20.04.1
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install openjdk-11-jdk
+$sudo apt install openjdk-11-jre
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-demo_11.0.15%2B10-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk-headless_11.0.15%2B10-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk_11.0.15%2B10-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre-headless_11.0.15%2B10-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre-zero_11.0.15%2B10-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre_11.0.15%2B10-0kylin0.20.04.1_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-source_11.0.15%2B10-0kylin0.20.04.1_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-demo_11.0.15%2B10-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk-headless_11.0.15%2B10-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk_11.0.15%2B10-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre-headless_11.0.15%2B10-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre-zero_11.0.15%2B10-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre_11.0.15%2B10-0kylin0.20.04.1_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-source_11.0.15%2B10-0kylin0.20.04.1_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-demo_11.0.15%2B10-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk-headless_11.0.15%2B10-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jdk_11.0.15%2B10-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre-headless_11.0.15%2B10-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-jre_11.0.15%2B10-0kylin0.20.04.1_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/o/openjdk-lts/openjdk-11-source_11.0.15%2B10-0kylin0.20.04.1_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

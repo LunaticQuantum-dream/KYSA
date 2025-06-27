@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-0641
+Severity:中等
+Summary:openssh 安全和漏洞修复更新
+Published:2017-03-21
+URL:/support/loophole/patch/42.html
+Title:
+			摘要：       openssh 安全和漏洞修复更新   
+安全等级：   中等
+公告 ID：               CS2CSA-2017-0641
+产品：                    中标麒麟高级服务器操作系统
+发布日期：             2017-03-21
+CVE ：           CVE-2015-8325
+		
+1. 概述:中标麒麟高级服务器操作系统V6和V7系列有openssl可用更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6/V7 -x86_643. 描述：OpenSSH是在Linux，UNIX等类似操作系统中由SSH协议实现的功能。它在SSH客户端和服务端包含必要的核心文件。4. 安全修复：*发现OpenSSH sshd守护进程在运行登录程序之前进行PAM环境设置。在配置中UseLogin =yes，pam_env PAM模块配置为读取用户环境设置，本地用户可以利用此漏洞像root用户一样执行任意代码。（CVE-2015-8325）5. 安装包列表：中标麒麟高级服务器操作系统V6源码包：openssh-5.3p1-122.el6.src.rpmx86_64：openssh-5.3p1-122.el6.x86_64.rpmopenssh-askpass-5.3p1-122.el6.x86_64.rpmopenssh-clients-5.3p1-122.el6.x86_64.rpmopenssh-ldap-5.3p1-122.el6.x86_64.rpmopenssh-server-5.3p1-122.el6.x86_64.rpm			

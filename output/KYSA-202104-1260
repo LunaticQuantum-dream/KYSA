@@ -1,0 +1,75 @@
+Name:KYSA-202104-1260
+Severity:重要
+Summary:patch安全漏洞
+Published:2021-04-08
+URL:/support/loophole/patch/1934.html
+Title:
+			公告ID：KYSA-202104-1260
+公告摘要：patch安全漏洞
+等级：Important
+发布日期：2021-04-08
+		
+1.修复的CVE
+·CVE-2018-1000156
+描述：GNU修补程序版本2.7.6在处理修补程序文件时包含输入验证漏洞，特别是编辑器_程序调用（使用ed）可能导致代码执行。通过修补程序实用程序处理的修补程序文件，似乎可以利用此攻击。这与FreeBSD的CVE-2015-1418相似，尽管它们有着共同的祖先，但随着时间的推移，代码基础已经发生了变化。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+patch
+·x86_64架构:
+patch
+·银河麒麟高级服务器操作系统 V10
+·aarch64架构:
+patch
+·x86_64架构:
+patch
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+patch-2.7.1-10.el7_5或以上版本
+·银河麒麟高级服务器操作系统 V10 (aarch64、x86_64)
+patch-2.7.1-10.el7_5或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/
+银河麒麟高级服务器操作系统 V10
+aarch64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2018-1000156:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+patch(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/aarch64/Packages/patch-2.7.1-10.el7_5.aarch64.rpm
+
+patch(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/patch-2.7.1-10.el7_5.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update6/os/adv/lic/base/x86_64/Packages/patch-2.7.1-10.el7_5.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10
+
+patch(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/aarch64/Packages/patch-2.7.1-10.el7_5.aarch64.rpm
+
+patch(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10-ZJ/os/adv/lic/base/x86_64/Packages/patch-2.7.1-10.el7_5.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

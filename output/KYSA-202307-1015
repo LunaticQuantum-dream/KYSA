@@ -1,0 +1,83 @@
+Name:KYSA-202307-1015
+Severity:重要
+Summary:gssntlmssp安全漏洞
+Published:2023-07-11
+URL:/support/loophole/patch/3802.html
+Title:
+			公告ID：KYSA-202307-1015
+公告摘要：gssntlmssp安全漏洞
+等级：Important
+发布日期：2023-07-11
+		
+1.修复的CVE
+·CVE-2023-25563
+描述：GSS-NTLMSSP是gssapi开源的一个实现 NTLM 身份验证的 GSSAPI 库的 mechglue 插件。
+GSS-NTLMSSP 1.2.0之前版本存在缓冲区错误漏洞，该漏洞源于应用程序允许长度大于 4GB 的令牌，攻击者利用该漏洞可以通过“gss_accept_sec_context”主入口点触发越界读取，解码 NTLM 字段时多次越界读取会触发拒绝服务。
+·CVE-2023-25564
+描述：GSS-NTLMSSP是gssapi开源的一个实现 NTLM 身份验证的 GSSAPI 库的 mechglue 插件。
+GSS-NTLMSSP 1.2.0之前版本存在缓冲区错误漏洞，该漏洞源于如果 ntlm_str_convert() 失败，可能导致将零写入内存中的任意位置，这将使 outlen 未初始化，如果写入命中未映射的内存或随机损坏应用程序内存空间中的一个字节，这可能会导致拒绝服务，攻击者可以通过“gss_accept_sec_context”主入口点触发该漏洞。
+·CVE-2023-25565
+描述：GSS-NTLMSSP是gssapi开源的一个实现 NTLM 身份验证的 GSSAPI 库的 mechglue 插件。
+GSS-NTLMSSP 1.2.0之前版本存在安全漏洞，该漏洞源于解码目标信息时错误的释放会触发拒绝服务，攻击者可以通过“gss_accept_sec_context”主入口点触发该漏洞。
+·CVE-2023-25567
+描述：GSS-NTLMSSP是gssapi开源的一个实现 NTLM 身份验证的 GSSAPI 库的 mechglue 插件。
+GSS-NTLMSSP 1.2.0之前版本存在缓冲区错误漏洞，该漏洞源于未针对可能触发越界读取的两个元素av_pair 的长度进行正确检查 ，解码目标信息时可能导致越界读取，攻击者可以通过“gss_accept_sec_context”主入口点触发该漏洞。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+gssntlmssp、gssntlmssp-devel、gssntlmssp-help
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+gssntlmssp、gssntlmssp-devel、gssntlmssp-help
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64)
+gssntlmssp-0.7.0-9.ky10或以上版本
+gssntlmssp-devel-0.7.0-9.ky10或以上版本
+gssntlmssp-help-0.7.0-9.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64)
+gssntlmssp-0.7.0-9.ky10或以上版本
+gssntlmssp-devel-0.7.0-9.ky10或以上版本
+gssntlmssp-help-0.7.0-9.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-25563:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-25564:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-25565:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2023-25567:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+gssntlmssp(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/gssntlmssp-0.7.0-9.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/gssntlmssp-devel-0.7.0-9.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/gssntlmssp-help-0.7.0-9.ky10.aarch64.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+gssntlmssp(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/gssntlmssp-0.7.0-9.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/gssntlmssp-devel-0.7.0-9.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/gssntlmssp-help-0.7.0-9.ky10.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

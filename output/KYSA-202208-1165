@@ -1,0 +1,64 @@
+Name:KYSA-202208-1165
+Severity:严重
+Summary:openslp安全漏洞
+Published:2022-08-15
+URL:/support/loophole/patch/1645.html
+Title:
+			公告ID：KYSA-202208-1165
+公告摘要：openslp安全漏洞
+安等级：Critical
+发布日期：2022/8/15
+		
+1.修复的CVE
+·CVE-2019-5544
+描述：VMware ESXi和VMware Horizon DaaS都是美国威睿（VMware）公司的产品。VMware ESXi是一套可直接安装在物理服务器上的服务器虚拟化平台。VMware Horizon DaaS是一套专为以云计算服务形式交付桌面和应用而构建的虚拟桌面平台。该平台提供多桌面模式和多数据中心管理等功能。OpenSLP是其中的一个IETF服务位置协议的开源实现。VMware ESXi和VMware Horizon DaaS中的OpenSLP存在安全漏洞。攻击者可利用该漏洞执行代码。以下产品及版本受到影响：VMware ESXi 6.7版本，6.5版本，6.0版本；VMware Horizon DaaS 8.x版本。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+aarch64架构:
+openslp、openslp-devel、openslp-server
+x86_64架构:
+openslp、openslp-devel、openslp-server
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7
+openslp-2.0.0-8.el7_7
+openslp-devel-2.0.0-8.el7_7
+openslp-server-2.0.0-8.el7_7
+
+4.修复方法
+方法一：配置源进行升级安装
+256.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/
+257.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装,命令如下：
+yum install Packagename
+258.升级完成后是否需要重启服务或操作系统：
+·CVE-2019-5544：需要重启 openslp 以使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+openslp（aarch64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/openslp-2.0.0-8.el7_7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/openslp-devel-2.0.0-8.el7_7.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/aarch64/Packages/openslp-server-2.0.0-8.el7_7.aarch64.rpm
+
+openslp（x86_64）软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/openslp-2.0.0-8.el7_7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/openslp-2.0.0-8.el7_7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/openslp-devel-2.0.0-8.el7_7.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/openslp-devel-2.0.0-8.el7_7.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update7/os/adv/lic/updates/x86_64/Packages/openslp-server-2.0.0-8.el7_7.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

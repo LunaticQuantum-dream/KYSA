@@ -1,0 +1,101 @@
+Name:KYSA-202203-0029
+Severity:中等
+Summary:tomcat9安全漏洞
+Published:2023-05-05
+URL:/support/loophole/patch/3441.html
+Title:
+			公告ID：KYSA-202203-0029
+公告摘要：tomcat9安全漏洞
+等级：中等
+发布日期：2023-05-05
+		
+1. 修复的CVE
+CVE-2021-33037
+Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat存在环境问题漏洞，该漏洞源于Apache Tomcat 在某些情况下没有正确解析 HTTP 传输编码请求标头，导致在与反向代理一起使用时可能会请求走私。
+CVE-2020-17527
+Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。 
+Apache Tomcat 存在安全漏洞，该漏洞源于可以重用HTTP 2连接上接收到的前一个流的HTTP请求头值，用于与后续流相关联的请求。虽然这很可能会导致错误和HTTP 2连接的关闭，但信息可能会在请求之间泄漏。以下产品及版本受到影响：10.0.0-M1 to 10.0.0-M9, 9.0.0-M1 to 9.0.39 and 8.5.0 to 8.5.59。
+CVE-2020-9484
+Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。 
+Apache Tomcat中存在代码问题漏洞。攻击者可通过控制服务器上文件的内容和名称等方法利用该漏洞执行代码。以下产品及版本受到影响：Apache Tomcat 10.0.0-M1版本至10.0.0-M4版本，9.0.0.0.M1版本至9.0.34版本，8.5.0版本至8.5.54版本，7.0.0版本至7.0.103版本。
+CVE-2021-25329
+Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 10.0.0-M1 to 10.0.0, 9.0.0.M1 to 9.0.41, 8.5.0 to 8.5.61 or 7.0.0存在安全漏洞，该漏洞源于Tomcat实例仍然容易受到CVE-2020-9494的攻击。
+CVE-2021-25122
+Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。 
+Apache Tomcat versions 10.0.0-M1 to 10.0.0, 9.0.0.M1 to 9.0.41 and 8.5.0 to 8.5.61 存在安全漏洞，该漏洞源于可以在一个请求到另一个请求中复制请求头和数量有限的请求体，这意味着用户a和用户B都可以看到用户a的请求结果。
+CVE-2021-30640
+Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat存在授权问题漏洞，该漏洞源于Apache Tomcat 的 JNDI 领域中的一个漏洞允许攻击者使用有效用户名的变体进行身份验证和/或绕过锁定领域提供的某些保护。
+CVE-2021-41079
+Apache Tomcat是美国阿帕奇（Apache）基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。Apache Tomcat 存在输入验证错误漏洞，该漏洞源于程序处理某些 TLS 数据包时存在无限循环，远程攻击者可以向应用程序发送特制的数据包，消耗所有可用的系统资源并导致拒绝服务条件。
+CVE-2020-13943
+Apache Tomcat是美国阿帕奇（Apache）软件基金会的一款轻量级Web应用服务器。该程序实现了对Servlet和JavaServer Page（JSP）的支持。 
+Apache Tomcat存在安全漏洞，该漏洞源于如果一个HTTP/2客户端连接到超过约定的最大数量的并发流连接(违反HTTP / 2协议),它是可能的后续请求在该连接可以包含HTTP头信息,包括HTTP / 2伪头,从先前的请求而不是标题。这可能导致用户看到对意外资源的响应。以下产品及版本受到影响：10.0.0-M1版本至10.0.0-M7版本, 9.0.0.M1版本至9.0.37版本，8.5.0版本至8.5.57版本。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 
+x86_64 架构：
+libtomcat9-embed-java、libtomcat9-java、tomcat9-admin、tomcat9-common、tomcat9-docs、tomcat9-examples、tomcat9-user、tomcat9
+arm64 架构：
+libtomcat9-embed-java、libtomcat9-java、tomcat9-admin、tomcat9-common、tomcat9-docs、tomcat9-examples、tomcat9-user、tomcat9
+mips64el 架构：
+libtomcat9-embed-java、libtomcat9-java、tomcat9-admin、tomcat9-common、tomcat9-docs、tomcat9-examples、tomcat9-user、tomcat9
+loongarch64 架构：
+libtomcat9-embed-java、libtomcat9-java、tomcat9-admin、tomcat9-common、tomcat9-docs、tomcat9-examples、tomcat9-user、tomcat9
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1
+9.0.31-1kylin0.2
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install tomcat9
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/libtomcat9-embed-java_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/libtomcat9-java_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-admin_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-common_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-docs_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-examples_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-user_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9_9.0.31-1kylin0.2_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/libtomcat9-embed-java_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/libtomcat9-java_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-admin_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-common_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-docs_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-examples_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-user_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9_9.0.31-1kylin0.2_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/libtomcat9-embed-java_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/libtomcat9-java_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-admin_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-common_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-docs_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-examples_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-user_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9_9.0.31-1kylin0.2_all.deb
+loongarch64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/libtomcat9-embed-java_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/libtomcat9-java_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-admin_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-common_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-docs_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-examples_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9-user_9.0.31-1kylin0.2_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/t/tomcat9/tomcat9_9.0.31-1kylin0.2_all.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

@@ -1,0 +1,189 @@
+Name:KYSA-202504-1070
+Severity:重要
+Summary:dhcp安全漏洞
+Published:2025-04-15
+URL:/support/loophole/patch/7681.html
+Title:
+			公告ID：KYSA-202504-1070
+公告摘要：dhcp安全漏洞
+等级：重要
+发布日期：2025-04-15
+		
+1.修复的漏洞
+·CVE-2023-3341
+描述：ISC BIND是美国ISC公司的一套实现了DNS协议的开源软件。
+ISC BIND 9 9.2.0 到 9.16.43、9.18.0 到 9.18.18、9.19.0 到 9.19.16、9.9.3-S1 到 9.16.43-S1 以及 9.18.0-S1 到 9.18 .18-S1版本存在安全漏洞，该漏洞源于处理发送到named的控制通道消息的代码在数据包解析期间递归地调用某些函数，但递归深度仅受最大接受数据包大小的限制，这可能导致数据包解析代码耗尽可用的堆栈内存，导致named意外终止。
+·CVE-2024-11187
+描述：可以构造一个区域，这样对它的某些查询将在附加部分中生成包含大量记录的响应。发送许多此类查询的攻击者可能会导致权威服务器本身或独立解析器使用不成比例的资源来处理查询
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·aarch64架构:
+dhcp、dhcp-help、dhcp-devel
+·mips64el架构:
+dhcp、dhcp-help、dhcp-devel
+·x86_64架构:
+dhcp、dhcp-help、dhcp-devel
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+dhcp、dhcp-help、dhcp-devel
+·x86_64架构:
+dhcp、dhcp-help、dhcp-devel
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+dhcp、dhcp-help、dhcp-devel
+·x86_64架构:
+dhcp、dhcp-help、dhcp-devel
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+dhcp、dhcp-help、dhcp-devel
+·x86_64架构:
+dhcp、dhcp-help、dhcp-devel
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+·aarch64架构:
+dhcp、dhcp-help、dhcp-devel
+·x86_64架构:
+dhcp、dhcp-help、dhcp-devel
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+dhcp、dhcp-help、dhcp-devel
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (aarch64、mips64el、x86_64)
+dhcp-help-4.4.2-14.ky10或以上版本
+dhcp-devel-4.4.2-14.ky10或以上版本
+dhcp-4.4.2-14.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+dhcp-help-4.4.2-14.ky10或以上版本
+dhcp-devel-4.4.2-14.ky10或以上版本
+dhcp-4.4.2-14.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64、x86_64)
+dhcp-help-4.4.2-14.ky10或以上版本
+dhcp-devel-4.4.2-14.ky10或以上版本
+dhcp-4.4.2-14.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64、x86_64)
+dhcp-help-4.4.2-14.ky10或以上版本
+dhcp-devel-4.4.2-14.ky10或以上版本
+dhcp-4.4.2-14.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (aarch64、x86_64)
+dhcp-help-4.4.2-14.ky10或以上版本
+dhcp-devel-4.4.2-14.ky10或以上版本
+dhcp-4.4.2-14.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+dhcp-help-4.4.2-14.ky10或以上版本
+dhcp-devel-4.4.2-14.ky10或以上版本
+dhcp-4.4.2-14.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/
+mips64el:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2403
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-3341:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-11187:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+dhcp(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/dhcp-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/dhcp-devel-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/aarch64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+
+dhcp(mips64el)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/dhcp-4.4.2-14.ky10.mips64el.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/mips64el/Packages/dhcp-devel-4.4.2-14.ky10.mips64el.rpm
+
+dhcp(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/dhcp-4.4.2-14.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/dhcp-devel-4.4.2-14.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/x86_64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP2
+
+dhcp(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/dhcp-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/dhcp-devel-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+
+dhcp(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/dhcp-4.4.2-14.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/dhcp-devel-4.4.2-14.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+dhcp(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/dhcp-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/dhcp-devel-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+
+dhcp(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/dhcp-4.4.2-14.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/dhcp-devel-4.4.2-14.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+dhcp(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/dhcp-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/dhcp-devel-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+
+dhcp(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/dhcp-4.4.2-14.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/dhcp-devel-4.4.2-14.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+
+dhcp(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/dhcp-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/dhcp-devel-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/dhcp-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/dhcp-devel-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/aarch64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+
+dhcp(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/dhcp-4.4.2-14.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/dhcp-devel-4.4.2-14.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/x86_64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+dhcp(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/dhcp-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/dhcp-devel-4.4.2-14.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/dhcp-help-4.4.2-14.ky10.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,14 @@
+Name:CS2CSA-2016-10708
+Severity:低级
+Summary:OpenSSH sshd 安全漏洞
+Published:2018-01-24
+URL:/support/loophole/patch/145.html
+Title:
+			摘要：             OpenSSH sshd 安全漏洞
+安全等级：          低级
+公告ID：           CS2CSA-2016-10708
+产品：             中标麒麟高级服务器操作系统      
+发布日期：          2018-01-24
+CVE：             CVE-2016-10708 CVSS3评分：5.3
+		
+1. 概述：中标麒麟高级服务器操作系统V6触发条件/影响有限/风险小，因此不修复。中标麒麟高级服务器操作系统V7有 OpenSSH sshd 可用的更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟高级服务器操作系统V6-X86_64。中标麒麟高级服务器操作系统V7-X86_64。3. 描述：openssh7.4版本之前的OpenSSH中的SHD允许远程攻击者通过无序的NeXKEY消息导致拒绝服务（空指针引用和守护进程崩溃）。4. 安装包列表：中标麒麟高级服务器操作系统V7：源代码包：openssh-7.4p1-13.el7_4.src.rpmx86_64二进制包：openssh-7.4p1-13.el7.x86_64.rpm openssh-askpass-7.4p1-13.el7.x86_64.rpm openssh-cavs-7.4p1-13.el7.x86_64.rpm openssh-clients-7.4p1-13.el7.x86_64.rpm openssh-keycat-7.4p1-13.el7.x86_64.rpm openssh-ldap-7.4p1-13.el7.x86_64.rpm openssh-server-7.4p1-13.el7.x86_64.rpm openssh-server-sysvinit-7.4p1-13.el7.x86_64.rpm pam_ssh_agent_auth-0.10.3-1.13.el7.x86_64.rpm 			

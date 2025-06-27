@@ -1,0 +1,71 @@
+Name:KYSA-202401-0022
+Severity:严重
+Summary:golang-1.21安全漏洞
+Published:2024-11-05
+URL:/support/loophole/patch/6641.html
+Title:
+			公告ID：KYSA-202401-0022
+公告摘要：golang-1.21安全漏洞
+等级：严重
+发布日期：2024-11-05
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2403版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2023-39326
+Google Golang是一种静态强类型、编译型语言。Go的语法接近C语言，但对于变量的声明有所不同。Go支持垃圾回收功能。Go的并行模型是以东尼·霍尔的通信顺序进程（CSP）为基础，采取类似模型的其他语言包括Occam和Limbo，但它也具有Pi运算的特征，比如通道传输。在1.8版本中开放插件（Plugin）的支持，这意味着现在能从Go中动态加载部分函数。Google Golang 存在安全漏洞，该漏洞源于恶意HTTP发送方可以从请求或响应正文中读取比正文中更多的字节，攻击者利用此漏洞可以导致服务器自动读取大量数据。
+CVE-2023-39323
+Google Golang是一种静态强类型、编译型语言。Go的语法接近C语言，但对于变量的声明有所不同。Go支持垃圾回收功能。Go的并行模型是以东尼·霍尔的通信顺序进程（CSP）为基础，采取类似模型的其他语言包括Occam和Limbo，但它也具有Pi运算的特征，比如通道传输。在1.8版本中开放插件（Plugin）的支持，这意味着现在能从Go中动态加载部分函数。Google Golang 存在安全漏洞，该漏洞源于行指令（“//line”）可用于绕过“//go:cgo_”指令的限制，允许在编译期间传递阻止的链接器和编译器标志,这可能会导致运行go build时意外执行任意代码。
+CVE-2023-45285
+Google Golang是一种静态强类型、编译型语言。Go的语法接近C语言，但对于变量的声明有所不同。Go支持垃圾回收功能。Go的并行模型是以东尼·霍尔的通信顺序进程（CSP）为基础，采取类似模型的其他语言包括Occam和Limbo，但它也具有Pi运算的特征，比如通道传输。在1.8版本中开放插件（Plugin）的支持，这意味着现在能从Go中动态加载部分函数。Google Golang 1.20.12 之前、go 1.21.0-0 到1.21.5版本存在安全漏洞，该漏洞源于如果无法通过安全的 https和 git+ssh方式获取模块，则使用 go get 获取带有 .git后缀的模块可能会回退到不安全的 git 协议。
+CVE-2023-39325
+Google Golang是一种静态强类型、编译型语言。Go的语法接近C语言，但对于变量的声明有所不同。Go支持垃圾回收功能。Go的并行模型是以东尼·霍尔的通信顺序进程（CSP）为基础，采取类似模型的其他语言包括Occam和Limbo，但它也具有Pi运算的特征，比如通道传输。在1.8版本中开放插件（Plugin）的支持，这意味着现在能从Go中动态加载部分函数。Google Golang 1.20.10之前版本、1.21.0到1.21.3版本、http2 v0.17.0之前版本存在安全漏洞，该漏洞源于快速创建请求并立即重置请求的恶意 HTTP/2 客户端可能会导致服务器资源消耗过多。
+CVE-2023-44487
+HTTP/2是超文本传输协议的第二版，主要用于保证客户机与服务器之间的通信。Apache HTTP/2存在安全漏洞。攻击者利用该漏洞导致系统拒绝服务。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2403
+x86_64 架构：
+golang-1.21-go、golang-1.21-src、golang-1.21
+arm64 架构：
+golang-1.21-go、golang-1.21-src、golang-1.21
+mips64el 架构：
+golang-1.21-go、golang-1.21-src、golang-1.21
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2403
+1.21.1-1~kylin20.04.2
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install golang-1.21
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2403
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/g/golang-1.21/golang-1.21-go_1.21.1-1~kylin20.04.2_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/g/golang-1.21/golang-1.21-src_1.21.1-1~kylin20.04.2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/g/golang-1.21/golang-1.21_1.21.1-1~kylin20.04.2_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/g/golang-1.21/golang-1.21-go_1.21.1-1~kylin20.04.2_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/g/golang-1.21/golang-1.21-src_1.21.1-1~kylin20.04.2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/g/golang-1.21/golang-1.21_1.21.1-1~kylin20.04.2_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/g/golang-1.21/golang-1.21-go_1.21.1-1~kylin20.04.2_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/g/golang-1.21/golang-1.21-src_1.21.1-1~kylin20.04.2_all.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/universe/g/golang-1.21/golang-1.21_1.21.1-1~kylin20.04.2_all.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2403版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

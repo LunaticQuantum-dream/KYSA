@@ -1,0 +1,13 @@
+Name:KYSA-202103-1007
+Severity:中等
+Summary:php漏洞
+Published:2021-03-19
+URL:/support/loophole/patch/367.html
+Title:
+			摘要：php漏洞
+安全等级：中等
+公告ID：KYSA-202103-1007
+发布日期：2021-03-19
+影响CVE：CVE-2020-7069、CVE-2020-7070、CVE-2020-7060
+		
+1. 修复的CVE信息CVE-2020-7069描述：PHP（PHP：Hypertext Preprocessor，PHP：超文本预处理器）是PHPGroup和开放源代码社区的共同维护的一种开源的通用计算机脚本语言。该语言主要用于Web开发，支持多种数据库及操作系统。PHP 7.2.0版本、7.3.0版本和7.4.0版本中存在加密问题漏洞，该漏洞源于网络系统或产品未正确使用相关密码算法，导致内容未正确加密、弱加密、明文存储敏感信息等。CVE-2020-7070PHP（PHP：Hypertext Preprocessor，PHP：超文本预处理器）是PHPGroup和开放源代码社区的共同维护的一种开源的通用计算机脚本语言。该语言主要用于Web开发，支持多种数据库及操作系统。PHP 中存在输入验证错误漏洞。该漏洞源于网络系统或产品未对输入的数据进行正确的验证。以下产品及版本受到影响： 7.2.x系列7.2.34之前版本, 7.3.x系列7.3.23之前版本，7.4.x系列7.4.11之前版本。CVE-2020-7060PHP（PHP：Hypertext Preprocessor，PHP：超文本预处理器）是PHPGroup和开放源代码社区的共同维护的一种开源的通用计算机脚本语言。该语言主要用于Web开发，支持多种数据库及操作系统。PHP 7.2.27之前的7.2.x版本、7.3.14之前的7.3.x版本和7.4.2之前的7.4.x版本中存在缓冲区错误漏洞。攻击者可利用该漏洞获取信息或造成应用程序崩溃。2. 受影响的操作系统银河麒麟高级服务器操作系统V10(SP1)3. 修复版本php-7.2.10-12.ky104. 受影响的软件包银河麒麟高级服务器操作系统V10(SP1)aarch64: phpx86_64: phpmips64: php5.修复方法方法一：配置源进行升级安装1.打开软件包源配置文件，根据仓库地址进行修改。银河麒麟高级服务器操作系统V10(SP1)仓库源地址：x86_64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/x86_64/aarch64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/aarch64/mips64:http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/mips64el/2.配置完成后执行更新命令进行升级，命令如下：yum update Packagename方法二：下载安装包进行升级安装通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表进行升级安装,命令如下：yum install Packagename6. 软件包下载地址银河麒麟高级服务器操作系统V10(SP1)php aarch64软件包下载地址:http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/aarch64/Packages/php-7.2.10-12.ky10.aarch64.rpmphp x86_64软件包下载地址: http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/x86_64/Packages/php-7.2.10-12.ky10.x86_64.rpmphp mips64软件包下载地址: http://update.cs2c.com.cn:8080/NS/V10/V10SP1/os/adv/lic/updates/mips64el/Packages/php-7.2.10-12.ky10.mips64el.rpm注：其他相关依赖包请到相同目录下载

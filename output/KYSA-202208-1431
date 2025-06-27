@@ -1,0 +1,67 @@
+Name:KYSA-202208-1431
+Severity:重要
+Summary:spice-server安全漏洞
+Published:2022-08-23
+URL:/support/loophole/patch/4287.html
+Title:
+			公告ID：KYSA-202208-1431
+公告摘要：spice-server安全漏洞
+等级：Important
+发布日期：2022-08-23
+		
+1.修复的CVE
+·CVE-2013-4130
+描述：SPICE是一个企业虚拟化桌面版所使用的自适应远程呈现开源协议，它主要用于将用户与其虚拟桌面进行连接，能够提供与物理桌面完全相同的最终用户体验。SPICE 0.12.3及之前的版本中的server/red_channel.c文件中的red_channel_pipes_add_type和red_channel_pipes_add_empty_msg函数中存在安全漏洞，该漏洞源于程序没有正确处理网络错误。远程攻击者可利用该漏洞造成拒绝服务（可达到断言和服务器退出）。
+·CVE-2013-4282
+描述：SPICE是一个企业虚拟化桌面版所使用的自适应远程呈现开源协议，它主要用于将用户与其虚拟桌面进行连接，能够提供与物理桌面完全相同的最终用户体验。SPICE 0.12.0版本中的server/reds.c文件中的reds_handle_ticket函数中存在基于栈的缓冲区溢出漏洞。远程攻击者可通过建立Simple Protocol for Independent Computing Environments (SPICE)连接利用该漏洞造成拒绝服务（崩溃）。
+·CVE-2015-3247
+描述：SPICE 0.12.4版本存在竞争条件问题漏洞。攻击者利用该漏洞导致系统拒绝服务，或执行任意代码。
+·CVE-2015-5260
+描述：spice 0.12.6之前版本存在缓冲区错误漏洞。攻击者利用该漏洞导致系统拒绝服务（基于堆的内存损坏和QEMU-KVM崩溃），或执行任意代码。
+·CVE-2015-5261
+描述：spice 0.12.6之前版本中存在基于堆的缓冲区溢出漏洞。虚拟机端攻击者可借助虚拟机QXL命令利用该漏洞读取或写入任意内存位置。
+·CVE-2019-3813
+描述：Spice版本0.5.2到0.14.1，由于memslot_get_virt中的一个off-by-one错误，容易出现越界读取。这可能导致拒绝服务，或者在最坏的情况下，未经验证的攻击者执行代码。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V6
+·x86_64架构:
+spice-server、spice-server-devel
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V6 (x86_64)
+spice-server-0.12.4-16.el6或以上版本
+spice-server-devel-0.12.4-16.el6或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V6
+x86_64:https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2013-4130:需要重启 spice-server 以使漏洞修复生效。
+CVE-2013-4282:需要重启 spice-server 以使漏洞修复生效。
+CVE-2015-3247:需要重启 spice-server 以使漏洞修复生效。
+CVE-2015-5260:需要重启 spice-server 以使漏洞修复生效。
+CVE-2015-5261:需要重启 spice-server 以使漏洞修复生效。
+CVE-2019-3813:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V6
+
+spice-server(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/spice-server-0.12.4-16.el6.x86_64.rpm
+https://update.cs2c.com.cn/NS/V6/V6.9/os/lic/base/x86_64/Packages/spice-server-devel-0.12.4-16.el6.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

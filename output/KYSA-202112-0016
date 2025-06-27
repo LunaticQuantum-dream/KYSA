@@ -1,0 +1,91 @@
+Name:KYSA-202112-0016
+Severity:中等
+Summary:openjdk-8安全漏洞
+Published:2022-11-10
+URL:/support/loophole/patch/2338.html
+Title:
+			 公告ID：KYSA-202112-0016
+公告摘要： openjdk-8安全漏洞
+等级：中等
+发布日期：2022-11-10
+		
+1. 修复的CVE
+CVE-2021-35556
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 的 Oracle GraalVM Enterprise Edition 存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议访问网络。成功攻击此漏洞可导致拒绝服务。
+CVE-2021-35561
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 的 Oracle GraalVM Enterprise Edition（组件：Utility）存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议访问网络来破坏 Oracle GraalVM Enterprise Edition。成功攻击此漏洞可导致拒绝服务。
+CVE-2021-35588
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 的 Oracle GraalVM Enterprise Edition（组件：Hotspot）存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议访问网络来破坏Oracle GraalVM Enterprise Edition。成功攻击此漏洞可导致拒绝服务。
+CVE-2021-35578
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 的 Oracle GraalVM Enterprise Edition（组件：JSSE）存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过 TLS 进行网络访问以破坏 Oracle GraalVM Enterprise Edition。成功攻击此漏洞可导致拒绝服务。
+CVE-2021-2341
+node-open-graph是开源的Node.js的Open Graph实现。node-open-graph 0.2.6 之前版本存在安全漏洞，攻击者可以使用 __proto__ 或构造函数负载来欺骗函数 parse 以添加或修改 Object.prototype 的属性。
+CVE-2021-35564
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 的 Oracle GraalVM Enterprise Edition（组件：Keytool）存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议访问网络来破坏Oracle GraalVM Enterprise Edition。成功攻击此漏洞可导致对Oracle GraalVM Enterprise Edition可访问数据的未授权更新、插入或删除访问。
+CVE-2021-35603
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE Oracle GraalVM Enterprise Edition 存在输入验证错误漏洞，该漏洞源于JSSE组件的输入验证不当。远程的未经身份验证的攻击者可以利用此漏洞获取敏感信息的访问权。
+CVE-2021-35559
+Oracle GraalVM是美国甲骨文（Oracle）公司的一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。Oracle GraalVM中存在输入验证错误漏洞。该漏洞源于网络系统或产品未对输入的数据进行正确的验证。
+CVE-2021-35586
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 的 Oracle GraalVM Enterprise Edition（组件：ImageIO）存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议访问网络，从而破坏 Oracle GraalVM Enterprise Edition。成功攻击此漏洞可导致拒绝服务。
+CVE-2021-35550
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 的 Oracle GraalVM Enterprise Edition 存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过 TLS 进行网络访问以破坏Oracle GraalVM Enterprise Edition。成功攻击此漏洞可导致对关键数据的未授权访问或对所有Oracle GraalVM Enterprise Edition 可访问数据的完全访问。
+CVE-2021-35567
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 的 Oracle GraalVM Enterprise Edition （组件：Libraries）存在输入验证错误漏洞，该漏洞可导致对关键数据的未授权访问或对所有 Oracle GraalVM Enterprise Edition product  数据的完全访问。
+CVE-2021-2369
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE存在输入验证错误漏洞，该漏洞源于网络系统或产品未对输入的数据进行正确的验证。
+CVE-2021-35565
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 的 Oracle GraalVM Enterprise Edition 存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过 TLS 进行网络访问。成功攻击此漏洞可导致拒绝服务。
+CVE-2021-2388
+Oracle Java SE是美国甲骨文（Oracle）公司的一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle Java SE 存在输入验证错误漏洞，该漏洞允许未经身份验证的攻击者通过多种协议访问网络来破坏 Java SE，Oracle GraalVM 企业版。
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10
+x86_64 架构：
+openjdk-8-demo、openjdk-8-jdk-headless、openjdk-8-jdk、openjdk-8-jre-headless、openjdk-8-jre-jamvm、openjdk-8-jre-zero、openjdk-8-jre、openjdk-8-source
+arm64 架构：
+openjdk-8-demo、openjdk-8-jdk-headless、openjdk-8-jdk、openjdk-8-jre-headless、openjdk-8-jre-zero、openjdk-8-jre、openjdk-8-source
+mips64el 架构：
+openjdk-8-demo、openjdk-8-jdk-headless、openjdk-8-jdk、openjdk-8-jre-headless、openjdk-8-jre、openjdk-8-source
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10
+8u342-b07-0kord1~16.04
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install openjdk-8-jre
+$sudo apt install openjdk-8-jdk
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+5. 软件包下载地址
+银河麒麟桌面操作系统V10
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-demo_8u342-b07-0kord1~16.04_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jdk-headless_8u342-b07-0kord1~16.04_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jdk_8u342-b07-0kord1~16.04_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jre-headless_8u342-b07-0kord1~16.04_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jre-jamvm_8u342-b07-0kord1~16.04_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jre-zero_8u342-b07-0kord1~16.04_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jre_8u342-b07-0kord1~16.04_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-source_8u342-b07-0kord1~16.04_all.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-demo_8u342-b07-0kord1~16.04_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jdk-headless_8u342-b07-0kord1~16.04_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jdk_8u342-b07-0kord1~16.04_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jre-headless_8u342-b07-0kord1~16.04_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jre-zero_8u342-b07-0kord1~16.04_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jre_8u342-b07-0kord1~16.04_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-source_8u342-b07-0kord1~16.04_all.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-demo_8u342-b07-0kord1~16.04_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jdk-headless_8u342-b07-0kord1~16.04_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jdk_8u342-b07-0kord1~16.04_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jre-headless_8u342-b07-0kord1~16.04_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-jre_8u342-b07-0kord1~16.04_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openjdk-8/openjdk-8-source_8u342-b07-0kord1~16.04_all.deb
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

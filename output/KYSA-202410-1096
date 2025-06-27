@@ -1,0 +1,89 @@
+Name:KYSA-202410-1096
+Severity:中等
+Summary:systemd安全漏洞
+Published:2024-10-29
+URL:/support/loophole/patch/6630.html
+Title:
+			公告ID：KYSA-202410-1096
+公告摘要：systemd安全漏洞
+等级：中等
+发布日期：2024-10-29
+		
+1.修复的漏洞
+·CVE-2023-26604
+描述：systemd是德国Lennart Poettering个人开发者的一款基于Linux的系统和服务管理器。该产品兼容了SysV和LSB的启动脚本，且提供了一个用来表示系统服务间依赖关系的框架。
+systemd 247之前版本存在安全漏洞。攻击者利用该漏洞可以升级权限。
+
+2.受影响的软件包
+·中标麒麟高级服务器操作系统 V7
+·aarch64架构:
+systemd-sysv、systemd-networkd、systemd-journal-gateway、libgudev1-devel、systemd-devel、systemd-python、systemd-libs、libgudev1、systemd、systemd-resolved
+·x86_64架构:
+systemd-sysv、systemd-networkd、libgudev1-devel、systemd-journal-gateway、systemd-devel、systemd-python、systemd-libs、libgudev1、systemd、systemd-resolved
+
+3.软件包修复版本
+·中标麒麟高级服务器操作系统 V7 (aarch64、x86_64)
+systemd-journal-gateway-219-78.el7_9.11.ns7.01或以上版本
+systemd-219-78.el7_9.11.ns7.01或以上版本
+systemd-networkd-219-78.el7_9.11.ns7.01或以上版本
+systemd-sysv-219-78.el7_9.11.ns7.01或以上版本
+systemd-python-219-78.el7_9.11.ns7.01或以上版本
+libgudev1-devel-219-78.el7_9.11.ns7.01或以上版本
+libgudev1-219-78.el7_9.11.ns7.01或以上版本
+systemd-libs-219-78.el7_9.11.ns7.01或以上版本
+systemd-resolved-219-78.el7_9.11.ns7.01或以上版本
+systemd-devel-219-78.el7_9.11.ns7.01或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+中标麒麟高级服务器操作系统 V7
+aarch64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-26604:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·中标麒麟高级服务器操作系统 V7
+
+systemd(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/systemd-219-78.el7_9.11.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/libgudev1-219-78.el7_9.11.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/systemd-networkd-219-78.el7_9.11.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/systemd-python-219-78.el7_9.11.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/systemd-resolved-219-78.el7_9.11.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/systemd-sysv-219-78.el7_9.11.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/systemd-libs-219-78.el7_9.11.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/systemd-journal-gateway-219-78.el7_9.11.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/systemd-devel-219-78.el7_9.11.ns7.01.aarch64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/aarch64/Packages/libgudev1-devel-219-78.el7_9.11.ns7.01.aarch64.rpm
+
+systemd(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/systemd-resolved-219-78.el7_9.11.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libgudev1-219-78.el7_9.11.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libgudev1-219-78.el7_9.11.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libgudev1-devel-219-78.el7_9.11.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/libgudev1-devel-219-78.el7_9.11.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/systemd-219-78.el7_9.11.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/systemd-devel-219-78.el7_9.11.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/systemd-devel-219-78.el7_9.11.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/systemd-journal-gateway-219-78.el7_9.11.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/systemd-libs-219-78.el7_9.11.ns7.01.i686.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/systemd-libs-219-78.el7_9.11.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/systemd-networkd-219-78.el7_9.11.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/systemd-python-219-78.el7_9.11.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/systemd-resolved-219-78.el7_9.11.ns7.01.x86_64.rpm
+https://update.cs2c.com.cn/NS/V7/V7Update9/os/adv/lic/updates/x86_64/Packages/systemd-sysv-219-78.el7_9.11.ns7.01.x86_64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

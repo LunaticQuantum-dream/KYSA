@@ -1,0 +1,81 @@
+Name:KYSA-202307-0053
+Severity:严重
+Summary:openssh安全漏洞
+Published:2023-11-23
+URL:/support/loophole/patch/4526.html
+Title:
+			公告ID：KYSA-202307-0053
+公告摘要：openssh安全漏洞
+等级：严重
+发布日期：2023-11-23
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1 2303 Update2 版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2023-38408
+OpenSSH（OpenBSD Secure Shell）是加拿大OpenBSD计划组的一套用于安全访问远程计算机的连接工具。该工具是SSH协议的开源实现，支持对所有的传输进行加密，可有效阻止窃听、连接劫持以及其他网络级的攻击。OpenSSH 9.3p2之前版本存在安全漏洞，该漏洞源于ssh-agent的PKCS11功能存在安全问题。攻击者可利用该漏洞执行远程代码。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1 2303 Update2 
+x86_64 架构：
+openssh-client、openssh-server、openssh-sftp-server、openssh-tests、ssh-askpass-gnome、ssh
+arm64 架构：
+openssh-client、openssh-server、openssh-sftp-server、openssh-tests、ssh-askpass-gnome、ssh
+mips64el 架构：
+openssh-client、openssh-server、openssh-sftp-server、openssh-tests、ssh-askpass-gnome、ssh
+loongarch64 架构：
+openssh-client、openssh-server、openssh-sftp-server、openssh-tests、ssh-askpass-gnome、ssh
+
+3. 软件包修复版本
+·银河麒麟桌面操作系统V10 SP1 2303 Update2 
+1:8.2p1-4kylin3k0.5
+
+4. 修复方法
+方法一：升级安装
+执行更新命令进行升级
+$sudo apt update
+$sudo apt install openssh-client
+方法二：下载软件包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。
+$sudo dpkg -i /Path1/Package1 /Path2/Package2 /Path3/Package3……
+注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1 2303 Update2 
+x86_64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-client_8.2p1-4kylin3k0.5_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-server_8.2p1-4kylin3k0.5_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-sftp-server_8.2p1-4kylin3k0.5_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-tests_8.2p1-4kylin3k0.5_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/ssh-askpass-gnome_8.2p1-4kylin3k0.5_amd64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/ssh_8.2p1-4kylin3k0.5_all.deb
+arm64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-client_8.2p1-4kylin3k0.5_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-server_8.2p1-4kylin3k0.5_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-sftp-server_8.2p1-4kylin3k0.5_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-tests_8.2p1-4kylin3k0.5_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/ssh-askpass-gnome_8.2p1-4kylin3k0.5_arm64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/ssh_8.2p1-4kylin3k0.5_all.deb
+mips64el软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-client_8.2p1-4kylin3k0.5_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-server_8.2p1-4kylin3k0.5_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-sftp-server_8.2p1-4kylin3k0.5_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-tests_8.2p1-4kylin3k0.5_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/ssh-askpass-gnome_8.2p1-4kylin3k0.5_mips64el.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/ssh_8.2p1-4kylin3k0.5_all.deb
+loongarch64软件包下载地址
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-client_8.2p1-4kylin3k0.5_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-server_8.2p1-4kylin3k0.5_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-sftp-server_8.2p1-4kylin3k0.5_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/openssh-tests_8.2p1-4kylin3k0.5_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/ssh-askpass-gnome_8.2p1-4kylin3k0.5_loongarch64.deb
+https://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/o/openssh/ssh_8.2p1-4kylin3k0.5_all.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1 2303 Update2 版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

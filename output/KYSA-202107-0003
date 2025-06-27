@@ -1,0 +1,165 @@
+Name:KYSA-202107-0003
+Severity:中等
+Summary:qemu安全漏洞
+Published:2023-01-03
+URL:/support/loophole/patch/2458.html
+Title:
+			公告ID：KYSA-202107-0003
+公告摘要：qemu安全漏洞
+等级：Moderate
+发布日期：2023-01-03
+		
+1. 修复的CVE
+CVE-2021-3409
+QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。 
+QEMU 存在安全漏洞，攻击者可利用该漏洞触发内存损坏，从而触发拒绝服务，并可能在主机系统上运行代码。
+CVE-2020-35505
+QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU  存在安全漏洞，攻击者可利用该漏洞在客户系统内使用多个漏洞。
+CVE-2020-35504
+QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 存在代码问题漏洞，攻击者可利用该漏洞在客户系统内使用多个漏洞。
+CVE-2021-3546
+ARM Cortex-M55等都是英国ARM公司的产品。ARM Cortex-M55是ARM Holdings 为微控制器和嵌入式子系统设计的超低功耗 ARM 微架构。ARM Cortex-M35P是抗窜改的Cortex -M处理器。ARM Cortex-M33是一个功能丰富的实施Armv8-M架构。多款 Arm 产品2021-08-23之前版本存在安全漏洞，该漏洞源于产品没有正确考虑异常对 VLLDM 指令的影响。非安全处理程序可能对安全上下文的一部分具有读或写访问权限。以下产品和版本受到影响：ARM Cortex-M33,ARM Cortex-M35P,ARM Cortex-M55。
+CVE-2021-3416
+QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。 
+QEMU 存在安全漏洞，攻击者可利用该漏洞通过NIC环回模式触发致命错误，从而在主机系统上触发拒绝服务。
+CVE-2021-3527
+QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 存在安全漏洞，该漏洞源于攻击者可利用该漏洞来影响数组长度，并导致QEMU进程在堆栈上执行过多的分配，从而导致拒绝服务。
+CVE-2021-3392
+libsolv是一个用于检查软件包依赖的库。libsolv 0.7.17之前版本存在缓冲区错误漏洞，该漏洞源于软件中src/repo.h的函数pool_disabled_solvable中存在缓冲区溢出漏洞，这允许攻击者可利用该漏洞造成拒绝服务攻击。
+CVE-2021-3544
+Lexmark Universal Print Driver是美国利盟（Lexmark）公司的一个打印机驱动。Lexmark Universal Print Driver存在安全漏洞，该漏洞源于一个标准的低权限用户可以在添加打印机过程中使用驱动程序来执行他们选择的DLL，从而导致权限升级到SYSTEM。
+CVE-2021-3608
+SELinux是美国国家安全局（National Security Agency）的一种采用安全架构的Linux子系统，它能够让管理员更好地管控哪些人可以访问系统。SELinux 存在安全漏洞，该漏洞源于SELinux 3.2 中的 CIL 编译器在 __cil_verify_classperms 中有一个 use-after-free（从 __cil_verify_classpermission 和 __cil_pre_verify_helper 调用）。
+CVE-2021-20257
+QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU 中的e1000 存在安全漏洞，攻击者可利用该漏洞触发拒绝服务。
+CVE-2021-20221
+QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。qemu 存在缓冲区错误漏洞，该漏洞源于通过中断ID字段访问超出限制的堆缓冲区。
+CVE-2021-3545
+entando-admin-console是一个应用软件。该项目生成旧版 Entando 管理控制台及其所需的服务。Entando Admin Console 6.3.9存在安全漏洞，该漏洞允许一个有特权的用户通过FreeMarker . Template .utility. execute命令执行FreeMarker模板。
+CVE-2020-15469
+QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）软件开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。 
+QEMU 4.2.0版本中存在代码问题漏洞。该漏洞源于网络系统或产品的代码开发过程中存在设计或实现不当的问题。
+CVE-2021-3582
+QEMU（Quick Emulator）是法国法布里斯-贝拉（Fabrice Bellard）个人开发者的一套模拟处理器软件。该软件具有速度快、跨平台等特点。QEMU存在缓冲区错误漏洞，该漏洞源于在客户系统中，可以通过 QEMU 的 pvrdma_map_to_pdir() 触发缓冲区溢出。
+CVE-2021-3607
+Adobe Bridge是美国奥多比（Adobe）公司的一款文件查看器。Adobe Bridge 11.1和之前版本存在缓冲区错误漏洞，攻击者可以利用此漏洞触发任意代码执行。
+
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1
+qemu
+qemu-block-extra
+qemu-guest-agent
+qemu-kvm
+qemu-system
+qemu-system-arm
+qemu-system-common
+qemu-system-data
+qemu-system-gui
+qemu-system-mips
+qemu-system-misc
+qemu-system-ppc
+qemu-system-s390x
+qemu-system-sparc
+qemu-system-x86
+qemu-system-x86-microvm
+qemu-system-x86-xen
+qemu-user
+qemu-user-binfmt
+qemu-user-static
+qemu-utils
+
+
+3. 软件包修复版本
+软件包：qemu
+1:4.2-3kylin6.17(V10 SP1)
+
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-block-extra_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-guest-agent_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-kvm_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-arm_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-common_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-data_4.2-3kylin6.17_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-gui_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-mips_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-misc_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-ppc_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-s390x_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-sparc_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-x86-microvm_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-x86-xen_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-x86_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-binfmt_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-static_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-utils_4.2-3kylin6.17_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu_4.2-3kylin6.17_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-block-extra_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-guest-agent_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-kvm_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-arm_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-common_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-data_4.2-3kylin6.17_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-gui_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-mips_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-misc_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-ppc_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-s390x_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-sparc_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-x86_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-binfmt_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-static_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-utils_4.2-3kylin6.17_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu_4.2-3kylin6.17_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-block-extra_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-guest-agent_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-arm_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-common_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-data_4.2-3kylin6.17_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-gui_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-mips_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-misc_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-ppc_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-sparc_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system-x86_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-system_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-binfmt_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user-static_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-user_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu-utils_4.2-3kylin6.17_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/q/qemu/qemu_4.2-3kylin6.17_mips64el.deb
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

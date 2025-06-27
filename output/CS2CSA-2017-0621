@@ -1,0 +1,14 @@
+Name:CS2CSA-2017-0621
+Severity:中等
+Summary:qemu-kvm 安全和漏洞修复更新
+Published:2017-03-27
+URL:/support/loophole/patch/52.html
+Title:
+			摘要：                qemu-kvm 安全和漏洞修复更新
+安全等级： 中等
+公告ID：           CS2CSA-2017-0621
+产品：                中标麒麟高级服务器操作系统
+发布日期：         2017-03-27
+CVE：       CVE-2016-3712
+		
+1. 概述：中标麒麟服务器操作系统V6和V7系列有qemu-kvm可用更新。中标软件产品安全经评定此更新对产品安全有重要意义。2. 相关版本/架构：中标麒麟服务器操作系统V6 -x86_64。3. 描述：KVM是一个在各种体系结构上完整的Linux虚拟化解决方案。qemu-kvm包为使用KVM运行的虚拟机提供user-space组件。 4. 安全加固：*在VBE模式下QEMU的VGA模拟器设置确定的VGA值时发现一个整数溢出漏洞和一个越界读取漏洞。特权客户可以利用这个漏洞导致崩溃的QEMU进程实例。（CVE-2016-3712）5. 安装包列表：中标麒麟高级服务器操作系统V6源码包：qemu-kvm-0.12.1.2-2.503.el6.src.rpmx86_64：qemu-guest-agent-0.12.1.2-2.503.el6.x86_64.rpmqemu-img-0.12.1.2-2.503.el6.x86_64.rpmqemu-kvm-0.12.1.2-2.503.el6.x86_64.rpmqemu-kvm-debuginfo-0.12.1.2-2.503.el6.x86_64.rpmqemu-kvm-tools-0.12.1.2-2.503.el6.x86_64.rpm			

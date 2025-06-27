@@ -1,0 +1,12 @@
+Name:KYSA-202312-0054
+Severity:重要
+Summary:youker-assistant安全漏洞
+Published:2024-03-13
+URL:/support/loophole/patch/5291.html
+Title:
+			公告ID：KYSA-202312-0054
+公告摘要：youker-assistant安全漏洞
+等级：重要
+发布日期：2024-03-13
+		
+1. 修复的CVEKVE-2023-1220youker-assistant是一款帮助执行日常系统维护任务的集成工具。该组件存在命令注入漏洞，可能导致普通用户权限提升。youker-assistant 3.1.4.21-0k1.27 至 3.1.4.21-0k1.41、3.1.4.21-0k1.61 至 3.1.4.21-0k1.67 范围内的版本受影响。KVE-2023-1218youker-assistant是一款帮助执行日常系统维护任务的集成工具。该组件存在命令注入漏洞，可能导致普通用户权限提升。youker-assistant 3.1.4.21-0k1.27 至 3.1.4.21-0k1.41、3.1.4.21-0k1.61 至 3.1.4.21-0k1.67 范围内的版本受影响。 2. 受影响的操作系统及软件包·银河麒麟桌面操作系统V10 SP1x86_64 架构：youker-assistantarm64 架构：youker-assistantmips64el 架构：youker-assistantloongarch64 架构：youker-assistant3. 软件包修复版本·银河麒麟桌面操作系统V10 SP1-2107 不受影响·银河麒麟桌面操作系统V10 SP1-2107（Wayland版本） 不受影响·银河麒麟桌面操作系统V10 SP1-2203 不受影响·银河麒麟桌面操作系统V10 SP1-2203（Wayland版本） 不受影响·银河麒麟桌面操作系统V10 SP1-2303 受影响         影响范围：3.1.4.21-0k1.27<=youker-assistant<=3.1.4.21-0k1.41（修复版本：3.1.4.21-0k1.41update1）         影响范围：3.1.4.21-0k1.61<=youker-assistant<=3.1.4.21-0k1.67（修复版本：3.1.4.21-0k1.67update2）·银河麒麟桌面操作系统V10 SP1-2303（Wayland版本） 受影响           影响范围：3.1.4.21-0k1.27<=youker-assistant<=3.1.4.21-0k1.41（修复版本：3.1.4.21-0k1.41update1）         影响范围：3.1.4.21-0k1.61<=youker-assistant<=3.1.4.21-0k1.67（修复版本：3.1.4.21-0k1.67update2）4. 修复方法方法一：下载软件包进行升级安装通过附件软件包地址下载软件包，使用软件包升级命令根据受影响的软件包列表升级相关的组件包。$sudo apt-get install /Path1/Package1 /Path2/Package2 /Path3/Package3……注：Path 指软件包下载到本地的路径，Package指下载的软件包名称，多个软件包则以空格分开。5. 软件包下载地址下载地址详见附件6. 修复验证使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。$sudo dpkg -l |grep Package注：Package为软件包包名。

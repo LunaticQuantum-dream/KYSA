@@ -1,0 +1,207 @@
+Name:KYSA-202407-1023
+Severity:中等
+Summary:java-1.8.0-openjdk安全漏洞
+Published:2024-07-17
+URL:/support/loophole/patch/5872.html
+Title:
+			公告ID：KYSA-202407-1023
+公告摘要：java-1.8.0-openjdk安全漏洞
+等级：Moderate
+发布日期：2024-07-17
+		
+1.修复的CVE
+·CVE-2024-21011
+描述：Oracle Java SE和Oracle GraalVM都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。
+Oracle Java SE 的 Oracle Java SE、Oracle GraalVM for JDK 和 Oracle GraalVM Enterprise Edition存在安全漏洞。攻击者利用该漏洞导致系统拒绝服务。
+·CVE-2024-21068
+描述：Oracle Java SE和Oracle GraalVM都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。
+Oracle Java SE 的 Oracle Java SE、Oracle GraalVM for JDK 和 Oracle GraalVM Enterprise Edition存在安全漏洞。攻击者利用该漏洞可以获得对数据的更新、插入或删除权限。
+·CVE-2024-21085
+描述：Oracle Java SE和Oracle GraalVM都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。
+Oracle Java SE 的 Oracle Java SE 和 Oracle GraalVM Enterprise Edition存在安全漏洞。攻击者利用该漏洞导致系统拒绝服务。
+·CVE-2024-21094
+描述：Oracle Java SE和Oracle GraalVM都是美国甲骨文（Oracle）公司的产品。Oracle Java SE是一款用于开发和部署桌面、服务器以及嵌入设备和实时环境中的Java应用程序。Oracle GraalVM是一套使用Java语言编写的即时编译器。该产品支持多种编程语言和执行模式。
+Oracle Java SE 的 Oracle Java SE、Oracle GraalVM for JDK 和 Oracle GraalVM Enterprise Edition存在安全漏洞。攻击者利用该漏洞可以获得对数据的更新、插入或删除权限。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP1
+·loongarch64架构:
+java-1.8.0-openjdk-openjfx、java-1.8.0-openjdk-javadoc、java-1.8.0-openjdk-openjfx-devel-slowdebug、java-1.8.0-openjdk-src-slowdebug、java-1.8.0-openjdk-openjfx-devel、java-1.8.0-openjdk-devel、java-1.8.0-openjdk-headless-slowdebug、java-1.8.0-openjdk-demo-slowdebug、java-1.8.0-openjdk-accessibility-slowdebug、java-1.8.0-openjdk、java-1.8.0-openjdk-src、java-1.8.0-openjdk-demo、java-1.8.0-openjdk-slowdebug、java-1.8.0-openjdk-headless、java-1.8.0-openjdk-devel-slowdebug、java-1.8.0-openjdk-openjfx-slowdebug、java-1.8.0-openjdk-accessibility、java-1.8.0-openjdk-javadoc-zip
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+java-1.8.0-openjdk-openjfx、java-1.8.0-openjdk-javadoc、java-1.8.0-openjdk-openjfx-devel-slowdebug、java-1.8.0-openjdk-src-slowdebug、java-1.8.0-openjdk-openjfx-devel、java-1.8.0-openjdk-devel、java-1.8.0-openjdk-headless-slowdebug、java-1.8.0-openjdk-demo-slowdebug、java-1.8.0-openjdk、java-1.8.0-openjdk-slowdebug、java-1.8.0-openjdk-src、java-1.8.0-openjdk-openjfx-slowdebug、java-1.8.0-openjdk-demo、java-1.8.0-openjdk-headless、java-1.8.0-openjdk-devel-slowdebug、java-1.8.0-openjdk-accessibility-slowdebug、java-1.8.0-openjdk-accessibility、java-1.8.0-openjdk-javadoc-zip
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+·loongarch64架构:
+java-1.8.0-openjdk-openjfx、java-1.8.0-openjdk-javadoc、java-1.8.0-openjdk-openjfx-devel-slowdebug、java-1.8.0-openjdk-src-slowdebug、java-1.8.0-openjdk-openjfx-devel、java-1.8.0-openjdk-devel、java-1.8.0-openjdk-headless-slowdebug、java-1.8.0-openjdk-demo-slowdebug、java-1.8.0-openjdk、java-1.8.0-openjdk-openjfx-slowdebug、java-1.8.0-openjdk-slowdebug、java-1.8.0-openjdk-accessibility-slowdebug、java-1.8.0-openjdk-src、java-1.8.0-openjdk-headless、java-1.8.0-openjdk-devel-slowdebug、java-1.8.0-openjdk-demo、java-1.8.0-openjdk-accessibility、java-1.8.0-openjdk-javadoc-zip
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP1 (loongarch64)
+java-1.8.0-openjdk-headless-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-headless-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-src-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-devel-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-demo-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-demo-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-javadoc-zip-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-devel-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-accessibility-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-src-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-accessibility-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-javadoc-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-1.8.0.412.b08-5.p01.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+java-1.8.0-openjdk-headless-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-src-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-devel-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-demo-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-headless-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-demo-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-javadoc-zip-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-accessibility-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-devel-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-src-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-accessibility-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-javadoc-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-1.8.0.412.b08-5.p01.a.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2403 (loongarch64)
+java-1.8.0-openjdk-headless-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-src-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-devel-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-headless-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-demo-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-demo-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-javadoc-zip-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-accessibility-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-devel-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-accessibility-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-src-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-javadoc-1.8.0.412.b08-5.p01.a.ky10或以上版本
+java-1.8.0-openjdk-openjfx-1.8.0.412.b08-5.p01.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP1
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+银河麒麟高级服务器操作系统 V10 SP3 2403
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2024-21011:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-21068:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-21085:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-21094:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP1
+
+java-1.8.0-openjdk(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-javadoc-1.8.0.412.b08-5.p01.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-headless-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-demo-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-devel-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-src-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-src-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-accessibility-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-headless-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-accessibility-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-javadoc-zip-1.8.0.412.b08-5.p01.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-devel-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-demo-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP1.1/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+java-1.8.0-openjdk(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-javadoc-zip-1.8.0.412.b08-5.p01.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-javadoc-1.8.0.412.b08-5.p01.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-src-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-src-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-devel-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-demo-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-demo-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-headless-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-headless-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-accessibility-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-accessibility-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-devel-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2403
+
+java-1.8.0-openjdk(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-devel-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-accessibility-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-src-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-devel-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-headless-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-javadoc-zip-1.8.0.412.b08-5.p01.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-headless-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-javadoc-1.8.0.412.b08-5.p01.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-demo-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-accessibility-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-src-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-src-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-devel-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-src-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-javadoc-zip-1.8.0.412.b08-5.p01.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-openjfx-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-devel-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-headless-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-javadoc-1.8.0.412.b08-5.p01.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-headless-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-devel-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-demo-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-demo-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-demo-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-accessibility-slowdebug-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3-2403/os/adv/lic/updates/loongarch64/Packages/java-1.8.0-openjdk-accessibility-1.8.0.412.b08-5.p01.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

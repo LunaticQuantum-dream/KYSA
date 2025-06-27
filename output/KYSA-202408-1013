@@ -1,0 +1,151 @@
+Name:KYSA-202408-1013
+Severity:重要
+Summary:mozjs78安全漏洞
+Published:2024-08-01
+URL:/support/loophole/patch/5963.html
+Title:
+			公告ID：KYSA-202408-1013
+公告摘要：mozjs78安全漏洞
+等级：Important
+发布日期：2024-08-01
+		
+1.修复的CVE
+·CVE-2021-29946
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 存在输入验证错误漏洞，该漏洞源于对用户提供的输入验证不足。攻击者可利用该漏洞绕过已实现的安全限制。以下产品及版本受到影响：Mozilla Thunderbird: 60.0, 60.2.1, 60.3, 60.3.0, 60.3.1, 60.3.2, 60.3.3, 60.4, 60.4.0, 60.5, 60.5.0, 60.5.1, 60.5.2, 60.5.3, 60.6.0, 60.6.1, 60.7.0, 60.7.1, 60.7.2, 60.8.0, 60.9.0, 60.9.1, 68.0, 68.1.0, 68.1.1, 68.1.2, 68.2.0, 68.2.1, 68.2.2, 68.3.0, 68.3.1, 68.4.1, 68.4.2, 68.5.0, 68.6.0, 68.7.0, 68.8.0, 68.8.1, 68.9.0, 68.10.0, 68.11.0, 68.12.0, 68.12.1, 78.0, 78.0.1, 78.1.0, 78.1.1, 78.2.0, 78.2.1, 78.2.2, 78.3.0, 78.3.1, 78.3.2, 78.3.3, 78.4.0, 78.4.1, 78.4.2, 78.4.3, 78.5.0, 78.5.1, 78.6.0, 78.6.1, 78.7.0, 78.7.1, 78.8.0, 78.8.1, 78.9.0, 78.9.1。
+·CVE-2021-45960
+描述：Expat是一款使用C语言编写的快速流式XML解析器。Expat 存在安全漏洞，该漏洞源于Expat(又名libexpat)中，xmlparse.c中的storeAtts函数左移29(或更多)位可能会导致realloc错误行为(例如，分配的字节太少，或只释放内存)。
+·CVE-2022-22740
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。Mozilla Firefox存在安全漏洞，该漏洞源于释放网络请求句柄时，某些网络请求对象被过早释放。这可能导致在释放后使用，导致潜在的可利用崩溃。
+·CVE-2022-25235
+描述：Expat是一款使用C语言编写的快速流式XML解析器。Expat（又名 libexpat）2.4.5 之前存在代码注入漏洞，该漏洞源于 xmltok_impl.c 缺少某些编码验证，例如检查 UTF-8 字符在特定上下文中是否有效。
+·CVE-2022-34481
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。Mozilla Firefox 存在安全漏洞，该漏洞源于应用中的nsTArray_Impl：：ReplaceElementsAt() 函数中，当要替换的元素数量对于容器来说太大时，可能会发生整数溢出。
+·CVE-2023-29532
+描述：Mozilla Firefox是美国Mozilla基金会的一款开源Web浏览器。
+Mozilla Firefox 112之前版本存在安全漏洞，该漏洞源于Mozilla维护服务写锁绕过，本地攻击者可以通过将服务指向恶意SMB服务器上的更新文件来诱使Mozilla维护服务应用未签名的更新文件。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP2
+·aarch64架构:
+mozjs78-help、mozjs78、mozjs78-devel
+·x86_64架构:
+mozjs78-help、mozjs78、mozjs78-devel
+·银河麒麟高级服务器操作系统 V10 SP3
+·aarch64架构:
+mozjs78-help、mozjs78、mozjs78-devel
+·x86_64架构:
+mozjs78-help、mozjs78、mozjs78-devel
+·银河麒麟高级服务器操作系统（Host版）V10
+·aarch64架构:
+mozjs78-help、mozjs78、mozjs78-devel
+·x86_64架构:
+mozjs78-help、mozjs78、mozjs78-devel
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+·aarch64架构:
+mozjs78-help、mozjs78、mozjs78-devel
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP2 (aarch64、x86_64)
+mozjs78-78.4.0-9.ky10或以上版本
+mozjs78-devel-78.4.0-9.ky10或以上版本
+mozjs78-help-78.4.0-9.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (aarch64)
+mozjs78-devel-78.4.0-9.ky10或以上版本
+mozjs78-help-78.4.0-9.ky10或以上版本
+mozjs78-78.4.0-9.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 (x86_64)
+mozjs78-78.4.0-9.ky10或以上版本
+mozjs78-devel-78.4.0-9.ky10或以上版本
+mozjs78-help-78.4.0-9.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (aarch64)
+mozjs78-78.4.0-9.ky10或以上版本
+mozjs78-help-78.4.0-9.ky10或以上版本
+mozjs78-devel-78.4.0-9.ky10或以上版本
+·银河麒麟高级服务器操作系统（Host版）V10 (x86_64)
+mozjs78-devel-78.4.0-9.ky10或以上版本
+mozjs78-help-78.4.0-9.ky10或以上版本
+mozjs78-78.4.0-9.ky10或以上版本
+·银河麒麟高级服务器操作系统 V10 SP3 2309b (aarch64)
+mozjs78-78.4.0-9.ky10或以上版本
+mozjs78-help-78.4.0-9.ky10或以上版本
+mozjs78-devel-78.4.0-9.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP2
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3
+aarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统（Host版）V10
+aarch64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/
+银河麒麟高级服务器操作系统 V10 SP3 2309b
+aarch64:https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2021-29946:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2021-45960:需要重启 mozjs78 以使漏洞修复生效。
+CVE-2022-22740:需要重启 mozjs78 以使漏洞修复生效。
+CVE-2022-25235:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2022-34481:需要重启 mozjs78 以使漏洞修复生效。
+CVE-2023-29532:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP2
+
+mozjs78(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mozjs78-devel-78.4.0-9.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mozjs78-help-78.4.0-9.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/aarch64/Packages/mozjs78-78.4.0-9.ky10.aarch64.rpm
+
+mozjs78(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mozjs78-78.4.0-9.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mozjs78-devel-78.4.0-9.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP2/os/adv/lic/updates/x86_64/Packages/mozjs78-help-78.4.0-9.ky10.noarch.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3
+
+mozjs78(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mozjs78-help-78.4.0-9.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mozjs78-devel-78.4.0-9.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/aarch64/Packages/mozjs78-78.4.0-9.ky10.aarch64.rpm
+
+mozjs78(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mozjs78-devel-78.4.0-9.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mozjs78-help-78.4.0-9.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/x86_64/Packages/mozjs78-78.4.0-9.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统（Host版）V10
+
+mozjs78(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/mozjs78-78.4.0-9.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/mozjs78-help-78.4.0-9.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/aarch64/Packages/mozjs78-devel-78.4.0-9.ky10.aarch64.rpm
+
+mozjs78(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/mozjs78-help-78.4.0-9.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/mozjs78-devel-78.4.0-9.ky10.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HOST/SP3/os/adv/lic/updates/x86_64/Packages/mozjs78-78.4.0-9.ky10.x86_64.rpm
+
+·银河麒麟高级服务器操作系统 V10 SP3 2309b
+
+mozjs78(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mozjs78-help-78.4.0-9.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mozjs78-78.4.0-9.ky10.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/2309B/os/adv/lic/updates/aarch64/Packages/mozjs78-devel-78.4.0-9.ky10.aarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

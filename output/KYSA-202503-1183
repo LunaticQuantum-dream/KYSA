@@ -1,0 +1,87 @@
+Name:KYSA-202503-1183
+Severity:重要
+Summary:uboot-tools安全漏洞
+Published:2025-03-26
+URL:/support/loophole/patch/7574.html
+Title:
+			公告ID：KYSA-202503-1183
+公告摘要：uboot-tools安全漏洞
+等级：重要
+发布日期：2025-03-26
+		
+1.修复的漏洞
+·CVE-2024-57254
+描述：sqfs_inode_size 函数存在整数溢出问题，该问题会在通过特制的 SquashFS 文件系统进行符号链接大小计算时出现
+·CVE-2024-57255
+描述：DENX Software Engineering Das U-Boot是德国DENX Software Engineering公司的一个通用引导加载程序。
+DENX Software Engineering Das U-Boot 2025.01-rc1之前版本存在安全漏洞，该漏洞源于符号链接解析中的整数溢出，导致内存覆盖。
+·CVE-2024-57256
+描述：DENX Software Engineering Das U-Boot是德国DENX Software Engineering公司的一个通用引导加载程序。
+DENX Software Engineering Das U-Boot 2025.01-rc1之前版本存在安全漏洞，该漏洞源于ext4符号链接解析中的整数溢出，导致内存覆盖。
+·CVE-2024-57257
+描述：DENX Software Engineering Das U-Boot是德国DENX Software Engineering公司的一个通用引导加载程序。
+DENX Software Engineering Das U-Boot 2025.01-rc1之前版本存在安全漏洞，该漏洞源于squashfs深层符号链接嵌套导致的栈耗尽。
+·CVE-2024-57258
+描述：DENX Software Engineering Das U-Boot是德国DENX Software Engineering公司的一个通用引导加载程序。
+DENX Software Engineering Das U-Boot 2025.01-rc1之前版本存在安全漏洞，该漏洞源于内存分配整数溢出问题。
+·CVE-2024-57259
+描述：该漏洞源于在大小计算中未考虑路径分隔符，导致 squashfs 目录列表的堆内存损坏。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 HPC
+·aarch64架构:
+uboot-tools-help、uboot-images-armv8、uboot-images-elf、uboot-tools
+·x86_64架构:
+uboot-tools-help、uboot-images-armv8、uboot-tools
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 HPC (aarch64)
+uboot-images-elf-2021.10-9.ky10h或以上版本
+uboot-tools-2021.10-9.ky10h或以上版本
+uboot-tools-help-2021.10-9.ky10h或以上版本
+uboot-images-armv8-2021.10-9.ky10h或以上版本
+·银河麒麟高级服务器操作系统 V10 HPC (x86_64)
+uboot-tools-2021.10-9.ky10h或以上版本
+uboot-tools-help-2021.10-9.ky10h或以上版本
+uboot-images-armv8-2021.10-9.ky10h或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 HPC
+aarch64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/
+x86_64:https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2024-57254:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-57255:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-57256:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-57257:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-57258:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-57259:无需重启操作系统与服务即可使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 HPC
+
+uboot-tools(aarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/uboot-images-armv8-2021.10-9.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/uboot-images-elf-2021.10-9.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/uboot-tools-2021.10-9.ky10h.aarch64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/aarch64/Packages/uboot-tools-help-2021.10-9.ky10h.noarch.rpm
+
+uboot-tools(x86_64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/uboot-images-armv8-2021.10-9.ky10h.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/uboot-tools-2021.10-9.ky10h.x86_64.rpm
+https://update.cs2c.com.cn/NS/V10/HPC/os/adv/lic/updates/x86_64/Packages/uboot-tools-help-2021.10-9.ky10h.noarch.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,81 @@
+Name:KYSA-202105-0013
+Severity:中等
+Summary:exiv2安全漏洞
+Published:2021-05-31
+URL:/support/loophole/patch/466.html
+Title:
+			公告ID：KYSA-202105-0013
+公告摘要：exiv2安全漏洞
+等级：中等
+发布日期：2021-05-31
+		
+注：
+1. 本公告所涉及的漏洞修复信息知识产权全部归麒麟软件有限公司所有，此安全漏洞补丁公告仅适用于麒麟软件操作系统通用主线产品，定制、OEM等版本可根据需要联系售后获取支持。任何媒体、网站或个人转载使用时不得进行商业性的原版原式的转载，也不得歪曲和篡改所发布的内容。此声明以及其修改权、更新权及最终解释权均归本网所有。
+2. 此安全漏洞补丁公告仅适用于银河麒麟桌面操作系统V10 SP1
+版本，系统版本查询工具下载链接：
+https://security-oss.kylinos.cn/Desktop/libkysdk-sysinfo.zip
+
+1. 漏洞概述
+CVE-2021-29464
+Exiv2是Andreas Huggel个人开发者的一套用于管理图像元数据的C++库和命令行应用程序。该产品提供了读取和写入EXIF、IPTC和XMP等多种格式图像元数据的功能。Exiv2 存在安全漏洞，攻击者可利用该漏洞执行代码。
+CVE-2021-29623
+Exiv2是Andreas Huggel个人开发者的一套用于管理图像元数据的C++库和命令行应用程序。该产品提供了读取和写入EXIF、IPTC和XMP等多种格式图像元数据的功能。Exiv2 0.27.3版本及之前存在安全漏洞。该漏洞源于程序未初始化的内存读取。
+CVE-2021-29463
+Exiv2是Andreas Huggel个人开发者的一套用于管理图像元数据的C++库和命令行应用程序。该产品提供了读取和写入EXIF、IPTC和XMP等多种格式图像元数据的功能。Exiv2 存在缓冲区错误漏洞，攻击者可利用该漏洞可以欺骗受害者在一个精心制作的映像文件上运行Exiv2，导致拒绝服务。
+CVE-2021-29473
+Exiv2是Andreas Huggel个人开发者的一套用于管理图像元数据的C++库和命令行应用程序。该产品提供了读取和写入EXIF、IPTC和XMP等多种格式图像元数据的功能。Exiv2 存在缓冲区错误漏洞，攻击者可利用该漏洞通过破坏Exiv2来导致拒绝服务。
+CVE-2021-32617
+Exiv2是Andreas Huggel个人开发者的一套用于管理图像元数据的C++库和命令行应用程序。该产品提供了读取和写入EXIF、IPTC和XMP等多种格式图像元数据的功能。Exiv2 v0.27.3版本及之前版本存在资源管理错误漏洞，攻击者可利用该漏洞导致拒绝服务。
+
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1
+exiv2
+libexiv2-27
+libexiv2-dev
+libexiv2-doc
+
+
+3. 软件包修复版本
+软件包：exiv2
+0.27.2-8kylin2.5(V10 SP1)
+
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+
+5. 软件包下载地址
+银河麒麟桌面操作系统V10 SP1
+x86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/exiv2_0.27.2-8kylin2.5_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/libexiv2-27_0.27.2-8kylin2.5_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/exiv2_0.27.2-8kylin2.5_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/libexiv2-27_0.27.2-8kylin2.5_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/exiv2_0.27.2-8kylin2.5_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/e/exiv2/libexiv2-27_0.27.2-8kylin2.5_mips64el.deb
+注：软件包仅适用于银河麒麟桌面操作系统V10 SP1
+版本。
+
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。

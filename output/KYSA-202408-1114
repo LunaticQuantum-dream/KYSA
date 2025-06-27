@@ -1,0 +1,77 @@
+Name:KYSA-202408-1114
+Severity:重要
+Summary:xorg-x11-server安全漏洞
+Published:2024-08-13
+URL:/support/loophole/patch/6122.html
+Title:
+			公告ID：KYSA-202408-1114
+公告摘要：xorg-x11-server安全漏洞
+等级：重要
+发布日期：2024-08-13
+		
+1.修复的漏洞
+·CVE-2023-6816
+描述：X.org Server是X.org基金会的一个开放源代码的自由软件。
+X.org Server 21.1.11之前版本存在安全漏洞，该漏洞源于仅为设备特定数量的按钮分配空间，如果使用更大的值，则会导致堆溢出。
+·CVE-2024-0229
+描述：X.org Server是X.org基金会的一个开放源代码的自由软件。
+X.org Server 21.1.11之前版本存在安全漏洞，该漏洞源于错误地处理内存，攻击者可能利用此问题导致拒绝服务、获取敏感信息或执行任意代码。
+·CVE-2024-0408
+描述：X.org Server是X.org基金会的一个开放源代码的自由软件。
+X.org Server 21.1.11之前版本存在安全漏洞，该漏洞源于创建缓冲区时不会调用挂钩，攻击者可能利用此问题导致拒绝服务。
+·CVE-2024-0409
+描述：X.org Server是X.org基金会的一个开放源代码的自由软件。
+X.org Server 21.1.11之前版本存在安全漏洞，该漏洞源于使用错误的私有类型。
+·CVE-2024-21885
+描述：X.Org X Server是X.org基金会的一款X Window系统显示服务器。
+X.Org X Server存在安全漏洞，该漏洞源于服务器在处理DeviceFocusEvent和ProcXIQueryPointer API时错误地处理了内存，会导致服务器崩溃、敏感信息泄露或任意代码执行。
+·CVE-2024-21886
+描述：X.org Server是X.org基金会的一个开放源代码的自由软件。
+X.org Server 存在安全漏洞，该漏洞源于服务器在处理DeviceFocusEvent和ProcXIQueryPointer API时错误地处理了内存，会导致服务器崩溃、敏感信息泄露或任意代码执行。
+
+2.受影响的软件包
+·银河麒麟高级服务器操作系统 V10 SP3
+·loongarch64架构:
+xorg-x11-server、xorg-x11-server-help、xorg-x11-server-Xephyr、xorg-x11-server-devel
+
+3.软件包修复版本
+·银河麒麟高级服务器操作系统 V10 SP3 (loongarch64)
+xorg-x11-server-Xephyr-1.20.8-10.p11.a.ky10或以上版本
+xorg-x11-server-help-1.20.8-10.p11.a.ky10或以上版本
+xorg-x11-server-1.20.8-10.p11.a.ky10或以上版本
+xorg-x11-server-devel-1.20.8-10.p11.a.ky10或以上版本
+
+4.修复方法
+方法一：配置源进行升级安装
+1.打开软件包源配置文件，根据仓库地址进行修改。
+仓库源地址： 
+银河麒麟高级服务器操作系统 V10 SP3
+loongarch64:https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/
+2.配置完成后执行更新命令进行升级，命令如下：
+yum update Packagename
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的软件包
+列表进行升级安装, 命令如下：
+yum install Packagename
+3.升级完成后是否需要重启服务或操作系统：
+CVE-2023-6816:需要重启 xorg-x11-server 以使漏洞修复生效。
+CVE-2024-0229:需要重启 xorg-x11-server 以使漏洞修复生效。
+CVE-2024-0408:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-0409:无需重启操作系统与服务即可使漏洞修复生效。
+CVE-2024-21885:需要重启 xorg-x11-server 以使漏洞修复生效。
+CVE-2024-21886:需要重启 xorg-x11-server 以使漏洞修复生效。
+
+5.软件包下载地址
+·银河麒麟高级服务器操作系统 V10 SP3
+
+xorg-x11-server(loongarch64)软件包下载地址:
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/xorg-x11-server-Xephyr-1.20.8-10.p11.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/xorg-x11-server-devel-1.20.8-10.p11.a.ky10.loongarch64.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/xorg-x11-server-help-1.20.8-10.p11.a.ky10.noarch.rpm
+https://update.cs2c.com.cn/NS/V10/V10SP3/os/adv/lic/updates/loongarch64/Packages/xorg-x11-server-1.20.8-10.p11.a.ky10.loongarch64.rpm
+
+注：其他相关依赖包请到相同目录下载
+
+6.修复验证
+使用软件包查询命令，查看相关软件包版本是否与修复版本一致，如果版本一致，则说明修复成功。
+sudo rpm -qa | grep Packagename

@@ -1,0 +1,67 @@
+Name:KYSA-202109-0008
+Severity:中等
+Summary:libgcrypt20安全漏洞
+Published:2022-11-23
+URL:/support/loophole/patch/2374.html
+Title:
+			 公告ID：KYSA-202109-0008
+公告摘要： libgcrypt20安全漏洞
+等级：中等
+发布日期：2022-11-23
+		
+1. 修复的CVE
+CVE-2021-33560
+Libgcrypt是GNU计划开发（Gnu计划开发）的一个基于GnuPG代码的通用加密库。该库实现了各种加密算法，包括对称密码、哈希算法、公开密钥算法等。Libgcrypt 在1.8.8和1.9之前存在安全漏洞，该漏洞源于缺乏指数盲法来解决针对mpi powm的侧信道攻击，而且窗口大小选择不当。
+CVE-2021-40528
+Libgcrypt是GNU计划开发（Gnu计划开发）的一个基于GnuPG代码的通用加密库。该库实现了各种加密算法，包括对称密码、哈希算法、公开密钥算法等。Libgcrypt 1.9.4之前版本存在安全漏洞，该漏洞源于在1.9.4之前的Libgcrypt中的ElGamal实现允许明文恢复，因为在两个密码库之间的交互过程中，接收方公钥定义的质数、接收方公钥定义的生成器、和发送方的临时指数可能导致对OpenPGP的交叉配置攻击。
+
+2. 受影响的操作系统及软件包
+·银河麒麟桌面操作系统V10 SP1
+libgcrypt-mingw-w64-dev
+libgcrypt20
+libgcrypt20-dev
+libgcrypt20-doc
+3. 软件包修复版本
+软件包：libgcrypt20
+1.8.5-5kylin1.1(V10 SP1)
+4. 修复方法
+方法一：配置源进行升级安装
+打开软件包源配置文件，根据仓库地址进行修改。
+4.0.2-sp1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp1-desktop main restricted universe multiverse
+4.0.2-sp2:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp2-desktop main restricted universe multiverse
+4.0.2-sp3:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp3-desktop main restricted universe multiverse
+4.0.2-sp4:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 4.0.2sp4-desktop main restricted universe multiverse
+10.0:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.0 main restricted universe multiverse
+10.0 SP1:
+http://archive.kylinos.cn/kylin/KYLIN-ALL 10.1 main restricted universe multiverse
+配置完成后执行更新命令进行升级
+$sudo apt update
+方法二：下载安装包进行升级安装
+通过软件包地址下载软件包，使用软件包升级命令根据受影响的组件包列表 升级相关的组件包。
+#dpkg -i Packagelists
+5. 软件包下载地址
+麒麟操作系统桌面版V10 SP1
+X86_64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt-mingw-w64-dev_1.8.5-5kylin1.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt20-dev_1.8.5-5kylin1.1_amd64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt20-doc_1.8.5-5kylin1.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt20_1.8.5-5kylin1.1_amd64.deb
+arm64软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt-mingw-w64-dev_1.8.5-5kylin1.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt20-dev_1.8.5-5kylin1.1_arm64.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt20-doc_1.8.5-5kylin1.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt20_1.8.5-5kylin1.1_arm64.deb
+mips64el软件包下载地址
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt-mingw-w64-dev_1.8.5-5kylin1.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt20-dev_1.8.5-5kylin1.1_mips64el.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt20-doc_1.8.5-5kylin1.1_all.deb
+http://archive.kylinos.cn/kylin/KYLIN-ALL/pool/main/libg/libgcrypt20/libgcrypt20_1.8.5-5kylin1.1_mips64el.deb
+6. 修复验证
+使用软件包查询命令，查看相关的软件包版本大于或等于修复版本则成功修复。
+$sudo dpkg -l |grep Package
+注：Package为软件包包名。 
